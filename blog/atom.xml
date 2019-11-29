@@ -2,74 +2,24 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://diffbot.github.io/docs/blog</id>
     <title>Docs Suite Blog</title>
-    <updated>2017-10-24T06:00:00Z</updated>
+    <updated>2019-10-31T06:00:00Z</updated>
     <generator>Feed for Node.js</generator>
     <link rel="alternate" href="https://diffbot.github.io/docs/blog"/>
     <subtitle>The best place to stay up-to-date with the latest Docs Suite news and events.</subtitle>
     <logo>https://diffbot.github.io/docs/img/diffbot_white.svg</logo>
     <rights>Copyright © 2019 Diffbot.com</rights>
     <entry>
-        <title type="html"><![CDATA[New Version 1.0.0]]></title>
-        <id>https://diffbot.github.io/docs/blog/2017/10/24/new-version-1.0.0.html</id>
-        <link href="https://diffbot.github.io/docs/blog/2017/10/24/new-version-1.0.0.html">
+        <title type="html"><![CDATA[Can I Access All Google Knowledge Graph Data Through the Google Knowledge Graph Search API?]]></title>
+        <id>https://diffbot.github.io/docs/blog/2019/10/31/kg-google.html</id>
+        <link href="https://diffbot.github.io/docs/blog/2019/10/31/kg-google.html">
         </link>
-        <updated>2017-10-24T06:00:00Z</updated>
-        <summary type="html"><![CDATA[<p>This blog post will test file name parsing issues when periods are present.</p> ]]></summary>
-        <author>
-            <name>Eric Nakagawa</name>
-            <uri>http://twitter.com/ericnakagawa</uri>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[Adding RSS Support]]></title>
-        <id>https://diffbot.github.io/docs/blog/2017/09/26/adding-rss.html</id>
-        <link href="https://diffbot.github.io/docs/blog/2017/09/26/adding-rss.html">
-        </link>
-        <updated>2017-09-26T06:00:00Z</updated>
-        <summary type="html"><![CDATA[<p>This is a test post.</p> <p>A whole bunch of other information.</p> ]]></summary>
-        <author>
-            <name>Eric Nakagawa</name>
-            <uri>http://twitter.com/ericnakagawa</uri>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[Adding RSS Support - RSS Truncation Test]]></title>
-        <id>https://diffbot.github.io/docs/blog/2017/09/25/testing-rss.html</id>
-        <link href="https://diffbot.github.io/docs/blog/2017/09/25/testing-rss.html">
-        </link>
-        <updated>2017-09-25T06:00:00Z</updated>
-        <summary type="html"><![CDATA[<p>1234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890</p>
-<p>This should be truncated.</p>
+        <updated>2019-10-31T06:00:00Z</updated>
+        <summary type="html"><![CDATA[<p>The Google Knowledge Graph is one of the most recognizable sources of contextually-linked facts on people, books, organizations, events, and more.</p>
+<p>Access to all of this information — including how each knowledge graph entity is linked — could be a boon to many services and applications. On this front Google has developed the Knowledge Graph Search API.</p>
 ]]></summary>
         <author>
-            <name>Eric Nakagawa</name>
-            <uri>http://twitter.com/ericnakagawa</uri>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[New Blog Post]]></title>
-        <id>https://diffbot.github.io/docs/blog/2017/04/10/blog-post-two.html</id>
-        <link href="https://diffbot.github.io/docs/blog/2017/04/10/blog-post-two.html">
-        </link>
-        <updated>2017-04-10T06:00:00Z</updated>
-        <summary type="html"><![CDATA[<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque elementum dignissim ultricies. Fusce rhoncus ipsum tempor eros aliquam consequat. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus elementum massa eget nulla aliquet sagittis. Proin odio tortor, vulputate ut odio in, ultrices ultricies augue. Cras ornare ultrices lorem malesuada iaculis. Etiam sit amet libero tempor, pulvinar mauris sed, sollicitudin sapien.</p>
-]]></summary>
-        <author>
-            <name>Blog Author</name>
-            <uri>http://twitter.com/</uri>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[Blog Title]]></title>
-        <id>https://diffbot.github.io/docs/blog/2016/03/11/blog-post.html</id>
-        <link href="https://diffbot.github.io/docs/blog/2016/03/11/blog-post.html">
-        </link>
-        <updated>2016-03-11T06:00:00Z</updated>
-        <summary type="html"><![CDATA[<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque elementum dignissim ultricies. Fusce rhoncus ipsum tempor eros aliquam consequat. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus elementum massa eget nulla aliquet sagittis. Proin odio tortor, vulputate ut odio in, ultrices ultricies augue. Cras ornare ultrices lorem malesuada iaculis. Etiam sit amet libero tempor, pulvinar mauris sed, sollicitudin sapien.</p>
-]]></summary>
-        <author>
-            <name>Blog Author</name>
-            <uri>http://twitter.com/</uri>
+            <name>Diffbot Team</name>
+            <uri>http://twitter.com/diffbot</uri>
         </author>
     </entry>
 </feed>
