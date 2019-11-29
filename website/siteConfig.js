@@ -49,8 +49,8 @@ const siteConfig = {
   users,
 
   /* path to images for header/footer */
-  headerIcon: 'img/diffbot-white.svg',
-  footerIcon: 'img/diffbot-white.svg',
+  headerIcon: 'img/diffbot_white.svg',
+  footerIcon: 'img/diffbot_white.svg',
   favicon: 'img/diffbot-head.png',
 
   /* Colors for website */
