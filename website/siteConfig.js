@@ -14,7 +14,7 @@ const users = [
   //   caption: 'User1',
   //   // You will need to prepend the image path with your baseUrl
   //   // if it is not '/', like: '/test-site/img/image.jpg'.
-  //   image: '/img/Diffbot_Logo.svg.png',
+  //   image: '/img/diffbot_logo.png',
   //   infoLink: 'https://www.diffbot.com',
   //   pinned: true,
   // },
