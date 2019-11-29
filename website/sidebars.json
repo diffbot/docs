@@ -1,0 +1,12 @@
+{
+  "docs": {
+    "Basics": ["intro"],
+    "Tutorials": ["tutorials-intro"],
+    "How-to Guides": ["guides-intro"],
+    "Explainers": ["explain-intro", "explain-kg", "explain-api"]
+  },
+  "docs-other": {
+    "API": ["api-intro"],
+    "Knowledge Graph": ["api-kg-intro"]
+  }
+}
