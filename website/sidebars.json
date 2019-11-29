@@ -3,7 +3,7 @@
     "Basics": ["intro"],
     "Tutorials": ["tutorials-intro"],
     "How-to Guides": ["guides-intro"],
-    "Explainers": ["explain-intro", "explain-kg", "explain-api"]
+    "Explainers": ["explain-intro", "explain-global-index", "explain-kg", "explain-api"]
   },
   "docs-other": {
     "API": ["api-intro"],

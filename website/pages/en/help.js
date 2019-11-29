@@ -18,21 +18,22 @@ function Help(props) {
   const docsPart = `${docsUrl ? `${docsUrl}/` : ''}`;
   const langPart = `${language ? `${language}/` : ''}`;
   const docUrl = doc => `${baseUrl}${docsPart}${langPart}${doc}`;
+  const pageUrl = page => `${baseUrl}${langPart}${page}`;
 
   const supportLinks = [
     {
-      content: `Learn more using the [documentation on this site.](${docUrl(
-        'doc1.html',
+      content: `[Yes it is. Read this page for details!](${pageUrl(
+        'gdpr',
       )})`,
-      title: 'Browse Docs',
+      title: 'Is Diffbot GDPR Compliant?',
     },
     {
-      content: 'Ask questions about the documentation and project',
-      title: 'Join the community',
+      content: `Common errors and their solutions can be found [in these docs](${docUrl('guides-errors')})!`,
+      title: 'Found an error?',
     },
     {
-      content: "Find out what's new with this project",
-      title: 'Stay up to date',
+      content: "Email us directly at [support@diffbot.com](mailto:support@diffbot.com)",
+      title: 'Docs still not helping?',
     },
   ];
 
@@ -43,7 +44,7 @@ function Help(props) {
           <header className="postHeader">
             <h1>Need help?</h1>
           </header>
-          <p>This project is maintained by a dedicated group of people.</p>
+          <p>See below for the most common issues and questions!</p>
           <GridBlock contents={supportLinks} layout="threeColumn" />
         </div>
       </Container>
