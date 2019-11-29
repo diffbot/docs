@@ -91,6 +91,8 @@ const siteConfig = {
   // No .html extensions for paths.
   cleanUrl: true,
 
+  useEnglishUrl: true,
+
   // Open Graph and Twitter card images.
   ogImage: 'img/diagram.svg',
   twitterImage: 'img/diagram.svg',
