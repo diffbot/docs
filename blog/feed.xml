@@ -9,7 +9,7 @@
         <generator>Feed for Node.js</generator>
         <image>
             <title>Docs Suite Blog</title>
-            <url>https://diffbot.github.io/docs/img/diffbot-white.svg</url>
+            <url>https://diffbot.github.io/docs/img/diffbot_white.svg</url>
             <link>https://diffbot.github.io/docs/blog</link>
         </image>
         <copyright>Copyright © 2019 Diffbot.com</copyright>
