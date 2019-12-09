@@ -1,0 +1,191 @@
+<!DOCTYPE html><html lang="en"><head><meta charSet="utf-8"/><meta http-equiv="X-UA-Compatible" content="IE=edge"/><title>Accessing Data Behind a Login Wall · Docs Suite</title><meta name="viewport" content="width=device-width"/><meta name="generator" content="Docusaurus"/><meta name="description" content="Sometimes you need to log into a site to get to some walled-off data. Let’s see an example."/><meta name="docsearch:language" content="en"/><meta property="og:title" content="Accessing Data Behind a Login Wall · Docs Suite"/><meta property="og:type" content="website"/><meta property="og:url" content="https://diffbot.github.io/docs/"/><meta property="og:description" content="Sometimes you need to log into a site to get to some walled-off data. Let’s see an example."/><meta property="og:image" content="https://diffbot.github.io/docs/img/diagram.svg"/><meta name="twitter:card" content="summary"/><meta name="twitter:image" content="https://diffbot.github.io/docs/img/diagram.svg"/><link rel="shortcut icon" href="/docs/img/diffbot-head.png"/><link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/default.min.css"/><link rel="alternate" type="application/atom+xml" href="https://diffbot.github.io/docs/blog/atom.xml" title="Docs Suite Blog ATOM Feed"/><link rel="alternate" type="application/rss+xml" href="https://diffbot.github.io/docs/blog/feed.xml" title="Docs Suite Blog RSS Feed"/><script type="text/javascript" src="https://buttons.github.io/buttons.js"></script><script src="/docs/js/scrollSpy.js"></script><link rel="stylesheet" href="/docs/css/main.css"/><script src="/docs/js/codetabs.js"></script></head><body class="sideNavVisible separateOnPageNav"><div class="fixedHeaderContainer"><div class="headerWrapper wrapper"><header><a href="/docs/"><img class="logo" src="/docs/img/diffbot_white.svg" alt="Docs Suite"/><h2 class="headerTitleWithLogo">Docs Suite</h2></a><div class="navigationWrapper navigationSlider"><nav class="slidingNav"><ul class="nav-site nav-site-internal"><li class="siteNavGroupActive"><a href="/docs/docs/en/intro" target="_self">Prose</a></li><li class=""><a href="/docs/docs/en/api-intro" target="_self">API</a></li><li class=""><a href="/docs/docs/en/error-intro" target="_self">Debugging</a></li><li class=""><a href="/docs/help" target="_self">Help</a></li><li class=""><a href="/docs/blog/" target="_self">Blog</a></li></ul></nav></div></header></div></div><div class="navPusher"><div class="docMainWrapper wrapper"><div class="docsNavContainer" id="docsNav"><nav class="toc"><div class="toggleNav"><section class="navWrapper wrapper"><div class="navBreadcrumb wrapper"><div class="navToggle" id="navToggler"><div class="hamburger-menu"><div class="line1"></div><div class="line2"></div><div class="line3"></div></div></div><h2><i>›</i><span>How-to Guides</span></h2><div class="tocToggler" id="tocToggler"><i class="icon-toc"></i></div></div><div class="navGroups"><div class="navGroup"><h3 class="navGroupCategoryTitle collapsible">Basics<span class="arrow"><svg width="24" height="24" viewBox="0 0 24 24"><path fill="#565656" d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z"></path><path d="M0 0h24v24H0z" fill="none"></path></svg></span></h3><ul class="hide"><li class="navListItem"><a class="navItem" href="/docs/docs/en/intro">Introduction</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle collapsible">Tutorials<span class="arrow"><svg width="24" height="24" viewBox="0 0 24 24"><path fill="#565656" d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z"></path><path d="M0 0h24v24H0z" fill="none"></path></svg></span></h3><ul class="hide"><li class="navListItem"><a class="navItem" href="/docs/docs/en/tutorials-intro">Introduction</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle collapsible">How-to Guides<span class="arrow"><svg width="24" height="24" viewBox="0 0 24 24"><path fill="#565656" d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z"></path><path d="M0 0h24v24H0z" fill="none"></path></svg></span></h3><ul class="hide"><li class="navListItem"><a class="navItem" href="/docs/docs/en/guides-intro">Introduction</a></li><li class="navListItem"><a class="navItem" href="/docs/docs/en/guides-patterns">Crawl and Processing Patterns and Regexes</a></li><li class="navListItem"><a class="navItem" href="/docs/docs/en/guides-crawl-depth">Limiting crawl depth</a></li><li class="navListItem"><a class="navItem" href="/docs/docs/en/guides-restrict-domain">Restricting Crawls to Domains and Subdomains</a></li><li class="navListItem"><a class="navItem" href="/docs/docs/en/guides-manual-selectors">Creating Custom Rules without a Browser Preview</a></li><li class="navListItem navListItemActive"><a class="navItem" href="/docs/docs/en/guides-data-behind-login">Accessing Data Behind a Login Wall</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle collapsible">Explainers<span class="arrow"><svg width="24" height="24" viewBox="0 0 24 24"><path fill="#565656" d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z"></path><path d="M0 0h24v24H0z" fill="none"></path></svg></span></h3><ul class="hide"><li class="navListItem"><a class="navItem" href="/docs/docs/en/explain-intro">Introduction</a></li><li class="navListItem"><a class="navItem" href="/docs/docs/en/explain-cvp">Crawling vs Processing</a></li><li class="navListItem"><a class="navItem" href="/docs/docs/en/explain-regex">Diffbot Regex Syntax</a></li><li class="navListItem"><a class="navItem" href="/docs/docs/en/explain-global-index">Global Index</a></li><li class="navListItem"><a class="navItem" href="/docs/docs/en/explain-kg">Understanding the Knowledge Graph</a></li><li class="navListItem"><a class="navItem" href="/docs/docs/en/explain-api">Understanding Extraction APIs</a></li></ul></div></div></section></div><script>
+            var coll = document.getElementsByClassName('collapsible');
+            var checkActiveCategory = true;
+            for (var i = 0; i < coll.length; i++) {
+              var links = coll[i].nextElementSibling.getElementsByTagName('*');
+              if (checkActiveCategory){
+                for (var j = 0; j < links.length; j++) {
+                  if (links[j].classList.contains('navListItemActive')){
+                    coll[i].nextElementSibling.classList.toggle('hide');
+                    coll[i].childNodes[1].classList.toggle('rotate');
+                    checkActiveCategory = false;
+                    break;
+                  }
+                }
+              }
+
+              coll[i].addEventListener('click', function() {
+                var arrow = this.childNodes[1];
+                arrow.classList.toggle('rotate');
+                var content = this.nextElementSibling;
+                content.classList.toggle('hide');
+              });
+            }
+
+            document.addEventListener('DOMContentLoaded', function() {
+              createToggler('#navToggler', '#docsNav', 'docsSliderActive');
+              createToggler('#tocToggler', 'body', 'tocActive');
+
+              var headings = document.querySelector('.toc-headings');
+              headings && headings.addEventListener('click', function(event) {
+                var el = event.target;
+                while(el !== headings){
+                  if (el.tagName === 'A') {
+                    document.body.classList.remove('tocActive');
+                    break;
+                  } else{
+                    el = el.parentNode;
+                  }
+                }
+              }, false);
+
+              function createToggler(togglerSelector, targetSelector, className) {
+                var toggler = document.querySelector(togglerSelector);
+                var target = document.querySelector(targetSelector);
+
+                if (!toggler) {
+                  return;
+                }
+
+                toggler.onclick = function(event) {
+                  event.preventDefault();
+
+                  target.classList.toggle(className);
+                };
+              }
+            });
+        </script></nav></div><div class="container mainContainer docsContainer"><div class="wrapper"><div class="post"><header class="postHeader"><a class="edit-page-link button" href="https://github.com/diffbot/docs/edit/master/docs/guides-data-behind-login.md" target="_blank" rel="noreferrer noopener">Edit</a><h1 id="__docusaurus" class="postHeaderTitle">Accessing Data Behind a Login Wall</h1></header><article><div><span><p>Sometimes you need to log into a site to get to some walled-off data. Let’s see an example.</p>
+<p>Let’s assume we want to crawl the articles on <a href="https://thebrowser.com">TheBrowser.com</a>. TheBrowser is a manually curated subscription based website which recommends interesting links from around the web.</p>
+<p><img src="/docs/img/loginwall/01.png" alt="TheBrowser, a curator of web quality"></p>
+<h2><a class="anchor" aria-hidden="true" id="getting-the-login-cookie"></a><a href="#getting-the-login-cookie" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Getting the Login Cookie</h2>
+<p>Once you have an account on the site you’re wanting to crawl (TheBrowser’s will cost you some $35 yearly but same procedure applies to any website with a paywall / log in area), log into it.</p>
+<p>Once logged in, open your browser’s Dev Tools (right click anywhere on the page) and select Inspect, or go to View -&gt; Developer -&gt; Developer Tools. Then, open the Network tab and to be on the safe side refresh the page you’re logged into. The very first entry in the Network tab will be the one you’re looking for.</p>
+<p><img src="/docs/img/loginwall/thebrow2.gif" alt="Selecting the network tab after reloading"></p>
+<p>Scroll down on its screen until you see the Response Headers area, then select the whole Cookie or Set-Cookie field and copy it.</p>
+<p><img src="/docs/img/loginwall/thebrow3.gif" alt="Selecting and copying the cookie value in the network entry"></p>
+<p>We now have the login cookie copied!</p>
+<blockquote>
+<p>Note – this method will often grab more than the login cookie, as all of the site’s cookies are there, from traffic analysis to ads. It’s better to err on the side of caution and grab too much than too little.</p>
+</blockquote>
+<h2><a class="anchor" aria-hidden="true" id="using-the-cookie-in-crawlbot"></a><a href="#using-the-cookie-in-crawlbot" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Using the Cookie in Crawlbot</h2>
+<p>Copy the cookie into the Crawljob you’re building for this site, into its specific Cookie field in the Crawljob UI.</p>
+<p><img src="/docs/img/loginwall/thebrow4.gif" alt="Pasting the cookie into the appropriate crawlbot field"></p>
+<p>This will be enough to crawl a site with a login for as long as the session lasts.</p>
+<blockquote>
+<p>Note: Be aware that some cookies last longer than others, and the session might expire after a while. You will then need to repeat the process. The one from our example does not expire, so it’s valid forever.</p>
+</blockquote>
+<p>After the job has been running for a while, TheBrowser will have given us a nice set of results.</p>
+<p><img src="/docs/img/loginwall/03.png" alt="Results of a crawl running on TheBrowser - 3.3k pages crawled, 6.5k processed"></p>
+<h2><a class="anchor" aria-hidden="true" id="using-the-cookie-in-direct-api-calls"></a><a href="#using-the-cookie-in-direct-api-calls" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Using the Cookie in Direct API Calls</h2>
+<p>Using the cookie in direct API calls is a bit more complicated, but we’re working on making it much simpler. For now, the following section will describe the process.</p>
+<p>Let’s assume we created a custom API called <code>thebrow</code> for TheBrowser.</p>
+<p><img src="/docs/img/loginwall/02.png" alt="Creating a custom API"></p>
+<blockquote>
+<p>Note: to actually save a Custom API, you need to add at least one field, even if it’s pointless.</p>
+</blockquote>
+<p>Coincidentally, TheBrowser is blocking rendering of its own pages in other websites, so we need to apply the procedure <a href="guides-manual-selectors">described here</a> to set the rule up. In our example, we set up a collection that gathers up the links on a TheBrowser page.</p>
+<p><img src="/docs/img/loginwall/screen1.png" alt=""></p>
+<p>We can see that the Custom API here returns only 5 links. We know for a fact that when logged in, the home page of TheBrowser returns many more. This will thus be an excellent testing ground.</p>
+<h2><a class="anchor" aria-hidden="true" id="temporarily-using-a-cookie-with-an-api"></a><a href="#temporarily-using-a-cookie-with-an-api" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Temporarily using a cookie with an API</h2>
+<p>When you want a one-off API call or an API call from the command line using your cookie (for testing purposes, for example), you can pass the header <code>X-Forward-Cookie</code> with the request and Diffbot will forward that cookie along.</p>
+<p>Let’s see how that would work with the fantastic API testing tool <a href="https://getpostman.com">Postman</a>.</p>
+<p>We need to:</p>
+<ul>
+<li>put the API URL in the main field</li>
+<li>open the “params” area and add the token and URL, then select the URL and select “ENCODE” so that it’s properly encoded for sending</li>
+<li>open the headers area and input the cookie</li>
+</ul>
+<p>Here’s a demonstration of the whole process:</p>
+<p><img src="/docs/img/loginwall/thebrow5.gif" alt="Using the login cookie in Postman"></p>
+<p>The request now returns many more results.</p>
+<h2><a class="anchor" aria-hidden="true" id="permanently-attaching-a-cookie-to-an-api"></a><a href="#permanently-attaching-a-cookie-to-an-api" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Permanently attaching a cookie to an API</h2>
+<p>When you permanently attach a cookie to an API that targets a site, that site will always take that cookie into account and act as if you’re logged in. This is incredibly useful when cookies on that site don’t expire, but you don’t use it for crawling.</p>
+<p>To permanently attach the cookie, you need to programmatically update your rules by following this process:</p>
+<ol>
+<li>Create a custom API for that domain.</li>
+<li>Download all your custom APIs.</li>
+<li>Modify the API for that domain with the cookie</li>
+<li>Send all the APIs back to Diffbot for saving</li>
+</ol>
+<p>We already did step 1 above, so let’s first download all rules with the <a href="https://www.diffbot.com/dev/docs/custom/managing/">Custom API API</a>.</p>
+<p>Using Postman, a simple request to our token’s Custom API API endpoint should produce a set of rules. One of them will be for our desired site, as in the case below:</p>
+<pre><code class="hljs">{
+    <span class="hljs-attr">"rules"</span>: [
+      {
+        <span class="hljs-attr">"name"</span>: <span class="hljs-string">"browlinks"</span>,
+        <span class="hljs-attr">"selector"</span>: <span class="hljs-string">"article"</span>,
+        <span class="hljs-attr">"rules"</span>: [
+          {
+            <span class="hljs-attr">"name"</span>: <span class="hljs-string">"linkurl"</span>,
+            <span class="hljs-attr">"selector"</span>: <span class="hljs-string">"h2 a:first-child"</span>,
+            <span class="hljs-attr">"filters"</span>: [
+              {
+                <span class="hljs-attr">"args"</span>: [
+                  <span class="hljs-string">"href"</span>
+                ],
+                <span class="hljs-attr">"type"</span>: <span class="hljs-string">"attribute"</span>
+              }
+            ]
+          },
+          {
+            <span class="hljs-attr">"name"</span>: <span class="hljs-string">"linktitle"</span>,
+            <span class="hljs-attr">"selector"</span>: <span class="hljs-string">"h2"</span>
+          }
+        ]
+      }
+    ],
+    <span class="hljs-attr">"api"</span>: <span class="hljs-string">"/api/thebrow"</span>,
+    <span class="hljs-attr">"urlPattern"</span>: <span class="hljs-string">"(http(s)?://)?(.*\\.)?thebrowser.com.*"</span>,
+    <span class="hljs-attr">"testUrl"</span>: <span class="hljs-string">"http://thebrowser.com"</span>
+  }
+</code></pre>
+<p>All we need to do here is add another set of values:</p>
+<pre><code class="hljs">   <span class="hljs-string">"xForwardHeaders"</span>: {
+        <span class="hljs-string">"Cookie"</span>: [
+            <span class="hljs-string">"COOKIE_HERE"</span>
+        ]
+    }, 
+</code></pre>
+<p>Put together, the rule must look like this:</p>
+<pre><code class="hljs">{
+  <span class="hljs-attr">"rules"</span>: [
+    {
+      <span class="hljs-attr">"name"</span>: <span class="hljs-string">"browlinks"</span>,
+      <span class="hljs-attr">"selector"</span>: <span class="hljs-string">"article"</span>,
+      <span class="hljs-attr">"rules"</span>: [
+        {
+          <span class="hljs-attr">"name"</span>: <span class="hljs-string">"linkurl"</span>,
+          <span class="hljs-attr">"selector"</span>: <span class="hljs-string">"h2 a:first-child"</span>,
+          <span class="hljs-attr">"filters"</span>: [
+            {
+              <span class="hljs-attr">"args"</span>: [
+                <span class="hljs-string">"href"</span>
+              ],
+              <span class="hljs-attr">"type"</span>: <span class="hljs-string">"attribute"</span>
+            }
+          ]
+        },
+        {
+          <span class="hljs-attr">"name"</span>: <span class="hljs-string">"linktitle"</span>,
+          <span class="hljs-attr">"selector"</span>: <span class="hljs-string">"h2"</span>
+        }
+      ]
+    }
+  ],
+  <span class="hljs-attr">"xForwardHeaders"</span>: {
+    <span class="hljs-attr">"Cookie"</span>: [
+      <span class="hljs-string">"COOKIE_HERE"</span>
+    ]
+  }, 
+  <span class="hljs-attr">"api"</span>: <span class="hljs-string">"/api/thebrow"</span>,
+  <span class="hljs-attr">"urlPattern"</span>: <span class="hljs-string">"(http(s)?://)?(.*\\.)?thebrowser.com.*"</span>,
+  <span class="hljs-attr">"testUrl"</span>: <span class="hljs-string">"http://thebrowser.com"</span>
+}
+</code></pre>
+<p>Note: the location at which you put <code>xForwardHeaders</code> does not matter.</p>
+<p>With a modified and saved <code>myrules.json</code>, we can tell Diffbot about our changes to the rules.</p>
+<pre><code class="hljs css language-bash">curl -d <span class="hljs-string">"@myrules.json"</span> -X POST https://api.diffbot.com/v3/custom?token=MYTOKEN -H <span class="hljs-string">"Content-Type: application/json"</span>
+</code></pre>
+<p>This will update that token’s rules and apply the cookie indefinitely. You can refresh the cookie if it expires by repeating the process – first download the rules, then change them, then re-upload them.</p>
+<p>We realize this is not the most user-friendly way to add cookies to custom APIs, and we’re actively working on improving this aspect of Custom API development!</p>
+</span></div></article></div><div class="docLastUpdate"><em>Last updated by Bruno Skvorc</em></div><div class="docs-prevnext"><a class="docs-prev button" href="/docs/docs/en/guides-manual-selectors"><span class="arrow-prev">← </span><span>Creating Custom Rules without a Browser Preview</span></a><a class="docs-next button" href="/docs/docs/en/explain-intro"><span>Introduction</span><span class="arrow-next"> →</span></a></div></div></div><nav class="onPageNav"><ul class="toc-headings"><li><a href="#getting-the-login-cookie">Getting the Login Cookie</a></li><li><a href="#using-the-cookie-in-crawlbot">Using the Cookie in Crawlbot</a></li><li><a href="#using-the-cookie-in-direct-api-calls">Using the Cookie in Direct API Calls</a></li><li><a href="#temporarily-using-a-cookie-with-an-api">Temporarily using a cookie with an API</a></li><li><a href="#permanently-attaching-a-cookie-to-an-api">Permanently attaching a cookie to an API</a></li></ul></nav></div><footer class="nav-footer" id="footer"><section class="sitemap"><a href="/docs/" class="nav-home"><img src="/docs/img/diffbot_white.svg" alt="Docs Suite" width="66" height="58"/></a><div><h5>Docs</h5><a href="/docs/docs/en/intro">Tutorials</a><a href="/docs/docs/en/guides-intro">How-to Guides</a><a href="/docs/docs/en/explain-intro">Explainers</a><a href="/docs/docs/en/api-intro">API Reference</a></div><div><h5>Community</h5><a href="https://stackoverflow.com/questions/tagged/diffbot" target="_blank" rel="noreferrer noopener">Stack Overflow</a><a href="https://twitter.com/diffbot" target="_blank" rel="noreferrer noopener">Twitter</a></div><div><h5>More</h5><a href="/docs/blog">Blog</a><a href="https://github.com/diffbot">GitHub</a></div></section><a href="https://diffbot.com/" target="_blank" rel="noreferrer noopener" class="fbOpenSource"><img src="/docs/img/diffbot_white.svg" alt="Diffbot.com" width="170" height="45"/></a><section class="copyright">Copyright © 2019 Diffbot.com</section></footer></div></body></html>
