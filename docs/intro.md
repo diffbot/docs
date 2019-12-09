@@ -4,7 +4,7 @@ title: Introduction
 sidebar_label: Introduction
 ---
 
-Welcome to the Diffbot docs. Here you'll learn all about Diffbot's features and how they can help you accomplish your goal.
+Welcome to the Diffbot docs! Here you'll learn all about Diffbot's features and how they can help you accomplish your goal.
 
 ## Getting Started
 
