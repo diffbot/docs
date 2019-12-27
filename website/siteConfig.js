@@ -24,14 +24,14 @@ const siteConfig = {
   title: 'Docs Suite', // Title for your website.
   tagline: 'Diffbot Documentation - Tutorials, Guides, API reference',
   url: 'https://diffbot.github.io', // Your website URL
-  baseUrl: '/', // Base URL for your project */
+  baseUrl: '/docs/', // Base URL for your project */
   // For github.io type URLs, you would set the url and baseUrl like:
   //   url: 'https://facebook.github.io',
   //   baseUrl: '/test-site/',
 
 
   // Used for publishing and more
-  projectName: '',
+  projectName: 'docs',
   organizationName: 'diffbot',
   // For top-level user or org sites, the organization is still the same.
   // e.g., for the https://JoelMarcey.github.io site, it would be set like...
@@ -101,6 +101,8 @@ const siteConfig = {
   // For sites with a sizable amount of content, set collapsible to true.
   // Expand/collapse the links and subcategories under categories.
   docsSideNavCollapsible: true,
+
+  cname: 'docs.diffbot.com',
 
   // Show documentation's last contributor's name.
   enableUpdateBy: true,
