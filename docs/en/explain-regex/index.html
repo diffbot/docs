@@ -1,0 +1,154 @@
+<!DOCTYPE html><html lang="en"><head><meta charSet="utf-8"/><meta http-equiv="X-UA-Compatible" content="IE=edge"/><title>The Regular Expressions used by Diffbot · Docs Suite</title><meta name="viewport" content="width=device-width"/><meta name="generator" content="Docusaurus"/><meta name="description" content="&lt;p&gt;If you wish to explicitly control the pages Crawlbot crawls and/or processes, you can optionally use a regular expression. Each page URL will be evaluated against these regexes and matches will be spidered or processed.&lt;/p&gt;"/><meta name="docsearch:language" content="en"/><meta property="og:title" content="The Regular Expressions used by Diffbot · Docs Suite"/><meta property="og:type" content="website"/><meta property="og:url" content="https://diffbot.github.io/docs/"/><meta property="og:description" content="&lt;p&gt;If you wish to explicitly control the pages Crawlbot crawls and/or processes, you can optionally use a regular expression. Each page URL will be evaluated against these regexes and matches will be spidered or processed.&lt;/p&gt;"/><meta property="og:image" content="https://diffbot.github.io/docs/img/diagram.svg"/><meta name="twitter:card" content="summary"/><meta name="twitter:image" content="https://diffbot.github.io/docs/img/diagram.svg"/><link rel="shortcut icon" href="/docs/img/diffbot-head.png"/><link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/default.min.css"/><link rel="alternate" type="application/atom+xml" href="https://diffbot.github.io/docs/blog/atom.xml" title="Docs Suite Blog ATOM Feed"/><link rel="alternate" type="application/rss+xml" href="https://diffbot.github.io/docs/blog/feed.xml" title="Docs Suite Blog RSS Feed"/><script type="text/javascript" src="https://buttons.github.io/buttons.js"></script><script src="/docs/js/scrollSpy.js"></script><link rel="stylesheet" href="/docs/css/main.css"/><script src="/docs/js/codetabs.js"></script></head><body class="sideNavVisible separateOnPageNav"><div class="fixedHeaderContainer"><div class="headerWrapper wrapper"><header><a href="/docs/"><img class="logo" src="/docs/img/diffbot_white.svg" alt="Docs Suite"/><h2 class="headerTitleWithLogo">Docs Suite</h2></a><div class="navigationWrapper navigationSlider"><nav class="slidingNav"><ul class="nav-site nav-site-internal"><li class="siteNavGroupActive"><a href="/docs/docs/en/intro" target="_self">Prose</a></li><li class=""><a href="/docs/docs/en/api-intro" target="_self">API</a></li><li class=""><a href="/docs/docs/en/error-intro" target="_self">Debugging</a></li><li class=""><a href="/docs/help" target="_self">Help</a></li><li class=""><a href="/docs/blog/" target="_self">Blog</a></li></ul></nav></div></header></div></div><div class="navPusher"><div class="docMainWrapper wrapper"><div class="docsNavContainer" id="docsNav"><nav class="toc"><div class="toggleNav"><section class="navWrapper wrapper"><div class="navBreadcrumb wrapper"><div class="navToggle" id="navToggler"><div class="hamburger-menu"><div class="line1"></div><div class="line2"></div><div class="line3"></div></div></div><h2><i>›</i><span>Explainers</span></h2><div class="tocToggler" id="tocToggler"><i class="icon-toc"></i></div></div><div class="navGroups"><div class="navGroup"><h3 class="navGroupCategoryTitle collapsible">Basics<span class="arrow"><svg width="24" height="24" viewBox="0 0 24 24"><path fill="#565656" d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z"></path><path d="M0 0h24v24H0z" fill="none"></path></svg></span></h3><ul class="hide"><li class="navListItem"><a class="navItem" href="/docs/docs/en/intro">Introduction</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle collapsible">Tutorials<span class="arrow"><svg width="24" height="24" viewBox="0 0 24 24"><path fill="#565656" d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z"></path><path d="M0 0h24v24H0z" fill="none"></path></svg></span></h3><ul class="hide"><li class="navListItem"><a class="navItem" href="/docs/docs/en/tutorials-intro">Introduction</a></li><li class="navListItem"><a class="navItem" href="/docs/docs/en/tutorials-custom-collections">Help with custom collections</a></li><li class="navListItem"><a class="navItem" href="/docs/docs/en/tutorials-correcting-api-output-custom">How to correct Article, Product, or other API output with a custom rule</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle collapsible">How-to Guides<span class="arrow"><svg width="24" height="24" viewBox="0 0 24 24"><path fill="#565656" d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z"></path><path d="M0 0h24v24H0z" fill="none"></path></svg></span></h3><ul class="hide"><li class="navListItem"><a class="navItem" href="/docs/docs/en/guides-intro">Introduction</a></li><li class="navListItem"><a class="navItem" href="/docs/docs/en/guides-patterns">Crawl and Processing Patterns and Regexes</a></li><li class="navListItem"><a class="navItem" href="/docs/docs/en/guides-crawl-depth">Limiting crawl depth</a></li><li class="navListItem"><a class="navItem" href="/docs/docs/en/guides-restrict-domain">Restricting Crawls to Domains and Subdomains</a></li><li class="navListItem"><a class="navItem" href="/docs/docs/en/guides-manual-selectors">Creating Custom Rules without a Browser Preview</a></li><li class="navListItem"><a class="navItem" href="/docs/docs/en/guides-data-behind-login">Accessing Data Behind a Login Wall</a></li><li class="navListItem"><a class="navItem" href="/docs/docs/en/guides-pdf-invoices">Can I receive my invoice / receipt or billing history as a PDF?</a></li><li class="navListItem"><a class="navItem" href="/docs/docs/en/guides-manual-invoicing-custom-billing">Does Diffbot offer manual invoicing, custom terms or other payment options?</a></li><li class="navListItem"><a class="navItem" href="/docs/docs/en/guides-update-credit-card">How can I update my credit card details?</a></li><li class="navListItem"><a class="navItem" href="/docs/docs/en/guides-concatenate-multipage-articles">How to concatenate multiple-page articles using a custom rule</a></li><li class="navListItem"><a class="navItem" href="/docs/docs/en/guides-backup-restore-rules">Backing up and restoring custom APIs and rules</a></li><li class="navListItem"><a class="navItem" href="/docs/docs/en/guides-accessing-nonpublic-content">Can Diffbot access content within an intranet or requiring a login?</a></li><li class="navListItem"><a class="navItem" href="/docs/docs/en/guides-multiple-url-patterns-same-site">Can I create multiple custom rules for a single site?</a></li><li class="navListItem"><a class="navItem" href="/docs/docs/en/guides-concatenation-custom-api">Concatenating multiple pages with a custom API</a></li><li class="navListItem"><a class="navItem" href="/docs/docs/en/guides-fixing-analyze-page-type">Fixing a misidentified page type with Analyze API</a></li><li class="navListItem"><a class="navItem" href="/docs/docs/en/guides-meta-elements-custom-api">How can I access META elements using the Custom API Toolkit?</a></li><li class="navListItem"><a class="navItem" href="/docs/docs/en/guides-combining-css-selectors">How can I use CSS selectors to select multiple items?</a></li><li class="navListItem"><a class="navItem" href="/docs/docs/en/guides-site-templates-custom-api">How do custom APIs handle different templates?</a></li><li class="navListItem"><a class="navItem" href="/docs/docs/en/guides-correct-images-custom-api">How do I correct the ‘images’ field in the Article API?</a></li><li class="navListItem"><a class="navItem" href="/docs/docs/en/guides-injecting-javascript-replaying-ajax">Injecting JavaScript into Custom API and replaying AJAX calls</a></li><li class="navListItem"><a class="navItem" href="/docs/docs/en/guides-regex-custom-api">Regular Expressions in the API Toolkit</a></li><li class="navListItem"><a class="navItem" href="/docs/docs/en/guides-migrate-rules-apis-v3">Transitioning Custom Rules to Updated API Versions</a></li><li class="navListItem"><a class="navItem" href="/docs/docs/en/guides-replace-filter-custom-api">Using the Replace Filter in the Custom API Toolkit</a></li><li class="navListItem"><a class="navItem" href="/docs/docs/en/guides-other-product-currencies">Accessing Product Prices in Other Currencies with the Product API</a></li><li class="navListItem"><a class="navItem" href="/docs/docs/en/guides-multi-page-articles-discussions">How Diffbot handles multiple-page articles and discussions</a></li><li class="navListItem"><a class="navItem" href="/docs/docs/en/guides-improving-response-times">Improving API response times</a></li><li class="navListItem"><a class="navItem" href="/docs/docs/en/guides-semantria">Semantria-powered sentiment, entity-extraction and other text analysis features</a></li><li class="navListItem"><a class="navItem" href="/docs/docs/en/guides-analyze-api-fallback">The Analyze API “fallback” argument</a></li><li class="navListItem"><a class="navItem" href="/docs/docs/en/guides-when-to-use-analyze">When to use the Analyze API versus individual Automatic APIs</a></li><li class="navListItem"><a class="navItem" href="/docs/docs/en/guides-spoken-languages-identified">Which spoken languages (humanLanguage) are identified in Diffbot APIs?</a></li><li class="navListItem"><a class="navItem" href="/docs/docs/en/guides-crawlbot-bulk-querystring-parameter">Using the Crawlbot or Bulk API querystring parameter</a></li><li class="navListItem"><a class="navItem" href="/docs/docs/en/guides-sitemap-as-seed">Can Crawlbot use a site map (or sitemap) as a crawling seed?</a></li><li class="navListItem"><a class="navItem" href="/docs/docs/en/guides-infinite-endless-scrolling">Can Diffbot crawl sites that use “infinite” or “endless” scrolling?</a></li><li class="navListItem"><a class="navItem" href="/docs/docs/en/guides-limit-article-processing-publishing-date">Can I limit processing to articles written before, after or between certain dates?</a></li><li class="navListItem"><a class="navItem" href="/docs/docs/en/guides-multiple-crawl-seeds">Can I spider multiple sites in the same crawl? Is there a limit to the number of seed URLs?</a></li><li class="navListItem"><a class="navItem" href="/docs/docs/en/guides-multiple-apis-single-crawl">Can multiple Diffbot extraction APIs be used in a single crawl?</a></li><li class="navListItem"><a class="navItem" href="/docs/docs/en/guides-authenticated-crawling">Does Crawlbot support authenticated crawling?</a></li><li class="navListItem"><a class="navItem" href="/docs/docs/en/guides-recurring-crawls">How are repeating/recurring crawls scheduled?</a></li><li class="navListItem"><a class="navItem" href="/docs/docs/en/guides-check-results-specific-page-type">How can I check how many articles, products or other pages have been found?</a></li><li class="navListItem"><a class="navItem" href="/docs/docs/en/guides-extract-recent-news-content">How can I crawl (news) sites and monitor/extract only recent content?</a></li><li class="navListItem"><a class="navItem" href="/docs/docs/en/guides-custom-headers">How do I set custom headers in API calls or while crawling?</a></li><li class="navListItem"><a class="navItem" href="/docs/docs/en/guides-neverending-crawl-dynamic-urls">How do I stop a “never-ending” crawl due to dynamic URLs or querystrings?</a></li><li class="navListItem"><a class="navItem" href="/docs/docs/en/guides-crawling-ajax-generated-links">How to find and access Ajax-generated links while crawling</a></li><li class="navListItem"><a class="navItem" href="/docs/docs/en/guides-download-latest-round-crawl-results">In a recurring crawl, how do I download only the latest round’s content?</a></li><li class="navListItem"><a class="navItem" href="/docs/docs/en/guides-zapier">Using Zapier with Crawlbot or Bulk API jobs</a></li><li class="navListItem"><a class="navItem" href="/docs/docs/en/guides-troubleshooting-crawls">Why is my crawl not crawling (and other uncommon crawl problems)?</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle collapsible">Explainers<span class="arrow"><svg width="24" height="24" viewBox="0 0 24 24"><path fill="#565656" d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z"></path><path d="M0 0h24v24H0z" fill="none"></path></svg></span></h3><ul class="hide"><li class="navListItem"><a class="navItem" href="/docs/docs/en/explain-intro">Introduction</a></li><li class="navListItem"><a class="navItem" href="/docs/docs/en/explain-cvp">Crawling vs Processing</a></li><li class="navListItem navListItemActive"><a class="navItem" href="/docs/docs/en/explain-regex">Diffbot Regex Syntax</a></li><li class="navListItem"><a class="navItem" href="/docs/docs/en/explain-global-index">Global Index</a></li><li class="navListItem"><a class="navItem" href="/docs/docs/en/explain-kg">Understanding the Knowledge Graph</a></li><li class="navListItem"><a class="navItem" href="/docs/docs/en/explain-api">Understanding Extraction APIs</a></li><li class="navListItem"><a class="navItem" href="/docs/docs/en/explain-apis-javascript-support">Do Diffbot APIs execute Javascript?</a></li><li class="navListItem"><a class="navItem" href="/docs/docs/en/explain-apis-follow-redirects">Do Diffbot APIs follow redirects?</a></li><li class="navListItem"><a class="navItem" href="/docs/docs/en/explain-custom-rule-breaks">What happens when a custom rule “breaks?”</a></li><li class="navListItem"><a class="navItem" href="/docs/docs/en/explain-pdf-extraction">Can Diffbot APIs Extract Content from PDFs or Other Documents?</a></li><li class="navListItem"><a class="navItem" href="/docs/docs/en/explain-posting-text-html">Can I send HTML or text directly to Diffbot APIs?</a></li><li class="navListItem"><a class="navItem" href="/docs/docs/en/explain-article-api-date-normalization">Date normalization in the Article API</a></li><li class="navListItem"><a class="navItem" href="/docs/docs/en/explain-cached-api-responses">Do Diffbot APIs cache responses?</a></li><li class="navListItem"><a class="navItem" href="/docs/docs/en/explain-non-english-pages">Does Diffbot handle non-English pages?</a></li><li class="navListItem"><a class="navItem" href="/docs/docs/en/explain-moving-to-new-api-versions">Moving to New Versions of Diffbot APIs</a></li><li class="navListItem"><a class="navItem" href="/docs/docs/en/explain-what-counts-as-api-call">What counts as an API call?</a></li><li class="navListItem"><a class="navItem" href="/docs/docs/en/explain-diffbot-api-timeout">How long can a single request take / what is the Diffbot API timeout?</a></li><li class="navListItem"><a class="navItem" href="/docs/docs/en/explain-bulk-processing-results-ordering">Are bulk processing URLs returned in the same order as submitted?</a></li><li class="navListItem"><a class="navItem" href="/docs/docs/en/explain-bulk-processing-speed">How quickly does the Bulk Service process web pages?</a></li><li class="navListItem"><a class="navItem" href="/docs/docs/en/explain-hashtag-links">Does Crawlbot follow “hashtag” links / internal links / fragment identifiers?</a></li><li class="navListItem"><a class="navItem" href="/docs/docs/en/explain-robots-txt">Does Crawlbot respect the robots.txt protocol?</a></li><li class="navListItem"><a class="navItem" href="/docs/docs/en/explain-page-deduplication">How does Diffbot handle duplicate pages/content while crawling?</a></li><li class="navListItem"><a class="navItem" href="/docs/docs/en/explain-how-long-crawl-site">How long does it take to crawl a site?</a></li><li class="navListItem"><a class="navItem" href="/docs/docs/en/explain-using-different-proxies">Using Diffbot Proxy Servers / Proxy IPs</a></li><li class="navListItem"><a class="navItem" href="/docs/docs/en/explain-when-crawl-bulk-data-deleted">When is crawl or bulk job data deleted?</a></li><li class="navListItem"><a class="navItem" href="/docs/docs/en/explain-gdpr">Is Diffbot compliant with GDPR?</a></li></ul></div></div></section></div><script>
+            var coll = document.getElementsByClassName('collapsible');
+            var checkActiveCategory = true;
+            for (var i = 0; i < coll.length; i++) {
+              var links = coll[i].nextElementSibling.getElementsByTagName('*');
+              if (checkActiveCategory){
+                for (var j = 0; j < links.length; j++) {
+                  if (links[j].classList.contains('navListItemActive')){
+                    coll[i].nextElementSibling.classList.toggle('hide');
+                    coll[i].childNodes[1].classList.toggle('rotate');
+                    checkActiveCategory = false;
+                    break;
+                  }
+                }
+              }
+
+              coll[i].addEventListener('click', function() {
+                var arrow = this.childNodes[1];
+                arrow.classList.toggle('rotate');
+                var content = this.nextElementSibling;
+                content.classList.toggle('hide');
+              });
+            }
+
+            document.addEventListener('DOMContentLoaded', function() {
+              createToggler('#navToggler', '#docsNav', 'docsSliderActive');
+              createToggler('#tocToggler', 'body', 'tocActive');
+
+              var headings = document.querySelector('.toc-headings');
+              headings && headings.addEventListener('click', function(event) {
+                var el = event.target;
+                while(el !== headings){
+                  if (el.tagName === 'A') {
+                    document.body.classList.remove('tocActive');
+                    break;
+                  } else{
+                    el = el.parentNode;
+                  }
+                }
+              }, false);
+
+              function createToggler(togglerSelector, targetSelector, className) {
+                var toggler = document.querySelector(togglerSelector);
+                var target = document.querySelector(targetSelector);
+
+                if (!toggler) {
+                  return;
+                }
+
+                toggler.onclick = function(event) {
+                  event.preventDefault();
+
+                  target.classList.toggle(className);
+                };
+              }
+            });
+        </script></nav></div><div class="container mainContainer docsContainer"><div class="wrapper"><div class="post"><header class="postHeader"><a class="edit-page-link button" href="https://github.com/diffbot/docs/edit/master/docs/explain-regex.md" target="_blank" rel="noreferrer noopener">Edit</a><h1 id="__docusaurus" class="postHeaderTitle">The Regular Expressions used by Diffbot</h1></header><article><div><span><p>If you wish to explicitly control the pages Crawlbot crawls and/or processes, you can optionally use a regular expression. Each page URL will be evaluated against these regexes and matches will be spidered or processed.</p>
+<p>There are a number of different regular expression implementations, all of which differ slightly in their syntax.&nbsp;Crawlbot does not use a specific implementation, but rather a custom regular expression engine to ensure the best possible performance while evaluating pages.</p>
+<p>In terms of character class syntax — the most common regex concept/sequence used in Crawlbot parsing — Crawlbot supports all ASCII processing characters in the following table, and most Perl/Tcl shortcuts:</p>
+<table class="wikitable">
+<tbody>
+<tr>
+<th>Perl/Tcl</th>
+<th>ASCII</th>
+<th>Description</th>
+</tr>
+<tr>
+<td></td>
+<td><code>[A-Za-z0-9]</code></td>
+<td>Alphanumeric characters</td>
+</tr>
+<tr>
+<td><code>\w</code></td>
+<td><code>[A-Za-z0-9_]</code></td>
+<td>Alphanumeric characters plus “_”</td>
+</tr>
+<tr>
+<td><code>\W</code></td>
+<td><code>[^A-Za-z0-9_]</code></td>
+<td>Non-word characters</td>
+</tr>
+<tr>
+<td></td>
+<td><code>[A-Za-z]</code></td>
+<td>Alphabetic characters</td>
+</tr>
+<tr>
+<td></td>
+<td><code>[\t]</code></td>
+<td>Space and tab</td>
+</tr>
+<tr>
+<td><code>\b</code></td>
+<td><code>(?&lt;=\W)(?=\w)|(?&lt;=\w)(?=\W)</code></td>
+<td>Word boundaries</td>
+</tr>
+<tr>
+<td></td>
+<td><code>[\x00-\x1F\x7F]</code></td>
+<td>Control characters</td>
+</tr>
+<tr>
+<td><code>\d</code></td>
+<td><code>[0-9]</code></td>
+<td>Digits</td>
+</tr>
+<tr>
+<td><code>\D</code></td>
+<td><code>[^0-9]</code></td>
+<td>Non-digits</td>
+</tr>
+<tr>
+<td></td>
+<td><code>[\x21-\x7E]</code></td>
+<td>Visible characters</td>
+</tr>
+<tr>
+<td></td>
+<td><code>[a-z]</code></td>
+<td>Lowercase letters</td>
+</tr>
+<tr>
+<td></td>
+<td><code>[\x20-\x7E]</code></td>
+<td>Visible characters and the space character</td>
+</tr>
+<tr>
+<td></td>
+<td><code>[][!"#$%&amp;'()*+,./:;&lt;=&gt;?@\^_`{|}~-]</code></td>
+<td>Punctuation characters</td>
+</tr>
+<tr>
+<td><code>\s</code></td>
+<td><code>[\t\r\n\v\f]</code></td>
+<td>Whitespace characters</td>
+</tr>
+<tr>
+<td><code>\S</code></td>
+<td><code>[^ \t\r\n\v\f]</code></td>
+<td>Non-whitespace characters</td>
+</tr>
+<tr>
+<td></td>
+<td><code>[A-Z]</code></td>
+<td>Uppercase letters</td>
+</tr>
+<tr>
+<td></td>
+<td><code>[A-Fa-f0-9]</code></td>
+<td>Hexadecimal digits</td>
+</tr>
+</tbody>
+</table>
+</span></div></article></div><div class="docLastUpdate"><em>Last updated by Bruno Skvorc</em></div><div class="docs-prevnext"><a class="docs-prev button" href="/docs/docs/en/explain-cvp"><span class="arrow-prev">← </span><span>Crawling vs Processing</span></a><a class="docs-next button" href="/docs/docs/en/explain-global-index"><span>Global Index</span><span class="arrow-next"> →</span></a></div></div></div><nav class="onPageNav"></nav></div><footer class="nav-footer" id="footer"><section class="sitemap"><a href="/docs/" class="nav-home"><img src="/docs/img/diffbot_white.svg" alt="Docs Suite" width="66" height="58"/></a><div><h5>Docs</h5><a href="/docs/docs/en/intro">Tutorials</a><a href="/docs/docs/en/guides-intro">How-to Guides</a><a href="/docs/docs/en/explain-intro">Explainers</a><a href="/docs/docs/en/api-intro">API Reference</a></div><div><h5>Community</h5><a href="https://stackoverflow.com/questions/tagged/diffbot" target="_blank" rel="noreferrer noopener">Stack Overflow</a><a href="https://twitter.com/diffbot" target="_blank" rel="noreferrer noopener">Twitter</a></div><div><h5>More</h5><a href="/docs/blog">Blog</a><a href="https://github.com/diffbot">GitHub</a></div></section><a href="https://diffbot.com/" target="_blank" rel="noreferrer noopener" class="fbOpenSource"><img src="/docs/img/diffbot_white.svg" alt="Diffbot.com" width="170" height="45"/></a><section class="copyright">Copyright © 2019 Diffbot.com</section></footer></div></body></html>
