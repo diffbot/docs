@@ -19,3 +19,7 @@ article a, .blockContent a, .entry-content a, .post div a {
     text-decoration: underline;
     color: darkblue;
 }
+
+.navListItemActive {
+    font-weight: bold;
+}
