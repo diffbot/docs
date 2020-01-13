@@ -1,0 +1,60 @@
+<!DOCTYPE html><html lang="en"><head><meta charSet="utf-8"/><meta http-equiv="X-UA-Compatible" content="IE=edge"/><title>Bulk Processing · Docs Suite</title><meta name="viewport" content="width=device-width"/><meta name="generator" content="Docusaurus"/><meta name="description" content="&lt;div id=&quot;docBody&quot;&gt;"/><meta name="docsearch:language" content="en"/><meta property="og:title" content="Bulk Processing · Docs Suite"/><meta property="og:type" content="website"/><meta property="og:url" content="https://diffbot.github.io/"/><meta property="og:description" content="&lt;div id=&quot;docBody&quot;&gt;"/><meta property="og:image" content="https://diffbot.github.io/img/diagram.svg"/><meta name="twitter:card" content="summary"/><meta name="twitter:image" content="https://diffbot.github.io/img/diagram.svg"/><link rel="shortcut icon" href="/img/diffbot-head.png"/><link rel="stylesheet" href="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.css"/><link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/default.min.css"/><link rel="alternate" type="application/atom+xml" href="https://diffbot.github.io/blog/atom.xml" title="Docs Suite Blog ATOM Feed"/><link rel="alternate" type="application/rss+xml" href="https://diffbot.github.io/blog/feed.xml" title="Docs Suite Blog RSS Feed"/><script type="text/javascript" src="https://buttons.github.io/buttons.js"></script><script src="/js/scrollSpy.js"></script><link rel="stylesheet" href="/css/main.css"/><script src="/js/codetabs.js"></script></head><body class="sideNavVisible separateOnPageNav"><div class="fixedHeaderContainer"><div class="headerWrapper wrapper"><header><a href="/"><img class="logo" src="/img/diffbot_white.svg" alt="Docs Suite"/><h2 class="headerTitleWithLogo">Docs Suite</h2></a><div class="navigationWrapper navigationSlider"><nav class="slidingNav"><ul class="nav-site nav-site-internal"><li class=""><a href="/docs/en/intro" target="_self">Prose</a></li><li class=""><a href="/docs/en/api-intro" target="_self">API</a></li><li class=""><a href="/docs/en/error-intro" target="_self">Debugging</a></li><li class=""><a href="/help" target="_self">Help</a></li><li class=""><a href="/blog/" target="_self">Blog</a></li><li class="navSearchWrapper reactNavSearchWrapper"><input type="text" id="search_input_react" placeholder="Search" title="Search"/></li></ul></nav></div></header></div></div><div class="navPusher"><div class="docMainWrapper wrapper"><div class="container mainContainer docsContainer"><div class="wrapper"><div class="post"><header class="postHeader"><a class="edit-page-link button" href="https://github.com/diffbot/docs/edit/master/docs/docs/guides-bulk.md" target="_blank" rel="noreferrer noopener">Edit</a><h1 id="__docusaurus" class="postHeaderTitle">Bulk Processing</h1></header><article><div><span><div id="docBody">
+<p>Diffbot's Bulk Processor lets you send a large quantity of URLs through a Diffbot extraction API for fast, asynchronous processing.</p>
+<div class="alert alert-info">
+<strong>Related:</strong> <a href="http://support.diffbot.com/topics/bulk-api-service/" target="_blank">Bulk Processing Support</a> | <a href="api-bulk">Bulk API Documentation</a>
+</div>
+<p><h3>Overview</h3></p>
+<p>The Bulk Processor sends all submitted page URLs to a Diffbot API (either automatic or custom). All structured page results are then compiled into a single "collection," which can be downloaded in full or searched using the <a href="api-search">Search API</a>.</p>
+<div class="alert">
+<strong>Note:</strong> The Bulk Processor is not a crawler: it does not spider a site for additional links. You must supply each URL you wish to process. For crawling/spidering, see <a href="guides-crawl">Crawlbot</a>.</div>
+<p><h3>Creating a Bulk Job</h3></p>
+<p>Each bulk job requires the following:
+</p>
+<ol>
+<li>A name (e.g., "NewProducts").</li>
+<li>Multiple URLs to process, one per line. If you are on the Startup plan, jobs require at least 50 URLs.</li>
+<li>A Diffbot API to be used for processing pages.</li>
+</ol>
+<figure>
+<div>
+<img src="/docs/img/bulk.png">
+</div>
+<figcaption>Extracting all of the articles from <a href="http://support.diffbot.com">support.diffbot.com</a>.</figcaption>
+</figure>
+<p><h3>Passing Diffbot API Querystring Arguments</h3></p>
+<p>The Bulk Processor hands off URLs to <a href="https://diffbot.com/products/automatic">specific Diffbot APIs</a> for processing. Each of these APIs has optional querystring arguments that can be used to modify the information returned -- most commonly the <code>fields</code> argument, for adding optional fields to the Diffbot response.</p>
+<p></p>
+<div class="alert">
+<strong>Note:</strong> Top-level fields in our V3 APIs (e.g., "links" or "meta") will not be indexed or captured in bulk jobs. If you need these fields indexed, please use our V2 APIs (available via the API dropdown menu).</div>
+<h3>Notifications</h3>
+<p>You can choose to be notified at the conclusion of each bulk job, either by <a href="http://en.wikipedia.org/wiki/Webhook" target="_blank">webhook</a> or email.</p>
+<p>If "webhook" is chosen, you will need to supply a URL that is capable of receiving a POST request. One alternative to building your own: use the Diffbot app on <a href="https://zapier.com/zapbook/diffbot/" target="_blank">Zapier</a> to receive webhook notifications.</p>
+<h3>Accessing Bulk Job Data</h3>
+<div class="alert">Completed or paused bulk jobs will be automatically deleted after thirty days. Unlimited storage and searching is available with the <a href="http://www.diffbot.com/pricing">Pro plan.</a>
+</div>
+<p>You can access processed data anytime during your bulk job, or after it completes. There are two download options within the interface:</p>
+<ol>
+<li>Full JSON Output: A single file, in valid <a href="http://en.wikipedia.org/wiki/JSON" target="_blank">JSON</a>, containing all of the processed objects from your job.</li>
+<li>CSV Output: A single comma-separated-values file of the <strong>top-level</strong> objects. Nested elements (article images, tags, etc.) will not be returned in the CSV.</li>
+</ol>
+<p>If you only want to access a subset of your data, the <a href="api-search">Search API</a> allows much more flexibility in searching and retrieving only the matching items from queries.</p>
+</div></span></div></article></div><div class="docLastUpdate"><em>Last updated by Rick Deininger</em></div><div class="docs-prevnext"></div></div></div><nav class="onPageNav"></nav></div><footer class="nav-footer" id="footer"><section class="sitemap"><a href="/" class="nav-home"><img src="/img/diffbot_white.svg" alt="Docs Suite" width="66" height="58"/></a><div><h5>Docs</h5><a href="/docs/en/intro">Tutorials</a><a href="/docs/en/guides-intro">How-to Guides</a><a href="/docs/en/explain-intro">Explainers</a><a href="/docs/en/api-intro">API Reference</a></div><div><h5>Community</h5><a href="https://stackoverflow.com/questions/tagged/diffbot" target="_blank" rel="noreferrer noopener">Stack Overflow</a><a href="https://twitter.com/diffbot" target="_blank" rel="noreferrer noopener">Twitter</a></div><div><h5>More</h5><a href="/blog">Blog</a><a href="https://github.com/diffbot">GitHub</a></div></section><a href="https://diffbot.com/" target="_blank" rel="noreferrer noopener" class="fbOpenSource"><img src="/img/diffbot_white.svg" alt="Diffbot.com" width="170" height="45"/></a><section class="copyright">Copyright © 2020 Diffbot.com</section></footer></div><script type="text/javascript" src="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.js"></script><script>
+                document.addEventListener('keyup', function(e) {
+                  if (e.target !== document.body) {
+                    return;
+                  }
+                  // keyCode for '/' (slash)
+                  if (e.keyCode === 191) {
+                    const search = document.getElementById('search_input_react');
+                    search && search.focus();
+                  }
+                });
+              </script><script>
+              var search = docsearch({
+                
+                apiKey: '2c24e5e78d724e77c46ef1b720700177',
+                indexName: 'diffbot',
+                inputSelector: '#search_input_react',
+                algoliaOptions: {}
+              });
+            </script></body></html>

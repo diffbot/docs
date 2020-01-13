@@ -1,0 +1,126 @@
+<!DOCTYPE html><html lang="en"><head><meta charSet="utf-8"/><meta http-equiv="X-UA-Compatible" content="IE=edge"/><title>Error Codes · Docs Suite</title><meta name="viewport" content="width=device-width"/><meta name="generator" content="Docusaurus"/><meta name="description" content="&lt;div id=&quot;docBody&quot;&gt;"/><meta name="docsearch:language" content="en"/><meta property="og:title" content="Error Codes · Docs Suite"/><meta property="og:type" content="website"/><meta property="og:url" content="https://diffbot.github.io/"/><meta property="og:description" content="&lt;div id=&quot;docBody&quot;&gt;"/><meta property="og:image" content="https://diffbot.github.io/img/diagram.svg"/><meta name="twitter:card" content="summary"/><meta name="twitter:image" content="https://diffbot.github.io/img/diagram.svg"/><link rel="shortcut icon" href="/img/diffbot-head.png"/><link rel="stylesheet" href="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.css"/><link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/default.min.css"/><link rel="alternate" type="application/atom+xml" href="https://diffbot.github.io/blog/atom.xml" title="Docs Suite Blog ATOM Feed"/><link rel="alternate" type="application/rss+xml" href="https://diffbot.github.io/blog/feed.xml" title="Docs Suite Blog RSS Feed"/><script type="text/javascript" src="https://buttons.github.io/buttons.js"></script><script src="/js/scrollSpy.js"></script><link rel="stylesheet" href="/css/main.css"/><script src="/js/codetabs.js"></script></head><body class="sideNavVisible separateOnPageNav"><div class="fixedHeaderContainer"><div class="headerWrapper wrapper"><header><a href="/"><img class="logo" src="/img/diffbot_white.svg" alt="Docs Suite"/><h2 class="headerTitleWithLogo">Docs Suite</h2></a><div class="navigationWrapper navigationSlider"><nav class="slidingNav"><ul class="nav-site nav-site-internal"><li class=""><a href="/docs/en/intro" target="_self">Prose</a></li><li class=""><a href="/docs/en/api-intro" target="_self">API</a></li><li class="siteNavGroupActive"><a href="/docs/en/error-intro" target="_self">Debugging</a></li><li class=""><a href="/help" target="_self">Help</a></li><li class=""><a href="/blog/" target="_self">Blog</a></li><li class="navSearchWrapper reactNavSearchWrapper"><input type="text" id="search_input_react" placeholder="Search" title="Search"/></li></ul></nav></div></header></div></div><div class="navPusher"><div class="docMainWrapper wrapper"><div class="docsNavContainer" id="docsNav"><nav class="toc"><div class="toggleNav"><section class="navWrapper wrapper"><div class="navBreadcrumb wrapper"><div class="navToggle" id="navToggler"><div class="hamburger-menu"><div class="line1"></div><div class="line2"></div><div class="line3"></div></div></div><h2><i>›</i><span>Errors</span></h2><div class="tocToggler" id="tocToggler"><i class="icon-toc"></i></div></div><div class="navGroups"><div class="navGroup"><h3 class="navGroupCategoryTitle collapsible">Basics<span class="arrow"><svg width="24" height="24" viewBox="0 0 24 24"><path fill="#565656" d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z"></path><path d="M0 0h24v24H0z" fill="none"></path></svg></span></h3><ul class="hide"><li class="navListItem"><a class="navItem" href="/docs/en/error-intro">Introduction to the Errors Documentation</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle collapsible">Errors<span class="arrow"><svg width="24" height="24" viewBox="0 0 24 24"><path fill="#565656" d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z"></path><path d="M0 0h24v24H0z" fill="none"></path></svg></span></h3><ul class="hide"><li class="navListItem"><a class="navItem" href="/docs/en/error-missing-preview">Custom API Preview is Missing</a></li><li class="navListItem"><a class="navItem" href="/docs/en/error-too-many-collections">Too Many Collections Error</a></li><li class="navListItem"><a class="navItem" href="/docs/en/error-all-crawling-temporarily-paused">What does “all crawling temporarily paused by root administrator…” mean?</a></li><li class="navListItem"><a class="navItem" href="/docs/en/error-automatic-page-concatenation-timeout">Automatic Page Concatenation Exceeded Timeout Error</a></li><li class="navListItem"><a class="navItem" href="/docs/en/error-could-not-download-page">Could Not Download Page Error</a></li><li class="navListItem"><a class="navItem" href="/docs/en/error-diffbot-could-not-apply-rules">Diffbot Could Not Apply Rules Error</a></li><li class="navListItem"><a class="navItem" href="/docs/en/error-error-downloading-url">Error Downloading URL Error</a></li><li class="navListItem navListItemActive"><a class="navItem" href="/docs/en/error-errors">Error Codes</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle collapsible">Known issues<span class="arrow"><svg width="24" height="24" viewBox="0 0 24 24"><path fill="#565656" d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z"></path><path d="M0 0h24v24H0z" fill="none"></path></svg></span></h3><ul class="hide"><li class="navListItem"><a class="navItem" href="/docs/en/error-bug-search-query-too-long">Search API is Ignoring Certain Filters</a></li></ul></div></div></section></div><script>
+            var coll = document.getElementsByClassName('collapsible');
+            var checkActiveCategory = true;
+            for (var i = 0; i < coll.length; i++) {
+              var links = coll[i].nextElementSibling.getElementsByTagName('*');
+              if (checkActiveCategory){
+                for (var j = 0; j < links.length; j++) {
+                  if (links[j].classList.contains('navListItemActive')){
+                    coll[i].nextElementSibling.classList.toggle('hide');
+                    coll[i].childNodes[1].classList.toggle('rotate');
+                    checkActiveCategory = false;
+                    break;
+                  }
+                }
+              }
+
+              coll[i].addEventListener('click', function() {
+                var arrow = this.childNodes[1];
+                arrow.classList.toggle('rotate');
+                var content = this.nextElementSibling;
+                content.classList.toggle('hide');
+              });
+            }
+
+            document.addEventListener('DOMContentLoaded', function() {
+              createToggler('#navToggler', '#docsNav', 'docsSliderActive');
+              createToggler('#tocToggler', 'body', 'tocActive');
+
+              var headings = document.querySelector('.toc-headings');
+              headings && headings.addEventListener('click', function(event) {
+                var el = event.target;
+                while(el !== headings){
+                  if (el.tagName === 'A') {
+                    document.body.classList.remove('tocActive');
+                    break;
+                  } else{
+                    el = el.parentNode;
+                  }
+                }
+              }, false);
+
+              function createToggler(togglerSelector, targetSelector, className) {
+                var toggler = document.querySelector(togglerSelector);
+                var target = document.querySelector(targetSelector);
+
+                if (!toggler) {
+                  return;
+                }
+
+                toggler.onclick = function(event) {
+                  event.preventDefault();
+
+                  target.classList.toggle(className);
+                };
+              }
+            });
+        </script></nav></div><div class="container mainContainer docsContainer"><div class="wrapper"><div class="post"><header class="postHeader"><a class="edit-page-link button" href="https://github.com/diffbot/docs/edit/master/docs/error-errors.md" target="_blank" rel="noreferrer noopener">Edit</a><h1 id="__docusaurus" class="postHeaderTitle">Error Codes</h1></header><article><div><span><div id="docBody">
+<p>When issues arise, Diffbot APIs return the following fields in a JSON response:</p>
+<table class="controls table table-bordered" border="0" cellpadding="5">
+<thead><tr>
+<th>Field</th>
+<th>Response</th>
+</tr></thead>
+<tbody>
+<tr>
+<td><code>error</code></td>
+<td>Description of the error</td>
+</tr>
+<tr>
+<td><code>errorCode</code></td>
+<td>Error code per the chart below</td>
+</tr>
+</tbody>
+</table>
+<pre><code class="hljs css language-text">
+{
+     "error": "Could not download page (404)",
+     "errorCode": 404
+}
+
+</code></pre>
+<p><h3>Possible errors returned:</h3></p>
+<table class="controls table table-bordered" border="0" cellpadding="5">
+<thead><tr>
+<th>Code</th>
+<th>Description</th>
+</tr></thead>
+<tbody>
+<tr>
+<td><code>401</code></td>
+<td>Unauthorized token</td>
+</tr>
+<tr>
+<td><code>404</code></td>
+<td>Requested page not found</td>
+</tr>
+<tr>
+<td><code>429</code></td>
+<td>Your token has exceeded the allowed number of calls, or has otherwise been throttled for API abuse.</td>
+</tr>
+<tr>
+<td><code>500</code></td>
+<td>Error processing the page. Specific information will be returned in the JSON response.</td>
+</tr>
+</tbody>
+</table>
+</div></span></div></article></div><div class="docLastUpdate"><em>Last updated by Rick Deininger</em></div><div class="docs-prevnext"><a class="docs-prev button" href="/docs/en/error-error-downloading-url"><span class="arrow-prev">← </span><span>Error Downloading URL Error</span></a><a class="docs-next button" href="/docs/en/error-bug-search-query-too-long"><span>Search API is Ignoring Certain Filters</span><span class="arrow-next"> →</span></a></div></div></div><nav class="onPageNav"></nav></div><footer class="nav-footer" id="footer"><section class="sitemap"><a href="/" class="nav-home"><img src="/img/diffbot_white.svg" alt="Docs Suite" width="66" height="58"/></a><div><h5>Docs</h5><a href="/docs/en/intro">Tutorials</a><a href="/docs/en/guides-intro">How-to Guides</a><a href="/docs/en/explain-intro">Explainers</a><a href="/docs/en/api-intro">API Reference</a></div><div><h5>Community</h5><a href="https://stackoverflow.com/questions/tagged/diffbot" target="_blank" rel="noreferrer noopener">Stack Overflow</a><a href="https://twitter.com/diffbot" target="_blank" rel="noreferrer noopener">Twitter</a></div><div><h5>More</h5><a href="/blog">Blog</a><a href="https://github.com/diffbot">GitHub</a></div></section><a href="https://diffbot.com/" target="_blank" rel="noreferrer noopener" class="fbOpenSource"><img src="/img/diffbot_white.svg" alt="Diffbot.com" width="170" height="45"/></a><section class="copyright">Copyright © 2020 Diffbot.com</section></footer></div><script type="text/javascript" src="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.js"></script><script>
+                document.addEventListener('keyup', function(e) {
+                  if (e.target !== document.body) {
+                    return;
+                  }
+                  // keyCode for '/' (slash)
+                  if (e.keyCode === 191) {
+                    const search = document.getElementById('search_input_react');
+                    search && search.focus();
+                  }
+                });
+              </script><script>
+              var search = docsearch({
+                
+                apiKey: '2c24e5e78d724e77c46ef1b720700177',
+                indexName: 'diffbot',
+                inputSelector: '#search_input_react',
+                algoliaOptions: {}
+              });
+            </script></body></html>
