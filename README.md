@@ -6,4 +6,24 @@ This repo contains the source files of the Diffbot documentation suite currently
 
 To contribute, either submit a pull request with an edit on this repository by adding or editing files in the `docs` folder, or click the `Edit` button on any page in the rendered website.
 
+To add a new page:
+
+1. Add the page into the `docs` subfolder
+2. Add the page's ID into `sidebars.json` to reference it in the menus.
+
 Note that if you want to add contributions that touch on design, images, landing page text or other non-documentation content, you need to edit the files in the `website` subdirectory.
+
+## Building locally
+
+To build and test the docs locally:
+
+1. Make sure you have yarn installed ([yarnpkg.com](https://yarnpkg.com))
+2. Clone this repo
+3. `cd docs/diffbot; yarn install`
+4. run `yarn start`
+
+This will open a browser with the local version running in live-reload mode, so you can see your changes as you save your files. Note that menus will not update with this approach, so you need to kill the server with `CTRL+C` and restart with `yarn start` to test menu changes.
+
+## Translations
+
+TBD
