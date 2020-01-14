@@ -302,7 +302,6 @@ https://api.diffbot.com/v3/product
   
 
 ```text
-
 {
   "request": {
     "pageUrl": "http://store.livrada.com/collections/all/products/before-i-go-to-sleep",
@@ -378,7 +377,6 @@ https://api.diffbot.com/v3/product
 
 
 ```text
-
 function() {
     start();
     setTimeout(function() {
@@ -393,7 +391,6 @@ function() {
         }
     }, 500);
 }
-
 ```
 
 
@@ -423,7 +420,6 @@ https://api.diffbot.com/v3/product?token=...&amp;url=...
   
 
 ```text
-
 curl -H "Content-Type: text/html" -d '&lt;html&gt;&lt;head&gt;&lt;title&gt;Something to Buy&lt;/title&gt;&lt;/head&gt;&lt;body&gt;&lt;h2&gt;A Pair of Jeans&lt;/h2&gt;&lt;div&gt;Price: $31.99&lt;/div&gt;&lt;/body&gt;&lt;/html&gt;' 'https://api.diffbot.com/v3/product?token=...&amp;url=http%3A%2F%2Fstore.diffbot.com'
 ```
 

@@ -147,11 +147,125 @@ https://api.diffbot.com/v3/analyze?token=...&amp;url=...
       "date": "Thu, 31 May 2012 07:00:00 GMT"
     }
 }
+  
 ```
 
 
 </div>
+<!--<p>If <code>&stats</code> is passed, you will receive a confidence breakdown across all possible page-types. The following shows the output from a YouTube page, which is most likely a "video" page in the <code>types</code> array:
+<div class="indent">
+  
 
+```text
+{
+  "request": {
+    "pageUrl": "pageUrl": "http://www.youtube.com/watch?v=VNv3EZEUgok",
+    "api": "analyze",
+    "options": [
+      "stats"
+    ],
+    "fields": "",
+    "version": 3
+  },
+  {
+    "type": "other",
+    "human_language": "en",
+    "title": "Create a Custom API Using Diffbot's Custom API Toolkit",
+    "stats": {
+       "types": {
+          "article": 0.12,
+          "audio": 0.15,
+          "chart": 0.01,
+          "discussion": 0.03,
+          "document": 0.04,
+          "download": 0.01,
+          "error": 0.00,
+          "event": 0.00,
+          "faq": 0.02,
+          "frontpage": 0.12,
+          "game": 0.01,
+          "image": 0.02,
+          "job": 0.02,
+          "location": 0.08,
+          "product": 0.09,
+          "profile": 0.09,
+          "recipe": 0.08,
+          "reviewslist": 0.09,
+          "serp": 0.06,
+          "video": 0.93
+        }
+      },
+  }
+  
+```
+
+
+</div>
+<h3 id="pagetypes">Page Types</h3>
+<p>The "other" classification of page-types includes the following. To receive the confidence breakdown for each of these sub-types, you must request the <code>stats</code> field using <code>&fields=stats</code>.</p>
+<table class="controls table table-bordered" border="0" cellpadding="5">
+<thead><tr><th>Page Type</th><th>Description</th></tr></thead>
+<tbody>
+<tr><td><code>audio</code></td><td>A music or audio player.</td></tr>
+<tr><td><code>chart</code></td><td>A graph or chart, typically financial.</td></tr>
+<tr><td><code>document</code></td><td>An embedded or downloadable document or slideshow.</td></tr>
+<tr><td><code>download</code></td><td>A downloadable file.</td></tr>
+<tr><td><code>error</code></td><td>Error page, e.g. 404. </td></tr>
+<tr><td><code>event</code></td><td>A page detailing specific event information, e.g. time/date/location.</td></tr>
+<tr><td><code>faq</code></td><td>A page of multiple frequently asked questions, or a single FAQ entry.</td></tr>
+<tr><td><code>game</code></td><td>A playable game.</td></tr>
+<tr><td><code>job</code></td><td>A job posting.</td></tr>
+<tr><td><code>location</code></td><td>A page detailing location information, typically including an address and/or map.</td></tr>
+<tr><td><code>profile</code></td><td>A person or user profile page.</td></tr>
+<tr><td><code>recipe</code></td><td>Page detailing recipe instructions and ingredients.</td></tr>
+<tr><td><code>reviewslist</code></td><td>A list of user reviews.</td></tr>
+<tr><td><code>serp</code></td><td>A Search Engine Results Page</td></tr>
+<tr><td><code>video</code></td><td>An individual video.</td></tr>
+</tbody>
+</table>
+
+<h3>Training/Correcting the PageClassifier API</h3>
+<p>To improve the PageClassifier you can POST corrected URLs and labels to the Diffbot Training API. To do so, prepare a POST to the following endpoint:</p>
+  	
+
+```text
+http://www.diffbot.com/api/train/pageclassifier
+```
+
+
+<p>Provide the following parameters:</p>
+<table class="controls table table-bordered" border="0" cellpadding="5">
+<thead><tr><th>parameter</th><th>Description</th></tr></thead>
+<tbody>
+<tr><td><code>token</code></td><td>Developer <a href="/pricing">token</a></td></tr>
+<tr><td><code>url</code></td><td>URL to train or correct (URLEncoded)</td></tr>
+<tr><td><code>label</code></td><td>The correct page-type from the above list, OR, if you simply know that the Page Classifier label is wrong, you may prepend this incorrect label with "not_" - so a page incorrectly classified as Article could be corrected as <code>not_article</code></td></tr>
+</tbody>
+</table>
+<p>Example:</p>
+  	
+
+```text
+curl -v -F "token=..." \
+        -F "url=http://www.youtube.com/watch?v=waIBA6_0GQc" \
+        -F "label=video" \
+        http://www.diffbot.com/api/train/pageclassifier
+```
+
+
+<p>Or, to specify simply that a page is wrongly classified, use the <code>not_</code> convention:</p>
+    
+
+```text
+curl -v -F "token=..." \
+        -F "url=http://www.youtube.com/watch?v=waIBA6_0GQc" \
+        -F "label=not_article" \
+        http://www.diffbot.com/api/train/pageclassifier
+```
+
+
+
+-->
 <h3 id="authenticating">Authentication</h3>
 <p>You can supply Diffbot with basic authentication credentials or custom HTTP headers (see below) to access intranet pages or other sites that require a login.</p>
 

@@ -104,7 +104,6 @@ https://api.diffbot.com/v3/{your API name}?token=...&amp;url=...
 
 
 ```text
-
 function() {
     start();
     setTimeout(function() {
@@ -119,7 +118,6 @@ function() {
         }
     }, 500);
 }
-
 ```
 
 
@@ -149,7 +147,6 @@ https://api.diffbot.com/v3/yourcustomapi?token=...&amp;url=...
   
 
 ```text
-
 curl -H "Content-Type: text/html" -d '&lt;html&gt;&lt;body&gt;&lt;h2&gt;A Pair of Jeans&lt;/h2&gt;&lt;div&gt;Price: $31.99&lt;/div&gt;&lt;/body&gt;&lt;/html&gt;' https://api.diffbot.com/v3/yourcustomapi?token=...&amp;url=http%3A%2F%2Fstore.diffbot.com
 ```
 

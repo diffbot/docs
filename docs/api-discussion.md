@@ -306,7 +306,6 @@ https://api.diffbot.com/v3/discussion
 
 
 ```text
-
 function() {
     start();
     setTimeout(function() {
@@ -321,7 +320,6 @@ function() {
         }
     }, 500);
 }
-
 ```
 
 

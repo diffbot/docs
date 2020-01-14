@@ -187,7 +187,6 @@ https://api.diffbot.com/v3/search
  
 
 ```text
-
 {
   "request": {
     "num": 20,
@@ -220,7 +219,6 @@ https://api.diffbot.com/v3/search
     }
   ]
 }
-
 ```
 
 

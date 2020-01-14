@@ -27,12 +27,10 @@ sidebar_label: Error Codes
     
 
 ```text
-
 {
      "error": "Could not download page (404)",
      "errorCode": 404
 }
-
 ```
 
 

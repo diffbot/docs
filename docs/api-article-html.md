@@ -204,7 +204,6 @@ sidebar_label: Article API: HTML Field Specification
 
 
 ```text
-
 &lt;p&gt;Diffbot's human wranglers are proud today to announce the release of our newest product: an API for... products!&lt;/p&gt;
 
 &lt;p&gt;The &lt;a href="http://www.diffbot.com/products/automatic/product"&gt;Product API&lt;/a&gt; can be used for extracting clean, structured data from any e-commerce product page. It automatically makes available all the product data you'd expect: price, discount/savings amount, shipping cost, product description, any relevant product images, SKU and/or other product IDs.&lt;/p&gt;
@@ -220,7 +219,6 @@ sidebar_label: Article API: HTML Field Specification
 &lt;p&gt;What are you waiting for? Check out the &lt;a href="http://www.diffbot.com/products/automatic/product"&gt;Product API documentation&lt;/a&gt; and dive on in! If you need a token, check out our &lt;a href="http://www.diffbot.com/pricing"&gt;pricing and plans&lt;/a&gt; (including our Free plan).&lt;/p&gt;
 
 &lt;p&gt;Questions? Hit us up at &lt;a href="mailto:support@diffbot.com"&gt;support@diffbot.com&lt;/a&gt;.&lt;/p&gt;
-
 ```
 
 

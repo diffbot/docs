@@ -41,7 +41,6 @@ By default, Semantria accounts have a document-length limit of 2048 characters. 
   
 
 ```text
-
 "textAnalysis": {
    "sentiment":{
       "sentiment":"neutral",

@@ -153,7 +153,6 @@ https://api.diffbot.com/v3/image
   
 
 ```text
-
 {
   "request": {
     "pageUrl": "http://www.diffbot.com/products",
@@ -236,7 +235,6 @@ https://api.diffbot.com/v3/image
 
 
 ```text
-
 function() {
     start();
     setTimeout(function() {
@@ -251,7 +249,6 @@ function() {
         }
     }, 500);
 }
-
 ```
 
 
@@ -281,7 +278,6 @@ https://api.diffbot.com/v3/image?token=...&amp;url=...
   
 
 ```text
-
 curl -H "Content-Type: text/html" -d '&lt;html&gt;&lt;body&gt;&lt;h2&gt;Diffy the Robot&lt;/h2&gt;&lt;div&gt;&lt;img src="diffy-b.png"&gt;&lt;/div&gt;&lt;/body&gt;&lt;/html&gt;' 'https://api.diffbot.com/v3/image?token=...&amp;url=http%3A%2F%2Fwww.diffbot.com'
 ```
 

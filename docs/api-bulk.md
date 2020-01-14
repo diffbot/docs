@@ -79,9 +79,7 @@ todo: Modify links to old API docs
 
 
 ```text
-
   "response": "Successfully added urls for spidering."
-
 ```
 
 

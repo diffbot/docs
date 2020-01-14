@@ -138,7 +138,6 @@ https://api.diffbot.com/v3/custom
 
 
 ```text
-
 function() {
     start();
     setTimeout(function() {
@@ -153,7 +152,6 @@ function() {
         }
     }, 500);
 }
-
 ```
 
 
@@ -177,7 +175,6 @@ function() {
 
 
 ```text
-
 {
     "urlPattern": "(http(s)?://)?(.*\\.)?support.diffbot.com.*",
     "testUrl": "http://support.diffbot.com/crawlbot/using-zapier-with-crawlbot-or-bulk-api-jobs/",
@@ -221,7 +218,6 @@ function() {
     }
   ]
 }
-
 ```
 
 

@@ -181,7 +181,6 @@ https://api.diffbot.com/v3/video
   
 
 ```text
-
 {
   "request": {
     "pageUrl": "https://www.youtube.com/watch?v=VNv3EZEUgok",
@@ -261,7 +260,6 @@ https://api.diffbot.com/v3/video
 
 
 ```text
-
 function() {
     start();
     setTimeout(function() {
@@ -276,7 +274,6 @@ function() {
         }
     }, 500);
 }
-
 ```
 
 
