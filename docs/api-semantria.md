@@ -4,44 +4,23 @@ title: Semantria-Powered Text Analysis Features
 sidebar_label: Semantria-Powered Text Analysis Features
 ---
 
-<div id="docBody">
-<h3 id="request">Request</h3>
+## Request
 
-<div class="alert alert-warning">
-By default, Semantria accounts have a document-length limit of 2048 characters. In our integration, Diffbot will send up to 8192 characters of content to Semantria for analyis. Please contact your Semantria account manager to request an increase to 8192 characters in your Semantria account.</div>
-<p>To include Semantria-powered text analysis in your Article API response, include the following additional arguments:</p>
+<div class="alert">By default, Semantria accounts have a document-length limit of 2048 characters. In our integration, Diffbot will send up to 8192 characters of content to Semantria for analyis. Please contact your Semantria account manager to request an increase to 8192 characters in your Semantria account.</div>
 
-<!--{arguments}--><table class="controls table table-bordered" id="arguments" border="0" cellpadding="5">
-<thead><tr>
-<th>Argument</th>
-<th>Description</th>
-</tr></thead>
+To include Semantria-powered text analysis in your Article API response, include the following additional arguments:
 
-<tr>
-<td class=""><code>textAnalysis</code></td>
-<td class=" default"><div>Pass either <code>&amp;textAnalysis</code> or request the field <code>textAnalysis</code> to return the Semantria-powered object in your response.</div></td>
-</tr>
-<tr>
-<td class=""><code>semantriaKey</code></td>
-<td class=" default"><div>Include your Semantria API key (available from your Semantria dashboard).</div></td>
-</tr>
-<tr>
-<td class=""><code>semantriaSecret</code></td>
-<td class=" default"><div>Include your Semantria API secret (available from your Semantria dashboard).</div></td>
-</tr>
-</table>
-<!--{endarguments}-->
+| Argument | Description |
+| :------- | :---------- |
+| `textAnalysis` | Pass either `&textAnalysis` or request the field `textAnalysis` to return the Semantria-powered object in your response. |
+| `semantriaKey` | Include your Semantria API key (available from your Semantria dashboard). |
+| `semantriaSecret` | Include your Semantria API secret (available from your Semantria dashboard). |
 
+## Response
 
-<h3 id="response">Response</h3>
-<p>When using the above parameters, your Article API response will include a <code>textAnalysis</code> object, including the following Semantria objects: <code>autoCategories</code>, <code>entities</code>, <code>phrases</code>,  <code>themes</code>, <code>topics</code> and overall text <code>sentiment</code>. Sample response:
+When using the above parameters, your Article API response will include a `textAnalysis` object, including the following Semantria objects: `autoCategories`, `entities`, `phrases`,  `themes`, `topics` and overall text `sentiment`. Sample response:
 
-</p>
-<div class="indent">
-  
-
-```text
-
+```json
 "textAnalysis": {
    "sentiment":{
       "sentiment":"neutral",
@@ -285,8 +264,3 @@ By default, Semantria accounts have a document-length limit of 2048 characters. 
    ]
 }
 ```
-
-
-</div>
-
-</div>
