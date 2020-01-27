@@ -66,9 +66,6 @@ Objects in the Event API's `objects` array will include the following fields:
 | &#x21B3;`postalCode` | . |
 | &#x21B3;`region` | . |
 | &#x21B3;`precision` | . |
-
-
-
 | `images` | Array of images, if present within the event page. |
 | &#x21B3;`url` |Fully resolved link to image. If the image `SRC` is encoded as base64 data, the complete data URI will be returned. |
 | &#x21B3;`title` | Description or caption of the image. |
