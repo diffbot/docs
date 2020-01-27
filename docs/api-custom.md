@@ -5,6 +5,7 @@ sidebar_label: Custom APIs
 todo: Modify link beginning with "support.diffbot.com/topics"
 todo: Modify links to old API docs
 todo: Modify links to old Dashboard
+todo: Update link that leads to old KB about api toolkit, possible when Prose sidebar revamped.
 ---
 
 Custom APIs allow you to extract nearly anything from nearly any site using Diffbot's powerful rendering engine.
