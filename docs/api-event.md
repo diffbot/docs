@@ -54,18 +54,18 @@ Objects in the Event API's `objects` array will include the following fields:
 | `isFullDay` | Returns true of no time was found and the event runs the whole day.|
 | `description` | Text description, if available, of the event. |
 | `venue` | The name of the venue, if available. |
-| `location` | Parsed address information if parsable address is provided |
-| &#x21B3;`country` | . |
-| &#x21B3;`isCurrent` | . |
-| &#x21B3;`address` | . |
-| &#x21B3;`city` | . |
-| &#x21B3;`street` | . |
-| &#x21B3;`subregion` | . |
-| &#x21B3;`latitude` | . |
-| &#x21B3;`longitude` | . |
-| &#x21B3;`postalCode` | . |
+| `location` | Parsed address information, if parsable address is provided.|
+| &#x21B3;`country` | Country of the location.|
+| &#x21B3;`isCurrent` | Returns true if the address is current. |
+| &#x21B3;`address` | Address string. |
+| &#x21B3;`city` | City name. |
+| &#x21B3;`street` | The street information of the address. |
+| &#x21B3;`subregion` | The subregion of the city or area. |
+| &#x21B3;`latitude` | Latitude of the geographic coordinate of the address. |
+| &#x21B3;`longitude` | Longitude of the geographic coordinate of the address. |
+| &#x21B3;`postalCode` | Postal code of the address. |
 | &#x21B3;`region` | . |
-| &#x21B3;`precision` | . |
+| &#x21B3;`precision` | The precision score of the parsed address. |
 | `images` | Array of images, if present within the event page. |
 | &#x21B3;`url` |Fully resolved link to image. If the image `SRC` is encoded as base64 data, the complete data URI will be returned. |
 | &#x21B3;`title` | Description or caption of the image. |
