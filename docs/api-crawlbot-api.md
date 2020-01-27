@@ -6,303 +6,146 @@ todo: Modify links to old Dashboard
 todo: Modify links to old API docs
 ---
 
-<div id="docBody">
-<p>The Crawlbot API allows you to programmatically manage <a href="/dev/crawl">Crawlbot</a> crawls and retrieve output. Crawlbot API responses are in JSON format.</p>
+The Crawlbot API allows you to programmatically manage <a href="/dev/crawl">Crawlbot</a> crawls and retrieve output. Crawlbot API responses are in JSON format.
 
-<h3 id="creating">Creating or Updating a Crawl</h3>
-<p><b>Note that the limit of active crawls on a single token is 1000. More information <a href="error-too-many-collections">here</a>.</b></p>
-<div class="indent">
-<p>To create a crawl, make a POST request to <code>https://api.diffbot.com/v3/crawl</code>.</p>
-<p>Provide the following data:</p>
-<table class="controls table table-bordered" border="0" cellpadding="5">
-<thead><tr>
-<th>Parameter</th>
-<th>Description</th>
-</tr></thead>
-<tbody>
-<tr>
-<td><code>token</code></td>
-<td>Developer <a href="https://diffbot.com/pricing">token</a>
-</td>
-</tr>
-<tr>
-<td><code>name</code></td>
-<td>Job name. This should be a unique identifier and can be used to modify your crawl or retrieve its output.</td>
-</tr>
-<tr>
-<td><code>seeds</code></td>
-<td>Seed URL(s). Must be <a href="http://en.wikipedia.org/wiki/Percent-encoding" target="_blank">URL encoded</a>. Separate multiple URLs with whitespace to spider multiple sites within the same crawl. If the seed contains a non-www subdomain ("http://blog.diffbot.com" or "http://support.diffbot.com") Crawlbot will restrict spidering to the specified <strong>subdomain</strong>.</td>
-</tr>
-<tr>
-<td><code>apiUrl</code></td>
-<td>Full Diffbot API URL through which to process pages. E.g., <code>&amp;apiUrl=https://api.diffbot.com/v3/article</code> to process matching links via the <a href="https://diffbot.comhttp://www.diffbot.com/products/automatic/article">Article API</a>. The Diffbot API URL can include querystring parameters to tailor the output. For example, <code>&amp;apiUrl=https://api.diffbot.com/v3/product?fields=querystring,meta</code> will process matching links using the <a href="https://diffbot.comhttp://www.diffbot.com/products/automatic/product">Product API</a>, and also return the <code>querystring</code> and <code>meta</code> fields.
-<br><br>
-  To automatically identify and process content using our <a href="https://diffbot.com/products/automatic/analyze">Analyze API</a> (Smart Processing), pass <code>apiUrl=https://api.diffbot.com/v3/analyze?mode=auto</code> to return all page-types. See full Analyze API documentation under the <a href="/dev/docs">Automatic APIs documentation</a>.
-<br><br>
-  Be sure to <a href="http://en.wikipedia.org/wiki/Percent-encoding" target="_blank">URL encode</a> your Diffbot API actions.</td>
-</tr>
-</tbody>
-</table>
-<p>You can refine your crawl using the following optional controls. <a href="explain-crawling-versus-processing">Read more on crawling versus processing</a>.</p>
-<table class="controls table table-bordered" border="0" cellpadding="5">
-<thead><tr>
-<th>Parameter</th>
-<th>Description</th>
-</tr></thead>
-<tbody>
-<tr>
-<td><code>urlCrawlPattern</code></td>
-<td>Specify ||-separated <strong>strings</strong> to limit pages crawled to those whose URLs contain <em>any</em> of the content strings. You can use the exclamation point to specify a negative string, e.g. <code>!product</code> to exclude URLs containing the string "product," and the <code>^</code> and <code>$</code> characters to limit matches to the beginning or end of the URL.<br><br>The use of a <code>urlCrawlPattern</code> will allow Crawlbot to spider outside of the seed domain; it will follow all matching URLs regardless of domain.</td>
-</tr>
-<tr>
-<td><code>urlCrawlRegEx</code></td>
-<td>Specify a regular expression to limit pages <strong>crawled</strong> to those URLs that contain a match to your expression. This will override any <code>urlCrawlPattern</code> value.</td>
-</tr>
-<tr>
-<td><code>urlProcessPattern</code></td>
-<td>Specify ||-separated <strong>strings</strong> to limit pages processed to those whose URLs contain <em>any</em> of the content strings. You can use the exclamation point to specify a negative string, e.g. <code>!/category</code> to exclude URLs containing the string "/category," and the <code>^</code> and <code>$</code> characters to limit matches to the beginning or end of the URL.</td>
-</tr>
-<tr>
-<td><code>urlProcessRegEx</code></td>
-<td>Specify a regular expression to limit pages <strong>processed</strong> to those URLs that contain a match to your expression. This will override any <code>urlProcessPattern</code> value.</td>
-</tr>
-<tr>
-<td><code>pageProcessPattern</code></td>
-<td>Specify ||-separated strings to limit pages <strong>processed</strong> to those whose HTML contains <em>any</em> of the content strings.</td>
-</tr>
-</tbody>
-</table>
-<p>Additional (optional) Parameters:</p>
-<table class="controls table table-bordered" border="0" cellpadding="5">
-<thead><tr>
-<th>Parameter</th>
-<th>Description</th>
-</tr></thead>
-<tbody>
-<tr>
-<td><code>customHeaders</code></td>
-<td>Set multiple custom headers to be used while crawling and processing pages sent to Diffbot APIs. Each header should be sent in its own <code>customHeaders</code> argument, with a colon delimiting the header name and value, and should be URL-encoded. For example, <code>&amp;customHeaders=Accept-Language%3Aen-us</code>. <a href="guides-custom-headers">See more information on using this functionality</a>.</td>
-</tr>
-<tr>
-<td><code>useCanonical</code></td>
-<td>Pass <code>useCanonical=0</code> to disable deduplication of pages based on a canonical link definition. <a href="explain-page-deduplication">See more</a>.</td>
-</tr>
-<tr>
-<td><code>obeyRobots</code></td>
-<td>Pass <code>obeyRobots=0</code> to ignore a site's robots.txt instructions. <a href="explain-robots-txt">See more</a>.</td>
-</tr>
-<tr>
-<td><code>restrictDomain</code></td>
-<td>Pass <code>restrictDomain=0</code> to allow limited crawling across subdomains/domains. <a href="guides-restrict-domain">See more</a>.</td>
-</tr>
-<tr>
-<td><code>useProxies</code></td>
-<td>Set value to <code>1</code> to force the use of proxy IPs for the crawl. This will utilize proxy servers for both crawling and processing of pages.</td>
-</tr>
-<tr>
-<td><code>maxHops</code></td>
-<td>Specify the depth of your crawl. A <code>maxHops=0</code> will limit <strong>processing</strong> to the seed URL(s) only -- no other links will be processed; <code>maxHops=1</code> will process all (otherwise matching) pages whose links appear on seed URL(s); <code>maxHops=2</code> will process pages whose links appear on those pages; and so on.<br><br>By default (<code>maxHops=-1</code>) Crawlbot will crawl and process links at any depth.</td>
-</tr>
-<tr>
-<td><code>maxToCrawl</code></td>
-<td>Specify max pages to spider. Default: 100,000.</td>
-</tr>
-<tr>
-<td><code>maxToProcess</code></td>
-<td>Specify max pages to process through Diffbot APIs. Default: 100,000.</td>
-</tr>
-<tr>
-<td><code>maxToCrawlPerSubdomain</code></td>
-<td>Specify max pages to spider per subdomain. Default: no limit (-1)</td>
-</tr>
-<tr>
-<td><code>maxToProcessPerSubdomain</code></td>
-<td>Specify max pages to process per subdomain. Default: no limit (-1)</td>
-</tr>
-<tr>
-<td><code>notifyEmail</code></td>
-<td>Send a message to this email address when the crawl hits the <code>maxToCrawl</code> or <code>maxToProcess</code> limit, or when the crawl completes.</td>
-</tr>
-<tr>
-<td><code>notifyWebhook</code></td>
-<td>Pass a URL to be notified when the crawl hits the <code>maxToCrawl</code> or <code>maxToProcess</code> limit, or when the crawl completes. You will receive a POST with <code>X-Crawl-Name</code> and <code>X-Crawl-Status</code> in the headers, and the job's <a href="#response">JSON metadata</a> in the POST body. Note that in webhook POSTs the parent <code>jobs</code> will not be sent—only the individual job object will be returned.<br><br>We've integrated with Zapier to make webhooks even more powerful; <a href="guides-zapier">read more</a> on what you can do with Zapier and Diffbot.</td>
-</tr>
-<tr>
-<td><code>crawlDelay</code></td>
-<td>Wait this many seconds between each URL crawled from a single IP address. Specify the number of seconds as an integer or floating-point number (e.g., <code>crawlDelay=0.25</code>).</td>
-</tr>
-<tr>
-<td><code>repeat</code></td>
-<td>Specify the number of days as a floating-point (e.g. <code>repeat=7.0</code>) to repeat this crawl. By default crawls will not be repeated.</td>
-</tr>
-<tr>
-<td><code>seedRecrawlFrequency</code></td>
-<td>Useful for specifying a frequency, in number of days, to recrawl seed urls, which is independent of the overall recrawl frequency given by <code>repeat</code>. Defaults to <code>seedRecrawlFrequency=-1</code> to use the default frequency.</td>
-</tr>
-<tr>
-<td><code>onlyProcessIfNew</code></td>
-<td>By default repeat crawls will only process new (previously unprocessed) pages. Set to 0 (<code>onlyProcessIfNew=0</code>) to process all content on repeat crawls.</td>
-</tr>
-<tr>
-<td><code>maxRounds</code></td>
-<td>Specify the maximum number of crawl repeats. By default (<code>maxRounds=0</code>) repeating crawls will continue indefinitely.</td>
-</tr>
-</tbody>
-</table>
+## Creating or Updating a Crawl
+
+**Note that the limit of active crawls on a single token is 1000. More information [here](error-too-many-collections.md).**
+
+To create a crawl, make a POST request to `https://api.diffbot.com/v3/crawl`.
+
+Provide the following data:
+
+| Argument | Description |
+| :------- | :---------- |
+| `token` | Developer [token](https://www.diffbot.com/pricing). |
+| `name` | Job name. This should be a unique identifier and can be used to modify your crawl or retrieve its output. |
+| `seeds` | Seed URL(s). Must be [URL encoded](https://en.wikipedia.org/wiki/Percent-encoding). Separate multiple URLs with whitespace to spider multiple sites within the same crawl. If the seed contains a non-www subdomain ("https://blog.diffbot.com" or "https://support.diffbot.com") Crawlbot will restrict spidering to the specified **subdomain**. |
+| `apiUrl` | Full Diffbot API URL through which to process pages. E.g., `&apiUrl=https://api.diffbot.com/v3/article` to process matching links via the [Article API](https://www.diffbot.com/products/automatic/article). The Diffbot API URL can include querystring parameters to tailor the output. For example, `&apiUrl=https://api.diffbot.com/v3/product?fields=querystring,meta` will process matching links using the [Product API](https://www.diffbot.com/products/automatic/product), and also return the `querystring` and `meta` fields.<br><br>To automatically identify and process content using our [Analyze API](https://www.diffbot.com/products/automatic/analyze) (Smart Processing), pass `apiUrl=https://api.diffbot.com/v3/analyze?mode=auto` to return all page-types. See full Analyze API documentation under the <a href="/dev/docs">Automatic APIs documentation</a>.<br><br>Be sure to [URL encode](https://en.wikipedia.org/wiki/Percent-encoding) your Diffbot API actions. |
+
+You can refine your crawl using the following optional controls. [Read more on crawling versus processing](explain-crawling-versus-processing.md).
+
+| Argument | Description |
+| :------- | :---------- |
+| `urlCrawlPattern` | Specify &#124;&#124;-separated **strings** to limit pages crawled to those whose URLs contain *any* of the content strings. You can use the exclamation point to specify a negative string, e.g. `!product` to exclude URLs containing the string "product," and the `^` and `$` characters to limit matches to the beginning or end of the URL.<br><br>The use of a `urlCrawlPattern` will allow Crawlbot to spider outside of the seed domain; it will follow all matching URLs regardless of domain. |
+| `urlCrawlRegEx` | Specify a regular expression to limit pages **crawled** to those URLs that contain a match to your expression. This will override any `urlCrawlPattern` value. |
+| `urlProcessPattern` | Specify &#124;&#124;-separated **strings** to limit pages processed to those whose URLs contain *any* of the content strings. You can use the exclamation point to specify a negative string, e.g. `!/category` to exclude URLs containing the string "/category," and the `^` and `$` characters to limit matches to the beginning or end of the URL. |
+| `urlProcessRegEx` | Specify a regular expression to limit pages **processed** to those URLs that contain a match to your expression. This will override any `urlProcessPattern` value. |
+| `pageProcessPattern` | Specify &#124;&#124;-separated strings to limit pages **processed** to those whose HTML contains *any* of the content strings. |
+
+Additional (optional) Parameters:
+
+| Argument | Description |
+| :------- | :---------- |
+| `customHeaders` | Set multiple custom headers to be used while crawling and processing pages sent to Diffbot APIs. Each header should be sent in its own `customHeaders` argument, with a colon delimiting the header name and value, and should be URL-encoded. For example, `&customHeaders=Accept-Language%3Aen-us`. [See more information on using this functionality](guides-custom-headers.md). |
+| `useCanonical` | Pass `useCanonical=0` to disable deduplication of pages based on a canonical link definition. [See more](explain-page-deduplication.md). |
+| `obeyRobots` | Pass `obeyRobots=0` to ignore a site's robots.txt instructions. [See more](explain-robots-txt.md). |
+| `restrictDomain` | Pass `restrictDomain=0` to allow limited crawling across subdomains/domains. [See more](guides-restrict-domain.md). |
+| `useProxies` | Set value to `1` to force the use of proxy IPs for the crawl. This will utilize proxy servers for both crawling and processing of pages. |
+| `maxHops` | Specify the depth of your crawl. A `maxHops=0` will limit **processing** to the seed URL(s) only -- no other links will be processed; `maxHops=1` will process all (otherwise matching) pages whose links appear on seed URL(s); `maxHops=2` will process pages whose links appear on those pages; and so on.<br><br>By default (`maxHops=-1`) Crawlbot will crawl and process links at any depth. |
+| `maxToCrawl` | Specify max pages to spider. Default: 100,000. |
+| `maxToProcess` | Specify max pages to process through Diffbot APIs. Default: 100,000. |
+| `maxToCrawlPerSubdomain` | Specify max pages to spider per subdomain. Default: no limit (-1) |
+| `maxToProcessPerSubdomain` | Specify max pages to process per subdomain. Default: no limit (-1) |
+| `notifyEmail` | Send a message to this email address when the crawl hits the `maxToCrawl` or `maxToProcess` limit, or when the crawl completes. |
+| `notifyWebhook` | Pass a URL to be notified when the crawl hits the `maxToCrawl` or `maxToProcess` limit, or when the crawl completes. You will receive a POST with `X-Crawl-Name` and `X-Crawl-Status` in the headers, and the job's [JSON metadata](#json-metadata) in the POST body. Note that in webhook POSTs the parent `jobs` will not be sent—only the individual job object will be returned.<br><br>We've integrated with Zapier to make webhooks even more powerful; [read more](guides-zapier.md) on what you can do with Zapier and Diffbot. |
+| `crawlDelay` | Wait this many seconds between each URL crawled from a single IP address. Specify the number of seconds as an integer or floating-point number (e.g., `crawlDelay=0.25`). |
+| `repeat` | Specify the number of days as a floating-point (e.g. `repeat=7.0`) to repeat this crawl. By default crawls will not be repeated. |
+| `seedRecrawlFrequency` | Useful for specifying a frequency, in number of days, to recrawl seed urls, which is independent of the overall recrawl frequency given by `repeat`. Defaults to `seedRecrawlFrequency=-1` to use the default frequency. |
+| `onlyProcessIfNew` | By default repeat crawls will only process new (previously unprocessed) pages. Set to 0 (`onlyProcessIfNew=0`) to process all content on repeat crawls. |
+| `maxRounds` | Specify the maximum number of crawl repeats. By default (`maxRounds=0`) repeating crawls will continue indefinitely. |
+
 <!--
 <h4><a name="filterExpressions"></a>URL Filter Expressions</h4>
-<p>Crawlbot 2.0 features a powerful URL filtering engine allowing you to process URLs via myriad Diffbot APIs. You may pass multiple filters in each crawl. Each filter consists of an <code>expression</code> (the content to match) and an <code>action</code> (the processing or crawling action to take).</p>
+<p>Crawlbot 2.0 features a powerful URL filtering engine allowing you to process URLs via myriad Diffbot APIs. You may pass multiple filters in each crawl. Each filter consists of an `expression` (the content to match) and an `action` (the processing or crawling action to take).</p>
 <p>Filters are processed in the order in which they are sent in the querystring. URLs can only match a single filter.</p>
 <table class="controls table table-bordered" border="0" cellpadding="5">
 <tbody>
-<tr><td colspan="2"><strong>Expression options</strong></td></tr>
-<tr><td><code>expression=*</code></td><td>Matches all (remaining) pages. If this is the first filter expression it will match all pages.</td></tr>
-<tr><td><code>expression=<em>string</em></code></td><td>Matches all (remaining) URLs containing the text string.</td></tr>
-<tr><td><code>expression=^<em>string</em></code></td><td>Matches all (remaining) URLs starting with the text string.</td></tr>
-<tr><td><code>expression=$<em>string</em></code></td><td>Matches all (remaining) URLs ending with the text string.</td></tr>
+<tr><td colspan="2">**Expression options**</td></tr>
+<tr><td>`expression=*`</td><td>Matches all (remaining) pages. If this is the first filter expression it will match all pages.</td></tr>
+<tr><td>`expression=*string*`</td><td>Matches all (remaining) URLs containing the text string.</td></tr>
+<tr><td>`expression=^*string*`</td><td>Matches all (remaining) URLs starting with the text string.</td></tr>
+<tr><td>`expression=$*string*`</td><td>Matches all (remaining) URLs ending with the text string.</td></tr>
 <tr><td>
-<div><code>expression=!<em>string</em></code>,<br />
-<code>expression=!^<em>string</em></code>,<br />
-<code>expression=!$<em>string</em></code></td><td>Matches all (remaining) URLs <em>not</em> containing, starting with, or ending with the text string.</td></tr>
-<tr><td colspan="2">Multiple expressions can be combined in the same filter using <code>&amp;&amp;</code>. This will require all expressions to match. Ampersands should be url-encoded, e.g. <code>&expression=products%26%26^https%26%26!$.html</code>.</td></tr>
+<div>`expression=!*string*`,<br />
+`expression=!^*string*`,<br />
+`expression=!$*string*`</td><td>Matches all (remaining) URLs *not* containing, starting with, or ending with the text string.</td></tr>
+<tr><td colspan="2">Multiple expressions can be combined in the same filter using `&&`. This will require all expressions to match. Ampersands should be url-encoded, e.g. `&expression=products%26%26^https%26%26!$.html`.</td></tr>
 
-<tr><td colspan="2"><strong>Filter actions</strong></td></tr>
-<tr><td><code>action=doNotCrawl</code></td><td>Do not crawl/visit the matching pages.</td></tr>
-<tr><td><code>action=doNotProcess</code></td><td>Do not process the matching pages. Will still crawl the matching pages for links.</td></tr>
-<tr><td><code>action=<em>Diffbot API</em></code></td><td>Process the matching pages via the specified Diffbot API.
+<tr><td colspan="2">**Filter actions**</td></tr>
+<tr><td>`action=doNotCrawl`</td><td>Do not crawl/visit the matching pages.</td></tr>
+<tr><td>`action=doNotProcess`</td><td>Do not process the matching pages. Will still crawl the matching pages for links.</td></tr>
+<tr><td>`action=*Diffbot API*`</td><td>Process the matching pages via the specified Diffbot API.
 </td></tr>
 </tbody>
 </table>
 -->
-<h4>Response</h4>
-<p>Upon adding a new crawl, you will receive a success message in the JSON response, in addition to full crawl details:</p>
 
+### Response
 
-```text
+Upon adding a new crawl, you will receive a success message in the JSON response, in addition to full crawl details:
 
-  "response": "Successfully added urls for spidering."
-
+```json
+"response": "Successfully added urls for spidering."
 ```
 
+Please note that if you get the "Too Many Collections" error, you hit our 1000-active-crawls limit. More information [here](error-too-many-collections.md).
 
+## Pausing, Restarting or Deleting Crawls
 
-<p>Please note that if you get the "Too Many Collections" error, you hit our 1000-active-crawls limit. More information <a href="error-too-many-collections">here</a>.</p>
+You can manage your crawls by making POST requests to the same endpoint, `https://api.diffbot.com/v3/crawl`.
 
-<hr>
+Provide the following data:
 
-<h3 id="pausedelete">Pausing, Restarting or Deleting Crawls</h3>
-<p>You can manage your crawls by making POST requests to the same endpoint, <code>https://api.diffbot.com/v3/crawl</code>.</p>
-<p>Provide the following data:</p>
+| Argument | Description |
+| :------- | :---------- |
+| `token` | Developer [token](https://diffbot.com/pricing). |
+| `name` | Job name as defined when the crawl was created. </td></tr><td colspan="2">**Job-control arguments** |
+| `roundStart` | Pass `roundStart=1` to force the start of a new crawl "round" (manually repeat the crawl). If `onlyProcessIfNew` is set to 1 (default), only newly-created pages will be processed. |
+| `pause` | Pass `pause=1` to pause a crawl. Pass `pause=0` to resume a paused crawl. |
+| `restart` | Restart removes all crawled data while maintaining crawl settings. Pass `restart=1` to restart a crawl. |
+| `delete` | Pass `delete=1` to delete a crawl, and all associated data, completely. |
 
-<table class="controls table table-bordered" border="0" cellpadding="5">
-<thead><tr>
-<th>Parameter</th>
-<th>Description</th>
-</tr></thead>
-<tbody>
-<tr>
-<td><code>token</code></td>
-<td>Developer <a href="https://diffbot.com/pricing">token</a>
-</td>
-</tr>
-<tr>
-<td><code>name</code></td>
-<td>Job name as defined when the crawl was created.</td>
-</tr>
-<tr>
-<td colspan="2"><strong>Job-control arguments</strong></td>
-</tr>
-<tr>
-<td><code>roundStart</code></td>
-<td>Pass <code>roundStart=1</code> to force the start of a new crawl "round" (manually repeat the crawl). If <code>onlyProcessIfNew</code> is set to 1 (default), only newly-created pages will be processed.</td>
-</tr>
-<tr>
-<td><code>pause</code></td>
-<td>Pass <code>pause=1</code> to pause a crawl. Pass <code>pause=0</code> to resume a paused crawl.</td>
-</tr>
-<tr>
-<td><code>restart</code></td>
-<td>Restart removes all crawled data while maintaining crawl settings. Pass <code>restart=1</code> to restart a crawl.</td>
-</tr>
-<tr>
-<td><code>delete</code></td>
-<td>Pass <code>delete=1</code> to delete a crawl, and all associated data, completely.</td>
-</tr>
-</tbody>
-</table>
+## Retrieving Crawlbot API Data
 
-<hr>
+To download results please make a GET request to `https://api.diffbot.com/v3/crawl/data`. Provide the following arguments based on the data you need. By default the complete extracted JSON data will be downloaded.
 
-<h3 id="retrieving">Retrieving Crawlbot API Data</h3>
-<p>To download results please make a GET request to <code>https://api.diffbot.com/v3/crawl/data</code>. Provide the following arguments based on the data you need. By default the complete extracted JSON data will be downloaded.</p>
-<table class="controls table table-bordered" border="0" cellpadding="5">
-<thead><tr>
-<th>Parameter</th>
-<th>Description</th>
-</tr></thead>
-<tbody>
-<tr>
-<td><code>token</code></td>
-<td>Diffbot token.</td>
-</tr>
-<tr>
-<td><code>name</code></td>
-<td>Name of the crawl whose data you wish to download.</td>
-</tr>
-<tr>
-<td><code>format</code></td>
-<td>Request <code>format=csv</code> to download the extracted data in CSV format (default: <code>json</code>). Note that CSV files will only contain top-level fields.</td>
-</tr>
-<tr><td colspan="2"><strong>For diagnostic data:</strong></td></tr>
-<tr>
-<td><code>type</code></td>
-<td>Request <code>type=urls</code> to retrieve the crawl <a href="explain-crawl-url-report">URL Report</a> (CSV).</td>
-</tr>
-<tr>
-<td><code>num</code></td>
-<td>Pass an integer value (e.g. <code>num=100</code>) to request a subset of URLs, most recently crawled first.</td>
-</tr>
-</tbody>
-</table>
+| Argument | Description |
+| :------- | :---------- |
+| `token` | Developer [token](https://diffbot.com/pricing). |
+| `name` | Name of the crawl whose data you wish to download. |
+| `format` | Request `format=csv` to download the extracted data in CSV format (default: `json`). Note that CSV files will only contain top-level fields. </td></tr><td colspan="2">**For diagnostic data:**</td> |
+| `type` | Request `type=urls` to retrieve the crawl [URL Report](explain-crawl-url-report.md) (CSV). |
+| `num` | Pass an integer value (e.g. `num=100`) to request a subset of URLs, most recently crawled first. |
 
-<h3>Using the Search API to Retrieve Crawl Data</h3>
-<p>You can also use Diffbot's <a href="api-search">Search API</a> to fine-tune the data retrieved from your Crawlbot or Bulk API jobs.</p>
-<p><a href="api-search">Search API documentation</a></p>
+## Using the Search API to Retrieve Crawl Data
 
-<hr>
+You can also use Diffbot's [Search API](api-search.md) to fine-tune the data retrieved from your Crawlbot or Bulk API jobs.
 
+[Search API documentation](api-search.md)
 
-<h3 id="details">Viewing Crawl Details</h3>
-<p>Your crawls (along with any Bulk API jobs) will be returned in the <code>jobs</code> object in a request made to <code>https://api.diffbot.com/v3/crawl</code>.</p>
-<p>To retrieve a single crawl's details, provide the crawl's <code>name</code> in your request:</p>
-<table class="controls table table-bordered" border="0" cellpadding="5">
-<thead><tr>
-<th>Parameter</th>
-<th>Description</th>
-</tr></thead>
-<tbody>
-<tr>
-<td><code>token</code></td>
-<td>Developer <a href="https://diffbot.com/pricing">token</a>
-</td>
-</tr>
-<tr>
-<td><code>name</code></td>
-<td>Name of crawl to retrieve.</td>
-</tr>
-</tbody>
-</table>
+## Viewing Crawl Details
 
-<p>To view all crawls (and bulk jobs), simply omit the <code>name</code> parameter: <code>https://api.diffbot.com/v3/crawl?token={{token}}</code></p>
+Your crawls (along with any Bulk API jobs) will be returned in the `jobs` object in a request made to `https://api.diffbot.com/v3/crawl`.
 
-<h4>
-<a name="response"></a>Response</h4>
-<p>This will return a JSON response of your token's crawls (and Bulk API) jobs in the <code>jobs</code> object. If you have specified a single job name, only one job's details will be returned.</p>
-<p>Sample response from a single crawl:</p>
+To retrieve a single crawl's details, provide the crawl's `name` in your request:
 
-<!--{codesample1}-->
+| Argument | Description |
+| :------- | :---------- |
+| `token` | Developer [token](https://diffbot.com/pricing). |
+| `name` | Name of crawl to retrieve. |
 
-```text
+To view all crawls (and bulk jobs), simply omit the `name` parameter: `https://api.diffbot.com/v3/crawl?token={{token}}`
+
+<a name="json-metadata"></a>
+
+### Response
+
+This will return a JSON response of your token's crawls (and Bulk API) jobs in the `jobs` object. If you have specified a single job name, only one job's details will be returned.
+
+Sample response from a single crawl:
+
+```json
 {
   "jobs": [
     {
@@ -351,71 +194,20 @@ todo: Modify links to old API docs
 }
 ```
 
+## Status Codes
 
-<!--{endcodesample1}-->
+The `jobStatus` object will return the following status codes and associated messages:
 
-
-<h3 id="status">Status Codes</h3>
-<p>The <code>jobStatus</code> object will return the following status codes and associated messages:</p>
-
-<table class="controls table table-bordered table-condensed" border="0" cellpadding="5">
-<thead><tr>
-<th>Status</th>
-<th>Message</th>
-</tr></thead>
-<tbody>
-<tr>
-<td>0</td>
-<td>Job is initializing</td>
-</tr>
-<tr>
-<td>1</td>
-<td>Job has reached maxRounds limit</td>
-</tr>
-<tr>
-<td>2</td>
-<td>Job has reached maxToCrawl limit</td>
-</tr>
-<tr>
-<td>3</td>
-<td>Job has reached maxToProcess limit</td>
-</tr>
-<tr>
-<td>4</td>
-<td>Next round to start in _____ seconds</td>
-</tr>
-<tr>
-<td>5</td>
-<td>No URLs were added to the crawl</td>
-</tr>
-<tr>
-<td>6</td>
-<td>Job paused</td>
-</tr>
-<tr>
-<td>7</td>
-<td>Job in progress</td>
-</tr>
-<tr>
-<td>8</td>
-<td>All crawling temporarily paused by root administrator for maintenance</td>
-</tr>
-<tr>
-<td>9</td>
-<td>Job has completed and no repeat is scheduled</td>
-</tr>
-<tr>
-<td>10</td>
-<td>Failed to crawl any seed<br><em>Indicates a problem retrieving links from the seed URL(s)</em>
-</td>
-</tr>
-</tbody>
-</table>
-
-
-
-</div>
-
-
-
-</div>
+| Status | Message |
+| :----- | :------ |
+| 0 | Job is initializing |
+| 1 | Job has reached maxRounds limit |
+| 2 | Job has reached maxToCrawl limit |
+| 3 | Job has reached maxToProcess limit |
+| 4 | Next round to start in _____ seconds |
+| 5 | No URLs were added to the crawl |
+| 6 | Job paused |
+| 7 | Job in progress |
+| 8 | All crawling temporarily paused by root administrator for maintenance |
+| 9 | Job has completed and no repeat is scheduled |
+| 10 | Failed to crawl any seed<br>*Indicates a problem retrieving links from the seed URL(s)* |

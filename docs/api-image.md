@@ -4,156 +4,67 @@ title: Image Extraction API
 sidebar_label: Image Extraction API
 ---
 
-<div id="docBody">
+The Image API identifies the primary image(s) of a submitted web page and returns comprehensive information and metadata for each image.
 
-<p>The Image API identifies the primary image(s) of a submitted web page and returns comprehensive information and metadata for each image.</p>
-            
-<h3 id="request">Request</h3>
-<p>To use the Image API, perform a HTTP GET request on the following endpoint:</p>
-  
+## Request
 
-```text
+To use the Image API, perform a HTTP GET request on the following endpoint:
+
+```plaintext
 https://api.diffbot.com/v3/image
 ```
 
+Provide the following arguments:
 
-<p>Provide the following arguments:</p>
+| Argument | Description |
+| :------- | :---------- |
+| `token` | Developer token |
+| `url` | Web page URL of the image to process (URL encoded) </td></tr><tr><td colspan="2">**Optional arguments**</td> |
+| `fields` | Used to specify optional fields to be returned by the Image API. See the [Fields](#the-fields-argument) section below. |
+| `timeout` | Sets a value in milliseconds to wait for the retrieval/fetch of content from the requested URL. The default timeout for the third-party response is 30 seconds (30000). |
+| `callback` | Use for jsonp requests. Needed for cross-domain ajax. |
 
-<!--{arguments}--><table class="controls table table-bordered" id="arguments" border="0" cellpadding="5">
-<thead><tr>
-<th>Argument</th>
-<th>Description</th>
-</tr></thead>
+### The fields argument
 
-<tr>
-<td class=""><code>token</code></td>
-<td class=" default"><div>Developer token</div></td>
-</tr>
-<tr>
-<td class=""><code>url</code></td>
-<td class=" default"><div>Web page URL of the image to process (URL encoded)</div></td>
-</tr>
+Use the `fields` argument to return optional fields in the JSON response. The default fields will always be returned. For nested arrays, use parentheses to retrieve specific fields, or `*` to return all sub-fields.
 
-<tr>
-<td colspan="2" class="header">Optional arguments</td>
-</tr>
-<tr>
-<td class=""><code>fields</code></td>
-<td class=" optional"><div>Used to specify optional fields to be returned by the Image API. See the <a href="#fields">Fields</a> section below.</div></td>
-</tr>
-<tr>
-<td class=""><code>timeout</code></td>
-<td class=" optional"><div>Sets a value in milliseconds to wait for the retrieval/fetch of content from the requested URL. The default timeout for the third-party response is 30 seconds (30000).</div></td>
-</tr>
-<tr>
-<td class=""><code>callback</code></td>
-<td class=" optional"><div>Use for jsonp requests. Needed for cross-domain ajax.</div></td>
-</tr>
-</table>
-<!--{endarguments}-->
+For example, to return `meta` (in addition to the default fields), your `&fields` argument would be:
 
-<h4 id="fields">The fields argument</h4>
-<p>Use the <code>fields</code> argument to return optional fields in the JSON response. The default fields will always be returned. For nested arrays, use parentheses to retrieve specific fields, or <code>*</code> to return all sub-fields.</p>
-<p>For example, to return <code>meta</code> (in addition to the default fields), your &amp;fields argument would be:</p>
-  
-
-```text
-&amp;fields=meta
+```plaintext
+&fields=meta
 ```
 
+## Response
 
-<h3 id="response">Response</h3>
-<p>The Image API returns data in JSON format.</p>
-<p>Each V3 response includes a <code>request</code> object (which returns request-specific metadata), and an <code>objects</code> array, which will include the extracted information for all images on a submitted page.</p>
-<p>Objects in the Image API's <code>objects</code> array will include the following fields:</p>
+The Image API returns data in JSON format.
 
-<!--{fields}--><table class="controls table table-bordered" id="fields" border="0" cellpadding="5">
-<thead><tr>
-<th>Field</th>
-<th>Description</th>
-</tr></thead>
+Each V3 response includes a `request` object (which returns request-specific metadata), and an `objects` array, which will include the extracted information for all images on a submitted page.
 
-<tr>
-<td class=""><code>type</code></td>
-<td class=" default"><div>Type of object (always <code>image</code>).</div></td>
-</tr>
-<tr>
-<td class=""><code>url</code></td>
-<td class=" default"><div>Direct link to image file.</div></td>
-</tr>
-<tr>
-<td class=""><code>title</code></td>
-<td class=" default"><div>Title or caption of the image, if available.</div></td>
-</tr>
-<tr>
-<td class=""><code>naturalHeight</code></td>
-<td class=" default"><div>Raw image height, in pixels.</div></td>
-</tr>
-<tr>
-<td class=""><code>naturalWidth</code></td>
-<td class=" default"><div>Raw image width, in pixels.</div></td>
-</tr>
-<tr>
-<td class=""><code>humanLanguage</code></td>
-<td class=" default"><div>Returns the (spoken/human) language of the submitted page, using two-letter <a href="http://en.wikipedia.org/wiki/List_of_ISO_639-1_codes" target="_blank">ISO 639-1 nomenclature</a>.</div></td>
-</tr>
-<tr>
-<td class=""><code>anchorUrl</code></td>
-<td class=" default"><div>If the image is hyperlinked, returns the destination URL.</div></td>
-</tr>
-<tr>
-<td class=""><code>pageUrl</code></td>
-<td class=" default"><div>URL of submitted page / page from which the image is extracted.</div></td>
-</tr>
-<tr>
-<td class=""><code>resolvedPageUrl</code></td>
-<td class=" default"><div>Returned if the <code>pageUrl</code> redirects to another URL.</div></td>
-</tr>
-<tr>
-<td class=""><code>xpath</code></td>
-<td class=" default"><div>XPath expression identifying the image node.</div></td>
-</tr>
-<tr>
-<td class=""><code>diffbotUri</code></td>
-<td class=" default"><div>Unique object ID. The <code>diffbotUri</code> is generated from the values of various Image fields and uniquely identifies the object. This can be used for deduplication.</div></td>
-</tr>
+Objects in the Image API's `objects` array will include the following fields:
 
-<tr>
-<td colspan="2" class="header">Optional fields, available using <code>fields=</code> argument</td>
-</tr>
-<tr>
-<td class=""><code>displayHeight</code></td>
-<td class=" optional"><div>Height of image as presented in the browser (and as sized via browser/CSS, if resized).</div></td>
-</tr>
-<tr>
-<td class=""><code>displayWidth</code></td>
-<td class=" optional"><div>Width of image as presented in the browser (and as sized via browser/CSS, if resized).</div></td>
-</tr>
-<tr>
-<td class=""><code>links</code></td>
-<td class=" optional"><div>Returns a top-level object (<code>links</code>) containing all hyperlinks found on the page.</div></td>
-</tr>
-<tr>
-<td class=""><code>meta</code></td>
-<td class=" optional"><div>Comma-separated list of image-embedded metadata (e.g., EXIF, XMP, ICC Profile), if available within the image file.</div></td>
-</tr>
-<tr>
-<td class=""><code>querystring</code></td>
-<td class=" optional"><div>Returns any key/value pairs present in the URL querystring. Items without a discrete value will be returned as <code>true</code>.</div></td>
-</tr>
-<tr>
-<td class=""><code>breadcrumb</code></td>
-<td class=" optional"><div>Returns a top-level array (<code>breadcrumb</code>) of URLs and link text from page breadcrumbs.</div></td>
-</tr>
-</table>
-<!--{endfields}-->
+| Field | Description |
+| :---- | :---------- |
+| `type` | Type of object (always `image`). |
+| `url` | Direct link to image file. |
+| `title` | Title or caption of the image, if available. |
+| `naturalHeight` | Raw image height, in pixels. |
+| `naturalWidth` | Raw image width, in pixels. |
+| `humanLanguage` | Returns the (spoken/human) language of the submitted page, using two-letter [ISO 639-1 nomenclature](https://en.wikipedia.org/wiki/List_of_ISO_639-1_codes).. |
+| `anchorUrl` | If the image is hyperlinked, returns the destination URL. |
+| `pageUrl` | URL of submitted page / page from which the image is extracted. |
+| `resolvedPageUrl` | Returned if the `pageUrl` redirects to another URL. |
+| `xpath` | XPath expression identifying the image node. |
+| `diffbotUri` | Unique object ID. The `diffbotUri` is generated from the values of various Image fields and uniquely identifies the object. This can be used for deduplication. </td></tr><tr><td colspan="2">**Optional fields, available using `fields=` argument**</td> |
+| `displayHeight` | Height of image as presented in the browser (and as sized via browser/CSS, if resized). |
+| `displayWidth` | Width of image as presented in the browser (and as sized via browser/CSS, if resized). |
+| `links` | Returns a top-level object (`links`) containing all hyperlinks found on the page. |
+| `meta` | Comma-separated list of image-embedded metadata (e.g., EXIF, XMP, ICC Profile), if available within the image file. |
+| `querystring` | Returns any key/value pairs present in the URL querystring. Items without a discrete value will be returned as `true`. |
+| `breadcrumb` | Returns a top-level array (`breadcrumb`) of URLs and link text from page breadcrumbs. |
 
-<h3 id="sampleresponse">Example Response</h3>
-<div class="indent">
-  
+## Example Response
 
-```text
-
+```json
 {
   "request": {
     "pageUrl": "http://www.diffbot.com/products",
@@ -192,51 +103,42 @@ https://api.diffbot.com/v3/image
   ],
 }
 ```
+## Authentication
 
+You can supply Diffbot with basic authentication credentials or custom HTTP headers (see below) to access intranet pages or other sites that require a login.
 
-</div>
+### Basic Authentication
 
-<h3 id="authenticating">Authentication</h3>
-<p>You can supply Diffbot with basic authentication credentials or custom HTTP headers (see below) to access intranet pages or other sites that require a login.</p>
+To access pages that require a login/password (using [basic access authentication](https://en.wikipedia.org/wiki/Basic_access_authentication)), include the username and password in your `url` parameter, e.g.: `url=http%3A%2F%2FUSERNAME:PASSWORD@www.diffbot.com`.
 
-<h4>Basic Authentication</h4>
-<p>To access pages that require a login/password (using <a href="http://en.wikipedia.org/wiki/Basic_access_authentication" target="_blank">basic access authentication</a>), include the username and password in your <code>url</code> parameter, e.g.: <code>url=http%3A%2F%2FUSERNAME:PASSWORD@www.diffbot.com</code>.</p>
+## Custom HTTP Headers
 
-<h3 id="customheaders">Custom HTTP Headers</h3>
-<p>You can supply Diffbot APIs with custom HTTP headers that will be passed along when making requests to third-party sites. These can be used to define specific Referer, User-Agent, Cookie or any other values.</p>
-<p>Custom headers should be sent as HTTP headers in your request to <code>https://api.diffbot.com</code>, and prepended with <code>X-Forward-</code>.</p>
-<p>For instance, to send custom <code>User-Agent</code>, <code>Referer</code> and <code>My-Custom-Header</code> header values:</p>
-<table class="controls table table-bordered" border="0" cellpadding="5">
-<thead><tr>
-<th>Desired Header</th>
-<th>Send to api.diffbot.com</th>
-</tr></thead>
-<tbody>
-<tr>
-<td><code>User-Agent:Diffbot</code></td>
-<td><code>X-Forward-User-Agent:Diffbot</code></td>
-</tr>
-<tr>
-<td><code>Referer:diffbot.com</code></td>
-<td><code>X-Forward-Referer:diffbot.com</code></td>
-</tr>
-<tr>
-<td><code>My-Custom-Header:CustomValue</code></td>
-<td><code>X-Forward-My-Custom-Header:CustomValue</code></td>
-</tr>
-</tbody>
-</table>
+You can supply Diffbot APIs with custom HTTP headers that will be passed along when making requests to third-party sites. These can be used to define specific Referer, User-Agent, Cookie or any other values.
 
-<h3 id="x-evaluate">Custom Javascript</h3>
+Custom headers should be sent as HTTP headers in your request to `https://api.diffbot.com`, and prepended with `X-Forward-`.
+
+For instance, to send custom `User-Agent`, `Referer` and `My-Custom-Header` header values:
+
+| Desired Header | Send to api.diffbot.com |
+| :-- | :-- |
+| `User-Agent:Diffbot` | `X-Forward-User-Agent:Diffbot` |
+| `Referer:diffbot.com` | `X-Forward-Referer:diffbot.com` |
+| `My-Custom-Header:CustomValue` | `X-Forward-My-Custom-Header:CustomValue` |
+
+## Custom Javascript
+
 <div class="alert">This functionality is currently in beta.</div>
-<p>Using the <code>X-Evaluate</code> custom header (sent as <code>X-Forward-X-Evaluate</code>), you can inject your own Javascript code into web pages. Custom Javascript will be executed once the DOM has loaded.</p>
-<p>Custom Javascript should be provided as a text string and contained in its own function. You must also include the special functions <code>start()</code> and <code>end()</code> to indicate the beginning and end of your custom script. Once <code>end()</code> fires, the updated document will be processed by your chosen extraction API.</p>
-<p>It's recommended that your <code>end()</code> function be offset using <code>setTimeout</code> (see <a href="http://www.w3schools.com/js/js_timing.asp" target="_blank">JavaScript Timing Events</a>) in order to accommodate your primary function processing. Additionally, if your custom Javascript requires access to Ajax-delivered content, it may be necessary to offset your entire function using <code>setTimeout</code> in order to delay the start of your processing.</p>
-<p>The following sample <code>X-Evaluate</code> header waits one-half second after the DOM has loaded, enacts a click on the <code>a.loadMore</code> element, then waits 800 milliseconds before signaling the <code>end()</code>:</p>
+
+Using the `X-Evaluate` custom header (sent as `X-Forward-X-Evaluate`), you can inject your own Javascript code into web pages. Custom Javascript will be executed once the DOM has loaded.
+
+Custom Javascript should be provided as a text string and contained in its own function. You must also include the special functions `start()` and `end()` to indicate the beginning and end of your custom script. Once `end()` fires, the updated document will be processed by your chosen extraction API.
+
+It's recommended that your `end()` function be offset using `setTimeout` (see [JavaScript Timing Events](https://www.w3schools.com/js/js_timing.asp)) in order to accommodate your primary function processing. Additionally, if your custom Javascript requires access to Ajax-delivered content, it may be necessary to offset your entire function using `setTimeout` in order to delay the start of your processing.
+
+The following sample `X-Evaluate` header waits one-half second after the DOM has loaded, enacts a click on the `a.loadMore` element, then waits 800 milliseconds before signaling the `end()`:
 
 
-```text
-
+```js
 function() {
     start();
     setTimeout(function() {
@@ -251,41 +153,28 @@ function() {
         }
     }, 500);
 }
-
 ```
 
+Delivered as a string value as a custom header:
 
-
-<p>Delivered as a string value as a custom header:</p>
-
-
-```text
+```json
 "X-Forward-X-Evaluate": "function() {start();setTimeout(function(){var loadMoreNode=document.querySelector('a.loadMore');if (loadMoreNode != null) {loadMoreNode.click();setTimeout(function(){end();}, 800);} else {end();}},500);}"
 ```
 
+## Posting Content
 
+If your content is not publicly available (e.g., behind a firewall), you can POST markup directly to the Image API endpoint for analysis:
 
-<h3 id="posting">Posting Content</h3>
-<p>If your content is not publicly available (e.g., behind a firewall), you can POST markup directly to the Image API endpoint for analysis:
-</p>
-
-
-```text
-https://api.diffbot.com/v3/image?token=...&amp;url=...
+```plaintext
+https://api.diffbot.com/v3/image?token=...&url=...
 ```
 
+Please note that the `url` argument is still required, and will be used to resolve any relative links contained in the markup.
 
-<p>Please note that the <code>url</code> argument is still required, and will be used to resolve any relative links contained in the markup.</p>
-<p>Provide the content to analyze as your POST body, and specify the <code>Content-Type</code> header as <code>text/html</code>.</p>
-<p><strong>HTML Post Sample</strong>:</p>
-  
+Provide the content to analyze as your POST body, and specify the `Content-Type` header as `text/html`.
 
-```text
+### HTML Post Sample
 
-curl -H "Content-Type: text/html" -d '&lt;html&gt;&lt;body&gt;&lt;h2&gt;Diffy the Robot&lt;/h2&gt;&lt;div&gt;&lt;img src="diffy-b.png"&gt;&lt;/div&gt;&lt;/body&gt;&lt;/html&gt;' 'https://api.diffbot.com/v3/image?token=...&amp;url=http%3A%2F%2Fwww.diffbot.com'
+```plaintext
+curl -H "Content-Type: text/html" -d '<html><body><h2>Diffy the Robot</h2><div><img src="diffy-b.png"></div></body></html>' 'https://api.diffbot.com/v3/image?token=...&url=http%3A%2F%2Fwww.diffbot.com'
 ```
-
-
-
-
-</div>
