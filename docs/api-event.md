@@ -76,8 +76,6 @@ Objects in the Event API's `objects` array will include the following fields:
 | &#x21B3;`primary` | Returns `true` if image is identified as primary based on visual analysis. |
 | &#x21B3;`xpath` | XPath expression identifying the image node. |
 | &#x21B3;`diffbotUri` | Internal ID used for indexing. |
-
-
 | `humanLanguage` | Returns the (spoken/human) language of the submitted page, using two-letter [ISO 639-1 nomenclature](https://en.wikipedia.org/wiki/List_of_ISO_639-1_codes). |
 | `meta` | Returns a top-level object (`meta`) containing the full contents of page `meta` tags, including sub-arrays for [OpenGraph](https://ogp.me/) tags, [Twitter Card](https://developer.twitter.com/en/docs/tweets/optimize-with-cards/overview/markup) metadata, [schema.org](https://www.schema.org) microdata, and -- if available -- [oEmbed](https://www.oembed.com) metadata. |
 | `diffbotUri` | Unique object ID. The `diffbotUri` is generated from the values of various event fields and uniquely identifies the object. This can be used for deduplication. </td></tr><tr><td colspan="2">
