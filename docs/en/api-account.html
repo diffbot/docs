@@ -1,4 +1,4 @@
-<!DOCTYPE html><html lang="en"><head><meta charSet="utf-8"/><meta http-equiv="X-UA-Compatible" content="IE=edge"/><title>Account API · Docs Suite</title><meta name="viewport" content="width=device-width"/><meta name="generator" content="Docusaurus"/><meta name="description" content="&lt;div id=&quot;docBody&quot;&gt;"/><meta name="docsearch:language" content="en"/><meta property="og:title" content="Account API · Docs Suite"/><meta property="og:type" content="website"/><meta property="og:url" content="https://diffbot.github.io/"/><meta property="og:description" content="&lt;div id=&quot;docBody&quot;&gt;"/><meta property="og:image" content="https://diffbot.github.io/img/diagram.svg"/><meta name="twitter:card" content="summary"/><meta name="twitter:image" content="https://diffbot.github.io/img/diagram.svg"/><link rel="shortcut icon" href="/img/diffbot-head.png"/><link rel="stylesheet" href="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.css"/><link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/default.min.css"/><link rel="alternate" type="application/atom+xml" href="https://diffbot.github.io/blog/atom.xml" title="Docs Suite Blog ATOM Feed"/><link rel="alternate" type="application/rss+xml" href="https://diffbot.github.io/blog/feed.xml" title="Docs Suite Blog RSS Feed"/><script type="text/javascript" src="https://buttons.github.io/buttons.js"></script><script src="/js/scrollSpy.js"></script><link rel="stylesheet" href="/css/main.css"/><script src="/js/codetabs.js"></script></head><body class="sideNavVisible separateOnPageNav"><div class="fixedHeaderContainer"><div class="headerWrapper wrapper"><header><a href="/"><img class="logo" src="/img/diffbot_white.svg" alt="Docs Suite"/><h2 class="headerTitleWithLogo">Docs Suite</h2></a><div class="navigationWrapper navigationSlider"><nav class="slidingNav"><ul class="nav-site nav-site-internal"><li class=""><a href="/docs/en/intro" target="_self">Prose</a></li><li class="siteNavGroupActive"><a href="/docs/en/api-intro" target="_self">API</a></li><li class=""><a href="/docs/en/error-intro" target="_self">Debugging</a></li><li class=""><a href="/help" target="_self">Help</a></li><li class=""><a href="/blog/" target="_self">Blog</a></li><li class="navSearchWrapper reactNavSearchWrapper"><input type="text" id="search_input_react" placeholder="Search" title="Search"/></li></ul></nav></div></header></div></div><div class="navPusher"><div class="docMainWrapper wrapper"><div class="docsNavContainer" id="docsNav"><nav class="toc"><div class="toggleNav"><section class="navWrapper wrapper"><div class="navBreadcrumb wrapper"><div class="navToggle" id="navToggler"><div class="hamburger-menu"><div class="line1"></div><div class="line2"></div><div class="line3"></div></div></div><h2><i>›</i><span>API</span></h2><div class="tocToggler" id="tocToggler"><i class="icon-toc"></i></div></div><div class="navGroups"><div class="navGroup"><h3 class="navGroupCategoryTitle collapsible">API<span class="arrow"><svg width="24" height="24" viewBox="0 0 24 24"><path fill="#565656" d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z"></path><path d="M0 0h24v24H0z" fill="none"></path></svg></span></h3><ul class="hide"><li class="navListItem"><a class="navItem" href="/docs/en/api-intro">Introduction</a></li><li class="navListItem"><a class="navItem" href="/docs/en/api-analyze">Analyze API</a></li><li class="navListItem"><a class="navItem" href="/docs/en/api-article">Article Extraction API</a></li><li class="navListItem"><a class="navItem" href="/docs/en/api-article-html">Article API: HTML Field Specification</a></li><li class="navListItem"><a class="navItem" href="/docs/en/api-semantria">Semantria-Powered Text Analysis Features</a></li><li class="navListItem"><a class="navItem" href="/docs/en/api-discussion">Discussion Extraction API</a></li><li class="navListItem"><a class="navItem" href="/docs/en/api-image">Image Extraction API</a></li><li class="navListItem"><a class="navItem" href="/docs/en/api-product">Product Extraction API</a></li><li class="navListItem"><a class="navItem" href="/docs/en/api-product-normalized-specs">Product API: Normalized Specs</a></li><li class="navListItem"><a class="navItem" href="/docs/en/api-product-categories">Product API: Category Taxonomy</a></li><li class="navListItem"><a class="navItem" href="/docs/en/api-video">Video Extraction API</a></li><li class="navListItem"><a class="navItem" href="/docs/en/api-custom">Custom APIs</a></li><li class="navListItem"><a class="navItem" href="/docs/en/api-selectors-filters">Custom API Selectors and Filters</a></li><li class="navListItem"><a class="navItem" href="/docs/en/api-managing-rules-programmatically">Managing Custom Rules Programmatically</a></li><li class="navListItem"><a class="navItem" href="/docs/en/api-bulk">Bulk API</a></li><li class="navListItem"><a class="navItem" href="/docs/en/api-crawlbot-api">Crawlbot API</a></li><li class="navListItem"><a class="navItem" href="/docs/en/api-search">Search API</a></li><li class="navListItem navListItemActive"><a class="navItem" href="/docs/en/api-account">Account API</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle collapsible">Knowledge Graph<span class="arrow"><svg width="24" height="24" viewBox="0 0 24 24"><path fill="#565656" d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z"></path><path d="M0 0h24v24H0z" fill="none"></path></svg></span></h3><ul class="hide"><li class="navListItem"><a class="navItem" href="/docs/en/api-kg-intro">Introduction</a></li></ul></div></div></section></div><script>
+<!DOCTYPE html><html lang="en"><head><meta charSet="utf-8"/><meta http-equiv="X-UA-Compatible" content="IE=edge"/><title>Account API · Docs Suite</title><meta name="viewport" content="width=device-width"/><meta name="generator" content="Docusaurus"/><meta name="description" content="The Account API returns information on a token&#x27;s call volume and billing history."/><meta name="docsearch:language" content="en"/><meta property="og:title" content="Account API · Docs Suite"/><meta property="og:type" content="website"/><meta property="og:url" content="https://diffbot.github.io/"/><meta property="og:description" content="The Account API returns information on a token&#x27;s call volume and billing history."/><meta property="og:image" content="https://diffbot.github.io/img/diagram.svg"/><meta name="twitter:card" content="summary"/><meta name="twitter:image" content="https://diffbot.github.io/img/diagram.svg"/><link rel="shortcut icon" href="/img/diffbot-head.png"/><link rel="stylesheet" href="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.css"/><link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/default.min.css"/><link rel="alternate" type="application/atom+xml" href="https://diffbot.github.io/blog/atom.xml" title="Docs Suite Blog ATOM Feed"/><link rel="alternate" type="application/rss+xml" href="https://diffbot.github.io/blog/feed.xml" title="Docs Suite Blog RSS Feed"/><script type="text/javascript" src="https://buttons.github.io/buttons.js"></script><script src="/js/scrollSpy.js"></script><link rel="stylesheet" href="/css/main.css"/><script src="/js/codetabs.js"></script></head><body class="sideNavVisible separateOnPageNav"><div class="fixedHeaderContainer"><div class="headerWrapper wrapper"><header><a href="/"><img class="logo" src="/img/diffbot_white.svg" alt="Docs Suite"/><h2 class="headerTitleWithLogo">Docs Suite</h2></a><div class="navigationWrapper navigationSlider"><nav class="slidingNav"><ul class="nav-site nav-site-internal"><li class=""><a href="/docs/en/intro" target="_self">Prose</a></li><li class="siteNavGroupActive"><a href="/docs/en/api-intro" target="_self">API</a></li><li class=""><a href="/docs/en/error-intro" target="_self">Debugging</a></li><li class=""><a href="/help" target="_self">Help</a></li><li class=""><a href="/blog/" target="_self">Blog</a></li><li class="navSearchWrapper reactNavSearchWrapper"><input type="text" id="search_input_react" placeholder="Search" title="Search"/></li></ul></nav></div></header></div></div><div class="navPusher"><div class="docMainWrapper wrapper"><div class="docsNavContainer" id="docsNav"><nav class="toc"><div class="toggleNav"><section class="navWrapper wrapper"><div class="navBreadcrumb wrapper"><div class="navToggle" id="navToggler"><div class="hamburger-menu"><div class="line1"></div><div class="line2"></div><div class="line3"></div></div></div><h2><i>›</i><span>API</span></h2><div class="tocToggler" id="tocToggler"><i class="icon-toc"></i></div></div><div class="navGroups"><div class="navGroup"><h3 class="navGroupCategoryTitle collapsible">API<span class="arrow"><svg width="24" height="24" viewBox="0 0 24 24"><path fill="#565656" d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z"></path><path d="M0 0h24v24H0z" fill="none"></path></svg></span></h3><ul class="hide"><li class="navListItem"><a class="navItem" href="/docs/en/api-intro">Introduction</a></li><li class="navListItem"><a class="navItem" href="/docs/en/api-analyze">Analyze API</a></li><li class="navListItem"><a class="navItem" href="/docs/en/api-article">Article Extraction API</a></li><li class="navListItem"><a class="navItem" href="/docs/en/api-article-html">Article API: HTML Field Specification</a></li><li class="navListItem"><a class="navItem" href="/docs/en/api-semantria">Semantria-Powered Text Analysis Features</a></li><li class="navListItem"><a class="navItem" href="/docs/en/api-discussion">Discussion Extraction API</a></li><li class="navListItem"><a class="navItem" href="/docs/en/api-image">Image Extraction API</a></li><li class="navListItem"><a class="navItem" href="/docs/en/api-product">Product Extraction API</a></li><li class="navListItem"><a class="navItem" href="/docs/en/api-product-normalized-specs">Product API: Normalized Specs</a></li><li class="navListItem"><a class="navItem" href="/docs/en/api-product-categories">Product API: Category Taxonomy</a></li><li class="navListItem"><a class="navItem" href="/docs/en/api-video">Video Extraction API</a></li><li class="navListItem"><a class="navItem" href="/docs/en/api-custom">Custom APIs</a></li><li class="navListItem"><a class="navItem" href="/docs/en/api-selectors-filters">Custom API Selectors and Filters</a></li><li class="navListItem"><a class="navItem" href="/docs/en/api-managing-rules-programmatically">Managing Custom Rules Programmatically</a></li><li class="navListItem"><a class="navItem" href="/docs/en/api-bulk">Bulk API</a></li><li class="navListItem"><a class="navItem" href="/docs/en/api-crawlbot-api">Crawlbot API</a></li><li class="navListItem"><a class="navItem" href="/docs/en/api-search">Search API</a></li><li class="navListItem navListItemActive"><a class="navItem" href="/docs/en/api-account">Account API</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle collapsible">Knowledge Graph<span class="arrow"><svg width="24" height="24" viewBox="0 0 24 24"><path fill="#565656" d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z"></path><path d="M0 0h24v24H0z" fill="none"></path></svg></span></h3><ul class="hide"><li class="navListItem"><a class="navItem" href="/docs/en/api-kg-intro">Introduction</a></li></ul></div></div></section></div><script>
             var coll = document.getElementsByClassName('collapsible');
             var checkActiveCategory = true;
             for (var i = 0; i < coll.length; i++) {
@@ -54,122 +54,51 @@
                 };
               }
             });
-        </script></nav></div><div class="container mainContainer docsContainer"><div class="wrapper"><div class="post"><header class="postHeader"><a class="edit-page-link button" href="https://github.com/diffbot/docs/edit/master/docs/api-account.md" target="_blank" rel="noreferrer noopener">Edit</a><h1 id="__docusaurus" class="postHeaderTitle">Account API</h1></header><article><div><span><div id="docBody">
-<p>The Account API returns information on a token's call volume and billing history.</p>
-<p><h3 id="request">Request</h3></p>
-<div class="indent">
+        </script></nav></div><div class="container mainContainer docsContainer"><div class="wrapper"><div class="post"><header class="postHeader"><a class="edit-page-link button" href="https://github.com/diffbot/docs/edit/master/docs/api-account.md" target="_blank" rel="noreferrer noopener">Edit</a><h1 id="__docusaurus" class="postHeaderTitle">Account API</h1></header><article><div><span><p>The Account API returns information on a token's call volume and billing history.</p>
+<h2><a class="anchor" aria-hidden="true" id="request"></a><a href="#request" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Request</h2>
 <p>To use the Account API, perform a HTTP GET request on the following endpoint:</p>
-<pre><code class="hljs css language-text">https://api.diffbot.com/v3/account
+<pre><code class="hljs css language-plaintext">https://api.diffbot.com/v3/account
 </code></pre>
 <p>Provide the following arguments:</p>
-<table class="controls table table-bordered" border="0" cellpadding="5">
-<thead><tr>
-<th>Argument</th>
-<th>Description</th>
-</tr></thead>
+<table>
+<thead>
+<tr><th style="text-align:left">Argument</th><th style="text-align:left">Description</th></tr>
+</thead>
 <tbody>
-<tr>
-<td><code>token</code></td>
-<td>Developer <a href="https://diffbot.com/pricing">token</a>
-</td>
-</tr>
-<tr><td colspan="2"><strong>Optional parameters</strong></td></tr>
-<tr class="opt">
-<td><code>days</code></td>
-<td>Pass the number of days (<code>&amp;days=365</code>) for which you would like to retrieve API call volumes (default = 31).</td>
-</tr>
-<tr class="opt">
-<td><code>invoices</code></td>
-<td>Pass <code>&amp;invoices=true</code> to return invoice and payment history.</td>
-</tr>
+<tr><td style="text-align:left"><code>token</code></td><td style="text-align:left">Developer <a href="https://www.diffbot.com/pricing">token</a> </td></tr><td colspan="2"><strong>Optional arguments</strong></td></td></tr>
+<tr><td style="text-align:left"><code>days</code></td><td style="text-align:left">Pass the number of days (<code>&amp;days=365</code>) for which you would like to retrieve API call volumes (default = 31).</td></tr>
+<tr><td style="text-align:left"><code>invoices</code></td><td style="text-align:left">Pass <code>&amp;invoices=true</code> to return invoice and payment history.</td></tr>
 </tbody>
 </table>
-<h3 id="response">Response</h3>
+<h2><a class="anchor" aria-hidden="true" id="response"></a><a href="#response" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Response</h2>
 <p>The Account API returns account details in JSON format. Items returned will include the following:</p>
-<table class="controls table table-bordered" id="fields" border="0" cellpadding="5">
-<thead><tr>
-<th>Field</th>
-<th>Description</th>
-</tr></thead>
-<tr>
-<td class=""><code>name</code></td>
-<td class=" default"><div>Name associated with the token.</div></td>
-</tr>
-<tr>
-<td class=""><code>email</code></td>
-<td class=" default"><div>Email address associated with the token.</div></td>
-</tr>
-<tr>
-<td class=""><code>plan</code></td>
-<td class=" default"><div>Current plan for the token.</div></td>
-</tr>
-<tr>
-<td class=""><code>planCalls</code></td>
-<td class=" default"><div>Amount of monthly calls included.</div></td>
-</tr>
-<tr>
-<td class=""><code>status</code></td>
-<td class=" default"><div>Status of the token.</div></td>
-</tr>
-<tr>
-<td><code>childTokens</code></td>
-<td><div>List of child or sub-tokens, if there are any associated with your account.</div></td>
-</tr>
-<tr>
-<td class="parent"><code>apiCalls</code></td>
-<td class="parent default"><div>An array of days and call volume amounts for each day. By default this will return data from the most recent 31 days. Use the <code>days</code> argument to adjust the response window. Dates prior to token becoming active will not be returned.</div></td>
-</tr>
-<tr>
-<td class="indent"><code>date</code></td>
-<td class="indent"><div>Date, e.g. <code>2015-10-01</code>.</div></td>
-</tr>
-<tr>
-<td class="indent"><code>calls</code></td>
-<td class="indent"><div>Total number of API calls made.</div></td>
-</tr>
-<tr>
-<td class="indent"><code>proxyCalls</code></td>
-<td class="indent"><div>Total number of calls made using proxy servers. <a href="explain-using-different-proxies">Read more</a>.</div></td>
-</tr>
-<tr>
-<td class="indent"><code>giCalls</code></td>
-<td class="indent"><div>Total number of search calls made against the <a href="/dev/docs/global-index">Global Index</a>.</div></td>
-</tr>
-<tr>
-<td class="parent"><code>invoices</code></td>
-<td class="parent default"><div>Array of invoices for paid accounts.</div></td>
-</tr>
-<tr>
-<td class="indent"><code>date</code></td>
-<td class="indent"><div>Date of invoice.</div></td>
-</tr>
-<tr>
-<td class="indent"><code>periodStart</code></td>
-<td class="indent"><div>Billing period start date (resolved to day).</div></td>
-</tr>
-<tr>
-<td class="indent"><code>periodEnd</code></td>
-<td class="indent"><div>Billing period end date (resolved to day).</div></td>
-</tr>
-<tr>
-<td class="indent"><code>totalCalls</code></td>
-<td class="indent"><div>Total calls made during the billing period.</div></td>
-</tr>
-<tr>
-<td class="indent"><code>totalAmount</code></td>
-<td class="indent"><div>Total amount charged.</div></td>
-</tr>
-<tr>
-<td class="indent"><code>overageAmount</code></td>
-<td class="indent"><div>Total overage amount billed if call volume exceeded included number of monthly calls.</div></td>
-</tr>
-<tr>
-<td class="indent"><code>status</code></td>
-<td class="indent"><div>Payment status of invoice (<code>paid</code> or <code>unpaid</code>).</div></td>
-</tr>
+<table>
+<thead>
+<tr><th style="text-align:left">Field</th><th style="text-align:left">Description</th></tr>
+</thead>
+<tbody>
+<tr><td style="text-align:left"><code>name</code></td><td style="text-align:left">Name associated with the token.</td></tr>
+<tr><td style="text-align:left"><code>email</code></td><td style="text-align:left">Email address associated with the token.</td></tr>
+<tr><td style="text-align:left"><code>plan</code></td><td style="text-align:left">Current plan for the token.</td></tr>
+<tr><td style="text-align:left"><code>planCalls</code></td><td style="text-align:left">Amount of monthly calls included.</td></tr>
+<tr><td style="text-align:left"><code>status</code></td><td style="text-align:left">Status of the token.</td></tr>
+<tr><td style="text-align:left"><code>childTokens</code></td><td style="text-align:left">List of child or sub-tokens, if there are any associated with your account.</td></tr>
+<tr><td style="text-align:left"><code>apiCalls</code></td><td style="text-align:left">An array of days and call volume amounts for each day. By default this will return data from the most recent 31 days. Use the <code>days</code> argument to adjust the response window. Dates prior to token becoming active will not be returned.</td></tr>
+<tr><td style="text-align:left">↳<code>date</code></td><td style="text-align:left">Date, e.g. <code>2015-10-01</code>.</td></tr>
+<tr><td style="text-align:left">↳<code>calls</code></td><td style="text-align:left">Total number of API calls made.</td></tr>
+<tr><td style="text-align:left">↳<code>proxyCalls</code></td><td style="text-align:left">Total number of calls made using proxy servers. <a href="/docs/en/explain-using-different-proxies">Read more</a>.</td></tr>
+<tr><td style="text-align:left">↳<code>giCalls</code></td><td style="text-align:left">Total number of search calls made against the <a href="/docs/en/explain-global-index">Global Index</a>.</td></tr>
+<tr><td style="text-align:left"><code>invoices</code></td><td style="text-align:left">Array of invoices for paid accounts.</td></tr>
+<tr><td style="text-align:left">↳<code>date</code></td><td style="text-align:left">Date of invoice.</td></tr>
+<tr><td style="text-align:left">↳<code>periodStart</code></td><td style="text-align:left">Billing period start date (resolved to day).</td></tr>
+<tr><td style="text-align:left">↳<code>periodEnd</code></td><td style="text-align:left">Billing period end date (resolved to day).</td></tr>
+<tr><td style="text-align:left">↳<code>totalCalls</code></td><td style="text-align:left">Total calls made during the billing period.</td></tr>
+<tr><td style="text-align:left">↳<code>totalAmount</code></td><td style="text-align:left">Total amount charged.</td></tr>
+<tr><td style="text-align:left">↳<code>overageAmount</code></td><td style="text-align:left">Total overage amount billed if call volume exceeded included number of monthly calls.</td></tr>
+<tr><td style="text-align:left">↳<code>status</code></td><td style="text-align:left">Payment status of invoice (<code>paid</code> or <code>unpaid</code>).</td></tr>
+</tbody>
 </table>
-</div>
-</div></span></div></article></div><div class="docLastUpdate"><em>Last updated by Rick Deininger</em></div><div class="docs-prevnext"><a class="docs-prev button" href="/docs/en/api-search"><span class="arrow-prev">← </span><span>Search API</span></a><a class="docs-next button" href="/docs/en/api-kg-intro"><span>Introduction</span><span class="arrow-next"> →</span></a></div></div></div><nav class="onPageNav"></nav></div><footer class="nav-footer" id="footer"><section class="sitemap"><a href="/" class="nav-home"><img src="/img/diffbot_white.svg" alt="Docs Suite" width="66" height="58"/></a><div><h5>Docs</h5><a href="/docs/en/intro">Tutorials</a><a href="/docs/en/guides-intro">How-to Guides</a><a href="/docs/en/explain-intro">Explainers</a><a href="/docs/en/api-intro">API Reference</a></div><div><h5>Community</h5><a href="https://stackoverflow.com/questions/tagged/diffbot" target="_blank" rel="noreferrer noopener">Stack Overflow</a><a href="https://twitter.com/diffbot" target="_blank" rel="noreferrer noopener">Twitter</a></div><div><h5>More</h5><a href="/blog">Blog</a><a href="https://github.com/diffbot">GitHub</a></div></section><a href="https://diffbot.com/" target="_blank" rel="noreferrer noopener" class="fbOpenSource"><img src="/img/diffbot_white.svg" alt="Diffbot.com" width="170" height="45"/></a><section class="copyright">Copyright © 2020 Diffbot.com</section></footer></div><script type="text/javascript" src="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.js"></script><script>
+</span></div></article></div><div class="docLastUpdate"><em>Last updated by Dan Urman</em></div><div class="docs-prevnext"><a class="docs-prev button" href="/docs/en/api-search"><span class="arrow-prev">← </span><span>Search API</span></a><a class="docs-next button" href="/docs/en/api-kg-intro"><span>Introduction</span><span class="arrow-next"> →</span></a></div></div></div><nav class="onPageNav"><ul class="toc-headings"><li><a href="#request">Request</a></li><li><a href="#response">Response</a></li></ul></nav></div><footer class="nav-footer" id="footer"><section class="sitemap"><a href="/" class="nav-home"><img src="/img/diffbot_white.svg" alt="Docs Suite" width="66" height="58"/></a><div><h5>Docs</h5><a href="/docs/en/intro">Tutorials</a><a href="/docs/en/guides-intro">How-to Guides</a><a href="/docs/en/explain-intro">Explainers</a><a href="/docs/en/api-intro">API Reference</a></div><div><h5>Community</h5><a href="https://stackoverflow.com/questions/tagged/diffbot" target="_blank" rel="noreferrer noopener">Stack Overflow</a><a href="https://twitter.com/diffbot" target="_blank" rel="noreferrer noopener">Twitter</a></div><div><h5>More</h5><a href="/blog">Blog</a><a href="https://github.com/diffbot">GitHub</a></div></section><a href="https://diffbot.com/" target="_blank" rel="noreferrer noopener" class="fbOpenSource"><img src="/img/diffbot_white.svg" alt="Diffbot.com" width="170" height="45"/></a><section class="copyright">Copyright © 2020 Diffbot.com</section></footer></div><script type="text/javascript" src="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.js"></script><script>
                 document.addEventListener('keyup', function(e) {
                   if (e.target !== document.body) {
                     return;

@@ -1,4 +1,4 @@
-<!DOCTYPE html><html lang="en"><head><meta charSet="utf-8"/><meta http-equiv="X-UA-Compatible" content="IE=edge"/><title>Analyze API · Docs Suite</title><meta name="viewport" content="width=device-width"/><meta name="generator" content="Docusaurus"/><meta name="description" content="&lt;div id=&quot;docBody&quot;&gt;"/><meta name="docsearch:language" content="en"/><meta property="og:title" content="Analyze API · Docs Suite"/><meta property="og:type" content="website"/><meta property="og:url" content="https://diffbot.github.io/"/><meta property="og:description" content="&lt;div id=&quot;docBody&quot;&gt;"/><meta property="og:image" content="https://diffbot.github.io/img/diagram.svg"/><meta name="twitter:card" content="summary"/><meta name="twitter:image" content="https://diffbot.github.io/img/diagram.svg"/><link rel="shortcut icon" href="/img/diffbot-head.png"/><link rel="stylesheet" href="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.css"/><link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/default.min.css"/><link rel="alternate" type="application/atom+xml" href="https://diffbot.github.io/blog/atom.xml" title="Docs Suite Blog ATOM Feed"/><link rel="alternate" type="application/rss+xml" href="https://diffbot.github.io/blog/feed.xml" title="Docs Suite Blog RSS Feed"/><script type="text/javascript" src="https://buttons.github.io/buttons.js"></script><script src="/js/scrollSpy.js"></script><link rel="stylesheet" href="/css/main.css"/><script src="/js/codetabs.js"></script></head><body class="sideNavVisible separateOnPageNav"><div class="fixedHeaderContainer"><div class="headerWrapper wrapper"><header><a href="/"><img class="logo" src="/img/diffbot_white.svg" alt="Docs Suite"/><h2 class="headerTitleWithLogo">Docs Suite</h2></a><div class="navigationWrapper navigationSlider"><nav class="slidingNav"><ul class="nav-site nav-site-internal"><li class=""><a href="/docs/en/intro" target="_self">Prose</a></li><li class="siteNavGroupActive"><a href="/docs/en/api-intro" target="_self">API</a></li><li class=""><a href="/docs/en/error-intro" target="_self">Debugging</a></li><li class=""><a href="/help" target="_self">Help</a></li><li class=""><a href="/blog/" target="_self">Blog</a></li><li class="navSearchWrapper reactNavSearchWrapper"><input type="text" id="search_input_react" placeholder="Search" title="Search"/></li></ul></nav></div></header></div></div><div class="navPusher"><div class="docMainWrapper wrapper"><div class="docsNavContainer" id="docsNav"><nav class="toc"><div class="toggleNav"><section class="navWrapper wrapper"><div class="navBreadcrumb wrapper"><div class="navToggle" id="navToggler"><div class="hamburger-menu"><div class="line1"></div><div class="line2"></div><div class="line3"></div></div></div><h2><i>›</i><span>API</span></h2><div class="tocToggler" id="tocToggler"><i class="icon-toc"></i></div></div><div class="navGroups"><div class="navGroup"><h3 class="navGroupCategoryTitle collapsible">API<span class="arrow"><svg width="24" height="24" viewBox="0 0 24 24"><path fill="#565656" d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z"></path><path d="M0 0h24v24H0z" fill="none"></path></svg></span></h3><ul class="hide"><li class="navListItem"><a class="navItem" href="/docs/en/api-intro">Introduction</a></li><li class="navListItem navListItemActive"><a class="navItem" href="/docs/en/api-analyze">Analyze API</a></li><li class="navListItem"><a class="navItem" href="/docs/en/api-article">Article Extraction API</a></li><li class="navListItem"><a class="navItem" href="/docs/en/api-article-html">Article API: HTML Field Specification</a></li><li class="navListItem"><a class="navItem" href="/docs/en/api-semantria">Semantria-Powered Text Analysis Features</a></li><li class="navListItem"><a class="navItem" href="/docs/en/api-discussion">Discussion Extraction API</a></li><li class="navListItem"><a class="navItem" href="/docs/en/api-image">Image Extraction API</a></li><li class="navListItem"><a class="navItem" href="/docs/en/api-product">Product Extraction API</a></li><li class="navListItem"><a class="navItem" href="/docs/en/api-product-normalized-specs">Product API: Normalized Specs</a></li><li class="navListItem"><a class="navItem" href="/docs/en/api-product-categories">Product API: Category Taxonomy</a></li><li class="navListItem"><a class="navItem" href="/docs/en/api-video">Video Extraction API</a></li><li class="navListItem"><a class="navItem" href="/docs/en/api-custom">Custom APIs</a></li><li class="navListItem"><a class="navItem" href="/docs/en/api-selectors-filters">Custom API Selectors and Filters</a></li><li class="navListItem"><a class="navItem" href="/docs/en/api-managing-rules-programmatically">Managing Custom Rules Programmatically</a></li><li class="navListItem"><a class="navItem" href="/docs/en/api-bulk">Bulk API</a></li><li class="navListItem"><a class="navItem" href="/docs/en/api-crawlbot-api">Crawlbot API</a></li><li class="navListItem"><a class="navItem" href="/docs/en/api-search">Search API</a></li><li class="navListItem"><a class="navItem" href="/docs/en/api-account">Account API</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle collapsible">Knowledge Graph<span class="arrow"><svg width="24" height="24" viewBox="0 0 24 24"><path fill="#565656" d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z"></path><path d="M0 0h24v24H0z" fill="none"></path></svg></span></h3><ul class="hide"><li class="navListItem"><a class="navItem" href="/docs/en/api-kg-intro">Introduction</a></li></ul></div></div></section></div><script>
+<!DOCTYPE html><html lang="en"><head><meta charSet="utf-8"/><meta http-equiv="X-UA-Compatible" content="IE=edge"/><title>Analyze API · Docs Suite</title><meta name="viewport" content="width=device-width"/><meta name="generator" content="Docusaurus"/><meta name="description" content="The Diffbot Analyze API visually analyzes a web page, identifies its &quot;page-type,&quot; and determines which Diffbot extraction API (if any) is appropriate. Pages that match a supported extraction API -- articles, discussions, images, products or videos -- **will be automatically extracted** and returned in the Analyze API response."/><meta name="docsearch:language" content="en"/><meta property="og:title" content="Analyze API · Docs Suite"/><meta property="og:type" content="website"/><meta property="og:url" content="https://diffbot.github.io/"/><meta property="og:description" content="The Diffbot Analyze API visually analyzes a web page, identifies its &quot;page-type,&quot; and determines which Diffbot extraction API (if any) is appropriate. Pages that match a supported extraction API -- articles, discussions, images, products or videos -- **will be automatically extracted** and returned in the Analyze API response."/><meta property="og:image" content="https://diffbot.github.io/img/diagram.svg"/><meta name="twitter:card" content="summary"/><meta name="twitter:image" content="https://diffbot.github.io/img/diagram.svg"/><link rel="shortcut icon" href="/img/diffbot-head.png"/><link rel="stylesheet" href="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.css"/><link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/default.min.css"/><link rel="alternate" type="application/atom+xml" href="https://diffbot.github.io/blog/atom.xml" title="Docs Suite Blog ATOM Feed"/><link rel="alternate" type="application/rss+xml" href="https://diffbot.github.io/blog/feed.xml" title="Docs Suite Blog RSS Feed"/><script type="text/javascript" src="https://buttons.github.io/buttons.js"></script><script src="/js/scrollSpy.js"></script><link rel="stylesheet" href="/css/main.css"/><script src="/js/codetabs.js"></script></head><body class="sideNavVisible separateOnPageNav"><div class="fixedHeaderContainer"><div class="headerWrapper wrapper"><header><a href="/"><img class="logo" src="/img/diffbot_white.svg" alt="Docs Suite"/><h2 class="headerTitleWithLogo">Docs Suite</h2></a><div class="navigationWrapper navigationSlider"><nav class="slidingNav"><ul class="nav-site nav-site-internal"><li class=""><a href="/docs/en/intro" target="_self">Prose</a></li><li class="siteNavGroupActive"><a href="/docs/en/api-intro" target="_self">API</a></li><li class=""><a href="/docs/en/error-intro" target="_self">Debugging</a></li><li class=""><a href="/help" target="_self">Help</a></li><li class=""><a href="/blog/" target="_self">Blog</a></li><li class="navSearchWrapper reactNavSearchWrapper"><input type="text" id="search_input_react" placeholder="Search" title="Search"/></li></ul></nav></div></header></div></div><div class="navPusher"><div class="docMainWrapper wrapper"><div class="docsNavContainer" id="docsNav"><nav class="toc"><div class="toggleNav"><section class="navWrapper wrapper"><div class="navBreadcrumb wrapper"><div class="navToggle" id="navToggler"><div class="hamburger-menu"><div class="line1"></div><div class="line2"></div><div class="line3"></div></div></div><h2><i>›</i><span>API</span></h2><div class="tocToggler" id="tocToggler"><i class="icon-toc"></i></div></div><div class="navGroups"><div class="navGroup"><h3 class="navGroupCategoryTitle collapsible">API<span class="arrow"><svg width="24" height="24" viewBox="0 0 24 24"><path fill="#565656" d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z"></path><path d="M0 0h24v24H0z" fill="none"></path></svg></span></h3><ul class="hide"><li class="navListItem"><a class="navItem" href="/docs/en/api-intro">Introduction</a></li><li class="navListItem navListItemActive"><a class="navItem" href="/docs/en/api-analyze">Analyze API</a></li><li class="navListItem"><a class="navItem" href="/docs/en/api-article">Article Extraction API</a></li><li class="navListItem"><a class="navItem" href="/docs/en/api-article-html">Article API: HTML Field Specification</a></li><li class="navListItem"><a class="navItem" href="/docs/en/api-semantria">Semantria-Powered Text Analysis Features</a></li><li class="navListItem"><a class="navItem" href="/docs/en/api-discussion">Discussion Extraction API</a></li><li class="navListItem"><a class="navItem" href="/docs/en/api-image">Image Extraction API</a></li><li class="navListItem"><a class="navItem" href="/docs/en/api-product">Product Extraction API</a></li><li class="navListItem"><a class="navItem" href="/docs/en/api-product-normalized-specs">Product API: Normalized Specs</a></li><li class="navListItem"><a class="navItem" href="/docs/en/api-product-categories">Product API: Category Taxonomy</a></li><li class="navListItem"><a class="navItem" href="/docs/en/api-video">Video Extraction API</a></li><li class="navListItem"><a class="navItem" href="/docs/en/api-custom">Custom APIs</a></li><li class="navListItem"><a class="navItem" href="/docs/en/api-selectors-filters">Custom API Selectors and Filters</a></li><li class="navListItem"><a class="navItem" href="/docs/en/api-managing-rules-programmatically">Managing Custom Rules Programmatically</a></li><li class="navListItem"><a class="navItem" href="/docs/en/api-bulk">Bulk API</a></li><li class="navListItem"><a class="navItem" href="/docs/en/api-crawlbot-api">Crawlbot API</a></li><li class="navListItem"><a class="navItem" href="/docs/en/api-search">Search API</a></li><li class="navListItem"><a class="navItem" href="/docs/en/api-account">Account API</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle collapsible">Knowledge Graph<span class="arrow"><svg width="24" height="24" viewBox="0 0 24 24"><path fill="#565656" d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z"></path><path d="M0 0h24v24H0z" fill="none"></path></svg></span></h3><ul class="hide"><li class="navListItem"><a class="navItem" href="/docs/en/api-kg-intro">Introduction</a></li></ul></div></div></section></div><script>
             var coll = document.getElementsByClassName('collapsible');
             var checkActiveCategory = true;
             for (var i = 0; i < coll.length; i++) {
@@ -54,194 +54,129 @@
                 };
               }
             });
-        </script></nav></div><div class="container mainContainer docsContainer"><div class="wrapper"><div class="post"><header class="postHeader"><a class="edit-page-link button" href="https://github.com/diffbot/docs/edit/master/docs/api-analyze.md" target="_blank" rel="noreferrer noopener">Edit</a><h1 id="__docusaurus" class="postHeaderTitle">Analyze API</h1></header><article><div><span><div id="docBody">
-<p>The Diffbot Analyze API visually analyzes a web page, identifies its "page-type," and determines which Diffbot extraction API (if any) is appropriate. Pages that match a supported extraction API -- articles, discussions, images, products or videos -- <strong>will be automatically extracted</strong> and returned in the Analyze API response.</p>
-<p>Pages not currently supported by an extraction API will return "other."</p>
-<p><h3 id="request">Request</h3></p>
-<div class="indent">
+        </script></nav></div><div class="container mainContainer docsContainer"><div class="wrapper"><div class="post"><header class="postHeader"><a class="edit-page-link button" href="https://github.com/diffbot/docs/edit/master/docs/api-analyze.md" target="_blank" rel="noreferrer noopener">Edit</a><h1 id="__docusaurus" class="postHeaderTitle">Analyze API</h1></header><article><div><span><p>The Diffbot Analyze API visually analyzes a web page, identifies its &quot;page-type,&quot; and determines which Diffbot extraction API (if any) is appropriate. Pages that match a supported extraction API -- articles, discussions, images, products or videos -- <strong>will be automatically extracted</strong> and returned in the Analyze API response.</p>
+<p>Pages not currently supported by an extraction API will return &quot;other.&quot;</p>
+<h2><a class="anchor" aria-hidden="true" id="request"></a><a href="#request" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Request</h2>
 <p>To use the Analyze API, perform a HTTP GET request on the following endpoint:</p>
-<pre><code class="hljs css language-text">https://api.diffbot.com/v3/analyze?token=...&amp;url=...
+<pre><code class="hljs css language-plaintext">https://api.diffbot.com/v3/analyze?token=...&amp;url=...
 </code></pre>
 <p>Provide the following arguments:</p>
-<!--{arguments}--><table class="controls table table-bordered" id="arguments" border="0" cellpadding="5">
-<thead><tr>
-<th>Argument</th>
-<th>Description</th>
-</tr></thead>
-<tr>
-<td class=""><code>token</code></td>
-<td class=" default"><div>Developer token</div></td>
-</tr>
-<tr>
-<td class=""><code>url</code></td>
-<td class=" default"><div>Web page URL of the analyze to process (URL encoded)</div></td>
-</tr>
-<tr>
-<td colspan="2" class="header">Optional arguments</td>
-</tr>
-<tr>
-<td class=""><code>mode</code></td>
-<td class=" optional"><div>By default the Analyze API will fully extract all pages that match an existing Automatic API -- articles, products or image pages. Set <code>mode</code> to a specific page-type (e.g., <code>mode=article</code>) to extract content only from that specific page-type. All other pages will simply return the default Analyze fields.</div></td>
-</tr>
-<tr>
-<td class=""><code>fallback</code></td>
-<td class=" optional"><div>Force any non-extracted pages (those with a <code>type</code> of "other") through a specific API. For example, to route all "other" pages through the Article API, pass <code>&amp;fallback=article</code>. Pages that utilize this functionality will return a <code>fallbackType</code> field at the top-level of the response and a <code>originalType</code> field within each extracted object, both of which will indicate the fallback API used.</div></td>
-</tr>
-<tr>
-<td class=""><code>fields</code></td>
-<td class=" optional"><div>Specify optional fields to be returned from any fully-extracted pages, e.g.: <code>&amp;fields=querystring,links</code>.<br><br>See available fields within each API's individual documentation pages.</div></td>
-</tr>
-<tr>
-<td class=""><code>discussion</code></td>
-<td class=" optional"><div>Pass <code>discussion=false</code> to disable automatic extraction of comments or reviews from pages identified as articles or products. This will not affect pages identified as discussions.</div></td>
-</tr>
-<tr>
-<td class=""><code>timeout</code></td>
-<td class=" optional"><div>Sets a value in milliseconds to wait for the retrieval/fetch of content from the requested URL. The default timeout for the third-party response is 30 seconds (30000).</div></td>
-</tr>
-<tr>
-<td class=""><code>callback</code></td>
-<td class=" optional"><div>Use for jsonp requests. Needed for cross-domain ajax.</div></td>
-</tr>
+<table>
+<thead>
+<tr><th style="text-align:left">Argument</th><th style="text-align:left">Description</th></tr>
+</thead>
+<tbody>
+<tr><td style="text-align:left"><code>token</code></td><td style="text-align:left">Developer token</td></tr>
+<tr><td style="text-align:left"><code>url</code></td><td style="text-align:left">Web page URL of the analyze to process (URL encoded)</td></tr><td colspan="2"><strong>Optional arguments</strong></td></td></tr>
+<tr><td style="text-align:left"><code>mode</code></td><td style="text-align:left">By default the Analyze API will fully extract all pages that match an existing Automatic API -- articles, products or image pages. Set <code>mode</code> to a specific page-type (e.g., <code>mode=article</code>) to extract content only from that specific page-type. All other pages will simply return the default Analyze fields.</td></tr>
+<tr><td style="text-align:left"><code>fallback</code></td><td style="text-align:left">Force any non-extracted pages (those with a <code>type</code> of &quot;other&quot;) through a specific API. For example, to route all &quot;other&quot; pages through the Article API, pass <code>&amp;fallback=article</code>. Pages that utilize this functionality will return a <code>fallbackType</code> field at the top-level of the response and a <code>originalType</code> field within each extracted object, both of which will indicate the fallback API used.</td></tr>
+<tr><td style="text-align:left"><code>fields</code></td><td style="text-align:left">Specify optional fields to be returned from any fully-extracted pages, e.g.: <code>&amp;fields=querystring,links</code>.<br><br>See available fields within each API's individual documentation pages.</td></tr>
+<tr><td style="text-align:left"><code>discussion</code></td><td style="text-align:left">Pass <code>discussion=false</code> to disable automatic extraction of comments or reviews from pages identified as articles or products. This will not affect pages identified as discussions.</td></tr>
+<tr><td style="text-align:left"><code>timeout</code></td><td style="text-align:left">Sets a value in milliseconds to wait for the retrieval/fetch of content from the requested URL. The default timeout for the third-party response is 30 seconds (30000).</td></tr>
+<tr><td style="text-align:left"><code>callback</code></td><td style="text-align:left">Use for jsonp requests. Needed for cross-domain ajax.</td></tr>
+</tbody>
 </table>
-<!--{endarguments}-->
-</div>
-<h3 id="response">Response</h3>
+<h2><a class="anchor" aria-hidden="true" id="response"></a><a href="#response" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Response</h2>
 <p>The Analyze API returns data in JSON format.</p>
 <p>Each response includes a <code>request</code> object (which returns request-specific metadata), and an <code>objects</code> array, which will include the extracted information for all objects on a submitted page.</p>
 <p>If the Analyze API identifies the submitted page as an article, discussion thread, product or image, the associated object(s) from the page will be returned automatically in the <code>objects</code> array.</p>
 <p>The default fields returned:</p>
-<!--{fields}--><table class="controls table table-bordered" id="fields" border="0" cellpadding="5">
-<thead><tr>
-<th>Field</th>
-<th>Description</th>
-</tr></thead>
-<tr>
-<td class=""><code>title</code></td>
-<td class=" default"><div>Title of the page.</div></td>
-</tr>
-<tr>
-<td class=""><code>type</code></td>
-<td class=" default"><div>Page-type of the submitted URL, either <code>article</code>, <code>discussion</code>, <code>image</code>, <code>product</code>, <code>video</code> or -- if not a <a href="https://diffbot.com/products/automatic">supported page</a> -- <code>other</code>.</div></td>
-</tr>
-<tr>
-<td class=""><code>humanLanguage</code></td>
-<td class=" default"><div>Returns the (spoken/human) language of the submitted page, using two-letter <a href="http://en.wikipedia.org/wiki/List_of_ISO_639-1_codes" target="_blank">ISO 639-1 nomenclature</a>.</div></td>
-</tr>
-<tr>
-<td colspan="2" class="header">Optional fields, available using <code>fields=</code> argument</td>
-</tr>
-<tr>
-<td class=""><code>links</code></td>
-<td class=" optional"><div>Returns a top-level object (<code>links</code>) containing all hyperlinks found on the page.</div></td>
-</tr>
-<tr>
-<td class=""><code>meta</code></td>
-<td class=" optional"><div>Returns a top-level object (<code>meta</code>) containing the full contents of page <code>meta</code> tags, including sub-arrays for <a href="http://ogp.me/" target="_new">OpenGraph</a> tags, <a href="https://dev.twitter.com/docs/cards/markup-reference" target="_new">Twitter Card</a> metadata, <a href="http://www.schema.org" target="_new">schema.org</a> microdata, and -- if available -- <a href="http://www.oembed.com" target="_new">oEmbed</a> metadata.</div></td>
-</tr>
-<tr>
-<td class=""><code>querystring</code></td>
-<td class=" optional"><div>Returns any key/value pairs present in the URL querystring. Items without a discrete value will be returned as <code>true</code>.</div></td>
-</tr>
-<tr>
-<td class=""><code>breadcrumb</code></td>
-<td class=" optional"><div>Returns a top-level array (<code>breadcrumb</code>) of URLs and link text from page breadcrumbs.</div></td>
-</tr>
+<table>
+<thead>
+<tr><th style="text-align:left">Field</th><th style="text-align:left">Description</th></tr>
+</thead>
+<tbody>
+<tr><td style="text-align:left"><code>title</code></td><td style="text-align:left">Title of the page.</td></tr>
+<tr><td style="text-align:left"><code>type</code></td><td style="text-align:left">Page-type of the submitted URL, either <code>article</code>, <code>discussion</code>, <code>image</code>, <code>product</code>, <code>video</code> or -- if not a <a href="https://diffbot.com/products/automatic">supported page</a> -- <code>other</code>.</td></tr>
+<tr><td style="text-align:left"><code>humanLanguage</code></td><td style="text-align:left">Returns the (spoken/human) language of the submitted page, using two-letter <a href="https://en.wikipedia.org/wiki/List_of_ISO_639-1_codes">ISO 639-1 nomenclature</a>.</td></tr><td colspan="2"><strong>Optional fields, available using <code>fields=</code> argument</strong></td></td></tr>
+<tr><td style="text-align:left"><code>links</code></td><td style="text-align:left">Returns a top-level object (<code>links</code>) containing all hyperlinks found on the page.</td></tr>
+<tr><td style="text-align:left"><code>meta</code></td><td style="text-align:left">Returns a top-level object (<code>meta</code>) containing the full contents of page <code>meta</code> tags, including sub-arrays for <a href="https://ogp.me/">OpenGraph</a> tags, <a href="https://developer.twitter.com/en/docs/tweets/optimize-with-cards/overview/markup">Twitter Card</a> metadata, <a href="https://www.schema.org">schema.org</a> microdata, and -- if available -- <a href="https://www.oembed.com">oEmbed</a> metadata.</td></tr>
+<tr><td style="text-align:left"><code>querystring</code></td><td style="text-align:left">Returns any key/value pairs present in the URL querystring. Items without a discrete value will be returned as <code>true</code>.</td></tr>
+<tr><td style="text-align:left"><code>breadcrumb</code></td><td style="text-align:left">Returns a top-level array (<code>breadcrumb</code>) of URLs and link text from page breadcrumbs.</td></tr>
+</tbody>
 </table>
-<!--{endfields}-->
-<p><h3 id="sampleresponse">Example Response</h3></p>
+<h2><a class="anchor" aria-hidden="true" id="example-response"></a><a href="#example-response" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Example Response</h2>
 <p>Because the below classified page is an article, its full contents are extracted using the Article API:</p>
-<div class="indent">
-<pre><code class="hljs css language-text">{
-  "request": {
-    "pageUrl": "http://tcrn.ch/Jw7ZKw",
-    "resolvedPageUrl": "http://techcrunch.com/2012/05/31/diffbot-raises-2-million-seed-round-for-web-content-extraction-technology/",
-    "api": "analyze",
-    "options": [],
-    "fields": "",
-    "version": 3
+<pre><code class="hljs css language-json">{
+  <span class="hljs-attr">"request"</span>: {
+    <span class="hljs-attr">"pageUrl"</span>: <span class="hljs-string">"http://tcrn.ch/Jw7ZKw"</span>,
+    <span class="hljs-attr">"resolvedPageUrl"</span>: <span class="hljs-string">"http://techcrunch.com/2012/05/31/diffbot-raises-2-million-seed-round-for-web-content-extraction-technology/"</span>,
+    <span class="hljs-attr">"api"</span>: <span class="hljs-string">"analyze"</span>,
+    <span class="hljs-attr">"options"</span>: [],
+    <span class="hljs-attr">"fields"</span>: <span class="hljs-string">""</span>,
+    <span class="hljs-attr">"version"</span>: <span class="hljs-number">3</span>
   },
-  "objects": [
+  <span class="hljs-attr">"objects"</span>: [
     {
-      "type": "article",
-      "resolvedPageUrl": "http://techcrunch.com/2012/05/31/diffbot-raises-2-million-seed-round-for-web-content-extraction-technology/",
-      "pageUrl": "http://tcrn.ch/Jw7ZKw",
-      "human_language": "en",
-      "text": "Diffbot , the super-geeky/awesome visual learning robot technology which aims to \"see\" the web the way that people do, is today announcing a new infusion of capital. The company has closed $2 million in funding from a number of technology veterans, including EarthLink founder Sky Dayton ; Andy Bechtolsheim , co-founder of Sun Microsystems; Joi Ito , Director of MIT Media Lab; Brad Garlinghouse , CEO of YouSendIt ( and formerly of TechCrunch parent company AOL ), Maynard Webb , Chairman of the Board at LiveOps, formerly eBay COO; Elad Gil , VP of Corporate Strategy at Twitter; Jonathan Heiliger , former VP of Technical Operations at Facebook; Redbeacon co-founder Aaron Lee ; and founder of VitalSigns Montgomery Kersten .\nMatrix Partners also participated in the round. Of the new investors, Sky Dayton will be the first to join Diffbot's board and will be taking an active role in the company, including plans to go hands-on with various Diffbot projects.\nLast August, the company publicly debuted its first APIs , which allow developers to build apps that can automatically extract meaning from web pages. For example, the Front Page API is able to analyze site homepages, and understands the difference between article text, headlines, bylines, ads, etc. The Article API can then extract clean article text, images and videos. Another example of Diffbot in action is the \"follow API,\" which can track the changes made to a website.\nToday, Diffbot has categorized the web into about 20 different page types, including homepages and article pages, which are the first two types it can now identity. Going forward, Diffbot plans train its bots to recognize all the other types of pages, including product pages, social networking profiles, recipe pages, review pages, and more.\nIts APIs have been put to use by AOL (again: disclosure, TC parent) in its news magazine AOL Editions , as well as by companies like Nuance , SocMetrics , and others. Diffbot says it's now processing 100 million API calls per month on behalf of its customers. Thousands of developers are using the APIs, the company notes, but paying customers are only in the \"tens.\" Correction: we're now told they have \"a lot more!\"\nDiffbot founder and CEO Michael Tung (aka \"Diffbot Mike\") says the new funding will be put towards new hires and expanding its resources. "More than that, we're receiving a huge vote of confidence from veterans who have built massive companies and understand the fine points of building for scale, maintaining uptime and delivering the absolute highest standards of service."\nTung is a patent attorney and Stanford PhD student who left the doctoral program to pursue Diffbot, thanks to seed funding from Stanford's incubator, StartX . Diffbot was StartX's first investment. With today's funding, Diffbot total raise is $2 million and change.",
-      "title": "Diffbot Raises $2 Million Angel Round For Web Content Extraction Technology",
-      "images": [
+      <span class="hljs-attr">"type"</span>: <span class="hljs-string">"article"</span>,
+      <span class="hljs-attr">"resolvedPageUrl"</span>: <span class="hljs-string">"http://techcrunch.com/2012/05/31/diffbot-raises-2-million-seed-round-for-web-content-extraction-technology/"</span>,
+      <span class="hljs-attr">"pageUrl"</span>: <span class="hljs-string">"http://tcrn.ch/Jw7ZKw"</span>,
+      <span class="hljs-attr">"human_language"</span>: <span class="hljs-string">"en"</span>,
+      <span class="hljs-attr">"text"</span>: <span class="hljs-string">"Diffbot , the super-geeky/awesome visual learning robot technology which aims to \"see\" the web the way that people do, is today announcing a new infusion of capital. The company has closed $2 million in funding from a number of technology veterans, including EarthLink founder Sky Dayton ; Andy Bechtolsheim , co-founder of Sun Microsystems; Joi Ito , Director of MIT Media Lab; Brad Garlinghouse , CEO of YouSendIt ( and formerly of TechCrunch parent company AOL ), Maynard Webb , Chairman of the Board at LiveOps, formerly eBay COO; Elad Gil , VP of Corporate Strategy at Twitter; Jonathan Heiliger , former VP of Technical Operations at Facebook; Redbeacon co-founder Aaron Lee ; and founder of VitalSigns Montgomery Kersten .\nMatrix Partners also participated in the round. Of the new investors, Sky Dayton will be the first to join Diffbot's board and will be taking an active role in the company, including plans to go hands-on with various Diffbot projects.\nLast August, the company publicly debuted its first APIs , which allow developers to build apps that can automatically extract meaning from web pages. For example, the Front Page API is able to analyze site homepages, and understands the difference between article text, headlines, bylines, ads, etc. The Article API can then extract clean article text, images and videos. Another example of Diffbot in action is the \"follow API,\" which can track the changes made to a website.\nToday, Diffbot has categorized the web into about 20 different page types, including homepages and article pages, which are the first two types it can now identity. Going forward, Diffbot plans train its bots to recognize all the other types of pages, including product pages, social networking profiles, recipe pages, review pages, and more.\nIts APIs have been put to use by AOL (again: disclosure, TC parent) in its news magazine AOL Editions , as well as by companies like Nuance , SocMetrics , and others. Diffbot says it's now processing 100 million API calls per month on behalf of its customers. Thousands of developers are using the APIs, the company notes, but paying customers are only in the \"tens.\" Correction: we're now told they have \"a lot more!\"\nDiffbot founder and CEO Michael Tung (aka \"Diffbot Mike\") says the new funding will be put towards new hires and expanding its resources. \"More than that, we're receiving a huge vote of confidence from veterans who have built massive companies and understand the fine points of building for scale, maintaining uptime and delivering the absolute highest standards of service.\"\nTung is a patent attorney and Stanford PhD student who left the doctoral program to pursue Diffbot, thanks to seed funding from Stanford's incubator, StartX . Diffbot was StartX's first investment. With today's funding, Diffbot total raise is $2 million and change."</span>,
+      <span class="hljs-attr">"title"</span>: <span class="hljs-string">"Diffbot Raises $2 Million Angel Round For Web Content Extraction Technology"</span>,
+      <span class="hljs-attr">"images"</span>: [
         {
-        "primary": "true",
-        "url": "http://tctechcrunch2011.files.wordpress.com/2012/05/diffbot_9.png?w=300"
+        <span class="hljs-attr">"primary"</span>: <span class="hljs-string">"true"</span>,
+        <span class="hljs-attr">"url"</span>: <span class="hljs-string">"http://tctechcrunch2011.files.wordpress.com/2012/05/diffbot_9.png?w=300"</span>
         }
       ],
-      "date": "Thu, 31 May 2012 07:00:00 GMT"
+      <span class="hljs-attr">"date"</span>: <span class="hljs-string">"Thu, 31 May 2012 07:00:00 GMT"</span>
     }
+  ]
 }
 </code></pre>
-</div>
-<p><h3 id="authenticating">Authentication</h3></p>
+<h2><a class="anchor" aria-hidden="true" id="authentication"></a><a href="#authentication" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Authentication</h2>
 <p>You can supply Diffbot with basic authentication credentials or custom HTTP headers (see below) to access intranet pages or other sites that require a login.</p>
-<p><h4>Basic Authentication</h4></p>
-<p>To access pages that require a login/password (using <a href="http://en.wikipedia.org/wiki/Basic_access_authentication" target="_blank">basic access authentication</a>), include the username and password in your <code>url</code> parameter, e.g.: <code>url=http%3A%2F%2FUSERNAME:PASSWORD@www.diffbot.com</code>.</p>
-<p><h3 id="customheaders">Custom HTTP Headers</h3></p>
+<h3><a class="anchor" aria-hidden="true" id="basic-authentication"></a><a href="#basic-authentication" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Basic Authentication</h3>
+<p>To access pages that require a login/password (using <a href="https://en.wikipedia.org/wiki/Basic_access_authentication">basic access authentication</a>), include the username and password in your <code>url</code> parameter, e.g.: <code>url=http%3A%2F%2FUSERNAME:PASSWORD@www.diffbot.com</code>.</p>
+<h2><a class="anchor" aria-hidden="true" id="custom-http-headers"></a><a href="#custom-http-headers" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Custom HTTP Headers</h2>
 <p>You can supply Diffbot APIs with custom HTTP headers that will be passed along when making requests to third-party sites. These can be used to define specific Referer, User-Agent, Cookie or any other values.</p>
 <p>Custom headers should be sent as HTTP headers in your request to <code>https://api.diffbot.com</code>, and prepended with <code>X-Forward-</code>.</p>
 <p>For instance, to send custom <code>User-Agent</code>, <code>Referer</code> and <code>My-Custom-Header</code> header values:</p>
-<table class="controls table table-bordered" border="0" cellpadding="5">
-<thead><tr>
-<th>Desired Header</th>
-<th>Send to api.diffbot.com</th>
-</tr></thead>
+<table>
+<thead>
+<tr><th style="text-align:left">Desired Header</th><th style="text-align:left">Send to api.diffbot.com</th></tr>
+</thead>
 <tbody>
-<tr>
-<td><code>User-Agent:Diffbot</code></td>
-<td><code>X-Forward-User-Agent:Diffbot</code></td>
-</tr>
-<tr>
-<td><code>Referer:diffbot.com</code></td>
-<td><code>X-Forward-Referer:diffbot.com</code></td>
-</tr>
-<tr>
-<td><code>My-Custom-Header:CustomValue</code></td>
-<td><code>X-Forward-My-Custom-Header:CustomValue</code></td>
-</tr>
+<tr><td style="text-align:left"><code>User-Agent:Diffbot</code></td><td style="text-align:left"><code>X-Forward-User-Agent:Diffbot</code></td></tr>
+<tr><td style="text-align:left"><code>Referer:diffbot.com</code></td><td style="text-align:left"><code>X-Forward-Referer:diffbot.com</code></td></tr>
+<tr><td style="text-align:left"><code>My-Custom-Header:CustomValue</code></td><td style="text-align:left"><code>X-Forward-My-Custom-Header:CustomValue</code></td></tr>
 </tbody>
 </table>
-<p><h3 id="x-evaluate">Custom Javascript</h3></p>
+<h2><a class="anchor" aria-hidden="true" id="custom-javascript"></a><a href="#custom-javascript" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Custom Javascript</h2>
 <div class="alert">This functionality is currently in beta.</div>
 <p>Using the <code>X-Evaluate</code> custom header (sent as <code>X-Forward-X-Evaluate</code>), you can inject your own Javascript code into web pages. Custom Javascript will be executed once the DOM has loaded.</p>
 <p>Custom Javascript should be provided as a text string and contained in its own function. You must also include the special functions <code>start()</code> and <code>end()</code> to indicate the beginning and end of your custom script. Once <code>end()</code> fires, the updated document will be processed by your chosen extraction API.</p>
-<p>It's recommended that your <code>end()</code> function be offset using <code>setTimeout</code> (see <a href="http://www.w3schools.com/js/js_timing.asp" target="_blank">JavaScript Timing Events</a>) in order to accommodate your primary function processing. Additionally, if your custom Javascript requires access to Ajax-delivered content, it may be necessary to offset your entire function using <code>setTimeout</code> in order to delay the start of your processing.</p>
+<p>It's recommended that your <code>end()</code> function be offset using <code>setTimeout</code> (see <a href="https://www.w3schools.com/js/js_timing.asp">JavaScript Timing Events</a>) in order to accommodate your primary function processing. Additionally, if your custom Javascript requires access to Ajax-delivered content, it may be necessary to offset your entire function using <code>setTimeout</code> in order to delay the start of your processing.</p>
 <p>The following sample <code>X-Evaluate</code> header waits one-half second after the DOM has loaded, enacts a click on the <code>a.loadMore</code> element, then waits 800 milliseconds before signaling the <code>end()</code>:</p>
-<pre><code class="hljs css language-text">function() {
+<pre><code class="hljs css language-js"><span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>) </span>{
     start();
-    setTimeout(function() {
-        var loadMoreNode = document.querySelector('a.loadMore');
-        if (loadMoreNode != null) {
+    setTimeout(<span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>) </span>{
+        <span class="hljs-keyword">var</span> loadMoreNode = <span class="hljs-built_in">document</span>.querySelector(<span class="hljs-string">'a.loadMore'</span>);
+        <span class="hljs-keyword">if</span> (loadMoreNode != <span class="hljs-literal">null</span>) {
             loadMoreNode.click();
-            setTimeout(function() {
+            setTimeout(<span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>) </span>{
                 end();
-            }, 800);
-        } else {
+            }, <span class="hljs-number">800</span>);
+        } <span class="hljs-keyword">else</span> {
             end();
         }
-    }, 500);
+    }, <span class="hljs-number">500</span>);
 }
 </code></pre>
 <p>Delivered as a string value as a custom header:</p>
-<pre><code class="hljs css language-text">"X-Forward-X-Evaluate": "function() {start();setTimeout(function(){var loadMoreNode=document.querySelector('a.loadMore');if (loadMoreNode != null) {loadMoreNode.click();setTimeout(function(){end();}, 800);} else {end();}},500);}"
+<pre><code class="hljs css language-json">"X-Forward-X-Evaluate": "function() {start();setTimeout(function(){var loadMoreNode=document.querySelector('a.loadMore');if (loadMoreNode != null) {loadMoreNode.click();setTimeout(function(){end();}, 800);} else {end();}},500);}"
 </code></pre>
-<p><h3 id="posting">Posting Content</h3></p>
+<h2><a class="anchor" aria-hidden="true" id="posting-content"></a><a href="#posting-content" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Posting Content</h2>
 <p>If your content is not publicly available (e.g., behind a firewall), you can POST markup or plain text directly to the Analyze API endpoint for analysis. Note that the quality of analysis is dependent on many factors, among them the accessibility of page assets (images, CSS) and how reliant the page layout is on those that are unavailable.</p>
-<pre><code class="hljs css language-text">https://api.diffbot.com/v3/analyze?token=...&amp;url=...
+<pre><code class="hljs css language-plaintext">https://api.diffbot.com/v3/analyze?token=...&amp;url=...
 </code></pre>
 <p>Please note that the <code>url</code> argument is still required, and will be used to resolve any relative links contained in the markup.</p>
 <p>Provide the content to analyze as your POST body, and specify the <code>Content-Type</code> header as <code>text/html</code>.</p>
-<p><strong>HTML Post Sample</strong>:</p>
-<pre><code class="hljs css language-text">curl -H "Content-Type: text/html" -d '&lt;html&gt;&lt;head&gt;&lt;title&gt;Something to Buy&lt;/title&gt;&lt;/head&gt;&lt;body&gt;&lt;h2&gt;A Pair of Jeans&lt;/h2&gt;&lt;div&gt;Price: $31.99&lt;/div&gt;&lt;/body&gt;&lt;/html&gt;' 'https://api.diffbot.com/v3/analyze?token=...&amp;url=http%3A%2F%2Fstore.diffbot.com'
+<h3><a class="anchor" aria-hidden="true" id="html-post-sample"></a><a href="#html-post-sample" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>HTML Post Sample</h3>
+<pre><code class="hljs css language-plaintext">curl -H "Content-Type: text/html" -d '&lt;html&gt;&lt;head&gt;&lt;title&gt;Something to Buy&lt;/title&gt;&lt;/head&gt;&lt;body&gt;&lt;h2&gt;A Pair of Jeans&lt;/h2&gt;&lt;div&gt;Price: $31.99&lt;/div&gt;&lt;/body&gt;&lt;/html&gt;' 'https://api.diffbot.com/v3/analyze?token=...&amp;url=http%3A%2F%2Fstore.diffbot.com'
 </code></pre>
-</div></span></div></article></div><div class="docLastUpdate"><em>Last updated by Rick Deininger</em></div><div class="docs-prevnext"><a class="docs-prev button" href="/docs/en/api-intro"><span class="arrow-prev">← </span><span>Introduction</span></a><a class="docs-next button" href="/docs/en/api-article"><span>Article Extraction API</span><span class="arrow-next"> →</span></a></div></div></div><nav class="onPageNav"></nav></div><footer class="nav-footer" id="footer"><section class="sitemap"><a href="/" class="nav-home"><img src="/img/diffbot_white.svg" alt="Docs Suite" width="66" height="58"/></a><div><h5>Docs</h5><a href="/docs/en/intro">Tutorials</a><a href="/docs/en/guides-intro">How-to Guides</a><a href="/docs/en/explain-intro">Explainers</a><a href="/docs/en/api-intro">API Reference</a></div><div><h5>Community</h5><a href="https://stackoverflow.com/questions/tagged/diffbot" target="_blank" rel="noreferrer noopener">Stack Overflow</a><a href="https://twitter.com/diffbot" target="_blank" rel="noreferrer noopener">Twitter</a></div><div><h5>More</h5><a href="/blog">Blog</a><a href="https://github.com/diffbot">GitHub</a></div></section><a href="https://diffbot.com/" target="_blank" rel="noreferrer noopener" class="fbOpenSource"><img src="/img/diffbot_white.svg" alt="Diffbot.com" width="170" height="45"/></a><section class="copyright">Copyright © 2020 Diffbot.com</section></footer></div><script type="text/javascript" src="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.js"></script><script>
+</span></div></article></div><div class="docLastUpdate"><em>Last updated by Dan Urman</em></div><div class="docs-prevnext"><a class="docs-prev button" href="/docs/en/api-intro"><span class="arrow-prev">← </span><span>Introduction</span></a><a class="docs-next button" href="/docs/en/api-article"><span>Article Extraction API</span><span class="arrow-next"> →</span></a></div></div></div><nav class="onPageNav"><ul class="toc-headings"><li><a href="#request">Request</a></li><li><a href="#response">Response</a></li><li><a href="#example-response">Example Response</a></li><li><a href="#authentication">Authentication</a><ul class="toc-headings"><li><a href="#basic-authentication">Basic Authentication</a></li></ul></li><li><a href="#custom-http-headers">Custom HTTP Headers</a></li><li><a href="#custom-javascript">Custom Javascript</a></li><li><a href="#posting-content">Posting Content</a><ul class="toc-headings"><li><a href="#html-post-sample">HTML Post Sample</a></li></ul></li></ul></nav></div><footer class="nav-footer" id="footer"><section class="sitemap"><a href="/" class="nav-home"><img src="/img/diffbot_white.svg" alt="Docs Suite" width="66" height="58"/></a><div><h5>Docs</h5><a href="/docs/en/intro">Tutorials</a><a href="/docs/en/guides-intro">How-to Guides</a><a href="/docs/en/explain-intro">Explainers</a><a href="/docs/en/api-intro">API Reference</a></div><div><h5>Community</h5><a href="https://stackoverflow.com/questions/tagged/diffbot" target="_blank" rel="noreferrer noopener">Stack Overflow</a><a href="https://twitter.com/diffbot" target="_blank" rel="noreferrer noopener">Twitter</a></div><div><h5>More</h5><a href="/blog">Blog</a><a href="https://github.com/diffbot">GitHub</a></div></section><a href="https://diffbot.com/" target="_blank" rel="noreferrer noopener" class="fbOpenSource"><img src="/img/diffbot_white.svg" alt="Diffbot.com" width="170" height="45"/></a><section class="copyright">Copyright © 2020 Diffbot.com</section></footer></div><script type="text/javascript" src="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.js"></script><script>
                 document.addEventListener('keyup', function(e) {
                   if (e.target !== document.body) {
                     return;
