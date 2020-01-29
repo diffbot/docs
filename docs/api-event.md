@@ -49,9 +49,9 @@ Objects in the Event API's `objects` array will include the following fields:
 | `pageUrl` | URL of submitted page / page from which the event is extracted. |
 | `resolvedPageUrl` | Returned if the `pageUrl` redirects to another URL. |
 | `title` | Title of the event. |
-| `startDate` | Start date of extracted event converted into the GMT timezone, normalized in most cases to [RFC 1123 (HTTP/1.1)](https://www.w3.org/Protocols/rfc2616/rfc2616-sec3.html#sec3.3). If no start time was found, the time is midnight.|
-| `endDate` | End date of extracted event converted into the GMT timezone, normalized in most cases to [RFC 1123 (HTTP/1.1)](https://www.w3.org/Protocols/rfc2616/rfc2616-sec3.html#sec3.3).If no start time was found, the time is midnight.|
-| `isFullDay` | Returns true of no time was found and the event runs the whole day.|
+| `startDate` | Start date of extracted event in GMT, normalized in most cases to [RFC 1123 (HTTP/1.1)](https://www.w3.org/Protocols/rfc2616/rfc2616-sec3.html#sec3.3). If no start time was found, the time is midnight.|
+| `endDate` | End date of extracted event converted in GMT, normalized in most cases to [RFC 1123 (HTTP/1.1)](https://www.w3.org/Protocols/rfc2616/rfc2616-sec3.html#sec3.3).If no end time was found, the time is midnight.|
+| `isFullDay` | Returns true if no time was found and the event runs the whole day.|
 | `description` | Text description, if available, of the event. |
 | `venue` | The name of the venue, if available. |
 | `location` | Parsed address information, if parsable address is provided.|
@@ -64,7 +64,7 @@ Objects in the Event API's `objects` array will include the following fields:
 | &#x21B3;`latitude` | Latitude of the geographic coordinate of the address. |
 | &#x21B3;`longitude` | Longitude of the geographic coordinate of the address. |
 | &#x21B3;`postalCode` | Postal code of the address. |
-| &#x21B3;`region` | . |
+| &#x21B3;`region` | The regi. |
 | &#x21B3;`precision` | The precision score of the parsed address. |
 | `images` | Array of images, if present within the event page. |
 | &#x21B3;`url` |Fully resolved link to image. If the image `SRC` is encoded as base64 data, the complete data URI will be returned. |
@@ -78,7 +78,7 @@ Objects in the Event API's `objects` array will include the following fields:
 | &#x21B3;`diffbotUri` | Internal ID used for indexing. |
 | `humanLanguage` | Returns the (spoken/human) language of the submitted page, using two-letter [ISO 639-1 nomenclature](https://en.wikipedia.org/wiki/List_of_ISO_639-1_codes). |
 | `meta` | Returns a top-level object (`meta`) containing the full contents of page `meta` tags, including sub-arrays for [OpenGraph](https://ogp.me/) tags, [Twitter Card](https://developer.twitter.com/en/docs/tweets/optimize-with-cards/overview/markup) metadata, [schema.org](https://www.schema.org) microdata, and -- if available -- [oEmbed](https://www.oembed.com) metadata. |
-| `diffbotUri` | Unique object ID. The `diffbotUri` is generated from the values of various event fields and uniquely identifies the object. This can be used for deduplication. </td></tr><tr><td colspan="2">
+| `diffbotUri` | Unique object ID. The `diffbotUri` is generated from the values of various event fields and uniquely identifies the object. This can be used for deduplication.|
 
 
 ## Example Response
@@ -238,5 +238,5 @@ Provide the content to analyze as your POST body, and specify the `Content-Type`
 ### HTML Post Sample
 
 ```plaintext
-curl -H "Content-Type: text/html" -d '<html><head><title>Something to Buy</title></head><body><h2>A Pair of Jeans</h2><div>Price: $31.99</div></body></html>' 'https://api.diffbot.com/v3/event?token=...&url=http%3A%2F%2Fstore.diffbot.com'
+curl -H "Content-Type: text/html" -d '<html><head><title>Some Event Name</title></head><body><h2>Come join us on February 22nd, 2020</h2><div> at the Chase Center, 1301 2nd Ave, Seattle, WA 98101</div></body></html>' 'https://api.diffbot.com/v3/event?token=...&url=http%3A%2F%2Fstore.diffbot.com'
 ```
