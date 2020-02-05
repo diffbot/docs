@@ -2,7 +2,6 @@
 id: api-discussion
 title: Discussion Extraction API
 sidebar_label: Discussion Extraction API
-todo: Modify links to old API docs
 ---
 
 The Discussion API automatically structures and extracts entire threads or lists of reviews/comments from most discussion pages, forums, and similarly structured web pages.

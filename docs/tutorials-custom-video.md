@@ -2,8 +2,6 @@
 id: tutorials-custom-video
 title: Custom API Video Tutorials
 sidebar_label: Custom API Video Tutorials
-todo: Modify link beginning with "support.diffbot.com/topics"
-todo: Modify links to old API docs
 ---
 
 <div id="docBody">
@@ -17,7 +15,7 @@ todo: Modify links to old API docs
 <p>Related links:</p>
 <ul>
 <li><a href="tutorials-custom-collections">Help with custom collections</a></li>
-<li><a href="http://support.diffbot.com/topics/apitoolkit/">Custom API Support</a></li>
+<li><a href="index-custom-api">Custom API Support</a></li>
 </ul>
 <h3>Custom API Filters</h3>
 <iframe width="640" height="480" src="https://www.youtube.com/embed/LFeFT5kWSSI?rel=0&amp;showinfo=0" frameborder="0" allowfullscreen></iframe>
@@ -25,7 +23,7 @@ todo: Modify links to old API docs
 <p>Related links:</p>
 <ul>
 <li><a href="api-selectors-filters">Overview of the selectors available</a></li>
-<li><a href="http://support.diffbot.com/topics/apitoolkit/">Custom API Support</a></li>
+<li><a href="index-custom-api">Custom API Support</a></li>
 </ul>
 
 </div>

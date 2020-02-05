@@ -10,9 +10,9 @@ This page explains how the [Global Index](https://www.diffbot.com/products/globa
 
 Access to the Global Index requires a [paid subscription](http://www.diffbot.com/pricing) to a Diffbot Plus, Professional or Enterprise plan. Each plan provides a monthly allotment of Global Index search queries in addition to regular extraction API calls.
 
-The Global Index is built atop the Diffbot [Search API](http://www.diffbot.com/dev/docs/search) and is populated by Diffbot’s [Article](http://diffbot.com/dev/docs/article) and [Discussion](http://diffbot.com/dev/docs/discussion) APIs; as such, API syntax and data output are consistent with the rest of the Diffbot platform.
+The Global Index is built atop the Diffbot [Search API](api-search) and is populated by Diffbot’s [Article](api-article) and [Discussion](api-discussion) APIs; as such, API syntax and data output are consistent with the rest of the Diffbot platform.
 
-Our updated Developer Dashboard — scheduled for a Q1 2020 release — also offers a UI for performing Global Index searches. Contact us if you are interested in acquiring beta access to the new Dashboard.
+Our updated Developer Dashboard — scheduled for a Q1 2020 release — also offers a UI for performing Global Index searches. Contact us if you are interested in acquiring beta access to the [new Dashboard](tutorials-new-dashboard).
 
 ## How often are sites crawled in the Global Index?
 

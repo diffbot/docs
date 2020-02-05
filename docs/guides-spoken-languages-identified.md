@@ -7,7 +7,7 @@ todo: Modify links to old API docs
 
 <div class="entry-content">
 		<p>Diffbot Automatic APIs identify and return the <code>humanLanguage</code> (spoken language) of most analyzed pages. This is returned as a two-letter <a href="http://en.wikipedia.org/wiki/List_of_ISO_639-1_codes" target="_blank">ISO-639 code</a>, with the exception of Simplified Chinese (<code>zh-cn</code>) and Taiwanese Mandarin (<code>zh-tw</code>).</p>
-<p>(In the <a href="http://www.diffbot.com/dev/docs/article">Article API</a>, Diffbot-generated tags will be returned in the native language for pages in English, Chinese, French, German, Spanish, Japanese or Russian.)</p>
+<p>(In the <a href="api-article">Article API</a>, Diffbot-generated tags will be returned in the native language for pages in English, Chinese, French, German, Spanish, Japanese or Russian.)</p>
 <p>The currently supported and returned ISO codes are as follows:</p>
 <ul>
 <li>ar</li>

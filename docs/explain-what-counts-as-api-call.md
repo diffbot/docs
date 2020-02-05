@@ -2,7 +2,6 @@
 id: explain-what-counts-as-api-call
 title: What counts as an API call?
 sidebar_label: What counts as an API call?
-todo: Modify links to old API docs
 ---
 
 <div class="entry-content">
@@ -14,9 +13,9 @@ todo: Modify links to old API docs
 <p><strong>Crawlbot API, Bulk API and the Search API</strong></p>
 <p>Individual URLs sent via the Bulk API count as individual API calls. E.g., a bulk job containing 500 URLs will incur 500 API calls.</p>
 <p>There is no charge for use of Crawlbot or our Bulk API; calls to those APIs are not charged. Within a crawl, pages that are merely crawled for links are not counted as API calls. Any pages <strong>processed</strong> within a crawl count as API calls. (<a title="What’s the difference between crawling and processing?" href="explain-crawling-versus-processing">Read about the difference between “crawled” and “processed” pages</a>.)</p>
-<p><a href="https://www.diffbot.com/dev/docs/searc/h">Search API</a> requests for download of individual crawl or bulk job data are not charged.</p>
+<p><a href="api-search">Search API</a> requests for download of individual crawl or bulk job data are not charged.</p>
 <p><strong>Proxy Usage</strong></p>
 <p>Calls that require use of <a title="Using Diffbot Proxy Servers / Proxy IPs" href="explain-using-different-proxies">Diffbot proxy servers</a> will bill at a rate of 2x; that is, each page processed using a proxy will count as two API calls.</p>
 <p><strong>Error Responses</strong></p>
-<p>Requests that result in a Diffbot <a href="https://www.diffbot.com/dev/docs/error/">error response</a> are not billed or counted as API calls.</p>
+<p>Requests that result in a Diffbot <a href="error-errors">error response</a> are not billed or counted as API calls.</p>
 			</div>

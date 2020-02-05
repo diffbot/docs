@@ -16,8 +16,8 @@ todo: Modify links to old API docs
 </ul>
 <p>If you find a site that is unable to be crawled without page-scrolling, you may be able to improve results via the following approach:</p>
 <ol>
-<li>Write custom Javascript via Diffbot’s <a href="https://www.diffbot.com/dev/docs/analyze/#customheaders">custom X-Evaluate header</a>, implementing a click or scroll event — or multiple click/scroll events.</li>
-<li>Store your X-Evaluate header as a <a href="https://www.diffbot.com/dev/docs/custom/managing/">custom rule</a> against the Analyze API for the site in question.</li>
+<li>Write custom Javascript via Diffbot’s <a href="api-analyze#custom-javascript">custom X-Evaluate header</a>, implementing a click or scroll event — or multiple click/scroll events.</li>
+<li>Store your X-Evaluate header as a <a href="api-managing-rules-programmatically">custom rule</a> against the Analyze API for the site in question.</li>
 <li>Use the aforementioned method to <a href="guides-crawling-ajax-generated-links">execute Ajax/Javascript</a> while crawling</li>
 <p>.
 </p>

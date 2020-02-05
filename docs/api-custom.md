@@ -2,15 +2,11 @@
 id: api-custom
 title: Custom APIs
 sidebar_label: Custom APIs
-todo: Modify link beginning with "support.diffbot.com/topics"
-todo: Modify links to old API docs
-todo: Modify links to old Dashboard
-todo: Update link that leads to old KB about api toolkit, possible when Prose sidebar revamped.
 ---
 
 Custom APIs allow you to extract nearly anything from nearly any site using Diffbot's powerful rendering engine.
 
-<div class="info"><strong>Related:</strong> <a href="https://support.diffbot.com/topics/apitoolkit/" target="_blank">API Toolkit Support</a> | <a href="api-managing-rules-programmatically">Managing Rules Programmatically</a> | <a href="tutorials-custom-video">Video Tutorials</a></div>
+<div class="info"><strong>Related:</strong> <a href="index-custom-api" target="_blank">API Toolkit Support</a> | <a href="api-managing-rules-programmatically">Managing Rules Programmatically</a> | <a href="tutorials-custom-video">Video Tutorials</a></div>
 
 ## Creating a New API
 

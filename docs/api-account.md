@@ -2,7 +2,6 @@
 id: api-account
 title: Account API
 sidebar_label: Account API
-todo: Modify links to old API docs
 ---
 
 The Account API returns information on a token's call volume and billing history.

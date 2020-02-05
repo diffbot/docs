@@ -1,16 +1,14 @@
 ---
-id: guides-crawl
-title: Crawlbot
-sidebar_label: Crawlbot
-todo: Modify link beginning with "support.diffbot.com/topics"
-todo: Modify links to old API docs
+id: tutorials-crawl
+title: Crawlbot walkthrough
+sidebar_label: Crawlbot walkthrough
 todo: Modify links to old Dashboard
 ---
 
 <div id="docBody">
 <p>Crawlbot allows you to apply a Diffbot API to entire sites, returning the complete structured data in JSON or CSV format.</p>
 <div class="alert alert-info">
-<strong>Related:</strong> <a href="http://support.diffbot.com/topics/crawlbot/" target="_blank">Crawlbot Support</a> | <a href="api-crawlbot-api">Crawlbot API Documentation</a> | <a href="tutorials-crawl-video">Video Tutorials</a>
+<strong>Related:</strong> <a href="index-crawlbot">Crawlbot Support</a> | <a href="api-crawlbot-api">Crawlbot API Documentation</a> | <a href="tutorials-crawl-video">Video Tutorials</a>
 </div>
 
 
@@ -28,7 +26,7 @@ todo: Modify links to old Dashboard
 </p>
 <ol>
 <li>A crawl name (e.g., "DiffbotCrawl").</li>
-<li>A starting or "seed" URL. Multiple URLs can be provided to process more than one site in the same crawl. If the seed contains a non-www subdomain ("http://blog.diffbot.com" or "http://support.diffbot.com") Crawlbot will restrict spidering to the specified <strong>subdomain</strong>. If you wish to expand your crawl to multiple domains, enter each one as a separate seed; or consider the <code>restrictDomain</code> setting. <a href="guides-restrict-domain">Read more</a>.</li>
+<li>A starting or "seed" URL. Multiple URLs can be provided to process more than one site in the same crawl. If the seed contains a non-www subdomain ("http://blog.diffbot.com" or "https://docs.diffbot.com") Crawlbot will restrict spidering to the specified <strong>subdomain</strong>. If you wish to expand your crawl to multiple domains, enter each one as a separate seed; or consider the <code>restrictDomain</code> setting. <a href="guides-restrict-domain">Read more</a>.</li>
 <li>A Diffbot API to be used for processing pages.</li>
 </ol>
 

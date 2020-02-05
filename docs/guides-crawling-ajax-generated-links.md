@@ -12,9 +12,9 @@ sidebar_label: How to find and access Ajax-generated links while crawling
 <p>Accessing a site’s Ajax-delivered links requires the use of Diffbot’s <a title="Diffbot: Analyze API" href="http://www.diffbot.com/products/automatic/analyze" target="_blank">Analyze API</a>. The Analyze API automatically identifies a page’s type, and processes those pages supported by extraction APIs.</p>
 <p><strong>2. Add &amp;links as a Diffbot Querystring Argument</strong></p>
 <p>Adding the argument <code>&amp;links</code> uses Diffbot core API link-extracting functionality to return all links found on a page. Crawlbot will use these additional links, found within the rendered page, to augment those found in the raw source.</p>
-<div id="attachment_301" style="width: 640px" class="wp-caption aligncenter">
-<a href="https://support.diffbot.com/wp-content/uploads/2015/07/ss_2015-0717_854.png"><img aria-describedby="caption-attachment-301" class=" wp-image-301" alt="ss_2015-0717_854" src="/docs/img/ss_2015-0717_854.png" width="630" height="238" srcset="https://support.diffbot.com/wp-content/uploads/2015/07/ss_2015-0717_854.png 700w, https://support.diffbot.com/wp-content/uploads/2015/07/ss_2015-0717_854-300x113.png 300w" sizes="(max-width: 630px) 100vw, 630px"></a><p id="caption-attachment-301" class="wp-caption-text">Select the Analyze API, and add &amp;links to your Diffbot Querystring.</p>
-</div>
+
+![](/img/ss_2015-0717_854.png)
+
 <p>If you are using the Crawlbot API, simply append <code>&amp;links</code> to your <code>apiUrl</code>:</p>
 <pre><code>http://api.diffbot.com/v3/analyze?links</code></pre>
 <p><strong>3. Include your seed page (and any other JS-requiring pages) in your processing pattern(s) or regular expression.</strong></p>

@@ -2,7 +2,6 @@
 id: guides-accessing-nonpublic-content
 title: Can Diffbot access content within an intranet or requiring a login?
 sidebar_label: Can Diffbot access content within an intranet or requiring a login?
-todo: Modify links to old API docs
 ---
 
 <div class="entry-content">
@@ -22,10 +21,10 @@ todo: Modify links to old API docs
 <p>If you have access to your target content (e.g., you are processing pages within a corporate intranet, or you have an offline archive of markup or text), you can POST HTML directly to any of our API endpoints, automatic or custom. Diffbot will process your content as it would a directly-accessible web page.</p>
 <p>See specific API documentation for more details on how to craft your POST:</p>
 <ul>
-<li><a title="Article API: POSTing content" href="http://diffbot.com/dev/docs/article/#posting">Article API</a></li>
-<li><a title="Image API: POSTing Content" href="http://diffbot.com/dev/docs/image/#posting">Image API</a></li>
-<li><a title="Product API: POSTing Content" href="http://diffbot.com/dev/docs/product/#posting">Product API</a></li>
-<li><a title="Custom API: POSTing Content" href="http://diffbot.com/dev/docs/custom/#posting">Custom APIs</a></li>
+<li><a title="Article API: POSTing content" href="api-article#posting-content">Article API</a></li>
+<li><a title="Image API: POSTing Content" href="api-image#posting-content">Image API</a></li>
+<li><a title="Product API: POSTing Content" href="api-product#posting-content">Product API</a></li>
+<li><a title="Custom API: POSTing Content" href="api-custom#posting-content">Custom APIs</a></li>
 </ul>
 <p><strong>Basic Authentication</strong></p>
 <p>To access pages that require <a title="Wikipedia: Basic Access Authentication" href="http://en.wikipedia.org/wiki/Basic_access_authentication" target="_blank">basic access authentication</a>, include the username and password in your API request’s <code>url</code> parameter, e.g. <code>http%3A%2F%2FUSERNAME:PASSWORD@www.diffbot.com</code></p>

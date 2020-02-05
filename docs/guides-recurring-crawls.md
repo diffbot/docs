@@ -15,8 +15,9 @@ todo: Modify links to old API docs
 <li>The initial round takes four hours.</li>
 </ul>
 <p>Based on the above, the second crawl round will start at 4:00pm on January 2: 24 hours after the conclusion of the first round.</p>
-<p>If you wish to have more specific control over your crawl round start times, you can use the <code>roundStart</code> argument in the <a href="https://www.diffbot.com/dev/docs/crawl/api.jsp">Crawlbot API</a> to manually start a new crawl round; or you can click “Start a new round” within the Crawlbot interface:</p>
-<div id="attachment_347" style="width: 706px" class="wp-caption aligncenter">
-<a href="https://support.diffbot.com/wp-content/uploads/2016/02/ss_2016-0216_945.png"><img aria-describedby="caption-attachment-347" class="size-full wp-image-347" alt="Start a new round manually" src="/docs/img/ss_2016-0216_945.png" width="696" height="179" srcset="https://support.diffbot.com/wp-content/uploads/2016/02/ss_2016-0216_945.png 696w, https://support.diffbot.com/wp-content/uploads/2016/02/ss_2016-0216_945-300x77.png 300w" sizes="(max-width: 696px) 100vw, 696px"></a><p id="caption-attachment-347" class="wp-caption-text">Start a new round manually.</p>
+<p>If you wish to have more specific control over your crawl round start times, you can use the <code>roundStart</code> argument in the <a href="api-crawlbot-api">Crawlbot API</a> to manually start a new crawl round; or you can click “Start a new round” within the Crawlbot interface:</p>
+
+![](/img/ss_2016-0216_945.png)
+
 </div>
 			</div>

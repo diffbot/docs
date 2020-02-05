@@ -2,7 +2,7 @@
 id: tutorials-correcting-api-output-custom
 title: How to correct Article, Product, or other API output with a custom rule
 sidebar_label: How to correct Article, Product, or other API output with a custom rule
-todo: Modify links to old Dashboard and api docs, and download images locally
+todo: Update examples to not use support domain any more
 ---
 
 <div class="entry-content">

@@ -7,7 +7,12 @@
                 "type": "subcategory",
                 "label": "Tutorials",
                 "ids": [
-                    "tutorials-new-dashboard", "tutorials-correcting-api-output-custom", "tutorials-custom-video", "tutorials-crawl-video"
+                    "tutorials-new-dashboard", 
+                    "tutorials-correcting-api-output-custom", 
+                    "tutorials-custom-video", 
+                    "tutorials-crawl",
+                    "tutorials-crawl-video",
+                    "tutorials-bulk"
                 ]
             }
         ],
@@ -17,6 +22,7 @@
                 "type": "subcategory",
                 "label": "Custom API Toolkit",
                 "ids": [
+                    "index-custom-api",
                     "guides-custom-collections", 
                     "guides-ua", 
                     "guides-prefilters", 
@@ -38,8 +44,8 @@
                 "type": "subcategory",
                 "label": "Crawlbot / Bulk jobs",
                 "ids": [
-                    "guides-bulk", 
-                    "guides-crawl",
+                    "index-crawlbot",
+                    "index-bulk",
                     "guides-patterns", 
                     "guides-crawl-depth", 
                     "guides-restrict-domain", 
@@ -88,7 +94,7 @@
                 "type":"subcategory",
                 "label": "Other",
                 "ids": [
-                    "guides-zapier", "guides-libraries"
+                    "guides-zapier"
                 ]
             }
         ],
@@ -98,7 +104,6 @@
                 "type": "subcategory",
                 "label": "Custom and Automatic APIs",
                 "ids": [
-                    "explain-api",
                     "explain-apis-javascript-support", 
                     "explain-apis-follow-redirects",
                     "explain-custom-rule-breaks", 
@@ -155,7 +160,48 @@
         ]
     },
     "docs-other": {
-        "API": ["api-intro", "api-analyze", "api-article", "api-article-html", "api-semantria", "api-discussion", "api-image", "api-product", "api-product-normalized-specs", "api-product-categories", "api-video", "api-custom", "api-selectors-filters", "api-managing-rules-programmatically", "api-bulk", "api-crawlbot-api", "api-search", "api-account"],
+        "Automatic and Custom APIs": [
+            "api-intro", 
+            {
+                "type": "subcategory",
+                "label": "Article API",
+                "ids": ["api-article", "api-article-html", "api-semantria"]
+            },
+            {
+                "type": "subcategory",
+                "label": "Analyze API",
+                "ids": ["api-analyze"]
+            },
+            {
+                "type": "subcategory",
+                "label": "Discussion API",
+                "ids": ["api-discussion"]
+            },            
+            {
+                "type": "subcategory",
+                "label": "Media APIs",
+                "ids": ["api-image", "api-video"]
+            },
+            {
+                "type": "subcategory",
+                "label": "Product API",
+                "ids": ["api-product", "api-product-normalized-specs", "api-product-categories"]
+            },
+            {
+                "type": "subcategory",
+                "label": "Account API",
+                "ids": ["api-account"]
+            },
+            {
+                "type": "subcategory",
+                "label": "Multi-URL APIs",
+                "ids": ["api-crawlbot-api", "api-bulk", "api-search"]
+            },
+            {
+                "type": "subcategory",
+                "label": "Custom API",
+                "ids": ["api-custom", "api-selectors-filters", "api-managing-rules-programmatically"]
+            }],
         "Knowledge Graph": ["api-kg-intro"]
     },
     "docs-errors": {
