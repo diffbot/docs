@@ -50,7 +50,7 @@ Objects in the Event API's `objects` array will include the following fields:
 | `resolvedPageUrl` | Returned if the `pageUrl` redirects to another URL. |
 | `title` | Title of the event. |
 | `startDate` | Start date of extracted event in GMT, normalized in most cases to [RFC 1123 (HTTP/1.1)](https://www.w3.org/Protocols/rfc2616/rfc2616-sec3.html#sec3.3). If no start time was found, the time is midnight.|
-| `endDate` | End date of extracted event converted in GMT, normalized in most cases to [RFC 1123 (HTTP/1.1)](https://www.w3.org/Protocols/rfc2616/rfc2616-sec3.html#sec3.3).If no end time was found, the time is midnight.|
+| `endDate` | End date of extracted event in GMT, normalized in most cases to [RFC 1123 (HTTP/1.1)](https://www.w3.org/Protocols/rfc2616/rfc2616-sec3.html#sec3.3). If no end time was found, the time is midnight.|
 | `isFullDay` | Returns true if no time was found and the event runs the whole day.|
 | `description` | Text description, if available, of the event. |
 | `venue` | The name of the venue, if available. |
