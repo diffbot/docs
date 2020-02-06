@@ -2,7 +2,7 @@
 id: guides-concatenate-multipage-articles
 title: How to concatenate multiple-page articles using a custom rule
 sidebar_label: How to concatenate multiple-page articles using a custom rule
-todo: Modify links to old Dashboard
+todo: Modify links to old Dashboard, merge with guides-concatenation-custom-api
 ---
 
 <div class="entry-content">

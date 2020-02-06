@@ -1,15 +1,13 @@
 ---
-id: guides-bulk
+id: tutorials-bulk
 title: Bulk Processing
 sidebar_label: Bulk Processing
-todo: Modify link beginning with "support.diffbot.com/topics"
-todo: Modify links to old API docs
 ---
 
 <div id="docBody">
 <p>Diffbot's Bulk Processor lets you send a large quantity of URLs through a Diffbot extraction API for fast, asynchronous processing.</p>
 <div class="alert alert-info">
-<strong>Related:</strong> <a href="http://support.diffbot.com/topics/bulk-api-service/" target="_blank">Bulk Processing Support</a> | <a href="api-bulk">Bulk API Documentation</a>
+<strong>Related:</strong> <a href="index-bulk">Bulk Processing Support</a> | <a href="api-bulk">Bulk API Documentation</a>
 </div>
 
 <h3>Overview</h3>
@@ -31,7 +29,7 @@ todo: Modify links to old API docs
 <div>
 <img src="/img/bulk.png">
 </div>
-<figcaption>Extracting all of the articles from <a href="http://support.diffbot.com">support.diffbot.com</a>.</figcaption>
+<figcaption>Extracting all of the articles from <a href="http://docs.diffbot.com">docs.diffbot.com</a>.</figcaption>
 </figure>
 
 

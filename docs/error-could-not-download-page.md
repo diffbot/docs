@@ -7,7 +7,7 @@ sidebar_label: Could Not Download Page Error
 <div class="entry-content">
 		<p><strong>Error message: Could not download page</strong></p>
 <hr>
-<p>This is either a blocking error (see <a href="error-error-downloading-url">this error</a> for potential solutions) or your <a href="http://tldrify.com/jao">X-evaluate custom JavaScript code</a> has an error in it. If you’re using Custom JS, please try without it. If it works, try debugging the JS by rewriting it, simplifying, testing in a real browser’s JS console, etc.</p>
+<p>This is either a blocking error (see <a href="error-error-downloading-url">this error</a> for potential solutions) or your <a href="api-analyze#custom-javascript">X-evaluate custom JavaScript code</a> has an error in it. If you’re using Custom JS, please try without it. If it works, try debugging the JS by rewriting it, simplifying, testing in a real browser’s JS console, etc.</p>
 <p><strong>Tips on debugging X-evaluate scripts:</strong></p>
 <ol>
 <li>Check if the site can even run X-eval by putting in <a href="https://jsbin.com/xodujipono/edit?js">something simple</a>, then picking that content up with a Custom API selector. This JS creates a new element with dummy content which you can target with the Custom API to make sure the injection of the new element was successful. If OK, go to next step.</li>

@@ -20,7 +20,7 @@ Provide the following data:
 | :------- | :---------- |
 | `token` | Developer [token](https://www.diffbot.com/pricing). |
 | `name` | Job name. This should be a unique identifier and can be used to modify your crawl or retrieve its output. |
-| `seeds` | Seed URL(s). Must be [URL encoded](https://en.wikipedia.org/wiki/Percent-encoding). Separate multiple URLs with whitespace to spider multiple sites within the same crawl. If the seed contains a non-www subdomain ("https://blog.diffbot.com" or "https://support.diffbot.com") Crawlbot will restrict spidering to the specified **subdomain**. |
+| `seeds` | Seed URL(s). Must be [URL encoded](https://en.wikipedia.org/wiki/Percent-encoding). Separate multiple URLs with whitespace to spider multiple sites within the same crawl. If the seed contains a non-www subdomain ("https://blog.diffbot.com" or "https://docs.diffbot.com") Crawlbot will restrict spidering to the specified **subdomain**. |
 | `apiUrl` | Full Diffbot API URL through which to process pages. E.g., `&apiUrl=https://api.diffbot.com/v3/article` to process matching links via the [Article API](https://www.diffbot.com/products/automatic/article). The Diffbot API URL can include querystring parameters to tailor the output. For example, `&apiUrl=https://api.diffbot.com/v3/product?fields=querystring,meta` will process matching links using the [Product API](https://www.diffbot.com/products/automatic/product), and also return the `querystring` and `meta` fields.<br><br>To automatically identify and process content using our [Analyze API](https://www.diffbot.com/products/automatic/analyze) (Smart Processing), pass `apiUrl=https://api.diffbot.com/v3/analyze?mode=auto` to return all page-types. See full Analyze API documentation under the <a href="/dev/docs">Automatic APIs documentation</a>.<br><br>Be sure to [URL encode](https://en.wikipedia.org/wiki/Percent-encoding) your Diffbot API actions. |
 
 You can refine your crawl using the following optional controls. [Read more on crawling versus processing](explain-crawling-versus-processing.md).
@@ -173,7 +173,7 @@ Sample response from a single crawl:
       "maxToCrawl": 100000,
       "maxToProcess": 100000,
       "onlyProcessIfNew": 1,
-      "seeds": "http://support.diffbot.com",
+      "seeds": "http://docs.diffbot.com",
       "roundsCompleted": 0,
       "roundStartTime": 0,
       "currentTime": 1443822683,

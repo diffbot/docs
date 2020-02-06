@@ -7,7 +7,7 @@ todo: Modify links to old API docs
 
 <div class="entry-content">
 		<p><strong>Related:</strong> <a title="When to use the Analyze API versus individual Automatic APIs" href="guides-when-to-use-analyze">When to use the Analyze API versus individual Automatic APIs</a></p>
-<p>As of October 2015, the <a href="http://www.diffbot.com/dev/docs/analyze">Analyze API</a> offers a <code>fallback</code> argument. When and why would you want to use <code>fallback</code>?</p>
+<p>As of October 2015, the <a href="api-analyze">Analyze API</a> offers a <code>fallback</code> argument. When and why would you want to use <code>fallback</code>?</p>
 <p>The Analyze API, by design, acts as a content filter: it serves to identify web pages and extract the content only from those that are supported by Diffbot <a href="http://www.diffbot.com/products/automatic">Automatic APIs</a>. For instance, an article page will be routed-to and automatically extracted by the Article API, and an individual product page will be routed-to and automatically extracted by the Product API.</p>
 <p>However:</p>
 <ul>

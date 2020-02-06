@@ -2,7 +2,6 @@
 id: error-too-many-collections
 title: Too Many Collections Error
 sidebar_label: Too Many Collections Error
-todo: Modify links to old API docs
 ---
 
 <div class="entry-content">
@@ -15,6 +14,6 @@ todo: Modify links to old API docs
 <li>Upgrade to a Plus or higher plan and we’ll introduce a method to your account which circumvents this limit, as needed.</li>
 <li>Delete some of your crawljobs and try again – you will find that you’ll immediately be able to create new crawljobs again.</li>
 </ol>
-<p>We advise you to keep an eye on your active crawls and delete them as they are no longer needed. If the data has become stale or you have downloaded, you are encourage to remove the crawl. Likewise, if you have already downloaded the data but would like to keep the metadata (crawl settings) around, you can download these settings by using the <a href="https://www.diffbot.com/dev/docs/crawl/api.jsp">Crawljob API</a>. Such a backed up JSON file is enough to restore your crawljob’s settings even after years of inactivity on your accounts.</p>
+<p>We advise you to keep an eye on your active crawls and delete them as they are no longer needed. If the data has become stale or you have downloaded, you are encourage to remove the crawl. Likewise, if you have already downloaded the data but would like to keep the metadata (crawl settings) around, you can download these settings by using the <a href="api-crawlbot-api">Crawljob API</a>. Such a backed up JSON file is enough to restore your crawljob’s settings even after years of inactivity on your accounts.</p>
 <p>Happy crawling!</p>
 			</div>

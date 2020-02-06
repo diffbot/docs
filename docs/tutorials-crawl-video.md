@@ -2,8 +2,6 @@
 id: tutorials-crawl-video
 title: Crawlbot Video Tutorials
 sidebar_label: Crawlbot Video Tutorials
-todo: Modify links to old API docs
-todo: Modify link beginning with "support.diffbot.com/topics"
 ---
 
 <div id="docBody">
@@ -18,7 +16,7 @@ todo: Modify link beginning with "support.diffbot.com/topics"
 <ul>
 <li>
 <a href="http://blog.diffbot.com/various-ways-to-control-your-crawlbot-crawls-for-web-data/">Various Ways to Control Your Crawlbot Crawls for Web Data</a> (blog.diffbot.com)</li>
-<li><a href="http://support.diffbot.com/topics/crawlbot/">Crawlbot Support</a></li>
+<li><a href="index-crawlbot">Crawlbot Support</a></li>
 </ul>
 
 </div>

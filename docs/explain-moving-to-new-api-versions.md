@@ -8,7 +8,7 @@ todo: Modify links to old API docs
 <div class="entry-content">
 		<p>We introduced Version 2 of our Article API in mid-2013 — updating the original Article API alongside the release of our <a href="http://www.diffbot.com/products/automatic/product">Product</a> and <a href="http://www.diffbot.com/products/automatic/image">Image</a> APIs — and Version 3 of our APIs in April 2014. Version 3 is a structural alignment of our API responses, both for internal consistency and in anticipation of future product releases, and for our Article API introduces our newest rendering engine, which includes <a title="Do Diffbot APIs execute Javascript?" href="explain-apis-javascript-support">Javascript support</a>.</p>
 <p>We advise updating to the V3 API to take advantage of current and future capabilities.</p>
-<p>See complete <a href="http://www.diffbot.com/dev/docs">API documentation</a> within the Developer Dashboard for all available options. A summary of changes is below:</p>
+<p>See complete <a href="api-intro">API documentation</a> within the Developer Dashboard for all available options. A summary of changes is below:</p>
 <h3 id="ipt_kb_toc_88_0">Version 3 Changes:</h3>
 <p><strong>Article API Uses Newest Rendering Engine</strong></p>
 <p>The Article API has transitioned to our full renderer, including support for Javascript/Ajax events.</p>

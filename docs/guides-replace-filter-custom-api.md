@@ -11,19 +11,19 @@ todo: Modify links to old Dashboard
 <p>Here is a rudimentary example.</p>
 <p>Let’s say we only want to extract the type of currency from <a href="https://www.justkidding-me.com/ae/daily-deals-uae/nobodinoz-arizona-teepee">this page</a>:</p>
 <figure>
-<img src="/docs/img/01.png" alt="Justkidding page"><figcaption>Justkidding page</figcaption></figure>
+<img src="/img/01.png" alt="Justkidding page"><figcaption>Justkidding page</figcaption></figure>
 <p>The price and currency are in the same HTML element, so we cannot simply select the currency alone.</p>
 <figure>
-<img src="/docs/img/02.png" alt="Info in the same DOM element"><figcaption>Info in the same DOM element</figcaption></figure>
+<img src="/img/02.png" alt="Info in the same DOM element"><figcaption>Info in the same DOM element</figcaption></figure>
 <p>Therefore, we need to:</p>
 <ol>
 <li>
 <p>Target the price with a custom field, let’s call it “theCurrency”. The selector <code>.special-price .price</code> will come in handy<br>
- <img src="/docs/img/03_0.png" alt="A new field is defined"></p>
+ <img src="/img/03_0.png" alt="A new field is defined"></p>
 </li>
 <li>
 <p>Then we click filters and use a replace filter.<br>
- <img src="/docs/img/04_1.png" alt="A replace filter is activated"></p>
+ <img src="/img/04_1.png" alt="A replace filter is activated"></p>
 </li>
 <li>
 <p>Finally, we enter <code>\s?\d+\s?\W?</code> into the first field and leave the second field empty (the second field is the value with which to replace the match from the first one).</p>
@@ -31,7 +31,7 @@ todo: Modify links to old Dashboard
 </ol>
 <p>Testing this, we can see that we do indeed get currency back.</p>
 <figure>
-<img src="/docs/img/05_2.png" alt="Currency is returned"><figcaption>Currency is returned</figcaption></figure>
+<img src="/img/05_2.png" alt="Currency is returned"><figcaption>Currency is returned</figcaption></figure>
 <h2 id="ipt_kb_toc_1127_0">Regex explanation</h2>
 <p>The expression <code>\s?\d+\s?\W?</code> means:</p>
 <ul>

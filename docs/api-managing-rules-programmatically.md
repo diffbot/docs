@@ -3,7 +3,6 @@ id: api-managing-rules-programmatically
 title: Managing Custom Rules Programmatically
 sidebar_label: Managing Custom Rules Programmatically
 todo: Modify links to old Dashboard
-todo: Modify links to old API docs
 ---
 
 You can manage your Custom API using our Custom Rule Management API.
@@ -98,8 +97,8 @@ The following ruleset JSON gives an example of many of the fields and functional
 
 ```json
 {
-    "urlPattern": "(http(s)?://)?(.*\\.)?support.diffbot.com.*",
-    "testUrl": "http://support.diffbot.com/crawlbot/using-zapier-with-crawlbot-or-bulk-api-jobs/",
+    "urlPattern": "(http(s)?://)?(.*\\.)?docs.diffbot.com.*",
+    "testUrl": "https://docs.diffbot.com/docs/en/guides-zapier",
     "api": "/api/article",
     "prefilters": ["#footer",".advertisement-block"],
     "renderOptions": "wait=10000",
@@ -145,7 +144,7 @@ The following ruleset JSON gives an example of many of the fields and functional
 
 The above:
 
-- Specifies a URL pattern regular expression that matches *.support.diffbot.com
+- Specifies a URL pattern regular expression that matches *.docs.diffbot.com
 - Includes a `testUrl` -- for preview in the Custom API UI.
 - Specifies the API (`/api/article`).
 - Then, within the `rules` object:

@@ -7,10 +7,10 @@ sidebar_label: Restricting Crawls to Domains and Subdomains
 
 <p>Crawlbot has the following default behavior:</p>
 <ul>
-<li>If a seed URL contains a non-www subdomain (<code>http://blog.diffbot.com</code> or <code>https://support.diffbot.com</code>), crawling will be limited to the specified subdomain.</li>
+<li>If a seed URL contains a non-www subdomain (<code>http://blog.diffbot.com</code> or <code>https://docs.diffbot.com</code>), crawling will be limited to the specified subdomain.</li>
 <li>If a seed URL lacks a subdomain or uses “www” (<code>http://www.diffbot.com</code>), crawling will extend to the entire domain.</li>
 </ul>
-<p>If you enter a seed of <code>http://blog.diffbot.com</code>, only URLs from http://blog.diffbot.com will be crawled. If you enter a seed of <code>http://www.diffbot.com</code>, URLs from http://www.diffbot.com, http://blog.diffbot.com, https://support.diffbot.com, etc. will be crawled.</p>
+<p>If you enter a seed of <code>http://blog.diffbot.com</code>, only URLs from http://blog.diffbot.com will be crawled. If you enter a seed of <code>http://www.diffbot.com</code>, URLs from http://www.diffbot.com, http://blog.diffbot.com, https://docs.diffbot.com, etc. will be crawled.</p>
 
 To make Diffbot visit other subdomains on that domain as well, deactivate the toggle "Restrict Subdomains".
 

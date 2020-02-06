@@ -2,14 +2,14 @@
 id: guides-data-behind-login
 title: Accessing Data Behind a Login Wall
 sidebar_label: Accessing Data Behind a Login Wall
-todo: update link to custom API API
+todo: update to also demonstrate this in the new dashboard
 ---
 
 Sometimes you need to log into a site to get to some walled-off data. Let’s see an example.
 
 Let’s assume we want to crawl the articles on [TheBrowser.com](https://thebrowser.com). TheBrowser is a manually curated subscription based website which recommends interesting links from around the web.
 
-![TheBrowser, a curator of web quality](/docs/img/loginwall/01.png)
+![TheBrowser, a curator of web quality](/img/loginwall/01.png)
 
 ## Getting the Login Cookie
 
@@ -17,11 +17,11 @@ Once you have an account on the site you’re wanting to crawl (TheBrowser’s w
 
 Once logged in, open your browser’s Dev Tools (right click anywhere on the page) and select Inspect, or go to View -> Developer -> Developer Tools. Then, open the Network tab and to be on the safe side refresh the page you’re logged into. The very first entry in the Network tab will be the one you’re looking for.
 
-![Selecting the network tab after reloading](/docs/img/loginwall/thebrow2.gif)
+![Selecting the network tab after reloading](/img/loginwall/thebrow2.gif)
 
 Scroll down on its screen until you see the Response Headers area, then select the whole Cookie or Set-Cookie field and copy it.
 
-![Selecting and copying the cookie value in the network entry](/docs/img/loginwall/thebrow3.gif)
+![Selecting and copying the cookie value in the network entry](/img/loginwall/thebrow3.gif)
 
 We now have the login cookie copied!
 
@@ -31,7 +31,7 @@ We now have the login cookie copied!
 
 Copy the cookie into the Crawljob you’re building for this site, into its specific Cookie field in the Crawljob UI.
 
-![Pasting the cookie into the appropriate crawlbot field](/docs/img/loginwall/thebrow4.gif)
+![Pasting the cookie into the appropriate crawlbot field](/img/loginwall/thebrow4.gif)
 
 This will be enough to crawl a site with a login for as long as the session lasts.
 
@@ -39,7 +39,7 @@ This will be enough to crawl a site with a login for as long as the session last
 
 After the job has been running for a while, TheBrowser will have given us a nice set of results.
 
-![Results of a crawl running on TheBrowser - 3.3k pages crawled, 6.5k processed](/docs/img/loginwall/03.png)
+![Results of a crawl running on TheBrowser - 3.3k pages crawled, 6.5k processed](/img/loginwall/03.png)
 
 ## Using the Cookie in Direct API Calls
 
@@ -47,13 +47,13 @@ Using the cookie in direct API calls is a bit more complicated, but we’re work
 
 Let’s assume we created a custom API called `thebrow` for TheBrowser.
 
-![Creating a custom API](/docs/img/loginwall/02.png)
+![Creating a custom API](/img/loginwall/02.png)
 
 > Note: to actually save a Custom API, you need to add at least one field, even if it’s pointless.
 
-Coincidentally, TheBrowser is blocking rendering of its own pages in other websites, so we need to apply the procedure [described here](guides-manual-selectors) to set the rule up. In our example, we set up a collection that gathers up the links on a TheBrowser page.
+Coincidentally, TheBrowser is blocking rendering of its own pages in other websites, so we need to apply the procedure [described here](guides-manual-selectors) to set the rule up. In our example, we set up a [collection](tutorials-custom-collections) that gathers up the links on a TheBrowser page.
 
-![](/docs/img/loginwall/screen1.png)
+![A custom collection returning links](/img/loginwall/screen1.png)
 
 We can see that the Custom API here returns only 5 links. We know for a fact that when logged in, the home page of TheBrowser returns many more. This will thus be an excellent testing ground.
 
@@ -71,7 +71,7 @@ We need to:
 
 Here’s a demonstration of the whole process:
 
-![Using the login cookie in Postman](/docs/img/loginwall/thebrow5.gif)
+![Using the login cookie in Postman](/img/loginwall/thebrow5.gif)
 
 The request now returns many more results.
 
@@ -86,7 +86,7 @@ To permanently attach the cookie, you need to programmatically update your rules
 3. Modify the API for that domain with the cookie
 4. Send all the APIs back to Diffbot for saving
 
-We already did step 1 above, so let’s first download all rules with the [Custom API API](https://www.diffbot.com/dev/docs/custom/managing/).
+We already did step 1 above, so let’s first download all rules with the [Custom API API](api-managing-rules-programmatically).
 
 Using Postman, a simple request to our token’s Custom API API endpoint should produce a set of rules. One of them will be for our desired site, as in the case below:
 
