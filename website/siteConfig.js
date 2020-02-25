@@ -45,11 +45,10 @@ const siteConfig = {
 
   // For no header links in the top nav bar -> headerLinks: [],
   headerLinks: [
+    {search: true},
     {doc: 'intro', label: 'Prose'},
     {doc: 'api-intro', label: 'API'},
-    {doc: 'error-intro', label: 'Debugging'},
-    {page: 'help', label: 'Help'},
-    {blog: true, label: 'Blog'},
+    {doc: 'error-intro', label: 'Debugging'}
   ],
 
   // If you have users set above, you add it here:
@@ -92,6 +91,8 @@ const siteConfig = {
 
   // Add custom scripts here that would be placed in <script> tags.
   scripts: ['https://buttons.github.io/buttons.js', '/js/app.js'],
+
+  styles: ['https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css'],
 
   // On page navigation for the current documentation page.
   onPageNav: 'separate',

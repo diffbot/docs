@@ -1,9 +1,10 @@
 function resizeIframe(obj) {
+    // No worky except under same origin :(
     console.log("in onload");
     obj.style.height = obj.contentWindow.document.documentElement.scrollHeight + 'px';
-  }
+}
 
-  (function(funcName, baseObj) {
+(function (funcName, baseObj) {
     // The public function name defaults to window.docReady
     // but you can pass in your own object and own function name and those will be used
     // if you want to put them in a different namespace
@@ -34,7 +35,7 @@ function resizeIframe(obj) {
     }
 
     function readyStateChange() {
-        if ( document.readyState === "complete" ) {
+        if (document.readyState === "complete") {
             ready();
         }
     }
@@ -43,18 +44,23 @@ function resizeIframe(obj) {
     // docReady(fn, context);
     // the context argument is optional - if present, it will be passed
     // as an argument to the callback
-    baseObj[funcName] = function(callback, context) {
+    baseObj[funcName] = function (callback, context) {
         if (typeof callback !== "function") {
             throw new TypeError("callback for docReady(fn) must be a function");
         }
         // if ready has already fired, then just schedule the callback
         // to fire asynchronously, but right away
         if (readyFired) {
-            setTimeout(function() {callback(context);}, 1);
+            setTimeout(function () {
+                callback(context);
+            }, 1);
             return;
         } else {
             // add the function and context to the list
-            readyList.push({fn: callback, ctx: context});
+            readyList.push({
+                fn: callback,
+                ctx: context
+            });
         }
         // if document already ready to go, schedule the ready function to run
         if (document.readyState === "complete") {
@@ -76,13 +82,13 @@ function resizeIframe(obj) {
     }
 })("docReady", window);
 
-docReady(function() {
+docReady(function () {
     const wideMode = document.querySelector(".wrapper-wide") !== null;
-    
+
     if (wideMode) {
         // Remove footer
         document.querySelector("footer").remove();
-        
+
         // Calculate window height
         let height = window.innerHeight - 60;
 
@@ -90,10 +96,24 @@ docReady(function() {
         const iframe = document.querySelector("iframe");
 
         iframe.style.height = height + "px";
-        iframe.addEventListener("load", function(e){
-            //resizeIframe(iframe);
-            console.log("Testing iframe mod");
-            obj.contentWindow.document.querySelector("nav").remove();
-        });
+
+        // This does not work. Iframes cannot be modified unless on same origin. Subdomains don't count.
+        // iframe.addEventListener("load", function(e){
+        //     //resizeIframe(iframe);
+        //     console.log("Testing iframe mod");
+        //     iframe.contentWindow.document.querySelector("nav").remove();
+        // });
     }
+
+
+    // Build the dropdown
+    let dropdownHtml = '<div class="dropdown"><a href="/docs/en/kg-index" class="dropbtn">Knowledge Graph</a><div class="dropdown-content">';
+    dropdownHtml += '<a href="/kgdoc">KG API</a>';
+    dropdownHtml += '<a href="/enhance">Enhance API</a>';
+    dropdownHtml += '<a href="/ontology">Ontology</a>';
+    dropdownHtml += '<a href="/docs/en/dql-index">DQL Operator Docs</a>';
+    dropdownHtml += '</div></div>';
+
+    // Insert into top nav
+    document.querySelector("ul.nav-site").innerHTML += dropdownHtml;
 })

@@ -1,0 +1,56 @@
+<html lang="en">
+  
+<!-- <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/default.min.css"><script type="text/javascript" src="https://buttons.github.io/buttons.js"></script><script type="text/javascript" src="/js/app.js"></script><script src="/js/scrollSpy.js"></script><link rel="stylesheet" href="/css/main.css"><script src="/js/codetabs.js"></script></head> -->
+
+<head>
+    <title>Enhance</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="shortcut icon" href="/img/diffbot-head.png">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.css">
+    <link rel="stylesheet" href="/css/main.css">
+
+    <title>Enhance Ontology Docs</title>
+    <style>
+      main {
+        padding-top: 50px;
+      }
+      .sidebar {
+        position: fixed;
+      }
+    </style>
+</head>
+
+<body>
+
+    <div class="fixedHeaderContainer"><div class="headerWrapper wrapper"><header><a href="/"><img class="logo" src="/img/diffbot_white.svg" alt="Docs Suite"><h2 class="headerTitleWithLogo">Docs Suite</h2></a><div class="navigationWrapper navigationSlider"><nav class="slidingNav"><ul class="nav-site nav-site-internal"><li class="navSearchWrapper reactNavSearchWrapper"><span class="algolia-autocomplete" style="position: relative; display: inline-block; direction: ltr;"><input type="text" id="search_input_react" placeholder="Search" title="Search" class="aa-input" autocomplete="off" spellcheck="false" role="combobox" aria-autocomplete="list" aria-expanded="false" aria-labelledby="search_input_react" aria-owns="algolia-autocomplete-listbox-0" dir="auto" style="position: relative; vertical-align: top;"><pre aria-hidden="true" style="position: absolute; visibility: hidden; white-space: pre; font-family: Arial; font-size: 14px; font-style: normal; font-variant: normal; font-weight: 300; word-spacing: 0px; letter-spacing: normal; text-indent: 0px; text-rendering: auto; text-transform: none;"></pre><span class="aa-dropdown-menu" role="listbox" id="algolia-autocomplete-listbox-0" style="position: absolute; top: 100%; z-index: 100; display: none; left: 0px; right: auto;"><div class="aa-dataset-1"></div></span></span></li><li class=""><a href="/docs/en/intro" target="_self">Prose</a></li><li class=""><a href="/docs/en/api-intro" target="_self">API</a></li><li class=""><a href="/docs/en/error-intro" target="_self">Debugging</a></li><div class="dropdown"><a href="/en/kg-index" class="dropbtn">Knowledge Graph</a><div class="dropdown-content"><a href="/kgdoc">KG API</a><a href="/enhance">Enhance API</a><a href="/ontology">Ontology</a><a href="/en/dql-index">DQL Operator Docs</a></div></div></ul></nav></div></header></div></div>
+    <main role="main">
+      <redoc spec-url='https://kg.diffbot.com/kg/enhance_endpoint/openapi.json'></redoc>
+      <script src="https://cdn.jsdelivr.net/npm/redoc@next/bundles/redoc.standalone.js"> </script>
+    </main>
+  
+<script type="text/javascript" src="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.js"></script>
+<script>
+  document.addEventListener('keyup', function(e) {
+    if (e.target !== document.body) {
+      return;
+    }
+    // keyCode for '/' (slash)
+    if (e.keyCode === 191) {
+      const search = document.getElementById('search_input_react');
+      search && search.focus();
+    }
+  });
+</script>
+<script>
+  var search = docsearch({
+    
+    apiKey: '2c24e5e78d724e77c46ef1b720700177',
+    indexName: 'diffbot',
+    inputSelector: '#search_input_react',
+    algoliaOptions: {}
+  });
+</script>
+
+</body></html>
