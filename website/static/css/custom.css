@@ -23,3 +23,15 @@ article a, .blockContent a, .entry-content a, .post div a {
 .navListItemActive {
     font-weight: bold;
 }
+
+.wrapper-wide {
+    max-width: 100% !important;
+}
+
+.wrapper-wide .wrapper {
+    max-width: 100% !important;
+}
+
+.wrapper-wide .mainContainer {
+    padding: 0;
+}
