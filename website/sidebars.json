@@ -137,13 +137,6 @@
             },
             {
                 "type": "subcategory",
-                "label": "Knowledge Graph",
-                "ids": [
-                    "explain-kg"
-                ]
-            },
-            {
-                "type": "subcategory",
                 "label": "Global Index",
                 "ids": [
                     "explain-global-index"
@@ -201,8 +194,7 @@
                 "type": "subcategory",
                 "label": "Custom API",
                 "ids": ["api-custom", "api-selectors-filters", "api-managing-rules-programmatically"]
-            }],
-        "Knowledge Graph": ["api-kg-intro"]
+            }]
     },
     "docs-errors": {
         "Basics": ["error-intro"],
