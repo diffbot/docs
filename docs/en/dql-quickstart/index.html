@@ -1,0 +1,207 @@
+<!DOCTYPE html><html lang="en"><head><meta charSet="utf-8"/><meta http-equiv="X-UA-Compatible" content="IE=edge"/><title>Knowledge Graph Quickstart · Docs Suite</title><meta name="viewport" content="width=device-width"/><meta name="generator" content="Docusaurus"/><meta name="description" content="[Diffbot&#x27;s Knowledge Graph (DKG)](https://www.diffbot.com/products/knowledge-graph/) allows you to search the world&#x27;s largest, most accurate database of companies, articles, people, places, and other entities. To access the Knowledge Graph you will either need to call the API directly or login to the Diffbot Developer Dashboard to use the web app."/><meta name="docsearch:language" content="en"/><meta property="og:title" content="Knowledge Graph Quickstart · Docs Suite"/><meta property="og:type" content="website"/><meta property="og:url" content="https://diffbot.github.io/"/><meta property="og:description" content="[Diffbot&#x27;s Knowledge Graph (DKG)](https://www.diffbot.com/products/knowledge-graph/) allows you to search the world&#x27;s largest, most accurate database of companies, articles, people, places, and other entities. To access the Knowledge Graph you will either need to call the API directly or login to the Diffbot Developer Dashboard to use the web app."/><meta property="og:image" content="https://diffbot.github.io/img/diagram.svg"/><meta name="twitter:card" content="summary"/><meta name="twitter:image" content="https://diffbot.github.io/img/diagram.svg"/><link rel="shortcut icon" href="/img/diffbot-head.png"/><link rel="stylesheet" href="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.css"/><link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/default.min.css"/><script type="text/javascript" src="https://buttons.github.io/buttons.js"></script><script type="text/javascript" src="/js/app.js"></script><script src="/js/scrollSpy.js"></script><link rel="stylesheet" href="/css/main.css"/><script src="/js/codetabs.js"></script></head><body class="sideNavVisible separateOnPageNav"><div class="fixedHeaderContainer"><div class="headerWrapper wrapper"><header><a href="/"><img class="logo" src="/img/diffbot_white.svg" alt="Docs Suite"/><h2 class="headerTitleWithLogo">Docs Suite</h2></a><div class="navigationWrapper navigationSlider"><nav class="slidingNav"><ul class="nav-site nav-site-internal"><li class="navSearchWrapper reactNavSearchWrapper"><input type="text" id="search_input_react" placeholder="Search" title="Search"/></li><li class=""><a href="/docs/en/intro" target="_self">Prose</a></li><li class=""><a href="/docs/en/api-intro" target="_self">API</a></li><li class=""><a href="/docs/en/error-intro" target="_self">Debugging</a></li></ul></nav></div></header></div></div><div class="navPusher"><div class="docMainWrapper wrapper"><div class="docsNavContainer" id="docsNav"><nav class="toc"><div class="toggleNav"><section class="navWrapper wrapper"><div class="navBreadcrumb wrapper"><div class="navToggle" id="navToggler"><div class="hamburger-menu"><div class="line1"></div><div class="line2"></div><div class="line3"></div></div></div><h2><i>›</i><span>Knowledge Graph</span></h2><div class="tocToggler" id="tocToggler"><i class="icon-toc"></i></div></div><div class="navGroups"><div class="navGroup"><h3 class="navGroupCategoryTitle collapsible">Knowledge Graph<span class="arrow"><svg width="24" height="24" viewBox="0 0 24 24"><path fill="#565656" d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z"></path><path d="M0 0h24v24H0z" fill="none"></path></svg></span></h3><ul class="hide"><li class="navListItem"><a class="navItem" href="/docs/en/kg-index">Knowledge Graph and Enhance Index</a></li><li class="navListItem navListItemActive"><a class="navItem" href="/docs/en/dql-quickstart">&gt;&gt; START HERE! &lt;&lt;</a></li><div class="navGroup subNavGroup"><h4 class="navGroupSubcategoryTitle">Tools and Usage</h4><ul><li class="navListItem"><a class="navItem" href="/docs/en/kg-accessing">Accessing Knowledge Graph</a></li><li class="navListItem"><a class="navItem" href="/docs/en/kg-clients">API Clients</a></li><li class="navListItem"><a class="navItem" href="/docs/en/dql-excel">DQL Excel Plugin</a></li></ul></div><div class="navGroup subNavGroup"><h4 class="navGroupSubcategoryTitle">In-Depth</h4><ul><li class="navListItem"><a class="navItem" href="/docs/en/dql-index">Diffbot Query Language (DQL)</a></li><li class="navListItem"><a class="navItem" href="/docs/en/dql-workflows">DQL Workflows</a></li><li class="navListItem"><a class="navItem" href="/docs/en/dql-faq">DQL FAQ</a></li></ul></div></ul></div></div></section></div><script>
+            var coll = document.getElementsByClassName('collapsible');
+            var checkActiveCategory = true;
+            for (var i = 0; i < coll.length; i++) {
+              var links = coll[i].nextElementSibling.getElementsByTagName('*');
+              if (checkActiveCategory){
+                for (var j = 0; j < links.length; j++) {
+                  if (links[j].classList.contains('navListItemActive')){
+                    coll[i].nextElementSibling.classList.toggle('hide');
+                    coll[i].childNodes[1].classList.toggle('rotate');
+                    checkActiveCategory = false;
+                    break;
+                  }
+                }
+              }
+
+              coll[i].addEventListener('click', function() {
+                var arrow = this.childNodes[1];
+                arrow.classList.toggle('rotate');
+                var content = this.nextElementSibling;
+                content.classList.toggle('hide');
+              });
+            }
+
+            document.addEventListener('DOMContentLoaded', function() {
+              createToggler('#navToggler', '#docsNav', 'docsSliderActive');
+              createToggler('#tocToggler', 'body', 'tocActive');
+
+              var headings = document.querySelector('.toc-headings');
+              headings && headings.addEventListener('click', function(event) {
+                var el = event.target;
+                while(el !== headings){
+                  if (el.tagName === 'A') {
+                    document.body.classList.remove('tocActive');
+                    break;
+                  } else{
+                    el = el.parentNode;
+                  }
+                }
+              }, false);
+
+              function createToggler(togglerSelector, targetSelector, className) {
+                var toggler = document.querySelector(togglerSelector);
+                var target = document.querySelector(targetSelector);
+
+                if (!toggler) {
+                  return;
+                }
+
+                toggler.onclick = function(event) {
+                  event.preventDefault();
+
+                  target.classList.toggle(className);
+                };
+              }
+            });
+        </script></nav></div><div class="container mainContainer docsContainer"><div class="wrapper"><div class="post"><header class="postHeader"><a class="edit-page-link button" href="https://github.com/diffbot/docs/edit/master/docs/dql-quickstart.md" target="_blank" rel="noreferrer noopener">Edit</a><h1 id="__docusaurus" class="postHeaderTitle">Knowledge Graph Quickstart</h1></header><article><div><span><p><a href="https://www.diffbot.com/products/knowledge-graph/">Diffbot's Knowledge Graph (DKG)</a> allows you to search the world's largest, most accurate database of companies, articles, people, places, and other entities. To access the Knowledge Graph you will either need to call the API directly or login to the Diffbot Developer Dashboard to use the web app.</p>
+<p>Before you get started, there are a few things to keep in mind:</p>
+<ul>
+<li>The KnowledgeGraph is rebuilt every 4-5 days. It is not a data archive, nor was it designed to support “as-was”, time-based comparisons. If you are interested in the historical context that is contained within the DKG, e.g. an individual's employment history, please let us know. We would be happy to help you craft the best approach to accessing historical data.</li>
+<li>In spite of not being an archive, you will occasionally want to bound some responses using the isCurrent operator, such as when you request to see an <a href="https://app.diffbot.com/search/?query=type%3APerson+employments.%7BisCurrent%3Atrue+employer.name%3A%22Facebook%22%7D+facet%3Agender&amp;from=0&amp;size=50&amp;active_tab=query">Organization’s current employees broken out by gender</a>.</li>
+<li>You will be tempted to insert Boolean operators, i.e. AND, OR, etc. Don’t do it! We use a query language similar to SQL to search entities and facts contained within the graph called the Diffbot Query Language (DQL), but we do not support boolean operators as you know and love them.</li>
+<li>You will be searching one data type at a time, e.g. Organizations vs. Articles. You cannot query, constrain, or facet across data types.</li>
+<li>As you become more familiar with the KG, you might want to leverage a Diffbot unique identifier to constrain your search to a specific entity id vs. all of the text matches on the name of that entity, for example, <a href="https://app.diffbot.com/search/?query=type%3AArticle+tags.uri%3A%22https%3A%2F%2Fdiffbot.com%2Fentity%2FCbb6m73dsMIKecUn0QRHosw%22+sortBy%3Adate&amp;from=0&amp;size=50&amp;active_tab=query">all articles tagged Walmart</a>.</li>
+</ul>
+<p>We’ve assembled some canned searches to help get you started. There is also a <a href="https://app.diffbot.com/search/">query building tool</a> in the <a href="tutorials-new-dashboard">Developer Dashboard</a> you can leverage if you get stuck.</p>
+<h2><a class="anchor" aria-hidden="true" id="log-into-the-diffbot-dashboard"></a><a href="#log-into-the-diffbot-dashboard" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Log into the Diffbot Dashboard</h2>
+<ol>
+<li>First, open a browser window and navigate to <a href="https://app.diffbot.com/">https://app.diffbot.com/</a>.</li>
+<li>Then, submit the following credentials:
+Username (email address): <a href="mailto:datajournalism@diffbot.com">datajournalism@diffbot.com</a>
+Password: <em>Request access by emailing <a href="mailto:datajournalism@diffbot.com">datajournalism@diffbot.com</a>.</em></li>
+<li>Once you are logged in, leave the browser window open. You will be able to click the links below to view the results of each search in the Dashboard.</li>
+</ol>
+<p>Click here first, after you’ve logged in to the Dashboard: <a href="https://app.diffbot.com/search/?query=type%3AArticle+text%3A%222020+Presidential+Race%22+sortBy%3Adate&amp;from=0&amp;size=50&amp;active_tab=query">Articles containing the text &quot;2020 Presidential Race&quot;, sorted by date</a></p>
+<h2><a class="anchor" aria-hidden="true" id="general-queries"></a><a href="#general-queries" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>General Queries</h2>
+<ul>
+<li><a href="https://app.diffbot.com/search/?query=type%3AArticle+pageUrl%3A%22techcrunch.com%22+sortBy%3Adate&amp;from=0&amp;size=50&amp;active_tab=query">type:Article pageUrl:&quot;techcrunch.com&quot; sortBy:date</a>
+<ul>
+<li>Search for articles published to TechCrunch.com, sorted by date.</li>
+</ul></li>
+<li><a href="https://app.diffbot.com/search/?query=type%3AArticle+title%3A%22Facebook%22+title%3A%22Privacy%22+sortBy%3Adate&amp;from=0&amp;size=50&amp;active_tab=query">type:Article title:&quot;Facebook&quot; title:&quot;Privacy&quot; sortBy:date</a>
+<ul>
+<li>Search for articles with Facebook and Privacy in the title, sorted by date.</li>
+</ul></li>
+<li><a href="https://app.diffbot.com/search/?query=type%3AArticle+title%3A%22khashoggi%22+not%28pageUrl%3A%22nytimes.com%22%29+sortBy%3Adate&amp;from=0&amp;size=50&amp;active_tab=query">type:Article title:&quot;khashoggi&quot; not(pageUrl:&quot;nytimes.com&quot;) sortBy:date</a>
+<ul>
+<li>Search for articles with khashoggi in the title, NOT published to nytimes.com, sorted by date.</li>
+</ul></li>
+<li><a href="https://app.diffbot.com/search/?query=type%3APerson+employments.categories.name%3A%22politics%22+facet%3Aemployments.title&amp;from=0&amp;size=50&amp;active_tab=query">type:Person employments.categories.name:&quot;politics&quot; facet:employments.title</a>
+<ul>
+<li>Search for people, employed by Organizations categorized as &quot;political&quot;, clustered by job title.</li>
+</ul></li>
+<li><a href="https://app.diffbot.com/search/?query=type%3AArticle+date.timestamp%3E%3D1561986000+&amp;from=0&amp;size=50&amp;active_tab=query">type:Article date.timestamp&gt;=1561986000 sortBy:date</a>
+<ul>
+<li>Search for articles published on or after a specific date (Unix epoch timestamp, GMT July 1, 2019)</li>
+</ul></li>
+<li><a href="https://app.diffbot.com/search/?query=type%3AArticle+quotes.speaker%3A%22Joe+Biden%22+sortBy%3Adate&amp;from=0&amp;size=50&amp;active_tab=visual">type:Article quotes.speaker:&quot;Joe Biden&quot; sortBy:date</a>
+<ul>
+<li>Search for articles with a quote from Joe Biden</li>
+</ul></li>
+<li><a href="https://app.diffbot.com/search/?query=type%3APerson+has%3Aarticles&amp;from=0&amp;size=50&amp;active_tab=query">type:Person has:articles</a>
+<ul>
+<li>Search for people who have written published articles (direct attribution)</li>
+</ul></li>
+</ul>
+<h2><a class="anchor" aria-hidden="true" id="2020-presidential-campaign-related-queries"></a><a href="#2020-presidential-campaign-related-queries" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>2020 Presidential Campaign Related Queries</h2>
+<ul>
+<li><a href="https://app.diffbot.com/search/?query=type%3AArticle+text%3A%222020+Presidential+Race%22+sortBy%3Adate&amp;from=0&amp;size=50&amp;active_tab=query">type:Article text:&quot;2020 Presidential Race&quot; sortBy:date</a>
+<ul>
+<li>Search for articles whose text includes &quot;2020 Presidential Race&quot;, sorted by date</li>
+</ul></li>
+<li><a href="https://app.diffbot.com/search/?query=type%3AArticle+title%3A%22Michael+Bloomberg%22+sortBy%3Adate&amp;from=0&amp;size=50&amp;active_tab=query">type:Article title:&quot;Michael Bloomberg&quot; sortBy:date</a>
+<ul>
+<li>Search articles with &quot;Michael Bloomberg&quot; in the title.</li>
+</ul></li>
+<li><a href="https://app.diffbot.com/search/?query=type%3AArticle+tags.label%3A%22health+care%22+text%3A%22universal+coverage%22+sortBy%3Adate&amp;from=0&amp;size=50&amp;active_tab=query">type:Article tags.label:&quot;health care&quot; text:&quot;universal coverage&quot; sortBy:date</a>
+<ul>
+<li>Search articles tagged health care with the phrase &quot;universal coverage&quot; in the text sorted by date.</li>
+</ul></li>
+<li><a href="https://app.diffbot.com/search/?query=type%3AArticle+tags.label%3A%22US+immigration%22+sortBy%3Adate&amp;from=0&amp;size=50&amp;active_tab=query">type:Article tags.label:&quot;US immigration&quot; sortBy:date</a>
+<ul>
+<li>Search for articles tagged US immigration sorted by date.</li>
+</ul></li>
+<li><a href="https://app.diffbot.com/search/?query=type%3AArticle+tags.label%3A%22environment%22+sortBy%3Adate&amp;from=0&amp;size=50&amp;active_tab=query">type:Article tags.label:&quot;environment&quot; sortBy:date</a>
+<ul>
+<li>Search for articles tagged environment sorted by date</li>
+</ul></li>
+<li><a href="https://app.diffbot.com/search/?query=type%3AArticle+tags.label%3A%22US+foreign+policy%22+sortBy%3Adate&amp;from=0&amp;size=50&amp;active_tab=query">type:Article tags.label:&quot;US foreign policy&quot; sortBy:date</a>
+<ul>
+<li>Search for articles tagged US foreign policy sorted by date</li>
+</ul></li>
+<li><a href="https://app.diffbot.com/search/?query=type%3AArticle+tags.label%3A%22privacy%22+sortBy%3Adate&amp;from=0&amp;size=50&amp;active_tab=query">type:Article tags.label:&quot;privacy&quot; sortBy:date</a>
+<ul>
+<li>Search for articles tagged privacy sorted by date</li>
+</ul></li>
+<li><a href="https://app.diffbot.com/search/?query=type%3AArticle+tags.label%3A%22campaign+finance%22+sortBy%3Adate&amp;from=0&amp;size=50&amp;active_tab=query">type:Article tags.label:&quot;campaign finance&quot; sortBy:date</a>
+<ul>
+<li>Search for articles tagged campaign finance sorted by date</li>
+</ul></li>
+<li><a href="https://app.diffbot.com/search/?query=type%3AOrganization+strict%3Aname%3A%22Democratic+National+Committee%22&amp;from=0&amp;size=50&amp;active_tab=query">type:Organization strict:name:&quot;Democratic National Committee&quot;</a>
+<ul>
+<li>Search for organization information about the Democratic National Committee</li>
+</ul></li>
+<li><a href="https://app.diffbot.com/search/?query=type%3AOrganization+strict%3Aname%3A%22Republican+National+Committee%22&amp;from=0&amp;size=50&amp;active_tab=query">type:Organization strict:name:&quot;Republican National Committee&quot;</a>
+<ul>
+<li>Search for organization information about the Republican National Committee</li>
+</ul></li>
+</ul>
+<h2><a class="anchor" aria-hidden="true" id="additional-query-examples"></a><a href="#additional-query-examples" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Additional Query Examples</h2>
+<h3><a class="anchor" aria-hidden="true" id="article-searches"></a><a href="#article-searches" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Article Searches</h3>
+<ul>
+<li><a href="https://app.diffbot.com/search/?query=type%3AArticle+tags.label%3A%22Artificial+Intelligence%22+sortBy%3Adate&amp;from=0&amp;size=50&amp;active_tab=query">type:Article tags.label:&quot;Artificial Intelligence&quot; sortBy:date</a>
+<ul>
+<li>Search for articles tagged with the label “Artificial Intelligence” sorted by date.</li>
+</ul></li>
+<li><a href="https://app.diffbot.com/search/?query=type%3AArticle+tags.label%3A%22Washington+D.C.%22&amp;from=0&amp;size=50&amp;active_tab=query">type:Article tags.label:&quot;Washington D.C.&quot;</a>
+<ul>
+<li>Search for articles tagged with the location “Washington D.C.”</li>
+</ul></li>
+<li><a href="https://app.diffbot.com/search/?query=type%3AArticle+text%3A%22data+privacy%22+text%3Aor%28%22Google%22+%2C+%22Amazon%22+%2C+%22Facebook%22%29+sortBy%3Adate&amp;from=0&amp;size=50&amp;active_tab=query">type:Article text:&quot;data privacy&quot; text:or(&quot;Google&quot; , &quot;Amazon&quot; , &quot;Facebook&quot;) sortBy:date</a>
+<ul>
+<li>Search for articles whose text contains the phrase “data privacy” AND either the text Google, Amazon OR Facebook.</li>
+</ul></li>
+</ul>
+<h3><a class="anchor" aria-hidden="true" id="organization-searches"></a><a href="#organization-searches" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Organization Searches</h3>
+<ul>
+<li><a href="https://app.diffbot.com/search/?query=type%3AOrganization+name%3A%22Gap%22+location.country.name%3A%22United+States%22+categories.name%3A%22Clothing%22+has%3AhomepageUri+facet%3Alocation.city.name&amp;from=0&amp;size=50&amp;active_tab=query">type:Organization name:&quot;Gap&quot; location.country.name:&quot;United States&quot; categories.name:&quot;Clothing&quot; has:homepageUri facet:location.city.name</a>
+<ul>
+<li>Search for a list of Gap locations in the US clustered by city name.</li>
+</ul></li>
+<li><a href="https://app.diffbot.com/search/?query=type%3ACorporation+has%3Alogo&amp;from=0&amp;size=50&amp;active_tab=query">type:Corporation has:logo</a>
+<ul>
+<li>Search for a list of company entities with official company logos.</li>
+</ul></li>
+</ul>
+<h3><a class="anchor" aria-hidden="true" id="person-searches"></a><a href="#person-searches" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Person Searches</h3>
+<ul>
+<li><a href="https://app.diffbot.com/search/?query=type%3APerson+employments.%7BisCurrent%3Atrue+employer.name%3A%22Facebook%22%7D+facet%3Agender&amp;from=0&amp;size=50&amp;active_tab=query">type:Person employments.{isCurrent:true employer.name:&quot;Facebook&quot;} facet:gender</a>
+<ul>
+<li>Display a breakout of current Facebook employees by gender.</li>
+</ul></li>
+<li><a href="https://app.diffbot.com/search/?query=type%3APerson+facet%3Askills.name+employments.%7BisCurrent%3Atrue+employer.location.address%3A%22California%22%7D&amp;from=0&amp;size=50&amp;active_tab=query">type:Person facet:skills.name employments.{isCurrent:true employer.location.address:&quot;California&quot;}</a>
+<ul>
+<li>Display a breakout of people in CA broken out by skill.</li>
+</ul></li>
+</ul>
+</span></div></article></div><div class="docLastUpdate"><em>Last updated by Bruno Skvorc</em></div><div class="docs-prevnext"><a class="docs-prev button" href="/docs/en/kg-index"><span class="arrow-prev">← </span><span>Knowledge Graph and Enhance Index</span></a><a class="docs-next button" href="/docs/en/kg-accessing"><span>Accessing Knowledge Graph</span><span class="arrow-next"> →</span></a></div></div></div><nav class="onPageNav"><ul class="toc-headings"><li><a href="#log-into-the-diffbot-dashboard">Log into the Diffbot Dashboard</a></li><li><a href="#general-queries">General Queries</a></li><li><a href="#2020-presidential-campaign-related-queries">2020 Presidential Campaign Related Queries</a></li><li><a href="#additional-query-examples">Additional Query Examples</a><ul class="toc-headings"><li><a href="#article-searches">Article Searches</a></li><li><a href="#organization-searches">Organization Searches</a></li><li><a href="#person-searches">Person Searches</a></li></ul></li></ul></nav></div><footer class="nav-footer" id="footer"><section class="sitemap"><a href="/" class="nav-home"><img src="/img/diffbot_white.svg" alt="Docs Suite" width="66" height="58"/></a><div><h5>Docs</h5><a href="/docs/en/intro">Tutorials</a><a href="/docs/en/guides-intro">How-to Guides</a><a href="/docs/en/explain-intro">Explainers</a><a href="/docs/en/api-intro">API Reference</a></div><div><h5>Community</h5><a href="https://stackoverflow.com/questions/tagged/diffbot" target="_blank" rel="noreferrer noopener">Stack Overflow</a><a href="https://twitter.com/diffbot" target="_blank" rel="noreferrer noopener">Twitter</a></div><div><h5>More</h5><a href="/blog">Blog</a><a href="/help">Help</a><a href="https://github.com/diffbot">GitHub</a></div></section><a href="https://diffbot.com/" target="_blank" rel="noreferrer noopener" class="fbOpenSource"><img src="/img/diffbot_white.svg" alt="Diffbot.com" width="170" height="45"/></a><section class="copyright">Copyright © 2020 Diffbot.com</section></footer></div><script type="text/javascript" src="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.js"></script><script>
+                document.addEventListener('keyup', function(e) {
+                  if (e.target !== document.body) {
+                    return;
+                  }
+                  // keyCode for '/' (slash)
+                  if (e.keyCode === 191) {
+                    const search = document.getElementById('search_input_react');
+                    search && search.focus();
+                  }
+                });
+              </script><script>
+              var search = docsearch({
+                
+                apiKey: '2c24e5e78d724e77c46ef1b720700177',
+                indexName: 'diffbot',
+                inputSelector: '#search_input_react',
+                algoliaOptions: {}
+              });
+            </script></body></html>

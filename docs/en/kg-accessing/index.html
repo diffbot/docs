@@ -1,0 +1,157 @@
+<!DOCTYPE html><html lang="en"><head><meta charSet="utf-8"/><meta http-equiv="X-UA-Compatible" content="IE=edge"/><title>Accessing Knowledge Graph · Docs Suite</title><meta name="viewport" content="width=device-width"/><meta name="generator" content="Docusaurus"/><meta name="description" content="There are two ways in which you can use DQL to query the Knowledge Graph: the UI, and the API endpoint."/><meta name="docsearch:language" content="en"/><meta property="og:title" content="Accessing Knowledge Graph · Docs Suite"/><meta property="og:type" content="website"/><meta property="og:url" content="https://diffbot.github.io/"/><meta property="og:description" content="There are two ways in which you can use DQL to query the Knowledge Graph: the UI, and the API endpoint."/><meta property="og:image" content="https://diffbot.github.io/img/diagram.svg"/><meta name="twitter:card" content="summary"/><meta name="twitter:image" content="https://diffbot.github.io/img/diagram.svg"/><link rel="shortcut icon" href="/img/diffbot-head.png"/><link rel="stylesheet" href="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.css"/><link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/default.min.css"/><script type="text/javascript" src="https://buttons.github.io/buttons.js"></script><script type="text/javascript" src="/js/app.js"></script><script src="/js/scrollSpy.js"></script><link rel="stylesheet" href="/css/main.css"/><script src="/js/codetabs.js"></script></head><body class="sideNavVisible separateOnPageNav"><div class="fixedHeaderContainer"><div class="headerWrapper wrapper"><header><a href="/"><img class="logo" src="/img/diffbot_white.svg" alt="Docs Suite"/><h2 class="headerTitleWithLogo">Docs Suite</h2></a><div class="navigationWrapper navigationSlider"><nav class="slidingNav"><ul class="nav-site nav-site-internal"><li class="navSearchWrapper reactNavSearchWrapper"><input type="text" id="search_input_react" placeholder="Search" title="Search"/></li><li class=""><a href="/docs/en/intro" target="_self">Prose</a></li><li class=""><a href="/docs/en/api-intro" target="_self">API</a></li><li class=""><a href="/docs/en/error-intro" target="_self">Debugging</a></li></ul></nav></div></header></div></div><div class="navPusher"><div class="docMainWrapper wrapper"><div class="docsNavContainer" id="docsNav"><nav class="toc"><div class="toggleNav"><section class="navWrapper wrapper"><div class="navBreadcrumb wrapper"><div class="navToggle" id="navToggler"><div class="hamburger-menu"><div class="line1"></div><div class="line2"></div><div class="line3"></div></div></div><h2><i>›</i><span>Tools and Usage</span></h2><div class="tocToggler" id="tocToggler"><i class="icon-toc"></i></div></div><div class="navGroups"><div class="navGroup"><h3 class="navGroupCategoryTitle collapsible">Knowledge Graph<span class="arrow"><svg width="24" height="24" viewBox="0 0 24 24"><path fill="#565656" d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z"></path><path d="M0 0h24v24H0z" fill="none"></path></svg></span></h3><ul class="hide"><li class="navListItem"><a class="navItem" href="/docs/en/kg-index">Knowledge Graph and Enhance Index</a></li><li class="navListItem"><a class="navItem" href="/docs/en/dql-quickstart">&gt;&gt; START HERE! &lt;&lt;</a></li><div class="navGroup subNavGroup"><h4 class="navGroupSubcategoryTitle">Tools and Usage</h4><ul><li class="navListItem navListItemActive"><a class="navItem" href="/docs/en/kg-accessing">Accessing Knowledge Graph</a></li><li class="navListItem"><a class="navItem" href="/docs/en/kg-clients">API Clients</a></li><li class="navListItem"><a class="navItem" href="/docs/en/dql-excel">DQL Excel Plugin</a></li></ul></div><div class="navGroup subNavGroup"><h4 class="navGroupSubcategoryTitle">In-Depth</h4><ul><li class="navListItem"><a class="navItem" href="/docs/en/dql-index">Diffbot Query Language (DQL)</a></li><li class="navListItem"><a class="navItem" href="/docs/en/dql-workflows">DQL Workflows</a></li><li class="navListItem"><a class="navItem" href="/docs/en/dql-faq">DQL FAQ</a></li></ul></div></ul></div></div></section></div><script>
+            var coll = document.getElementsByClassName('collapsible');
+            var checkActiveCategory = true;
+            for (var i = 0; i < coll.length; i++) {
+              var links = coll[i].nextElementSibling.getElementsByTagName('*');
+              if (checkActiveCategory){
+                for (var j = 0; j < links.length; j++) {
+                  if (links[j].classList.contains('navListItemActive')){
+                    coll[i].nextElementSibling.classList.toggle('hide');
+                    coll[i].childNodes[1].classList.toggle('rotate');
+                    checkActiveCategory = false;
+                    break;
+                  }
+                }
+              }
+
+              coll[i].addEventListener('click', function() {
+                var arrow = this.childNodes[1];
+                arrow.classList.toggle('rotate');
+                var content = this.nextElementSibling;
+                content.classList.toggle('hide');
+              });
+            }
+
+            document.addEventListener('DOMContentLoaded', function() {
+              createToggler('#navToggler', '#docsNav', 'docsSliderActive');
+              createToggler('#tocToggler', 'body', 'tocActive');
+
+              var headings = document.querySelector('.toc-headings');
+              headings && headings.addEventListener('click', function(event) {
+                var el = event.target;
+                while(el !== headings){
+                  if (el.tagName === 'A') {
+                    document.body.classList.remove('tocActive');
+                    break;
+                  } else{
+                    el = el.parentNode;
+                  }
+                }
+              }, false);
+
+              function createToggler(togglerSelector, targetSelector, className) {
+                var toggler = document.querySelector(togglerSelector);
+                var target = document.querySelector(targetSelector);
+
+                if (!toggler) {
+                  return;
+                }
+
+                toggler.onclick = function(event) {
+                  event.preventDefault();
+
+                  target.classList.toggle(className);
+                };
+              }
+            });
+        </script></nav></div><div class="container mainContainer docsContainer"><div class="wrapper"><div class="post"><header class="postHeader"><a class="edit-page-link button" href="https://github.com/diffbot/docs/edit/master/docs/kg-accessing.md" target="_blank" rel="noreferrer noopener">Edit</a><h1 id="__docusaurus" class="postHeaderTitle">Accessing Knowledge Graph</h1></header><article><div><span><p>There are two ways in which you can use DQL to query the Knowledge Graph: the UI, and the API endpoint.</p>
+<p>Diffbot provides a UI interface via our <a href="https://app.diffbot.com/search/">Developer Dashboard</a>. This interface is designed to be accessible and user-friendly, and is suitable for users and researchers who do not have prior programming experience. The UI provides a form that can be used to submit DQL queries directly, and a query builder interface with various drop-down menus that allows you to build complex queries using text fields and drop-down boxes. For a primer on this dashboard, please see <a href="tutorials-new-dashboard">this tutorial</a> and then refer to the rest of the content on this page.</p>
+<p>Diffbot also provides a REST API that can be accessed programmatically, and this is more suitable for technical users with programming experience. Usage of the REST API is discussed further below in this document, under the heading <a href="#accessing-the-knowledge-graph-through-the-api">&quot;Accessing the Knowledge Graph through the API&quot;</a>.</p>
+<h2><a class="anchor" aria-hidden="true" id="accessing-the-knowledge-graph-via-the-dashboard"></a><a href="#accessing-the-knowledge-graph-via-the-dashboard" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Accessing the Knowledge Graph via the Dashboard</h2>
+<p>In order to access the DQL/KG UI in the Developer Dashboard, navigate to <a href="https://app.diffbot.com/search/">https://app.diffbot.com/search/</a> in your browser, and log in to your Diffbot account if prompted to do so. Alternatively, you may reach the search page by logging into the Dashboard and clicking <em>Knowledge Graph &gt; Search</em> from the left-hand navigation menu.</p>
+<p>You are then presented with the KG Search page. This page has 3 tabs -- Visual, Query, and API Call:</p>
+<p><img src="/img/dql/access1.png" alt="Search page"></p>
+<p>By default, the <em>Visual</em> tab is selected. This tab provides a simple non-technical interface for querying the Knowledge Graph without any previous knowledge of DQL.</p>
+<p>The <em>Query</em> tab allows you to enter a DQL query and browse the results in the Dashboard via a visual interface.</p>
+<p>The <em>API Call</em> tab provides a button which you may use to make a direct API call mirroring the query which you have performed via the UI, and providing the same set of results.</p>
+<h3><a class="anchor" aria-hidden="true" id="visual-query-builder"></a><a href="#visual-query-builder" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Visual Query Builder</h3>
+<p>The <em>Visual</em> tab (selected by default) provides an intuitive form that you can use to build queries without any knowledge of DQL.</p>
+<p>To begin, click the drop-down box and select an entity type that you would like to query for.</p>
+<p><img src="/img/dql/access2.png" alt="Visual query builder"></p>
+<p>After selecting an entity type, click the drop-down box that says “Select a field” to choose the field you would like to query against.  Some fields in the list have a <code>+</code> next to them, and hovering over these will expand subfields for that field which you can select.</p>
+<p><img src="/img/dql/access3.png" alt="Visual query builder"></p>
+<p>Once you have selected a field, you can use the next drop-down to specify what kind of a match you are looking for.  If you have chosen a string field, you will be able to choose either “equals” or “contains”, specifying an exact (“strict”) or partial match, respectively.</p>
+<p>Finally, enter the numeric or text value that you are querying for.</p>
+<p><img src="/img/dql/access4.png" alt="Visual query builder"></p>
+<p>If you would like to add further search criteria to narrow your results, you can click <em>Add Condition</em> and enter more search parameters.</p>
+<p>Once you are satisfied with your query, click <em>Search</em> to perform the search.</p>
+<h4><a class="anchor" aria-hidden="true" id="search-results"></a><a href="#search-results" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Search Results</h4>
+<p>Your results will initially be returned in a paginated list, showing for an organization entity the company logo, company name, company website, and various profile/social network account links.</p>
+<p><img src="/img/dql/access5.png" alt="Search results"></p>
+<p>You can click any of the social links to view the corresponding profile on the relevant website (for example, clicking a Twitter icon will take you to the Twitter page for that result).  Clicking the name of an entity will take you to that entity’s page in our dashboard, which provides a clean interface for viewing the data that would be returned from an API call.</p>
+<p>This default view is known as the Table view, but the UI also provides a List view or Map view, which you can select by clicking the appropriate icons at the top of the page:</p>
+<p><img src="/img/dql/access6.png" alt="View options"></p>
+<h4><a class="anchor" aria-hidden="true" id="list-view"></a><a href="#list-view" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>List View</h4>
+<p>The List view gives you a more-detailed preview of each entity than is provided by the default Table view.  For Organizations, the same fields are returned as in the default view, but also fields like Description, Industries, and Founders.</p>
+<p><img src="/img/dql/access7.png" alt="List view"></p>
+<h4><a class="anchor" aria-hidden="true" id="map-view"></a><a href="#map-view" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Map View</h4>
+<p>The Map view allows you to view the location of each entity on a world map, and allows you to see how the entire set of results is distributed geographically.  Clicking any of the entities will show that entity’s location on the map:</p>
+<p><img src="/img/dql/access8.png" alt="List view"></p>
+<p>Clicking the i icon next to the name of any entity in Map View will take you to that entity’s Diffbot entity page in the dashboard.</p>
+<h4><a class="anchor" aria-hidden="true" id="entity-view"></a><a href="#entity-view" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Entity View</h4>
+<p>Clicking an entity anywhere in the KG search results will take you to that entity’s page in the Dashboard.  This page provides a detailed visual preview of all of the most important data items present in the entity’s JSON result.</p>
+<p><img src="/img/dql/access9.png" alt="List view"></p>
+<p>All data items on the page that represent other entities (for example, the “Subsidiaries” links in the above image) can be clicked on, and doing so will take you to the corresponding Dashboard page for that entity.  This makes it easy to browse related entities to gain further insights about the entity in question.</p>
+<p>At the top of the page there are links to download the entity’s data in JSON format or make an API call.  When downloading the entity JSON, you can select either “JSON” or “Extended JSON”.  If you select “Extended JSON”, the JSON will contain additional metadata about each terminal field value, including a “confidence score” (Diffbot’s level of certainty that the data is correct) and the origin from which the value was derived.</p>
+<h3><a class="anchor" aria-hidden="true" id="differences-between-data-displayed-in-the-dashboard-and-json"></a><a href="#differences-between-data-displayed-in-the-dashboard-and-json" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Differences Between Data Displayed in the Dashboard and JSON</h3>
+<p>The data displayed in the Dashboard represents the results returned from more than one query executed against the graph. For example, the list of Persons employed by an Organization is produced by a separate search executed against the graph. Similarly, the list of Skills of persons employed by an Organization is another example of a separate DQL query whose output is featured in the Dashboard. The JSON files made available for download at the top of the Dashboard will not include data produced from secondary queries.</p>
+<p>An Entity page in the Dashboard may also show other information that cannot be obtained solely with Diffbot API calls and is not represented in the Entity JSON.  This data is typically gathered using third-party APIs.  For example, our Dashboard may show recent Tweets from an entity’s Twitter page.  For Organizations, we may also display various Technographic data.  For example, many Organizations in our Dashboard have a “Technologies Used” section describing technologies that are used on that organization’s website.</p>
+<h2><a class="anchor" aria-hidden="true" id="accessing-the-knowledge-graph-through-the-api"></a><a href="#accessing-the-knowledge-graph-through-the-api" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Accessing the Knowledge Graph through the API</h2>
+<p>To use the Knowledge Graph API, make an HTTP GET request to the following endpoint: <code>https://kg.diffbot.com/kg/dql_endpoint?token=...&amp;type=...&amp;query=...</code></p>
+<p>Provide the following arguments with your request:</p>
+<table>
+<thead>
+<tr><th>Argument</th><th>Description</th></tr>
+</thead>
+<tbody>
+<tr><td><code>token</code></td><td>Your Diffbot developer token.</td></tr>
+<tr><td><code>type</code></td><td>The type of search to be performed. Currently only <code>query</code> is fully supported.</td></tr>
+<tr><td><code>query</code></td><td>Your DQL search query as described above. Must be URL-encoded.</td></tr>
+<tr><td>Optional Arguments</td><td>~~~~~~~~~~~~~~~~~</td></tr>
+<tr><td><code>from</code></td><td>The position of the first result to return.  The default is 0, representing the first item in the results.</td></tr>
+<tr><td><code>size</code></td><td>The maximum number of results to return. We recommend that this parameter not exceed 500, as this may result in some API calls failing.  The default value is 50.</td></tr>
+<tr><td><code>nonCanonicalFacts</code></td><td>Return non-canonical facts. Default is 0 (no non-canonical facts).</td></tr>
+</tbody>
+</table>
+<p>For example, the following query returns 2542 results: <code>type:Organization name:&quot;mozart&quot;</code>.</p>
+<p>If we wanted to download all these results, this would be best done with six separate API calls, which would look something like this:</p>
+<ul>
+<li><a href="https://kg.diffbot.com/kg/dql_endpoint?type=query&amp;size=500&amp;from=0&amp;query=type%3AOrganization%20name%3A%22mozart%22&amp;token={{SOMETOKEN}}">https://kg.diffbot.com/kg/dql_endpoint?type=query&amp;size=500&amp;from=0&amp;query=type%3AOrganization%20name%3A%22mozart%22&amp;token={{SOMETOKEN}}</a></li>
+<li><a href="https://kg.diffbot.com/kg/dql_endpoint?type=query&amp;size=500&amp;from=500&amp;query=type%3AOrganization%20name%3A%22mozart%22&amp;token={{SOMETOKEN}}">https://kg.diffbot.com/kg/dql_endpoint?type=query&amp;size=500&amp;from=500&amp;query=type%3AOrganization%20name%3A%22mozart%22&amp;token={{SOMETOKEN}}</a></li>
+<li><a href="https://kg.diffbot.com/kg/dql_endpoint?type=query&amp;size=500&amp;from=1000&amp;query=type%3AOrganization%20name%3A%22mozart%22&amp;token={{SOMETOKEN}}">https://kg.diffbot.com/kg/dql_endpoint?type=query&amp;size=500&amp;from=1000&amp;query=type%3AOrganization%20name%3A%22mozart%22&amp;token={{SOMETOKEN}}</a></li>
+<li><a href="https://kg.diffbot.com/kg/dql_endpoint?type=query&amp;size=500&amp;from=1500&amp;query=type%3AOrganization%20name%3A%22mozart%22&amp;token={{SOMETOKEN}}">https://kg.diffbot.com/kg/dql_endpoint?type=query&amp;size=500&amp;from=1500&amp;query=type%3AOrganization%20name%3A%22mozart%22&amp;token={{SOMETOKEN}}</a></li>
+<li><a href="https://kg.diffbot.com/kg/dql_endpoint?type=query&amp;size=500&amp;from=2000&amp;query=type%3AOrganization%20name%3A%22mozart%22&amp;token={{SOMETOKEN}}">https://kg.diffbot.com/kg/dql_endpoint?type=query&amp;size=500&amp;from=2000&amp;query=type%3AOrganization%20name%3A%22mozart%22&amp;token={{SOMETOKEN}}</a></li>
+<li><a href="https://kg.diffbot.com/kg/dql_endpoint?type=query&amp;size=500&amp;from=2500&amp;query=type%3AOrganization%20name%3A%22mozart%22&amp;token={{SOMETOKEN}}">https://kg.diffbot.com/kg/dql_endpoint?type=query&amp;size=500&amp;from=2500&amp;query=type%3AOrganization%20name%3A%22mozart%22&amp;token={{SOMETOKEN}}</a></li>
+</ul>
+<p>Notice in these consecutive calls that we are incrementing the <code>from</code> field by 500 on each call, while keeping the <code>size</code> field at 500.  So first, we start at position 0 and grab results 0 through 499.  Then we start at position 500 and grab results 500 through 999, and so on.</p>
+<p>We could also use this alternative format for these queries:</p>
+<ul>
+<li><a href="https://kg.diffbot.com/kg/dql_endpoint?type=query&amp;from=0&amp;to=499&amp;query=type%3AOrganization%20name%3A%22mozart%22&amp;token={{SOMETOKEN}}">https://kg.diffbot.com/kg/dql_endpoint?type=query&amp;from=0&amp;to=499&amp;query=type%3AOrganization%20name%3A%22mozart%22&amp;token={{SOMETOKEN}}</a></li>
+<li><a href="https://kg.diffbot.com/kg/dql_endpoint?type=query&amp;from=500&amp;to=999&amp;query=type%3AOrganization%20name%3A%22mozart%22&amp;token={{SOMETOKEN}}">https://kg.diffbot.com/kg/dql_endpoint?type=query&amp;from=500&amp;to=999&amp;query=type%3AOrganization%20name%3A%22mozart%22&amp;token={{SOMETOKEN}}</a></li>
+<li><a href="https://kg.diffbot.com/kg/dql_endpoint?type=query&amp;from=1000&amp;to=1499&amp;query=type%3AOrganization%20name%3A%22mozart%22&amp;token={{SOMETOKEN}}">https://kg.diffbot.com/kg/dql_endpoint?type=query&amp;from=1000&amp;to=1499&amp;query=type%3AOrganization%20name%3A%22mozart%22&amp;token={{SOMETOKEN}}</a></li>
+<li><a href="https://kg.diffbot.com/kg/dql_endpoint?type=query&amp;from=1500&amp;to=1999&amp;query=type%3AOrganization%20name%3A%22mozart%22&amp;token={{SOMETOKEN}}">https://kg.diffbot.com/kg/dql_endpoint?type=query&amp;from=1500&amp;to=1999&amp;query=type%3AOrganization%20name%3A%22mozart%22&amp;token={{SOMETOKEN}}</a></li>
+<li><a href="https://kg.diffbot.com/kg/dql_endpoint?type=query&amp;from=2000&amp;to=2499&amp;query=type%3AOrganization%20name%3A%22mozart%22&amp;token={{SOMETOKEN}}">https://kg.diffbot.com/kg/dql_endpoint?type=query&amp;from=2000&amp;to=2499&amp;query=type%3AOrganization%20name%3A%22mozart%22&amp;token={{SOMETOKEN}}</a></li>
+<li><a href="https://kg.diffbot.com/kg/dql_endpoint?type=query&amp;from=2500&amp;to=2999&amp;query=type%3AOrganization%20name%3A%22mozart%22&amp;token={{SOMETOKEN}}">https://kg.diffbot.com/kg/dql_endpoint?type=query&amp;from=2500&amp;to=2999&amp;query=type%3AOrganization%20name%3A%22mozart%22&amp;token={{SOMETOKEN}}</a></li>
+</ul>
+<p>Note that these 6 queries are identical in functionality to those above.  Instead of specifying the starting point (<code>from</code>) and <code>size</code> of each query as we did in the first example, we have specified the start and end points (using the <code>from</code> and <code>to</code> parameters) of the results that should be returned.</p>
+<p>When programmatically downloading an entire result set, you can write a loop to grab the results 500 at a time, and stop when your position has exceeded the total number of results (represented by the top-level field <code>hits</code> that is returned by each query).</p>
+</span></div></article></div><div class="docLastUpdate"><em>Last updated by Bruno Skvorc</em></div><div class="docs-prevnext"><a class="docs-prev button" href="/docs/en/dql-quickstart"><span class="arrow-prev">← </span><span>&gt;&gt; START HERE! &lt;&lt;</span></a><a class="docs-next button" href="/docs/en/kg-clients"><span>API Clients</span><span class="arrow-next"> →</span></a></div></div></div><nav class="onPageNav"><ul class="toc-headings"><li><a href="#accessing-the-knowledge-graph-via-the-dashboard">Accessing the Knowledge Graph via the Dashboard</a><ul class="toc-headings"><li><a href="#visual-query-builder">Visual Query Builder</a></li><li><a href="#differences-between-data-displayed-in-the-dashboard-and-json">Differences Between Data Displayed in the Dashboard and JSON</a></li></ul></li><li><a href="#accessing-the-knowledge-graph-through-the-api">Accessing the Knowledge Graph through the API</a></li></ul></nav></div><footer class="nav-footer" id="footer"><section class="sitemap"><a href="/" class="nav-home"><img src="/img/diffbot_white.svg" alt="Docs Suite" width="66" height="58"/></a><div><h5>Docs</h5><a href="/docs/en/intro">Tutorials</a><a href="/docs/en/guides-intro">How-to Guides</a><a href="/docs/en/explain-intro">Explainers</a><a href="/docs/en/api-intro">API Reference</a></div><div><h5>Community</h5><a href="https://stackoverflow.com/questions/tagged/diffbot" target="_blank" rel="noreferrer noopener">Stack Overflow</a><a href="https://twitter.com/diffbot" target="_blank" rel="noreferrer noopener">Twitter</a></div><div><h5>More</h5><a href="/blog">Blog</a><a href="/help">Help</a><a href="https://github.com/diffbot">GitHub</a></div></section><a href="https://diffbot.com/" target="_blank" rel="noreferrer noopener" class="fbOpenSource"><img src="/img/diffbot_white.svg" alt="Diffbot.com" width="170" height="45"/></a><section class="copyright">Copyright © 2020 Diffbot.com</section></footer></div><script type="text/javascript" src="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.js"></script><script>
+                document.addEventListener('keyup', function(e) {
+                  if (e.target !== document.body) {
+                    return;
+                  }
+                  // keyCode for '/' (slash)
+                  if (e.keyCode === 191) {
+                    const search = document.getElementById('search_input_react');
+                    search && search.focus();
+                  }
+                });
+              </script><script>
+              var search = docsearch({
+                
+                apiKey: '2c24e5e78d724e77c46ef1b720700177',
+                indexName: 'diffbot',
+                inputSelector: '#search_input_react',
+                algoliaOptions: {}
+              });
+            </script></body></html>
