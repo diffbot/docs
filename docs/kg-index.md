@@ -20,9 +20,9 @@ This page is a directory of KG and Enhance related content.
 
 ## API Reference Documentation
 
-- [Knowledge Graph API docs](kgdocs) - learn about the fields, parameters, and return values of interacting with the KG API directly
-- [Enhance API docs](enhance) - learn about the fields, parameters, and return values of interacting with the Enhance API directly
-- [Ontology](ontology) - understand the entities returned by the Enhance and KG APIs
+- [Knowledge Graph API docs](https://docs.diffbot.com/kgapi) - learn about the fields, parameters, and return values of interacting with the KG API directly
+- [Enhance API docs](https://docs.diffbot.com/enhance) - learn about the fields, parameters, and return values of interacting with the Enhance API directly
+- [Ontology](https://docs.diffbot.com/ontology) - understand the entities returned by the Enhance and KG APIs
 
 ## In-Depth
 
