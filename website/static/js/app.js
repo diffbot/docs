@@ -116,4 +116,22 @@ docReady(function () {
 
     // Insert into top nav
     document.querySelector("ul.nav-site").innerHTML += dropdownHtml;
+
+    // Check if there is an H3 Knowledge Graph heading in the sidebar
+    let inKgSection = false;
+    let headings = document.querySelectorAll("h3.navGroupCategoryTitle");
+    headings.forEach(function(element){
+        console.log(element);
+        console.log(element.innerHTML);
+        if (element.innerHTML.indexOf("Knowledge Graph") === 0) {
+            inKgSection = true;
+        }
+    });
+
+    // Add a subsection into the sidebar for API docs
+    if (inKgSection) {
+        console.log("Writing new section");
+        let newSection = '<div class="navGroup subNavGroup"><h4 class="navGroupSubcategoryTitle">API Reference Docs</h4><ul><li class="navListItem"><a class="navItem" href="/kgapi">Knowledge Graph API Reference</a></li><li class="navListItem"><a class="navItem" href="/enhance">Enhance API Reference</a></li><li class="navListItem"><a class="navItem" href="/ontology">Ontology Reference</a></li></ul></div>'
+        document.querySelector(".toc .toggleNav .navGroups .navGroup>ul").innerHTML += newSection;
+    }
 })
