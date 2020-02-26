@@ -108,10 +108,10 @@ docReady(function () {
 
     // Build the dropdown
     let dropdownHtml = '<div class="dropdown"><a href="/docs/en/kg-index" class="dropbtn">Knowledge Graph</a><div class="dropdown-content">';
-    dropdownHtml += '<a href="/kgdoc">KG API</a>';
-    dropdownHtml += '<a href="/enhance">Enhance API</a>';
-    dropdownHtml += '<a href="/ontology">Ontology</a>';
-    dropdownHtml += '<a href="/docs/en/dql-index">DQL Operator Docs</a>';
+    dropdownHtml += '<a href="/kgdoc">KG API Reference</a>';
+    dropdownHtml += '<a href="/enhance">Enhance API Reference</a>';
+    dropdownHtml += '<a href="/ontology">Ontology Docs</a>';
+    dropdownHtml += '<a href="/docs/en/dql-index">Diffbot Query Language</a>';
     dropdownHtml += '</div></div>';
 
     // Insert into top nav

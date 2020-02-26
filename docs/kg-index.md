@@ -10,7 +10,22 @@ This page is a directory of KG and Enhance related content.
 
 ---
 
-- [Knowledge Graph API](kgdocs) - use this to programmatically search through our KG entities
-- [Enhance API](enhance) - use this to enhance datasets you already have with rich data from our system
+> New to Knowledge Graph? Start with this [Quickstart Tutorial](dql-quickstart)!
+
+## Tools and Usage
+
+- [Accessing the Knowledge Graph](kg-accessing) - access the knowledge graph through the UI or the API
+- [API Clients](dql-api-clients) - use the API through your favorite programming language
+- [Microsoft Excel DQL Plugin](dql-excel) - use the power of DQL in your spreadsheets and enhance your data
+
+## API Reference Documentation
+
+- [Knowledge Graph API docs](kgdocs) - learn about the fields, parameters, and return values of interacting with the KG API directly
+- [Enhance API docs](enhance) - learn about the fields, parameters, and return values of interacting with the Enhance API directly
 - [Ontology](ontology) - understand the entities returned by the Enhance and KG APIs
-- [DQL Operator Docs](dql-index) - learn to use the Diffbot Query Language on practical examples
+
+## In-Depth
+
+- [Diffbot Query Language (DQL)](dql-index) - learn to use the Diffbot Query Language on practical examples
+- [DQL Workflow Examples](dql-workflows) - learn on practical examples
+- [DQL FAQ](dql-faq) - actual customer questions
