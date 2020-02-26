@@ -1,4 +1,4 @@
-<!DOCTYPE html><html lang="en"><head><meta charSet="utf-8"/><meta http-equiv="X-UA-Compatible" content="IE=edge"/><title>DQL Workflows · Docs Suite</title><meta name="viewport" content="width=device-width"/><meta name="generator" content="Docusaurus"/><meta name="description" content="Content coming soon."/><meta name="docsearch:language" content="en"/><meta property="og:title" content="DQL Workflows · Docs Suite"/><meta property="og:type" content="website"/><meta property="og:url" content="https://diffbot.github.io/"/><meta property="og:description" content="Content coming soon."/><meta property="og:image" content="https://diffbot.github.io/img/diagram.svg"/><meta name="twitter:card" content="summary"/><meta name="twitter:image" content="https://diffbot.github.io/img/diagram.svg"/><link rel="shortcut icon" href="/img/diffbot-head.png"/><link rel="stylesheet" href="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.css"/><link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/default.min.css"/><script type="text/javascript" src="https://buttons.github.io/buttons.js"></script><script type="text/javascript" src="/js/app.js"></script><script src="/js/scrollSpy.js"></script><link rel="stylesheet" href="/css/main.css"/><script src="/js/codetabs.js"></script></head><body class="sideNavVisible separateOnPageNav"><div class="fixedHeaderContainer"><div class="headerWrapper wrapper"><header><a href="/"><img class="logo" src="/img/diffbot_white.svg" alt="Docs Suite"/><h2 class="headerTitleWithLogo">Docs Suite</h2></a><div class="navigationWrapper navigationSlider"><nav class="slidingNav"><ul class="nav-site nav-site-internal"><li class="navSearchWrapper reactNavSearchWrapper"><input type="text" id="search_input_react" placeholder="Search" title="Search"/></li><li class=""><a href="/docs/en/intro" target="_self">Prose</a></li><li class=""><a href="/docs/en/api-intro" target="_self">API</a></li><li class=""><a href="/docs/en/error-intro" target="_self">Debugging</a></li></ul></nav></div></header></div></div><div class="navPusher"><div class="docMainWrapper wrapper"><div class="docsNavContainer" id="docsNav"><nav class="toc"><div class="toggleNav"><section class="navWrapper wrapper"><div class="navBreadcrumb wrapper"><div class="navToggle" id="navToggler"><div class="hamburger-menu"><div class="line1"></div><div class="line2"></div><div class="line3"></div></div></div><h2><i>›</i><span>In-Depth</span></h2><div class="tocToggler" id="tocToggler"><i class="icon-toc"></i></div></div><div class="navGroups"><div class="navGroup"><h3 class="navGroupCategoryTitle collapsible">Knowledge Graph<span class="arrow"><svg width="24" height="24" viewBox="0 0 24 24"><path fill="#565656" d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z"></path><path d="M0 0h24v24H0z" fill="none"></path></svg></span></h3><ul class="hide"><li class="navListItem"><a class="navItem" href="/docs/en/kg-index">Knowledge Graph and Enhance Index</a></li><li class="navListItem"><a class="navItem" href="/docs/en/dql-quickstart">&gt;&gt; START HERE! &lt;&lt;</a></li><div class="navGroup subNavGroup"><h4 class="navGroupSubcategoryTitle">Tools and Usage</h4><ul><li class="navListItem"><a class="navItem" href="/docs/en/kg-accessing">Accessing Knowledge Graph</a></li><li class="navListItem"><a class="navItem" href="/docs/en/kg-clients">API Clients</a></li><li class="navListItem"><a class="navItem" href="/docs/en/dql-excel">DQL Excel Plugin</a></li></ul></div><div class="navGroup subNavGroup"><h4 class="navGroupSubcategoryTitle">In-Depth</h4><ul><li class="navListItem"><a class="navItem" href="/docs/en/dql-index">Diffbot Query Language (DQL)</a></li><li class="navListItem navListItemActive"><a class="navItem" href="/docs/en/dql-workflows">DQL Workflows</a></li><li class="navListItem"><a class="navItem" href="/docs/en/dql-faq">DQL FAQ</a></li></ul></div></ul></div></div></section></div><script>
+<!DOCTYPE html><html lang="en"><head><meta charSet="utf-8"/><meta http-equiv="X-UA-Compatible" content="IE=edge"/><title>DQL Workflow Example · Docs Suite</title><meta name="viewport" content="width=device-width"/><meta name="generator" content="Docusaurus"/><meta name="description" content="Crafting a DQL query or queries that may be run in parallel is made easier if at first you define the spectrum of criteria you might want to use to constrain or explore the data. For example, to identify ways you might define a DQL statement or statements that would:"/><meta name="docsearch:language" content="en"/><meta property="og:title" content="DQL Workflow Example · Docs Suite"/><meta property="og:type" content="website"/><meta property="og:url" content="https://diffbot.github.io/"/><meta property="og:description" content="Crafting a DQL query or queries that may be run in parallel is made easier if at first you define the spectrum of criteria you might want to use to constrain or explore the data. For example, to identify ways you might define a DQL statement or statements that would:"/><meta property="og:image" content="https://diffbot.github.io/img/diagram.svg"/><meta name="twitter:card" content="summary"/><meta name="twitter:image" content="https://diffbot.github.io/img/diagram.svg"/><link rel="shortcut icon" href="/img/diffbot-head.png"/><link rel="stylesheet" href="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.css"/><link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/default.min.css"/><script type="text/javascript" src="https://buttons.github.io/buttons.js"></script><script type="text/javascript" src="/js/app.js"></script><script src="/js/scrollSpy.js"></script><link rel="stylesheet" href="/css/main.css"/><script src="/js/codetabs.js"></script></head><body class="sideNavVisible separateOnPageNav"><div class="fixedHeaderContainer"><div class="headerWrapper wrapper"><header><a href="/"><img class="logo" src="/img/diffbot_white.svg" alt="Docs Suite"/><h2 class="headerTitleWithLogo">Docs Suite</h2></a><div class="navigationWrapper navigationSlider"><nav class="slidingNav"><ul class="nav-site nav-site-internal"><li class="navSearchWrapper reactNavSearchWrapper"><input type="text" id="search_input_react" placeholder="Search" title="Search"/></li><li class=""><a href="/docs/en/intro" target="_self">Prose</a></li><li class=""><a href="/docs/en/api-intro" target="_self">API</a></li><li class=""><a href="/docs/en/error-intro" target="_self">Debugging</a></li></ul></nav></div></header></div></div><div class="navPusher"><div class="docMainWrapper wrapper"><div class="docsNavContainer" id="docsNav"><nav class="toc"><div class="toggleNav"><section class="navWrapper wrapper"><div class="navBreadcrumb wrapper"><div class="navToggle" id="navToggler"><div class="hamburger-menu"><div class="line1"></div><div class="line2"></div><div class="line3"></div></div></div><h2><i>›</i><span>In-Depth</span></h2><div class="tocToggler" id="tocToggler"><i class="icon-toc"></i></div></div><div class="navGroups"><div class="navGroup"><h3 class="navGroupCategoryTitle collapsible">Knowledge Graph<span class="arrow"><svg width="24" height="24" viewBox="0 0 24 24"><path fill="#565656" d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z"></path><path d="M0 0h24v24H0z" fill="none"></path></svg></span></h3><ul class="hide"><li class="navListItem"><a class="navItem" href="/docs/en/kg-index">Knowledge Graph and Enhance Index</a></li><li class="navListItem"><a class="navItem" href="/docs/en/dql-quickstart">&gt;&gt; START HERE! &lt;&lt;</a></li><div class="navGroup subNavGroup"><h4 class="navGroupSubcategoryTitle">Tools and Usage</h4><ul><li class="navListItem"><a class="navItem" href="/docs/en/kg-accessing">Accessing Knowledge Graph</a></li><li class="navListItem"><a class="navItem" href="/docs/en/kg-clients">API Clients</a></li><li class="navListItem"><a class="navItem" href="/docs/en/dql-excel">DQL Excel Add-In</a></li></ul></div><div class="navGroup subNavGroup"><h4 class="navGroupSubcategoryTitle">In-Depth</h4><ul><li class="navListItem"><a class="navItem" href="/docs/en/dql-index">Diffbot Query Language (DQL)</a></li><li class="navListItem navListItemActive"><a class="navItem" href="/docs/en/dql-workflows">DQL Workflow Example</a></li><li class="navListItem"><a class="navItem" href="/docs/en/dql-faq">DQL FAQ</a></li></ul></div></ul></div></div></section></div><script>
             var coll = document.getElementsByClassName('collapsible');
             var checkActiveCategory = true;
             for (var i = 0; i < coll.length; i++) {
@@ -54,8 +54,344 @@
                 };
               }
             });
-        </script></nav></div><div class="container mainContainer docsContainer"><div class="wrapper"><div class="post"><header class="postHeader"><a class="edit-page-link button" href="https://github.com/diffbot/docs/edit/master/docs/dql-workflows.md" target="_blank" rel="noreferrer noopener">Edit</a><h1 id="__docusaurus" class="postHeaderTitle">DQL Workflows</h1></header><article><div><span><p>Content coming soon.</p>
-</span></div></article></div><div class="docLastUpdate"><em>Last updated by Bruno Skvorc</em></div><div class="docs-prevnext"><a class="docs-prev button" href="/docs/en/dql-index"><span class="arrow-prev">← </span><span>Diffbot Query Language (DQL)</span></a><a class="docs-next button" href="/docs/en/dql-faq"><span>DQL FAQ</span><span class="arrow-next"> →</span></a></div></div></div><nav class="onPageNav"></nav></div><footer class="nav-footer" id="footer"><section class="sitemap"><a href="/" class="nav-home"><img src="/img/diffbot_white.svg" alt="Docs Suite" width="66" height="58"/></a><div><h5>Docs</h5><a href="/docs/en/intro">Tutorials</a><a href="/docs/en/guides-intro">How-to Guides</a><a href="/docs/en/explain-intro">Explainers</a><a href="/docs/en/api-intro">API Reference</a></div><div><h5>Community</h5><a href="https://stackoverflow.com/questions/tagged/diffbot" target="_blank" rel="noreferrer noopener">Stack Overflow</a><a href="https://twitter.com/diffbot" target="_blank" rel="noreferrer noopener">Twitter</a></div><div><h5>More</h5><a href="/blog">Blog</a><a href="/help">Help</a><a href="https://github.com/diffbot">GitHub</a></div></section><a href="https://diffbot.com/" target="_blank" rel="noreferrer noopener" class="fbOpenSource"><img src="/img/diffbot_white.svg" alt="Diffbot.com" width="170" height="45"/></a><section class="copyright">Copyright © 2020 Diffbot.com</section></footer></div><script type="text/javascript" src="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.js"></script><script>
+        </script></nav></div><div class="container mainContainer docsContainer"><div class="wrapper"><div class="post"><header class="postHeader"><a class="edit-page-link button" href="https://github.com/diffbot/docs/edit/master/docs/dql-workflows.md" target="_blank" rel="noreferrer noopener">Edit</a><h1 id="__docusaurus" class="postHeaderTitle">DQL Workflow Example</h1></header><article><div><span><p>Crafting a DQL query or queries that may be run in parallel is made easier if at first you define the spectrum of criteria you might want to use to constrain or explore the data. For example, to identify ways you might define a DQL statement or statements that would:</p>
+<p>&quot;retrieve all news on</p>
+<ul>
+<li>M&amp;A transactions</li>
+<li>VC investments</li>
+<li>events</li>
+<li>other major news (partnerships)</li>
+</ul>
+<p>that happened in Silicon Valley in the last Quarter in the Industry Vertical X.&quot;</p>
+<p>X could be Electric Mobility.</p>
+<h2><a class="anchor" aria-hidden="true" id="step-one-break-out-each-aspect-of-the-data-need"></a><a href="#step-one-break-out-each-aspect-of-the-data-need" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Step One: Break Out Each Aspect of the Data Need</h2>
+<ol>
+<li><p>The type of information wanted is news so you’d start with a query using <code>type:Article</code></p></li>
+<li><p>Location constraint: “in Silicon Valley”</p>
+<p>Silicon Valley is generally used to describe only the southern region of the larger San Francisco Bay Area. The Valley's exact boundaries are debatable, but it's centered around Santa Clara County which includes Palo Alto, Mountain View, Sunnyvale, Cupertino, San Jose, Santa Clara, Milpitas, Los Gatos, Campbell, Los Altos, and Stanford. Should we assume it also includes Menlo Park, Burlingame, San Carlos, San Mateo, Oakland, San Francisco, etc., i.e. do you mean the physical region of Silicon Valley or the San Francisco Bay Area where the businesses said to make up Silicon Valley currently operate?</p>
+<p>Given the controversy, Silicon Valley isn’t defined in the KG as a region so you will need to enter each location you are interested in as an OR statement. You can constrain to location entities tagged in the article like:</p>
+<p><code>tags.label:or(&quot;San Francisco Bay Area&quot;, &quot;San Jose&quot;, “Santa Clara”, “Cupertino”, “Palo Alto”, “Mountain View”, “Los Altos”, “Sunnyvale”)</code></p>
+<p>But for maximum coverage, you’ll want to mine the text for references to a location such as</p>
+<p><code>text:or(&quot;San Jose&quot;, &quot;Santa Clara&quot;, &quot;Cupertino&quot;, &quot;Palo Alto&quot;, &quot;Mountain View&quot;, &quot;Los Altos&quot;, &quot;Sunnyvale&quot;)</code></p>
+<p>We are currently investing in aliases for locations that overlap multiple locations (cities, states, etc.) like Silicon Valley and Greater NYC but they are not yet available. We expect to roll them out in Q2 in support of more elaborate dashboards, data exploration, and custom data set definition features and functionality that clients will be able to leverage pre-download.</p>
+<p>To ensure you don’t end up with data for cities outside of CA/California you’ll want to add: <code>text:OR(&quot;CA&quot;, &quot;California&quot;)</code></p></li>
+<li><p>Time constraint: in the last Last Quarter</p>
+<p>Do you mean a rolling 90-day window? The last fiscal or calendar quarter? The current quarter we are about to complete?</p>
+<p>We do have special syntax supporting <code>lastCrawlDate</code> which you can specify in minutes (m), hours (h), days (d), weeks (w), or years (y), i.e. you might use <code>lastCrawlTime&lt;13w</code> to define a rolling 3-month interval. Alternatively, you could constrain via publication date using:</p>
+<p><code>date&lt;91d or estimatedDate&lt;91d</code>, <code>date.timestamp&gt;1569801600</code> or <code>estimatedDate.timestamp&gt;1569801600</code></p>
+<p>We recommend using <code>lastCrawlTime</code> for maximum coverage.</p>
+<p>For the current fiscal quarter (spanning Oct-Dec 2019), you might specify a date after 9/30/2019 (the last day of the prior fiscal quarter) represented in UNIX time as <code>1569801600</code> and constrain using <code>lastCrawlTime</code> with <code>lastCrawlTime&gt;1569801600</code> or as <code>lastCrawlTime&gt;'2019-06-30'</code></p>
+<p>To narrow to the last completed fiscal quarter (July - Sept 2019), i.e. crawled after 6/30/2019, on or before 9/30/2019 you would define the date constraint this way:</p>
+<p><code>lastCrawlTime&gt;1561852800 lastCrawlTime&lt;1569888000</code> or
+<code>lastCrawlTime&gt;'2019-06-30' lastCrawlTime&lt;'2019-10-01'</code></p>
+<p>And for each of these cases, you will likely want to specify
+<code>sortBy:date</code>
+to sort articles from most recent to least recent publication date.</p></li>
+<li><p>Sources of news about Silicon Valley</p>
+<p>Often the source of the information about a geographic region is also important. There is no requirement to constrain to a source, but if you would like to for less well known publications than The Financial Times or The Wall Street Journal like Silicon Valley Business Journal (bizjournals.com/sanjose/) or SiliconValley.com (operated by the San Jose Mercury News), etc. then you would define a statement like:</p>
+<p><code>pageUrl:&quot;bizjournals.com/sanjose/&quot;</code>
+<code>pageUrl:&quot;www.bizjournals.com/sanjose/news/&quot;</code> or
+<code>pageUrl:&quot;siliconvalley.com&quot;</code></p>
+<p>Currently, these sources are largely behind a paywall or login preventing us from aggregating then in the KG. However, you could aggregate them in a private collection using Crawlbot/ExtractionAPIs and combine them with KG article data.</p></li>
+<li><p>M&amp;A Transactions</p>
+<p>What common terms are used to describe M&amp;A transactions? You’ll want to use OR statements to mine the text of the article, excerpted quotes, tags &amp;/or the title. There is a list of common terms in the Appendix for your reference and a list of the terms most frequently referenced in article text. And, here is an example syntax you can use to mine the text:</p>
+<p><code>text:&quot;Silicon Valley&quot; text:or(&quot;acquisition&quot;, &quot;consolidation&quot;, &quot;LOI&quot;, &quot;leveraged buyout&quot;, &quot;liquidation&quot;, &quot;merger&quot;, &quot;partnership&quot;, &quot;offer price&quot;, &quot;stock deal&quot;, &quot;investment&quot;, &quot;buyout&quot;, &quot;IPO&quot;, &quot;public offer&quot;, &quot;Series A&quot;, &quot;Series B&quot;, &quot;Series C&quot;, &quot;Series D&quot;)</code></p>
+<p>If you facet by <code>tags.label</code>, you can see all of the tags in the article subset selected as well:</p>
+<p><code>type:Article text:&quot;Silicon Valley&quot; text:or(&quot;acquisition&quot;, &quot;consolidation&quot;, &quot;LOI&quot;, &quot;leveraged buyout&quot;, &quot;liquidation&quot;, &quot;merger&quot;, &quot;partnership&quot;, &quot;offer price&quot;, &quot;stock deal&quot;, &quot;buyout&quot;) lastCrawlTime&gt;1561852800 facet:tags.label</code></p>
+<p>Then you might want to constrain to a <code>tags.label</code> like ‘initial public offering’ which appears in the list of facets (labels) using the Diffbot entityID for that tag and the strict operator: <code>strict:tags.label:&quot;diffbot_com_entity_XEDoCGkjFPfGi4bmKrWidJw&quot;</code></p>
+<p><code>type:Article text:&quot;Silicon Valley&quot; text:or(&quot;acquisition&quot;, &quot;consolidation&quot;, &quot;leveraged buyout&quot;, &quot;liquidation&quot;, &quot;merger&quot;, &quot;partnership&quot;, &quot;offer price&quot;, &quot;stock deal&quot;, &quot;buyout&quot;) lastCrawlTime&gt;1561852800 strict:tags.label:&quot;diffbot_com_entity_XEDoCGkjFPfGi4bmKrWidJw&quot; sortBy:date</code></p>
+<p>In general, you will want to optimize the length of your query for performance and efficiency as well as to maximize unique article coverage (i.e. avoid duplication) if you are running more than one query to get at the data. In the Appendix, we have recommended guidelines for how to achieve this.</p></li>
+<li><p>VC Investment</p>
+<p>What common terms are used to describe VC investments? You’ll want to use OR statements to mine the text of the article, excerpted quotes, tags, &amp;/or the title. There is a list of common terms in the Appendix for your reference and a separate list of the terms most frequently referenced in article text. And, here is an example syntax you can use to mine the text:</p>
+<p><code>type:Article text:&quot;Silicon Valley&quot; text:or(&quot;IPO&quot;, &quot;public offer&quot;, &quot;Series A&quot;, &quot;Series B&quot;, &quot;Series C&quot;, &quot;Series D&quot;, &quot;investment&quot;) lastCrawlTime&gt;1561852800 facet:tags.label sortBy:date</code></p>
+<p>In general, you will want to optimize the length of your query for performance and efficiency as well as to maximize unique article coverage (i.e. avoid duplication) if you are running more than one query to get at the data. In the Appendix, we have recommended guidelines for how to achieve this.</p></li>
+<li><p>Other major news, i.e. partnership announcements
+What labels are commonly used to describe a partnership announcement or similar event in article data (see a brief list of examples below)? These labels will be present only as text strings in the Title or text of the article itself.</p>
+<p>Terms frequently used to describe strategic partnerships include:</p>
+<ul>
+<li>Strategic restructuring</li>
+<li>Collaboration</li>
+<li>Alliance</li>
+<li>Strategic partnership</li>
+<li>Cooperation</li>
+<li>Partner</li>
+<li>Supplier</li>
+<li>Distributor</li>
+</ul>
+<p>To mine this data you might use a statement like:</p>
+<p><code>text:&quot;Silicon Valley&quot; text:or(&quot;strategic restructuring&quot;, &quot;collaboration&quot;, &quot;alliance&quot;, &quot;strategic partnership&quot;, &quot;cooperation&quot;, &quot;partner&quot;, &quot;supplier&quot;, &quot;distributor&quot;)</code></p>
+<p>Or</p>
+<p><code>title:or(&quot;strategic restructuring&quot;, &quot;collaboration&quot;, &quot;alliance&quot;, &quot;strategic partnership&quot;, &quot;cooperation&quot;, &quot;partner&quot;, &quot;supplier&quot;, &quot;distributor&quot;)</code></p></li>
+<li><p>Events</p>
+<p>What labels are commonly used to describe an event in article data (see a brief list of examples below)? These labels will be present only as text strings in the Title or text of the article itself for now. We plan to add Events as entities to the Knowledge Graph in the first half of 2020.</p>
+<p>Terms frequently used to describe an event include:</p>
+<ul>
+<li>Meeting</li>
+<li>Conference</li>
+<li>Roundtable</li>
+<li>Meetup</li>
+<li>Panel discussion</li>
+<li>Pitch event</li>
+<li>Expo</li>
+<li>Advisory Board</li>
+<li>Expert Talk</li>
+</ul>
+<p>To mine this data you might use a statement like:</p>
+<p><code>text:&quot;Silicon Valley&quot; text:or(&quot;meeting&quot;, &quot;conference&quot;, &quot;roundtable discussion&quot;, &quot;panel&quot;, &quot;meetup&quot;, &quot;Talk&quot;, &quot;pitch event&quot;, &quot;expo&quot;, &quot;advisory board&quot;)</code></p>
+<p>Or</p>
+<p><code>title:or(&quot;meeting&quot;, &quot;conference&quot;, &quot;roundtable discussion&quot;, &quot;panel&quot;, &quot;meetup&quot;, &quot;expert talk&quot;, &quot;pitch event&quot;, &quot;expo&quot;, &quot;advisory board&quot;)</code></p>
+<p>In the Appendix, we have recommended guidelines for how to optimize queries using these constraints.</p></li>
+<li><p>Organization categories (industry labels)</p>
+<p>What labels are commonly used to describe an industry in article data? In the Appendix is a list of category labels for industries frequently used in online publications (outside of highly structured classification schemes like SIC, NAICs etc.).</p>
+<p>Some of these labels will be present as article tags that you can constrain by, others will exist only as text strings in the Title or text of the article itself. In the Appendix, we have recommended guidelines for how to package a query template into which you can insert each industry of interest to you.</p>
+<p>To mine this data you might use a statement like:</p>
+<p><code>text:&quot;robotics&quot;</code></p>
+<p>Or</p>
+<p><code>tags.label:&quot;robotics&quot;</code></p>
+<p>You could also use company names to locate announcements like <em>Fenwick &amp; West</em> or <em>Sequoia Capital</em>.</p></li>
+</ol>
+<h2><a class="anchor" aria-hidden="true" id="step-two-combine-constraints-to-achieve-maximum-coverage-and-accuracy-with-minimal-duplication"></a><a href="#step-two-combine-constraints-to-achieve-maximum-coverage-and-accuracy-with-minimal-duplication" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Step Two: Combine Constraints to Achieve Maximum Coverage and Accuracy with Minimal Duplication</h2>
+<p>It is important to keep in mind that there is a limit in terms of the number of strings that can be combined in an OR statement (something around 60 terms). You can swap other phrases in for these but you’ll want to limit your statements to something along this length.</p>
+<p><code>text:OR(&quot;Multiple&quot;, &quot;Acquisition&quot;, &quot;LOI&quot;, &quot;Subsidiary&quot;, &quot;Cash flow&quot;, &quot;Capitalization&quot;, &quot;Consolidation&quot;, &quot;EBITDA&quot;, &quot;EBITDA&quot;, &quot;Warrants&quot;, &quot;Goodwill&quot;, &quot;Due diligence&quot;, &quot;Synergies&quot;, &quot;CAPEX&quot;, &quot;Dilution&quot;, &quot;Economies of scale&quot;, &quot;Net debt&quot;, &quot;Covenants&quot;, &quot;Intangibles&quot;, &quot;Preferred stock&quot;, &quot;Letter of intent&quot;, &quot;Capital structure&quot;, &quot;Amalgamation&quot;, &quot;Accretion&quot;, &quot;Divestiture&quot;, &quot;Intrinsic value&quot;, &quot;Portfolio company&quot;, &quot;Acquirer&quot;, &quot;Discontinued Operations&quot;, &quot;Offer price&quot;, &quot;Restructuring charges&quot;, &quot;Angel investor&quot;, &quot;Vertical integration&quot;, &quot;Term sheet&quot;, &quot;Cash consideration&quot;, &quot;Recapitalization&quot;, &quot;Sensitivity analysis&quot;, &quot;Bootstrapping&quot;, &quot;Earn out&quot;, &quot;Leveraged buyout&quot;, &quot;Pari passu&quot;, &quot;Deal Structure&quot;, &quot;Sandbagging&quot;, &quot;Golden parachute&quot;, &quot;Backward integration&quot;, &quot;Liquidation value&quot;, &quot;Purchase price allocation&quot;, &quot;Horizontal integration&quot;, &quot;Capital asset pricing model&quot;, &quot;Pre-money valuation&quot;, &quot;Asset deal&quot;, &quot;Identifiable assets&quot;, &quot;Post-money valuation&quot;, &quot;Indication of interest&quot;, &quot;Fully diluted shares outstanding&quot;, &quot;Normalized earnings&quot;, &quot;Stock consideration&quot;, &quot;Economies of scope&quot;, &quot;Other closing costs&quot;, &quot;Tag-along rights&quot;, &quot;Drag-along rights&quot;, &quot;Confidential Information Memorandum&quot;)text:OR(&quot;Palo Alto&quot;,&quot;Mountain View&quot;,&quot;Sunnyvale&quot;,&quot;Cupertino&quot;,&quot;San Jose&quot;,&quot;Santa Clara&quot;,&quot;Milpitas&quot;,&quot;Los Gatos&quot;,&quot;Campbell&quot;,&quot;Los Altos&quot;,&quot;Stanford&quot;,&quot;Menlo Park&quot;,&quot;Burlingame&quot;,&quot;San Carlos&quot;,&quot;San Mateo&quot;,&quot;Oakland&quot;,&quot;San Francisco&quot;,&quot;San Francisco Bay Area&quot;) lastCrawlTime&gt;'2019-06-30' lastCrawlTime&lt;'2019-10-01 tags.label:'INSERT INDUSTRY LABEL or COMPANY NAME' sortBy:date</code></p>
+<h2><a class="anchor" aria-hidden="true" id="step-three-review-output-and-review-constraints"></a><a href="#step-three-review-output-and-review-constraints" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Step Three: Review Output and Review Constraints</h2>
+<p>To support the query you will need to compile a series of queries using terms you are most interested in matching. You can swap in the events and partnership terms as their own query or combine them with M&amp;A or VC terms. We’ve compiled the most frequently occurring terms found in the text or articles during the last full calendar quarter as an illustration of a query you might want to run to start:</p>
+<p><code>type:Article text:OR(&quot;Acquisition&quot;, &quot;LOI&quot;, &quot;Subsidiary&quot;, &quot;Cash flow&quot;, &quot;Capitalization&quot;, &quot;Consolidation&quot;, &quot;EBITDA&quot;, &quot;EBITDA&quot;, &quot;Warrants&quot;, &quot;Due diligence&quot;, &quot;Synergies&quot;, &quot;CAPEX&quot;, &quot;Dilution&quot;, &quot;Economies of scale&quot;, &quot;Net debt&quot;, &quot;Covenants&quot;, &quot;Intangibles&quot;, &quot;Preferred stock&quot;, &quot;Letter of intent&quot;, &quot;Capital structure&quot;, &quot;Amalgamation&quot;, &quot;Accretion&quot;, &quot;Divestiture&quot;, &quot;Intrinsic value&quot;, &quot;Portfolio company&quot;, &quot;Acquirer&quot;, &quot;Discontinued Operations&quot;, &quot;Offer price&quot;, &quot;Restructuring charges&quot;, &quot;Angel investor&quot;, &quot;Vertical integration&quot;, &quot;Term sheet&quot;, &quot;Cash consideration&quot;, &quot;Recapitalization&quot;, &quot;Sensitivity analysis&quot;, &quot;Bootstrapping&quot;, &quot;Earn out&quot;, &quot;Leveraged buyout&quot;, &quot;Pari passu&quot;, &quot;Deal Structure&quot;, &quot;Sandbagging&quot;, &quot;Golden parachute&quot;, &quot;Backward integration&quot;, &quot;Liquidation value&quot;, &quot;Purchase price allocation&quot;, &quot;Horizontal integration&quot;, &quot;Capital asset pricing model&quot;, &quot;Pre-money valuation&quot;, &quot;Asset deal&quot;, &quot;Identifiable assets&quot;, &quot;Post-money valuation&quot;, &quot;Indication of interest&quot;, &quot;Fully diluted shares outstanding&quot;, &quot;Normalized earnings&quot;, &quot;Stock consideration&quot;, &quot;Economies of scope&quot;, &quot;Other closing costs&quot;, &quot;Tag-along rights&quot;, &quot;Drag-along rights&quot;, &quot;Confidential Information Memorandum&quot;)text:OR(&quot;Palo Alto&quot;,&quot;Mountain View&quot;,&quot;Sunnyvale&quot;,&quot;Cupertino&quot;,&quot;San Jose&quot;,&quot;Santa Clara&quot;,&quot;Milpitas&quot;,&quot;Los Gatos&quot;,&quot;Campbell&quot;,&quot;Los Altos&quot;,&quot;Stanford&quot;,&quot;Menlo Park&quot;,&quot;Burlingame&quot;,&quot;San Carlos&quot;,&quot;San Mateo&quot;,&quot;Oakland&quot;,&quot;San Francisco&quot;,&quot;San Francisco Bay Area&quot;)text:OR(&quot;CA&quot;, &quot;California&quot;) lastCrawlTime&gt;'2019-06-30' lastCrawlTime&lt;'2019-10-01 sortBy:date</code></p>
+<p>Then you can swap text or add a <code>tags.label:'INSERT INDUSTRY LABEL or COMPANY NAME'</code> constraint if desired.</p>
+<p>For example:</p>
+<p><code>type:Article text:OR(&quot;Acquisition&quot;, &quot;LOI&quot;, &quot;Subsidiary&quot;, &quot;Cash flow&quot;, &quot;Capitalization&quot;, &quot;Consolidation&quot;, &quot;EBITDA&quot;, &quot;EBITDA&quot;, &quot;Warrants&quot;, &quot;Due diligence&quot;, &quot;Synergies&quot;, &quot;CAPEX&quot;, &quot;Dilution&quot;, &quot;Economies of scale&quot;, &quot;Net debt&quot;, &quot;Covenants&quot;, &quot;Intangibles&quot;, &quot;Preferred stock&quot;, &quot;Letter of intent&quot;, &quot;Capital structure&quot;, &quot;Amalgamation&quot;, &quot;Accretion&quot;, &quot;Divestiture&quot;, &quot;Intrinsic value&quot;, &quot;Portfolio company&quot;, &quot;Acquirer&quot;, &quot;Discontinued Operations&quot;, &quot;Offer price&quot;, &quot;Restructuring charges&quot;, &quot;Angel investor&quot;, &quot;Vertical integration&quot;, &quot;Term sheet&quot;, &quot;Cash consideration&quot;, &quot;Recapitalization&quot;, &quot;Sensitivity analysis&quot;, &quot;Bootstrapping&quot;, &quot;Earn out&quot;, &quot;Leveraged buyout&quot;, &quot;Pari passu&quot;, &quot;Deal Structure&quot;, &quot;Sandbagging&quot;, &quot;Golden parachute&quot;, &quot;Backward integration&quot;, &quot;Liquidation value&quot;, &quot;Purchase price allocation&quot;, &quot;Horizontal integration&quot;, &quot;Capital asset pricing model&quot;, &quot;Pre-money valuation&quot;, &quot;Asset deal&quot;, &quot;Identifiable assets&quot;, &quot;Post-money valuation&quot;, &quot;Indication of interest&quot;, &quot;Fully diluted shares outstanding&quot;, &quot;Normalized earnings&quot;, &quot;Stock consideration&quot;, &quot;Economies of scope&quot;, &quot;Other closing costs&quot;, &quot;Tag-along rights&quot;, &quot;Drag-along rights&quot;, &quot;Confidential Information Memorandum&quot;)text:OR(&quot;Palo Alto&quot;,&quot;Mountain View&quot;,&quot;Sunnyvale&quot;,&quot;Cupertino&quot;,&quot;San Jose&quot;,&quot;Santa Clara&quot;,&quot;Milpitas&quot;,&quot;Los Gatos&quot;,&quot;Campbell&quot;,&quot;Los Altos&quot;,&quot;Stanford&quot;,&quot;Menlo Park&quot;,&quot;Burlingame&quot;,&quot;San Carlos&quot;,&quot;San Mateo&quot;,&quot;Oakland&quot;,&quot;San Francisco&quot;,&quot;San Francisco Bay Area&quot;)text:OR(&quot;CA&quot;, &quot;California&quot;) lastCrawlTime&gt;'2019-06-30' lastCrawlTime&lt;'2019-10-01 tags.label:'media' sortBy:date</code></p>
+<h2><a class="anchor" aria-hidden="true" id="appendix-a-common-terms-used-in-ma-transactions-and-vc-investment"></a><a href="#appendix-a-common-terms-used-in-ma-transactions-and-vc-investment" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>APPENDIX A: Common Terms Used in M&amp;A transactions and VC Investment</h2>
+<p>List of common M&amp;A terms:</p>
+<ul>
+<li>Accretion</li>
+<li>EBITDA</li>
+<li>LOI</li>
+<li>Acquirer</li>
+<li>Acquisition</li>
+<li>Amalgamation</li>
+<li>Consolidation</li>
+<li>Angel investor</li>
+<li>Asset deal</li>
+<li>Backward integration</li>
+<li>CAPEX</li>
+<li>Capitalization</li>
+<li>Bootstrapping</li>
+<li>Capital structure</li>
+<li>Capital asset pricing model</li>
+<li>Cash consideration</li>
+<li>Cash flow</li>
+<li>CIM (Confidential Information Memorandum</li>
+<li>Covenants</li>
+<li>Deal Structure</li>
+<li>Dilution</li>
+<li>Discontinued Operations</li>
+<li>Discount for lack of control</li>
+<li>Discount for lack of marketability</li>
+<li>Discount for lack of voting rights</li>
+<li>Divestiture</li>
+<li>Drag-along rights</li>
+<li>Due diligence</li>
+<li>Earn out</li>
+<li>EBITDA</li>
+<li>Exclusivity (no-shop) requirement</li>
+<li>Economies of scale</li>
+<li>Economies of scope</li>
+<li>Fully diluted shares outstanding</li>
+<li>Golden parachute</li>
+<li>Goodwill</li>
+<li>Horizontal integration</li>
+<li>Identifiable assets</li>
+<li>Indication of interest (IOI)</li>
+<li>Intangibles</li>
+<li>Intrinsic value</li>
+<li>Letter of intent (LOI)</li>
+<li>Leveraged buyout</li>
+<li>Liquidation value</li>
+<li>Merger/Statutory</li>
+<li>Multiple</li>
+<li>Net book value of assets</li>
+<li>Net cash/Net debt deal</li>
+<li>Net debt</li>
+<li>Normalized earnings</li>
+<li>Offer price</li>
+<li>Other closing costs</li>
+<li>Pari passu</li>
+<li>Portfolio company</li>
+<li>Post-money valuation</li>
+<li>Pre-money valuation</li>
+<li>Preferred stock</li>
+<li>Pro forma shares outstanding</li>
+<li>Purchase price allocation</li>
+<li>Recapitalization</li>
+<li>Restructuring charges</li>
+<li>Sandbagging</li>
+<li>Sensitivity analysis</li>
+<li>Share/Stock deal</li>
+<li>Stock consideration</li>
+<li>Subsidiary</li>
+<li>Synergies</li>
+<li>Tag-along rights</li>
+<li>Target (Acquiree)</li>
+<li>Term sheet</li>
+<li>Timing of synergies</li>
+<li>Transaction close date</li>
+<li>Vertical integration</li>
+<li>Warrants</li>
+<li>338(h)(10) election</li>
+</ul>
+<p>List of common terms used in VC investment:</p>
+<ul>
+<li>Accelerator</li>
+<li>Accredited Investor</li>
+<li>Angel Investor</li>
+<li>Antidilution</li>
+<li>Assets Under Management</li>
+<li>Benchmark</li>
+<li>Blind Pool</li>
+<li>Board of Directors</li>
+<li>Board-Observer Rights</li>
+<li>Bootstrapped</li>
+<li>Bridge Loan</li>
+<li>Burn Rate</li>
+<li>Buyout</li>
+<li>Cap Table</li>
+<li>Capital Efficiency</li>
+<li>Capped Note</li>
+<li>Capped Participation</li>
+<li>Cash Position</li>
+<li>Closing</li>
+<li>Common Stock</li>
+<li>Conversion</li>
+<li>Convertible Debt</li>
+<li>Convertible Stock</li>
+<li>Corporate VC</li>
+<li>Crossover Investors</li>
+<li>Deal Flow</li>
+<li>Debt Financing</li>
+<li>Dilution</li>
+<li>Disruption</li>
+<li>Direct Financing</li>
+<li>Down Round</li>
+<li>Due Diligence</li>
+<li>Employee Option Pool</li>
+<li>Entrepreneur in Residence</li>
+<li>Equity</li>
+<li>Exit</li>
+<li>First-Mover Advantage</li>
+<li>First-Round Financing</li>
+<li>Follow-on Investments</li>
+<li>“Friends and Family Round”</li>
+<li>Full Ratchet</li>
+<li>Fund of Funds</li>
+<li>Gamification</li>
+<li>General Partner</li>
+<li>Growth Equity</li>
+<li>Incubator</li>
+<li>Internal Rate of Return</li>
+<li>IPO</li>
+<li>Lead Investor</li>
+<li>Leveraged buyout</li>
+<li>Limited Partner</li>
+<li>Liquidation</li>
+<li>Liquidation Preference</li>
+<li>Liquidation Preference Stacking</li>
+<li>Liquidity Event</li>
+<li>Lock-up Period</li>
+<li>Master Limited Partnership</li>
+<li>Merger</li>
+<li>Mezzanine Debt</li>
+<li>Mezzanine Financing</li>
+<li>Micro VCs</li>
+<li>Monetize</li>
+<li>Non-Participating Preferred Stock</li>
+<li>Paas</li>
+<li>Pari Passu</li>
+<li>Participating Preferred Stock</li>
+<li>Party Round</li>
+<li>Pay-to-Play</li>
+<li>Piggy Round</li>
+<li>Pitch</li>
+<li>Pivot</li>
+<li>Post-Money Valuation</li>
+<li>Pre-Money Valuation</li>
+<li>Preferred Stock (Preferential Shares)</li>
+<li>Preferred Directors</li>
+<li>Private IPO</li>
+<li>ROI</li>
+<li>Runway</li>
+<li>SaaS</li>
+<li>Seed Money</li>
+<li>Series A Funding</li>
+<li>Series B (and beyond)</li>
+<li>Shares Outstanding</li>
+<li>Shareholder Vote</li>
+<li>Signaling Risk</li>
+<li>Stock Options</li>
+<li>Term Sheet</li>
+<li>Traction</li>
+<li>Treasury Stock</li>
+<li>Uncapped Note</li>
+<li>Unicorn</li>
+<li>Use of Proceeds</li>
+<li>Value-Add Services (or add-on services)</li>
+<li>Valuation</li>
+<li>Venture Capital</li>
+<li>Venture Capitalist</li>
+<li>Vesting</li>
+<li>Voting Rights</li>
+<li>Warrant</li>
+<li>Waterfall Chart</li>
+<li>Weighted Average</li>
+</ul>
+<h2><a class="anchor" aria-hidden="true" id="appendix-b-industry-tags-commonly-found-on-the-web"></a><a href="#appendix-b-industry-tags-commonly-found-on-the-web" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>APPENDIX B: Industry tags commonly found on the Web</h2>
+<ul>
+<li>agriculture</li>
+<li>auction houses</li>
+<li>building materials</li>
+<li>cannabis</li>
+<li>chemical</li>
+<li>cleaning services</li>
+<li>construction</li>
+<li>cosmetics</li>
+<li>design</li>
+<li>education</li>
+<li>energy</li>
+<li>engineering</li>
+<li>entertainment</li>
+<li>financial services</li>
+<li>food and beverage</li>
+<li>geophysical</li>
+<li>health care</li>
+<li>hotels</li>
+<li>Internet</li>
+<li>libraries and museums</li>
+<li>luxury goods</li>
+<li>manufacturing</li>
+<li>mapping and navigation</li>
+<li>media</li>
+<li>metal supply</li>
+<li>meteorological</li>
+<li>mining</li>
+<li>nanotechnology</li>
+<li>packaged goods</li>
+<li>packaging</li>
+<li>publishing</li>
+<li>real estate</li>
+<li>renewables</li>
+<li>restaurants</li>
+<li>retail</li>
+<li>robotics</li>
+<li>services</li>
+<li>software</li>
+<li>sports</li>
+<li>storage</li>
+<li>technology</li>
+<li>telecommunications</li>
+<li>tobacco</li>
+<li>tourism</li>
+<li>transportation</li>
+<li>waste management</li>
+</ul>
+</span></div></article></div><div class="docLastUpdate"><em>Last updated by Bruno Skvorc</em></div><div class="docs-prevnext"><a class="docs-prev button" href="/docs/en/dql-index"><span class="arrow-prev">← </span><span>Diffbot Query Language (DQL)</span></a><a class="docs-next button" href="/docs/en/dql-faq"><span>DQL FAQ</span><span class="arrow-next"> →</span></a></div></div></div><nav class="onPageNav"><ul class="toc-headings"><li><a href="#step-one-break-out-each-aspect-of-the-data-need">Step One: Break Out Each Aspect of the Data Need</a></li><li><a href="#step-two-combine-constraints-to-achieve-maximum-coverage-and-accuracy-with-minimal-duplication">Step Two: Combine Constraints to Achieve Maximum Coverage and Accuracy with Minimal Duplication</a></li><li><a href="#step-three-review-output-and-review-constraints">Step Three: Review Output and Review Constraints</a></li><li><a href="#appendix-a-common-terms-used-in-ma-transactions-and-vc-investment">APPENDIX A: Common Terms Used in M&amp;A transactions and VC Investment</a></li><li><a href="#appendix-b-industry-tags-commonly-found-on-the-web">APPENDIX B: Industry tags commonly found on the Web</a></li></ul></nav></div><footer class="nav-footer" id="footer"><section class="sitemap"><a href="/" class="nav-home"><img src="/img/diffbot_white.svg" alt="Docs Suite" width="66" height="58"/></a><div><h5>Docs</h5><a href="/docs/en/intro">Tutorials</a><a href="/docs/en/guides-intro">How-to Guides</a><a href="/docs/en/explain-intro">Explainers</a><a href="/docs/en/api-intro">API Reference</a></div><div><h5>Community</h5><a href="https://stackoverflow.com/questions/tagged/diffbot" target="_blank" rel="noreferrer noopener">Stack Overflow</a><a href="https://twitter.com/diffbot" target="_blank" rel="noreferrer noopener">Twitter</a></div><div><h5>More</h5><a href="/blog">Blog</a><a href="/help">Help</a><a href="https://github.com/diffbot">GitHub</a></div></section><a href="https://diffbot.com/" target="_blank" rel="noreferrer noopener" class="fbOpenSource"><img src="/img/diffbot_white.svg" alt="Diffbot.com" width="170" height="45"/></a><section class="copyright">Copyright © 2020 Diffbot.com</section></footer></div><script type="text/javascript" src="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.js"></script><script>
                 document.addEventListener('keyup', function(e) {
                   if (e.target !== document.body) {
                     return;
