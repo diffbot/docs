@@ -200,5 +200,26 @@
         "Basics": ["error-intro"],
         "Errors": ["error-missing-preview", "error-too-many-collections", "error-all-crawling-temporarily-paused", "error-automatic-page-concatenation-timeout", "error-could-not-download-page", "error-diffbot-could-not-apply-rules", "error-error-downloading-url", "error-errors"],
         "Known issues": ["error-bug-search-query-too-long"]
+    },
+    "dql": {
+        "Knowledge Graph": [
+            "kg-index",
+            "dql-quickstart",
+            {
+                "type": "subcategory",
+                "label": "Tools and Usage",
+                "ids": ["kg-accessing",
+                    "kg-clients",
+                    "dql-excel"
+                ]
+            },
+            {
+                "type": "subcategory",
+                "label": "In-Depth",
+                "ids": ["dql-index",
+                    "dql-workflows",
+                    "dql-faq"]
+            }
+        ]
     }
 }
