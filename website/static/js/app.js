@@ -108,7 +108,7 @@ docReady(function () {
 
     // Build the dropdown
     let dropdownHtml = '<div class="dropdown"><a href="/docs/en/kg-index" class="dropbtn">Knowledge Graph</a><div class="dropdown-content">';
-    dropdownHtml += '<a href="/kgdoc">KG API Reference</a>';
+    dropdownHtml += '<a href="/kgapi">KG API Reference</a>';
     dropdownHtml += '<a href="/enhance">Enhance API Reference</a>';
     dropdownHtml += '<a href="/ontology">Ontology Docs</a>';
     dropdownHtml += '<a href="/docs/en/dql-index">Diffbot Query Language</a>';
