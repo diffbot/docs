@@ -20,7 +20,8 @@ To build and test the docs locally:
 1. Make sure you have yarn installed ([yarnpkg.com](https://yarnpkg.com))
 2. Clone this repo
 3. `cd docs/diffbot; yarn install`
-4. run `yarn start`
+4. `cd website`
+5. run `yarn start`
 
 This will open a browser with the local version running in live-reload mode, so you can see your changes as you save your files. Note that menus will not update with this approach, so you need to kill the server with `CTRL+C` and restart with `yarn start` to test menu changes.
 
