@@ -19,9 +19,7 @@ We’ve assembled some canned searches to help get you started. There is also a 
 ## Log into the Diffbot Dashboard
 
 1. First, open a browser window and navigate to [https://app.diffbot.com/](https://app.diffbot.com/).
-2. Then, submit the following credentials:
-    Username (email address): datajournalism@diffbot.com
-    Password: *Request access by emailing [datajournalism@diffbot.com](mailto:datajournalism@diffbot.com).*
+2. If you don't have login credentials for Knowledge Graph already, please [sign up here](https://www.diffbot.com/plans/kgtrial).
 3. Once you are logged in, leave the browser window open. You will be able to click the links below to view the results of each search in the Dashboard.
 
 Click here first, after you’ve logged in to the Dashboard: [Articles containing the text "2020 Presidential Race", sorted by date](https://app.diffbot.com/search/?query=type%3AArticle+text%3A%222020+Presidential+Race%22+sortBy%3Adate&from=0&size=50&active_tab=query)
