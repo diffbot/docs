@@ -4,9 +4,7 @@ title: Video Extraction API
 sidebar_label: Video Extraction API
 ---
 
-<div class="alert">The Video API is currently in beta.</div>
-
-The Video API automatically extracts detailed video information—including most metadata, thumbnail images, direct video URL and embed code—from nearly any video page or video platform on the web.
+The Video API automatically extracts detailed video information—including most metadata, thumbnail images, direct video URL and embed code from nearly any video page or video platform on the web.
 
 ## Request
 

@@ -4,7 +4,7 @@ title: Bulk API
 sidebar_label: Bulk API
 ---
 
-The Bulk API allows you to submit large numbers of URLs for Diffbot API processing. It is built atop the [Crawlbot](guides-crawl.md) API and shares much of the same underlying model. Both APIs return data in JSON format.
+The Bulk API allows you to submit large numbers of URLs for Diffbot API processing. It is built atop the [Crawlbot](api-crawlbot-api) API and shares much of the same underlying model. Both APIs return data in JSON format.
 
 ## Creating a Bulk Job
 

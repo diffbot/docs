@@ -114,8 +114,23 @@ docReady(function () {
     dropdownHtml += '<a href="/docs/en/dql-index">Diffbot Query Language</a>';
     dropdownHtml += '</div></div>';
 
+    // Build the dropdown for API
+    dropdownHtml += '<div class="dropdown"><a href="/docs/en/api-basics-index" class="dropbtn">Automatic API</a><div class="dropdown-content">';
+    dropdownHtml += '<a href="/docs/en/api-basics-index">Basics</a>';
+    dropdownHtml += '<a href="/docs/en/api-usage-index">Usage Examples</a>';
+    dropdownHtml += '<a href="/docs/en/api-intro">API Reference</a>';
+    dropdownHtml += '</div></div>';
+
+    // Build the dropdown for Batch
+    dropdownHtml += '<div class="dropdown"><a href="/docs/en/cb-basics-index" class="dropbtn">Batch Services</a><div class="dropdown-content">';
+    dropdownHtml += '<a href="/docs/en/cb-basics-index">Basics</a>';
+    dropdownHtml += '<a href="/docs/en/cb-usage-index">Usage Examples</a>';
+    dropdownHtml += '<a href="/docs/en/api-cb">API Reference</a>';
+    dropdownHtml += '</div></div>';
+
     // Insert into top nav
-    document.querySelector("ul.nav-site").innerHTML += dropdownHtml;
+    let currentNav = document.querySelector("ul.nav-site").innerHTML;
+    document.querySelector("ul.nav-site").innerHTML = dropdownHtml + currentNav;
 
     // Check if there is an H3 Knowledge Graph heading in the sidebar
     let inKgSection = false;

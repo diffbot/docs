@@ -1,0 +1,225 @@
+{
+    "docs": {
+        "Basics": ["intro"],
+        "Tutorials": [
+            "tutorials-intro",
+            {
+                "type": "subcategory",
+                "label": "Tutorials",
+                "ids": [
+                    "tutorials-new-dashboard", 
+                    "tutorials-correcting-api-output-custom", 
+                    "tutorials-custom-video", 
+                    "tutorials-crawl",
+                    "tutorials-crawl-video",
+                    "tutorials-bulk"
+                ]
+            }
+        ],
+        "How-to Guides": [
+            "guides-intro",
+            {
+                "type": "subcategory",
+                "label": "Custom API Toolkit",
+                "ids": [
+                    "index-custom-api",
+                    "guides-custom-collections", 
+                    "guides-ua", 
+                    "guides-prefilters", 
+                    "guides-manual-selectors", 
+                    "guides-data-behind-login",
+                    "guides-accessing-nonpublic-content",
+                    "guides-concatenation-custom-api",
+                    "guides-meta-elements-custom-api",
+                    "guides-combining-css-selectors",
+                    "guides-site-templates-custom-api",
+                    "guides-correct-images-custom-api",
+                    "guides-injecting-javascript-replaying-ajax", 
+                    "guides-regex-custom-api",
+                    "guides-replace-filter-custom-api",
+                    "guides-custom-headers"
+                ]
+            },
+            {
+                "type": "subcategory",
+                "label": "Crawlbot / Bulk jobs",
+                "ids": [
+                    "index-crawlbot",
+                    "index-bulk",
+                    "guides-patterns", 
+                    "guides-crawl-depth", 
+                    "guides-restrict-domain", 
+                    "guides-crawlbot-bulk-querystring-parameter", 
+                    "guides-sitemap-as-seed",
+                    "guides-limit-article-processing-publishing-date", 
+                    "guides-multiple-crawl-seeds", 
+                    "guides-multiple-apis-single-crawl",
+                    "guides-authenticated-crawling", 
+                    "guides-recurring-crawls",
+                    "guides-check-results-specific-page-type", 
+                    "guides-extract-recent-news-content",
+                    "guides-neverending-crawl-dynamic-urls", 
+                    "guides-crawling-ajax-generated-links", 
+                    "guides-download-latest-round-crawl-results",
+                    "guides-troubleshooting-crawls"
+                ]
+            },
+            {
+                "type": "subcategory",
+                "label": "Accounts / Finance",
+                "ids": [
+                    "guides-pdf-invoices", "guides-manual-invoicing-custom-billing", "guides-update-credit-card"
+                ]
+            },
+            {
+                "type": "subcategory",
+                "label": "Automatic APIs",
+                "ids": [
+                    "guides-concatenate-multipage-articles", 
+                    "guides-backup-restore-rules", 
+                    "guides-multiple-url-patterns-same-site",
+                    "guides-fixing-analyze-page-type",
+                    "guides-migrate-rules-apis-v3",
+                    "guides-other-product-currencies", 
+                    "guides-multi-page-articles-discussions", 
+                    "guides-improving-response-times",
+                    "guides-semantria",
+                    "guides-analyze-api-fallback", 
+                    "guides-when-to-use-analyze", 
+                    "guides-spoken-languages-identified",
+                    "guides-infinite-endless-scrolling"
+                ]
+            },
+            {
+                "type":"subcategory",
+                "label": "Other",
+                "ids": [
+                    "guides-zapier"
+                ]
+            }
+        ],
+        "Explainers": [
+            "explain-intro",
+            {
+                "type": "subcategory",
+                "label": "Custom and Automatic APIs",
+                "ids": [
+                    "explain-apis-javascript-support", 
+                    "explain-apis-follow-redirects",
+                    "explain-custom-rule-breaks", 
+                    "explain-pdf-extraction",
+                    "explain-posting-text-html", 
+                    "explain-article-api-date-normalization",
+                    "explain-non-english-pages",
+                    "explain-moving-to-new-api-versions",
+                    "explain-what-counts-as-api-call",
+                    "explain-diffbot-api-timeout",
+                    "explain-cached-api-responses",
+                    "explain-hashtag-links"
+                ]
+            },
+            {
+                "type": "subcategory",
+                "label":"Crawlbot / Bulk jobs",
+                "ids": [
+                    "explain-cvp", "explain-regex", "explain-bulk-processing-results-ordering",
+                    "explain-bulk-processing-speed", "explain-robots-txt", "explain-page-deduplication",
+                    "explain-how-long-crawl-site", "explain-when-crawl-bulk-data-deleted", 
+                    "explain-bulk-url-report", "explain-crawl-url-report"
+                ]
+            },
+            {
+                "type": "subcategory",
+                "label": "Proxies",
+                "ids": [
+                    "explain-using-different-proxies"
+                ]
+            },
+            {
+                "type": "subcategory",
+                "label": "Global Index",
+                "ids": [
+                    "explain-global-index"
+                ]
+            },
+            {
+                "type": "subcategory",
+                "label": "Misc",
+                "ids": [
+                    "explain-gdpr", "explain-child-tokens"
+                ]
+            }
+
+        ]
+    },
+    "docs-other": {
+        "Automatic and Custom APIs": [
+            "api-intro", 
+            {
+                "type": "subcategory",
+                "label": "Article API",
+                "ids": ["api-article", "api-article-html", "api-semantria"]
+            },
+            {
+                "type": "subcategory",
+                "label": "Analyze API",
+                "ids": ["api-analyze"]
+            },
+            {
+                "type": "subcategory",
+                "label": "Discussion API",
+                "ids": ["api-discussion"]
+            },            
+            {
+                "type": "subcategory",
+                "label": "Media APIs",
+                "ids": ["api-image", "api-video"]
+            },
+            {
+                "type": "subcategory",
+                "label": "Product API",
+                "ids": ["api-product", "api-product-normalized-specs", "api-product-categories"]
+            },
+            {
+                "type": "subcategory",
+                "label": "Account API",
+                "ids": ["api-account"]
+            },
+            {
+                "type": "subcategory",
+                "label": "Multi-URL APIs",
+                "ids": ["api-crawlbot-api", "api-bulk", "api-search"]
+            },
+            {
+                "type": "subcategory",
+                "label": "Custom API",
+                "ids": ["api-custom", "api-selectors-filters", "api-managing-rules-programmatically"]
+            }]
+    },
+    "dql": {
+        "Knowledge Graph": [
+            "kg-index",
+            "dql-quickstart",
+            {
+                "type": "subcategory",
+                "label": "Tools and Usage",
+                "ids": ["kg-accessing",
+                    "kg-clients",
+                    "dql-excel"
+                ]
+            },
+            {
+                "type": "subcategory",
+                "label": "In-Depth",
+                "ids": ["dql-index",
+                    "dql-workflows",
+                    "dql-faq"]
+            }
+        ]
+    },
+    "docs-errors": {
+        "Basics": ["error-intro"],
+        "Errors": ["error-missing-preview", "error-too-many-collections", "error-all-crawling-temporarily-paused", "error-automatic-page-concatenation-timeout", "error-could-not-download-page", "error-diffbot-could-not-apply-rules", "error-error-downloading-url", "error-errors"],
+        "Known issues": ["error-bug-search-query-too-long"]
+    },
+}
