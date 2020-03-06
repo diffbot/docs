@@ -149,4 +149,19 @@ docReady(function () {
         let newSection = '<div class="navGroup subNavGroup"><h4 class="navGroupSubcategoryTitle">API Reference Docs</h4><ul><li class="navListItem"><a class="navItem" href="/kgapi">Knowledge Graph API Reference</a></li><li class="navListItem"><a class="navItem" href="/enhance">Enhance API Reference</a></li><li class="navListItem"><a class="navItem" href="/ontology">Ontology Reference</a></li></ul></div>'
         document.querySelector(".toc .toggleNav .navGroups .navGroup>ul").innerHTML += newSection;
     }
+
+    // Store sidebar in localstorage if exists
+    let sidebar = document.querySelector("#docsNav");
+    if (null !== sidebar) {
+        localStorage.setItem("docsNav", sidebar.innerHTML);
+    }
+
+    // If there is no sidebar on this page, insert the previous sidebar
+    if (null === sidebar) {
+    let docMainWrapper = document.querySelector(".docMainWrapper");
+    docMainWrapper.innerHTML = '<div class="docsNavContainer" id="docsNav">' 
+        + localStorage.getItem("docsNav") 
+        + "</div>" 
+        + docMainWrapper.innerHTML;
+    }
 })
