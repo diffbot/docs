@@ -1,7 +1,8 @@
 ---
 id: api-basics-product
-title: Product API Index
-sidebar_label: Index
+title: Product API Basic Usage
+sidebar_label: Basic Usage
+description: Basic usage of the Diffbot Product API
 ---
 
 The Product API automatically extracts complete data from any shopping or e-commerce product page. Retrieve full pricing information, product IDs (SKU, UPC, MPN), images, product specifications, brand and more.

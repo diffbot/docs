@@ -4,26 +4,7 @@ title: Using Crawlbot
 sidebar_label: Using Crawlbot
 ---
 
-Crawlbot usage tutorials.
-
-## Crawlbot basics
-
-- [Crawlbot Basic Walkthrough](tutorials-crawl)
-- [Crawlbot Video Tutorials](tutorials-crawl-video)
-- [Crawlbot API](api-crawlbot-api)
-- [Crawling vs Processing](explain-crawling-versus-processing)
-- [Does Crawlbot respect the robots.txt protocol?](explain-robots-txt)
-- [How does Diffbot handle duplicate pages/content while crawling?](explain-page-deduplication)
-- [How long does it take to crawl a site?](explain-how-long-crawl-site)
-- [When is crawl or bulk job data deleted?](explain-when-crawl-bulk-data-deleted)
-- [Crawlbot URL Report](explain-crawl-url-report)
-
-## Crawlbot debugging
-
-- [Too Many Collections Error](error-too-many-collections)
-- [Why is my crawl not crawling (and other uncommon crawl problems)?](guides-troubleshooting-crawls)
-
-## Crawlbot specifics
+Crawlbot usage guides.
 
 - [Crawl and Processing Patterns and Regexes](guides-patterns)
 - [Limiting crawl depth](guides-crawl-depth)

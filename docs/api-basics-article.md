@@ -1,7 +1,8 @@
 ---
 id: api-basics-article
-title: Article API Index
-sidebar_label: Index
+title: Article API Basic Usage
+sidebar_label: Basic Usage
+description: Basic usage of the Diffbot Article API
 ---
 
 The Article API is used to extract clean article text and other data from news articles, blog posts and other text-heavy pages. Retrieve the full-text, cleaned and [normalized HTML](api-article-html.md), related images and videos, author, date, tags—automatically, from any article on any site.

@@ -1,14 +1,15 @@
 ---
-id: api-basics-image
-title: Image API Index
-sidebar_label: Index
+id: api-basics-account
+title: Account API Basic Usage
+sidebar_label: Basic Usage
+description: Basic usage of the Diffbot Account API
 ---
 
+The Account API returns information on a token's call volume and billing history.
 
-The Image API identifies the primary image(s) of a submitted web page and returns comprehensive information and metadata for each image.
-The full API reference of Image API can be found [here](api-image).
+The full API reference of Account API can be found [here](api-account).
 
-Learn more about the Image API:
+Learn more about the Account API:
 
 - link
 - link

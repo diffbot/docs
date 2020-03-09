@@ -35,7 +35,7 @@
         {
             "type": "subcategory",
             "label": "Custom API",
-            "ids": ["api-basics-custom"]
+            "ids": ["api-basics-custom", "tutorials-custom-video"]
         },
         {
             "type": "subcategory",
@@ -95,7 +95,7 @@
             {
                 "type": "subcategory",
                 "label": "Crawlbot Basics",
-                "ids": ["cb-basics-cb"]
+                "ids": ["cb-basics-cb", "tutorials-crawl-video"]
             },
             {
                 "type": "subcategory",
