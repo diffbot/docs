@@ -15,6 +15,10 @@ Tutorials on using Bulk jobs to process several URLs at once.
 - [When is bulk job data deleted?](explain-when-crawl-bulk-data-deleted)
 - [Bulk Processing URL Report](explain-bulk-url-report)
 
+## Bulk Processing Problems
+
+- [What does “all crawling temporarily paused by root administrator…” mean?](error-all-crawling-temporarily-paused)
+
 ## Bulk Processing specifics
 
 - [Using the Bulk API Querystring Parameter](guides-crawlbot-bulk-querystring-parameter)

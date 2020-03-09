@@ -8,6 +8,8 @@ Diffbot's Search API allows you to search the extracted content of your Diffbot 
 
 In order to search a collection, you must first create that collection using either Crawlbot or the Bulk API. A collection can be searched before a crawl or bulk job is finished.
 
+> Note: when using too many search query params, the query can [reportedly sometimes fail](error-bug-search-query-too-long). If you encounter this bug, please let us know at [support@diffbot.com](mailto:support@diffbot.com).
+
 ## Request
 
 To use the Search API, perform a GET request on the following endpoint:

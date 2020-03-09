@@ -10,6 +10,6 @@ The full API reference of Product API can be found [here](api-product).
 
 Learn more about the Product API:
 
-- link
+- [Usage Examples](api-usage-product)
 - link
 - link

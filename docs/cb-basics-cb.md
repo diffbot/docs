@@ -26,6 +26,7 @@ Note that the limit of active crawls on a single token is 1000. More information
 
 - [Too Many Collections Error](error-too-many-collections)
 - [Why is my crawl not crawling (and other uncommon crawl problems)?](guides-troubleshooting-crawls)
+- [What does “all crawling temporarily paused by root administrator…” mean?](error-all-crawling-temporarily-paused)
 
 ## Crawlbot specifics
 
