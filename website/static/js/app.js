@@ -92,30 +92,43 @@ docReady(function () {
 
 
     // Build the dropdown
-    let dropdownHtml = '<div class="dropdown"><a href="/docs/en/kg-index" class="dropbtn">Knowledge Graph</a><div class="dropdown-content">';
-    dropdownHtml += '<a href="/kgapi">KG API Reference</a>';
-    dropdownHtml += '<a href="/enhance">Enhance API Reference</a>';
-    dropdownHtml += '<a href="/ontology">Ontology Docs</a>';
-    dropdownHtml += '<a href="/docs/en/dql-index">Diffbot Query Language</a>';
-    dropdownHtml += '</div></div>';
+    let dropDown1 = document.createElement("div");
+    dropDown1.classList.add("dropdown");
+    let dd1html = '<a href="/docs/en/kg-index" class="dropbtn">Knowledge Graph</a><div class="dropdown-content">';
+    dd1html += '<a href="/kgapi">KG API Reference</a>';
+    dd1html += '<a href="/enhance">Enhance API Reference</a>';
+    dd1html += '<a href="/ontology">Ontology Docs</a>';
+    dd1html += '<a href="/docs/en/dql-index">Diffbot Query Language</a>';
+    dd1html += '</div>';
+    dropDown1.innerHTML = dd1html;
 
     // Build the dropdown for API
-    dropdownHtml += '<div class="dropdown"><a href="/docs/en/api-basics-index" class="dropbtn">Automatic API</a><div class="dropdown-content">';
-    dropdownHtml += '<a href="/docs/en/api-basics-index">Basics</a>';
-    dropdownHtml += '<a href="/docs/en/api-usage-index">Usage Examples</a>';
-    dropdownHtml += '<a href="/docs/en/api-intro">API Reference</a>';
-    dropdownHtml += '</div></div>';
+    let dropDown2 = document.createElement("div");
+    dropDown2.classList.add("dropdown");
+    let dd2html = '<a href="/docs/en/api-basics-index" class="dropbtn">Automatic API</a><div class="dropdown-content">';
+    dd2html += '<a href="/docs/en/api-basics-index">Basics</a>';
+    dd2html += '<a href="/docs/en/api-usage-index">Usage Examples</a>';
+    dd2html += '<a href="/docs/en/api-intro">API Reference</a>';
+    dd2html += '</div>';
+    dropDown2.innerHTML = dd2html;
 
     // Build the dropdown for Batch
-    dropdownHtml += '<div class="dropdown"><a href="/docs/en/cb-basics-index" class="dropbtn">Batch Services</a><div class="dropdown-content">';
-    dropdownHtml += '<a href="/docs/en/cb-basics-index">Basics</a>';
-    dropdownHtml += '<a href="/docs/en/cb-usage-index">Usage Examples</a>';
-    dropdownHtml += '<a href="/docs/en/api-cb">API Reference</a>';
-    dropdownHtml += '</div></div>';
+    let dropDown3 = document.createElement("div");
+    dropDown3.classList.add("dropdown");
+    let dd3html = '<a href="/docs/en/cb-basics-index" class="dropbtn">Batch Services</a><div class="dropdown-content">';
+    dd3html += '<a href="/docs/en/cb-basics-index">Basics</a>';
+    dd3html += '<a href="/docs/en/cb-usage-index">Usage Examples</a>';
+    dd3html += '<a href="/docs/en/api-cb">API Reference</a>';
+    dd3html += '</div>';
+    dropDown3.innerHTML = dd3html;
 
     // Insert into top nav
-    let currentNav = document.querySelector("ul.nav-site").innerHTML;
-    document.querySelector("ul.nav-site").innerHTML = dropdownHtml + currentNav;
+    //let currentNav = document.querySelector("ul.nav-site").innerHTML;
+    //document.querySelector("ul.nav-site").innerHTML = dropdownHtml + currentNav;
+    let currentNav = document.querySelector("ul.nav-site");
+    currentNav.prepend(dropDown1);
+    currentNav.prepend(dropDown3);
+    currentNav.prepend(dropDown2);
 
     // Check if there is an H3 Knowledge Graph heading in the sidebar
     let inKgSection = false;
