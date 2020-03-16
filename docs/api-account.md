@@ -38,7 +38,7 @@ The Account API returns account details in JSON format. Items returned will incl
 | &#x21B3;`date` |Date, e.g. `2015-10-01`. |
 | &#x21B3;`calls` | Total number of API calls made. |
 | &#x21B3;`proxyCalls` | Total number of calls made using proxy servers. [Read more](explain-using-different-proxies.md). |
-| &#x21B3;`giCalls` | Total number of search calls made against the [Global Index](explain-global-index.md). |
+| &#x21B3;`giCalls` | Total number of search calls made against the [Global Index](cb-basics-gi.md). |
 | `invoices` | Array of invoices for paid accounts. |
 | &#x21B3;`date` | Date of invoice. |
 | &#x21B3;`periodStart` | Billing period start date (resolved to day). |

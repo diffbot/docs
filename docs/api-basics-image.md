@@ -12,6 +12,7 @@ Learn more about the Image API:
 
 - [Do Diffbot APIs Follow Redirects?](explain-apis-follow-redirects)
 - [Do Diffbot APIs Execute JavaScript?](explain-apis-javascript-support)
+- [How long can a single request take / what is the Diffbot API timeout?](/docs/en/explain-diffbot-api-timeout)
 
 Once you've gone through the basics above, proceed with learning about:
 

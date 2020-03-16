@@ -6,6 +6,8 @@ sidebar_label: Index
 
 Here are some examples on using, customizing, and integrating this API.
 
+- [API reference](api-article)
+
 ## Resolving Issues
 
 - [Automatic Page Concatenation Exceeded Timeout Error](error-automatic-page-concatenation-timeout)

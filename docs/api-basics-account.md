@@ -11,9 +11,7 @@ The full API reference of Account API can be found [here](api-account).
 
 Learn more about the Account API:
 
-- link
-- link
-- link
+- [Can I create child tokens for my main token?](explain-child-tokens)
 
 Once you've gone through the basics above, proceed with learning about:
 

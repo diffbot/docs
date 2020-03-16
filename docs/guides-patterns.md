@@ -6,7 +6,7 @@ sidebar_label: Crawl and Processing Patterns and Regexes
 
 <p>Crawlbot offers many ways to manually narrow or refine the pages crawled or processed by Diffbot APIs.</p>
 
-([Read our overview of crawling vs processing](explain-cvp))
+([Read our overview of crawling vs processing](explain-crawling-versus-processing))
 
 <p><strong>Patterns (“Crawl” and “Processing”)</strong></p>
 <p>Patterns allow you to quickly and easily restrict pages crawled or processed based on simple URL string matches.</p>

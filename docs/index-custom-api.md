@@ -39,4 +39,4 @@ sidebar_label: API Toolkit Index
 *   [Can Diffbot APIs Extract Content from PDFs or Other Documents?](/docs/en/explain-pdf-extraction)
 *   [Can I send HTML or text directly to Diffbot APIs?](/docs/en/explain-posting-text-html)
 *   [What counts as an API call?](/docs/en/explain-what-counts-as-api-call)
-*   [How long can a single request take / what is the Diffbot API timeout?](/docs/en/explain-diffbot-api-timeout)
+- [How long can a single request take / what is the Diffbot API timeout?](/docs/en/explain-diffbot-api-timeout)

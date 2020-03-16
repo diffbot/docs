@@ -37,17 +37,17 @@ class Footer extends React.Component {
           </a>
           <div>
             <h5>Docs</h5>
-            <a href={this.docUrl('intro', this.props.language || "en")}>
-              Tutorials
+            <a href={this.docUrl('api-basics-index', this.props.language || "en")}>
+              Automatic API
             </a>
-            <a href={this.docUrl('guides-intro', this.props.language || "en")}>
-              How-to Guides
+            <a href={this.docUrl('cb-basics-index', this.props.language || "en")}>
+              Batch Services
             </a>
-            <a href={this.docUrl('explain-intro', this.props.language || "en")}>
-              Explainers
+            <a href={this.docUrl('kg-index', this.props.language || "en")}>
+              Knowledge Graph
             </a>
-            <a href={this.docUrl('api-intro', this.props.language || "en")}>
-              API Reference
+            <a href={this.docUrl('explain-gdpr', this.props.language || "en")}>
+              Diffbot and GDPR
             </a>
           </div>
           <div>

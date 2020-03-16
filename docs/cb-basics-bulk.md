@@ -45,11 +45,19 @@ You can access processed data anytime during your bulk job, or after it complete
 
 If you only want to access a subset of your data, the [Search API](cb-basics-search) allows much more flexibility in searching and retrieving only the matching items from queries.
 
+### Speed and Results Ordering
+
+The Bulk API/Bulk Processing service simultaneously extracts data from multiple pages at once, and indexes the data as it is returned from Diffbot APIs.
+
+Because many factors enter in to when data is successfully returned — among them the speed of a site’s response, the need for retries if a site returns a temporary error, and the potential for incorrect or invalid URLs — there is no reliable order to the output of a downloaded CSV or JSON result set.
+
+The performance of Diffbot’s Bulk processing web extraction service depends on many of the same factors. The most common reason for a bulk job returning data more slowly than expected, however, is if a job’s URLs are from a limited number of sources and/or if a job’s URLs are from very popular sources. Diffbot has a global queue in order to maintain a level of politeness toward individual domains and IP addresses (and prevent overloading individual servers and sites). A bulk job with URLs from a single domain will finish much more slowly than one with URLs from many different locations.
+
+Note that spreading out URLs across many different jobs will have no performance effect, as our global queue prevents visiting a single site too often from any part of Diffbot’s infrastructure.
+
 ## Bulk Processing Basics
 
 - [Diffbot Regex Syntax](explain-regex)
-- [Are bulk processing URLs returned in the same order as submitted?](explain-bulk-processing-results-ordering)
-- [How quickly does the Bulk Service process web pages?](explain-bulk-processing-speed)
 - [When is bulk job data deleted?](explain-when-crawl-bulk-data-deleted)
 - [Bulk Processing URL Report](explain-bulk-url-report)
 - [Do Diffbot APIs Follow Redirects?](explain-apis-follow-redirects)

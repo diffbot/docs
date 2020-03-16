@@ -55,6 +55,8 @@ Once saved, your rule will take immediate effect for API calls (a) using the spe
 - [Building Custom Collections](guides-custom-collections)
 - [Do Diffbot APIs Follow Redirects?](explain-apis-follow-redirects)
 - [Do Diffbot APIs Execute JavaScript?](explain-apis-javascript-support)
+- [What happens to my rules if a website changes its markup?](explain-custom-rule-breaks)
+- [How long can a single request take / what is the Diffbot API timeout?](/docs/en/explain-diffbot-api-timeout)
 
 Once you've gone through the basics above, proceed with learning about:
 

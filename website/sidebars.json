@@ -106,7 +106,12 @@
                 "type": "subcategory",
                 "label": "Search API Basics",
                 "ids": ["cb-basics-search"]
-            }  
+            },
+            {
+                "type": "subcategory",
+                "label": "Global Index",
+                "ids": ["cb-basics-gi"]
+            }
         ]
     },
     "cb-usage": {
@@ -126,7 +131,12 @@
                 "type": "subcategory",
                 "label": "Search API Usage Examples",
                 "ids": ["cb-usage-search"]
-            }  
+            },
+            {
+                "type": "subcategory",
+                "label": "Global Index Usage Examples",
+                "ids": ["cb-usage-gi"]
+            }    
         ]
     },
     "docs-cb": {

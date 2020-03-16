@@ -122,8 +122,8 @@
                 "type": "subcategory",
                 "label":"Crawlbot / Bulk jobs",
                 "ids": [
-                    "explain-cvp", "explain-regex", "explain-bulk-processing-results-ordering",
-                    "explain-bulk-processing-speed", "explain-robots-txt", "explain-page-deduplication",
+                    "explain-cvp", "explain-regex",
+                    "explain-robots-txt", "explain-page-deduplication",
                     "explain-how-long-crawl-site", "explain-when-crawl-bulk-data-deleted", 
                     "explain-bulk-url-report", "explain-crawl-url-report"
                 ]

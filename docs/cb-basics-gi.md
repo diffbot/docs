@@ -1,7 +1,7 @@
 ---
-id: explain-global-index
-title: Diffbot's Global Index
-sidebar_label: Global Index
+id: cb-basics-gi
+title: Introduction into Global Index
+sidebar_label: Introduction into Global Index
 ---
 
 This page explains how the [Global Index](https://www.diffbot.com/products/globalindex/) works and what it's for.
@@ -12,7 +12,7 @@ Access to the Global Index requires a [paid subscription](http://www.diffbot.com
 
 The Global Index is built atop the Diffbot [Search API](api-search) and is populated by Diffbot’s [Article](api-article) and [Discussion](api-discussion) APIs; as such, API syntax and data output are consistent with the rest of the Diffbot platform.
 
-Our updated Developer Dashboard — scheduled for a Q1 2020 release — also offers a UI for performing Global Index searches. Contact us if you are interested in acquiring beta access to the [new Dashboard](tutorials-new-dashboard).
+Our updated Developer Dashboard — scheduled for a Q2 2020 release — also offers a UI for performing Global Index searches. Contact us if you are interested in acquiring beta access to the [new Dashboard](tutorials-new-dashboard).
 
 ## How often are sites crawled in the Global Index?
 
