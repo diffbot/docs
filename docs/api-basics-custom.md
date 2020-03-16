@@ -53,3 +53,10 @@ Once saved, your rule will take immediate effect for API calls (a) using the spe
 
 - [Custom API Video Tutorials](tutorials-custom-video)
 - [Building Custom Collections](guides-custom-collections)
+- [Do Diffbot APIs Follow Redirects?](explain-apis-follow-redirects)
+- [Do Diffbot APIs Execute JavaScript?](explain-apis-javascript-support)
+
+Once you've gone through the basics above, proceed with learning about:
+
+- [Usage Examples](api-usage-product)
+- [API reference](api-product)

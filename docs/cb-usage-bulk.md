@@ -14,6 +14,8 @@ Tutorials on using Bulk jobs to process several URLs at once.
 - [How quickly does the Bulk Service process web pages?](explain-bulk-processing-speed)
 - [When is bulk job data deleted?](explain-when-crawl-bulk-data-deleted)
 - [Bulk Processing URL Report](explain-bulk-url-report)
+- [Do Diffbot APIs Follow Redirects?](explain-apis-follow-redirects)
+- [Do Diffbot APIs Execute JavaScript?](explain-apis-javascript-support)
 
 ## Bulk Processing Problems
 

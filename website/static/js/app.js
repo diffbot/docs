@@ -88,21 +88,6 @@ docReady(function () {
     if (wideMode) {
         // Remove footer
         document.querySelector("footer").remove();
-
-        // Calculate window height
-        let height = window.innerHeight - 60;
-
-        // Apply height to iframe
-        const iframe = document.querySelector("iframe");
-
-        iframe.style.height = height + "px";
-
-        // This does not work. Iframes cannot be modified unless on same origin. Subdomains don't count.
-        // iframe.addEventListener("load", function(e){
-        //     //resizeIframe(iframe);
-        //     console.log("Testing iframe mod");
-        //     iframe.contentWindow.document.querySelector("nav").remove();
-        // });
     }
 
 
@@ -159,9 +144,11 @@ docReady(function () {
     // If there is no sidebar on this page, insert the previous sidebar
     if (null === sidebar) {
     let docMainWrapper = document.querySelector(".docMainWrapper");
-    docMainWrapper.innerHTML = '<div class="docsNavContainer" id="docsNav">' 
-        + localStorage.getItem("docsNav") 
-        + "</div>" 
-        + docMainWrapper.innerHTML;
+    if (null !== docMainWrapper) {
+        docMainWrapper.innerHTML = '<div class="docsNavContainer" id="docsNav">' 
+            + localStorage.getItem("docsNav") 
+            + "</div>" 
+            + docMainWrapper.innerHTML;
+        }
     }
 })

@@ -21,6 +21,8 @@ Note that the limit of active crawls on a single token is 1000. More information
 - [How long does it take to crawl a site?](explain-how-long-crawl-site)
 - [When is crawl or bulk job data deleted?](explain-when-crawl-bulk-data-deleted)
 - [Crawlbot URL Report](explain-crawl-url-report)
+- [Do Diffbot APIs Follow Redirects?](explain-apis-follow-redirects)
+- [Do Diffbot APIs Execute JavaScript?](explain-apis-javascript-support)
 
 ## Crawlbot debugging
 

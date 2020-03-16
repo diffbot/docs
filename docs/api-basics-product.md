@@ -11,6 +11,10 @@ The full API reference of Product API can be found [here](api-product).
 
 Learn more about the Product API:
 
+- [Do Diffbot APIs Follow Redirects?](explain-apis-follow-redirects)
+- [Do Diffbot APIs Execute JavaScript?](explain-apis-javascript-support)
+
+Once you've gone through the basics above, proceed with learning about:
+
 - [Usage Examples](api-usage-product)
-- link
-- link
+- [API reference](api-product)

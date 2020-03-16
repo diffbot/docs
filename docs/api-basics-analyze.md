@@ -33,4 +33,10 @@ Custom rules applied to a specific API, and specific API parameters (e.g., `fiel
 
 Learn more about the Analyze API:
 
+- [Do Diffbot APIs Follow Redirects?](explain-apis-follow-redirects)
+- [Do Diffbot APIs Execute JavaScript?](explain-apis-javascript-support)
+
+Once you've gone through the basics above, proceed with learning about:
+
 - [Usage Examples](api-usage-analyze)
+- [API reference](api-analyze)

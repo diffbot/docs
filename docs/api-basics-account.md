@@ -14,3 +14,8 @@ Learn more about the Account API:
 - link
 - link
 - link
+
+Once you've gone through the basics above, proceed with learning about:
+
+- [Usage Examples](api-usage-account)
+- [API reference](api-account)

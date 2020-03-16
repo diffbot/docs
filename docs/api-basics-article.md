@@ -11,6 +11,10 @@ The full API reference of Article API can be found [here](api-article).
 
 Learn more about the Article API:
 
-- link
-- link
-- link
+- [Do Diffbot APIs Follow Redirects?](explain-apis-follow-redirects)
+- [Do Diffbot APIs Execute JavaScript?](explain-apis-javascript-support)
+
+Once you've gone through the basics above, proceed with learning about:
+
+- [Usage Examples](api-usage-article)
+- [API reference](api-article)
