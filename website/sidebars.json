@@ -1,189 +1,206 @@
 {
-    "api-basics": {
-        "API Basics": [
-        "api-basics-index",
+    "product-api": {
+        "Product API": [
         {
             "type": "subcategory",
-            "label": "Analyze API",
+            "label": "Basics",
+            "ids": ["api-basics-product", "api-product-categories"]
+        },
+        {
+            "type": "subcategory",
+            "label": "Recipes",
+            "ids": ["api-usage-product"]
+        }, 
+        {
+            "type": "subcategory",
+            "label": "API",
+            "ids": ["api-product"]
+        }
+        ]
+    },
+    "article-api": {
+        "Article API": [
+        {
+            "type": "subcategory",
+            "label": "Basics",
+            "ids": ["api-basics-article", "api-article-html", "api-semantria"]
+        },
+        {
+            "type": "subcategory",
+            "label": "Recipes",
+            "ids": ["api-usage-article"]
+        },        
+        {
+            "type": "subcategory",
+            "label": "API",
+            "ids": ["api-article"]
+        }        ]
+    },
+    "analyze-api": {
+        "Analyze API": [
+        {
+            "type": "subcategory",
+            "label": "Basics",
             "ids": ["api-basics-analyze"]
         },
         {
             "type": "subcategory",
-            "label": "Product API",
-            "ids": ["api-basics-product", "api-product-categories"]
+            "label": "Recipes",
+            "ids": ["api-usage-analyze"]
         },        
         {
             "type": "subcategory",
-            "label": "Article API",
-            "ids": ["api-basics-article", "api-article-html"]
-        },
+            "label": "API",
+            "ids": ["api-analyze"]
+        }        ]
+    },
+    "image-api": {
+        "Image API": [
         {
             "type": "subcategory",
-            "label": "Image API",
+            "label": "Basics",
             "ids": ["api-basics-image"]
         },
         {
             "type": "subcategory",
-            "label": "Video API",
+            "label": "Recipes",
+            "ids": ["api-usage-image"]
+        },        
+        {
+            "type": "subcategory",
+            "label": "API",
+            "ids": ["api-image"]
+        }        ]
+    },
+    "video-api": {
+        "Video API": [
+        {
+            "type": "subcategory",
+            "label": "Basics",
             "ids": ["api-basics-video"]
         },
         {
             "type": "subcategory",
-            "label": "Discussion API",
+            "label": "Recipes",
+            "ids": ["api-usage-video"]
+        },        
+        {
+            "type": "subcategory",
+            "label": "API",
+            "ids": ["api-video"]
+        }        ]
+    },
+    "discussion-api": {
+        "Discussion API": [
+        {
+            "type": "subcategory",
+            "label": "Basics",
             "ids": ["api-basics-discussion"]
         },
         {
             "type": "subcategory",
-            "label": "Custom API",
+            "label": "Recipes",
+            "ids": ["api-usage-discussion"]
+        },        
+        {
+            "type": "subcategory",
+            "label": "API",
+            "ids": ["api-discussion"]
+        }        ]
+    },
+    "custom-api": {
+        "Custom API": [
+        {
+            "type": "subcategory",
+            "label": "Basics",
             "ids": ["api-basics-custom", "tutorials-custom-video"]
         },
         {
             "type": "subcategory",
-            "label": "Account API",
-            "ids": ["api-basics-account"]
-        }
-    ]
-    },
-    "api-usage": {
-        "Usage Examples": [
-        "api-usage-index",
-        {
-            "type": "subcategory",
-            "label": "Analyze API",
-            "ids": ["api-usage-analyze"]
-        },
-        {
-            "type": "subcategory",
-            "label": "Product API",
-            "ids": ["api-usage-product"]
-        },        
-        {
-            "type": "subcategory",
-            "label": "Article API",
-            "ids": ["api-usage-article"]
-        },
-        {
-            "type": "subcategory",
-            "label": "Image API",
-            "ids": ["api-usage-image"]
-        },
-        {
-            "type": "subcategory",
-            "label": "Video API",
-            "ids": ["api-usage-video"]
-        },
-        {
-            "type": "subcategory",
-            "label": "Discussion API",
-            "ids": ["api-usage-discussion"]
-        },
-        {
-            "type": "subcategory",
-            "label": "Custom API",
+            "label": "Recipes",
             "ids": ["api-usage-custom"]
         },
         {
             "type": "subcategory",
-            "label": "Account API",
-            "ids": ["api-usage-account"]
+            "label": "API",
+            "ids": [ "api-custom", "api-selectors-filters", "api-managing-rules-programmatically"]
         }
-    ]
+       
+        ]
     },
-    "cb-basics": {
-        "Batch Services Basics": [
-            "cb-basics-index",
+    "account-api": {
+        "Account API": [
+        {
+            "type": "subcategory",
+            "label": "Basics",
+            "ids": ["api-basics-account"]
+        },
+        {
+            "type": "subcategory",
+            "label": "Recipes",
+            "ids": ["api-usage-account"]
+        },        
+        {
+            "type": "subcategory",
+            "label": "API",
+            "ids": [ "api-account"]
+        }
+               ]
+    },
+    "crawlbot": {
+        "Crawlbot": [
             {
                 "type": "subcategory",
-                "label": "Crawlbot Basics",
+                "label": "Basics",
                 "ids": ["cb-basics-cb", "tutorials-crawl-video"]
             },
             {
                 "type": "subcategory",
-                "label": "Bulk Job Basics",
+                "label": "Recipes",
+                "ids": ["cb-usage-cb"]
+            },        
+            {
+                "type": "subcategory",
+                "label": "API",
+                "ids": ["api-crawlbot-api"]
+            }
+        ]
+    },
+    "bulk": {
+        "Bulk Jobs": [
+            {
+                "type": "subcategory",
+                "label": "Basics",
                 "ids": ["cb-basics-bulk"]
             },
             {
                 "type": "subcategory",
-                "label": "Search API Basics",
+                "label": "Recipes",
+                "ids": ["cb-usage-bulk"]
+            },        
+            {
+                "type": "subcategory",
+                "label": "API",
+                "ids": [ "api-bulk"]
+            }
+        ]
+    },
+    "search": {
+        "Search API": [
+            {
+                "type": "subcategory",
+                "label": "Basics",
                 "ids": ["cb-basics-search"]
             },
             {
                 "type": "subcategory",
-                "label": "Global Index",
-                "ids": ["cb-basics-gi"]
-            }
-        ]
-    },
-    "cb-usage": {
-        "Batch Services Usage Examples": [
-            "cb-usage-index",
-            {
-                "type": "subcategory",
-                "label": "Crawlbot Usage Examples",
-                "ids": ["cb-usage-cb"]
-            },
-            {
-                "type": "subcategory",
-                "label": "Bulk Job Usage Examples",
-                "ids": ["cb-usage-bulk"]
-            },
-            {
-                "type": "subcategory",
-                "label": "Search API Usage Examples",
+                "label": "Recipes",
                 "ids": ["cb-usage-search"]
-            },
+            },        
             {
                 "type": "subcategory",
-                "label": "Global Index Usage Examples",
-                "ids": ["cb-usage-gi"]
-            }    
-        ]
-    },
-    "docs-cb": {
-        "Batch API Reference": [
-            "api-cb",
-            "api-crawlbot-api", 
-            "api-bulk", 
-            "api-search"
-        ]
-    },
-    "docs-api": {
-        "Automatic and Custom APIs": [
-            "api-intro", 
-            {
-                "type": "subcategory",
-                "label": "Article API",
-                "ids": ["api-article", "api-article-html", "api-semantria"]
-            },
-            {
-                "type": "subcategory",
-                "label": "Analyze API",
-                "ids": ["api-analyze"]
-            },
-            {
-                "type": "subcategory",
-                "label": "Discussion API",
-                "ids": ["api-discussion"]
-            },            
-            {
-                "type": "subcategory",
-                "label": "Media APIs",
-                "ids": ["api-image", "api-video"]
-            },
-            {
-                "type": "subcategory",
-                "label": "Product API",
-                "ids": ["api-product"]
-            },
-            {
-                "type": "subcategory",
-                "label": "Account API",
-                "ids": ["api-account"]
-            },
-            {
-                "type": "subcategory",
-                "label": "Custom API",
-                "ids": ["api-custom", "api-selectors-filters", "api-managing-rules-programmatically"]
+                "label": "API",
+                "ids": [ "api-search"]
             }
         ]
     },

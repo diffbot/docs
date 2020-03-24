@@ -90,7 +90,6 @@ docReady(function () {
         document.querySelector("footer").remove();
     }
 
-
     // Build the dropdown
     let dropDown1 = document.createElement("div");
     dropDown1.classList.add("dropdown");
@@ -102,23 +101,48 @@ docReady(function () {
     dd1html += '</div>';
     dropDown1.innerHTML = dd1html;
 
+    // // Build the dropdown for API
+    // let dropDown2 = document.createElement("div");
+    // dropDown2.classList.add("dropdown");
+    // let dd2html = '<a href="/docs/en/api-basics-index" class="dropbtn">Automatic API</a><div class="dropdown-content">';
+    // dd2html += '<a href="/docs/en/api-basics-index">Basics</a>';
+    // dd2html += '<a href="/docs/en/api-usage-index">Usage Examples</a>';
+    // dd2html += '<a href="/docs/en/api-intro">API Reference</a>';
+    // dd2html += '</div>';
+    // dropDown2.innerHTML = dd2html;
+
     // Build the dropdown for API
     let dropDown2 = document.createElement("div");
     dropDown2.classList.add("dropdown");
     let dd2html = '<a href="/docs/en/api-basics-index" class="dropbtn">Automatic API</a><div class="dropdown-content">';
-    dd2html += '<a href="/docs/en/api-basics-index">Basics</a>';
-    dd2html += '<a href="/docs/en/api-usage-index">Usage Examples</a>';
-    dd2html += '<a href="/docs/en/api-intro">API Reference</a>';
+    dd2html += '<a href="/docs/en/api-basics-product">Product API</a>';
+    dd2html += '<a href="/docs/en/api-basics-article">Article API</a>';
+    dd2html += '<a href="/docs/en/api-basics-analyze">Analyze API</a>';
+    dd2html += '<a href="/docs/en/api-basics-image">Image API</a>';
+    dd2html += '<a href="/docs/en/api-basics-video">Video API</a>';
+    dd2html += '<a href="/docs/en/api-basics-discussion">Discussion API</a>';
+    dd2html += '<a href="/docs/en/api-basics-custom">Custom API</a>';
+    dd2html += '<a href="/docs/en/api-basics-account">Account API</a>';
     dd2html += '</div>';
     dropDown2.innerHTML = dd2html;
+
+    // // Build the dropdown for Batch
+    // let dropDown3 = document.createElement("div");
+    // dropDown3.classList.add("dropdown");
+    // let dd3html = '<a href="/docs/en/cb-basics-index" class="dropbtn">Batch Services</a><div class="dropdown-content">';
+    // dd3html += '<a href="/docs/en/cb-basics-index">Basics</a>';
+    // dd3html += '<a href="/docs/en/cb-usage-index">Usage Examples</a>';
+    // dd3html += '<a href="/docs/en/api-cb">API Reference</a>';
+    // dd3html += '</div>';
+    // dropDown3.innerHTML = dd3html;
 
     // Build the dropdown for Batch
     let dropDown3 = document.createElement("div");
     dropDown3.classList.add("dropdown");
     let dd3html = '<a href="/docs/en/cb-basics-index" class="dropbtn">Batch Services</a><div class="dropdown-content">';
-    dd3html += '<a href="/docs/en/cb-basics-index">Basics</a>';
-    dd3html += '<a href="/docs/en/cb-usage-index">Usage Examples</a>';
-    dd3html += '<a href="/docs/en/api-cb">API Reference</a>';
+    dd3html += '<a href="/docs/en/cb-basics-cb">Crawlbot</a>';
+    dd3html += '<a href="/docs/en/cb-basics-bulk">Bulk Jobs</a>';
+    dd3html += '<a href="/docs/en/cb-basics-search">Search API</a>';
     dd3html += '</div>';
     dropDown3.innerHTML = dd3html;
 

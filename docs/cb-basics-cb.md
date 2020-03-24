@@ -23,6 +23,7 @@ Note that the limit of active crawls on a single token is 1000. More information
 - [Crawlbot URL Report](explain-crawl-url-report)
 - [Do Diffbot APIs Follow Redirects?](explain-apis-follow-redirects)
 - [Do Diffbot APIs Execute JavaScript?](explain-apis-javascript-support)
+- [Does crawlbot process hashtag-links?](explain-hashtag-links)
 
 ## Crawlbot debugging
 
