@@ -6,7 +6,7 @@ sidebar_label: Custom APIs
 
 Custom APIs allow you to extract nearly anything from nearly any site using Diffbot's powerful rendering engine.
 
-<div class="info"><strong>Related:</strong> <a href="index-custom-api" target="_blank">API Toolkit Support</a> | <a href="api-managing-rules-programmatically">Managing Rules Programmatically</a> | <a href="tutorials-custom-video">Video Tutorials</a></div>
+<div class="info"><strong>Related:</strong> <a href="api-basics-custom" target="_blank">API Toolkit Support</a> | <a href="api-managing-rules-programmatically">Managing Rules Programmatically</a> | <a href="tutorials-custom-video">Video Tutorials</a></div>
 
 ## Creating a New API
 

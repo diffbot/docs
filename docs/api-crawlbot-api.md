@@ -39,7 +39,7 @@ Additional (optional) Parameters:
 | :------- | :---------- |
 | `customHeaders` | Set multiple custom headers to be used while crawling and processing pages sent to Diffbot APIs. Each header should be sent in its own `customHeaders` argument, with a colon delimiting the header name and value, and should be URL-encoded. For example, `&customHeaders=Accept-Language%3Aen-us`. [See more information on using this functionality](guides-custom-headers.md). |
 | `useCanonical` | Pass `useCanonical=0` to disable deduplication of pages based on a canonical link definition. [See more](explain-page-deduplication.md). |
-| `obeyRobots` | Pass `obeyRobots=0` to ignore a site's robots.txt instructions. [See more](explain-robots-txt.md). |
+| `obeyRobots` | Pass `obeyRobots=0` to ignore a site's robots.txt instructions. |
 | `restrictDomain` | Pass `restrictDomain=0` to allow limited crawling across subdomains/domains. [See more](guides-restrict-domain.md). |
 | `useProxies` | Set value to `1` to force the use of proxy IPs for the crawl. This will utilize proxy servers for both crawling and processing of pages. |
 | `maxHops` | Specify the depth of your crawl. A `maxHops=0` will limit **processing** to the seed URL(s) only -- no other links will be processed; `maxHops=1` will process all (otherwise matching) pages whose links appear on seed URL(s); `maxHops=2` will process pages whose links appear on those pages; and so on.<br><br>By default (`maxHops=-1`) Crawlbot will crawl and process links at any depth. |

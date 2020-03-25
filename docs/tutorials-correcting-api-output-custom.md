@@ -2,8 +2,9 @@
 id: tutorials-correcting-api-output-custom
 title: How to correct Article, Product, or other API output with a custom rule
 sidebar_label: How to correct Article, Product, or other API output with a custom rule
-todo: Update examples to not use support domain any more
 ---
+
+
 
 <div class="entry-content">
 		<p>Have you run into a problem where the Diffbot extraction from a particular site is incorrect or needs adjusting? Our <a href="https://www.diffbot.com/dev/customize">API Toolkit</a> not only allows you to create new APIs entirely, but also to override or correct the output returned by our Automatic APIs.</p>

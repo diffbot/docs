@@ -18,7 +18,7 @@ todo: Modify links to old Dashboard
 <p>If a crawl doesn’t crawl past the seed URL, check the following possible scenarios:</p>
 <ul>
 <li>
-<strong>Check for robots.txt prevention:</strong> Make sure the site’s <a href="explain-robots-txt">robots.txt</a> file doesn’t prevent crawling of or beyond your seed URLs. The URL Report will indicate if a given URL is not able to be crawled thanks to robots.txt instruction, or you can check the site’s robots.txt directly at subdomain.domain.com/robots.txt. If this is the case, you can opt to “ignore robots.txt” within your crawl settings or via the Crawlbot API.</li>
+<strong>Check for robots.txt prevention:</strong> Make sure the site’s <a href="cb-intro-cb#robotstxt">robots.txt</a> file doesn’t prevent crawling of or beyond your seed URLs. The URL Report will indicate if a given URL is not able to be crawled thanks to robots.txt instruction, or you can check the site’s robots.txt directly at subdomain.domain.com/robots.txt. If this is the case, you can opt to “ignore robots.txt” within your crawl settings or via the Crawlbot API.</li>
 <li>
 <strong>Does the site require Javascript?</strong> See if the site’s links are only available when Javascript is executed. (This may necessitate viewing the site’s HTML source in your browser. If no or few links are available: Javascript is probably needed.) Because Crawlbot does not execute Javascript by default, you’ll need to use our <a href="guides-crawling-ajax-generated-links">Javascript execution instructions</a> to pursue these links.</li>
 <li>

@@ -22,5 +22,5 @@ todo: Modify links to old API docs
 <p>If you have proximity to or special access to your target content, you may experience faster processing by downloading the content directly, then POSTing the markup to our APIs (Automatic or Custom). Diffbot will return the structured content as usual, but without having to fetch the content first.</p>
 <p>See more on POSTs in the <a href="api-intro">documentation</a> for your desired API.</p>
 <p><strong>Consider Our Bulk API</strong></p>
-<p>Our <a title="Diffbot Developer Dashboard Docs" href="index-bulk">Bulk API</a> is specifically built for processing large batches of URLs asynchronously. The Bulk service distributes your calls across a broad array of extraction servers for speedy processing, and provides the extracted output in a single JSON output — or, you can use our <a href="api-search">Search API</a> to fine-tune the output from your structured data.</p>
+<p>Our <a title="Diffbot Developer Dashboard Docs" href="cb-basics-bulk">Bulk API</a> is specifically built for processing large batches of URLs asynchronously. The Bulk service distributes your calls across a broad array of extraction servers for speedy processing, and provides the extracted output in a single JSON output — or, you can use our <a href="api-search">Search API</a> to fine-tune the output from your structured data.</p>
 			</div>

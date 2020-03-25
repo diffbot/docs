@@ -4,7 +4,7 @@ title: Bulk API
 sidebar_label: Bulk API
 ---
 
-The Bulk API allows you to submit large numbers of URLs for Diffbot API processing. It is built atop the [Crawlbot](guides-crawl.md) API and shares much of the same underlying model. Both APIs return data in JSON format.
+The Bulk API allows you to submit large numbers of URLs for Diffbot API processing. It is built atop the [Crawlbot](api-crawlbot-api) API and shares much of the same underlying model. Both APIs return data in JSON format.
 
 ## Creating a Bulk Job
 
@@ -27,7 +27,7 @@ Your POST body should contain the following fields:
 | `customHeaders` | Set custom headers to be used for processing each URL. Send multiple `customHeaders` values in your POST body, with header keys/values delimited by a colon (and URL-encoded). [See more information on using this functionality](guides-custom-headers.md). |
 | `notifyEmail` | Send a message to this email address when the bulk job completes. |
 | `notifyWebhook` | Pass a URL to be notified when the bulk job completes. You will receive a POST with the full [JSON response](#response) in the POST body. |
-| `obeyRobots` | Pass `obeyRobots=0` to ignore a site's robots.txt instructions. [See more](explain-robots-txt.md). |
+| `obeyRobots` | Pass `obeyRobots=0` to ignore a site's robots.txt instructions. |
 | `repeat` | Specify the number of days as a floating-point (e.g. `repeat=7.0`) to repeat this job. By default bulk jobs will not be repeated. |
 | `maxRounds` | Specify the maximum number of repeats. Use `maxRounds=-1` to continually repeat. |
 | `pageProcessPattern` | Enter &#124;&#124;-separated strings to limit pages processed to those whose HTML contains *any* of the content strings. If a page does not contain at least one of the strings, it will be ignored. |

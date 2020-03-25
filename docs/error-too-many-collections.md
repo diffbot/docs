@@ -4,16 +4,15 @@ title: Too Many Collections Error
 sidebar_label: Too Many Collections Error
 ---
 
-<div class="entry-content">
-		<p><strong>Error message: Too Many Collections</strong></p>
-<hr>
-<p>If you ever get the “Too Many Collections” error trying to create a new bulk job or crawl job, either via the API or the UI in your account’s dashboard, you’ve reached the limit our system supports: 1000 jobs.</p>
-<p>This is why there is a timeout period after which inactive crawls will be removed – to make room for newer crawls.</p>
-<p>If you have the need for more than 1000 active crawljobs, you have two options:</p>
-<ol>
-<li>Upgrade to a Plus or higher plan and we’ll introduce a method to your account which circumvents this limit, as needed.</li>
-<li>Delete some of your crawljobs and try again – you will find that you’ll immediately be able to create new crawljobs again.</li>
-</ol>
-<p>We advise you to keep an eye on your active crawls and delete them as they are no longer needed. If the data has become stale or you have downloaded, you are encourage to remove the crawl. Likewise, if you have already downloaded the data but would like to keep the metadata (crawl settings) around, you can download these settings by using the <a href="api-crawlbot-api">Crawljob API</a>. Such a backed up JSON file is enough to restore your crawljob’s settings even after years of inactivity on your accounts.</p>
-<p>Happy crawling!</p>
-			</div>
+> **Error message: Too many collections**
+
+If you ever get the “Too Many Collections” error trying to create a [new bulk job or crawl job](cb-basics-index), either via the API or the UI in your account’s [dashboard](tutorials-new-dashboard), you’ve reached the limit our system supports: 1000 jobs.
+
+This is why there is a timeout period after which inactive crawls will be removed – to make room for newer crawls.
+
+If you have the need for more than 1000 active crawljobs, you have two options:
+
+- Upgrade to a Plus or higher plan and we'll remove this limit from your account or
+- Delete some jobs and try again
+
+We recommend you keep an eye on your active crawls and delete them as they are no longer needed. If the data has become stale or you have downloaded it, you are encouraged to remove the crawl. Likewise, if you have already downloaded the data but would like to keep the metadata (crawl settings) around, you can download these settings by using the [Crawlbot API](api-crawljob-api). Such a backed up JSON file is enough to restore your crawljob’s settings even after years of inactivity on your account.

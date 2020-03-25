@@ -10,7 +10,6 @@ sidebar_label: Crawlbot index
 - [Crawlbot Video Tutorials](tutorials-crawl-video)
 - [Crawlbot API](api-crawlbot-api)
 - [Crawling vs Processing](explain-crawling-versus-processing)
-- [Does Crawlbot respect the robots.txt protocol?](explain-robots-txt)
 - [How does Diffbot handle duplicate pages/content while crawling?](explain-page-deduplication)
 - [How long does it take to crawl a site?](explain-how-long-crawl-site)
 - [When is crawl or bulk job data deleted?](explain-when-crawl-bulk-data-deleted)
