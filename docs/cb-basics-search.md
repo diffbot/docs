@@ -1,9 +1,7 @@
 ---
 id: cb-basics-search
-title: Introduction into Search API
-sidebar_label: Introduction into Search API
+title: Basic Usage of Search API
+sidebar_label: Basic Usage
 ---
 
-Diffbot's Search API allows you to search the extracted content of your Diffbot "collections." A collection is a discrete [Crawlbot](cb-basics-cb) or [Bulk job](cb-basics-bulk) output, and includes all of the web pages processed within that job.
-
-In order to search a collection, you must first create that collection using either Crawlbot or the Bulk API. A collection can be searched before a crawl or bulk job is finished.
+This tutorial will show you how to search your dataset. To follow along, please complete the [Crawlbot tutorial](cb-basics-cb).

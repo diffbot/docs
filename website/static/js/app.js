@@ -115,14 +115,14 @@ docReady(function () {
     let dropDown2 = document.createElement("div");
     dropDown2.classList.add("dropdown");
     let dd2html = '<a href="/docs/en/api-basics-index" class="dropbtn">Automatic API</a><div class="dropdown-content">';
-    dd2html += '<a href="/docs/en/api-basics-product">Product API</a>';
-    dd2html += '<a href="/docs/en/api-basics-article">Article API</a>';
-    dd2html += '<a href="/docs/en/api-basics-analyze">Analyze API</a>';
-    dd2html += '<a href="/docs/en/api-basics-image">Image API</a>';
-    dd2html += '<a href="/docs/en/api-basics-video">Video API</a>';
-    dd2html += '<a href="/docs/en/api-basics-discussion">Discussion API</a>';
-    dd2html += '<a href="/docs/en/api-basics-custom">Custom API</a>';
-    dd2html += '<a href="/docs/en/api-basics-account">Account API</a>';
+    dd2html += '<a href="/docs/en/api-intro-product">Product API</a>';
+    dd2html += '<a href="/docs/en/api-intro-article">Article API</a>';
+    dd2html += '<a href="/docs/en/api-intro-analyze">Analyze API</a>';
+    dd2html += '<a href="/docs/en/api-intro-image">Image API</a>';
+    dd2html += '<a href="/docs/en/api-intro-video">Video API</a>';
+    dd2html += '<a href="/docs/en/api-intro-discussion">Discussion API</a>';
+    dd2html += '<a href="/docs/en/api-intro-custom">Custom API</a>';
+    dd2html += '<a href="/docs/en/api-intro-account">Account API</a>';
     dd2html += '</div>';
     dropDown2.innerHTML = dd2html;
 
@@ -140,9 +140,9 @@ docReady(function () {
     let dropDown3 = document.createElement("div");
     dropDown3.classList.add("dropdown");
     let dd3html = '<a href="/docs/en/cb-basics-index" class="dropbtn">Batch Services</a><div class="dropdown-content">';
-    dd3html += '<a href="/docs/en/cb-basics-cb">Crawlbot</a>';
-    dd3html += '<a href="/docs/en/cb-basics-bulk">Bulk Jobs</a>';
-    dd3html += '<a href="/docs/en/cb-basics-search">Search API</a>';
+    dd3html += '<a href="/docs/en/cb-intro-cb">Crawlbot</a>';
+    dd3html += '<a href="/docs/en/cb-intro-bulk">Bulk Jobs</a>';
+    dd3html += '<a href="/docs/en/cb-intro-search">Search API</a>';
     dd3html += '</div>';
     dropDown3.innerHTML = dd3html;
 
@@ -179,7 +179,8 @@ docReady(function () {
     }
 
     // If there is no sidebar on this page, insert the previous sidebar
-    if (null === sidebar) {
+    // Limit to non-basics pages - we want supercategory landing pages to be without sidebar
+    if (null === sidebar && location.href.indexOf("-basics-") === -1) {
     let docMainWrapper = document.querySelector(".docMainWrapper");
     if (null !== docMainWrapper) {
         docMainWrapper.innerHTML = '<div class="docsNavContainer" id="docsNav">' 

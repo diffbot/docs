@@ -4,7 +4,7 @@
         {
             "type": "subcategory",
             "label": "Basics",
-            "ids": ["api-basics-product", "api-product-categories"]
+            "ids": ["api-intro-product", "api-basics-product", "api-product-categories"]
         },
         {
             "type": "subcategory",
@@ -23,7 +23,7 @@
         {
             "type": "subcategory",
             "label": "Basics",
-            "ids": ["api-basics-article", "api-article-html", "api-semantria"]
+            "ids": ["api-intro-article", "api-basics-article", "api-article-html", "api-semantria"]
         },
         {
             "type": "subcategory",
@@ -41,7 +41,7 @@
         {
             "type": "subcategory",
             "label": "Basics",
-            "ids": ["api-basics-analyze"]
+            "ids": ["api-intro-analyze", "api-basics-analyze"]
         },
         {
             "type": "subcategory",
@@ -59,7 +59,7 @@
         {
             "type": "subcategory",
             "label": "Basics",
-            "ids": ["api-basics-image"]
+            "ids": ["api-intro-image", "api-basics-image"]
         },
         {
             "type": "subcategory",
@@ -77,7 +77,7 @@
         {
             "type": "subcategory",
             "label": "Basics",
-            "ids": ["api-basics-video"]
+            "ids": ["api-intro-video", "api-basics-video"]
         },
         {
             "type": "subcategory",
@@ -95,7 +95,7 @@
         {
             "type": "subcategory",
             "label": "Basics",
-            "ids": ["api-basics-discussion"]
+            "ids": ["api-intro-discussion", "api-basics-discussion"]
         },
         {
             "type": "subcategory",
@@ -113,7 +113,7 @@
         {
             "type": "subcategory",
             "label": "Basics",
-            "ids": ["api-basics-custom", "tutorials-custom-video"]
+            "ids": ["api-intro-custom", "api-basics-custom", "tutorials-custom-video"]
         },
         {
             "type": "subcategory",
@@ -133,7 +133,7 @@
         {
             "type": "subcategory",
             "label": "Basics",
-            "ids": ["api-basics-account"]
+            "ids": ["api-intro-account", "api-basics-account"]
         },
         {
             "type": "subcategory",
@@ -152,7 +152,7 @@
             {
                 "type": "subcategory",
                 "label": "Basics",
-                "ids": ["cb-basics-cb", "tutorials-crawl-video"]
+                "ids": ["cb-intro-cb", "cb-basics-cb", "tutorials-crawl-video"]
             },
             {
                 "type": "subcategory",
@@ -171,7 +171,7 @@
             {
                 "type": "subcategory",
                 "label": "Basics",
-                "ids": ["cb-basics-bulk"]
+                "ids": ["cb-intro-bulk", "cb-basics-bulk"]
             },
             {
                 "type": "subcategory",
@@ -190,7 +190,7 @@
             {
                 "type": "subcategory",
                 "label": "Basics",
-                "ids": ["cb-basics-search"]
+                "ids": ["cb-intro-search", "cb-basics-search"]
             },
             {
                 "type": "subcategory",

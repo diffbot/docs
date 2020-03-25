@@ -5,11 +5,7 @@ sidebar_label: Basic Usage
 description: Basic usage of Diffbot's API Customization interface
 ---
 
-Have you run into a problem where the Diffbot extraction from a particular site is incorrect or needs adjusting? Our [API customization dashboard](tutorials-new-dashboard) not only allows you to create new APIs entirely, but also to override or correct the output returned by our Automatic APIs.
-
-Correcting a field’s output takes immediate effect for your account, and also serves to train our system, improving Diffbot extraction over the long run.
-
-Here’s how to make a correction if you have a problem with a particular site.
+Here’s how to make a correction with the API Customization toolkit if you have a problem with a particular site.
 
 ## Find a problematic URL
 
@@ -48,17 +44,3 @@ Click _Save_ to save and apply your rule.
 Once saved, your rule will take immediate effect for API calls (a) using the specified API and (b) matching the [domain regular expression](guides-domain-regex).
 
 ![Accurate result given by modified API](/img/custom-api-tut/06.jpg)
-
-## Custom API Basics
-
-- [Custom API Video Tutorials](tutorials-custom-video)
-- [Building Custom Collections](guides-custom-collections)
-- [Do Diffbot APIs Follow Redirects?](explain-apis-follow-redirects)
-- [Do Diffbot APIs Execute JavaScript?](explain-apis-javascript-support)
-- [What happens to my rules if a website changes its markup?](explain-custom-rule-breaks)
-- [How long can a single request take / what is the Diffbot API timeout?](/docs/en/explain-diffbot-api-timeout)
-
-Once you've gone through the basics above, proceed with learning about:
-
-- [Usage Examples](api-usage-product)
-- [API reference](api-product)

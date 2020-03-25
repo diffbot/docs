@@ -1,7 +1,7 @@
 ---
 id: cb-usage-cb
 title: Using Crawlbot
-sidebar_label: Using Crawlbot
+sidebar_label: Index
 ---
 
 Crawlbot usage guides.

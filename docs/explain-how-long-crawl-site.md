@@ -15,7 +15,7 @@ Fundamentally, a larger site will take longer to crawl and process. A site with 
 
 Likewise, the more pages processed by a Diffbot API, the longer your crawl job will take. If you are using our Analyze API to automatically identify and extract page-types, this will most commonly process every page on the site. (See [What's the difference between crawling and processing](explain-crawling-versus-processing)).
 
-Many sites are simply slower to respond than others. In some cases this is due to physical distance (a single server in Australia will be much slower to respond than a site with multiple points-of-presence or a CDN infrastructure), and in others this may be due to instruction in the site’s robots.txt file: specifically the `crawlDelay` parameter, to which Crawlbot [adheres by default](explain-robots-txt).
+Many sites are simply slower to respond than others. In some cases this is due to physical distance (a single server in Australia will be much slower to respond than a site with multiple points-of-presence or a CDN infrastructure), and in others this may be due to instruction in the site’s robots.txt file: specifically the `crawlDelay` parameter, to which Crawlbot [adheres by default](cb-intro-cb).
 
 Finally, the overall load on Crawlbot is a factor, as our spiders are distributed evenly across our active customers. We regularly increase the number of available servers based on need, but periods of high activity can reduce the number of spiders available. If you need dedicated crawling or processing hardware, [contact us](mailto:sales@diffbot.com) about our additional plans.
 

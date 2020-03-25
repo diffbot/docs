@@ -1,7 +1,7 @@
 ---
 id: cb-usage-bulk
 title: Using Bulk Jobs
-sidebar_label: Using Bulk Jobs
+sidebar_label: Index
 ---
 
 Tutorials on using Bulk jobs to process several URLs at once.
@@ -10,7 +10,6 @@ Tutorials on using Bulk jobs to process several URLs at once.
 
 - [Bulk Processing Tutorial](cb-basics-bulk)
 - [Diffbot Regex Syntax](explain-regex)
-- [When is bulk job data deleted?](explain-when-crawl-bulk-data-deleted)
 - [Bulk Processing URL Report](explain-bulk-url-report)
 - [Do Diffbot APIs Follow Redirects?](explain-apis-follow-redirects)
 - [Do Diffbot APIs Execute JavaScript?](explain-apis-javascript-support)
