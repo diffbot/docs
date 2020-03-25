@@ -1,0 +1,94 @@
+<!DOCTYPE html><html lang="en"><head><meta charSet="utf-8"/><meta http-equiv="X-UA-Compatible" content="IE=edge"/><title>Article API Introduction · Docs Suite</title><meta name="viewport" content="width=device-width"/><meta name="generator" content="Docusaurus"/><meta name="description" content="Introduction of the Diffbot Article API"/><meta name="docsearch:language" content="en"/><meta property="og:title" content="Article API Introduction · Docs Suite"/><meta property="og:type" content="website"/><meta property="og:url" content="https://diffbot.github.io/"/><meta property="og:description" content="Introduction of the Diffbot Article API"/><meta property="og:image" content="https://diffbot.github.io/img/diagram.svg"/><meta name="twitter:card" content="summary"/><meta name="twitter:image" content="https://diffbot.github.io/img/diagram.svg"/><link rel="shortcut icon" href="/img/diffbot-head.png"/><link rel="stylesheet" href="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.css"/><link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/default.min.css"/><script type="text/javascript" src="https://buttons.github.io/buttons.js"></script><script type="text/javascript" src="/js/app.js"></script><script src="/js/scrollSpy.js"></script><link rel="stylesheet" href="/css/main.css"/><script src="/js/codetabs.js"></script></head><body class="sideNavVisible separateOnPageNav"><div class="fixedHeaderContainer"><div class="headerWrapper wrapper"><header><a href="/"><img class="logo" src="/img/diffbot_white.svg" alt="Docs Suite"/><h2 class="headerTitleWithLogo">Docs Suite</h2></a><div class="navigationWrapper navigationSlider"><nav class="slidingNav"><ul class="nav-site nav-site-internal"><li class=""><a href="/docs/en/error-intro" target="_self">Debugging</a></li><li class="navSearchWrapper reactNavSearchWrapper"><input type="text" id="search_input_react" placeholder="Search" title="Search"/></li></ul></nav></div></header></div></div><div class="navPusher"><div class="docMainWrapper wrapper"><div class="docsNavContainer" id="docsNav"><nav class="toc"><div class="toggleNav"><section class="navWrapper wrapper"><div class="navBreadcrumb wrapper"><div class="navToggle" id="navToggler"><div class="hamburger-menu"><div class="line1"></div><div class="line2"></div><div class="line3"></div></div></div><h2><i>›</i><span>Basics</span></h2><div class="tocToggler" id="tocToggler"><i class="icon-toc"></i></div></div><div class="navGroups"><div class="navGroup"><h3 class="navGroupCategoryTitle collapsible">Article API<span class="arrow"><svg width="24" height="24" viewBox="0 0 24 24"><path fill="#565656" d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z"></path><path d="M0 0h24v24H0z" fill="none"></path></svg></span></h3><ul class="hide"><div class="navGroup subNavGroup"><h4 class="navGroupSubcategoryTitle">Basics</h4><ul><li class="navListItem navListItemActive"><a class="navItem" href="/docs/en/api-intro-article">Introduction</a></li><li class="navListItem"><a class="navItem" href="/docs/en/api-basics-article">Basic Usage</a></li><li class="navListItem"><a class="navItem" href="/docs/en/api-article-html">Article API: HTML Field Specification</a></li><li class="navListItem"><a class="navItem" href="/docs/en/api-semantria">Semantria-Powered Text Analysis Features</a></li></ul></div><div class="navGroup subNavGroup"><h4 class="navGroupSubcategoryTitle">Recipes</h4><ul><li class="navListItem"><a class="navItem" href="/docs/en/api-usage-article">Index</a></li></ul></div><div class="navGroup subNavGroup"><h4 class="navGroupSubcategoryTitle">API</h4><ul><li class="navListItem"><a class="navItem" href="/docs/en/api-article">Article Extraction API</a></li></ul></div></ul></div></div></section></div><script>
+            var coll = document.getElementsByClassName('collapsible');
+            var checkActiveCategory = true;
+            for (var i = 0; i < coll.length; i++) {
+              var links = coll[i].nextElementSibling.getElementsByTagName('*');
+              if (checkActiveCategory){
+                for (var j = 0; j < links.length; j++) {
+                  if (links[j].classList.contains('navListItemActive')){
+                    coll[i].nextElementSibling.classList.toggle('hide');
+                    coll[i].childNodes[1].classList.toggle('rotate');
+                    checkActiveCategory = false;
+                    break;
+                  }
+                }
+              }
+
+              coll[i].addEventListener('click', function() {
+                var arrow = this.childNodes[1];
+                arrow.classList.toggle('rotate');
+                var content = this.nextElementSibling;
+                content.classList.toggle('hide');
+              });
+            }
+
+            document.addEventListener('DOMContentLoaded', function() {
+              createToggler('#navToggler', '#docsNav', 'docsSliderActive');
+              createToggler('#tocToggler', 'body', 'tocActive');
+
+              var headings = document.querySelector('.toc-headings');
+              headings && headings.addEventListener('click', function(event) {
+                var el = event.target;
+                while(el !== headings){
+                  if (el.tagName === 'A') {
+                    document.body.classList.remove('tocActive');
+                    break;
+                  } else{
+                    el = el.parentNode;
+                  }
+                }
+              }, false);
+
+              function createToggler(togglerSelector, targetSelector, className) {
+                var toggler = document.querySelector(togglerSelector);
+                var target = document.querySelector(targetSelector);
+
+                if (!toggler) {
+                  return;
+                }
+
+                toggler.onclick = function(event) {
+                  event.preventDefault();
+
+                  target.classList.toggle(className);
+                };
+              }
+            });
+        </script></nav></div><div class="container mainContainer docsContainer"><div class="wrapper"><div class="post"><header class="postHeader"><a class="edit-page-link button" href="https://github.com/diffbot/docs/edit/master/docs/api-intro-article.md" target="_blank" rel="noreferrer noopener">Edit</a><h1 id="__docusaurus" class="postHeaderTitle">Article API Introduction</h1></header><article><div><span><p>The Article API is used to extract clean article text and other data from news articles, blog posts and other text-heavy pages. Retrieve the full-text, cleaned and <a href="/docs/en/api-article-html">normalized HTML</a>, related images and videos, author, <a href="explain-article-api-date-normalization">normalized date</a>, tags—automatically, from any article on any site.</p>
+<p>The full API reference of Article API can be found <a href="api-article">here</a>.</p>
+<p>Learn more about the Article API:</p>
+<ul>
+<li><a href="explain-apis-follow-redirects">Do Diffbot APIs Follow Redirects?</a></li>
+<li><a href="explain-apis-javascript-support">Do Diffbot APIs Execute JavaScript?</a></li>
+<li><a href="/docs/en/explain-diffbot-api-timeout">How long can a single request take / what is the Diffbot API timeout?</a></li>
+<li><a href="explain-non-english-pages">Does Diffbot handle non-English pages?</a></li>
+<li><a href="explain-pdf-extraction">Can Diffbot APIs Extract Content from PDFs or Other Documents?</a></li>
+<li><a href="explain-posting-text-html">Can I send HTML or text directly to Diffbot APIs?</a></li>
+<li><a href="explain-using-different-proxies">Using Diffbot Proxy Servers / Proxy IPs</a></li>
+<li><a href="explain-what-counts-as-api-call">What counts as an API call?</a></li>
+</ul>
+<p>Once you've gone through the basics above, proceed with learning about:</p>
+<ul>
+<li><a href="api-usage-article">Usage Examples</a></li>
+<li><a href="api-article">API reference</a></li>
+</ul>
+</span></div></article></div><div class="docLastUpdate"><em>Last updated by Bruno Skvorc</em></div><div class="docs-prevnext"><a class="docs-next button" href="/docs/en/api-basics-article"><span>Basic Usage</span><span class="arrow-next"> →</span></a></div></div></div><nav class="onPageNav"></nav></div><footer class="nav-footer" id="footer"><section class="sitemap"><a href="/" class="nav-home"><img src="/img/diffbot_white.svg" alt="Docs Suite" width="66" height="58"/></a><div><h5>Docs</h5><a href="/docs/en/api-basics-index">Automatic API</a><a href="/docs/en/cb-basics-index">Batch Services</a><a href="/docs/en/kg-index">Knowledge Graph</a><a href="/docs/en/explain-gdpr">Diffbot and GDPR</a></div><div><h5>Community</h5><a href="https://stackoverflow.com/questions/tagged/diffbot" target="_blank" rel="noreferrer noopener">Stack Overflow</a><a href="https://twitter.com/diffbot" target="_blank" rel="noreferrer noopener">Twitter</a></div><div><h5>More</h5><a href="/blog">Blog</a><a href="/help">Help</a><a href="https://github.com/diffbot">GitHub</a></div></section><a href="https://diffbot.com/" target="_blank" rel="noreferrer noopener" class="fbOpenSource"><img src="/img/diffbot_white.svg" alt="Diffbot.com" width="170" height="45"/></a><section class="copyright">Copyright © 2020 Diffbot.com</section></footer></div><script type="text/javascript" src="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.js"></script><script>
+                document.addEventListener('keyup', function(e) {
+                  if (e.target !== document.body) {
+                    return;
+                  }
+                  // keyCode for '/' (slash)
+                  if (e.keyCode === 191) {
+                    const search = document.getElementById('search_input_react');
+                    search && search.focus();
+                  }
+                });
+              </script><script>
+              var search = docsearch({
+                
+                apiKey: '2c24e5e78d724e77c46ef1b720700177',
+                indexName: 'diffbot',
+                inputSelector: '#search_input_react',
+                algoliaOptions: {}
+              });
+            </script></body></html>

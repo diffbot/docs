@@ -88,34 +88,71 @@ docReady(function () {
     if (wideMode) {
         // Remove footer
         document.querySelector("footer").remove();
-
-        // Calculate window height
-        let height = window.innerHeight - 60;
-
-        // Apply height to iframe
-        const iframe = document.querySelector("iframe");
-
-        iframe.style.height = height + "px";
-
-        // This does not work. Iframes cannot be modified unless on same origin. Subdomains don't count.
-        // iframe.addEventListener("load", function(e){
-        //     //resizeIframe(iframe);
-        //     console.log("Testing iframe mod");
-        //     iframe.contentWindow.document.querySelector("nav").remove();
-        // });
     }
 
-
     // Build the dropdown
-    let dropdownHtml = '<div class="dropdown"><a href="/docs/en/kg-index" class="dropbtn">Knowledge Graph</a><div class="dropdown-content">';
-    dropdownHtml += '<a href="/kgapi">KG API Reference</a>';
-    dropdownHtml += '<a href="/enhance">Enhance API Reference</a>';
-    dropdownHtml += '<a href="/ontology">Ontology Docs</a>';
-    dropdownHtml += '<a href="/docs/en/dql-index">Diffbot Query Language</a>';
-    dropdownHtml += '</div></div>';
+    let dropDown1 = document.createElement("div");
+    dropDown1.classList.add("dropdown");
+    let dd1html = '<a href="/docs/en/kg-index" class="dropbtn">Knowledge Graph</a><div class="dropdown-content">';
+    dd1html += '<a href="/kgapi">KG API Reference</a>';
+    dd1html += '<a href="/enhance">Enhance API Reference</a>';
+    dd1html += '<a href="/ontology">Ontology Docs</a>';
+    dd1html += '<a href="/docs/en/dql-index">Diffbot Query Language</a>';
+    dd1html += '</div>';
+    dropDown1.innerHTML = dd1html;
+
+    // // Build the dropdown for API
+    // let dropDown2 = document.createElement("div");
+    // dropDown2.classList.add("dropdown");
+    // let dd2html = '<a href="/docs/en/api-basics-index" class="dropbtn">Automatic API</a><div class="dropdown-content">';
+    // dd2html += '<a href="/docs/en/api-basics-index">Basics</a>';
+    // dd2html += '<a href="/docs/en/api-usage-index">Usage Examples</a>';
+    // dd2html += '<a href="/docs/en/api-intro">API Reference</a>';
+    // dd2html += '</div>';
+    // dropDown2.innerHTML = dd2html;
+
+    // Build the dropdown for API
+    let dropDown2 = document.createElement("div");
+    dropDown2.classList.add("dropdown");
+    let dd2html = '<a href="/docs/en/api-basics-index" class="dropbtn">Automatic API</a><div class="dropdown-content">';
+    dd2html += '<a href="/docs/en/api-intro-product">Product API</a>';
+    dd2html += '<a href="/docs/en/api-intro-article">Article API</a>';
+    dd2html += '<a href="/docs/en/api-intro-analyze">Analyze API</a>';
+    dd2html += '<a href="/docs/en/api-intro-image">Image API</a>';
+    dd2html += '<a href="/docs/en/api-intro-video">Video API</a>';
+    dd2html += '<a href="/docs/en/api-intro-discussion">Discussion API</a>';
+    dd2html += '<a href="/docs/en/api-intro-custom">Custom API</a>';
+    dd2html += '<a href="/docs/en/api-intro-account">Account API</a>';
+    dd2html += '</div>';
+    dropDown2.innerHTML = dd2html;
+
+    // // Build the dropdown for Batch
+    // let dropDown3 = document.createElement("div");
+    // dropDown3.classList.add("dropdown");
+    // let dd3html = '<a href="/docs/en/cb-basics-index" class="dropbtn">Batch Services</a><div class="dropdown-content">';
+    // dd3html += '<a href="/docs/en/cb-basics-index">Basics</a>';
+    // dd3html += '<a href="/docs/en/cb-usage-index">Usage Examples</a>';
+    // dd3html += '<a href="/docs/en/api-cb">API Reference</a>';
+    // dd3html += '</div>';
+    // dropDown3.innerHTML = dd3html;
+
+    // Build the dropdown for Batch
+    let dropDown3 = document.createElement("div");
+    dropDown3.classList.add("dropdown");
+    let dd3html = '<a href="/docs/en/cb-basics-index" class="dropbtn">Batch Services</a><div class="dropdown-content">';
+    dd3html += '<a href="/docs/en/cb-intro-cb">Crawlbot</a>';
+    dd3html += '<a href="/docs/en/cb-intro-bulk">Bulk Jobs</a>';
+    dd3html += '<a href="/docs/en/cb-intro-search">Search API</a>';
+    dd3html += '</div>';
+    dropDown3.innerHTML = dd3html;
 
     // Insert into top nav
-    document.querySelector("ul.nav-site").innerHTML += dropdownHtml;
+    //let currentNav = document.querySelector("ul.nav-site").innerHTML;
+    //document.querySelector("ul.nav-site").innerHTML = dropdownHtml + currentNav;
+    let currentNav = document.querySelector("ul.nav-site");
+    currentNav.prepend(dropDown1);
+    currentNav.prepend(dropDown3);
+    currentNav.prepend(dropDown2);
 
     // Check if there is an H3 Knowledge Graph heading in the sidebar
     let inKgSection = false;
@@ -133,5 +170,23 @@ docReady(function () {
         console.log("Writing new section");
         let newSection = '<div class="navGroup subNavGroup"><h4 class="navGroupSubcategoryTitle">API Reference Docs</h4><ul><li class="navListItem"><a class="navItem" href="/kgapi">Knowledge Graph API Reference</a></li><li class="navListItem"><a class="navItem" href="/enhance">Enhance API Reference</a></li><li class="navListItem"><a class="navItem" href="/ontology">Ontology Reference</a></li></ul></div>'
         document.querySelector(".toc .toggleNav .navGroups .navGroup>ul").innerHTML += newSection;
+    }
+
+    // Store sidebar in localstorage if exists
+    let sidebar = document.querySelector("#docsNav");
+    if (null !== sidebar) {
+        localStorage.setItem("docsNav", sidebar.innerHTML);
+    }
+
+    // If there is no sidebar on this page, insert the previous sidebar
+    // Limit to non-basics pages - we want supercategory landing pages to be without sidebar
+    if (null === sidebar && location.href.indexOf("-basics-") === -1) {
+    let docMainWrapper = document.querySelector(".docMainWrapper");
+    if (null !== docMainWrapper) {
+        docMainWrapper.innerHTML = '<div class="docsNavContainer" id="docsNav">' 
+            + localStorage.getItem("docsNav") 
+            + "</div>" 
+            + docMainWrapper.innerHTML;
+        }
     }
 })
