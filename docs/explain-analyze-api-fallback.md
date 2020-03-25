@@ -1,5 +1,5 @@
 ---
-id: guides-analyze-api-fallback
+id: explain-analyze-api-fallback
 title: The Analyze API “fallback” argument
 sidebar_label: The Analyze API “fallback” argument
 ---
