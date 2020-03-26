@@ -7,7 +7,6 @@ sidebar_label: Index
 Crawlbot usage guides.
 
 - [Crawl and Processing Patterns and Regexes](guides-patterns)
-- [Limiting crawl depth](guides-crawl-depth)
 - [Restricting Crawls to Domains and Subdomains](guides-restrict-domain)
 - [Using the Crawlbot querystring parameter](guides-crawlbot-bulk-querystring-parameter)
 - [Can Crawlbot use a site map (or sitemap) as a crawling seed?](guides-sitemap-as-seed)

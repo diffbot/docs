@@ -23,9 +23,7 @@ sidebar_label: Crawlbot index
 ## Crawlbot specifics
 
 - [Crawl and Processing Patterns and Regexes](guides-patterns)
-- [Limiting crawl depth](guides-crawl-depth)
 - [Restricting Crawls to Domains and Subdomains](guides-restrict-domain)
-- [Using the Crawlbot querystring parameter](guides-crawlbot-bulk-querystring-parameter)
 - [Can Crawlbot use a site map (or sitemap) as a crawling seed?](guides-sitemap-as-seed)
 - [Can I limit processing to articles written before, after or between certain dates?](guides-limit-article-processing-publishing-date)
 - [Can I spider multiple sites in the same crawl? Is there a limit to the number of seed URLs?](guides-multiple-crawl-seeds)
