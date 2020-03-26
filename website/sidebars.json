@@ -28,7 +28,7 @@
         {
             "type": "subcategory",
             "label": "Recipes",
-            "ids": ["api-usage-article", "guides-data-behind-login"]
+            "ids": ["api-usage-article", "guides-data-behind-login", "guides-concatenate-multipage-articles"]
         },        
         {
             "type": "subcategory",
