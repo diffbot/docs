@@ -10,6 +10,7 @@ Here are some examples on using, customizing, and integrating this API.
 - [Backing up and restogin custom APIs and rules](guides-backup-restore-rules)
 - [Correcting the Images field in Article API](guides-correct-images-custom-api)
 - [Auto-concatenating multi-page articles using custom selectors](guides-concatenate-multipage-articles)
+- [Sending Custom Headers and Custom JavaScript](guides-custom-headers-api)
 - [API reference](api-custom)
 
 ## Troubleshooting

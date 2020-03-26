@@ -118,7 +118,7 @@
         {
             "type": "subcategory",
             "label": "Recipes",
-            "ids": ["api-usage-custom", "guides-backup-restore-rules"]
+            "ids": ["api-usage-custom", "guides-backup-restore-rules", "guides-custom-headers-api"]
         },
         {
             "type": "subcategory",
@@ -157,7 +157,7 @@
             {
                 "type": "subcategory",
                 "label": "Recipes",
-                "ids": ["cb-usage-cb", "guides-authenticated-crawling", "guides-check-results-specific-page-type", "guides-crawling-ajax-generated-links"]
+                "ids": ["cb-usage-cb", "guides-authenticated-crawling", "guides-check-results-specific-page-type", "guides-crawling-ajax-generated-links", "guides-custom-headers-crawl"]
             },        
             {
                 "type": "subcategory",

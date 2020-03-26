@@ -37,7 +37,7 @@ Additional (optional) Parameters:
 
 | Argument | Description |
 | :------- | :---------- |
-| `customHeaders` | Set multiple custom headers to be used while crawling and processing pages sent to Diffbot APIs. Each header should be sent in its own `customHeaders` argument, with a colon delimiting the header name and value, and should be URL-encoded. For example, `&customHeaders=Accept-Language%3Aen-us`. [See more information on using this functionality](guides-custom-headers.md). |
+| `customHeaders` | Set multiple custom headers to be used while crawling and processing pages sent to Diffbot APIs. Each header should be sent in its own `customHeaders` argument, with a colon delimiting the header name and value, and should be URL-encoded. For example, `&customHeaders=Accept-Language%3Aen-us`. [See more information on using this functionality](guides-custom-headers-crawl). |
 | `useCanonical` | Pass `useCanonical=0` to disable deduplication of pages based on a canonical link definition. [See more](explain-page-deduplication.md). |
 | `obeyRobots` | Pass `obeyRobots=0` to ignore a site's robots.txt instructions. |
 | `restrictDomain` | Pass `restrictDomain=0` to allow limited crawling across subdomains/domains. [See more](guides-restrict-domain.md). |

@@ -141,7 +141,11 @@ You can supply Diffbot with basic authentication credentials or custom HTTP head
 
 To access pages that require a login/password (using [basic access authentication](https://en.wikipedia.org/wiki/Basic_access_authentication)), include the username and password in your `url` parameter, e.g.: `url=http%3A%2F%2FUSERNAME:PASSWORD@www.diffbot.com`.
 
-## Custom HTTP Headers
+## Custom HTTP Headers and JavaScript
+
+> See here for a full guide on [using custom headers in direct API calls](guides-custom-headers-api).
+
+### Custom headers
 
 You can supply Diffbot APIs with custom HTTP headers that will be passed along when making requests to third-party sites. These can be used to define specific Referer, User-Agent, Cookie or any other values.
 
@@ -155,7 +159,7 @@ For instance, to send custom `User-Agent`, `Referer` and `My-Custom-Header` head
 | `Referer:diffbot.com` | `X-Forward-Referer:diffbot.com` |
 | `My-Custom-Header:CustomValue` | `X-Forward-My-Custom-Header:CustomValue` |
 
-## Custom Javascript
+### Custom Javascript
 
 <div class="alert">This functionality is currently in beta.</div>
 
