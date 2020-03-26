@@ -29,6 +29,12 @@ In our example case, the CSS selector we want is `.docLastUpdate`:
 
 ![Selector is producing a result](/img/custom-api-tut/04.jpg)
 
+> Note: By default the Custom API Toolkit will retrieve all content matching your selector. You can  select multiple items with different selectors if you wish, by comma-separating your selectors.
+>
+> For example, if you are trying to extract two different types of images, one with the ID `#featureImage` and perhaps additional images with the class `.inlineImage`, simply use the selector: `#featureImage, .inlineImage`
+>
+> Your API results will include all matching images from either selector.
+
 We're getting some extra information! Diffbot's API customization allows us to apply regular expression filters to some output in order to tweak it to our very specific needs. Let's apply one and clear up the unneeded information.
 
 Click on _Filters_, select _Replace_, under value put `^(.*)by\s(.*)$` and under Replace with put `$2`.
