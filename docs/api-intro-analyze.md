@@ -27,7 +27,7 @@ When spidering a site using Crawlbot, the Analyze API will prevent extracting **
 
 Sometimes it makes sense to opt for a specific API rather than Analyze API. For example, if you are certain of your web-page type (e.g., all articles), sending calls directly to the specific API endpoint will result in 100% extractions. There is always a small chance that the Analyze API will mis-classify confusing pages.
 
-Note that you can also use the [fallback](guides-analyze-api-fallback) argument if you’d like to ensure that unsupported pages are processed by a specific API of your choosing.
+Note that you can also use the [fallback](explain-analyze-api-fallback) argument if you’d like to ensure that unsupported pages are processed by a specific API of your choosing.
 
 Custom rules applied to a specific API, and specific API parameters (e.g., `fields=meta,videos,html` for the Article API) will be handled appropriately regardless of using the Analyze or specific extraction APIs.
 

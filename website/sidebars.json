@@ -118,7 +118,7 @@
         {
             "type": "subcategory",
             "label": "Recipes",
-            "ids": ["api-usage-custom"]
+            "ids": ["api-usage-custom", "guides-backup-restore-rules"]
         },
         {
             "type": "subcategory",
