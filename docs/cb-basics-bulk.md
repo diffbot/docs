@@ -16,9 +16,11 @@ The above image shows how to extract all the articles from Diffbot's old knowled
 
 ### Passing Diffbot API Querystring Arguments
 
-The Bulk Processor hands off URLs to [specific Diffbot APIs](https://diffbot.com/products/automatic) for processing. Each of these APIs has optional querystring arguments that can be used to modify the information returned -- most commonly the `fields` argument, for adding optional fields to the Diffbot response.
+The Bulk API serves as the controller for sending pages to the appropriate Diffbot API for processing/extraction. By default, these will be generic requests to the appropriate API and will return the default fields from that API. Each of these APIs has optional querystring arguments that can be used to modify the information returned -- most commonly the `fields` argument, for adding optional fields to the Diffbot response.
 
 > Note: Top-level fields in our V3 APIs (e.g., "links" or "meta") will not be indexed or captured in bulk jobs.
+
+For example, Bulk URLs handed to the Article API will be equivalent to calling `https://api.diffbot.com/v3/article?url=[url]` and adding a querystring like `&timeout=10000` results in the same being applied to the API call: `https://api.diffbot.com/v3/article?url=[url]&timeout=10000`
 
 ### Notifications
 
