@@ -170,7 +170,7 @@ class Index extends React.Component {
             content: 'Problems? Errors? Solutions here!',
             image: `${baseUrl}img/books.svg`,
             imageAlign: 'top',
-            title: `<a href=${docUrl('explain-intro')} style='text-decoration: underline'>Debugging</a>`,
+            title: `<a href=${docUrl('error-intro')} style='text-decoration: underline'>Debugging</a>`,
           }
         ]}
       </Block>
