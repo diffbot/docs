@@ -1,7 +1,7 @@
 ---
 id: guides-check-results-specific-page-type
 title: How can I check how many articles, products or other pages have been found?
-sidebar_label: How can I check how many articles, products or other pages have been found?
+sidebar_label: Checking number of results per result type
 ---
 
 The easiest way to use Crawlbot is paired with our Analyze API. Analyze determines the page-type of every page it processes, and for <a href="http://www.diffbot.com/products/automatic">supported pages</a> (articles, products, etc.) the content will be automatically extracted and its structured data indexed as part of your crawl.
@@ -10,7 +10,7 @@ Crawlbot tracks the number of pages processed during a crawl. If you’re using 
 
 ![](/img/Screenshot-2015-05-19-16.13.02.png)
 
-If you want to track how many of a specific page-type have been found, you’ll want to use our [Search API](api-basics-search). By regularly running queries against your particular crawl, you can get to-the-second updates on exactly how much content has been indexed.
+If you want to track how many of a specific page-type have been found, you’ll want to use our [Search API](api-intro-search). By regularly running queries against your particular crawl, you can get to-the-second updates on exactly how much content has been indexed.
 
 For example, in a crawl named `diffbotShopping`, to track how many products have been found (at any time during or after the crawl), you would execute a `type:product` query as follows (substituting your token in the sample below):
 
