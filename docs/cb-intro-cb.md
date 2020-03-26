@@ -45,6 +45,7 @@ This includes the extracted data as well as the job meta information (name, sett
 - [Do Diffbot APIs Execute JavaScript?](explain-apis-javascript-support)
 - [Does crawlbot process hashtag-links?](explain-hashtag-links)
 - [Using Diffbot Proxy Servers / Proxy IPs](explain-using-different-proxies)
+- [Sending Custom Headers during jobs](guides-custom-headers-crawl)
 
 ## Crawlbot debugging
 

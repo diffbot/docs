@@ -13,6 +13,7 @@ Tutorials on using Bulk jobs to process several URLs at once.
 - [Bulk Processing URL Report](explain-bulk-url-report)
 - [Do Diffbot APIs Follow Redirects?](explain-apis-follow-redirects)
 - [Do Diffbot APIs Execute JavaScript?](explain-apis-javascript-support)
+- [Sending Custom Headers during jobs](guides-custom-headers-crawl)
 
 ## Bulk Processing Problems
 
