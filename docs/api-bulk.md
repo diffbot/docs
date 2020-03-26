@@ -24,7 +24,7 @@ Your POST body should contain the following fields:
 | `name` | Job name. This should be a unique identifier and will be used to modify your bulk job and retrieve its output. |
 | `urls` | Space-delimited list of URLs to process. If you are on the Startup plan, jobs must contain at least 50 URLs. |
 | `apiUrl` | The full Diffbot API to be used for each URL. For instance, to process each URL via the article API, supply `https://api.diffbot.com/v3/article`. You may also include API parameters, e.g. `https://api.diffbot.com/v3/article?fields=meta,tags`. </td></tr><td colspan="2">**Optional arguments**</td> |
-| `customHeaders` | Set custom headers to be used for processing each URL. Send multiple `customHeaders` values in your POST body, with header keys/values delimited by a colon (and URL-encoded). [See more information on using this functionality](guides-custom-headers.md). |
+| `customHeaders` | Set custom headers to be used for processing each URL. Send multiple `customHeaders` values in your POST body, with header keys/values delimited by a colon (and URL-encoded). [See more information on using this functionality](guides-custom-headers-crawl). |
 | `notifyEmail` | Send a message to this email address when the bulk job completes. |
 | `notifyWebhook` | Pass a URL to be notified when the bulk job completes. You will receive a POST with the full [JSON response](#response) in the POST body. |
 | `obeyRobots` | Pass `obeyRobots=0` to ignore a site's robots.txt instructions. |
