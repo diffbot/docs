@@ -157,7 +157,7 @@
             {
                 "type": "subcategory",
                 "label": "Recipes",
-                "ids": ["cb-usage-cb", "guides-authenticated-crawling", "guides-check-results-specific-page-type"]
+                "ids": ["cb-usage-cb", "guides-authenticated-crawling", "guides-check-results-specific-page-type", "guides-crawling-ajax-generated-links"]
             },        
             {
                 "type": "subcategory",
