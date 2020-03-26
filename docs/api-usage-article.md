@@ -8,6 +8,7 @@ Here are some examples on using, customizing, and integrating this API.
 
 - [Accessing Data Behind a Login Wall](guides-data-behind-login)
 - [Auto-concatenating multi-page articles using custom selectors](guides-concatenate-multipage-articles)
+- [Correcting the images field](guides-correct-images-custom-api)
 - [API reference](api-article)
 
 ## Resolving Issues
