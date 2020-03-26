@@ -149,28 +149,28 @@ class Index extends React.Component {
       <Block layout="fourColumn">
         {[
           {
-            content: 'Learn how to get started',
+            content: 'Extract Structured Data from Web Pages',
             image: `${baseUrl}img/read.svg`,
             imageAlign: 'top',
-            title: `<a href=${docUrl('intro')} style='text-decoration: underline'>Tutorials</a>`,
+            title: `<a href=${docUrl('api-basics-index')} style='text-decoration: underline'>Automatic API</a>`,
           },
           {
-            content: 'Learn how to solve specific problems',
+            content: 'Crawl and Extract Entire Domains',
             image: `${baseUrl}img/howto.svg`,
             imageAlign: 'top',
-            title: `<a href=${docUrl('guides-intro')} style='text-decoration: underline'>How-to Guides</a>`,
+            title: `<a href=${docUrl('cb-basics-index')} style='text-decoration: underline'>Batch Services</a>`,
           },          
           {
-            content: 'Get technical with our API',
+            content: 'Query the Whole Web and Enhance Your Own Data',
             image: `${baseUrl}img/code.svg`,
             imageAlign: 'top',
-            title: `<a href=${docUrl('api-intro')} style='text-decoration: underline'>API Reference</a>`,
+            title: `<a href=${docUrl('kg-index')} style='text-decoration: underline'>Knowledge Graph</a>`,
           },          
           {
-            content: 'Understand the story behind our features and use cases',
+            content: 'Problems? Errors? Solutions here!',
             image: `${baseUrl}img/books.svg`,
             imageAlign: 'top',
-            title: `<a href=${docUrl('explain-intro')} style='text-decoration: underline'>Explanations</a>`,
+            title: `<a href=${docUrl('explain-intro')} style='text-decoration: underline'>Debugging</a>`,
           }
         ]}
       </Block>
