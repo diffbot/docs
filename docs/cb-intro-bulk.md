@@ -24,7 +24,3 @@ Inactive bulk jobs will be deleted within ten days of completion. This includes 
 - [Do Diffbot APIs Follow Redirects?](explain-apis-follow-redirects)
 - [Do Diffbot APIs Execute JavaScript?](explain-apis-javascript-support)
 - [Using Diffbot Proxy Servers / Proxy IPs](explain-using-different-proxies)
-
-## Bulk Processing specifics
-
-- [Using the Bulk API Querystring Parameter](guides-crawlbot-bulk-querystring-parameter)

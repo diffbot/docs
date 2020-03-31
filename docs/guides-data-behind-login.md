@@ -5,7 +5,16 @@ sidebar_label: Accessing Data Behind a Login Wall
 todo: update to also demonstrate this in the new dashboard
 ---
 
-Sometimes you need to log into a site to get to some walled-off data. Let’s see an example.
+Sometimes you need to log into a site to get to some walled-off data. 
+
+There are two approaches you can take:
+
+1. Download the HTML and send the data as POST to the API directly. [Learn more about sending POST data to an API](explain-posting-text-html).
+2. Use Cookies to simulate an active session and skip the login prompt of a website.
+
+The guide below will demonstrate the latter option.
+
+---
 
 Let’s assume we want to crawl the articles on [TheBrowser.com](https://thebrowser.com). TheBrowser is a manually curated subscription based website which recommends interesting links from around the web.
 

@@ -23,7 +23,7 @@ Provide the following arguments:
 | `token` | Developer token |
 | `url` | Web page URL of the analyze to process (URL encoded)</td></tr><td colspan="2">**Optional arguments**</td> |
 | `mode` | By default the Analyze API will fully extract all pages that match an existing Automatic API -- articles, products or image pages. Set `mode` to a specific page-type (e.g., `mode=article`) to extract content only from that specific page-type. All other pages will simply return the default Analyze fields. |
-| `fallback` | Force any non-extracted pages (those with a `type` of "other") through a specific API. For example, to route all "other" pages through the Article API, pass `&fallback=article`. Pages that utilize this functionality will return a `fallbackType` field at the top-level of the response and a `originalType` field within each extracted object, both of which will indicate the fallback API used. |
+| `fallback` | Force any non-extracted pages (those with a `type` of "other") through a specific API. For example, to route all "other" pages through the Article API, pass `&fallback=article`. Pages that utilize this functionality will return a `fallbackType` field at the top-level of the response and a `originalType` field within each extracted object, both of which will indicate the fallback API used. [Learn more about the fallback parameter](explain-analyze-api-fallback) |
 | `fields` | Specify optional fields to be returned from any fully-extracted pages, e.g.: `&fields=querystring,links`.<br><br>See available fields within each API's individual documentation pages. |
 | `discussion` | Pass `discussion=false` to disable automatic extraction of comments or reviews from pages identified as articles or products. This will not affect pages identified as discussions. |
 | `timeout` | Sets a value in milliseconds to wait for the retrieval/fetch of content from the requested URL. The default timeout for the third-party response is 30 seconds (30000). |
@@ -92,7 +92,11 @@ You can supply Diffbot with basic authentication credentials or custom HTTP head
 
 To access pages that require a login/password (using [basic access authentication](https://en.wikipedia.org/wiki/Basic_access_authentication)), include the username and password in your `url` parameter, e.g.: `url=http%3A%2F%2FUSERNAME:PASSWORD@www.diffbot.com`.
 
-## Custom HTTP Headers
+## Custom HTTP Headers and JavaScript
+
+> See here for a full guide on [using custom headers in direct API calls](guides-custom-headers-api).
+
+### Custom headers
 
 You can supply Diffbot APIs with custom HTTP headers that will be passed along when making requests to third-party sites. These can be used to define specific Referer, User-Agent, Cookie or any other values.
 
@@ -106,7 +110,7 @@ For instance, to send custom `User-Agent`, `Referer` and `My-Custom-Header` head
 | `Referer:diffbot.com` | `X-Forward-Referer:diffbot.com` |
 | `My-Custom-Header:CustomValue` | `X-Forward-My-Custom-Header:CustomValue` |
 
-## Custom Javascript
+### Custom Javascript
 
 <div class="alert">This functionality is currently in beta.</div>
 
