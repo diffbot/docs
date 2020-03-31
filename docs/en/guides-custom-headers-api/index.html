@@ -1,0 +1,167 @@
+<!DOCTYPE html><html lang="en"><head><meta charSet="utf-8"/><meta http-equiv="X-UA-Compatible" content="IE=edge"/><title>How do I set custom headers in API calls? · Docs Suite</title><meta name="viewport" content="width=device-width"/><meta name="generator" content="Docusaurus"/><meta name="description" content="Diffbot supports setting/sending the following custom headers for direct API calls. These headers will be used when requesting content from third-party sites:"/><meta name="docsearch:language" content="en"/><meta property="og:title" content="How do I set custom headers in API calls? · Docs Suite"/><meta property="og:type" content="website"/><meta property="og:url" content="https://diffbot.github.io/"/><meta property="og:description" content="Diffbot supports setting/sending the following custom headers for direct API calls. These headers will be used when requesting content from third-party sites:"/><meta property="og:image" content="https://diffbot.github.io/img/diagram.svg"/><meta name="twitter:card" content="summary"/><meta name="twitter:image" content="https://diffbot.github.io/img/diagram.svg"/><link rel="shortcut icon" href="/img/diffbot-head.png"/><link rel="stylesheet" href="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.css"/><link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/default.min.css"/><script type="text/javascript" src="https://buttons.github.io/buttons.js"></script><script type="text/javascript" src="/js/app.js"></script><script src="/js/scrollSpy.js"></script><link rel="stylesheet" href="/css/main.css"/><script src="/js/codetabs.js"></script></head><body class="sideNavVisible separateOnPageNav"><div class="fixedHeaderContainer"><div class="headerWrapper wrapper"><header><a href="/"><img class="logo" src="/img/diffbot_white.svg" alt="Docs Suite"/><h2 class="headerTitleWithLogo">Docs Suite</h2></a><div class="navigationWrapper navigationSlider"><nav class="slidingNav"><ul class="nav-site nav-site-internal"><li class=""><a href="/docs/en/error-intro" target="_self">Debugging</a></li><li class="navSearchWrapper reactNavSearchWrapper"><input type="text" id="search_input_react" placeholder="Search" title="Search"/></li></ul></nav></div></header></div></div><div class="navPusher"><div class="docMainWrapper wrapper"><div class="docsNavContainer" id="docsNav"><nav class="toc"><div class="toggleNav"><section class="navWrapper wrapper"><div class="navBreadcrumb wrapper"><div class="navToggle" id="navToggler"><div class="hamburger-menu"><div class="line1"></div><div class="line2"></div><div class="line3"></div></div></div><h2><i>›</i><span>Recipes</span></h2><div class="tocToggler" id="tocToggler"><i class="icon-toc"></i></div></div><div class="navGroups"><div class="navGroup"><h3 class="navGroupCategoryTitle collapsible">Custom API<span class="arrow"><svg width="24" height="24" viewBox="0 0 24 24"><path fill="#565656" d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z"></path><path d="M0 0h24v24H0z" fill="none"></path></svg></span></h3><ul class="hide"><div class="navGroup subNavGroup"><h4 class="navGroupSubcategoryTitle">Basics</h4><ul><li class="navListItem"><a class="navItem" href="/docs/en/api-intro-custom">Introduction</a></li><li class="navListItem"><a class="navItem" href="/docs/en/api-basics-custom">Basic Usage</a></li><li class="navListItem"><a class="navItem" href="/docs/en/tutorials-custom-video">Custom API Video Tutorials</a></li></ul></div><div class="navGroup subNavGroup"><h4 class="navGroupSubcategoryTitle">Recipes</h4><ul><li class="navListItem"><a class="navItem" href="/docs/en/api-usage-custom">Index</a></li><li class="navListItem"><a class="navItem" href="/docs/en/guides-backup-restore-rules">Back up / restore custom APIs</a></li><li class="navListItem navListItemActive"><a class="navItem" href="/docs/en/guides-custom-headers-api">Sending Custom Headers with API Calls</a></li></ul></div><div class="navGroup subNavGroup"><h4 class="navGroupSubcategoryTitle">API</h4><ul><li class="navListItem"><a class="navItem" href="/docs/en/api-custom">Custom APIs</a></li><li class="navListItem"><a class="navItem" href="/docs/en/api-selectors-filters">Custom API Selectors and Filters</a></li><li class="navListItem"><a class="navItem" href="/docs/en/api-managing-rules-programmatically">Managing Custom Rules Programmatically</a></li></ul></div></ul></div></div></section></div><script>
+            var coll = document.getElementsByClassName('collapsible');
+            var checkActiveCategory = true;
+            for (var i = 0; i < coll.length; i++) {
+              var links = coll[i].nextElementSibling.getElementsByTagName('*');
+              if (checkActiveCategory){
+                for (var j = 0; j < links.length; j++) {
+                  if (links[j].classList.contains('navListItemActive')){
+                    coll[i].nextElementSibling.classList.toggle('hide');
+                    coll[i].childNodes[1].classList.toggle('rotate');
+                    checkActiveCategory = false;
+                    break;
+                  }
+                }
+              }
+
+              coll[i].addEventListener('click', function() {
+                var arrow = this.childNodes[1];
+                arrow.classList.toggle('rotate');
+                var content = this.nextElementSibling;
+                content.classList.toggle('hide');
+              });
+            }
+
+            document.addEventListener('DOMContentLoaded', function() {
+              createToggler('#navToggler', '#docsNav', 'docsSliderActive');
+              createToggler('#tocToggler', 'body', 'tocActive');
+
+              var headings = document.querySelector('.toc-headings');
+              headings && headings.addEventListener('click', function(event) {
+                var el = event.target;
+                while(el !== headings){
+                  if (el.tagName === 'A') {
+                    document.body.classList.remove('tocActive');
+                    break;
+                  } else{
+                    el = el.parentNode;
+                  }
+                }
+              }, false);
+
+              function createToggler(togglerSelector, targetSelector, className) {
+                var toggler = document.querySelector(togglerSelector);
+                var target = document.querySelector(targetSelector);
+
+                if (!toggler) {
+                  return;
+                }
+
+                toggler.onclick = function(event) {
+                  event.preventDefault();
+
+                  target.classList.toggle(className);
+                };
+              }
+            });
+        </script></nav></div><div class="container mainContainer docsContainer"><div class="wrapper"><div class="post"><header class="postHeader"><a class="edit-page-link button" href="https://github.com/diffbot/docs/edit/master/docs/guides-custom-headers-api.md" target="_blank" rel="noreferrer noopener">Edit</a><h1 id="__docusaurus" class="postHeaderTitle">How do I set custom headers in API calls?</h1></header><article><div><span><p>Diffbot supports setting/sending the following custom headers for direct API calls. These headers will be used when requesting content from third-party sites:</p>
+<ul>
+<li>User-Agent</li>
+<li>Referer</li>
+<li>Cookie</li>
+<li>Accept-Language</li>
+<li>X-Evaluate</li>
+</ul>
+<h2><a class="anchor" aria-hidden="true" id="user-agent-referer-accept-language"></a><a href="#user-agent-referer-accept-language" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>User-Agent, Referer, Accept-Language</h2>
+<p>Create a new <a href="https://requestbin.com">RequestBin</a>. We'll use this to test that our custom headers are coming through.</p>
+<p>There are several ways to attach custom headers to API requests.</p>
+<h3><a class="anchor" aria-hidden="true" id="direct"></a><a href="#direct" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Direct</h3>
+<p>Use <code>X-Forward</code> as a prefix with any header you want forwarded. For example, to send the User-Agent <code>foobar</code>, we would use the header <code>X-Forward-User-Agent: foobar</code>.</p>
+<p>Here's an example in the <a href="https://postman.com">Postman application</a>.</p>
+<p><img src="/img/customheader/01.jpg" alt="Configuring the main call"></p>
+<p><img src="/img/customheader/02.jpg" alt="Sending a Postman call with custom headers"></p>
+<p>Here's the same example as plain cURL call:</p>
+<pre><code class="hljs css language-bash">curl --location --request GET <span class="hljs-string">'api.diffbot.com/v3/article?token=MY_TOKEN&amp;url=https%3A%2F%2Fen17uofqrlcgv.x.pipedream.net%2F'</span> \
+--header <span class="hljs-string">'X-Forward-User-Agent: foobar'</span> \
+--header <span class="hljs-string">'X-Forward-Referer: Diffbot.com'</span> \
+--header <span class="hljs-string">'X-Forward-Accept-Language: hr'</span>
+</code></pre>
+<p>In either case, RequestBin will show us the headers as expected:</p>
+<p><img src="/img/customheader/03.jpg" alt="Custom headers visible in requestbin"></p>
+<blockquote>
+<p>Note: the referer is missing because it's something RequestBin does not show, but it's there.</p>
+</blockquote>
+<p>These headers are discarded after this call, meaning they need to be added again on a subsequent call.</p>
+<h3><a class="anchor" aria-hidden="true" id="rule-based"></a><a href="#rule-based" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Rule-based</h3>
+<p>To permanently attach headers to a rule for an API, you can use the <a href="guides-backup-restore-rules">backup / restore functionality</a> to download raw rule data, modify it, and upload it back to your token, replacing the old rule setup.</p>
+<p>A rule with permanently attached headers might look like this:</p>
+<pre><code class="hljs css language-json">{
+xForwardHeaders: {
+    User-Agent: [
+        "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13) AppleWebKit/604.1.38 (KHTML, like Gecko) Version/11.0 Safari/604.1.38"
+    ],
+    X-Evaluate: "function() { start(); setTimeout(function() { setTimeout(function() { end(); }, 5000); }, 25000);}",
+    Cookie: "foo=bar"
+},
+rules: [ ],
+api: "all",
+urlPattern: "(http(s)?://)?(.*\.)?mysite.com.*",
+testUrl: "",
+},
+</code></pre>
+<p>Re-uploading this JSON as per the <a href="guides-backup-restore-rules">rule backup and restoration guide</a> will add these headers to all calls issued towards <code>mysite.com</code>. Notice that <code>User-Agent</code> is a JavaScript array. If you supply <code>User-Agent</code> as an array (only possible through this method), Diffbot will randomly pick one from the list when accessing a site. This is great for throwing off bot-detection algorithms.</p>
+<blockquote>
+<p>Note: X-Evaluate is explaind below</p>
+</blockquote>
+<h3><a class="anchor" aria-hidden="true" id="dashboard"></a><a href="#dashboard" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Dashboard</h3>
+<p>The <a href="tutorials-new-dashboard">new dashboard</a> also allows you to permanently add some headers to a rule. When creating a new custom rule, use the Custom Headers section to enter any headers you wish to add. This will save the headers in the same way as the JSON approach above. The Dashboard UI is a user-interface wrapped around the same backup/restore procedure as above.</p>
+<p><img src="/img/customheader/04.jpg" alt="Custom headers visible in requestbin"></p>
+<h2><a class="anchor" aria-hidden="true" id="cookie"></a><a href="#cookie" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Cookie</h2>
+<p>The Cookie header allows you to:</p>
+<ul>
+<li>simulate a login session</li>
+<li>remove annoying GDPR and newsletter popups</li>
+<li>ignore ads and content you don't want to extract</li>
+</ul>
+<p>For a comprehensive guide on using the Cookie header to simulate a login session, please see <a href="guides-data-behind-login">Accessing Data Behind a Login Wall</a></p>
+<h2><a class="anchor" aria-hidden="true" id="x-evaluate"></a><a href="#x-evaluate" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>X-Evaluate</h2>
+<blockquote>
+<p>Note: the X-Evaluate header is beta functionality</p>
+</blockquote>
+<p>X-Eval allows you to inject custom JavaScript into any website. It is a custom header like any of the above, but has special requirements in regards to syntax.</p>
+<ul>
+<li><p>an X-eval script starts with an anonymous function declaration which will be called by Diffbot</p>
+<pre><code class="hljs css language-js"><span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params"></span>) </span>{}
+</code></pre></li>
+<li><p>an X-eval script needs to start with <code>start()</code> and end with <code>end()</code>. In particular, if <code>end</code> is omitted, the script never ends and the request will time out waiting for <code>end()</code> to be called.</p>
+<pre><code class="hljs css language-js"><span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params"></span>) </span>{start(); end();}
+</code></pre></li>
+<li><p>an X-eval script needs to be minified (turned into a single-line). Use a minifier like <a href="https://www.minifier.org/">Minifier.org</a>.</p></li>
+</ul>
+<h3><a class="anchor" aria-hidden="true" id="x-evaluate-example"></a><a href="#x-evaluate-example" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>X-evaluate Example</h3>
+<p>The web page <a href="http://example.com">Example.com</a> has a paragraph of text explaining its purpose. Let's add a &quot;Today is X&quot; message to the end of that paragraph, with X being the current day of the week.</p>
+<p><img src="/img/customheader/05.jpg" alt="Day text is added to the paragraph"></p>
+<p>These are the steps we should follow:</p>
+<ol>
+<li><p>Write a script which successfully does this in the browser console.</p>
+<pre><code class="hljs css language-js"><span class="hljs-keyword">const</span> now = <span class="hljs-keyword">new</span> <span class="hljs-built_in">Date</span>();
+<span class="hljs-keyword">const</span> days = [<span class="hljs-string">'Sunday'</span>,<span class="hljs-string">'Monday'</span>,<span class="hljs-string">'Tuesday'</span>,<span class="hljs-string">'Wednesday'</span>,<span class="hljs-string">'Thursday'</span>,<span class="hljs-string">'Friday'</span>,<span class="hljs-string">'Saturday'</span>];
+<span class="hljs-keyword">const</span> day = days[ now.getDay() ]
+<span class="hljs-built_in">document</span>.querySelector(<span class="hljs-string">"p"</span>).innerText += <span class="hljs-string">"Today is "</span> + day;
+</code></pre></li>
+<li><p>Minify this script using <a href="https://www.minifier.org">Minifier.org</a> and wrap it in <code>function</code> and the <code>start</code> and <code>end</code> calls.</p>
+<pre><code class="hljs css language-js"><span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>) </span>{start(); <span class="hljs-keyword">const</span> now=<span class="hljs-keyword">new</span> <span class="hljs-built_in">Date</span>();<span class="hljs-keyword">const</span> days=[<span class="hljs-string">'Sunday'</span>,<span class="hljs-string">'Monday'</span>,<span class="hljs-string">'Tuesday'</span>,<span class="hljs-string">'Wednesday'</span>,<span class="hljs-string">'Thursday'</span>,<span class="hljs-string">'Friday'</span>,<span class="hljs-string">'Saturday'</span>];<span class="hljs-keyword">const</span> day=days[now.getDay()];<span class="hljs-built_in">document</span>.querySelector(<span class="hljs-string">"a"</span>).innerText=<span class="hljs-string">"Today is "</span>+day; end(); }
+</code></pre></li>
+<li><p>Pass the script along as the <code>X-Forward-X-Evaluate</code> custom header. We'll use Postman here, but you can also attach it permanently using the dashboard or raw rule backup/restore as documented above. Issuing the request will reveal our desired text in the return data.</p>
+<p><img src="/img/customheader/06.jpg" alt="Day text is present at the end of the paragraph"></p></li>
+</ol>
+</span></div></article></div><div class="docLastUpdate"><em>Last updated by Bruno Skvorc</em></div><div class="docs-prevnext"><a class="docs-prev button" href="/docs/en/guides-backup-restore-rules"><span class="arrow-prev">← </span><span>Back up / restore custom APIs</span></a><a class="docs-next button" href="/docs/en/api-custom"><span>Custom APIs</span><span class="arrow-next"> →</span></a></div></div></div><nav class="onPageNav"><ul class="toc-headings"><li><a href="#user-agent-referer-accept-language">User-Agent, Referer, Accept-Language</a><ul class="toc-headings"><li><a href="#direct">Direct</a></li><li><a href="#rule-based">Rule-based</a></li><li><a href="#dashboard">Dashboard</a></li></ul></li><li><a href="#cookie">Cookie</a></li><li><a href="#x-evaluate">X-Evaluate</a><ul class="toc-headings"><li><a href="#x-evaluate-example">X-evaluate Example</a></li></ul></li></ul></nav></div><footer class="nav-footer" id="footer"><section class="sitemap"><a href="/" class="nav-home"><img src="/img/diffbot_white.svg" alt="Docs Suite" width="66" height="58"/></a><div><h5>Docs</h5><a href="/docs/en/api-basics-index">Automatic API</a><a href="/docs/en/cb-basics-index">Batch Services</a><a href="/docs/en/kg-index">Knowledge Graph</a><a href="/docs/en/explain-gdpr">Diffbot and GDPR</a></div><div><h5>Community</h5><a href="https://stackoverflow.com/questions/tagged/diffbot" target="_blank" rel="noreferrer noopener">Stack Overflow</a><a href="https://twitter.com/diffbot" target="_blank" rel="noreferrer noopener">Twitter</a></div><div><h5>More</h5><a href="/blog">Blog</a><a href="/help">Help</a><a href="https://github.com/diffbot">GitHub</a></div></section><a href="https://diffbot.com/" target="_blank" rel="noreferrer noopener" class="fbOpenSource"><img src="/img/diffbot_white.svg" alt="Diffbot.com" width="170" height="45"/></a><section class="copyright">Copyright © 2020 Diffbot.com</section></footer></div><script type="text/javascript" src="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.js"></script><script>
+                document.addEventListener('keyup', function(e) {
+                  if (e.target !== document.body) {
+                    return;
+                  }
+                  // keyCode for '/' (slash)
+                  if (e.keyCode === 191) {
+                    const search = document.getElementById('search_input_react');
+                    search && search.focus();
+                  }
+                });
+              </script><script>
+              var search = docsearch({
+                
+                apiKey: '2c24e5e78d724e77c46ef1b720700177',
+                indexName: 'diffbot',
+                inputSelector: '#search_input_react',
+                algoliaOptions: {}
+              });
+            </script></body></html>

@@ -1,0 +1,103 @@
+<!DOCTYPE html><html lang="en"><head><meta charSet="utf-8"/><meta http-equiv="X-UA-Compatible" content="IE=edge"/><title>How do I set custom headers in API calls or while crawling? · Docs Suite</title><meta name="viewport" content="width=device-width"/><meta name="generator" content="Docusaurus"/><meta name="description" content="Diffbot supports setting/sending the following custom headers while crawling, and within bulk processing jobs. These headers will be used when requesting content from third-party sites:"/><meta name="docsearch:language" content="en"/><meta property="og:title" content="How do I set custom headers in API calls or while crawling? · Docs Suite"/><meta property="og:type" content="website"/><meta property="og:url" content="https://diffbot.github.io/"/><meta property="og:description" content="Diffbot supports setting/sending the following custom headers while crawling, and within bulk processing jobs. These headers will be used when requesting content from third-party sites:"/><meta property="og:image" content="https://diffbot.github.io/img/diagram.svg"/><meta name="twitter:card" content="summary"/><meta name="twitter:image" content="https://diffbot.github.io/img/diagram.svg"/><link rel="shortcut icon" href="/img/diffbot-head.png"/><link rel="stylesheet" href="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.css"/><link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/default.min.css"/><script type="text/javascript" src="https://buttons.github.io/buttons.js"></script><script type="text/javascript" src="/js/app.js"></script><script src="/js/scrollSpy.js"></script><link rel="stylesheet" href="/css/main.css"/><script src="/js/codetabs.js"></script></head><body class="sideNavVisible separateOnPageNav"><div class="fixedHeaderContainer"><div class="headerWrapper wrapper"><header><a href="/"><img class="logo" src="/img/diffbot_white.svg" alt="Docs Suite"/><h2 class="headerTitleWithLogo">Docs Suite</h2></a><div class="navigationWrapper navigationSlider"><nav class="slidingNav"><ul class="nav-site nav-site-internal"><li class=""><a href="/docs/en/error-intro" target="_self">Debugging</a></li><li class="navSearchWrapper reactNavSearchWrapper"><input type="text" id="search_input_react" placeholder="Search" title="Search"/></li></ul></nav></div></header></div></div><div class="navPusher"><div class="docMainWrapper wrapper"><div class="docsNavContainer" id="docsNav"><nav class="toc"><div class="toggleNav"><section class="navWrapper wrapper"><div class="navBreadcrumb wrapper"><div class="navToggle" id="navToggler"><div class="hamburger-menu"><div class="line1"></div><div class="line2"></div><div class="line3"></div></div></div><h2><i>›</i><span>Recipes</span></h2><div class="tocToggler" id="tocToggler"><i class="icon-toc"></i></div></div><div class="navGroups"><div class="navGroup"><h3 class="navGroupCategoryTitle collapsible">Crawlbot<span class="arrow"><svg width="24" height="24" viewBox="0 0 24 24"><path fill="#565656" d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z"></path><path d="M0 0h24v24H0z" fill="none"></path></svg></span></h3><ul class="hide"><div class="navGroup subNavGroup"><h4 class="navGroupSubcategoryTitle">Basics</h4><ul><li class="navListItem"><a class="navItem" href="/docs/en/cb-intro-cb">Introduction</a></li><li class="navListItem"><a class="navItem" href="/docs/en/cb-basics-cb">Basic Usage</a></li><li class="navListItem"><a class="navItem" href="/docs/en/tutorials-crawl-video">Crawlbot Video Tutorials</a></li></ul></div><div class="navGroup subNavGroup"><h4 class="navGroupSubcategoryTitle">Recipes</h4><ul><li class="navListItem"><a class="navItem" href="/docs/en/cb-usage-cb">Index</a></li><li class="navListItem"><a class="navItem" href="/docs/en/guides-authenticated-crawling">Authenticated Crawling</a></li><li class="navListItem"><a class="navItem" href="/docs/en/guides-check-results-specific-page-type">Checking number of results per result type</a></li><li class="navListItem"><a class="navItem" href="/docs/en/guides-crawling-ajax-generated-links">Crawling JavaScript-generated links</a></li><li class="navListItem navListItemActive"><a class="navItem" href="/docs/en/guides-custom-headers-crawl">How do I set custom headers while crawling?</a></li></ul></div><div class="navGroup subNavGroup"><h4 class="navGroupSubcategoryTitle">API</h4><ul><li class="navListItem"><a class="navItem" href="/docs/en/api-crawlbot-api">Crawlbot API</a></li></ul></div></ul></div></div></section></div><script>
+            var coll = document.getElementsByClassName('collapsible');
+            var checkActiveCategory = true;
+            for (var i = 0; i < coll.length; i++) {
+              var links = coll[i].nextElementSibling.getElementsByTagName('*');
+              if (checkActiveCategory){
+                for (var j = 0; j < links.length; j++) {
+                  if (links[j].classList.contains('navListItemActive')){
+                    coll[i].nextElementSibling.classList.toggle('hide');
+                    coll[i].childNodes[1].classList.toggle('rotate');
+                    checkActiveCategory = false;
+                    break;
+                  }
+                }
+              }
+
+              coll[i].addEventListener('click', function() {
+                var arrow = this.childNodes[1];
+                arrow.classList.toggle('rotate');
+                var content = this.nextElementSibling;
+                content.classList.toggle('hide');
+              });
+            }
+
+            document.addEventListener('DOMContentLoaded', function() {
+              createToggler('#navToggler', '#docsNav', 'docsSliderActive');
+              createToggler('#tocToggler', 'body', 'tocActive');
+
+              var headings = document.querySelector('.toc-headings');
+              headings && headings.addEventListener('click', function(event) {
+                var el = event.target;
+                while(el !== headings){
+                  if (el.tagName === 'A') {
+                    document.body.classList.remove('tocActive');
+                    break;
+                  } else{
+                    el = el.parentNode;
+                  }
+                }
+              }, false);
+
+              function createToggler(togglerSelector, targetSelector, className) {
+                var toggler = document.querySelector(togglerSelector);
+                var target = document.querySelector(targetSelector);
+
+                if (!toggler) {
+                  return;
+                }
+
+                toggler.onclick = function(event) {
+                  event.preventDefault();
+
+                  target.classList.toggle(className);
+                };
+              }
+            });
+        </script></nav></div><div class="container mainContainer docsContainer"><div class="wrapper"><div class="post"><header class="postHeader"><a class="edit-page-link button" href="https://github.com/diffbot/docs/edit/master/docs/guides-custom-headers-crawl.md" target="_blank" rel="noreferrer noopener">Edit</a><h1 id="__docusaurus" class="postHeaderTitle">How do I set custom headers in API calls or while crawling?</h1></header><article><div><span><p>Diffbot supports setting/sending the following custom headers while crawling, and within bulk processing jobs. These headers will be used when requesting content from third-party sites:</p>
+<ul>
+<li>User-Agent</li>
+<li>Referer</li>
+<li>Cookie</li>
+<li>Accept-Language</li>
+<li>X-Evaluate</li>
+</ul>
+<blockquote>
+<p>Note that is it possible to use custom headers with direct API calls too. Learn more in the <a href="guides-custom-headers-api">guide on using custom headers in APIs</a>.</p>
+</blockquote>
+<p>There are two methods of adding custom headers to a crawl or bulk job.</p>
+<h2><a class="anchor" aria-hidden="true" id="dashboard"></a><a href="#dashboard" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Dashboard</h2>
+<p>The simplest method is to use the Custom Headers fields in the UI of <a href="https://app.diffbot.com">the dashboard</a> (<a href="tutorials-new-dashboard">If you don't yet have access to the new dashboard, please see here</a>).</p>
+<p><img src="/img/customheader/07.jpg" alt="Custom Headers Textfield in the UI"></p>
+<p>Anything placed into this field will apply across the entire crawl or bulk job.</p>
+<h2><a class="anchor" aria-hidden="true" id="programmatic"></a><a href="#programmatic" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Programmatic</h2>
+<p>This method applies if you're creating bulk or crawl jobs programmatically through the <a href="api-crawlbot-api">relevant API</a>.</p>
+<p>Your headers need to be sent in your initial request to <a href="https://api.diffbot.com/v3/bulk">https://api.diffbot.com/v3/bulk</a> or <a href="https://api.diffbot.com/v3/crawl">https://api.diffbot.com/v3/crawl</a>. Thereafter your custom headers will be used while crawling for links, and in any extraction processing.</p>
+<p>To send custom headers in your Crawlbot or Bulk service API requests, send multiple <code>customHeaders</code> values in your POST body. Headers should be delimited by a colon and URL-encoded: <code>&amp;customHeaders=Referer%3Ahttp%3A%2F%2Fwww.diffbot.com&amp;customHeaders=Accept-Language%3Aen-us</code></p>
+<p>Here's how that looks in <a href="https://postman.com">Postman</a> and as a cURL call.</p>
+<p><img src="/img/customheader/08.jpg" alt="Custom Headers in a crawl creation request's body"></p>
+<pre><code class="hljs css language-bash">curl --location --request POST <span class="hljs-string">'https://api.diffbot.com/v3/crawl?token=brunotestrules&amp;name=myNewCrawl'</span> \
+--header <span class="hljs-string">'Content-Type: text/plain'</span> \
+--data-raw <span class="hljs-string">'seeds=https://www.example.com&amp;apiUrl=https://api.diffbot.com/v3/article&amp;customHeaders=Referer%3Ahttp%3A%2F%2Fwww.diffbot.com&amp;customHeaders=Accept-Language%3Aen-us'</span>
+</code></pre>
+<p>A job created this way will keep the headers active throughout its lifetime.</p>
+</span></div></article></div><div class="docLastUpdate"><em>Last updated by Bruno Skvorc</em></div><div class="docs-prevnext"><a class="docs-prev button" href="/docs/en/guides-crawling-ajax-generated-links"><span class="arrow-prev">← </span><span class="function-name-prevnext">Crawling JavaScript-generated links</span></a><a class="docs-next button" href="/docs/en/api-crawlbot-api"><span>Crawlbot API</span><span class="arrow-next"> →</span></a></div></div></div><nav class="onPageNav"><ul class="toc-headings"><li><a href="#dashboard">Dashboard</a></li><li><a href="#programmatic">Programmatic</a></li></ul></nav></div><footer class="nav-footer" id="footer"><section class="sitemap"><a href="/" class="nav-home"><img src="/img/diffbot_white.svg" alt="Docs Suite" width="66" height="58"/></a><div><h5>Docs</h5><a href="/docs/en/api-basics-index">Automatic API</a><a href="/docs/en/cb-basics-index">Batch Services</a><a href="/docs/en/kg-index">Knowledge Graph</a><a href="/docs/en/explain-gdpr">Diffbot and GDPR</a></div><div><h5>Community</h5><a href="https://stackoverflow.com/questions/tagged/diffbot" target="_blank" rel="noreferrer noopener">Stack Overflow</a><a href="https://twitter.com/diffbot" target="_blank" rel="noreferrer noopener">Twitter</a></div><div><h5>More</h5><a href="/blog">Blog</a><a href="/help">Help</a><a href="https://github.com/diffbot">GitHub</a></div></section><a href="https://diffbot.com/" target="_blank" rel="noreferrer noopener" class="fbOpenSource"><img src="/img/diffbot_white.svg" alt="Diffbot.com" width="170" height="45"/></a><section class="copyright">Copyright © 2020 Diffbot.com</section></footer></div><script type="text/javascript" src="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.js"></script><script>
+                document.addEventListener('keyup', function(e) {
+                  if (e.target !== document.body) {
+                    return;
+                  }
+                  // keyCode for '/' (slash)
+                  if (e.keyCode === 191) {
+                    const search = document.getElementById('search_input_react');
+                    search && search.focus();
+                  }
+                });
+              </script><script>
+              var search = docsearch({
+                
+                apiKey: '2c24e5e78d724e77c46ef1b720700177',
+                indexName: 'diffbot',
+                inputSelector: '#search_input_react',
+                algoliaOptions: {}
+              });
+            </script></body></html>
