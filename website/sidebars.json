@@ -213,7 +213,8 @@
                 "label": "Tools and Usage",
                 "ids": ["kg-accessing",
                     "kg-clients",
-                    "dql-excel"
+                    "dql-excel",
+                    "dql-example"
                 ]
             },
             {
