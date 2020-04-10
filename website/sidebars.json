@@ -207,22 +207,11 @@
     "dql": {
         "Knowledge Graph": [
             "kg-index",
-            "dql-quickstart",
-            {
-                "type": "subcategory",
-                "label": "Tools and Usage",
-                "ids": ["kg-accessing",
-                    "kg-clients",
-                    "dql-excel"
-                ]
-            },
-            {
-                "type": "subcategory",
-                "label": "In-Depth",
-                "ids": ["dql-index",
-                    "dql-workflows",
-                    "dql-faq"]
-            }
+            "kg-quickstart",
+            "kg-search",
+            "kg-enhance",
+            "kg-excel-plugin",
+            "kg-key-concepts"
         ]
     },
     "docs-errors": {
