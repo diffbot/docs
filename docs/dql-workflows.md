@@ -366,50 +366,182 @@ List of common terms used in VC investment:
 
 ## APPENDIX B: Industry tags commonly found on the Web 
 
-- agriculture
-- auction houses
-- building materials
-- cannabis
-- chemical
-- cleaning services
-- construction
-- cosmetics
-- design
-- education
-- energy
-- engineering
-- entertainment
-- financial services
-- food and beverage
-- geophysical
-- health care
-- hotels
-- Internet
-- libraries and museums
-- luxury goods
-- manufacturing
-- mapping and navigation
-- media
-- metal supply
-- meteorological
-- mining
-- nanotechnology
-- packaged goods
-- packaging
-- publishing
-- real estate
-- renewables
-- restaurants
-- retail
-- robotics
-- services
-- software
-- sports
-- storage
-- technology
-- telecommunications
-- tobacco
-- tourism
-- transportation
-- waste management
+- Agricultural machinery manufacturers
+- Air forces
+- Aircraft manufacturers
+- Airlines
+- Amusement park companies
+- Architecture firms
+- Arts venues
+- Banks
+- Bicycle sharing companies
+- Biotechnology companies
+- Book publishing companies
+- Brick manufacturers
+- Broadcasting companies
+- Building materials companies
+- Bus manufacturers
+- Bus operating companies
+- Business intelligence companies
+- Business software companies
+- Car manufacturers
+- Car rental companies
+- Casinos
+- Cement companies
+- Ceramics manufacturers
+- Chemical companies
+- Cinemas and movie theaters
+- Cleaning companies
+- Clothing manufacturers
+- Cloud computing providers
+- Coal companies
+- Comics publishing companies
+- Computer companies
+- Computer hardware companies
+- Computer security companies
+- Computer security software companies
+- Construction equipment manufacturers
+- Construction industry
+- Construction organizations
+- Cosmetics companies
+- CRM software companies
+- Cruise lines
+- Cycle manufacturers
+- Database companies
+- Dentistry
+- Development software companies
+- Drink companies
+- Drinking establishments
+- Educational organizations
+- Educational software companies
+- Electronic design automation companies
+- Electronics companies
+- Engine manufacturers
+- Entertainment venues
+- ERP software companies
+- Event management companies
+- Explosives manufacturers
+- Fertilizer companies
+- Film companies
+- Film distributors
+- Film production companies
+- Financial data vendors
+- Financial services companies
+- Financial software companies
+- Financial technology companies
+- Food and drink companies
+- Food companies
+- Free software companies
+- Freight transport companies
+- Furniture manufacturers
+- Gambling companies
+- Geographic data and information companies
+- Government agencies
+- Government bodies
+- Health care
+- Health insurance
+- Heating, ventilation, and air conditioning companies
+- Helicopter operators
+- Home appliance manufacturers
+- Home video distributors
+- Hospitality companies
+- Hotels
+- Industrial machine manufacturers
+- Information technology consulting firms
+- Insurance companies
+- International organizations
+- Internet of things companies
+- Investment companies
+- Jewellery companies
+- Knife manufacturing companies
+- Law firms
+- Libraries
+- Luggage manufacturers
+- Machine manufacturers
+- Magazine publishing companies
+- Marketing companies
+- Matchmaking software companies
+- Media companies
+- Media companies
+- Medical and health organizations
+- Metal companies
+- Military academies
+- Military units and formations
+- Ministries
+- Mortgage lenders
+- Motor vehicle manufacturers
+- Motorcycle manufacturers
+- Museums
+- Music companies
+- Music equipment manufacturers
+- Music production companies
+- Music publishing companies
+- National academies
+- Natural gas companies
+- Networking companies
+- Newspaper companies
+- Oil companies
+- Online media companies
+- Online publishing companies
+- Optics manufacturing companies
+- Packaging companies
+- Paint manufacturers
+- Peer-to-peer lending companies
+- Pen manufacturers
+- Performing arts companies
+- Petrochemical companies
+- Pharmaceutical companies
+- Pharmacy
+- Photography companies
+- Plastics companies
+- Political parties
+- Polling companies
+- Postal organizations
+- Public transport operators
+- Pulp and paper companies
+- Radio stations
+- Railway companies
+- Real estate companies
+- Renewable energy companies
+- Research institutes
+- Restaurants
+- Retailers
+- Ridesharing companies
+- Schools
+- Security companies
+- Semiconductor companies
+- Sex businesses
+- Shipbuilding companies
+- Shopping delivery services
+- Software companies
+- Spacecraft manufacturers
+- Special effects companies
+- Sporting goods manufacturers
+- Sports clubs
+- Stock exchanges
+- Taxicab companies
+- Technology companies
+- Telecommunications companies
+- Television companies
+- Textile industry
+- Textile mills
+- Textile organizations
+- Tobacco companies
+- Tool manufacturers
+- Toy companies
+- Tractor manufacturers
+- Transport companies
+- Travel agencies
+- Truck manufacturers
+- Umbrella manufacturers
+- Universities and colleges
+- Vacuum cleaner manufacturers
+- Video game companies
+- Video game companies
+- Virtual reality companies
+- Watch manufacturing companies
+- Weapons manufacturing companies
+- Wholesalers
+- Wire and cable manufacturers
+- Zoos
 
