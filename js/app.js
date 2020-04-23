@@ -104,7 +104,7 @@ docReady(function () {
     // Build the dropdown for API
     let dropDown2 = document.createElement("div");
     dropDown2.classList.add("dropdown");
-    let dd2html = '<a href="/docs/en/api-basics-index" class="dropbtn">Automatic API</a><div class="dropdown-content">';
+    let dd2html = '<a href="/docs/en/api-basics-index" class="dropbtn">Extraction</a><div class="dropdown-content">';
     dd2html += '<a href="/docs/en/api-intro-product">Product API</a>';
     dd2html += '<a href="/docs/en/api-intro-article">Article API</a>';
     dd2html += '<a href="/docs/en/api-intro-analyze">Analyze API</a>';
@@ -119,7 +119,7 @@ docReady(function () {
     // Build the dropdown for Batch
     let dropDown3 = document.createElement("div");
     dropDown3.classList.add("dropdown");
-    let dd3html = '<a href="/docs/en/cb-basics-index" class="dropbtn">Batch Services</a><div class="dropdown-content">';
+    let dd3html = '<a href="/docs/en/cb-basics-index" class="dropbtn">Crawling</a><div class="dropdown-content">';
     dd3html += '<a href="/docs/en/cb-intro-cb">Crawlbot</a>';
     dd3html += '<a href="/docs/en/cb-intro-bulk">Bulk Jobs</a>';
     dd3html += '<a href="/docs/en/cb-intro-search">Search API</a>';
