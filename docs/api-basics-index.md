@@ -1,6 +1,6 @@
 ---
 id: api-basics-index
-title: Explaining Diffbot's Automatic APIs
+title: Explaining Diffbot's Extraction APIs
 sidebar_label: >> START HERE <<
 todo: Turn into nice custom landing page
 ---

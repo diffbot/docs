@@ -38,10 +38,10 @@ class Footer extends React.Component {
           <div>
             <h5>Docs</h5>
             <a href={this.docUrl('api-basics-index', this.props.language || "en")}>
-              Automatic API
+              Extraction
             </a>
             <a href={this.docUrl('cb-basics-index', this.props.language || "en")}>
-              Batch Services
+              Crawling
             </a>
             <a href={this.docUrl('kg-index', this.props.language || "en")}>
               Knowledge Graph
