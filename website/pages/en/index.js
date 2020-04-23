@@ -152,13 +152,13 @@ class Index extends React.Component {
             content: 'Extract Structured Data from Web Pages',
             image: `${baseUrl}img/read.svg`,
             imageAlign: 'top',
-            title: `<a href=${docUrl('api-basics-index')} style='text-decoration: underline'>Automatic API</a>`,
+            title: `<a href=${docUrl('api-basics-index')} style='text-decoration: underline'>Extraction</a>`,
           },
           {
             content: 'Crawl and Extract Entire Domains',
             image: `${baseUrl}img/howto.svg`,
             imageAlign: 'top',
-            title: `<a href=${docUrl('cb-basics-index')} style='text-decoration: underline'>Batch Services</a>`,
+            title: `<a href=${docUrl('cb-basics-index')} style='text-decoration: underline'>Crawling</a>`,
           },          
           {
             content: 'Query the Whole Web and Enhance Your Own Data',
