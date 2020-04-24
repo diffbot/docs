@@ -12,11 +12,13 @@ _Please note: person profile search and data enrichment is not yet supported fro
 
 ## Description
 
-Version 1.1.0.0 of the plug-in supports integration with the Diffbot Enhance API for data enrichment of organization firmographic profiles and integration with the Diffbot Knowledge Graph Search API in support of discovery of companies matching size, industry, founding date, and/or financial criteria. 
+Version 1.3.1.0 of the plug-in supports integration with the Diffbot Enhance API for data enrichment of organization firmographic profiles as well as integration with the Diffbot Knowledge Graph Search API in support of discovery of companies and articles from your desktop. 
 
 How much data are we talking about?
 
-Enrich or search organizational data with access to over 180M profiles from Diffbot’s Knowledge Graph. Start with a list of entities or a set of criteria. End with a deep dive into organizational data. Pull data on one or a hundred organizations with the click of a button.
+Enrich or search organizational data with access to over 180M profiles from Diffbot’s Knowledge Graph. Start with a list of entities or a set of criteria. End with a deep dive into organizational data. Pull data on one or a hundred organizations with the click of a button. 
+
+Search article data extracted from hundreds of thousands of unique online publications and news sites linked to Organization profiles in the Diffbot Knowledge Graph on a continuous basis, 24x7, 365.
 
 How does it work?
 
@@ -24,7 +26,7 @@ Diffbot’s Knowledge Graph is compiled by machine learning-enabled web scrapers
 
 The Knowledge Graph contains over 20 billion entities (organizations, locations, articles, key people, brands, and more), and over 2 trillion facts (revenue, price, skills, and more). All entities are contextually linked and sourced from public-facing documents around the web. A new Knowledge Graph is compiled every 3-5 days, ensuring data freshness and accuracy.
 
-You can use Diffbot’s Excel Add-In to search or enrich organizational entries without needing to leave your Excel workbook.
+You can use Diffbot’s Excel Add-In to search or enrich organizational entries or search online articles without needing to leave your Excel workbook.
 
 Define a search query using the Add-in query builder UI within an Excel spreadsheet on your desktop or in Office365. Or, provide one or more columns containing organization names or website domains and an additional column containing a unique identifier per row. Point Diffbot’s Excel Add-In to the location of your names and identifiers and toggle what fields of data you want to be returned. Upon execution, Diffbot’s Excel Add-In populates a new sheet that pairs the organizations and unique identifiers you provided with all available data attributes much more quickly and comprehensively than could be manually compiled.
 
@@ -130,9 +132,9 @@ You will now see the Home screen of the Diffbot Add-in.
 
 ![](/img/dql/excel21.png)
 
-### Search the Knowledge Graph
+### Search the Knowledge Graph for Organizations
 
-To search for organizations in the Diffbot Knowledge Graph from the Add-In, begin by tapping the Search button in the home screen after you’ve logged in.
+To search for organizations in the Diffbot Knowledge Graph from the Add-In, begin by tapping the Search button in the home screen after you’ve logged in. Tap Create Query to enter your filter criteria.
 
 ![](/img/dql/excel22.png)
 
@@ -166,11 +168,11 @@ When the data finishes loading the screen will still display “Please Wait’ b
 
 Click the ‘x’ next to Please Wait to return to the Add-In to take other actions. Or, close the Add-In by tapping the Diffy Icon in the upper right corner of the screen of the Excel worksheet (see above) to view the resulting output in the sheet.
 
-### Sample Data
+### Sample Organization Profile Data
 
 Diffbot has supplied sample data to make it easy to familiarize users with the Diffbot Add-in data enrichment features and functions. The sample data is a list of the Fortune 1000 companies from some point in time in the past. We recommend including all attributes in your output in order to familiarize yourself with the abbreviated Diffbot Organization profile. For a more complete data profile, use the Diffbot URL provided to view the Diffbot Knowledge Graph Organization entity in the Diffbot Developer Dashboard. From there you can download a complete JSON profile record that contains a full set of known attributes for that Organization.
 
-### Enhance a Profile with Sample Data
+### Enhance an Organization Profile with Sample Data
 
 To enrich organization profiles click the **Enhance** button from the Home screen of the Add-In or tap **Menu** and select **Enhance**.
 
@@ -208,7 +210,7 @@ You will need to click the ‘X” in the Please Wait dialog box when the window
 
 ![](/img/dql/excel38.png)
 
-### Enriching Your Own Data
+### Enriching Your Own Organization Data
 
 The process for enriching your own organization profile data is similar to enriching the Sample dataset provided. Below is an example of a custom flow.
 
@@ -220,7 +222,7 @@ _Please note: any data enrichment tasks you run on your own data require you to 
 
 By default the output is written to a sheet named Organization Output. _Please note: If you run this process more than once and do not modify the output sheet name, you will be asked to confirm that you wish to overwrite an existing sheet with a new output. You will have to confirm the overwrite or cancel and name a new output sheet to launch the enrichment task._ 
 
-#### Add-in inputs
+#### Add-in inputs for Organizations
 
 To use the Diffbot Excel Add-In for data enrichment, you must include 
 
@@ -238,7 +240,7 @@ You may also choose to constrain your match further by including
 
 In general, it is best to start with a unique ID and one attribute (Organization name, Organization website or Org Diffbot Entity ID) to maximize the match rate.
 
-#### Add-in outputs
+#### Add-in outputs for Organizations
 
 The Add-In will return the following organization attribute details by default (when available in the Graph):
 
@@ -254,7 +256,7 @@ The Add-In will return the following organization attribute details by default (
 - Key People currently linked to/accountable for the organization (CEOs, Founders, Board Members)
 - Links to in-depth Knowledge Graph Entity Pages (for organizations and key people)
 
-### Knowledge Graph Search Query Constraints
+### Knowledge Graph Organization Search Query Constraints
 
 When you seek companies that match your business criteria, a search of the graph can produce a list of matching profiles. You have the option to constrain your search using:
 
@@ -264,3 +266,67 @@ When you seek companies that match your business criteria, a search of the graph
 - Industry labels
 
 Support for financial data constraints (annual revenues, total investments) is planned for a future version of the Add-In.
+
+### Search the Knowledge Graph for Articles
+
+To search for articles in the Diffbot Knowledge Graph from the Add-In, begin by tapping the Search button in the home screen after you’ve logged in. Then tap 'Create Query' and select 'Article' from the 'Data Type' Menu.
+
+![](/img/dql/excel41.png)
+
+
+You have the option to specify one or more constraints to filter the results and return articles that best meet your business criteria. As you define each attribute, the number of results dynamically updates to display how many entity matches will be returned given the inputs you’ve provided so far. _Please note: no more than 1000 results will be returned per query submitted regardless of how many entities match your criteria._
+
+Here’s an example of a query defined to return articles tagged 'COVID19', published on or after April 15, 2020 that currently reference UCSF:
+
+![](/img/dql/excel42.png)
+
+![](/img/dql/excel43.png)
+
+![](/img/dql/excel44.png)
+
+
+The number of entities matching this query was 54 when the query was run. Match counts for the same query will vary overtime as new articles that match the criteria are added to the Graph. _Please note: complete builds of the DKG are released every 3-5 days on average. Article data is continuously added to the Graph 24x7, 365_. Click Done when you’ve finished defining your search query inputs. Then click the _Next button_ to constrain the attributes returned for each matching article entity.
+
+By default, all Article attributes will be populated with values for each matching articles returned. You can specify which you do not want returned by unchecking the box next to that attribute in the Output details screen. _Please note: there will be one row per Article returned with additional values added as new columns unless you specify that the data be returned as multiple rows._ 
+
+![](/img/dql/excel45.png)
+
+
+You can bound the number of values returned and will receive no more than 3 values per attribute by default. For example, see Quotes in the Add-in output configuration screen below:
+
+![](/img/dql/excel46.png)
+
+You can also decide the name of the sheet the output will be written to. By default it will be written to a sheet called **Articles Output**. After finalizing the search results output format and scope, scroll to the bottom of the Output Details screen and click the **Execute** button. The results of your search will begin to flow into the sheet called **Articles Output** or whatever sheet name you specified in the Output details screen.
+
+When the data finishes loading the screen will still display “Please Wait’ but will indicate **Done. Time Elapsed...** in the white section of the status box as displayed below:
+
+![](/img/dql/excel47.png)
+
+Click the ‘x’ next to Please Wait to return to the Add-In to take other actions. Or, close the Add-In by tapping the Diffy Icon in the upper right corner of the screen of the Excel worksheet (see above) to view the resulting output in the sheet.
+
+#### Add-in outputs for Articles
+
+The Add-In will return the following article attribute details by default (when available in the Graph):
+
+- Website (root publisher or host name and pageUrl)
+- Author (Name and Url)
+- Title
+- Dates (Publication date and Crawl date)
+- Publisher (region and country)
+- Language
+- Tags (Generated from analysis of the extracted text)
+- Quotes (Found in the article text and the person credited with each quote)
+- Links to in-depth Knowledge Graph Entity Pages (for articles, authors and publishers)
+
+### Knowledge Graph Article Search Query Constraints
+
+When you seek articles that match your criteria, you have the option to constrain your search using:
+
+- Tag Labels (Generated from analysis of the extracted text and linked to Organizations, Persons, Locations, or Topics in the graph)
+- Keywords Found in the Article Title
+- Keywords Found in the Text of the Article
+- Language
+- Date or Date Range
+- Website (root publisher or host name)
+
+Support for entityID tag constraints (DiffbotIDs for Organizations or other entities mentioned in an article) is planned for a future version of the Add-In.
