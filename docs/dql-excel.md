@@ -162,7 +162,7 @@ You can bound the number of values returned and will receive no more than 3 valu
 
 You can also decide the name of the sheet the output will be written to. By default it will be written to a sheet called **Organizations Output**. After finalizing the search results output format and scope, scroll to the bottom of the Output Details screen and click the **Execute** button. The results of your search will begin to flow into the sheet called **Organizations Output** or whatever sheet name you specified in the Output details screen.
 
-When the data finishes loading the screen will still display “Please Wait’ but will indicate **Done. Time Elapsed...** in the white section of the status box as displayed below:
+When the data finishes loading the screen will still display “Please Wait“ but will indicate **Done. Time Elapsed...** in the white section of the status box as displayed below:
 
 ![](/img/dql/excel29.png)
 
