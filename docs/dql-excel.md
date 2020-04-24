@@ -206,7 +206,7 @@ The dialog box in the Add-in will advise you of the progress of the task. Each r
 
 ![](/img/dql/excel37.png)
 
-You will need to click the ‘X” in the Please Wait dialog box when the window indicates the task is Done. You can then tap the ‘x’ in the upper right corner of the Add-In screen to close the Add-In or tap the Diffy icon to close it and view the data in the output sheet.
+You will need to click the ‘x’ in the Please Wait dialog box when the window indicates the task is Done. You can then tap the ‘x’ in the upper right corner of the Add-In screen to close the Add-In or tap the Diffy icon to close it and view the data in the output sheet.
 
 ![](/img/dql/excel38.png)
 
