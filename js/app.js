@@ -169,4 +169,10 @@ docReady(function () {
             + docMainWrapper.innerHTML;
         }
     }
+
+    // Add fathom analytics
+    let script = document.createElement('script');
+    script.setAttribute('src', 'https://cdn.usefathom.com/3.js');
+    script.setAttribute('site', 'OGXCNLPJ');
+    document.querySelector('body').appendChild(script);
 })
