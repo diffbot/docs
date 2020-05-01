@@ -90,9 +90,9 @@ Objects in the Article API's `objects` array will include the following fields:
 | &#x21B3;`primary` | Returns `true` if video is identified as primary based on visual analysis. |
 | &#x21B3;`diffbotUri` | Internal ID used for indexing. |
 | `breadcrumb` | Returns a top-level array (`breadcrumb`) of URLs and link text from page breadcrumbs. |
-| `diffbotUri` | Unique object ID. The `diffbotUri` is generated from the values of various Article fields and uniquely identifies the object. This can be used for deduplication. </td></tr><td colspan="2">**Optional fields, available using `fields=` argument**</td> |
+| `diffbotUri` | Unique object ID. The `diffbotUri` is generated from the values of various Article fields and uniquely identifies the object. This can be used for deduplication. |
+| `sentiment` | Returns the sentiment score of the analyzed article text, a value ranging from -1.0 (very negative) to 1.0 (very positive). </td></tr><td colspan="2">**Optional fields, available using `fields=` argument**</td> |
 | `quotes` | Returns quotes found in the article text and who said them. For English-language text only. |
-| `sentiment` | Returns the sentiment score of the analyzed article text, a value ranging from -1.0 (very negative) to 1.0 (very positive). For English-language text only. |
 | `links` | Returns a top-level object (`links`) containing all hyperlinks found on the page. |
 | `meta` | Returns a top-level object (`meta`) containing the full contents of page `meta` tags, including sub-arrays for [OpenGraph](https://ogp.me/) tags, [Twitter Card](https://developer.twitter.com/en/docs/tweets/optimize-with-cards/overview/markup) metadata, [schema.org](https://www.schema.org) microdata, and -- if available -- [oEmbed](https://www.oembed.com) metadata. |
 | `querystring` | Returns any key/value pairs present in the URL querystring. Items without a discrete value will be returned as `true`. |

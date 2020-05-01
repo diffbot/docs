@@ -75,7 +75,7 @@ The Discussion API `objects` / `discussion` response will include the following 
 | `humanLanguage` | Spoken/human language of the discussion / comment thread, using two-letter [ISO 639-1 nomenclature](https://en.wikipedia.org/wiki/List_of_ISO_639-1_codes). |
 | `rssUrl` | URL of the discussion's RSS feed, if available. |
 | `diffbotUri` | Unique object ID. The `diffbotUri` is generated from the values of various Discussion fields and uniquely identifies the object. This can be used for deduplication. </td></tr><tr><td colspan="2">**Optional fields, available using `fields=` argument**</td> |
-| `sentiment` | Returns a sentiment score of each individual post, a value ranging from -1.0 (very negative) to 1.0 (very positive). For English-language posts only. |
+| `sentiment` | Returns a sentiment score of each individual post, a value ranging from -1.0 (very negative) to 1.0 (very positive). |
 | `links` | Returns a top-level object (`links`) containing all hyperlinks found on the page. |
 | `meta` | Returns a top-level object (`meta`) containing the full contents of page `meta` tags, including sub-arrays for [OpenGraph](https://ogp.me/) tags, [Twitter Card](https://developer.twitter.com/en/docs/tweets/optimize-with-cards/overview/markup) metadata, [schema.org](https://www.schema.org) microdata, and -- if available -- [oEmbed](https://www.oembed.com) metadata. |
 | `querystring` | Returns any key/value pairs present in the URL querystring. Items without a discrete value will be returned as `true`. |
