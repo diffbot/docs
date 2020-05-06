@@ -148,8 +148,42 @@ docReady(function () {
     // Add a subsection into the sidebar for API docs
     if (inKgSection) {
         console.log("Writing new section");
-        let newSection = '<div class="navGroup subNavGroup"><h4 class="navGroupSubcategoryTitle">API Reference Docs</h4><ul><li class="navListItem"><a class="navItem" href="/kgapi">Knowledge Graph API Reference</a></li><li class="navListItem"><a class="navItem" href="/enhance">Enhance API Reference</a></li><li class="navListItem"><a class="navItem" href="/ontology">Ontology Reference</a></li></ul></div>'
+        let newSection = '<div class="navGroup subNavGroup"><h4 class="navGroupSubcategoryTitle">API Reference Docs</h4><ul>' +
+            '<li class="navListItem"><a class="navItem" href="/kgapi">Knowledge Graph API Reference</a></li>' +
+            '<li class="navListItem"><a class="navItem" href="/enhance">Enhance API Reference</a></li>' +
+            '<li class="navListItem"><a class="navItem" href="/ontology">Ontology Reference</a></li>' +
+        '</ul></div>'
         document.querySelector(".toc .toggleNav .navGroups .navGroup>ul").innerHTML += newSection;
+
+
+        let ulSection = document.querySelector(".toc .toggleNav .navGroups .navGroup>ul");
+        let items = ulSection.querySelectorAll("li")
+        let kgQuickstartItem = null;
+        let kgSearchItem = null;
+        for (let item of items) {
+            let a = item.querySelector('a');
+            if (a.innerHTML === "KG Quickstart") {
+                kgQuickstartItem = item;
+            } else if (a.innerHTML === "KG Search") {
+                kgSearchItem = item;
+            }
+
+            if(kgQuickstartItem != null && kgSearchItem != null) {
+                break;
+            }
+        }
+        
+        let newSection1 = '<div class="navGroup subNavGroup"><h4 class="navGroupSubcategoryTitle">KG Search</h4><ul>' +
+                '<li class="navListItem"><a class="navItem" href="kg-search-quickstart">KG Search Quickstart</a></li>' +
+                '<li class="navListItem"><a class="navItem" href="kg-search-dqlreference">DQL Reference</a></li>' +
+                '<li class="navListItem"><a class="navItem" href="kg-search-clients">Clients</a></li>' +
+                '<li class="navListItem"><a class="navItem" href="/kgapi">OpenAPI Docs</a></li>' +
+                '<li class="navListItem"><a class="navItem" href="kg-search-faq">FAQ</a></li>' +
+            '</ul></div>'
+        var newSection1Dom = document.createElement( 'div' );
+        newSection1Dom.innerHTML = newSection1;
+        ulSection.insertBefore(newSection1Dom.firstChild, kgQuickstartItem.nextSibling);
+        ulSection.removeChild(kgSearchItem);
     }
 
     // Store sidebar in localstorage if exists
