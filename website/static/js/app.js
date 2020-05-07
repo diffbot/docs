@@ -149,8 +149,6 @@ docReady(function () {
     if (inKgSection) {
         console.log("Writing new section");
         let newSection = '<div class="navGroup subNavGroup"><h4 class="navGroupSubcategoryTitle">API Reference Docs</h4><ul>' +
-            '<li class="navListItem"><a class="navItem" href="/kgapi">Knowledge Graph API Reference</a></li>' +
-            '<li class="navListItem"><a class="navItem" href="/enhance">Enhance API Reference</a></li>' +
             '<li class="navListItem"><a class="navItem" href="/ontology">Ontology Reference</a></li>' +
         '</ul></div>'
         document.querySelector(".toc .toggleNav .navGroups .navGroup>ul").innerHTML += newSection;
@@ -160,30 +158,41 @@ docReady(function () {
         let items = ulSection.querySelectorAll("li")
         let kgQuickstartItem = null;
         let kgSearchItem = null;
+        let kgEnhanceItem = null;
         for (let item of items) {
             let a = item.querySelector('a');
             if (a.innerHTML === "KG Quickstart") {
                 kgQuickstartItem = item;
             } else if (a.innerHTML === "KG Search") {
                 kgSearchItem = item;
-            }
-
-            if(kgQuickstartItem != null && kgSearchItem != null) {
-                break;
+            } else if (a.innerHTML === "KG Enhance") {
+                kgEnhanceItem = item;
             }
         }
         
-        let newSection1 = '<div class="navGroup subNavGroup"><h4 class="navGroupSubcategoryTitle">KG Search</h4><ul>' +
+        let kgSearchSection = '<div class="navGroup subNavGroup"><h4 class="navGroupSubcategoryTitle">KG Search</h4><ul>' +
                 '<li class="navListItem"><a class="navItem" href="kg-search-quickstart">KG Search Quickstart</a></li>' +
                 '<li class="navListItem"><a class="navItem" href="kg-search-dqlreference">DQL Reference</a></li>' +
                 '<li class="navListItem"><a class="navItem" href="kg-search-clients">Clients</a></li>' +
                 '<li class="navListItem"><a class="navItem" href="/kgapi">OpenAPI Docs</a></li>' +
                 '<li class="navListItem"><a class="navItem" href="kg-search-faq">FAQ</a></li>' +
             '</ul></div>'
-        var newSection1Dom = document.createElement( 'div' );
-        newSection1Dom.innerHTML = newSection1;
-        ulSection.insertBefore(newSection1Dom.firstChild, kgQuickstartItem.nextSibling);
+        var kgSearchSectionDom = document.createElement( 'div' );
+        kgSearchSectionDom.innerHTML = kgSearchSection;
+        ulSection.insertBefore(kgSearchSectionDom.firstChild, kgSearchItem);
         ulSection.removeChild(kgSearchItem);
+        
+        let kgEnhanceSection = '<div class="navGroup subNavGroup"><h4 class="navGroupSubcategoryTitle">KG Enhance</h4><ul>' +
+                '<li class="navListItem"><a class="navItem" href="kg-enhance-quickstart">KG Enhance Quickstart</a></li>' +
+                '<li class="navListItem"><a class="navItem" href="kg-enhance-reference">Enhance Reference</a></li>' +
+                '<li class="navListItem"><a class="navItem" href="kg-enhance-clients">Clients</a></li>' +
+                '<li class="navListItem"><a class="navItem" href="/enhance">OpenAPI Docs</a></li>' +
+                '<li class="navListItem"><a class="navItem" href="kg-enhance-faq">FAQ</a></li>' +
+            '</ul></div>'
+        var kgEnhanceSectionDom = document.createElement( 'div' );
+        kgEnhanceSectionDom.innerHTML = kgEnhanceSection;
+        ulSection.insertBefore(kgEnhanceSectionDom.firstChild, kgEnhanceItem);
+        ulSection.removeChild(kgEnhanceItem);
     }
 
     // Store sidebar in localstorage if exists
