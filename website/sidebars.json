@@ -10,7 +10,7 @@
             "type": "subcategory",
             "label": "Recipes",
             "ids": ["api-usage-product"]
-        }, 
+        },
         {
             "type": "subcategory",
             "label": "API",
@@ -29,7 +29,7 @@
             "type": "subcategory",
             "label": "Recipes",
             "ids": ["api-usage-article", "guides-data-behind-login", "guides-concatenate-multipage-articles", "guides-correct-images-custom-api"]
-        },        
+        },
         {
             "type": "subcategory",
             "label": "API",
@@ -47,7 +47,7 @@
             "type": "subcategory",
             "label": "Recipes",
             "ids": ["api-usage-analyze"]
-        },        
+        },
         {
             "type": "subcategory",
             "label": "API",
@@ -65,7 +65,7 @@
             "type": "subcategory",
             "label": "Recipes",
             "ids": ["api-usage-image"]
-        },        
+        },
         {
             "type": "subcategory",
             "label": "API",
@@ -83,7 +83,7 @@
             "type": "subcategory",
             "label": "Recipes",
             "ids": ["api-usage-video"]
-        },        
+        },
         {
             "type": "subcategory",
             "label": "API",
@@ -101,7 +101,7 @@
             "type": "subcategory",
             "label": "Recipes",
             "ids": ["api-usage-discussion"]
-        },        
+        },
         {
             "type": "subcategory",
             "label": "API",
@@ -125,7 +125,7 @@
             "label": "API",
             "ids": [ "api-custom", "api-selectors-filters", "api-managing-rules-programmatically"]
         }
-       
+
         ]
     },
     "account-api": {
@@ -139,7 +139,7 @@
             "type": "subcategory",
             "label": "Recipes",
             "ids": ["api-usage-account"]
-        },        
+        },
         {
             "type": "subcategory",
             "label": "API",
@@ -158,7 +158,7 @@
                 "type": "subcategory",
                 "label": "Recipes",
                 "ids": ["cb-usage-cb", "guides-authenticated-crawling", "guides-check-results-specific-page-type", "guides-crawling-ajax-generated-links", "guides-custom-headers-crawl"]
-            },        
+            },
             {
                 "type": "subcategory",
                 "label": "API",
@@ -177,7 +177,7 @@
                 "type": "subcategory",
                 "label": "Recipes",
                 "ids": ["cb-usage-bulk"]
-            },        
+            },
             {
                 "type": "subcategory",
                 "label": "API",
@@ -196,7 +196,7 @@
                 "type": "subcategory",
                 "label": "Recipes",
                 "ids": ["cb-usage-search"]
-            },        
+            },
             {
                 "type": "subcategory",
                 "label": "API",
@@ -222,6 +222,20 @@
                 "ids": ["dql-index",
                     "dql-workflows",
                     "dql-faq"]
+            }
+        ]
+    },
+    "nl": {
+        "Natural Language": [
+            "nl-index", "nl-quickstart",
+            {
+                "type": "subcategory",
+                "label": "How-tos",
+                "ids": [
+                    "nl-how-to-entity", 
+                    "nl-how-to-sentiment",
+                    "nl-how-to-relationship"
+                ]
             }
         ]
     },
