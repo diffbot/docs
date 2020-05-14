@@ -3,10 +3,9 @@ id: nl-index
 title: Natural Language API
 ---
 
-The Natural Language API allows developers to extract entities (e.g., people, organizations, products) and data about them (e.g., sentiment, relationships) from text. The Natural Language API allows you to perform:
-* [Entity Extraction and Linking](nl-how-to-entity)
-* [Sentiment Analysis](nl-how-to-sentiment)
-* [Relationship Extraction](nl-how-to-relationship)
+The Natural Language API allows developers to extract entities (e.g., people, organizations, products) and data about them (e.g., sentiment, relationships) from text. 
+
+>New to the Natural Language API? [Start here](nl-quickstart).
 
 ## API Reference
 * [Quickstart](nl-quickstart)
