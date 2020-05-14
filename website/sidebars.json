@@ -227,16 +227,7 @@
     },
     "nl": {
         "Natural Language": [
-            "nl-index", "nl-quickstart",
-            {
-                "type": "subcategory",
-                "label": "How-tos",
-                "ids": [
-                    "nl-how-to-entity", 
-                    "nl-how-to-sentiment",
-                    "nl-how-to-relationship"
-                ]
-            }
+            "nl-index", "nl-quickstart"
         ]
     },
     "docs-errors": {

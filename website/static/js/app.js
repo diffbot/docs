@@ -126,10 +126,11 @@ docReady(function () {
     dd3html += '</div>';
     dropDown3.innerHTML = dd3html;
 
-    // Build the dropdown for NLP
+    // Build the dropdown for natural language
     let dropDown4 = document.createElement("div");
     dropDown4.classList.add("dropdown");
-    let dd4html = '<a href="/docs/en/nl-index" class="dropbtn">NLP</a><div class="dropdown-content">';
+    let dd4html = '<a href="/docs/en/nl-index" class="dropbtn">Natural Language</a><div class="dropdown-content">';
+    dd4html += '<a href="/docs/en/nl-index">Home</a>';
     dd4html += '<a href="/docs/en/nl-quickstart">Quickstart</a>';
     dd4html += '</div>';
     dropDown4.innerHTML = dd4html;
@@ -138,10 +139,11 @@ docReady(function () {
     //let currentNav = document.querySelector("ul.nav-site").innerHTML;
     //document.querySelector("ul.nav-site").innerHTML = dropdownHtml + currentNav;
     let currentNav = document.querySelector("ul.nav-site");
+    currentNav.prepend(dropDown4);
     currentNav.prepend(dropDown1);
     currentNav.prepend(dropDown3);
     currentNav.prepend(dropDown2);
-    currentNav.prepend(dropDown4);
+    
 
     // Check if there is an H3 Knowledge Graph heading in the sidebar
     let inKgSection = false;
