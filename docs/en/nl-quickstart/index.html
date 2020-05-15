@@ -1,0 +1,139 @@
+<!DOCTYPE html><html lang="en"><head><meta charSet="utf-8"/><meta http-equiv="X-UA-Compatible" content="IE=edge"/><title>Natural Language Quickstart · Docs Suite</title><meta name="viewport" content="width=device-width"/><meta name="generator" content="Docusaurus"/><meta name="description" content="The [Natural Language Demo](http://relex.diffbot.com) is a great place to start. It illustrates the features of the Natural Language API. "/><meta name="docsearch:language" content="en"/><meta property="og:title" content="Natural Language Quickstart · Docs Suite"/><meta property="og:type" content="website"/><meta property="og:url" content="https://diffbot.github.io/"/><meta property="og:description" content="The [Natural Language Demo](http://relex.diffbot.com) is a great place to start. It illustrates the features of the Natural Language API. "/><meta property="og:image" content="https://diffbot.github.io/img/diagram.svg"/><meta name="twitter:card" content="summary"/><meta name="twitter:image" content="https://diffbot.github.io/img/diagram.svg"/><link rel="shortcut icon" href="/img/diffbot-head.png"/><link rel="stylesheet" href="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.css"/><link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/default.min.css"/><script type="text/javascript" src="https://buttons.github.io/buttons.js"></script><script type="text/javascript" src="/js/app.js"></script><script src="/js/scrollSpy.js"></script><link rel="stylesheet" href="/css/main.css"/><script src="/js/codetabs.js"></script></head><body class="sideNavVisible separateOnPageNav"><div class="fixedHeaderContainer"><div class="headerWrapper wrapper"><header><a href="/"><img class="logo" src="/img/diffbot_white.svg" alt="Docs Suite"/><h2 class="headerTitleWithLogo">Docs Suite</h2></a><div class="navigationWrapper navigationSlider"><nav class="slidingNav"><ul class="nav-site nav-site-internal"><li class=""><a href="/docs/en/error-intro" target="_self">Debugging</a></li><li class="navSearchWrapper reactNavSearchWrapper"><input type="text" id="search_input_react" placeholder="Search" title="Search"/></li></ul></nav></div></header></div></div><div class="navPusher"><div class="docMainWrapper wrapper"><div class="docsNavContainer" id="docsNav"><nav class="toc"><div class="toggleNav"><section class="navWrapper wrapper"><div class="navBreadcrumb wrapper"><div class="navToggle" id="navToggler"><div class="hamburger-menu"><div class="line1"></div><div class="line2"></div><div class="line3"></div></div></div><h2><i>›</i><span>Natural Language</span></h2><div class="tocToggler" id="tocToggler"><i class="icon-toc"></i></div></div><div class="navGroups"><div class="navGroup"><h3 class="navGroupCategoryTitle collapsible">Natural Language<span class="arrow"><svg width="24" height="24" viewBox="0 0 24 24"><path fill="#565656" d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z"></path><path d="M0 0h24v24H0z" fill="none"></path></svg></span></h3><ul class="hide"><li class="navListItem"><a class="navItem" href="/docs/en/nl-index">Natural Language API</a></li><li class="navListItem navListItemActive"><a class="navItem" href="/docs/en/nl-quickstart">Quickstart</a></li></ul></div></div></section></div><script>
+            var coll = document.getElementsByClassName('collapsible');
+            var checkActiveCategory = true;
+            for (var i = 0; i < coll.length; i++) {
+              var links = coll[i].nextElementSibling.getElementsByTagName('*');
+              if (checkActiveCategory){
+                for (var j = 0; j < links.length; j++) {
+                  if (links[j].classList.contains('navListItemActive')){
+                    coll[i].nextElementSibling.classList.toggle('hide');
+                    coll[i].childNodes[1].classList.toggle('rotate');
+                    checkActiveCategory = false;
+                    break;
+                  }
+                }
+              }
+
+              coll[i].addEventListener('click', function() {
+                var arrow = this.childNodes[1];
+                arrow.classList.toggle('rotate');
+                var content = this.nextElementSibling;
+                content.classList.toggle('hide');
+              });
+            }
+
+            document.addEventListener('DOMContentLoaded', function() {
+              createToggler('#navToggler', '#docsNav', 'docsSliderActive');
+              createToggler('#tocToggler', 'body', 'tocActive');
+
+              var headings = document.querySelector('.toc-headings');
+              headings && headings.addEventListener('click', function(event) {
+                var el = event.target;
+                while(el !== headings){
+                  if (el.tagName === 'A') {
+                    document.body.classList.remove('tocActive');
+                    break;
+                  } else{
+                    el = el.parentNode;
+                  }
+                }
+              }, false);
+
+              function createToggler(togglerSelector, targetSelector, className) {
+                var toggler = document.querySelector(togglerSelector);
+                var target = document.querySelector(targetSelector);
+
+                if (!toggler) {
+                  return;
+                }
+
+                toggler.onclick = function(event) {
+                  event.preventDefault();
+
+                  target.classList.toggle(className);
+                };
+              }
+            });
+        </script></nav></div><div class="container mainContainer docsContainer"><div class="wrapper"><div class="post"><header class="postHeader"><a class="edit-page-link button" href="https://github.com/diffbot/docs/edit/master/docs/nl-quickstart.md" target="_blank" rel="noreferrer noopener">Edit</a><h1 id="__docusaurus" class="postHeaderTitle">Natural Language Quickstart</h1></header><article><div><span><p>The <a href="http://relex.diffbot.com">Natural Language Demo</a> is a great place to start. It illustrates the features of the Natural Language API.</p>
+<p><a href="http://relex.diffbot.com"><img src="/img/nl-demo.png" alt="Natural Language Demo Screenshot"></a></p>
+<p>The &quot;Entities&quot; tab shows the extracted entities sorted by salience. Click on an entity to see their link to the Diffbot KG and highlight all the mentions to this entity in the text.</p>
+<p>The &quot;Facts&quot; tab shows the extracted facts (or statements). Hover over a fact to see the part of the text where this fact was found. See the &quot;Documentation&quot; tab for a list of properties we currently support.</p>
+<p>The &quot;Open Extractions&quot; tab shows &quot;schema-free&quot; relationships as described in the text.</p>
+<h2><a class="anchor" aria-hidden="true" id="getting-started-with-the-api"></a><a href="#getting-started-with-the-api" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Getting started with the API</h2>
+<p><a href="https://colab.research.google.com/drive/1gvCCbuRRiF5ISo6oaQ2uDQLX2_ySMdyl">This notebook</a> shows how to get started with Python.</p>
+<p>First, enter your token below and choose which fields to return. For a list of all fields, please refer to the <a href="https://nl.diffbot.com/documentation/">API documentation</a>.</p>
+<pre><code class="hljs">TOKEN = <span class="hljs-string">'add your token here'</span>
+FIELDS = <span class="hljs-string">"entities,sentiment,statements"</span>
+HOST = <span class="hljs-string">"nl.diffbot.com"</span><span class="hljs-built_in">
+PORT </span>= <span class="hljs-string">"80"</span>
+</code></pre>
+<p>This is how you make a request.</p>
+<pre><code class="hljs"><span class="hljs-built_in">import</span> json
+<span class="hljs-built_in">import</span> requests
+
+def get_request(payload):
+    <span class="hljs-attr">res</span> = requests.get(<span class="hljs-string">"http://{}:{}/v1/?fields={}&amp;token={}"</span> 
+        .format(HOST, PORT, FIELDS, TOKEN), <span class="hljs-attr">params=payload)</span>
+    return res.json()
+
+<span class="hljs-attr">title</span> = <span class="hljs-string">"Robert Sowell"</span>
+<span class="hljs-attr">content</span> = title +<span class="hljs-string">"\n\nRobert Sowell was an American football player who played defensive back for the Miami Dolphins. He died June 22, 2015 of a heart attack."</span>
+
+<span class="hljs-attr">res</span> = get_request({
+    <span class="hljs-string">"content"</span>: content,
+    <span class="hljs-string">"lang"</span>: <span class="hljs-string">"en"</span>,
+    <span class="hljs-string">"format"</span>: <span class="hljs-string">"plain text with title"</span>
+})
+
+</code></pre>
+<p>Now, we can explore which entities are mentioned in the text by listing by salience (i.e., from most prominent entity in the text to least prominent).</p>
+<pre><code class="hljs">import pandas <span class="hljs-keyword">as</span> pd
+<span class="hljs-keyword">if</span> <span class="hljs-string">"entities"</span> <span class="hljs-keyword">in</span> res:
+    df = pd.<span class="hljs-module-access"><span class="hljs-module"><span class="hljs-identifier">DataFrame</span>.</span></span>from<span class="hljs-constructor">_dict(<span class="hljs-params">sorted</span>(<span class="hljs-params">res</span>[<span class="hljs-string">"entities"</span>], <span class="hljs-params">key</span> = <span class="hljs-params">lambda</span> <span class="hljs-params">ent</span>: <span class="hljs-params">ent</span>[<span class="hljs-string">"salience"</span>], <span class="hljs-params">reverse</span>=True)</span>)
+    pd.options.display.max_columns = None
+    pd.set<span class="hljs-constructor">_option('<span class="hljs-params">display</span>.<span class="hljs-params">width</span>', 1000)</span>
+    print(df.head<span class="hljs-literal">()</span>)
+</code></pre>
+<pre><code class="hljs css language-plaintext">                                         name                                         diffbotUri  confidence  salience  sentiment                                    allUris                                           allTypes                                           mentions
+0                               Robert Sowell  https://diffbot.com/entity/PYwbLa__MNVGtPMryqq...    0.784124  0.896936   0.008566  [http://www.wikidata.org/entity/Q7349932]  [{'name': 'person', 'diffbotUri': 'https://dif...  [{'text': 'Robert Sowell', 'beginOffset': 0, '...
+1                              Miami Dolphins  https://diffbot.com/entity/CSwPrbfilOHqM2q3omo...    0.989229  0.652256   0.000000   [http://www.wikidata.org/entity/Q223243]  [{'name': 'corporation', 'diffbotUri': 'https:...  [{'text': 'Miami Dolphins', 'beginOffset': 95,...
+2  June 2009 Washington Metro train collision  https://diffbot.com/entity/XzpGR0ljIMFqv4viPN-...    0.505241  0.537015  -0.606514   [http://www.wikidata.org/entity/Q928955]  [{'name': 'train collision', 'diffbotUri': 'ht...  [{'text': 'June 22, 2015', 'beginOffset': 119,...
+3                              defensive back  https://diffbot.com/entity/X_jqE4MDsNUy3hKdSvy...    0.968278  0.490431   0.350826   [http://www.wikidata.org/entity/Q674953]  [{'name': 'role', 'diffbotUri': 'https://diffb...  [{'text': 'defensive back', 'beginOffset': 72,...
+4                       myocardial infarction  https://diffbot.com/entity/Xx3IeVZxcNnC_ggX4gf...    0.740677  0.371698  -0.861011    [http://www.wikidata.org/entity/Q12152]  [{'name': 'coronary artery disease', 'diffbotU...  [{'text': 'heart attack', 'beginOffset': 138, ...
+</code></pre>
+<p>We can also explore the facts (or statements) describing the relationships between these entities.</p>
+<pre><code class="hljs">import pandas <span class="hljs-keyword">as</span> pd
+<span class="hljs-keyword">if</span> <span class="hljs-string">"statements"</span> <span class="hljs-keyword">in</span> res:
+    df = pd.<span class="hljs-module-access"><span class="hljs-module"><span class="hljs-identifier">DataFrame</span>.</span></span>from<span class="hljs-constructor">_dict(<span class="hljs-params">res</span>[<span class="hljs-string">"statements"</span>])</span>
+    pd.options.display.max_columns = None
+    pd.set<span class="hljs-constructor">_option('<span class="hljs-params">display</span>.<span class="hljs-params">width</span>', 1000)</span>
+    print(df.head<span class="hljs-literal">()</span>)
+</code></pre>
+<pre><code class="hljs css language-plaintext">                                       humanReadable                                             entity                                           property                                              value                                         qualifiers  confidence                                           evidence
+0  [Robert Sowell] EMPLOYEE_OR_MEMBER_OF [Miami D...  {'name': 'Robert Sowell', 'diffbotUri': 'https...  {'name': 'employee or member of', 'diffbotUri'...  {'name': 'Miami Dolphins', 'diffbotUri': 'http...  [{'property': {'name': 'is current'}, 'value':...    0.935833  [{'entityMentions': [{'text': 'Robert Sowell',...
+1             [Robert Sowell] NATIONALITY [American]  {'name': 'Robert Sowell', 'diffbotUri': 'https...  {'name': 'nationality', 'diffbotUri': 'https:/...  {'name': 'American', 'diffbotUri': 'https://di...                                                NaN    0.999107  [{'entityMentions': [{'text': 'who', 'beginOff...
+2  [Robert Sowell] FIELD_OF_WORK [American football]  {'name': 'Robert Sowell', 'diffbotUri': 'https...  {'name': 'field of work', 'diffbotUri': 'https...                      {'name': 'American football'}                                                NaN    1.000000  [{'entityMentions': [{'text': 'Robert Sowell',...
+3         [Robert Sowell] DATE_OF_DEATH [2015-06-22]  {'name': 'Robert Sowell', 'diffbotUri': 'https...  {'name': 'date of death', 'diffbotUri': 'https...                             {'name': '2015-06-22'}                                                NaN    0.999053  [{'entityMentions': [{'text': 'He', 'beginOffs...
+4                      [Robert Sowell] GENDER [male]  {'name': 'Robert Sowell', 'diffbotUri': 'https...  {'name': 'gender', 'diffbotUri': 'https://docs...                                   {'name': 'male'}                                                NaN    0.500000  [{'entityMentions': [{'text': 'He', 'beginOffs...
+</code></pre>
+<p>For a list of all supported properties, please refer to the <a href="http://relex.diffbot.com/schema/">schema page</a>.</p>
+</span></div></article></div><div class="docLastUpdate"><em>Last updated by Filipe Mesquita</em></div><div class="docs-prevnext"><a class="docs-prev button" href="/docs/en/nl-index"><span class="arrow-prev">← </span><span>Natural Language API</span></a></div></div></div><nav class="onPageNav"><ul class="toc-headings"><li><a href="#getting-started-with-the-api">Getting started with the API</a></li></ul></nav></div><footer class="nav-footer" id="footer"><section class="sitemap"><a href="/" class="nav-home"><img src="/img/diffbot_white.svg" alt="Docs Suite" width="66" height="58"/></a><div><h5>Docs</h5><a href="/docs/en/api-basics-index">Extraction</a><a href="/docs/en/cb-basics-index">Crawling</a><a href="/docs/en/kg-index">Knowledge Graph</a><a href="/docs/en/explain-gdpr">Diffbot and GDPR</a></div><div><h5>Community</h5><a href="https://stackoverflow.com/questions/tagged/diffbot" target="_blank" rel="noreferrer noopener">Stack Overflow</a><a href="https://twitter.com/diffbot" target="_blank" rel="noreferrer noopener">Twitter</a></div><div><h5>More</h5><a href="/blog">Blog</a><a href="/help">Help</a><a href="https://github.com/diffbot">GitHub</a></div></section><a href="https://diffbot.com/" target="_blank" rel="noreferrer noopener" class="fbOpenSource"><img src="/img/diffbot_white.svg" alt="Diffbot.com" width="170" height="45"/></a><section class="copyright">Copyright © 2020 Diffbot.com</section></footer></div><script type="text/javascript" src="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.js"></script><script>
+                document.addEventListener('keyup', function(e) {
+                  if (e.target !== document.body) {
+                    return;
+                  }
+                  // keyCode for '/' (slash)
+                  if (e.keyCode === 191) {
+                    const search = document.getElementById('search_input_react');
+                    search && search.focus();
+                  }
+                });
+              </script><script>
+              var search = docsearch({
+                
+                apiKey: '2c24e5e78d724e77c46ef1b720700177',
+                indexName: 'diffbot',
+                inputSelector: '#search_input_react',
+                algoliaOptions: {}
+              });
+            </script></body></html>
