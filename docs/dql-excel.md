@@ -1,7 +1,7 @@
 ---
 id: dql-excel
-title: DQL Excel Add-In
-sidebar_label: DQL Excel Add-In
+title: Diffbot Excel Add-In
+sidebar_label: Diffbot Excel Add-In
 ---
 
 This guide is meant to provide detailed information about how to download and use the Diffbot Excel Add-in to facilitate the use of the Diffbot Knowledge Graph data enrichment and search APIs from your desktop. You can also use the Add-In from an Office365 spreadsheet.
