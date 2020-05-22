@@ -55,33 +55,38 @@ You can see the result of running that function. Congrats! You've made your firs
 
 ## Commands
 
-|DQL (dql_query, fields, size) | Queries the Diffbot Knowledge Graph using the Diffbot Query Language (DQL)|
-|dql_query|The DQL query. Not that single-quotes should be used in the dql query to avoid conflicting with the double quotes that surround the dql query.|
-|fields|The field of each entity to display. You can also provide multiple separated by commas. You can also use "count" to just return a count of entities that match the query. Optional.|
-|size|The maximum number of entities to return. Optional.|
+| DQL (dql_query, fields, size) | Queries the Diffbot Knowledge Graph using the Diffbot Query Language (DQL) |
+| :------- | :------- |
+| `dql_query` | The DQL query. Not that single-quotes should be used in the dql query to avoid conflicting with the double quotes that surround the dql query. |
+| `fields` | The field of each entity to display. You can also provide multiple separated by commas. You can also use "count" to just return a count of entities that match the query. Optional. |
+| `size` |The maximum number of entities to return. Optional. |
 
-|ENHANCE_ORGANIZATION(field, name, url, location, description)|Enhances an organization using the Diffbot Knowledge Graph|
-|field|The field of a Organization entity to return. You can also provide multiple separated by commas|
-|name|The provided name of the organization. Optional.|
-|url|The provided homepage of the organization. Optional.|
-|location|The provided location of the organization. Optional.|
-|description|A description of what the organization does. Optional.|
+| ENHANCE_ORGANIZATION(field, name, url, location, description) | Enhances an organization using the Diffbot Knowledge Graph |
+| :------- | :------- |
+| `field` | The field of a Organization entity to return. You can also provide multiple separated by commas |
+| `name` | The provided name of the organization. Optional. |
+| `url` | The provided homepage of the organization. Optional. |
+| `location` | The provided location of the organization. Optional. |
+| `description` | A description of what the organization does. Optional. |
 
-|ENHANCE_PERSON(field, name, email, employer, location, url)|Enhances a person using the Diffbot Knowledge Graph|
-|field|The field of a Person entity to return. You can also provide multiple separated by commas|
-|name|The provided name of the person. Optional.|
-|email|The provided email of the person. Optional.|
-|employer|The employer of the person. Optional.|
-|location|The location of the person. Optional.|
-|description|The bio of the person. Optional.|
+| ENHANCE_PERSON(field, name, email, employer, location, url) | Enhances a person using the Diffbot Knowledge Graph |
+| :------- | :------- |
+| `field` | The field of a Person entity to return. You can also provide multiple separated by commas |
+| `name` | The provided name of the person. Optional. |
+| `email` | The provided email of the person. Optional. |
+| `employer` | The employer of the person. Optional. |
+| `location` | The location of the person. Optional. |
+| `description` | The bio of the person. Optional. |
 
-|NLP_SENTIMENT(text)|Analyzes sentiment of the text with Diffbot's natural language service|
-|text|The text to analyze|
+| NLP_SENTIMENT(text) | Analyzes sentiment of the text with Diffbot's natural language service |
+| :------- | :------- |
+| `text` | The text to analyze |
 
-|NLP_ENTITIES(text, fields, size)|Returns back the entities found in the text|
-|text| The text to analyze|
-|fields|The fields of each entity to return|
-|size|The number of entities to find in the text. Optional, defaults to 1.|
+| NLP_ENTITIES(text, fields, size) | Returns back the entities found in the text |
+| :------- | :------- |
+| `text` | The text to analyze |
+| `fields` | The fields of each entity to return |
+| `size` | The number of entities to find in the text. Optional, defaults to 1. |
 
 ## Field Expressions
 
