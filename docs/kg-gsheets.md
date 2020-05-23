@@ -4,6 +4,12 @@ title: Diffbot Google Sheets Add-on
 sidebar_label: Google Sheets Add-on
 ---
 
+- [Installation](#installation)
+- [Quick Start](#quick-start)
+- [Commands](#commands)
+- [Field Expressions](#field-expressions)
+- [Tips & Tricks](#tips--tricks)
+
 The Diffbot for Google Sheets Add-on allows you to leverage the power of the Diffbot Knowledge Graph from within Google Sheets. The Diffbot Knowledge Graph can help you quickly gather information from the public web, including information about People, Organizations, Products, Articles, and Discussions as well as enhance your existing data so that it will never be incomplete or out of date again.
 
 ## Installation
@@ -55,13 +61,13 @@ You can see the result of running that function. Congrats! You've made your firs
 
 ## Commands
 
-| DQL (dql_query, fields, size) | Queries the Diffbot Knowledge Graph using the Diffbot Query Language (DQL) |
+| DQL | Queries the Diffbot Knowledge Graph using the Diffbot Query Language (DQL) |
 | :------- | :------- |
 | `dql_query` | The DQL query. Not that single-quotes should be used in the dql query to avoid conflicting with the double quotes that surround the dql query. |
 | `fields` | The field of each entity to display. You can also provide multiple separated by commas. You can also use "count" to just return a count of entities that match the query. Optional. |
 | `size` |The maximum number of entities to return. Optional. |
 
-| ENHANCE_ORGANIZATION(field, name, url, location, description) | Enhances an organization using the Diffbot Knowledge Graph |
+| ENHANCE_ORGANIZATION | Enhances an organization using the Diffbot Knowledge Graph |
 | :------- | :------- |
 | `field` | The field of a Organization entity to return. You can also provide multiple separated by commas |
 | `name` | The provided name of the organization. Optional. |
@@ -69,7 +75,7 @@ You can see the result of running that function. Congrats! You've made your firs
 | `location` | The provided location of the organization. Optional. |
 | `description` | A description of what the organization does. Optional. |
 
-| ENHANCE_PERSON(field, name, email, employer, location, url) | Enhances a person using the Diffbot Knowledge Graph |
+| ENHANCE_PERSON | Enhances a person using the Diffbot Knowledge Graph |
 | :------- | :------- |
 | `field` | The field of a Person entity to return. You can also provide multiple separated by commas |
 | `name` | The provided name of the person. Optional. |
@@ -78,11 +84,11 @@ You can see the result of running that function. Congrats! You've made your firs
 | `location` | The location of the person. Optional. |
 | `description` | The bio of the person. Optional. |
 
-| NLP_SENTIMENT(text) | Analyzes sentiment of the text with Diffbot's natural language service |
+| NLP_SENTIMENT | Analyzes sentiment of the text with Diffbot's natural language service |
 | :------- | :------- |
 | `text` | The text to analyze |
 
-| NLP_ENTITIES(text, fields, size) | Returns back the entities found in the text |
+| NLP_ENTITIES | Returns back the entities found in the text |
 | :------- | :------- |
 | `text` | The text to analyze |
 | `fields` | The fields of each entity to return |
