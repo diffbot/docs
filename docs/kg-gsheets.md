@@ -91,7 +91,6 @@ You can see the result of running that function. Congrats! You've made your firs
 | NLP_ENTITIES | Returns back the entities found in the text |
 | :------- | :------- |
 | `text` | The text to analyze |
-| `fields` | The fields of each entity to return |
 | `size` | The number of entities to find in the text. Optional, defaults to 1. |
 
 ## Field Expressions
