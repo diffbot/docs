@@ -1,4 +1,11 @@
-<!DOCTYPE html><html lang="en"><head><meta charSet="utf-8"/><meta http-equiv="X-UA-Compatible" content="IE=edge"/><title>Diffbot Google Sheets Add-on · Docs Suite</title><meta name="viewport" content="width=device-width"/><meta name="generator" content="Docusaurus"/><meta name="description" content="The Diffbot for Google Sheets Add-on allows you to leverage the power of the Diffbot Knowledge Graph from within Google Sheets. The Diffbot Knowledge Graph can help you quickly gather information from the public web, including information about People, Organizations, Products, Articles, and Discussions as well as enhance your existing data so that it will never be incomplete or out of date again."/><meta name="docsearch:language" content="en"/><meta property="og:title" content="Diffbot Google Sheets Add-on · Docs Suite"/><meta property="og:type" content="website"/><meta property="og:url" content="https://diffbot.github.io/"/><meta property="og:description" content="The Diffbot for Google Sheets Add-on allows you to leverage the power of the Diffbot Knowledge Graph from within Google Sheets. The Diffbot Knowledge Graph can help you quickly gather information from the public web, including information about People, Organizations, Products, Articles, and Discussions as well as enhance your existing data so that it will never be incomplete or out of date again."/><meta property="og:image" content="https://diffbot.github.io/img/diagram.svg"/><meta name="twitter:card" content="summary"/><meta name="twitter:image" content="https://diffbot.github.io/img/diagram.svg"/><link rel="shortcut icon" href="/img/diffbot-head.png"/><link rel="stylesheet" href="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.css"/><link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/default.min.css"/><script type="text/javascript" src="https://buttons.github.io/buttons.js"></script><script type="text/javascript" src="/js/app.js"></script><script src="/js/scrollSpy.js"></script><link rel="stylesheet" href="/css/main.css"/><script src="/js/codetabs.js"></script></head><body class="sideNavVisible separateOnPageNav"><div class="fixedHeaderContainer"><div class="headerWrapper wrapper"><header><a href="/"><img class="logo" src="/img/diffbot_white.svg" alt="Docs Suite"/><h2 class="headerTitleWithLogo">Docs Suite</h2></a><div class="navigationWrapper navigationSlider"><nav class="slidingNav"><ul class="nav-site nav-site-internal"><li class=""><a href="/docs/en/error-intro" target="_self">Debugging</a></li><li class="navSearchWrapper reactNavSearchWrapper"><input type="text" id="search_input_react" placeholder="Search" title="Search"/></li></ul></nav></div></header></div></div><div class="navPusher"><div class="docMainWrapper wrapper"><div class="container mainContainer docsContainer"><div class="wrapper"><div class="post"><header class="postHeader"><a class="edit-page-link button" href="https://github.com/diffbot/docs/edit/master/docs/kg-gsheets.md" target="_blank" rel="noreferrer noopener">Edit</a><h1 id="__docusaurus" class="postHeaderTitle">Diffbot Google Sheets Add-on</h1></header><article><div><span><p>The Diffbot for Google Sheets Add-on allows you to leverage the power of the Diffbot Knowledge Graph from within Google Sheets. The Diffbot Knowledge Graph can help you quickly gather information from the public web, including information about People, Organizations, Products, Articles, and Discussions as well as enhance your existing data so that it will never be incomplete or out of date again.</p>
+<!DOCTYPE html><html lang="en"><head><meta charSet="utf-8"/><meta http-equiv="X-UA-Compatible" content="IE=edge"/><title>Diffbot Google Sheets Add-on · Docs Suite</title><meta name="viewport" content="width=device-width"/><meta name="generator" content="Docusaurus"/><meta name="description" content="- [Installation](#installation)"/><meta name="docsearch:language" content="en"/><meta property="og:title" content="Diffbot Google Sheets Add-on · Docs Suite"/><meta property="og:type" content="website"/><meta property="og:url" content="https://diffbot.github.io/"/><meta property="og:description" content="- [Installation](#installation)"/><meta property="og:image" content="https://diffbot.github.io/img/diagram.svg"/><meta name="twitter:card" content="summary"/><meta name="twitter:image" content="https://diffbot.github.io/img/diagram.svg"/><link rel="shortcut icon" href="/img/diffbot-head.png"/><link rel="stylesheet" href="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.css"/><link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/default.min.css"/><script type="text/javascript" src="https://buttons.github.io/buttons.js"></script><script type="text/javascript" src="/js/app.js"></script><script src="/js/scrollSpy.js"></script><link rel="stylesheet" href="/css/main.css"/><script src="/js/codetabs.js"></script></head><body class="sideNavVisible separateOnPageNav"><div class="fixedHeaderContainer"><div class="headerWrapper wrapper"><header><a href="/"><img class="logo" src="/img/diffbot_white.svg" alt="Docs Suite"/><h2 class="headerTitleWithLogo">Docs Suite</h2></a><div class="navigationWrapper navigationSlider"><nav class="slidingNav"><ul class="nav-site nav-site-internal"><li class=""><a href="/docs/en/error-intro" target="_self">Debugging</a></li><li class="navSearchWrapper reactNavSearchWrapper"><input type="text" id="search_input_react" placeholder="Search" title="Search"/></li></ul></nav></div></header></div></div><div class="navPusher"><div class="docMainWrapper wrapper"><div class="container mainContainer docsContainer"><div class="wrapper"><div class="post"><header class="postHeader"><a class="edit-page-link button" href="https://github.com/diffbot/docs/edit/master/docs/kg-gsheets.md" target="_blank" rel="noreferrer noopener">Edit</a><h1 id="__docusaurus" class="postHeaderTitle">Diffbot Google Sheets Add-on</h1></header><article><div><span><ul>
+<li><a href="#installation">Installation</a></li>
+<li><a href="#quick-start">Quick Start</a></li>
+<li><a href="#commands">Commands</a></li>
+<li><a href="#field-expressions">Field Expressions</a></li>
+<li><a href="#tips--tricks">Tips &amp; Tricks</a></li>
+</ul>
+<p>The Diffbot for Google Sheets Add-on allows you to leverage the power of the Diffbot Knowledge Graph from within Google Sheets. The Diffbot Knowledge Graph can help you quickly gather information from the public web, including information about People, Organizations, Products, Articles, and Discussions as well as enhance your existing data so that it will never be incomplete or out of date again.</p>
 <h2><a class="anchor" aria-hidden="true" id="installation"></a><a href="#installation" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Installation</h2>
 <p>To Install the Diffbot Google Sheets Add-on, visit the <a href="https://gsuite.google.com/marketplace/app/diffbot_for_sheets/457377215857">Diffbot for Sheets listing in the G Suite Marketplace</a>:</p>
 <p><img src="/img/gsheets/gsheets1.png" alt="Installation page on G Suite Marketplace"></p>
@@ -26,7 +33,7 @@
 <h2><a class="anchor" aria-hidden="true" id="commands"></a><a href="#commands" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Commands</h2>
 <table>
 <thead>
-<tr><th style="text-align:left">DQL (dql_query, fields, size)</th><th style="text-align:left">Queries the Diffbot Knowledge Graph using the Diffbot Query Language (DQL)</th></tr>
+<tr><th style="text-align:left">DQL</th><th style="text-align:left">Queries the Diffbot Knowledge Graph using the Diffbot Query Language (DQL)</th></tr>
 </thead>
 <tbody>
 <tr><td style="text-align:left"><code>dql_query</code></td><td style="text-align:left">The DQL query. Not that single-quotes should be used in the dql query to avoid conflicting with the double quotes that surround the dql query.</td></tr>
@@ -36,7 +43,7 @@
 </table>
 <table>
 <thead>
-<tr><th style="text-align:left">ENHANCE_ORGANIZATION(field, name, url, location, description)</th><th style="text-align:left">Enhances an organization using the Diffbot Knowledge Graph</th></tr>
+<tr><th style="text-align:left">ENHANCE_ORGANIZATION</th><th style="text-align:left">Enhances an organization using the Diffbot Knowledge Graph</th></tr>
 </thead>
 <tbody>
 <tr><td style="text-align:left"><code>field</code></td><td style="text-align:left">The field of a Organization entity to return. You can also provide multiple separated by commas</td></tr>
@@ -48,7 +55,7 @@
 </table>
 <table>
 <thead>
-<tr><th style="text-align:left">ENHANCE_PERSON(field, name, email, employer, location, url)</th><th style="text-align:left">Enhances a person using the Diffbot Knowledge Graph</th></tr>
+<tr><th style="text-align:left">ENHANCE_PERSON</th><th style="text-align:left">Enhances a person using the Diffbot Knowledge Graph</th></tr>
 </thead>
 <tbody>
 <tr><td style="text-align:left"><code>field</code></td><td style="text-align:left">The field of a Person entity to return. You can also provide multiple separated by commas</td></tr>
@@ -61,7 +68,7 @@
 </table>
 <table>
 <thead>
-<tr><th style="text-align:left">NLP_SENTIMENT(text)</th><th style="text-align:left">Analyzes sentiment of the text with Diffbot's natural language service</th></tr>
+<tr><th style="text-align:left">NLP_SENTIMENT</th><th style="text-align:left">Analyzes sentiment of the text with Diffbot's natural language service</th></tr>
 </thead>
 <tbody>
 <tr><td style="text-align:left"><code>text</code></td><td style="text-align:left">The text to analyze</td></tr>
@@ -69,7 +76,7 @@
 </table>
 <table>
 <thead>
-<tr><th style="text-align:left">NLP_ENTITIES(text, fields, size)</th><th style="text-align:left">Returns back the entities found in the text</th></tr>
+<tr><th style="text-align:left">NLP_ENTITIES</th><th style="text-align:left">Returns back the entities found in the text</th></tr>
 </thead>
 <tbody>
 <tr><td style="text-align:left"><code>text</code></td><td style="text-align:left">The text to analyze</td></tr>
