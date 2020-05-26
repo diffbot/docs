@@ -23,7 +23,7 @@ Finally, the overall load on Crawlbot is a factor, as our spiders are distribute
 
 The most convenient way to improve performance of Crawlbot is by using [crawling and processing patterns](guides-patterns) (or regular expressions) to specify exactly which sections of a site to crawl and process.
 
-For instance, if you are only interested in a specific subdomain, make sure that your crawl pattern or regular expression limits your crawling to that subdomain.
+For instance, if you are only interested in a specific subdomain, make sure that your crawl pattern or regular expression limits your crawling to that subdomain. See [Improving Crawl Efficiency](explain-improving-crawl-efficiency) for more tips.
 
 In limited cases ignoring a site’s `robots.txt` instruction is possible, but generally only with permission of the site to be crawled.
 
