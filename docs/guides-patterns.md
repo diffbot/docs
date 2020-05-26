@@ -60,3 +60,9 @@ Note that crawling and processing regular expressions cannot be used simultaneou
 Crawlbot offers one more option for limiting pages processed. If you enter an HTML Processing Pattern, only pages whose HTML source contains the exact string will be processed.
 
 Note that Crawlbot only examines the raw source, and does not execute Javascript/Ajax at crawl-time.
+
+## Implications for Crawl Performance
+
+([How long does it take to crawl a site?](explain-how-long-crawl-site))
+
+While there are many factors that will influence how long it takes to crawl a given site, one of the best ways to speed up your crawl is to use crawling and processing patterns or regular expressions to limit Crawlbot just to the pages you are interested in. For more on this, see [Improving Crawl Efficiency](explain-improving-crawl-efficiency).
