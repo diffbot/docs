@@ -152,7 +152,7 @@
             {
                 "type": "subcategory",
                 "label": "Basics",
-                "ids": ["cb-intro-cb", "cb-basics-cb", "tutorials-crawl-video"]
+                "ids": ["cb-intro-cb", "cb-basics-cb", "tutorials-crawl-video", "explain-improving-crawl-efficiency"]
             },
             {
                 "type": "subcategory",
