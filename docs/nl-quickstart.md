@@ -4,15 +4,15 @@ title: Natural Language Quickstart
 sidebar_label: Quickstart
 ---
 
-The [Natural Language Demo](http://relex.diffbot.com) is a great place to start. It illustrates the features of the Natural Language API. 
+The [Natural Language Demo](http://demo.nl.diffbot.com) is a great place to start. It illustrates the features of the Natural Language API. 
 
-[![Natural Language Demo Screenshot](/img/nl-demo.png)](http://relex.diffbot.com)
+[![Natural Language Demo Screenshot](/img/nl-demo.png)](http://demo.nl.diffbot.com)
+
+The "Graph" tab shows a knowledge graph extracted from the text. The graph is enhanced with facts from the Diffbot KG. Blue edges represent facts extracted from the text, while grey edges represent facts retrieved from the Diffbot KG. Doubleclick on a node to expand it with more facts from the KG.
 
 The "Entities" tab shows the extracted entities sorted by salience. Click on an entity to see their link to the Diffbot KG and highlight all the mentions to this entity in the text.
 
 The "Facts" tab shows the extracted facts (or statements). Hover over a fact to see the part of the text where this fact was found. See the "Documentation" tab for a list of properties we currently support.
-
-The "Open Extractions" tab shows "schema-free" relationships as described in the text.
 
 ## Getting started with the API
 
