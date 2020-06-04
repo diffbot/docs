@@ -92,6 +92,33 @@ For example, to view the number of companies in the banking industry whose compa
 
 The query then performs the facet against multiple ranges of numerical values, with those ranges encompassing the entire range of possible values for the field we are faceting against. In the results for the above query, you can see the number of companies having between 30 and 40 employees, or between 1,000 and 5,000 employees, for example.
 
+### Defining Facet Ranges for Date Fields
+
+When faceting on a date field, we can define the size of the time intervals over which aggregated facet values are returned, by adding a "day", "week", or "month" specifier.
+
+For example, this query would return a breakdown of the number of articles related to "hacking" published over any particular week:
+[`type:Article title:"hacking" facet[week]:date`](https://app.diffbot.com/search/?query=type%3AArticle+title%3A%22hacking%22+facet%5Bweek%5D%3Adate&from=0&size=50&active_tab=query&kgversion=).
+
+### Defining Numeric Facet Ranges
+
+When faceting on a numeric field, we can also enumerate specific intervals over which we would like to view aggregated values.
+
+For example, to view the number of organizations in the banking industry that have between 100 and 500 employees, or that have between 1,000 and 5,000 employees, you can query:
+[`type:Organization industries:"banking" facet[100:500,1000:5000]:nbEmployeesMax`](https://app.diffbot.com/search/?query=type%3AOrganization+industries%3A%22banking%22+facet%5B100%3A500%2C1000%3A5000%5D%3AnbEmployeesMax&from=0&size=50&active_tab=query&kgversion=).
+
+We can also use these numeric date ranges to facet by arbitrary date ranges, using epoch/Unix time formats.
+
+For example, to view the number of articles related to "hacking" that were published between 2018 and 2019, we could query:
+[`type:Article title:"hacking" facet[1514764800000:1546300800000,1546300800000:1577836800000]:date`](https://app.diffbot.com/search/?query=type%3AArticle+title%3A%22hacking%22+facet%5B1514764800000%3A1546300800000%2C1546300800000%3A1577836800000%5D%3Adate&from=0&size=50&active_tab=query&kgversion=).
+
+### Enumerating Specific Facet Grouping Values
+
+We can also enumerate the specific values which we would like our facet results to be grouped into.  The facet will be grouped by these values only.
+
+For example, to view a breakdown of the number of organizations located in either San Francisco or Los Angeles, we could query:
+[`type:Organization facet["San Francisco","Los Angeles"]:locations.city.name`](https://app.diffbot.com/search/?query=type%3AOrganization+facet%5B%22San+Francisco%22%2C%22Los+Angeles%22%5D%3Alocations.city.name&from=0&size=50&active_tab=query&kgversion=).
+
+
 ### Facet Query Response
 
 Successful facet queries will return a `data` object at the top level of the JSON response. The resulting field values are returned in order of the number of matching entities.
@@ -345,7 +372,7 @@ It should be noted that all crawl timestamps are represented in seconds.
 
 When referring to any date/timestamp field (not including crawl timestamps) in a query, if the timestamp subfield is omitted from the field specification, the field in the query will be expanded to include the timestamp subfield. For example, these two queries are equivalent, with the first being automatically expanded to the second:
 
-`type:Organization foundingDate<1438387200000` vs `type:Organization foundingDate.timestamp<1438387200000`
+[`type:Organization foundingDate<1438387200000`](https://app.diffbot.com/search/?query=type%3AOrganization+foundingDate%3C1438387200000&from=0&size=50&active_tab=query&kgversion=) vs [`type:Organization foundingDate.timestamp<1438387200000`](https://app.diffbot.com/search/?query=type%3AOrganization+foundingDate.timestamp%3C1438387200000&from=0&size=50&active_tab=query&kgversion=)
 
 #### Epoch vs. Date Literal
 
@@ -353,7 +380,8 @@ You can represent a timestamp in a query using an Epoch timestamp, in either mil
 
 Example (these 2 queries are equivalent): 
 
-`type:Article estimatedDate.timestamp<1438387200000` vs `type:Article estimatedDate.timestamp<1438387200`
+
+[`type:Article estimatedDate.timestamp<1438387200000`](https://app.diffbot.com/search/?query=type%3AArticle+estimatedDate.timestamp%3C1438387200000&from=0&size=50&active_tab=query&kgversion=) vs [`type:Article estimatedDate.timestamp<1438387200`](https://app.diffbot.com/search/?query=type%3AArticle+estimatedDate.timestamp%3C1438387200&from=0&size=50&active_tab=query&kgversion=)
 
 Timestamps can also be represented as a literal date string (a “Date Literal”) with one of the following formats:
 
@@ -362,12 +390,17 @@ Timestamps can also be represented as a literal date string (a “Date Literal�
 - yyyy-MM-dd (ex. “2015-08-01”)
 - yyyy/MM/dd (ex. “2015/08/01”)
 
+For example, do view all organizations that were founded on New Years Day in the year 2000, we could query:
+[`type:Organization foundingDate:"01/01/2000"`](https://app.diffbot.com/search/?query=type%3AOrganization+foundingDate%3A%2201%2F01%2F2000%22&from=0&size=50&active_tab=query&kgversion=)
+
+
 Note that equivalent min/max and greater/less than expressions can be used interchangeably, whether we are using an epoch timestamp or a Date Literal to represent the timestamp in our query. For example, these 4 queries are all equivalent:
 
-- `type:Organization foundingDate<='2015-08-01'`
-- `type:Organization max:foundingDate.timestamp:'2015-08-01'`
-- `type:Organization foundingDate<=1438387200000`
-- `type:Organization max:foundingDate.timestamp:1438387200000`
+- [`type:Organization foundingDate<='2015-08-01'`](https://app.diffbot.com/search/?query=type%3AOrganization+foundingDate%3C%3D%272015-08-01%27&from=0&size=50&active_tab=query&kgversion=)
+- [`type:Organization max:foundingDate.timestamp:'2015-08-01'`](https://app.diffbot.com/search/?query=type%3AOrganization+max%3AfoundingDate.timestamp%3A%272015-08-01%27&from=0&size=50&active_tab=query&kgversion=)
+- [`type:Organization foundingDate<=1438387200000`](https://app.diffbot.com/search/?query=type%3AOrganization+foundingDate%3C%3D1438387200000&from=0&size=50&active_tab=query&kgversion=)
+- [`type:Organization max:foundingDate.timestamp:1438387200000`](https://app.diffbot.com/search/?query=type%3AOrganization+max%3AfoundingDate.timestamp%3A1438387200000&from=0&size=50&active_tab=query&kgversion=)
+
 
 #### Special Time Period Literals
 
@@ -380,12 +413,21 @@ For a Crawl Timestamp, or for the date field of an Article entity, we can use a 
 - w: weeks
 - y: 365 days
 
-Example: To find all Articles that were published at least 4 hours ago: `type:Article date>=4h`
+Example: To find all Articles that were published at least 4 hours ago: [`type:Article date>=4h`](https://app.diffbot.com/search/?query=type%3AArticle+date%3E%3D4h&from=0&size=50&active_tab=query&kgversion=)
 
-Example: To find all Articles for which any origin was crawled within the last 4 hours: `type:Article lastCrawlTime<=4h`
+Example: To find all Articles for which any origin was crawled within the last 4 hours: 
+[`type:Article lastCrawlTime<=4h`](https://app.diffbot.com/search/?query=type%3AArticle+lastCrawlTime%3C%3D4h&from=0&size=50&active_tab=query&kgversion=)
 
-Example: To find all Organizations for which any origin was crawled within the last 365 days: `type:Organization crawlTimestamp<=1y`
+Example: To find all Organizations for which any origin was crawled within the last 365 days: 
+[`type:Organization crawlTimestamp<=1y`](https://app.diffbot.com/search/?query=type%3AOrganization+crawlTimestamp%3C%3D1y&from=0&size=50&active_tab=query&kgversion=)
 
 #### Special handling for Article “date” fields
 
 Every Article entity has a `date` field representing the publication date of the article.  We can reference this field as either `date` or `date.str` in our DQL query.
+
+## Querying for Articles by Sentiment Towards a Particular Topic
+
+It is possible to search for articles by their general sentiment toward a particular topic.  We do this by querying against the sentiment of a particular article tag.
+
+For example, to view a list of articles which portray a view of Congress that is at least slightly negative, we could query:
+[`type:Article tags.{label:"Congress" sentiment<0}`](https://app.diffbot.com/search/?query=type%3AArticle+tags.%7Blabel%3A%22Congress%22+sentiment%3C0%7D&from=0&size=50&active_tab=query&kgversion=)
