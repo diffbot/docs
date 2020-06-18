@@ -5,11 +5,7 @@ sidebar_label: Help with custom collections
 description: A basic guide on creating custom collections in the Diffbot Customization dashboard
 ---
 
-> Note: This guide applies to the [old Diffbot dashboard](https://diffbot.com/dev/customize). Custom collections have not yet been implemented in the [new dashboard](https://app.diffbot.com).
-
 A custom collection enables you to extract content from multiple/recurring elements on a page. For instance, to extract the name and address of <strong>each result</strong> in a business directory, you would need a collection. To extract multiple images on a page, you will typically need a collection. (And, in fact, to override the default media output within our Article API, you will need to edit a collection.)
-
-_Note that custom collections are currently only available in the v1 dashboard at https://diffbot.com/dev/customize and are currently missing from the [new dashboard](#tutorials-new-dashboard)._
 
 The first step in creating a collection is identifying the “repeating parent” of the content you wish to extract. This will depend entirely on the markup of the page. In the case of a business directory example, you may have markup as follows:
 
