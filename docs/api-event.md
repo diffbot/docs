@@ -51,6 +51,9 @@ Objects in the Event API's `objects` array will include the following fields:
 | `title` | Title of the event. |
 | `startDate` | Start date of extracted event in GMT, normalized in most cases to [RFC 1123 (HTTP/1.1)](https://www.w3.org/Protocols/rfc2616/rfc2616-sec3.html#sec3.3). If no start time was found, the time is midnight.|
 | `endDate` | End date of extracted event in GMT, normalized in most cases to [RFC 1123 (HTTP/1.1)](https://www.w3.org/Protocols/rfc2616/rfc2616-sec3.html#sec3.3). If no end time was found, the time is midnight.|
+| `startDateLocalTimezone` | Start date of extracted event in the local timezone as deplayed on the page. If no start time was found, the time is midnight.|
+| `endDateLocalTimezone` | End date of extracted eventin the local timezone as deplayed on the page. If no start time was found, the time is midnight.|
+|`timezoneOffset` | GMT offset in hours and minutes.|
 | `isFullDay` | Returns true if no time was found and the event runs the whole day.|
 | `description` | Text description, if available, of the event. |
 | `venue` | The name of the venue, if available. |
