@@ -108,7 +108,9 @@ Objects in the Event API's `objects` array will include the following fields:
             }
          ],
          "isFullDay":false,
+         "timezoneOffset": "-07:00",
          "endDate":"Fri, 09 Nov 2018 01:00:00 GMT",
+         "endDateLocalTimezone":"Thu, 08 Nov 2018 17:00:00",
          "humanLanguage":"en",
          "diffbotUri":"event|3|-2069254052",
          "description":"​Join over 850 developers at the 3rd annual GraphQL Summit, the world's largest conference dedicated to GraphQL. Whether you're just getting started or a veteran GraphQL practitioner, this is the must-attend developer conference of the year.\nChoose from 40+ sessions across two tracks at one of San Francisco's most historic event venues\n​See how teams at top startups and enterprises are modernizing their platforms by using GraphQL in complex production environments\nHear where the technology is heading next, directly from the leaders of GraphQL's major open source projects\nMeet top solution providers from around the world - all under one roof.\nEnroll in hands-on workshops and classroom training to boost your skills to get the most out of GraphQL.\nGraphQL Summit Day Code of Conduct\nWe believe our community and events should be truly open for everyone. As such, we are committed to providing a friendly, safe, and welcoming environment for all, regardless of gender, sexual orientation, disability, ethnicity, or religion. Our event code of conduct outlines our expectations for participant behavior, as well as the consequences for unacceptable behavior.\n*GraphQL Summit is hosted at the Regency Center which is an accessible space with elevator access*",
@@ -160,7 +162,8 @@ Objects in the Event API's `objects` array will include the following fields:
          },
          "type":"event",
          "title":"GraphQL Summit 2018",
-         "startDate":"Wed, 07 Nov 2018 16:30:00 GMT"
+         "startDate":"Wed, 07 Nov 2018 16:30:00 GMT",
+         "startDateLocalTimezone":"Wed, 07 Nov 2018 08:30:00"
       }
    ]
 }
