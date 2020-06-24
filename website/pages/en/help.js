@@ -44,6 +44,13 @@ function Help(props) {
           <header className="postHeader">
             <h1>Need help?</h1>
           </header>
+          <p>If you run into product issues or questions not fully addressed by the documentation, you can also reach out to our Technical Support team by emailing <a href="mailto:support@diffbot.com">support@diffbot.com</a>. We're happy to help with any of the following:</p>
+          <ul>
+            <li>Investigating and providing solutions for issues with Diffbot products or services</li>
+            <li>Answering questions about Diffbot product capabilities and behavior</li>
+            <li>Providing guidance on best practices for using and integrating with Diffbot services</li>
+          </ul>
+          <p>Note that customers with active subscriptions will receive priority over trial users.</p>
           <p>See below for the most common issues and questions!</p>
           <GridBlock contents={supportLinks} layout="threeColumn" />
         </div>
