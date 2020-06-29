@@ -12,7 +12,9 @@ The "Graph" tab shows a knowledge graph extracted from the text. The graph is en
 
 The "Entities" tab shows the extracted entities sorted by salience. Click on an entity to see their link to the Diffbot KG and highlight all the mentions to this entity in the text.
 
-The "Facts" tab shows the extracted facts (or statements). Hover over a fact to see the part of the text where this fact was found. See the "Documentation" tab for a list of properties we currently support.
+The "Facts" tab shows extracted facts whose property has been pre-defined in our schema. You can hover over a fact to see the part of the text where this fact was found. See the "Documentation" tab for a list of properties we currently support in our schema.
+
+The "Open Facts" tab shows open-domain facts whose description has been extracted from the text alone. Rather than following a particular schema, these facts enable new properties to be discovered.
 
 ## Getting started with the API
 
@@ -21,7 +23,7 @@ The "Facts" tab shows the extracted facts (or statements). Hover over a fact to 
 First, enter your token below and choose which fields to return. For a list of all fields, please refer to the [API documentation](https://nl.diffbot.com/documentation/).
 ```
 TOKEN = 'add your token here'
-FIELDS = "entities,sentiment,statements"
+FIELDS = "entities,sentiment,facts"
 HOST = "nl.diffbot.com"
 PORT = "80"
 ```
@@ -65,11 +67,11 @@ if "entities" in res:
 4                       myocardial infarction  https://diffbot.com/entity/Xx3IeVZxcNnC_ggX4gf...    0.740677  0.371698  -0.861011    [http://www.wikidata.org/entity/Q12152]  [{'name': 'coronary artery disease', 'diffbotU...  [{'text': 'heart attack', 'beginOffset': 138, ...
 ```
 
-We can also explore the facts (or statements) describing the relationships between these entities.
+We can also explore the facts describing the relationships between these entities.
 ```
 import pandas as pd
-if "statements" in res:
-    df = pd.DataFrame.from_dict(res["statements"])
+if "facts" in res:
+    df = pd.DataFrame.from_dict(res["facts"])
     pd.options.display.max_columns = None
     pd.set_option('display.width', 1000)
     print(df.head())
