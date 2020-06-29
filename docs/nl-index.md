@@ -17,7 +17,7 @@ The Natural Language API allows developers to extract entities (e.g., people, or
 ## Terminology:
 * **Entity**: anything in the real world. Example: Apple Inc, Steve Jobs. 
 * **Entity Type**: a class of an entity. Example: organization, person.
-* **Statement (or fact)**: define a relationship between entities (Apple Inc; founder; Steve Jobs) or an entity and a literal (Apple Inc; number of employees; 137,000). 
+* **Fact**: defines a relationship between entities (Apple Inc; founder; Steve Jobs) or an entity and a literal (Apple Inc; number of employees; 137,000). 
 * **Property**: defines the relationship type (founder, number of employees).
 * **Sentiment of a document**: represents the overall sentiment of the text. It ranges from -1.0 (very negative) to 1.0 (very positive). Sentiment around 0.0 is considered neutral.
 * **Sentiment of an entity**: represents the sentiment of the text towards an entity. Example: "I love Apple products, but the Mac Pro is too pricey." is positive towards Apple and negative towards the Mac Pro.
