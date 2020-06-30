@@ -58,12 +58,13 @@
 <p><a href="http://demo.nl.diffbot.com"><img src="/img/nl-demo.png" alt="Natural Language Demo Screenshot"></a></p>
 <p>The &quot;Graph&quot; tab shows a knowledge graph extracted from the text. The graph is enhanced with facts from the Diffbot KG. Blue edges represent facts extracted from the text, while grey edges represent facts retrieved from the Diffbot KG. Doubleclick on a node to expand it with more facts from the KG.</p>
 <p>The &quot;Entities&quot; tab shows the extracted entities sorted by salience. Click on an entity to see their link to the Diffbot KG and highlight all the mentions to this entity in the text.</p>
-<p>The &quot;Facts&quot; tab shows the extracted facts (or statements). Hover over a fact to see the part of the text where this fact was found. See the &quot;Documentation&quot; tab for a list of properties we currently support.</p>
+<p>The &quot;Facts&quot; tab shows extracted facts whose property has been pre-defined in our schema. You can hover over a fact to see the part of the text where this fact was found. See the &quot;Documentation&quot; tab for a list of properties we currently support in our schema.</p>
+<p>The &quot;Open Facts&quot; tab shows open-domain facts whose description has been extracted from the text alone. Rather than following a particular schema, these facts enable new properties to be discovered.</p>
 <h2><a class="anchor" aria-hidden="true" id="getting-started-with-the-api"></a><a href="#getting-started-with-the-api" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Getting started with the API</h2>
 <p><a href="https://colab.research.google.com/drive/1gvCCbuRRiF5ISo6oaQ2uDQLX2_ySMdyl">This notebook</a> shows how to get started with Python.</p>
 <p>First, enter your token below and choose which fields to return. For a list of all fields, please refer to the <a href="https://nl.diffbot.com/documentation/">API documentation</a>.</p>
 <pre><code class="hljs">TOKEN = <span class="hljs-string">'add your token here'</span>
-FIELDS = <span class="hljs-string">"entities,sentiment,statements"</span>
+FIELDS = <span class="hljs-string">"entities,sentiment,facts"</span>
 HOST = <span class="hljs-string">"nl.diffbot.com"</span><span class="hljs-built_in">
 PORT </span>= <span class="hljs-string">"80"</span>
 </code></pre>
@@ -101,10 +102,10 @@ def get_request(payload):
 3                              defensive back  https://diffbot.com/entity/X_jqE4MDsNUy3hKdSvy...    0.968278  0.490431   0.350826   [http://www.wikidata.org/entity/Q674953]  [{'name': 'role', 'diffbotUri': 'https://diffb...  [{'text': 'defensive back', 'beginOffset': 72,...
 4                       myocardial infarction  https://diffbot.com/entity/Xx3IeVZxcNnC_ggX4gf...    0.740677  0.371698  -0.861011    [http://www.wikidata.org/entity/Q12152]  [{'name': 'coronary artery disease', 'diffbotU...  [{'text': 'heart attack', 'beginOffset': 138, ...
 </code></pre>
-<p>We can also explore the facts (or statements) describing the relationships between these entities.</p>
+<p>We can also explore the facts describing the relationships between these entities.</p>
 <pre><code class="hljs">import pandas <span class="hljs-keyword">as</span> pd
-<span class="hljs-keyword">if</span> <span class="hljs-string">"statements"</span> <span class="hljs-keyword">in</span> res:
-    df = pd.<span class="hljs-module-access"><span class="hljs-module"><span class="hljs-identifier">DataFrame</span>.</span></span>from<span class="hljs-constructor">_dict(<span class="hljs-params">res</span>[<span class="hljs-string">"statements"</span>])</span>
+<span class="hljs-keyword">if</span> <span class="hljs-string">"facts"</span> <span class="hljs-keyword">in</span> res:
+    df = pd.<span class="hljs-module-access"><span class="hljs-module"><span class="hljs-identifier">DataFrame</span>.</span></span>from<span class="hljs-constructor">_dict(<span class="hljs-params">res</span>[<span class="hljs-string">"facts"</span>])</span>
     pd.options.display.max_columns = None
     pd.set<span class="hljs-constructor">_option('<span class="hljs-params">display</span>.<span class="hljs-params">width</span>', 1000)</span>
     print(df.head<span class="hljs-literal">()</span>)
