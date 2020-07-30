@@ -73,8 +73,7 @@ PORT </span>= <span class="hljs-string">"80"</span>
 <span class="hljs-built_in">import</span> requests
 
 def get_request(payload):
-    <span class="hljs-attr">res</span> = requests.get(<span class="hljs-string">"http://{}:{}/v1/?fields={}&amp;token={}"</span> 
-        .format(HOST, PORT, FIELDS, TOKEN), <span class="hljs-attr">params=payload)</span>
+    <span class="hljs-attr">res</span> = requests.post(<span class="hljs-string">"http://{}/v1/?fields={}&amp;token={}"</span>.format(HOST, FIELDS, TOKEN), <span class="hljs-attr">json=payload)</span>
     return res.json()
 
 <span class="hljs-attr">title</span> = <span class="hljs-string">"Robert Sowell"</span>
