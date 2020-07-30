@@ -34,8 +34,7 @@ import json
 import requests
 
 def get_request(payload):
-    res = requests.get("http://{}:{}/v1/?fields={}&token={}" 
-        .format(HOST, PORT, FIELDS, TOKEN), params=payload)
+    res = requests.post("http://{}/v1/?fields={}&token={}".format(HOST, FIELDS, TOKEN), json=payload)
     return res.json()
 
 title = "Robert Sowell"
