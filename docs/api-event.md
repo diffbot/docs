@@ -54,7 +54,6 @@ Objects in the Event API's `objects` array will include the following fields:
 | `startDateLocalTimezone` | Start date of extracted event in the local timezone as deplayed on the page. If no start time was found, the time is midnight.|
 | `endDateLocalTimezone` | End date of extracted eventin the local timezone as deplayed on the page. If no start time was found, the time is midnight.|
 |`timezoneOffset` | GMT offset in hours and minutes.|
-| `isFullDay` | Returns true if no time was found and the event runs the whole day.|
 | `description` | Text description, if available, of the event. |
 | `venue` | The name of the venue, if available. |
 | `location` | Parsed location information, if a parsable location was found.|
@@ -107,7 +106,6 @@ Objects in the Event API's `objects` array will include the following fields:
                "height":360
             }
          ],
-         "isFullDay":false,
          "timezoneOffset": "-07:00",
          "endDate":"Fri, 09 Nov 2018 01:00:00 GMT",
          "endDateLocalTimezone":"Thu, 08 Nov 2018 17:00:00",
