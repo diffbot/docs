@@ -104,7 +104,7 @@ docReady(function () {
     // Build the dropdown for API
     let dropDown2 = document.createElement("div");
     dropDown2.classList.add("dropdown");
-    let dd2html = '<a href="/docs/en/api-basics-index" class="dropbtn">Automatic API</a><div class="dropdown-content">';
+    let dd2html = '<a href="/docs/en/api-basics-index" class="dropbtn">Extraction</a><div class="dropdown-content">';
     dd2html += '<a href="/docs/en/api-intro-product">Product API</a>';
     dd2html += '<a href="/docs/en/api-intro-article">Article API</a>';
     dd2html += '<a href="/docs/en/api-intro-analyze">Analyze API</a>';
@@ -119,20 +119,31 @@ docReady(function () {
     // Build the dropdown for Batch
     let dropDown3 = document.createElement("div");
     dropDown3.classList.add("dropdown");
-    let dd3html = '<a href="/docs/en/cb-basics-index" class="dropbtn">Batch Services</a><div class="dropdown-content">';
+    let dd3html = '<a href="/docs/en/cb-basics-index" class="dropbtn">Crawling</a><div class="dropdown-content">';
     dd3html += '<a href="/docs/en/cb-intro-cb">Crawlbot</a>';
     dd3html += '<a href="/docs/en/cb-intro-bulk">Bulk Jobs</a>';
     dd3html += '<a href="/docs/en/cb-intro-search">Search API</a>';
     dd3html += '</div>';
     dropDown3.innerHTML = dd3html;
 
+    // Build the dropdown for natural language
+    let dropDown4 = document.createElement("div");
+    dropDown4.classList.add("dropdown");
+    let dd4html = '<a href="/docs/en/nl-index" class="dropbtn">Natural Language</a><div class="dropdown-content">';
+    dd4html += '<a href="/docs/en/nl-index">Home</a>';
+    dd4html += '<a href="/docs/en/nl-quickstart">Quickstart</a>';
+    dd4html += '</div>';
+    dropDown4.innerHTML = dd4html;
+
     // Insert into top nav
     //let currentNav = document.querySelector("ul.nav-site").innerHTML;
     //document.querySelector("ul.nav-site").innerHTML = dropdownHtml + currentNav;
     let currentNav = document.querySelector("ul.nav-site");
+    currentNav.prepend(dropDown4);
     currentNav.prepend(dropDown1);
     currentNav.prepend(dropDown3);
     currentNav.prepend(dropDown2);
+    
 
     // Check if there is an H3 Knowledge Graph heading in the sidebar
     let inKgSection = false;
@@ -169,4 +180,17 @@ docReady(function () {
             + docMainWrapper.innerHTML;
         }
     }
+
+    // Add fathom analytics
+    let script = document.createElement('script');
+    script.setAttribute('src', 'https://cdn.usefathom.com/3.js');
+    script.setAttribute('site', 'OGXCNLPJ');
+    document.querySelector('body').appendChild(script);
+
+    // Add Segment
+    !function(){var analytics=window.analytics=window.analytics||[];if(!analytics.initialize)if(analytics.invoked)window.console&&console.error&&console.error("Segment snippet included twice.");else{analytics.invoked=!0;analytics.methods=["trackSubmit","trackClick","trackLink","trackForm","pageview","identify","reset","group","track","ready","alias","debug","page","once","off","on","addSourceMiddleware","addIntegrationMiddleware","setAnonymousId","addDestinationMiddleware"];analytics.factory=function(e){return function(){var t=Array.prototype.slice.call(arguments);t.unshift(e);analytics.push(t);return analytics}};for(var e=0;e<analytics.methods.length;e++){var t=analytics.methods[e];analytics[t]=analytics.factory(t)}analytics.load=function(e,t){var n=document.createElement("script");n.type="text/javascript";n.async=!0;n.src="https://cdn.segment.com/analytics.js/v1/"+e+"/analytics.min.js";var a=document.getElementsByTagName("script")[0];a.parentNode.insertBefore(n,a);analytics._loadOptions=t};analytics.SNIPPET_VERSION="4.1.0";
+    analytics.load("sQoH4GafKS6QYcbQHc4aQVX3grmKkJJM");
+    analytics.page();
+    }}();
+
 })

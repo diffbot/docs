@@ -8,11 +8,7 @@ Diffbot Automatic and Custom APIs automatically execute Javascript, but Crawlbot
 
 Some sites deliver the majority of their content via JavaScript. If you need to access rendered pages to discover a site’s links, you can do so via the following:
 
-1. Use the Analyze API
-
-    Accessing a site’s Ajax-delivered links requires the use of Diffbot’s [Analyze API](api-intro-analyze). The Analyze API automatically identifies a page’s type, and processes those pages supported by extraction APIs.
-
-2. Add `&links` as a Diffbot Querystring Argument
+1. Add `&links` as a Diffbot Querystring Argument
 
     Adding the argument `&links` uses Diffbot core API link-extracting functionality to return all links found on a page. Crawlbot will use these additional links, found within the rendered page, to augment those found in the raw source.
 
@@ -20,7 +16,7 @@ Some sites deliver the majority of their content via JavaScript. If you need to 
 
     If you are using the [Crawlbot API](api-crawlbot-api), simply append `&links` to your `apiUrl`: `https://api.diffbot.com/v3/analyze?links`
 
-3. Include your seed page (and any other JS-requiring pages) in your processing pattern(s) or regular expression.
+2. Include your seed page (and any other JS-requiring pages) in your processing pattern(s) or regular expression.
 
     Make sure you broaden your processing patterns or processing regular expression, or remove them entirely.
 

@@ -1,6 +1,6 @@
 ---
 id: cb-basics-index
-title: Explaining Diffbot's Batch Services
+title: Explaining Diffbot's Crawling Services
 sidebar_label: >> START HERE <<
 todo: Turn into nice custom landing page
 ---

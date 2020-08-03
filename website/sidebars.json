@@ -1,233 +1,282 @@
 {
-    "product-api": {
-        "Product API": [
-        {
-            "type": "subcategory",
-            "label": "Basics",
-            "ids": ["api-intro-product", "api-basics-product", "api-product-categories"]
-        },
-        {
-            "type": "subcategory",
-            "label": "Recipes",
-            "ids": ["api-usage-product"]
-        }, 
-        {
-            "type": "subcategory",
-            "label": "API",
-            "ids": ["api-product"]
-        }
+  "product-api": {
+    "Product API": [
+      {
+        "type": "subcategory",
+        "label": "Basics",
+        "ids": [
+          "api-intro-product",
+          "api-basics-product",
+          "api-product-categories"
         ]
-    },
-    "article-api": {
-        "Article API": [
-        {
-            "type": "subcategory",
-            "label": "Basics",
-            "ids": ["api-intro-article", "api-basics-article", "api-article-html", "api-semantria"]
-        },
-        {
-            "type": "subcategory",
-            "label": "Recipes",
-            "ids": ["api-usage-article", "guides-data-behind-login", "guides-concatenate-multipage-articles", "guides-correct-images-custom-api"]
-        },        
-        {
-            "type": "subcategory",
-            "label": "API",
-            "ids": ["api-article"]
-        }        ]
-    },
-    "analyze-api": {
-        "Analyze API": [
-        {
-            "type": "subcategory",
-            "label": "Basics",
-            "ids": ["api-intro-analyze", "api-basics-analyze"]
-        },
-        {
-            "type": "subcategory",
-            "label": "Recipes",
-            "ids": ["api-usage-analyze"]
-        },        
-        {
-            "type": "subcategory",
-            "label": "API",
-            "ids": ["api-analyze"]
-        }        ]
-    },
-    "image-api": {
-        "Image API": [
-        {
-            "type": "subcategory",
-            "label": "Basics",
-            "ids": ["api-intro-image", "api-basics-image"]
-        },
-        {
-            "type": "subcategory",
-            "label": "Recipes",
-            "ids": ["api-usage-image"]
-        },        
-        {
-            "type": "subcategory",
-            "label": "API",
-            "ids": ["api-image"]
-        }        ]
-    },
-    "video-api": {
-        "Video API": [
-        {
-            "type": "subcategory",
-            "label": "Basics",
-            "ids": ["api-intro-video", "api-basics-video"]
-        },
-        {
-            "type": "subcategory",
-            "label": "Recipes",
-            "ids": ["api-usage-video"]
-        },        
-        {
-            "type": "subcategory",
-            "label": "API",
-            "ids": ["api-video"]
-        }        ]
-    },
-    "discussion-api": {
-        "Discussion API": [
-        {
-            "type": "subcategory",
-            "label": "Basics",
-            "ids": ["api-intro-discussion", "api-basics-discussion"]
-        },
-        {
-            "type": "subcategory",
-            "label": "Recipes",
-            "ids": ["api-usage-discussion"]
-        },        
-        {
-            "type": "subcategory",
-            "label": "API",
-            "ids": ["api-discussion"]
-        }        ]
-    },
-    "custom-api": {
-        "Custom API": [
-        {
-            "type": "subcategory",
-            "label": "Basics",
-            "ids": ["api-intro-custom", "api-basics-custom", "tutorials-custom-video"]
-        },
-        {
-            "type": "subcategory",
-            "label": "Recipes",
-            "ids": ["api-usage-custom", "guides-backup-restore-rules", "guides-custom-headers-api"]
-        },
-        {
-            "type": "subcategory",
-            "label": "API",
-            "ids": [ "api-custom", "api-selectors-filters", "api-managing-rules-programmatically"]
-        }
-       
+      },
+      {
+        "type": "subcategory",
+        "label": "Recipes",
+        "ids": ["api-usage-product"]
+      },
+      {
+        "type": "subcategory",
+        "label": "API",
+        "ids": ["api-product"]
+      }
+    ]
+  },
+  "article-api": {
+    "Article API": [
+      {
+        "type": "subcategory",
+        "label": "Basics",
+        "ids": [
+          "api-intro-article",
+          "api-basics-article",
+          "api-article-html",
+          "api-semantria"
         ]
-    },
-    "account-api": {
-        "Account API": [
-        {
-            "type": "subcategory",
-            "label": "Basics",
-            "ids": ["api-intro-account", "api-basics-account"]
-        },
-        {
-            "type": "subcategory",
-            "label": "Recipes",
-            "ids": ["api-usage-account"]
-        },        
-        {
-            "type": "subcategory",
-            "label": "API",
-            "ids": [ "api-account"]
-        }
-               ]
-    },
-    "crawlbot": {
-        "Crawlbot": [
-            {
-                "type": "subcategory",
-                "label": "Basics",
-                "ids": ["cb-intro-cb", "cb-basics-cb", "tutorials-crawl-video"]
-            },
-            {
-                "type": "subcategory",
-                "label": "Recipes",
-                "ids": ["cb-usage-cb", "guides-authenticated-crawling", "guides-check-results-specific-page-type", "guides-crawling-ajax-generated-links", "guides-custom-headers-crawl"]
-            },        
-            {
-                "type": "subcategory",
-                "label": "API",
-                "ids": ["api-crawlbot-api"]
-            }
+      },
+      {
+        "type": "subcategory",
+        "label": "Recipes",
+        "ids": [
+          "api-usage-article",
+          "guides-data-behind-login",
+          "guides-concatenate-multipage-articles",
+          "guides-correct-images-custom-api"
         ]
-    },
-    "bulk": {
-        "Bulk Jobs": [
-            {
-                "type": "subcategory",
-                "label": "Basics",
-                "ids": ["cb-intro-bulk", "cb-basics-bulk"]
-            },
-            {
-                "type": "subcategory",
-                "label": "Recipes",
-                "ids": ["cb-usage-bulk"]
-            },        
-            {
-                "type": "subcategory",
-                "label": "API",
-                "ids": [ "api-bulk"]
-            }
+      },
+      {
+        "type": "subcategory",
+        "label": "API",
+        "ids": ["api-article"]
+      }
+    ]
+  },
+  "analyze-api": {
+    "Analyze API": [
+      {
+        "type": "subcategory",
+        "label": "Basics",
+        "ids": ["api-intro-analyze", "api-basics-analyze"]
+      },
+      {
+        "type": "subcategory",
+        "label": "Recipes",
+        "ids": ["api-usage-analyze"]
+      },
+      {
+        "type": "subcategory",
+        "label": "API",
+        "ids": ["api-analyze"]
+      }
+    ]
+  },
+  "image-api": {
+    "Image API": [
+      {
+        "type": "subcategory",
+        "label": "Basics",
+        "ids": ["api-intro-image", "api-basics-image"]
+      },
+      {
+        "type": "subcategory",
+        "label": "Recipes",
+        "ids": ["api-usage-image"]
+      },
+      {
+        "type": "subcategory",
+        "label": "API",
+        "ids": ["api-image"]
+      }
+    ]
+  },
+  "video-api": {
+    "Video API": [
+      {
+        "type": "subcategory",
+        "label": "Basics",
+        "ids": ["api-intro-video", "api-basics-video"]
+      },
+      {
+        "type": "subcategory",
+        "label": "Recipes",
+        "ids": ["api-usage-video"]
+      },
+      {
+        "type": "subcategory",
+        "label": "API",
+        "ids": ["api-video"]
+      }
+    ]
+  },
+  "discussion-api": {
+    "Discussion API": [
+      {
+        "type": "subcategory",
+        "label": "Basics",
+        "ids": ["api-intro-discussion", "api-basics-discussion"]
+      },
+      {
+        "type": "subcategory",
+        "label": "Recipes",
+        "ids": ["api-usage-discussion"]
+      },
+      {
+        "type": "subcategory",
+        "label": "API",
+        "ids": ["api-discussion"]
+      }
+    ]
+  },
+  "custom-api": {
+    "Custom API": [
+      {
+        "type": "subcategory",
+        "label": "Basics",
+        "ids": [
+          "api-intro-custom",
+          "api-basics-custom",
+          "tutorials-custom-video"
         ]
-    },
-    "search": {
-        "Search API": [
-            {
-                "type": "subcategory",
-                "label": "Basics",
-                "ids": ["cb-intro-search", "cb-basics-search"]
-            },
-            {
-                "type": "subcategory",
-                "label": "Recipes",
-                "ids": ["cb-usage-search"]
-            },        
-            {
-                "type": "subcategory",
-                "label": "API",
-                "ids": [ "api-search"]
-            }
+      },
+      {
+        "type": "subcategory",
+        "label": "Recipes",
+        "ids": [
+          "api-usage-custom",
+          "guides-backup-restore-rules",
+          "guides-custom-headers-api",
+          "guides-multidomain"
         ]
-    },
-    "dql": {
-        "Knowledge Graph": [
-            "kg-index",
-            "dql-quickstart",
-            {
-                "type": "subcategory",
-                "label": "Tools and Usage",
-                "ids": ["kg-accessing",
-                    "kg-clients",
-                    "dql-excel"
-                ]
-            },
-            {
-                "type": "subcategory",
-                "label": "In-Depth",
-                "ids": ["dql-index",
-                    "dql-workflows",
-                    "dql-faq"]
-            }
+      },
+      {
+        "type": "subcategory",
+        "label": "API",
+        "ids": [
+          "api-custom",
+          "api-selectors-filters",
+          "api-managing-rules-programmatically"
         ]
-    },
-    "docs-errors": {
-        "Basics": ["error-intro"],
-        "Errors": ["error-missing-preview", "error-too-many-collections", "error-all-crawling-temporarily-paused", "error-automatic-page-concatenation-timeout", "error-could-not-download-page", "error-diffbot-could-not-apply-rules", "error-error-downloading-url", "error-errors"],
-        "Known issues": ["error-bug-search-query-too-long"]
-    }
+      }
+    ]
+  },
+  "account-api": {
+    "Account API": [
+      {
+        "type": "subcategory",
+        "label": "Basics",
+        "ids": ["api-intro-account", "api-basics-account"]
+      },
+      {
+        "type": "subcategory",
+        "label": "Recipes",
+        "ids": ["api-usage-account"]
+      },
+      {
+        "type": "subcategory",
+        "label": "API",
+        "ids": ["api-account"]
+      }
+    ]
+  },
+  "crawlbot": {
+    "Crawlbot": [
+      {
+        "type": "subcategory",
+        "label": "Basics",
+        "ids": [
+          "cb-intro-cb",
+          "cb-basics-cb",
+          "tutorials-crawl-video",
+          "explain-improving-crawl-efficiency"
+        ]
+      },
+      {
+        "type": "subcategory",
+        "label": "Recipes",
+        "ids": [
+          "cb-usage-cb",
+          "guides-authenticated-crawling",
+          "guides-check-results-specific-page-type",
+          "guides-crawling-ajax-generated-links",
+          "guides-custom-headers-crawl"
+        ]
+      },
+      {
+        "type": "subcategory",
+        "label": "API",
+        "ids": ["api-crawlbot-api"]
+      }
+    ]
+  },
+  "bulk": {
+    "Bulk Jobs": [
+      {
+        "type": "subcategory",
+        "label": "Basics",
+        "ids": ["cb-intro-bulk", "cb-basics-bulk"]
+      },
+      {
+        "type": "subcategory",
+        "label": "Recipes",
+        "ids": ["cb-usage-bulk"]
+      },
+      {
+        "type": "subcategory",
+        "label": "API",
+        "ids": ["api-bulk"]
+      }
+    ]
+  },
+  "search": {
+    "Search API": [
+      {
+        "type": "subcategory",
+        "label": "Basics",
+        "ids": ["cb-intro-search", "cb-basics-search"]
+      },
+      {
+        "type": "subcategory",
+        "label": "Recipes",
+        "ids": ["cb-usage-search"]
+      },
+      {
+        "type": "subcategory",
+        "label": "API",
+        "ids": ["api-search"]
+      }
+    ]
+  },
+  "dql": {
+    "Knowledge Graph": [
+      "kg-index",
+      "dql-quickstart",
+      {
+        "type": "subcategory",
+        "label": "Tools and Usage",
+        "ids": ["kg-accessing", "kg-clients", "dql-excel"]
+      },
+      {
+        "type": "subcategory",
+        "label": "In-Depth",
+        "ids": ["dql-index", "dql-workflows", "dql-faq"]
+      }
+    ]
+  },
+  "nl": {
+    "Natural Language": ["nl-index", "nl-quickstart"]
+  },
+  "docs-errors": {
+    "Basics": ["error-intro"],
+    "Errors": [
+      "error-missing-preview",
+      "error-too-many-collections",
+      "error-all-crawling-temporarily-paused",
+      "error-automatic-page-concatenation-timeout",
+      "error-could-not-download-page",
+      "error-diffbot-could-not-apply-rules",
+      "error-error-downloading-url",
+      "error-errors"
+    ],
+    "Known issues": ["error-bug-search-query-too-long"]
+  }
 }

@@ -364,184 +364,213 @@ List of common terms used in VC investment:
 - Waterfall Chart
 - Weighted Average
 
-## APPENDIX B: Industry tags commonly found on the Web 
+## APPENDIX B: Organization category tags commonly found on the Web 
 
-- Agricultural Machinery Manufacturers
-- Agricultural Organizations
-- Air Forces
-- Aircraft Manufacturers
-- Airlines
-- Amusement Park Companies
-- Architecture Firms
-- Arts Venues
-- Banks
-- Biotechnology Companies
-- Book Publishing Companies
-- Broadcasting Companies
-- Building Materials Companies
-- Bus Manufacturers
-- Bus Operating Companies
-- Business Intelligence Companies
-- Business Software Companies
-- Car Manufacturers
-- Car Rental Companies
-- Casinos
-- Cement Companies
-- Ceramics Manufacturers
+- Agricultural Organizations		
 - Chemical Companies
-- Cinemas And Movie Theaters
-- Clothing Companies
-- Cloud Computing Providers
-- Coal Companies
-- Comics Publishing Companies
-- Computer Companies
-- Computer Hardware Companies
-- Computer Security Companies
-- Computer Security Software Companies
-- Construction Equipment Manufacturers
-- Construction Industry
-- Construction Organizations
-- Cosmetics Companies
-- Crm Software Companies
-- Cruise Lines
-- Cycle Manufacturers
-- Database Companies
-- Dentistry
-- Development Software Companies
-- Drink Companies
-- Drinking Establishments
-- Educational Organizations
-- Electronic Design Automation Companies
-- Electronics Companies
-- Energy Companies
-- Engine Manufacturers
-- Entertainment Companies
-- Entertainment Venues
-- Erp Software Companies
-- Event Management Companies
-- Explosives Manufacturers
-- Fertilizer Companies
-- Film Companies
-- Film Distributors
-- Film Production Companies
-- Financial Data Vendors
-- Financial Services Companies
-- Financial Software Companies
-- Financial Technology Companies
-- Food And Drink Companies
-- Food Companies
-- Free Software Companies
-- Freight Transport Companies
-- Furniture Manufacturers
-- Gambling Companies
-- Geographic Data And Information Companies
-- Government Agencies
-- Government Bodies
-- Government-Related Organizations
-- Health Care
-- Health Insurance
-- Heating, Ventilation, And Air Conditioning Companies
-- Helicopter Operators
-- High Fashion Brands
-- Home Appliance Manufacturers
-- Home Video Distributors
-- Hospitality Companies
-- Hotels
-- Industrial Machine Manufacturers
-- Information Technology Consulting Firms
-- Insurance Companies
-- International Organizations
-- Internet Of Things Companies
-- Investment Companies
-- Jewellery Companies
-- Knife Manufacturing Companies
-- Law Firms
-- Leather Manufacturers
-- Libraries
-- Luggage Manufacturers
-- Machine Manufacturers
-- Magazine Publishing Companies
-- Marketing Companies
-- Matchmaking Software Companies
-- Media Companies
-- Medical And Health Organizations
-- Metal Companies
-- Military Academies
-- Military Units And Formations
-- Mining Companies
-- Ministries
-- Mortgage Lenders
-- Motor Vehicle Manufacturers
-- Motorcycle Manufacturers
-- Museums
-- Music Companies
-- Music Equipment Manufacturers
-- Music Production Companies
-- Music Publishing Companies
-- National Academies
-- Natural Gas Companies
-- Networking Companies
-- Newspaper Companies
-- Oil Companies
-- Online Publishing Companies
-- Online Retailers
-- Optics Manufacturing Companies
-- Packaging Companies
-- Paint Manufacturers
-- Peer-To-Peer Lending Companies
-- Pen Manufacturers
-- Performing Arts Companies
-- Petrochemical Companies
-- Pharmaceutical Companies
-- Pharmacy
-- Photography Companies
-- Plastics Companies
-- Political Parties
-- Polling Companies
-- Postal Organizations
-- Primary Industries
-- Public Transport Operators
-- Pulp And Paper Companies
-- Radio Stations
-- Railway Companies
-- Real Estate Companies
-- Renewable Energy Companies
-- Research Institutes
-- Restaurants
-- Retailers
-- Schools
-- Security Companies
-- Semiconductor Companies
-- Service Industries
-- Sex Businesses
-- Shipbuilding Companies
-- Shoe Brands
-- Shopping Delivery Services
-- Software Companies
-- Spacecraft Manufacturers
-- Special Effects Companies
-- Sporting Goods Manufacturers
+	- Fertilizer Companies	
+	- Paint Manufacturers	
+	- Plastics Companies	
+- Clothing Companies		
+	- High Fashion Brands
+	- Shoe Brands	
+	- Sportswear Brands	
+	- Underwear Brands	
+- Computer Companies		
+	- Computer Hardware Companies	
+		- Cloud Computing Providers
+		- Computer Storage Companies
+		- Internet Of Things Companies
+		- Networking Companies
+	- Software Companies	
+		- Artificial Intelligence Companies
+		- Bioinformatics Organizations
+		- Business Intelligence Companies
+		- Cloud Computing Providers
+		- Computer Security Companies
+		- CRM Software Companies
+		- Database Companies
+		- ERP Software Companies
+		- Financial Software Companies
+		- Information Technology Consulting Firms
+		- Internet Of Things Companies‎
+		- Networking Companies
+		- Open-Source Software Organizations
+		- Social Networking Companies
+		- Software-As-A-Service Companies
+		- Video Game Companies
+- Construction Companies		
+	- Building Materials Companies
+		- Cement Companies
+		- Ceramics Manufacturers
+		- Metal Companies
+- Design Companies		
+	- Architecture Firms	
+	- Graphic Design Companies	
+	- Industrial Design Firms	
+	- Jewellery Companies
+	- Packaging Companies	
+	- Web Design Companies	
+- Educational Organizations		
+	- Libraries	
+	- National Academies	
+	- Research Institutes
+	- Schools	
+	- Universities And Colleges	
+- Energy Companies		
+	- Automotive Fuel Retailers	
+	- Natural Gas Companies
+	- Nuclear Energy Companies	
+	- Oil Companies
+	- Renewable Energy Companies
+- Engineering Companies		
+	- Defence Companies	
+	- Electrical Engineering Companies	
+	- Electronics Companies	
+	- Energy Engineering	
+	- Engine Manufacturers
+	- Engineering Consulting Firms	
+	- Eyewear Companies	
+	- Semiconductor Companies	
+- Entertainment Companies		
+	- Animation Studios	
+	- Film Companies	
+	- Gambling Companies
+	- Media Companies	
+		- Newspaper Companies
+		- Publishing Companies
+		- Radio Stations
+		- Television Stations
+	- Music Companies	
+	- Performing Arts Companies	
+		- Dance Groups
+		- Musical Groups
+	- Video Game Companies
+- Entertainment Venues		
+	- Amusement Parks	
+	- Aquaria	
+	- Arts Venues	
+	- Casinos	
+	- Cinemas And Movie Theaters	
+	- Museums	
+	- Sports Venues	
+	- Theatres	
+	- Zoos	
+- Financial Services Companies	
+	- Banks	
+	- Digital Currencies Companies	
+	- Financial Data Vendors	
+	- Financial Technology Companies	
+	- Insurance Companies
+	- Investment Companies
+	- Management Consulting Firms	
+	- Mortgage Lenders
+	- Payment Service Providers	
+	- Stock Exchanges	
+- Food And Drink Companies	
+	- Drink Companies
+		- Breweries
+		- Coffee Companies
+		- Distilleries
+		- Soft Drinks Manufacturers
+		- Tea Companies
+		- Wineries
+	- Fast-Food Restaurants	
+	- Food Companies	
+	- Foodservice Companies	
+	- Restaurants	
+- Government-Related Organizations		
+	- Intergovernmental Organizations	
+	- International Organizations	
+	- Military-Related Organizations	
+	- Ministries	
+	- Political Parties
+	- Standards Organizations	
+- Hospitality Companies		
+	- Hotels	
+	- Tourist Accommodations	
+- Manufacturing Companies		
+	- Audio Equipment Manufacturers	
+	- Electrical Equipment Manufacturers	
+	- Furniture Companies	
+	- Home Appliance Manufacturers	
+		- Air Conditioning Companies
+	- Luggage Manufacturers	
+	- Machine Manufacturers
+		- Agricultural Machinery Manufacturers
+		- Construction Equipment Manufacturers
+	- Pen Manufacturers
+	- Pulp And Paper Companies
+	- Sporting Goods Manufacturers	
+	- Textile Companies	
+		- Leather Manufacturers
+	- Tobacco Companies	
+	- Tool Manufacturers	
+	- Toy Companies
+	- Weapons Manufacturing Companies	
+- Medical Organizations	
+	- Biotechnology Companies	
+	- Dental Companies	
+	- Eye Hospitals	
+	- Health Care Companies	
+	- Hospitals	
+	- Pharmacies	
+- Mining Companies		
+- Motor Vehicle Manufacturers		
+	- Aircraft Manufacturers	
+	- Autonomous Vehicles	
+	- Bus Manufacturers
+	- Car Manufacturers	
+	- Cycle Manufacturers	
+	- Electric Vehicles	
+	- Luxury Motor Vehicle Manufacturers	
+	- Military Vehicle Manufacturers	
+	- Motorcycle Manufacturers	
+	- Shipbuilding Companies	
+	- Spacecraft Manufacturers	
+	- Truck Manufacturers	
+	- Vehicle Parts	
+- Personal Care Companies		
+	- Cosmetics Companies	
+	- Perfume Houses	
+- Pharmaceutical Companies		
+- Service Companies		
+	- Airport Operators	
+	- Event Management Companies	
+	- Law Firms	
+	- Logistics Companies	
+	- Marketing Companies	
+	- Polling Companies	
+	- Postal Organizations	
+	- Real Estate Companies	
+	- Recruiting	
+	- Retailers	
+		- Supermarkets
+		- Superstores
+		- Online Retailers
+	- Security Companies	
+	- Shopping Delivery Services
+	- Tourism Agencies	
 - Sports Clubs
-- Sportswear Brands
-- Stock Exchanges
-- Technology Companies
-- Telecommunications Companies
-- Television Companies
-- Textile Industry
-- Textile Mills
-- Textile Organizations
-- Tobacco Companies
-- Tool Manufacturers
-- Toy Companies
-- Tractor Manufacturers
-- Transport Companies
-- Travel Agencies
-- Truck Manufacturers
-- Underwear Brands
-- Universities And Colleges
-- Video Game Companies
-- Watch Manufacturing Companies
-- Weapons Manufacturing Companies
-- Wholesalers
-- Zoos
-
+	- American Football Teams	
+	- Association Football Clubs	
+	- Baseball Teams	
+	- Basketball Teams
+	- Cricket Teams	
+	- Ice Hockey Teams	
+	- Volleyball Clubs	
+- Technology Companies		
+	- Display Technology Companies	
+	- Mobile Phone Manufacturers	
+	- Optics Manufacturing Companies	
+	- Telecommunications Companies	
+	- Virtual Reality Companies	
+	- Watch Manufacturing Companies	
+- Transport Companies		
+	- Airlines	
+	- Cruise Lines
+	- Helicopter Operators	
+	- Public Transport Operators	
+	- Railway Companies	
+	- Ridesharing Companies	
+	- Vehicle Rental Companies	
