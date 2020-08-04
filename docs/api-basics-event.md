@@ -1,5 +1,5 @@
 ---
-id: api-basics-events
+id: api-basics-event
 title: Events API Basic Usage
 sidebar_label: Basic Usage
 description: Basic usage of the Diffbot Events API
@@ -19,4 +19,4 @@ To try out the API directly, insert your token into one or more of these API cal
 
 or you can use the Analyze API.
 
-The full API reference of Events API can be found [here](api-events).
+The full API reference of Events API can be found [here](api-event).
