@@ -5,8 +5,7 @@ sidebar_label: Introduction
 description: Introduction of the Diffbot Event API
 ---
 
-The Event API is used to extract clean event details, text descriptions and other data from event pages. Extract data for online and in-person events (a standalone event held within a single day). Support for multi-day, multi-track events, i.e. full conference schedules and festivals, is planned but not yet supported.
- 
+The Event API returns information on an event like a conference, webinar, meetup, etc. and can be used to extract clean event details, text descriptions and other data from  online and in-person event pages (i.e. for a standalone event held within a single day). Most popular event websites are supported, but the Event API is a new release so please make sure to report any bugs you find to [support@diffbot.com](mailto:support@diffbot.com). Support for multi-day, multi-track events, i.e. full conference schedules and festivals, is planned but not yet supported.
 
 The full API reference of Events API can be found [here](api-event).
 
