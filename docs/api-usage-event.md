@@ -1,6 +1,6 @@
 ---
-id: api-usage-events
-title: Events API Usage
+id: api-usage-event
+title: Event API Usage
 sidebar_label: Index
 ---
 
@@ -22,4 +22,4 @@ Here are some examples on using, customizing, and integrating Diffbot APIs.
 
 - [Debugging X-eval](error-could-not-download-page#tips-on-debugging-x-eval-scripts)
 
-[Events API reference](api-events)
+[Events API reference](api-event)
