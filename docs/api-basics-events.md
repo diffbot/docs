@@ -25,6 +25,6 @@ To try out the API directly, insert your token into one or more of these API cal
 
 or use the Analyze API.
 
-For full developer API documentation go here: https://docs.diffbot.com/docs/en/api-intro-events
+The full API reference of Events API can be found [here](api-events).
 
 
