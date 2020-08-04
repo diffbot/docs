@@ -10,7 +10,11 @@ The Event API is used to extract clean event details, text descriptions and othe
 
 The full API reference of Events API can be found [here](api-events).
 
-Learn more about the Events API:
+Learn About the Diffbot Event API 
+- [Basics](api-basics-events)
+- [Usage](api-usage-events)
+
+Learn more about Diffbot APIs:
 
 - [Do Diffbot APIs Follow Redirects?](explain-apis-follow-redirects)
 - [Do Diffbot APIs Execute JavaScript?](explain-apis-javascript-support)
