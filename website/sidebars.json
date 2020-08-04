@@ -127,6 +127,20 @@
       }
     ]
   },
+  "events-api": {
+    "Discussion API": [
+      {
+        "type": "subcategory",
+        "label": "Basics",
+        "ids": ["api-intro-events"]
+      },
+      {
+        "type": "subcategory",
+        "label": "API",
+        "ids": ["api-event"]
+      }
+    ]
+  },
   "custom-api": {
     "Custom API": [
       {
