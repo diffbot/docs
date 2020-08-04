@@ -132,7 +132,12 @@
       {
         "type": "subcategory",
         "label": "Basics",
-        "ids": ["api-intro-events"]
+        "ids": ["api-intro-events", "api-basics-event"]
+      },
+      {
+        "type": "subcategory",
+        "label": "Recipes",
+        "ids": ["api-usage-event"]
       },
       {
         "type": "subcategory",
