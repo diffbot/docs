@@ -24,6 +24,6 @@ To build and test the docs locally:
 
 This will open a browser with the local version running in live-reload mode, so you can see your changes as you save your files. Note that menus will not update with this approach, so you need to kill the server with `CTRL+C` and restart with `yarn start` to test menu changes.
 
-## Translations
+## Static Pages
 
-TBD
+There are some static pages in the docs too - notably, the KG sections. We're working on making them dynamic, but for now they can be edited directly. Check `website/static/pages` to edit those.
