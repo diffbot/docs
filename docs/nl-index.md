@@ -26,8 +26,8 @@ The Natural Language API allows developers to extract entities (e.g., people, or
 
 ## Credits
 
-Each call consumes 1 credit per 10,000 characters. A call with one document of 1,000 characters will consume 1 credit, while a call with 15 documents of 1,000 characters each (15,000 total) will consume 2 credits.
+Each call consumes 1 credit per 10,000 characters. Credits are rounded up to the nearest integer. For instance, a call with one document of 1,000 characters will consume 1 credit (rather than 0.1). Hence, if your documents are short, consider submitting multiple documents with a single request. 
 
 ## Limits
 
-Up to 100,000 total characters for each call.
+Up to 100,000 total characters for each request.
