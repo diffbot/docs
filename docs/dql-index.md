@@ -16,9 +16,7 @@ There are two types of queries, `ID` and `Type`. Type is the most common.
 
 You can query the Knowledge Graph directly if you know the unique identifier (ID) of the entity you are interested in accessing. The query format is `id:id-string`. 
 
-For Example: To query for the Facebook entity, type [`id:Cbm4UJoSuP1esww1rsLvu9g`](https://app.diffbot.com/search/?query=id%3ACPdsrDmLiMQCskvBLp_dloQ&from=0&size=50&active_tab=query).
-
-You will see two results returned. The first is the Organization entity profile you requested. The second is a list of all Persons linked to that entity.
+For Example: To query for the Facebook entity, type [`id:Cbm4UJoSuP1esww1rsLvu9g`](https://app.diffbot.com/search/?query=id%3ACbm4UJoSuP1esww1rsLvu9g).
 
 ### Type
 
