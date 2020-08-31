@@ -21,7 +21,7 @@ The Natural Language API allows developers to extract entities (e.g., people, or
 * **Property**. A property defines the relationship type (founder, number of employees) of a fact. The list of properties we support can be found [here](https://demo.nl.diffbot.com/schema/).
 * **Open Fact**. Unlike a regular fact, an open fact does not follow a pre-defined list of properties. An open fact's property is extracted directly from the text. This enables new properties to be discovered.
 * **Sentiment of a document**. This value represents the overall sentiment of the text. It ranges from -1.0 (very negative) to 1.0 (very positive). Sentiment around 0.0 is considered neutral.
-* **Sentiment of an entity**. This value represents the sentiment of the text towards an entity. Example: "I love Apple products, but the Mac Pro is too pricey." is positive towards Apple and negative towards the Mac Pro.
+* **Sentiment of an entity**. This value represents the sentiment of the text towards an entity. Example: "I love Apple products, but the iMac Pro is too pricey." is positive towards Apple and negative towards the iMac Pro.
 * **Salience**. This value helps answer the question: "What is this text mainly about?". Salience of 1.0 means the entity is the main topic of the document, while salience of 0.0 means that the entity is unnecessary to understand the document. 
 
 ## Credits
