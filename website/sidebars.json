@@ -218,6 +218,7 @@
           "guides-check-results-specific-page-type",
           "guides-crawling-ajax-generated-links",
           "guides-custom-headers-crawl"
+          "guides-job-limits"
         ]
       },
       {
