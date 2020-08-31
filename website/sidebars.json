@@ -127,12 +127,17 @@
       }
     ]
   },
-  "events-api": {
-    "Discussion API": [
+  "event-api": {
+    "Event API": [
+      {
+        "type": "subcategory",
+        "label": "Intro",
+        "ids": ["api-intro-event"]
+      },
       {
         "type": "subcategory",
         "label": "Basics",
-        "ids": ["api-intro-events", "api-basics-event"]
+        "ids": ["api-basics-event"]
       },
       {
         "type": "subcategory",

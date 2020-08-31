@@ -9,7 +9,10 @@ Common Use cases:
 - Extracting event data for an on-demand webinar or previously recorded event on Eventbrite.
 - Extracting event data for a live stream via CNBC or other host site.
 
+To try out the API directly, insert your token into this API call:
+https://api.diffbot.com/v3/event?token=YOURTOKEN&url=...
 
+For full developer Event API documentation go [here](api-event).
 
 Here are some examples on using, customizing, and integrating Diffbot APIs.
 
@@ -22,4 +25,4 @@ Here are some examples on using, customizing, and integrating Diffbot APIs.
 
 - [Debugging X-eval](error-could-not-download-page#tips-on-debugging-x-eval-scripts)
 
-[Events API reference](api-event)
+
