@@ -222,7 +222,7 @@
           "guides-authenticated-crawling",
           "guides-check-results-specific-page-type",
           "guides-crawling-ajax-generated-links",
-          "guides-custom-headers-crawl"
+          "guides-custom-headers-crawl",
           "guides-job-limits"
         ]
       },
