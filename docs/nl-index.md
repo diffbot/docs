@@ -24,6 +24,10 @@ The Natural Language API allows developers to extract entities (e.g., people, or
 * **Sentiment of an entity**. This value represents the sentiment of the text towards an entity. Example: "I love Apple products, but the iMac Pro is too pricey." is positive towards Apple and negative towards the iMac Pro.
 * **Salience**. This value helps answer the question: "What is this text mainly about?". Salience of 1.0 means the entity is the main topic of the document, while salience of 0.0 means that the entity is unnecessary to understand the document. 
 
+## Supported Languages
+ * Entities, sentiment and salience: English (en), French (fr), Spanish (es), Chinese (zh), German (de), Russian (ru), Japanese (ja), Dutch (nl)
+ * Other fields: English (en) only.
+
 ## Credits
 
 Each call consumes 1 credit per 10,000 characters. Credits are rounded up to the nearest integer. For instance, a call with one document of 1,000 characters will consume 1 credit (rather than 0.1). Hence, if your documents are short, consider submitting multiple documents with a single request. 
