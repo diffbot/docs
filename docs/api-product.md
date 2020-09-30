@@ -24,6 +24,8 @@ Provide the following arguments:
 | `discussion` | Pass `discussion=false` to disable automatic extraction of product reviews. See [below](#review-extraction). |
 | `timeout` | Sets a value in milliseconds to wait for the retrieval/fetch of content from the requested URL. The default timeout for the third-party response is 30 seconds (30000). |
 | `callback` | Use for jsonp requests. Needed for cross-domain ajax. |
+| `proxy` | Used to specify the IP address of a custom proxy that will be used to fetch the target page, instead of Diffbot's default IPs/proxies. (Ex: `&proxy=168.212.226.204`) |
+| `proxyAuth` | Used to specify the authentication parameters that will be used with the proxy specified in the `&proxy` parameter. (Ex: `&proxyAuth=username:password`) |
 
 ### The fields argument
 
