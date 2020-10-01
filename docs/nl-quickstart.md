@@ -4,7 +4,7 @@ title: Natural Language Quickstart
 sidebar_label: Quickstart
 ---
 
-The [Natural Language Demo](http://demo.nl.diffbot.com) is a great place to start. It illustrates the features of the Natural Language API. 
+The [Natural Language Demo](https://demo.nl.diffbot.com) is a great place to start. It illustrates the features of the Natural Language API. 
 
 [![Natural Language Demo Screenshot](/img/nl-demo.png)](http://demo.nl.diffbot.com)
 
@@ -34,7 +34,7 @@ import json
 import requests
 
 def get_request(payload):
-    res = requests.post("http://{}/v1/?fields={}&token={}".format(HOST, FIELDS, TOKEN), json=payload)
+    res = requests.post("https://{}/v1/?fields={}&token={}".format(HOST, FIELDS, TOKEN), json=payload)
     return res.json()
 
 title = "Robert Sowell"
