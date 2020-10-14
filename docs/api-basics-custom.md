@@ -9,7 +9,7 @@ Here’s how to make a correction with the API Customization toolkit if you have
 
 ## Find a problematic URL
 
-Start with a web page that is exhibiting the problem, then visit the [dahsboard](https://app.diffbot.com), and enter the Custom API section and click Create New (or go there [directly](https://app.diffbot.com/custom/create/)). Pick the type of API you want to process this page with, and enter the problematic URL.
+Start with a web page that is exhibiting the problem, then visit the [dashboard](https://app.diffbot.com), and enter the Custom API section and click Create New (or go there [directly](https://app.diffbot.com/custom/create/)). Pick the type of API you want to process this page with, and enter the problematic URL.
 
 ![Creating a new API and entering a link into the Test URL field](/img/custom-api-tut/01.jpg)
 
