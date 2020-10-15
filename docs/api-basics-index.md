@@ -28,7 +28,7 @@ If you know what type of content your URL is, or what to force extraction as a s
 
 ## Account API
 
-- [Account API](api-basics-account) is an account-management API which lets you programmatically find out information about your Diffbot account. This can be account type, requests issued to Diffbot, plan and billing, list of custom rules, and more.
+- [Account API](api-basics-account) lets you retrieve information about your Diffbot account via an API, including its plan type, usage, historical invoices, and more.
 
 ## Batch Processing
 
