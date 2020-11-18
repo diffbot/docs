@@ -76,6 +76,7 @@
 <tr><td style="text-align:left"><code>callback</code></td><td style="text-align:left">Use for jsonp requests. Needed for cross-domain ajax.</td></tr>
 <tr><td style="text-align:left"><code>proxy</code></td><td style="text-align:left">Used to specify the IP address of a custom proxy that will be used to fetch the target page, instead of Diffbot's default IPs/proxies. (Ex: <code>&amp;proxy=168.212.226.204</code>)</td></tr>
 <tr><td style="text-align:left"><code>proxyAuth</code></td><td style="text-align:left">Used to specify the authentication parameters that will be used with the proxy specified in the <code>&amp;proxy</code> parameter. (Ex: <code>&amp;proxyAuth=username:password</code>)</td></tr>
+<tr><td style="text-align:left"><code>naturalLanguage</code></td><td style="text-align:left">Used to request the output of the Diffbot Natural Language API in the field <code>naturalLanguage</code>. Example: <code>&amp;naturalLanguage=entities,facts,categories,sentiment</code>.</td></tr>
 </tbody>
 </table>
 <h3><a class="anchor" aria-hidden="true" id="the-fields-argument"></a><a href="#the-fields-argument" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>The fields argument</h3>
@@ -83,6 +84,8 @@
 <p>For example, to return <code>links</code> and <code>meta</code> (in addition to the default fields), your <code>&amp;fields</code> argument would be:</p>
 <pre><code class="hljs css language-plaintext">&amp;fields=links,meta
 </code></pre>
+<h3><a class="anchor" aria-hidden="true" id="the-naturallanguage-argument"></a><a href="#the-naturallanguage-argument" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>The naturalLanguage argument</h3>
+<p>The Diffbot Natural Language API is the service used by the Article API to extract tags and sentiment for an article. Use the <code>naturalLanguage</code> argument to receive the full output of the Natural Language API in the field <code>naturalLanguage</code> in the JSON response. Please refer to the <a href="/docs/en/nl-index">Natural Language API</a> documentation for a complete list of available fields, including all <code>entities</code> (such as people, organizations, products and topics) mentioned in the article as well as <code>facts</code> describing the relationships between them (such as <code>Apple Inc; founded by; Steve Jobs</code>).</p>
 <h2><a class="anchor" aria-hidden="true" id="response"></a><a href="#response" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Response</h2>
 <p>The Article API returns data in JSON format.</p>
 <p>Each V3 response includes a <code>request</code> object (which returns request-specific metadata), and an <code>objects</code> array, which will include the extracted information for all objects on a submitted page. At the moment, <strong>only a single object</strong> will be returned for Article API requests.</p>
@@ -138,103 +141,12 @@
 <tr><td style="text-align:left"><code>links</code></td><td style="text-align:left">Returns a top-level object (<code>links</code>) containing all hyperlinks found on the page.</td></tr>
 <tr><td style="text-align:left"><code>meta</code></td><td style="text-align:left">Returns a top-level object (<code>meta</code>) containing the full contents of page <code>meta</code> tags, including sub-arrays for <a href="https://ogp.me/">OpenGraph</a> tags, <a href="https://developer.twitter.com/en/docs/tweets/optimize-with-cards/overview/markup">Twitter Card</a> metadata, <a href="https://www.schema.org">schema.org</a> microdata, and -- if available -- <a href="https://www.oembed.com">oEmbed</a> metadata.</td></tr>
 <tr><td style="text-align:left"><code>querystring</code></td><td style="text-align:left">Returns any key/value pairs present in the URL querystring. Items without a discrete value will be returned as <code>true</code>.</td></tr>
+<tr><td style="text-align:left"><code>naturalLanguage</code></td><td style="text-align:left">Returns the output of the <a href="/docs/en/nl-index">Diffbot Natural Language API</a> for this article.</td></tr>
 </tbody>
 </table>
 <h2><a class="anchor" aria-hidden="true" id="comment-extraction"></a><a href="#comment-extraction" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Comment Extraction</h2>
 <p>By default the Article API will attempt to extract comments from article pages, using integrated functionality from the Diffbot Discussion API. Comment data will be returned in the <code>discussion</code> object (nested within the primary article object). The full syntax for discussion data is available in the <a href="api-discussion">Discussion API documentation</a>.</p>
 <p>Discussion extraction can be disabled using the argument <code>discussion=false</code>. Note that if a page has recently been processed by Diffbot, cached comments may be returned even if <code>discussion=false</code> is passed.</p>
-<h2><a class="anchor" aria-hidden="true" id="advanced-text-analysis-powered-by-semantria"></a><a href="#advanced-text-analysis-powered-by-semantria" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Advanced Text Analysis Powered by Semantria</h2>
-<p><img src="/img/semantria.png" style="float:right;">Our <a href="/docs/en/guides-semantria">native integration with Semantria</a> optionally allows extracted article content to be fully processed for categorization, entity and keyword extraction, and sentiment analysis. See <a href="/docs/en/api-semantria">documentation</a> for information on how to integrate your Semantria account with Diffbot's Article API.</p>
-<h2><a class="anchor" aria-hidden="true" id="example-response"></a><a href="#example-response" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Example Response</h2>
-<p>The following request --</p>
-<pre><code class="hljs css language-plaintext">https://api.diffbot.com/v3/article?token=...&amp;url=http%3A%2F%2Fblog.diffbot.com%2Fdiffbots-new-product-api-teaches-robots-to-shop-online
-</code></pre>
-<p>-- will result in this API response:</p>
-<pre><code class="hljs css language-json">{
-  <span class="hljs-attr">"request"</span>: {
-    <span class="hljs-attr">"pageUrl"</span>: <span class="hljs-string">"http://blog.diffbot.com/diffbots-new-product-api-teaches-robots-to-shop-online"</span>,
-    <span class="hljs-attr">"api"</span>: <span class="hljs-string">"article"</span>,
-    <span class="hljs-attr">"version"</span>: <span class="hljs-number">3</span>,
-    <span class="hljs-attr">"resolvedPageUrl"</span>: <span class="hljs-string">"http://blog.diffbot.com/diffbots-new-product-api-teaches-robots-to-shop-online/"</span>
-  },
-  <span class="hljs-attr">"objects"</span>: [
-    {
-      <span class="hljs-attr">"date"</span>: <span class="hljs-string">"Wed, 31 Jul 2013 00:00:00 GMT"</span>,
-      <span class="hljs-attr">"images"</span>: [
-        {
-          <span class="hljs-attr">"naturalHeight"</span>: <span class="hljs-number">360</span>,
-          <span class="hljs-attr">"width"</span>: <span class="hljs-number">0</span>,
-          <span class="hljs-attr">"diffbotUri"</span>: <span class="hljs-string">"image|3|1069194852"</span>,
-          <span class="hljs-attr">"url"</span>: <span class="hljs-string">"http://img.youtube.com/vi/lfcri5ungRo/0.jpg"</span>,
-          <span class="hljs-attr">"naturalWidth"</span>: <span class="hljs-number">480</span>,
-          <span class="hljs-attr">"primary"</span>: <span class="hljs-literal">true</span>,
-          <span class="hljs-attr">"height"</span>: <span class="hljs-number">0</span>
-        }
-      ],
-      <span class="hljs-attr">"author"</span>: <span class="hljs-string">"John Davi"</span>,
-      <span class="hljs-attr">"estimatedDate"</span>: <span class="hljs-string">"Wed, 31 Jul 2013 00:00:00 GMT"</span>,
-      <span class="hljs-attr">"publisherRegion"</span>: <span class="hljs-string">"North America"</span>,
-      <span class="hljs-attr">"icon"</span>: <span class="hljs-string">"http://i1.wp.com/blog.diffbot.com/wp-content/uploads/cropped-Artboard-1.png?fit=180%2C180"</span>,
-      <span class="hljs-attr">"diffbotUri"</span>: <span class="hljs-string">"article|3|-820542508"</span>,
-      <span class="hljs-attr">"siteName"</span>: <span class="hljs-string">"Diffblog"</span>,
-      <span class="hljs-attr">"videos"</span>: [
-        {
-          <span class="hljs-attr">"diffbotUri"</span>: <span class="hljs-string">"video|3|-576904516"</span>,
-          <span class="hljs-attr">"url"</span>: <span class="hljs-string">"http://www.youtube.com/embed/lfcri5ungRo?version=3&amp;rel=1&amp;fs=1&amp;autohide=2&amp;showsearch=0&amp;showinfo=1&amp;iv_load_policy=1&amp;wmode=transparent"</span>,
-          <span class="hljs-attr">"primary"</span>: <span class="hljs-literal">true</span>
-        }
-      ],
-      <span class="hljs-attr">"type"</span>: <span class="hljs-string">"article"</span>,
-      <span class="hljs-attr">"title"</span>: <span class="hljs-string">"Diffbot's New Product API Teaches Robots to Shop Online"</span>,
-      <span class="hljs-attr">"tags"</span>: [
-        {
-          <span class="hljs-attr">"score"</span>: <span class="hljs-number">0.76</span>,
-          <span class="hljs-attr">"count"</span>: <span class="hljs-number">6</span>,
-          <span class="hljs-attr">"label"</span>: <span class="hljs-string">"Application programming interface"</span>,
-          <span class="hljs-attr">"uri"</span>: <span class="hljs-string">"http://dbpedia.org/resource/Application_programming_interface"</span>,
-          <span class="hljs-attr">"rdfTypes"</span>: [
-            <span class="hljs-string">"http://www.w3.org/2002/07/owl#Thing"</span>
-          ]
-        },
-        {
-          <span class="hljs-attr">"score"</span>: <span class="hljs-number">0.66</span>,
-          <span class="hljs-attr">"count"</span>: <span class="hljs-number">2</span>,
-          <span class="hljs-attr">"label"</span>: <span class="hljs-string">"Data model"</span>,
-          <span class="hljs-attr">"uri"</span>: <span class="hljs-string">"http://dbpedia.org/resource/Data_model"</span>
-        },
-        {
-          <span class="hljs-attr">"score"</span>: <span class="hljs-number">0.64</span>,
-          <span class="hljs-attr">"count"</span>: <span class="hljs-number">1</span>,
-          <span class="hljs-attr">"label"</span>: <span class="hljs-string">"Diffbot"</span>,
-          <span class="hljs-attr">"uri"</span>: <span class="hljs-string">"http://dbpedia.org/resource/Diffbot"</span>,
-          <span class="hljs-attr">"rdfTypes"</span>: [
-            <span class="hljs-string">"http://dbpedia.org/ontology/Company"</span>,
-            <span class="hljs-string">"http://dbpedia.org/ontology/Organisation"</span>,
-            <span class="hljs-string">"http://dbpedia.org/ontology/Agent"</span>,
-            <span class="hljs-string">"http://www.w3.org/2002/07/owl#Thing"</span>
-          ]
-        },
-        {
-          <span class="hljs-attr">"score"</span>: <span class="hljs-number">0.5</span>,
-          <span class="hljs-attr">"count"</span>: <span class="hljs-number">1</span>,
-          <span class="hljs-attr">"label"</span>: <span class="hljs-string">"Web crawler"</span>,
-          <span class="hljs-attr">"uri"</span>: <span class="hljs-string">"http://dbpedia.org/resource/Web_crawler"</span>,
-          <span class="hljs-attr">"rdfTypes"</span>: [
-            <span class="hljs-string">"http://www.w3.org/2002/07/owl#Thing"</span>
-          ]
-        }
-      ],
-      <span class="hljs-attr">"publisherCountry"</span>: <span class="hljs-string">"Diffbot HQ"</span>,
-      <span class="hljs-attr">"humanLanguage"</span>: <span class="hljs-string">"en"</span>,
-      <span class="hljs-attr">"authorUrl"</span>: <span class="hljs-string">"http://blog.diffbot.com/author/johndavi/"</span>,
-      <span class="hljs-attr">"pageUrl"</span>: <span class="hljs-string">"http://blog.diffbot.com/diffbots-new-product-api-teaches-robots-to-shop-online"</span>,
-      <span class="hljs-attr">"html"</span>: <span class="hljs-string">"&lt;p&gt;Diffbot&amp;rsquo;s human wranglers are proud today to announce the release of our newest product: an API for&amp;hellip; products!&lt;/p&gt;\n&lt;p&gt;The &lt;a href=\"http://www.diffbot.com/products/automatic/product\"&gt;Product API&lt;/a&gt; can be used for extracting clean, structured data from any e-commerce product page. It automatically makes available all the product data you&amp;rsquo;d expect: price, discount/savings amount, shipping cost, product description, any relevant product images, SKU and/or other product IDs.&lt;/p&gt;\n&lt;p&gt;Even cooler: pair the Product API with &lt;a href=\"http://www.diffbot.com/products/crawlbot\"&gt;Crawlbot&lt;/a&gt;, our intelligent site-spidering tool, and let Diffbot determine which pages are products, then automatically structure the entire catalog. Here&amp;rsquo;s a quick demonstration of Crawlbot at work:&lt;/p&gt;\n&lt;figure&gt;&lt;iframe frameborder=\"0\" src=\"http://www.youtube.com/embed/lfcri5ungRo?version=3&amp;rel=1&amp;fs=1&amp;autohide=2&amp;showsearch=0&amp;showinfo=1&amp;iv_load_policy=1&amp;wmode=transparent\"&gt;&lt;/iframe&gt;&lt;/figure&gt;\n&lt;p&gt;We&amp;rsquo;ve developed the Product API over the course of two years, building upon our core vision technology that&amp;rsquo;s extracted structured data from billions of web pages, and training our machine learning systems using data from tens of thousands of unique shopping sites. We can&amp;rsquo;t wait for you to try it out.&lt;/p&gt;\n&lt;p&gt;What are you waiting for? Check out the &lt;a href=\"http://www.diffbot.com/products/automatic/product\"&gt;Product API documentation&lt;/a&gt; and dive on in! If you need a token, check out our &lt;a href=\"http://www.diffbot.com/pricing\"&gt;pricing and plans&lt;/a&gt; (including our Free plan).&lt;/p&gt;\n&lt;p&gt;Questions? Hit us up at &lt;a href=\"mailto:support@diffbot.com\"&gt;support@diffbot.com&lt;/a&gt;.&lt;/p&gt;"</span>,
-      <span class="hljs-attr">"text"</span>: <span class="hljs-string">"Diffbot's human wranglers are proud today to announce the release of our newest product: an API for\u2026 products!\nThe Product API can be used for extracting clean, structured data from any e-commerce product page. It automatically makes available all the product data you'd expect: price, discount/savings amount, shipping cost, product description, any relevant product images, SKU and/or other product IDs.\nEven cooler: pair the Product API with Crawlbot, our intelligent site-spidering tool, and let Diffbot determine which pages are products, then automatically structure the entire catalog. Here's a quick demonstration of Crawlbot at work:\nWe've developed the Product API over the course of two years, building upon our core vision technology that's extracted structured data from billions of web pages, and training our machine learning systems using data from tens of thousands of unique shopping sites. We can't wait for you to try it out.\nWhat are you waiting for? Check out the Product API documentation and dive on in! If you need a token, check out our pricing and plans (including our Free plan).\nQuestions? Hit us up at support@diffbot.com."</span>,
-      <span class="hljs-attr">"resolvedPageUrl"</span>: <span class="hljs-string">"http://blog.diffbot.com/diffbots-new-product-api-teaches-robots-to-shop-online/"</span>
-    }
-  ]
-}
-</code></pre>
 <h2><a class="anchor" aria-hidden="true" id="authentication"></a><a href="#authentication" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Authentication</h2>
 <p>You can supply Diffbot with basic authentication credentials or custom HTTP headers (see below) to access intranet pages or other sites that require a login.</p>
 <h3><a class="anchor" aria-hidden="true" id="basic-authentication"></a><a href="#basic-authentication" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Basic Authentication</h3>
@@ -293,7 +205,7 @@
 <h3><a class="anchor" aria-hidden="true" id="plaintext-post-sample"></a><a href="#plaintext-post-sample" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Plaintext Post Sample</h3>
 <pre><code class="hljs css language-plaintext">curl -H "Content-Type: text/plain" -d 'Now is the time for all good robots to come to the aid of their-- oh never mind, run!' 'https://api.diffbot.com/v3/article?token=...&amp;fields=tags,text'
 </code></pre>
-</span></div></article></div><div class="docLastUpdate"><em>Last updated by rick-diffbot</em></div><div class="docs-prevnext"><a class="docs-prev button" href="/docs/en/guides-correct-images-custom-api"><span class="arrow-prev">← </span><span>Correcting the Images field</span></a></div></div></div><nav class="onPageNav"><ul class="toc-headings"><li><a href="#request">Request</a><ul class="toc-headings"><li><a href="#the-fields-argument">The fields argument</a></li></ul></li><li><a href="#response">Response</a></li><li><a href="#comment-extraction">Comment Extraction</a></li><li><a href="#advanced-text-analysis-powered-by-semantria">Advanced Text Analysis Powered by Semantria</a></li><li><a href="#example-response">Example Response</a></li><li><a href="#authentication">Authentication</a><ul class="toc-headings"><li><a href="#basic-authentication">Basic Authentication</a></li></ul></li><li><a href="#custom-http-headers-and-javascript">Custom HTTP Headers and JavaScript</a><ul class="toc-headings"><li><a href="#custom-headers">Custom headers</a></li><li><a href="#custom-javascript">Custom Javascript</a></li></ul></li><li><a href="#posting-content">Posting Content</a><ul class="toc-headings"><li><a href="#html-post-sample">HTML Post Sample</a></li><li><a href="#plaintext-post-sample">Plaintext Post Sample</a></li></ul></li></ul></nav></div><footer class="nav-footer" id="footer"><section class="sitemap"><a href="/" class="nav-home"><img src="/img/diffbot_white.svg" alt="Docs Suite" width="66" height="58"/></a><div><h5>Docs</h5><a href="/docs/en/api-basics-index">Extraction</a><a href="/docs/en/cb-basics-index">Crawling</a><a href="/docs/en/kg-index">Knowledge Graph</a><a href="/docs/en/explain-gdpr">Diffbot and GDPR</a></div><div><h5>Community</h5><a href="https://stackoverflow.com/questions/tagged/diffbot" target="_blank" rel="noreferrer noopener">Stack Overflow</a><a href="https://twitter.com/diffbot" target="_blank" rel="noreferrer noopener">Twitter</a></div><div><h5>More</h5><a href="/blog">Blog</a><a href="/help">Help</a><a href="https://github.com/diffbot">GitHub</a></div></section><a href="https://diffbot.com/" target="_blank" rel="noreferrer noopener" class="fbOpenSource"><img src="/img/diffbot_white.svg" alt="Diffbot.com" width="170" height="45"/></a><section class="copyright">Copyright © 2020 Diffbot.com</section></footer></div><script type="text/javascript" src="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.js"></script><script>
+</span></div></article></div><div class="docLastUpdate"><em>Last updated by Filipe Mesquita</em></div><div class="docs-prevnext"><a class="docs-prev button" href="/docs/en/guides-correct-images-custom-api"><span class="arrow-prev">← </span><span>Correcting the Images field</span></a></div></div></div><nav class="onPageNav"><ul class="toc-headings"><li><a href="#request">Request</a><ul class="toc-headings"><li><a href="#the-fields-argument">The fields argument</a></li><li><a href="#the-naturallanguage-argument">The naturalLanguage argument</a></li></ul></li><li><a href="#response">Response</a></li><li><a href="#comment-extraction">Comment Extraction</a></li><li><a href="#authentication">Authentication</a><ul class="toc-headings"><li><a href="#basic-authentication">Basic Authentication</a></li></ul></li><li><a href="#custom-http-headers-and-javascript">Custom HTTP Headers and JavaScript</a><ul class="toc-headings"><li><a href="#custom-headers">Custom headers</a></li><li><a href="#custom-javascript">Custom Javascript</a></li></ul></li><li><a href="#posting-content">Posting Content</a><ul class="toc-headings"><li><a href="#html-post-sample">HTML Post Sample</a></li><li><a href="#plaintext-post-sample">Plaintext Post Sample</a></li></ul></li></ul></nav></div><footer class="nav-footer" id="footer"><section class="sitemap"><a href="/" class="nav-home"><img src="/img/diffbot_white.svg" alt="Docs Suite" width="66" height="58"/></a><div><h5>Docs</h5><a href="/docs/en/api-basics-index">Extraction</a><a href="/docs/en/cb-basics-index">Crawling</a><a href="/docs/en/kg-index">Knowledge Graph</a><a href="/docs/en/explain-gdpr">Diffbot and GDPR</a></div><div><h5>Community</h5><a href="https://stackoverflow.com/questions/tagged/diffbot" target="_blank" rel="noreferrer noopener">Stack Overflow</a><a href="https://twitter.com/diffbot" target="_blank" rel="noreferrer noopener">Twitter</a></div><div><h5>More</h5><a href="/blog">Blog</a><a href="/help">Help</a><a href="https://github.com/diffbot">GitHub</a></div></section><a href="https://diffbot.com/" target="_blank" rel="noreferrer noopener" class="fbOpenSource"><img src="/img/diffbot_white.svg" alt="Diffbot.com" width="170" height="45"/></a><section class="copyright">Copyright © 2020 Diffbot.com</section></footer></div><script type="text/javascript" src="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.js"></script><script>
                 document.addEventListener('keyup', function(e) {
                   if (e.target !== document.body) {
                     return;
