@@ -31,6 +31,7 @@ Provide the following arguments:
 | `callback` | Use for jsonp requests. Needed for cross-domain ajax. |
 | `proxy` | Used to specify the IP address of a custom proxy that will be used to fetch the target page, instead of Diffbot's default IPs/proxies. (Ex: `&proxy=168.212.226.204`) |
 | `proxyAuth` | Used to specify the authentication parameters that will be used with the proxy specified in the `&proxy` parameter. (Ex: `&proxyAuth=username:password`) |
+| `naturalLanguage` | Used to request the output of the Diffbot Natural Language API in the field `naturalLanguage`. Example: `&naturalLanguage=entities,facts,categories,sentiment`. |
 
 ### The fields argument
 
@@ -41,6 +42,11 @@ For example, to return `links` and `meta` (in addition to the default fields), y
 ```plaintext
 &fields=links,meta
 ```
+
+### The naturalLanguage argument
+
+The Diffbot Natural Language API is the service used by the Article API to extract tags and sentiment for an article. Use the `naturalLanguage` argument to receive the full output of the Natural Language API in the field `naturalLanguage` in the JSON response. Please refer to the [Natural Language API](nl-index.md) documentation for a complete list of available fields, including all `entities` (such as people, organizations, products and topics) mentioned in the article as well as `facts` describing the relationships between them (such as `Apple Inc; founded by; Steve Jobs`).
+
 
 ## Response
 
@@ -98,112 +104,13 @@ Objects in the Article API's `objects` array will include the following fields:
 | `links` | Returns a top-level object (`links`) containing all hyperlinks found on the page. |
 | `meta` | Returns a top-level object (`meta`) containing the full contents of page `meta` tags, including sub-arrays for [OpenGraph](https://ogp.me/) tags, [Twitter Card](https://developer.twitter.com/en/docs/tweets/optimize-with-cards/overview/markup) metadata, [schema.org](https://www.schema.org) microdata, and -- if available -- [oEmbed](https://www.oembed.com) metadata. |
 | `querystring` | Returns any key/value pairs present in the URL querystring. Items without a discrete value will be returned as `true`. |
+| `naturalLanguage` | Returns the output of the [Diffbot Natural Language API](nl-index.md) for this article. |
 
 ## Comment Extraction
 
 By default the Article API will attempt to extract comments from article pages, using integrated functionality from the Diffbot Discussion API. Comment data will be returned in the `discussion` object (nested within the primary article object). The full syntax for discussion data is available in the [Discussion API documentation](api-discussion).
 
 Discussion extraction can be disabled using the argument `discussion=false`. Note that if a page has recently been processed by Diffbot, cached comments may be returned even if `discussion=false` is passed.
-
-## Advanced Text Analysis Powered by Semantria
-
-<img src="/img/semantria.png" style="float:right;">Our [native integration with Semantria](guides-semantria.md) optionally allows extracted article content to be fully processed for categorization, entity and keyword extraction, and sentiment analysis. See [documentation](api-semantria.md) for information on how to integrate your Semantria account with Diffbot's Article API.
-
-## Example Response
-
-The following request --
-
-```plaintext
-https://api.diffbot.com/v3/article?token=...&url=http%3A%2F%2Fblog.diffbot.com%2Fdiffbots-new-product-api-teaches-robots-to-shop-online
-```
--- will result in this API response:
-
-```json
-{
-  "request": {
-    "pageUrl": "http://blog.diffbot.com/diffbots-new-product-api-teaches-robots-to-shop-online",
-    "api": "article",
-    "version": 3,
-    "resolvedPageUrl": "http://blog.diffbot.com/diffbots-new-product-api-teaches-robots-to-shop-online/"
-  },
-  "objects": [
-    {
-      "date": "Wed, 31 Jul 2013 00:00:00 GMT",
-      "images": [
-        {
-          "naturalHeight": 360,
-          "width": 0,
-          "diffbotUri": "image|3|1069194852",
-          "url": "http://img.youtube.com/vi/lfcri5ungRo/0.jpg",
-          "naturalWidth": 480,
-          "primary": true,
-          "height": 0
-        }
-      ],
-      "author": "John Davi",
-      "estimatedDate": "Wed, 31 Jul 2013 00:00:00 GMT",
-      "publisherRegion": "North America",
-      "icon": "http://i1.wp.com/blog.diffbot.com/wp-content/uploads/cropped-Artboard-1.png?fit=180%2C180",
-      "diffbotUri": "article|3|-820542508",
-      "siteName": "Diffblog",
-      "videos": [
-        {
-          "diffbotUri": "video|3|-576904516",
-          "url": "http://www.youtube.com/embed/lfcri5ungRo?version=3&rel=1&fs=1&autohide=2&showsearch=0&showinfo=1&iv_load_policy=1&wmode=transparent",
-          "primary": true
-        }
-      ],
-      "type": "article",
-      "title": "Diffbot's New Product API Teaches Robots to Shop Online",
-      "tags": [
-        {
-          "score": 0.76,
-          "count": 6,
-          "label": "Application programming interface",
-          "uri": "http://dbpedia.org/resource/Application_programming_interface",
-          "rdfTypes": [
-            "http://www.w3.org/2002/07/owl#Thing"
-          ]
-        },
-        {
-          "score": 0.66,
-          "count": 2,
-          "label": "Data model",
-          "uri": "http://dbpedia.org/resource/Data_model"
-        },
-        {
-          "score": 0.64,
-          "count": 1,
-          "label": "Diffbot",
-          "uri": "http://dbpedia.org/resource/Diffbot",
-          "rdfTypes": [
-            "http://dbpedia.org/ontology/Company",
-            "http://dbpedia.org/ontology/Organisation",
-            "http://dbpedia.org/ontology/Agent",
-            "http://www.w3.org/2002/07/owl#Thing"
-          ]
-        },
-        {
-          "score": 0.5,
-          "count": 1,
-          "label": "Web crawler",
-          "uri": "http://dbpedia.org/resource/Web_crawler",
-          "rdfTypes": [
-            "http://www.w3.org/2002/07/owl#Thing"
-          ]
-        }
-      ],
-      "publisherCountry": "Diffbot HQ",
-      "humanLanguage": "en",
-      "authorUrl": "http://blog.diffbot.com/author/johndavi/",
-      "pageUrl": "http://blog.diffbot.com/diffbots-new-product-api-teaches-robots-to-shop-online",
-      "html": "<p>Diffbot&rsquo;s human wranglers are proud today to announce the release of our newest product: an API for&hellip; products!</p>\n<p>The <a href=\"http://www.diffbot.com/products/automatic/product\">Product API</a> can be used for extracting clean, structured data from any e-commerce product page. It automatically makes available all the product data you&rsquo;d expect: price, discount/savings amount, shipping cost, product description, any relevant product images, SKU and/or other product IDs.</p>\n<p>Even cooler: pair the Product API with <a href=\"http://www.diffbot.com/products/crawlbot\">Crawlbot</a>, our intelligent site-spidering tool, and let Diffbot determine which pages are products, then automatically structure the entire catalog. Here&rsquo;s a quick demonstration of Crawlbot at work:</p>\n<figure><iframe frameborder=\"0\" src=\"http://www.youtube.com/embed/lfcri5ungRo?version=3&rel=1&fs=1&autohide=2&showsearch=0&showinfo=1&iv_load_policy=1&wmode=transparent\"></iframe></figure>\n<p>We&rsquo;ve developed the Product API over the course of two years, building upon our core vision technology that&rsquo;s extracted structured data from billions of web pages, and training our machine learning systems using data from tens of thousands of unique shopping sites. We can&rsquo;t wait for you to try it out.</p>\n<p>What are you waiting for? Check out the <a href=\"http://www.diffbot.com/products/automatic/product\">Product API documentation</a> and dive on in! If you need a token, check out our <a href=\"http://www.diffbot.com/pricing\">pricing and plans</a> (including our Free plan).</p>\n<p>Questions? Hit us up at <a href=\"mailto:support@diffbot.com\">support@diffbot.com</a>.</p>",
-      "text": "Diffbot's human wranglers are proud today to announce the release of our newest product: an API for\u2026 products!\nThe Product API can be used for extracting clean, structured data from any e-commerce product page. It automatically makes available all the product data you'd expect: price, discount/savings amount, shipping cost, product description, any relevant product images, SKU and/or other product IDs.\nEven cooler: pair the Product API with Crawlbot, our intelligent site-spidering tool, and let Diffbot determine which pages are products, then automatically structure the entire catalog. Here's a quick demonstration of Crawlbot at work:\nWe've developed the Product API over the course of two years, building upon our core vision technology that's extracted structured data from billions of web pages, and training our machine learning systems using data from tens of thousands of unique shopping sites. We can't wait for you to try it out.\nWhat are you waiting for? Check out the Product API documentation and dive on in! If you need a token, check out our pricing and plans (including our Free plan).\nQuestions? Hit us up at support@diffbot.com.",
-      "resolvedPageUrl": "http://blog.diffbot.com/diffbots-new-product-api-teaches-robots-to-shop-online/"
-    }
-  ]
-}
-```
 
 ## Authentication
 
