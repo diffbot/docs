@@ -25,5 +25,4 @@ Learn how to use it in the [Custom API Tutorial](api-basics-custom).
 
 Once you've gone through the basics above, proceed with learning about:
 
-- [Usage Examples](api-usage-product)
-- [API reference](api-product)
+- [API reference](api-custom)
