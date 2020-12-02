@@ -34,4 +34,4 @@ Each call consumes 1 credit per 10,000 characters. Credits are rounded up to the
 
 ## Limits
 
-Up to 1,000,000 total characters for each request.
+Maximum of 100,000 characters per document and 1,000,000 total characters per API request.
