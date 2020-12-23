@@ -9,26 +9,26 @@ Diffbot offers several APIs for AI-based extraction of webpages.  Diffbot uses c
 
 ## Automatic APIs
 
-- [Analyze API](api-basics-analyze) If you aren't sure what type of content is at your URL, start out with the Analyze API.  The Analyze API uses machine learning in order to automatically classify your URL and route it to the appropriate type of extraction based on the API.
+- [Analyze API](api-analyze) If you aren't sure what type of content is at your URL, start out with the Analyze API.  The Analyze API uses machine learning in order to automatically classify your URL and route it to the appropriate type of extraction based on the API.
 
 ### Page Type APIs
 
 If you know what type of content your URL is, or what to force extraction as a specfic type of content, use one of the page-type specfic APIs below.
 
-- [Article API](api-basics-article) allows you to extract information about news articles, blog posts, and other written content. Diffbot can recognize authors and their profile images and links, dates and locations of publication, sentiment, tags based on content, images in the article, comments, language the content is written in, and more.
-- [Product API](api-basics-product) allows you to extract information about products, including specifications, colors, availability, price, discount offers, shipping, description, reviews, and more.
-- [Image API](api-basics-image) allows you to extract detailed information about images, from dimensions and download URLs to what's on the image through image recognition.
-- [Video API](api-basics-video) same as above, for videos.
-- [Discussion API](api-basics-discussion) is used for extracting threads of content. This can be a review section of a product (indeed, Product API uses the Discussion API internally when extracting comments to include them in the output), a forum or Reddit thread, or a comment section in a blog.
-- [Event API (BETA)](api-basics-event) is used for extracting online and in-person event details for standalone events that occur within a single day. Support for multi-day, multi-track events, i.e. full conferences and festivals, is planned but not yet scheduled.
+- [Article API](api-article) allows you to extract information about news articles, blog posts, and other written content. Diffbot can recognize authors and their profile images and links, dates and locations of publication, sentiment, tags based on content, images in the article, comments, language the content is written in, and more.
+- [Product API](api-product) allows you to extract information about products, including specifications, colors, availability, price, discount offers, shipping, description, reviews, and more.
+- [Image API](api-image) allows you to extract detailed information about images, from dimensions and download URLs to what's on the image through image recognition.
+- [Video API](api-video) same as above, for videos.
+- [Discussion API](api-discussion) is used for extracting threads of content. This can be a review section of a product (indeed, Product API uses the Discussion API internally when extracting comments to include them in the output), a forum or Reddit thread, or a comment section in a blog.
+- [Event API (BETA)](api-event) is used for extracting online and in-person event details for standalone events that occur within a single day. Support for multi-day, multi-track events, i.e. full conferences and festivals, is planned but not yet scheduled.
 
 ## Custom API
 
-- [Custom API](api-basics-custom) The Custom API can be used to either correct & augment automatically extracted output or create entirely new custom extractions by defining rules. We have a point-and-click interface that allows you to easily build CSS-based selectors, regular expressions, and attribute filters, or you can also use the Custom API programmatically via..and API.
+- [Custom API](api-custom) The Custom API can be used to either correct & augment automatically extracted output or create entirely new custom extractions by defining rules. We have a point-and-click interface that allows you to easily build CSS-based selectors, regular expressions, and attribute filters, or you can also use the Custom API programmatically via..and API.
 
 ## Account API
 
-- [Account API](api-basics-account) lets you retrieve information about your Diffbot account via an API, including its plan type, usage, historical invoices, and more.
+- [Account API](api-account) lets you retrieve information about your Diffbot account via an API, including its plan type, usage, historical invoices, and more.
 
 ## Batch Processing
 
