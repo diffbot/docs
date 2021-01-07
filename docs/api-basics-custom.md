@@ -47,6 +47,6 @@ The above means "split the result into two groups separated by `by `, and then r
 
 Click _Save_ to save and apply your rule.
 
-Once saved, your rule will take immediate effect for API calls (a) using the specified API and (b) matching the [domain regular expression](guides-domain-regex).
+Once saved, your rule will take immediate effect for API calls (a) using the specified API and (b) matching the domain regular expression.
 
 ![Accurate result given by modified API](/img/custom-api-tut/06.jpg)

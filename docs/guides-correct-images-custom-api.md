@@ -11,7 +11,7 @@ The images field of the Article API is a collection (an array of individual imag
 - The repeating container or element that represents each image.
 - The actual image element (typically IMG) itself.
 
-See [Help with Custom Collection](tutorials-custom-collections) for help with the basics of a collection within the Toolkit. But as an example, let’s assume we need to create a rule to return images from this post. Let’s stick in a sample image of Diffy to play with:
+See [Help with Custom Collection](guides-custom-collections) for help with the basics of a collection within the Toolkit. But as an example, let’s assume we need to create a rule to return images from this post. Let’s stick in a sample image of Diffy to play with:
 
 ![](/img/e50292938335d1d2c8138bcae829c07f-1-copy.png)
 

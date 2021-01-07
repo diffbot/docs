@@ -60,7 +60,7 @@ Let’s assume we created a custom API called `thebrow` for TheBrowser.
 
 > Note: to actually save a Custom API, you need to add at least one field, even if it’s pointless.
 
-Coincidentally, TheBrowser is blocking rendering of its own pages in other websites, so we need to apply the procedure [described here](guides-manual-selectors) to set the rule up. In our example, we set up a [collection](tutorials-custom-collections) that gathers up the links on a TheBrowser page.
+Coincidentally, TheBrowser is blocking rendering of its own pages in other websites, so we need to apply the procedure [described here](guides-manual-selectors) to set the rule up. In our example, we set up a [collection](guides-custom-collections) that gathers up the links on a TheBrowser page.
 
 ![A custom collection returning links](/img/loginwall/screen1.png)
 

@@ -47,7 +47,6 @@
                     "index-crawlbot",
                     "index-bulk",
                     "guides-patterns", 
-                    "guides-crawl-depth", 
                     "guides-restrict-domain", 
                     "guides-crawlbot-bulk-querystring-parameter", 
                     "guides-sitemap-as-seed",
