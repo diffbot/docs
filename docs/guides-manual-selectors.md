@@ -10,7 +10,7 @@ It's possible you'll sometimes have to (or want to) manually create your rules, 
 
 The page kreo.net is failing to render, as evident by the screenshot below.
 
-![Kreo.net is failing to preview in Custom API](/img/kreo1.png)
+![Kreo.net is failing to preview in Custom API](/img/kreo7.png)
 
 Let’s assume we want to extract the second paragraph of the text in every Kreo blog article into a field called "secondary-intro", but we cannot preview the site and click on the paragraph.
 
@@ -24,11 +24,11 @@ We open the page in a normal browser session, right click on the element we’re
 
 Once you’ve managed to target the specific element you’re looking to extract, right click on it in the element list and select `Copy` -> `Selector`. Paste that selector into the custom field you’re building.
 
-![Pasting the selector into the Custom API field](/img/kreo5.png)
+![Pasting the selector into the Custom API field](/img/kreo8.png)
 
 Clicking save will reveal that the paragraph is now being extracted.
 
-![The Custom API now extracts our desired element](/img/kreo6.png)
+![The Custom API now extracts our desired element](/img/kreo9.png)
 
 In this case, our automatically copied selector is fine but sometimes we need more precision. Don’t be afraid to experiment with selectors – nothing can go wrong, and a bit of CSS is all you need. For example, the selector that got copied for us: `#hs_cos_wrapper_post_body > p:nth-child(3)` might look scary, but in reality means: "in the HTML element with the ID `hs_cos_wrapper_post_body`, if there are several direct (`>`) child elements of the type `p` (meaning paragraph), select the third one (`nth-child`)!"
 
