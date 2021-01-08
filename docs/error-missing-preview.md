@@ -10,7 +10,7 @@ Occasionally when using the Custom API dashboard at [https://diffbot.com/dev](ht
 - a page will have significant content loaded via Javascript
 - an indeterminate error will cause preview display issues
 
-![A missing preview due to indeterminate error](/img/kreo1.png)
+![A missing preview due to indeterminate error](/img/kreo7.png)
 
 While this can make rule-creation difficult, it shouldn’t affect the behavior or performance of your custom rules in actual API calls. However, to correctly construct rules you may need to use your regular browser’s “Inspect” functionality to identify the proper CSS selectors to use. For a step by step tutorial on how to do this, [please read this](guides-manual-selectors). Alternatively, use our new [beta dashboard](tutorials-new-dashboard).
 
