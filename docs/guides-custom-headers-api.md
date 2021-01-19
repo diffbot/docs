@@ -134,3 +134,5 @@ These are the steps we should follow:
 3. Pass the script along as the `X-Forward-X-Evaluate` custom header. We'll use Postman here, but you can also attach it permanently using the dashboard or raw rule backup/restore as documented above. Issuing the request will reveal our desired text in the return data.
 
     ![Day text is present at the end of the paragraph](/img/customheader/06.jpg)
+
+> Note: X-Evaluate will only be executed if called from the API the rule resides in. If you have an X-Evaluate script in your Article API rule and make a request with the Analyze API that identifies the page as an article, the X-Evaluate will not be executed.
