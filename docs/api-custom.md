@@ -99,6 +99,8 @@ Delivered as a string value as a custom header:
 "X-Forward-X-Evaluate": "function() {start();setTimeout(function(){var loadMoreNode=document.querySelector('a.loadMore');if (loadMoreNode != null) {loadMoreNode.click();setTimeout(function(){end();}, 800);} else {end();}},500);}"
 ```
 
+> Note: X-Evaluate will only be executed if called from the API the rule resides in. If you have an X-Evaluate script in your Article API rule and make a request with the Analyze API that identifies the page as an article, the X-Evaluate will not be executed.
+
 ## Posting Content
 
 If your content is not publicly available (e.g., behind a firewall), you can POST markup directly to your Custom API endpoint for analysis:

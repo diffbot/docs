@@ -91,6 +91,8 @@ Delivered as a rule:
 }
 ```
 
+> Note: X-Evaluate will only be executed if called from the API the rule resides in. If you have an X-Evaluate script in your Article API rule and make a request with the Analyze API that identifies the page as an article, the X-Evaluate will not be executed.
+
 ## Sample Ruleset
 
 The following ruleset JSON gives an example of many of the fields and functionality described above.
