@@ -275,6 +275,7 @@
     "Knowledge Graph": [
       "kg-index",
       "dql-quickstart",
+      "kg-ont-article",
       {
         "type": "subcategory",
         "label": "Tools and Usage",
