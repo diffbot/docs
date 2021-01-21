@@ -7,7 +7,7 @@ The Administrative Area entity type encompasses all cities, regions, counties, s
 
 Note that fields are not guaranteed to exist in every entity record.
 
->New to the Diffbot Knowledge Graph? [Start here](kg-quickstart).
+>New to the Diffbot Knowledge Graph? [Start here](dql-quickstart).
 
 ## AdministrativeArea Fields
 * [area](#area) 

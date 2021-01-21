@@ -7,7 +7,7 @@ The person entity type encompasses all people known to the Knowledge Graph.
 
 Note that fields are not guaranteed to exist in every entity record.
 
->New to the Diffbot Knowledge Graph? [Start here](kg-quickstart).
+>New to the Diffbot Knowledge Graph? [Start here](dql-quickstart).
 
 ## Person Fields
 * [age](#age) 

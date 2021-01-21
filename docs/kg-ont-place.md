@@ -7,7 +7,7 @@ The place entity type encompasses cities, landmarks, countries, and other locati
 
 Note that fields are not guaranteed to exist in every entity record.
 
->New to the Diffbot Knowledge Graph? [Start here](kg-quickstart).
+>New to the Diffbot Knowledge Graph? [Start here](dql-quickstart).
 
 ## Place Fields
 * [isPartOf](#ispartof) 

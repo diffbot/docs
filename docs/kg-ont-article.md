@@ -7,7 +7,7 @@ The article entity type encompasses news, blog posts, and article content known 
 
 Note that fields are not guaranteed to exist in every entity record.
 
->New to the Diffbot Knowledge Graph? [Start here](kg-quickstart).
+>New to the Diffbot Knowledge Graph? [Start here](dql-quickstart).
 
 ## Article Fields
 * [author](#author) 

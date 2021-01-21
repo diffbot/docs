@@ -7,7 +7,7 @@ The Creative Work entity type encompasses movies, tv shows, musicals, scripts, a
 
 Note that fields are not guaranteed to exist in every entity record.
 
->New to the Diffbot Knowledge Graph? [Start here](kg-quickstart).
+>New to the Diffbot Knowledge Graph? [Start here](dql-quickstart).
 
 ## CreativeWork Fields
 * [aspectRatio](#aspectratio) 

@@ -7,7 +7,7 @@ The organization entity type encompasses corporations, local businesses, non-pro
 
 Note that fields are not guaranteed to exist in every entity record.
 
->New to the Diffbot Knowledge Graph? [Start here](kg-quickstart).
+>New to the Diffbot Knowledge Graph? [Start here](dql-quickstart).
 
 ## Organization Fields
 * [acquiredBy](#acquiredby) 

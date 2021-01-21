@@ -7,7 +7,7 @@ All Knowledge Graph entities will include the fields below, which are often gene
 
 See the left navigation panel for fields and attributes for specific entities,
 
->New to the Diffbot Knowledge Graph? [Start here](kg-quickstart).
+>New to the Diffbot Knowledge Graph? [Start here](dql-quickstart).
 
 ## All Fields
 * [allDescriptions](#alldescriptions) 
