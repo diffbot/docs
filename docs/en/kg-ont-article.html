@@ -1,0 +1,454 @@
+<!DOCTYPE html><html lang="en"><head><meta charSet="utf-8"/><meta http-equiv="X-UA-Compatible" content="IE=edge"/><title>Article · Docs Suite</title><meta name="viewport" content="width=device-width"/><meta name="generator" content="Docusaurus"/><meta name="description" content="The article entity type encompasses news, blog posts, and article content known to the Knowledge Graph. "/><meta name="docsearch:language" content="en"/><meta property="og:title" content="Article · Docs Suite"/><meta property="og:type" content="website"/><meta property="og:url" content="https://diffbot.github.io/"/><meta property="og:description" content="The article entity type encompasses news, blog posts, and article content known to the Knowledge Graph. "/><meta property="og:image" content="https://diffbot.github.io/img/diagram.svg"/><meta name="twitter:card" content="summary"/><meta name="twitter:image" content="https://diffbot.github.io/img/diagram.svg"/><link rel="shortcut icon" href="/img/diffbot-head.png"/><link rel="stylesheet" href="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.css"/><link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/default.min.css"/><script type="text/javascript" src="https://buttons.github.io/buttons.js"></script><script type="text/javascript" src="/js/app.js"></script><script src="/js/scrollSpy.js"></script><link rel="stylesheet" href="/css/main.css"/><script src="/js/codetabs.js"></script></head><body class="sideNavVisible separateOnPageNav"><div class="fixedHeaderContainer"><div class="headerWrapper wrapper"><header><a href="/"><img class="logo" src="/img/diffbot_white.svg" alt="Docs Suite"/><h2 class="headerTitleWithLogo">Docs Suite</h2></a><div class="navigationWrapper navigationSlider"><nav class="slidingNav"><ul class="nav-site nav-site-internal"><li class=""><a href="/docs/en/error-intro" target="_self">Debugging</a></li><li class="navSearchWrapper reactNavSearchWrapper"><input type="text" id="search_input_react" placeholder="Search" title="Search"/></li></ul></nav></div></header></div></div><div class="navPusher"><div class="docMainWrapper wrapper"><div class="docsNavContainer" id="docsNav"><nav class="toc"><div class="toggleNav"><section class="navWrapper wrapper"><div class="navBreadcrumb wrapper"><div class="navToggle" id="navToggler"><div class="hamburger-menu"><div class="line1"></div><div class="line2"></div><div class="line3"></div></div></div><h2><i>›</i><span>KG Ontology</span></h2><div class="tocToggler" id="tocToggler"><i class="icon-toc"></i></div></div><div class="navGroups"><div class="navGroup"><h3 class="navGroupCategoryTitle collapsible">KG Ontology<span class="arrow"><svg width="24" height="24" viewBox="0 0 24 24"><path fill="#565656" d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z"></path><path d="M0 0h24v24H0z" fill="none"></path></svg></span></h3><ul class="hide"><li class="navListItem"><a class="navItem" href="/docs/en/kg-ont-diffbotentity">All</a></li><li class="navListItem navListItemActive"><a class="navItem" href="/docs/en/kg-ont-article">Article</a></li><li class="navListItem"><a class="navItem" href="/docs/en/kg-ont-organization">Organization</a></li><li class="navListItem"><a class="navItem" href="/docs/en/kg-ont-person">Person</a></li><li class="navListItem"><a class="navItem" href="/docs/en/kg-ont-place">Place</a></li><li class="navListItem"><a class="navItem" href="/docs/en/kg-ont-creativework">CreativeWork</a></li><div class="navGroup subNavGroup"><h4 class="navGroupSubcategoryTitle">Other</h4><ul><li class="navListItem"><a class="navItem" href="/docs/en/kg-ont-administrativearea">AdministrativeArea</a></li></ul></div></ul></div></div></section></div><script>
+            var coll = document.getElementsByClassName('collapsible');
+            var checkActiveCategory = true;
+            for (var i = 0; i < coll.length; i++) {
+              var links = coll[i].nextElementSibling.getElementsByTagName('*');
+              if (checkActiveCategory){
+                for (var j = 0; j < links.length; j++) {
+                  if (links[j].classList.contains('navListItemActive')){
+                    coll[i].nextElementSibling.classList.toggle('hide');
+                    coll[i].childNodes[1].classList.toggle('rotate');
+                    checkActiveCategory = false;
+                    break;
+                  }
+                }
+              }
+
+              coll[i].addEventListener('click', function() {
+                var arrow = this.childNodes[1];
+                arrow.classList.toggle('rotate');
+                var content = this.nextElementSibling;
+                content.classList.toggle('hide');
+              });
+            }
+
+            document.addEventListener('DOMContentLoaded', function() {
+              createToggler('#navToggler', '#docsNav', 'docsSliderActive');
+              createToggler('#tocToggler', 'body', 'tocActive');
+
+              var headings = document.querySelector('.toc-headings');
+              headings && headings.addEventListener('click', function(event) {
+                var el = event.target;
+                while(el !== headings){
+                  if (el.tagName === 'A') {
+                    document.body.classList.remove('tocActive');
+                    break;
+                  } else{
+                    el = el.parentNode;
+                  }
+                }
+              }, false);
+
+              function createToggler(togglerSelector, targetSelector, className) {
+                var toggler = document.querySelector(togglerSelector);
+                var target = document.querySelector(targetSelector);
+
+                if (!toggler) {
+                  return;
+                }
+
+                toggler.onclick = function(event) {
+                  event.preventDefault();
+
+                  target.classList.toggle(className);
+                };
+              }
+            });
+        </script></nav></div><div class="container mainContainer docsContainer"><div class="wrapper"><div class="post"><header class="postHeader"><a class="edit-page-link button" href="https://github.com/diffbot/docs/edit/master/docs/kg-ont-article.md" target="_blank" rel="noreferrer noopener">Edit</a><h1 id="__docusaurus" class="postHeaderTitle">Article</h1></header><article><div><span><p>The article entity type encompasses news, blog posts, and article content known to the Knowledge Graph.</p>
+<p>Note that fields are not guaranteed to exist in every entity record.</p>
+<blockquote>
+<p>New to the Diffbot Knowledge Graph? <a href="kg-quickstart">Start here</a>.</p>
+</blockquote>
+<h2><a class="anchor" aria-hidden="true" id="article-fields"></a><a href="#article-fields" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Article Fields</h2>
+<ul>
+<li><a href="#author">author</a></li>
+<li><a href="#authorurl">authorUrl</a></li>
+<li><a href="#breadcrumb">breadcrumb</a></li>
+<li><a href="#date">date</a></li>
+<li><a href="#discussion">discussion</a></li>
+<li><a href="#estimateddate">estimatedDate</a></li>
+<li><a href="#html">html</a></li>
+<li><a href="#icon">icon</a></li>
+<li><a href="#images">images</a></li>
+<li><a href="#language">language</a></li>
+<li><a href="#nextpage">nextPage</a></li>
+<li><a href="#nextpages">nextPages</a></li>
+<li><a href="#numpages">numPages</a></li>
+<li><a href="#publishercountry">publisherCountry</a></li>
+<li><a href="#publisherregion">publisherRegion</a></li>
+<li><a href="#quotes">quotes</a></li>
+<li><a href="#sentiment">sentiment</a></li>
+<li><a href="#sitename">siteName</a></li>
+<li><a href="#tags">tags</a></li>
+<li><a href="#text">text</a></li>
+<li><a href="#title">title</a></li>
+<li><a href="#videos">videos</a></li>
+</ul>
+<h2><a class="anchor" aria-hidden="true" id="article-field-details"></a><a href="#article-field-details" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Article Field Details</h2>
+<h3><a class="anchor" aria-hidden="true" id="author"></a><a href="#author" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>author</h3>
+<ul>
+<li><strong>Type:</strong> String</li>
+<li><strong>Example:</strong></li>
+</ul>
+<pre><code class="hljs">{
+    <span class="hljs-attr">"author"</span>: <span class="hljs-string">""</span>
+}
+</code></pre>
+<h3><a class="anchor" aria-hidden="true" id="authorurl"></a><a href="#authorurl" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>authorUrl</h3>
+<ul>
+<li><strong>Type:</strong> String</li>
+<li><strong>Example:</strong></li>
+</ul>
+<pre><code class="hljs">{
+    <span class="hljs-attr">"authorUrl"</span>: <span class="hljs-string">""</span>
+}
+</code></pre>
+<h3><a class="anchor" aria-hidden="true" id="breadcrumb"></a><a href="#breadcrumb" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>breadcrumb</h3>
+<ul>
+<li><strong>Type:</strong> GlobalIndexBreadcrumb</li>
+<li><strong>Example:</strong></li>
+</ul>
+<pre><code class="hljs">{
+    <span class="hljs-attr">"breadcrumb"</span>: [
+        {
+            <span class="hljs-attr">"link"</span>: <span class="hljs-string">""</span>,
+            <span class="hljs-attr">"name"</span>: <span class="hljs-string">""</span>
+        }
+    ]
+}
+</code></pre>
+<h3><a class="anchor" aria-hidden="true" id="date"></a><a href="#date" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>date</h3>
+<ul>
+<li><strong>Type:</strong> DDateTime</li>
+<li><strong>Example:</strong></li>
+</ul>
+<pre><code class="hljs">{
+    <span class="hljs-attr">"date"</span>: {
+        <span class="hljs-attr">"str"</span>: <span class="hljs-string">""</span>,
+        <span class="hljs-attr">"precision"</span>: <span class="hljs-number">0</span>,
+        <span class="hljs-attr">"timestamp"</span>: <span class="hljs-number">0</span>
+    }
+}
+</code></pre>
+<h3><a class="anchor" aria-hidden="true" id="discussion"></a><a href="#discussion" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>discussion</h3>
+<ul>
+<li><strong>Type:</strong> GIDiscussionField</li>
+<li><strong>Example:</strong></li>
+</ul>
+<pre><code class="hljs">{
+    <span class="hljs-attr">"discussion"</span>: {
+        <span class="hljs-attr">"nextPages"</span>: <span class="hljs-string">""</span>,
+        <span class="hljs-attr">"numPages"</span>: <span class="hljs-number">0</span>,
+        <span class="hljs-attr">"provider"</span>: <span class="hljs-string">""</span>,
+        <span class="hljs-attr">"nextPage"</span>: <span class="hljs-string">""</span>,
+        <span class="hljs-attr">"language"</span>: <span class="hljs-string">""</span>,
+        <span class="hljs-attr">"numPosts"</span>: <span class="hljs-number">0</span>,
+        <span class="hljs-attr">"title"</span>: <span class="hljs-string">""</span>,
+        <span class="hljs-attr">"posts"</span>: [
+            {
+                <span class="hljs-attr">"date"</span>: {
+                    <span class="hljs-attr">"str"</span>: <span class="hljs-string">""</span>,
+                    <span class="hljs-attr">"precision"</span>: <span class="hljs-number">0</span>,
+                    <span class="hljs-attr">"timestamp"</span>: <span class="hljs-number">0</span>
+                },
+                <span class="hljs-attr">"sentiment"</span>: <span class="hljs-string">""</span>,
+                <span class="hljs-attr">"images"</span>: [
+                    {
+                        <span class="hljs-attr">"displayHeight"</span>: <span class="hljs-number">0</span>,
+                        <span class="hljs-attr">"xpath"</span>: <span class="hljs-string">""</span>,
+                        <span class="hljs-attr">"breadcrumb"</span>: [
+                            {
+                                <span class="hljs-attr">"link"</span>: <span class="hljs-string">""</span>,
+                                <span class="hljs-attr">"name"</span>: <span class="hljs-string">""</span>
+                            }
+                        ],
+                        <span class="hljs-attr">"displayWidth"</span>: <span class="hljs-number">0</span>,
+                        <span class="hljs-attr">"naturalHeight"</span>: <span class="hljs-number">0</span>,
+                        <span class="hljs-attr">"language"</span>: <span class="hljs-string">""</span>,
+                        <span class="hljs-attr">"links"</span>: <span class="hljs-string">""</span>,
+                        <span class="hljs-attr">"anchorUrl"</span>: <span class="hljs-string">""</span>,
+                        <span class="hljs-attr">"title"</span>: <span class="hljs-string">""</span>,
+                        <span class="hljs-attr">"url"</span>: <span class="hljs-string">""</span>,
+                        <span class="hljs-attr">"naturalWidth"</span>: <span class="hljs-number">0</span>
+                    }
+                ],
+                <span class="hljs-attr">"author"</span>: <span class="hljs-string">""</span>,
+                <span class="hljs-attr">"authorUrl"</span>: <span class="hljs-string">""</span>,
+                <span class="hljs-attr">"language"</span>: <span class="hljs-string">""</span>,
+                <span class="hljs-attr">"html"</span>: <span class="hljs-string">""</span>,
+                <span class="hljs-attr">"pageUrl"</span>: <span class="hljs-string">""</span>,
+                <span class="hljs-attr">"id"</span>: <span class="hljs-number">0</span>,
+                <span class="hljs-attr">"text"</span>: <span class="hljs-string">""</span>
+            }
+        ],
+        <span class="hljs-attr">"numParticipants"</span>: <span class="hljs-number">0</span>,
+        <span class="hljs-attr">"tags"</span>: [
+            {
+                <span class="hljs-attr">"score"</span>: <span class="hljs-string">""</span>,
+                <span class="hljs-attr">"sentiment"</span>: <span class="hljs-string">""</span>,
+                <span class="hljs-attr">"types"</span>: <span class="hljs-string">""</span>,
+                <span class="hljs-attr">"count"</span>: <span class="hljs-number">0</span>,
+                <span class="hljs-attr">"label"</span>: <span class="hljs-string">""</span>,
+                <span class="hljs-attr">"uri"</span>: <span class="hljs-string">""</span>
+            }
+        ],
+        <span class="hljs-attr">"rssUrl"</span>: <span class="hljs-string">""</span>
+    }
+}
+</code></pre>
+<h3><a class="anchor" aria-hidden="true" id="estimateddate"></a><a href="#estimateddate" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>estimatedDate</h3>
+<ul>
+<li><strong>Type:</strong> DDateTime</li>
+<li><strong>Example:</strong></li>
+</ul>
+<pre><code class="hljs">{
+    <span class="hljs-attr">"estimatedDate"</span>: {
+        <span class="hljs-attr">"str"</span>: <span class="hljs-string">""</span>,
+        <span class="hljs-attr">"precision"</span>: <span class="hljs-number">0</span>,
+        <span class="hljs-attr">"timestamp"</span>: <span class="hljs-number">0</span>
+    }
+}
+</code></pre>
+<h3><a class="anchor" aria-hidden="true" id="html"></a><a href="#html" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>html</h3>
+<ul>
+<li><strong>Type:</strong> String</li>
+<li><strong>Example:</strong></li>
+</ul>
+<pre><code class="hljs">{
+    <span class="hljs-attr">"html"</span>: <span class="hljs-string">""</span>
+}
+</code></pre>
+<h3><a class="anchor" aria-hidden="true" id="icon"></a><a href="#icon" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>icon</h3>
+<ul>
+<li><strong>Type:</strong> String</li>
+<li><strong>Example:</strong></li>
+</ul>
+<pre><code class="hljs">{
+    <span class="hljs-attr">"icon"</span>: <span class="hljs-string">""</span>
+}
+</code></pre>
+<h3><a class="anchor" aria-hidden="true" id="images"></a><a href="#images" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>images</h3>
+<ul>
+<li><strong>Type:</strong> GlobalIndexImage</li>
+<li><strong>Example:</strong></li>
+</ul>
+<pre><code class="hljs">{
+    <span class="hljs-attr">"images"</span>: [
+        {
+            <span class="hljs-attr">"displayHeight"</span>: <span class="hljs-number">0</span>,
+            <span class="hljs-attr">"xpath"</span>: <span class="hljs-string">""</span>,
+            <span class="hljs-attr">"breadcrumb"</span>: [
+                {
+                    <span class="hljs-attr">"link"</span>: <span class="hljs-string">""</span>,
+                    <span class="hljs-attr">"name"</span>: <span class="hljs-string">""</span>
+                }
+            ],
+            <span class="hljs-attr">"displayWidth"</span>: <span class="hljs-number">0</span>,
+            <span class="hljs-attr">"naturalHeight"</span>: <span class="hljs-number">0</span>,
+            <span class="hljs-attr">"language"</span>: <span class="hljs-string">""</span>,
+            <span class="hljs-attr">"links"</span>: <span class="hljs-string">""</span>,
+            <span class="hljs-attr">"anchorUrl"</span>: <span class="hljs-string">""</span>,
+            <span class="hljs-attr">"title"</span>: <span class="hljs-string">""</span>,
+            <span class="hljs-attr">"url"</span>: <span class="hljs-string">""</span>,
+            <span class="hljs-attr">"naturalWidth"</span>: <span class="hljs-number">0</span>
+        }
+    ]
+}
+</code></pre>
+<h3><a class="anchor" aria-hidden="true" id="language"></a><a href="#language" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>language</h3>
+<p>Refers to the language in which an Article is written</p>
+<ul>
+<li><strong>Type:</strong> String</li>
+<li><strong>Example:</strong></li>
+</ul>
+<pre><code class="hljs">{
+    <span class="hljs-attr">"language"</span>: <span class="hljs-string">""</span>
+}
+</code></pre>
+<h3><a class="anchor" aria-hidden="true" id="nextpage"></a><a href="#nextpage" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>nextPage</h3>
+<ul>
+<li><strong>Type:</strong> String</li>
+<li><strong>Example:</strong></li>
+</ul>
+<pre><code class="hljs">{
+    <span class="hljs-attr">"nextPage"</span>: <span class="hljs-string">""</span>
+}
+</code></pre>
+<h3><a class="anchor" aria-hidden="true" id="nextpages"></a><a href="#nextpages" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>nextPages</h3>
+<ul>
+<li><strong>Type:</strong> String</li>
+<li><strong>Example:</strong></li>
+</ul>
+<pre><code class="hljs">{
+    <span class="hljs-attr">"nextPages"</span>: <span class="hljs-string">""</span>
+}
+</code></pre>
+<h3><a class="anchor" aria-hidden="true" id="numpages"></a><a href="#numpages" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>numPages</h3>
+<ul>
+<li><strong>Type:</strong> Integer</li>
+<li><strong>Example:</strong></li>
+</ul>
+<pre><code class="hljs">{
+    <span class="hljs-attr">"numPages"</span>: <span class="hljs-number">0</span>
+}
+</code></pre>
+<h3><a class="anchor" aria-hidden="true" id="publishercountry"></a><a href="#publishercountry" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>publisherCountry</h3>
+<ul>
+<li><strong>Type:</strong> String</li>
+<li><strong>Example:</strong></li>
+</ul>
+<pre><code class="hljs">{
+    <span class="hljs-attr">"publisherCountry"</span>: <span class="hljs-string">""</span>
+}
+</code></pre>
+<h3><a class="anchor" aria-hidden="true" id="publisherregion"></a><a href="#publisherregion" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>publisherRegion</h3>
+<ul>
+<li><strong>Type:</strong> String</li>
+<li><strong>Example:</strong></li>
+</ul>
+<pre><code class="hljs">{
+    <span class="hljs-attr">"publisherRegion"</span>: <span class="hljs-string">""</span>
+}
+</code></pre>
+<h3><a class="anchor" aria-hidden="true" id="quotes"></a><a href="#quotes" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>quotes</h3>
+<p>Returns quotes found in the article text and who said them. For English-language text only</p>
+<ul>
+<li><strong>Type:</strong> GlobalIndexQuote</li>
+<li><strong>Example:</strong></li>
+</ul>
+<pre><code class="hljs">{
+    <span class="hljs-attr">"quotes"</span>: [
+        {
+            <span class="hljs-attr">"speakerUri"</span>: <span class="hljs-string">""</span>,
+            <span class="hljs-attr">"quote"</span>: <span class="hljs-string">""</span>,
+            <span class="hljs-attr">"speaker"</span>: <span class="hljs-string">""</span>
+        }
+    ]
+}
+</code></pre>
+<h3><a class="anchor" aria-hidden="true" id="sentiment"></a><a href="#sentiment" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>sentiment</h3>
+<p>Sentiment of the article. Positive sentiments have positive values and negative sentiments have a negative value.</p>
+<ul>
+<li><strong>Type:</strong> Double</li>
+<li><strong>Example:</strong></li>
+</ul>
+<pre><code class="hljs">{
+    <span class="hljs-attr">"sentiment"</span>: <span class="hljs-string">""</span>
+}
+</code></pre>
+<h3><a class="anchor" aria-hidden="true" id="sitename"></a><a href="#sitename" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>siteName</h3>
+<ul>
+<li><strong>Type:</strong> String</li>
+<li><strong>Example:</strong></li>
+</ul>
+<pre><code class="hljs">{
+    <span class="hljs-attr">"siteName"</span>: <span class="hljs-string">""</span>
+}
+</code></pre>
+<h3><a class="anchor" aria-hidden="true" id="tags"></a><a href="#tags" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>tags</h3>
+<p>Array of tags/entities, generated from analysis of the extracted text and cross-referenced with DBpedia and other data sources. Language-specific tags will be returned if the source text is in English, Chinese, French, German, Spanish or Russian.</p>
+<ul>
+<li><strong>Type:</strong> GlobalIndexTag</li>
+<li><strong>Example:</strong></li>
+</ul>
+<pre><code class="hljs">{
+    <span class="hljs-attr">"tags"</span>: [
+        {
+            <span class="hljs-attr">"score"</span>: <span class="hljs-string">""</span>,
+            <span class="hljs-attr">"sentiment"</span>: <span class="hljs-string">""</span>,
+            <span class="hljs-attr">"types"</span>: <span class="hljs-string">""</span>,
+            <span class="hljs-attr">"count"</span>: <span class="hljs-number">0</span>,
+            <span class="hljs-attr">"label"</span>: <span class="hljs-string">""</span>,
+            <span class="hljs-attr">"uri"</span>: <span class="hljs-string">""</span>
+        }
+    ]
+}
+</code></pre>
+<h3><a class="anchor" aria-hidden="true" id="text"></a><a href="#text" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>text</h3>
+<ul>
+<li><strong>Type:</strong> String</li>
+<li><strong>Example:</strong></li>
+</ul>
+<pre><code class="hljs">{
+    <span class="hljs-attr">"text"</span>: <span class="hljs-string">""</span>
+}
+</code></pre>
+<h3><a class="anchor" aria-hidden="true" id="title"></a><a href="#title" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>title</h3>
+<p>Title of the Article</p>
+<ul>
+<li><strong>Type:</strong> String</li>
+<li><strong>Example:</strong></li>
+</ul>
+<pre><code class="hljs">{
+    <span class="hljs-attr">"title"</span>: <span class="hljs-string">""</span>
+}
+</code></pre>
+<h3><a class="anchor" aria-hidden="true" id="videos"></a><a href="#videos" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>videos</h3>
+<ul>
+<li><strong>Type:</strong> GlobalIndexVideo</li>
+<li><strong>Example:</strong></li>
+</ul>
+<pre><code class="hljs">{
+    <span class="hljs-attr">"videos"</span>: [
+        {
+            <span class="hljs-attr">"embedUrl"</span>: <span class="hljs-string">""</span>,
+            <span class="hljs-attr">"date"</span>: {
+                <span class="hljs-attr">"str"</span>: <span class="hljs-string">""</span>,
+                <span class="hljs-attr">"precision"</span>: <span class="hljs-number">0</span>,
+                <span class="hljs-attr">"timestamp"</span>: <span class="hljs-number">0</span>
+            },
+            <span class="hljs-attr">"images"</span>: [
+                {
+                    <span class="hljs-attr">"displayHeight"</span>: <span class="hljs-number">0</span>,
+                    <span class="hljs-attr">"xpath"</span>: <span class="hljs-string">""</span>,
+                    <span class="hljs-attr">"breadcrumb"</span>: [
+                        {
+                            <span class="hljs-attr">"link"</span>: <span class="hljs-string">""</span>,
+                            <span class="hljs-attr">"name"</span>: <span class="hljs-string">""</span>
+                        }
+                    ],
+                    <span class="hljs-attr">"displayWidth"</span>: <span class="hljs-number">0</span>,
+                    <span class="hljs-attr">"naturalHeight"</span>: <span class="hljs-number">0</span>,
+                    <span class="hljs-attr">"language"</span>: <span class="hljs-string">""</span>,
+                    <span class="hljs-attr">"links"</span>: <span class="hljs-string">""</span>,
+                    <span class="hljs-attr">"anchorUrl"</span>: <span class="hljs-string">""</span>,
+                    <span class="hljs-attr">"title"</span>: <span class="hljs-string">""</span>,
+                    <span class="hljs-attr">"url"</span>: <span class="hljs-string">""</span>,
+                    <span class="hljs-attr">"naturalWidth"</span>: <span class="hljs-number">0</span>
+                }
+            ],
+            <span class="hljs-attr">"author"</span>: <span class="hljs-string">""</span>,
+            <span class="hljs-attr">"mime"</span>: <span class="hljs-string">""</span>,
+            <span class="hljs-attr">"naturalHeight"</span>: <span class="hljs-number">0</span>,
+            <span class="hljs-attr">"language"</span>: <span class="hljs-string">""</span>,
+            <span class="hljs-attr">"title"</span>: <span class="hljs-string">""</span>,
+            <span class="hljs-attr">"url"</span>: <span class="hljs-string">""</span>,
+            <span class="hljs-attr">"naturalWidth"</span>: <span class="hljs-number">0</span>,
+            <span class="hljs-attr">"duration"</span>: <span class="hljs-number">0</span>,
+            <span class="hljs-attr">"html"</span>: <span class="hljs-string">""</span>,
+            <span class="hljs-attr">"text"</span>: <span class="hljs-string">""</span>,
+            <span class="hljs-attr">"viewCount"</span>: <span class="hljs-number">0</span>
+        }
+    ]
+}
+</code></pre>
+</span></div></article></div><div class="docLastUpdate"><em>Last updated by jeromechoo</em></div><div class="docs-prevnext"><a class="docs-prev button" href="/docs/en/kg-ont-diffbotentity"><span class="arrow-prev">← </span><span>All</span></a><a class="docs-next button" href="/docs/en/kg-ont-organization"><span>Organization</span><span class="arrow-next"> →</span></a></div></div></div><nav class="onPageNav"><ul class="toc-headings"><li><a href="#article-fields">Article Fields</a></li><li><a href="#article-field-details">Article Field Details</a><ul class="toc-headings"><li><a href="#author">author</a></li><li><a href="#authorurl">authorUrl</a></li><li><a href="#breadcrumb">breadcrumb</a></li><li><a href="#date">date</a></li><li><a href="#discussion">discussion</a></li><li><a href="#estimateddate">estimatedDate</a></li><li><a href="#html">html</a></li><li><a href="#icon">icon</a></li><li><a href="#images">images</a></li><li><a href="#language">language</a></li><li><a href="#nextpage">nextPage</a></li><li><a href="#nextpages">nextPages</a></li><li><a href="#numpages">numPages</a></li><li><a href="#publishercountry">publisherCountry</a></li><li><a href="#publisherregion">publisherRegion</a></li><li><a href="#quotes">quotes</a></li><li><a href="#sentiment">sentiment</a></li><li><a href="#sitename">siteName</a></li><li><a href="#tags">tags</a></li><li><a href="#text">text</a></li><li><a href="#title">title</a></li><li><a href="#videos">videos</a></li></ul></li></ul></nav></div><footer class="nav-footer" id="footer"><section class="sitemap"><a href="/" class="nav-home"><img src="/img/diffbot_white.svg" alt="Docs Suite" width="66" height="58"/></a><div><h5>Docs</h5><a href="/docs/en/api-basics-index">Extraction</a><a href="/docs/en/cb-basics-index">Crawling</a><a href="/docs/en/kg-index">Knowledge Graph</a><a href="/docs/en/explain-gdpr">Diffbot and GDPR</a></div><div><h5>Community</h5><a href="https://stackoverflow.com/questions/tagged/diffbot" target="_blank" rel="noreferrer noopener">Stack Overflow</a><a href="https://twitter.com/diffbot" target="_blank" rel="noreferrer noopener">Twitter</a></div><div><h5>More</h5><a href="/blog">Blog</a><a href="/help">Help</a><a href="https://github.com/diffbot">GitHub</a></div></section><a href="https://diffbot.com/" target="_blank" rel="noreferrer noopener" class="fbOpenSource"><img src="/img/diffbot_white.svg" alt="Diffbot.com" width="170" height="45"/></a><section class="copyright">Copyright © 2021 Diffbot.com</section></footer></div><script type="text/javascript" src="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.js"></script><script>
+                document.addEventListener('keyup', function(e) {
+                  if (e.target !== document.body) {
+                    return;
+                  }
+                  // keyCode for '/' (slash)
+                  if (e.keyCode === 191) {
+                    const search = document.getElementById('search_input_react');
+                    search && search.focus();
+                  }
+                });
+              </script><script>
+              var search = docsearch({
+                
+                apiKey: '2c24e5e78d724e77c46ef1b720700177',
+                indexName: 'diffbot',
+                inputSelector: '#search_input_react',
+                algoliaOptions: {}
+              });
+            </script></body></html>
