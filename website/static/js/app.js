@@ -163,14 +163,14 @@ docReady(function () {
   });
 
   // Add a subsection into the sidebar for API docs
-  // if (inKgSection) {
-  //   console.log("Writing new section");
-  //   let newSection =
-  //     '<div class="navGroup subNavGroup"><h4 class="navGroupSubcategoryTitle">API Reference Docs</h4><ul><li class="navListItem"><a class="navItem" href="/kgapi">Knowledge Graph API Reference</a></li><li class="navListItem"><a class="navItem" href="/enhance">Enhance API Reference</a></li><li class="navListItem"><a class="navItem" href="/ontology">Ontology Reference</a></li><li class="navListItem"><a class="navItem" href="/industry_hierarchy">Industry Hierarchy</a></li></ul></div>';
-  //   document.querySelector(
-  //     ".toc .toggleNav .navGroups .navGroup>ul"
-  //   ).innerHTML += newSection;
-  // }
+  if (inKgSection) {
+    console.log("Writing new section");
+    let newSection =
+      '<div class="navGroup subNavGroup"><h4 class="navGroupSubcategoryTitle">API Reference Docs</h4><ul><li class="navListItem"><a class="navItem" href="/kgapi">Knowledge Graph API Reference</a></li><li class="navListItem"><a class="navItem" href="/enhance">Enhance API Reference</a></li><li class="navListItem"><a class="navItem" href="/docs/en/kg-ont-diffbotentity">Ontology Reference</a></li><li class="navListItem"><a class="navItem" href="/industry_hierarchy">Industry Hierarchy</a></li></ul></div>';
+    document.querySelector(
+      ".toc .toggleNav .navGroups .navGroup>ul"
+    ).innerHTML += newSection;
+  }
 
   // Store sidebar in localstorage if exists
   let sidebar = document.querySelector("#docsNav");
