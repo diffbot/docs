@@ -9,7 +9,9 @@
     "rename-version": "docusaurus-rename-version"
   },
   "devDependencies": {
-    "docusaurus": "^1.14.2"
+    "axios": "^0.21.1",
+    "docusaurus": "^1.14.2",
+    "mustache": "^4.1.0"
   },
   "license": "MIT"
 }

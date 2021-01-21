@@ -287,6 +287,21 @@
       }
     ]
   },
+  "knowledge-graph-ontology": {
+    "KG Ontology": [
+      "kg-ont-diffbotentity",
+      "kg-ont-article",
+      "kg-ont-organization",
+      "kg-ont-person",
+      "kg-ont-place",
+      "kg-ont-creativework",
+      {
+        "type": "subcategory",
+        "label": "Other",
+        "ids": ["kg-ont-administrativearea"]
+      }
+    ]
+  },
   "nl": {
     "Natural Language": ["nl-index", "nl-quickstart"]
   },
