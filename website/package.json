@@ -9,6 +9,7 @@
     "rename-version": "docusaurus-rename-version"
   },
   "devDependencies": {
+    "axios": "^0.21.1",
     "docusaurus": "^1.14.2",
     "mustache": "^4.1.0"
   },

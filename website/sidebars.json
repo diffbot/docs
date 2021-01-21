@@ -275,7 +275,6 @@
     "Knowledge Graph": [
       "kg-index",
       "dql-quickstart",
-      "kg-ont-article",
       {
         "type": "subcategory",
         "label": "Tools and Usage",
@@ -285,6 +284,21 @@
         "type": "subcategory",
         "label": "In-Depth",
         "ids": ["dql-index", "dql-workflows", "dql-faq"]
+      }
+    ]
+  },
+  "knowledge-graph-ontology": {
+    "KG Ontology": [
+      "kg-ont-diffbotentity",
+      "kg-ont-article",
+      "kg-ont-organization",
+      "kg-ont-person",
+      "kg-ont-place",
+      "kg-ont-creativework",
+      {
+        "type": "subcategory",
+        "label": "Other",
+        "ids": ["kg-ont-administrativearea"]
       }
     ]
   },

@@ -98,7 +98,7 @@ docReady(function () {
     '<a href="/docs/en/kg-index" class="dropbtn">Knowledge Graph</a><div class="dropdown-content">';
   dd1html += '<a href="/kgapi">KG API Reference</a>';
   dd1html += '<a href="/enhance">Enhance API Reference</a>';
-  dd1html += '<a href="/ontology">Ontology Docs</a>';
+  dd1html += '<a href="/docs/en/kg-ont-diffbotentity">Ontology</a>';
   dd1html += '<a href="/industry_hierarchy">Industry Hierarchy</a>';
   dd1html += '<a href="/docs/en/dql-index">Diffbot Query Language</a>';
   dd1html += "</div>";
@@ -163,14 +163,14 @@ docReady(function () {
   });
 
   // Add a subsection into the sidebar for API docs
-  if (inKgSection) {
-    console.log("Writing new section");
-    let newSection =
-      '<div class="navGroup subNavGroup"><h4 class="navGroupSubcategoryTitle">API Reference Docs</h4><ul><li class="navListItem"><a class="navItem" href="/kgapi">Knowledge Graph API Reference</a></li><li class="navListItem"><a class="navItem" href="/enhance">Enhance API Reference</a></li><li class="navListItem"><a class="navItem" href="/ontology">Ontology Reference</a></li><li class="navListItem"><a class="navItem" href="/industry_hierarchy">Industry Hierarchy</a></li></ul></div>';
-    document.querySelector(
-      ".toc .toggleNav .navGroups .navGroup>ul"
-    ).innerHTML += newSection;
-  }
+  // if (inKgSection) {
+  //   console.log("Writing new section");
+  //   let newSection =
+  //     '<div class="navGroup subNavGroup"><h4 class="navGroupSubcategoryTitle">API Reference Docs</h4><ul><li class="navListItem"><a class="navItem" href="/kgapi">Knowledge Graph API Reference</a></li><li class="navListItem"><a class="navItem" href="/enhance">Enhance API Reference</a></li><li class="navListItem"><a class="navItem" href="/ontology">Ontology Reference</a></li><li class="navListItem"><a class="navItem" href="/industry_hierarchy">Industry Hierarchy</a></li></ul></div>';
+  //   document.querySelector(
+  //     ".toc .toggleNav .navGroups .navGroup>ul"
+  //   ).innerHTML += newSection;
+  // }
 
   // Store sidebar in localstorage if exists
   let sidebar = document.querySelector("#docsNav");

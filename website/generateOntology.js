@@ -6,12 +6,16 @@
  *     and builds markdown files (which are then rendered into HTML by Docusaurus).
  *   - Running this script is not necessary with each production build of docs.diffbot.com,
  *     but is highly recommended to ensure the latest ontology is available.
+ * 
+ *   ADDING A NEW ENTITY?
  *   - Note that not all entities are displayed. Supported entities in ENTITYTYPES const.
- *
+ *   - After adding a new supported entity, add a link to this entity in sidebars.json
+ * 
  */
 
 let fs = require("fs");
 let { render } = require("mustache");
+const axios = require("axios");
 
 // Template helpers
 const templateHelpers = {
@@ -24,12 +28,55 @@ const templateHelpers = {
 
 // Supported entity types and props
 const ENTITYTYPES = {
+    DiffbotEntity: { 
+        title: "All",
+        id: "kg-ont-diffbotentity",
+        description: "All Knowledge Graph entities will include the fields below, which are often generalized, linking, or metadata attributes common to all records. \n\nSee the left navigation panel for fields and attributes for specific entities,",
+        helpers: templateHelpers
+    },
     Article: { 
         title: "Article",
         id: "kg-ont-article",
-        description: "The article entity type encompasses news, blog posts, and content that fit the 'Article' archetype.",
+        description: "The article entity type encompasses news, blog posts, and article content known to the Knowledge Graph. \n\nNote that fields are not guaranteed to exist in every entity record.",
         helpers: templateHelpers
-    }
+    },
+    Organization: { 
+        title: "Organization",
+        id: "kg-ont-organization",
+        description: "The organization entity type encompasses corporations, local businesses, non-profits, and other organizations known to the Knowledge Graph. \n\nNote that fields are not guaranteed to exist in every entity record.",
+        helpers: templateHelpers
+    },
+    Person: { 
+        title: "Person",
+        id: "kg-ont-person",
+        description: "The person entity type encompasses all people known to the Knowledge Graph. \n\nNote that fields are not guaranteed to exist in every entity record.",
+        helpers: templateHelpers
+    },
+    Place: { 
+        title: "Place",
+        id: "kg-ont-place",
+        description: "The place entity type encompasses cities, landmarks, countries, and other locations known to the Knowledge Graph. \n\nNote that fields are not guaranteed to exist in every entity record.",
+        helpers: templateHelpers
+    },
+    CreativeWork: { 
+        title: "CreativeWork",
+        id: "kg-ont-creativework",
+        description: "The Creative Work entity type encompasses movies, tv shows, musicals, scripts, and other creative works known to the Knowledge Graph. \n\nNote that fields are not guaranteed to exist in every entity record.",
+        helpers: templateHelpers
+    },
+    AdministrativeArea: { 
+        title: "AdministrativeArea",
+        id: "kg-ont-administrativearea",
+        description: "The Administrative Area entity type encompasses all cities, regions, counties, sub-regions, provinces, and countries known to the Knowledge Graph. \n\nNote that fields are not guaranteed to exist in every entity record.",
+        helpers: templateHelpers
+    },
+    // ROLE ONTOLOGY IS MISSING
+    // Role: { 
+    //     title: "Role",
+    //     id: "kg-ont-role",
+    //     description: "The Role entity type encompasses all roles known to the Knowledge Graph. \n\nNote that fields are not guaranteed to exist in every entity record.",
+    //     helpers: templateHelpers
+    // },
 };
 
 // Translates technical content type definitions to layman descriptions & examples
@@ -41,369 +88,104 @@ const CONTENTTYPES = {
   },
 };
 
-// Delete and replace later with Axios GET of https://kg.diffbot.com/kg/enhance_endpoint/ont_docs
-const ontology = {
-  typedocs: {
-    Article: {
-      name: "Article",
-      typeHierarchy: ["Article", "GlobalIndexDiffbotEntity"],
-      fields: {
-        date: {
-          name: "date",
-          desc: "",
-          deprecated: false,
-          linkedEntity: false,
-          hidden: false,
-          isFact: false,
-          isEnum: false,
-          isList: false,
-          isComposite: true,
-          isLinkedEntity: false,
-          contentType: "DDateTime",
-          isDeprecated: false,
-          isHidden: false,
-        },
-        nextPages: {
-          name: "nextPages",
-          desc: "",
-          deprecated: false,
-          linkedEntity: false,
-          hidden: false,
-          isFact: false,
-          isEnum: false,
-          isList: true,
-          isComposite: false,
-          isLinkedEntity: false,
-          contentType: "String",
-          isDeprecated: false,
-          isHidden: false,
-        },
-        sentiment: {
-          name: "sentiment",
-          desc:
-            "Sentiment of the article. Positive sentiments have positive values and negative sentiments have a negative value.",
-          deprecated: false,
-          linkedEntity: false,
-          hidden: false,
-          isFact: false,
-          isEnum: false,
-          isList: false,
-          isComposite: false,
-          isLinkedEntity: false,
-          contentType: "Double",
-          isDeprecated: false,
-          isHidden: false,
-        },
-        images: {
-          name: "images",
-          desc: "",
-          deprecated: false,
-          linkedEntity: false,
-          hidden: false,
-          isFact: false,
-          isEnum: false,
-          isList: true,
-          isComposite: true,
-          isLinkedEntity: false,
-          contentType: "GlobalIndexImage",
-          isDeprecated: false,
-          isHidden: false,
-        },
-        author: {
-          name: "author",
-          desc: "",
-          deprecated: false,
-          linkedEntity: false,
-          hidden: false,
-          isFact: false,
-          isEnum: false,
-          isList: false,
-          isComposite: false,
-          isLinkedEntity: false,
-          contentType: "String",
-          isDeprecated: false,
-          isHidden: false,
-        },
-        nextPage: {
-          name: "nextPage",
-          desc: "",
-          deprecated: false,
-          linkedEntity: false,
-          hidden: false,
-          isFact: false,
-          isEnum: false,
-          isList: false,
-          isComposite: false,
-          isLinkedEntity: false,
-          contentType: "String",
-          isDeprecated: false,
-          isHidden: false,
-        },
-        publisherRegion: {
-          name: "publisherRegion",
-          desc: "",
-          deprecated: false,
-          linkedEntity: false,
-          hidden: false,
-          isFact: false,
-          isEnum: false,
-          isList: false,
-          isComposite: false,
-          isLinkedEntity: false,
-          contentType: "String",
-          isDeprecated: false,
-          isHidden: false,
-        },
-        icon: {
-          name: "icon",
-          desc: "",
-          deprecated: false,
-          linkedEntity: false,
-          hidden: false,
-          isFact: false,
-          isEnum: false,
-          isList: false,
-          isComposite: false,
-          isLinkedEntity: false,
-          contentType: "String",
-          isDeprecated: false,
-          isHidden: false,
-        },
-        estimatedDate: {
-          name: "estimatedDate",
-          desc: "",
-          deprecated: false,
-          linkedEntity: false,
-          hidden: false,
-          isFact: false,
-          isEnum: false,
-          isList: false,
-          isComposite: true,
-          isLinkedEntity: false,
-          contentType: "DDateTime",
-          isDeprecated: false,
-          isHidden: false,
-        },
-        siteName: {
-          name: "siteName",
-          desc: "",
-          deprecated: false,
-          linkedEntity: false,
-          hidden: false,
-          isFact: false,
-          isEnum: false,
-          isList: false,
-          isComposite: false,
-          isLinkedEntity: false,
-          contentType: "String",
-          isDeprecated: false,
-          isHidden: false,
-        },
-        language: {
-          name: "language",
-          desc: "Refers to the language in which an Article is written",
-          deprecated: false,
-          linkedEntity: false,
-          hidden: false,
-          isFact: false,
-          isEnum: false,
-          isList: false,
-          isComposite: false,
-          isLinkedEntity: false,
-          contentType: "String",
-          isDeprecated: false,
-          isHidden: false,
-        },
-        videos: {
-          name: "videos",
-          desc: "",
-          deprecated: false,
-          linkedEntity: false,
-          hidden: false,
-          isFact: false,
-          isEnum: false,
-          isList: true,
-          isComposite: true,
-          isLinkedEntity: false,
-          contentType: "GlobalIndexVideo",
-          isDeprecated: false,
-          isHidden: false,
-        },
-        discussion: {
-          name: "discussion",
-          desc: "",
-          deprecated: false,
-          linkedEntity: false,
-          hidden: false,
-          isFact: false,
-          isEnum: false,
-          isList: false,
-          isComposite: true,
-          isLinkedEntity: false,
-          contentType: "GIDiscussionField",
-          isDeprecated: false,
-          isHidden: false,
-        },
-        title: {
-          name: "title",
-          desc: "Title of the Article",
-          deprecated: false,
-          linkedEntity: false,
-          hidden: false,
-          isFact: false,
-          isEnum: false,
-          isList: false,
-          isComposite: false,
-          isLinkedEntity: false,
-          contentType: "String",
-          isDeprecated: false,
-          isHidden: false,
-        },
-        tags: {
-          name: "tags",
-          desc:
-            "Array of tags/entities, generated from analysis of the extracted text and cross-referenced with DBpedia and other data sources. Language-specific tags will be returned if the source text is in English, Chinese, French, German, Spanish or Russian.",
-          deprecated: false,
-          linkedEntity: false,
-          hidden: false,
-          isFact: false,
-          isEnum: false,
-          isList: true,
-          isComposite: true,
-          isLinkedEntity: false,
-          contentType: "GlobalIndexTag",
-          isDeprecated: false,
-          isHidden: false,
-        },
-        quotes: {
-          name: "quotes",
-          desc:
-            "Returns quotes found in the article text and who said them. For English-language text only",
-          deprecated: false,
-          linkedEntity: false,
-          hidden: false,
-          isFact: false,
-          isEnum: false,
-          isList: true,
-          isComposite: true,
-          isLinkedEntity: false,
-          contentType: "GlobalIndexQuote",
-          isDeprecated: false,
-          isHidden: false,
-        },
-        publisherCountry: {
-          name: "publisherCountry",
-          desc: "",
-          deprecated: false,
-          linkedEntity: false,
-          hidden: false,
-          isFact: false,
-          isEnum: false,
-          isList: false,
-          isComposite: false,
-          isLinkedEntity: false,
-          contentType: "String",
-          isDeprecated: false,
-          isHidden: false,
-        },
-        numPages: {
-          name: "numPages",
-          desc: "",
-          deprecated: false,
-          linkedEntity: false,
-          hidden: false,
-          isFact: false,
-          isEnum: false,
-          isList: false,
-          isComposite: false,
-          isLinkedEntity: false,
-          contentType: "Integer",
-          isDeprecated: false,
-          isHidden: false,
-        },
-        breadcrumb: {
-          name: "breadcrumb",
-          desc: "",
-          deprecated: false,
-          linkedEntity: false,
-          hidden: false,
-          isFact: false,
-          isEnum: false,
-          isList: true,
-          isComposite: true,
-          isLinkedEntity: false,
-          contentType: "GlobalIndexBreadcrumb",
-          isDeprecated: false,
-          isHidden: false,
-        },
-        authorUrl: {
-          name: "authorUrl",
-          desc: "",
-          deprecated: false,
-          linkedEntity: false,
-          hidden: false,
-          isFact: false,
-          isEnum: false,
-          isList: false,
-          isComposite: false,
-          isLinkedEntity: false,
-          contentType: "String",
-          isDeprecated: false,
-          isHidden: false,
-        },
-        html: {
-          name: "html",
-          desc: "",
-          deprecated: false,
-          linkedEntity: false,
-          hidden: false,
-          isFact: false,
-          isEnum: false,
-          isList: false,
-          isComposite: false,
-          isLinkedEntity: false,
-          contentType: "String",
-          isDeprecated: false,
-          isHidden: false,
-        },
-        text: {
-          name: "text",
-          desc: "",
-          deprecated: false,
-          linkedEntity: false,
-          hidden: false,
-          isFact: false,
-          isEnum: false,
-          isList: false,
-          isComposite: false,
-          isLinkedEntity: false,
-          contentType: "String",
-          isDeprecated: false,
-          isHidden: false,
-        },
-      },
-    },
-  },
+const buildFieldExample = (fieldName, fieldEntity, ontDocs, recursiveStackCount) => {
+// Build object/list examples for each field
+let example = {};
+    // String & Intangible/Misc/DegreeEntity Types
+    if (
+        fieldEntity["fields"][fieldName]["contentType"] === "String" ||
+        (fieldEntity["fields"][fieldName]["leType"] && fieldEntity["fields"][fieldName]["leType"][0] === "Intangible") ||
+        (fieldEntity["fields"][fieldName]["leType"] && fieldEntity["fields"][fieldName]["leType"][0] === "Miscellaneous") ||
+        (fieldEntity["fields"][fieldName]["leType"] && fieldEntity["fields"][fieldName]["leType"][0] === "DegreeEntity")
+        ) {
+        example = "";
+    }
+    // Numerical Type
+    else if (
+        fieldEntity["fields"][fieldName]["contentType"] === "Short" || 
+        fieldEntity["fields"][fieldName]["contentType"] === "Long" ||
+        fieldEntity["fields"][fieldName]["contentType"] === "Integer") {
+        example = 0;
+    }
+    // Boolean Type
+    else if (fieldEntity["fields"][fieldName]["contentType"] === "Boolean") {
+        example = false;
+    }
+    // Composite Type
+    else if (fieldEntity["fields"][fieldName]["isComposite"] === true) {
+        let compositeField = ontDocs["compositedocs"][fieldEntity["fields"][fieldName]["contentType"]];
+        let compositeSubFieldNames = Object.keys(compositeField["fields"]);
+        if (fieldEntity["fields"][fieldName]["isList"] === true) {
+            example = [{}];
+        }
+        compositeSubFieldNames.forEach(subFieldName => {
+            if (fieldEntity["fields"][fieldName]["isList"] === true) {
+                example[0][subFieldName] = buildFieldExample(subFieldName, compositeField, ontDocs, recursiveStackCount+1);
+            }
+            else {
+                example[subFieldName] = buildFieldExample(subFieldName, compositeField, ontDocs, recursiveStackCount+1);
+            }
+        })
+    }
+    // Linked Entity Type
+    else if (
+        fieldEntity["fields"][fieldName]["isLinkedEntity"] === true &&
+        fieldEntity["fields"][fieldName]["leType"]
+    ) {
+        // The call stack becomes insane here if we try to build this example with Linked Entities, so we'll just set string references
+        let linkedEntityTypes = fieldEntity["fields"][fieldName]["leType"];
+        example = `[See ${linkedEntityTypes.join(' or ')}]`; // May be more than one type, just pick the first
+    }
+    // List Type
+    else if (fieldEntity["fields"][fieldName]["isList"] === true) {
+        example = [];
+    }
+    // Other/Non-Declared Type
+    else {
+        example = "";
+    }
+
+return example;
 };
 
 // Transforms ont_docs to Mustache consumable JSON
-const ontTransform = (entity) => {
-    let templateModel = ENTITYTYPES[entity.name];
-    let fieldNames = Object.keys(entity["fields"]);
+const ontTransform = (ontDocsEntity, ontDocs) => {
+    // Grab starting model
+    let templateModel = ENTITYTYPES[ontDocsEntity.name];
+    // Add fields to the model (and transform to array)
+    let fieldNames = Object.keys(ontDocsEntity["fields"]).sort();
     let fields = fieldNames.map(fieldName => {
-        return entity["fields"][fieldName]
+        if (!ontDocsEntity["fields"][fieldName]["example"]) {
+            ontDocsEntity["fields"][fieldName]["example"] = {}
+        }
+        ontDocsEntity["fields"][fieldName]["example"][fieldName] = buildFieldExample(fieldName, ontDocsEntity, ontDocs, 0);
+        ontDocsEntity["fields"][fieldName]["example"] = JSON.stringify(ontDocsEntity["fields"][fieldName]["example"], null, "\t");
+        
+        return ontDocsEntity["fields"][fieldName]
     });
     templateModel["fields"] = fields;
     return templateModel;
 };
 
-// Get Template Model
-let articleModel = ontTransform(ontology['typedocs']['Article']);
 
-// Get Template
-let template = fs.readFileSync("./static/md/entity-ontology.md").toString();
+axios.get('https://kg.diffbot.com/kg/enhance_endpoint/ont_docs')
+.then((response) => {
+    var ontology = response.data;
 
-// Render Template
-let output = render(template, articleModel);
-console.log("Rendered! Writing Markdown...");
-fs.writeFileSync(`../docs/${articleModel.id}.md`, output);
+    // Get all supported entity types and loop
+    var supportedEntities = Object.keys(ENTITYTYPES);
+    for (supportedEntityIndex in supportedEntities) {
+
+        // Get Template Model
+        let entityModel = ontTransform(ontology['typedocs'][supportedEntities[supportedEntityIndex]], ontology);
+
+        // Get Template
+        let template = fs.readFileSync("./static/md/entity-ontology.md").toString();
+
+        // Render Template
+        let output = render(template, entityModel);
+        console.log(`Rendered ${entityModel.title} Ontology! Writing Markdown...`);
+        fs.writeFileSync(`../docs/${entityModel.id}.md`, output);
+
+    }
+});

@@ -16,14 +16,10 @@ title: {{ title }}
 
 {{ #fields }}
 ### {{ name }}
-{{ desc }}
+{{ #deprecated }}**`Deprecated`**{{ /deprecated }}  {{ desc }}
 * **Type:** {{ contentType }}
 * **Example:**
 ```
-{
-    "str": "d2021-01-12T20:14:38",
-    "precision": 4,
-    "timestamp": 1610482478000
-}
+{{{ example }}}
 ```
 {{ /fields }}

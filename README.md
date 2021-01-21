@@ -27,3 +27,7 @@ This will open a browser with the local version running in live-reload mode, so 
 ## Static Pages
 
 There are some static pages in the docs too - notably, the KG sections. We're working on making them dynamic, but for now they can be edited directly. Check `website/static/pages` to edit those.
+
+## Building the Knowledge Graph Ontology
+
+The KG Ontology can be built by running `node generateOntology`. This script downloads the latest ontology from ThothEntities and generate markdown files for each supported entity type. For more details, [see ./website/generateOntology.js](./website/generateOntology.js)
