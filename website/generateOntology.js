@@ -64,6 +64,36 @@ const ENTITYTYPES = {
         description: "The Creative Work entity type encompasses movies, tv shows, musicals, scripts, and other creative works known to the Knowledge Graph. \n\nNote that fields are not guaranteed to exist in every entity record.",
         helpers: templateHelpers
     },
+    Product: { 
+        title: "Product",
+        id: "kg-ont-product",
+        description: "The product entity type encompasses products found throughout the web known to the Knowledge Graph. \n\nNote that fields are not guaranteed to exist in every entity record.",
+        helpers: templateHelpers
+    },
+    Image: { 
+        title: "Image",
+        id: "kg-ont-image",
+        description: "The Image entity type encompasses images found throughout the web and known to the Knowledge Graph. \n\nNote that fields are not guaranteed to exist in every entity record.",
+        helpers: templateHelpers
+    },
+    Video: { 
+        title: "Video",
+        id: "kg-ont-video",
+        description: "The Video entity type encompasses videos found throughout the web and known to the Knowledge Graph. \n\nNote that fields are not guaranteed to exist in every entity record.",
+        helpers: templateHelpers
+    },
+    Event: { 
+        title: "Event",
+        id: "kg-ont-event",
+        description: "The Event entity type encompasses webinars, meet ups, conferences, and other events known to the Knowledge Graph. \n\nNote that fields are not guaranteed to exist in every entity record.",
+        helpers: templateHelpers
+    },
+    Discussion: { 
+        title: "Discussion",
+        id: "kg-ont-discussion",
+        description: "The Discussion entity type encompasses forum and other similar discussions found throughout the web and known to the Knowledge Graph. \n\nNote that fields are not guaranteed to exist in every entity record.",
+        helpers: templateHelpers
+    },
     AdministrativeArea: { 
         title: "AdministrativeArea",
         id: "kg-ont-administrativearea",
