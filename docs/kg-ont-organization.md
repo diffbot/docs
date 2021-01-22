@@ -121,7 +121,46 @@ Note that certain longer field examples may be truncated for readability in thes
 * **Example:**
 ```
 {
-	"boardMembers": "[See Person]"
+	"boardMembers": [
+		{
+			"summary": "American computer businessman and CEO of Calico",
+			"image": "https://kg.diffbot.com/image/api/get?fetch=yes&url=g%3Cj7P0St%7D9u.LnOv%7BI%7C%40g7.pBYINs%3Ff%7CGZ7jr-tGZhWf%3DK%2FOvy%5Bp%3CSKbs8i%7CEyNzC%5C%3CYm%3Eg%3DQc5Qq5TwMi%3BT%3ANfD%5BpF%60%2FQ.C_o",
+			"types": [
+				"Person"
+			],
+			"name": "Arthur Levinson",
+			"diffbotUri": "http://diffbot.com/entity/EP0czxZv4P--hHu9RIc0oDw",
+			"nbIncomingEdges": 5,
+			"targetDiffbotUri": "http://diffbot.com/entity/EP0czxZv4P--hHu9RIc0oDw",
+			"surfaceForm": "Arthur Levinson",
+			"type": "Person"
+		},
+		{
+			"summary": "Board Member at Apple",
+			"image": "https://kg.diffbot.com/image/api/get?fetch=yes&url=g%3Cj7P0Stn8p.%5DjEp9G.Bd%7BkETp%7CMfK%7B-h%7B%5C%5C-ZjXk-D4Kh-g%5DBtEVu%2Fu4%2F%2FzN_%3Cb4E.G%5Bm",
+			"types": [
+				"Person"
+			],
+			"name": "Monica Lozano",
+			"diffbotUri": "http://diffbot.com/entity/EMcnGCdN_OluuOUl_fp8bjw",
+			"nbIncomingEdges": 1,
+			"targetDiffbotUri": "http://diffbot.com/entity/EMcnGCdN_OluuOUl_fp8bjw",
+			"surfaceForm": "Monica Lozano",
+			"type": "Person"
+		},
+		{
+			"summary": "Canadian businessman",
+			"types": [
+				"Person"
+			],
+			"name": "Ronald Sugar",
+			"diffbotUri": "http://diffbot.com/entity/EGYakVmlmMRiOr1bmvGpvUA",
+			"nbIncomingEdges": 1,
+			"targetDiffbotUri": "http://diffbot.com/entity/EGYakVmlmMRiOr1bmvGpvUA",
+			"surfaceForm": "Ronald Sugar",
+			"type": "Person"
+		}
+	]
 }
 ```
 ### brands
@@ -140,8 +179,8 @@ Note that certain longer field examples may be truncated for readability in thes
 ```
 {
 	"capitalization": {
-		"currency": "",
-		"value": ""
+		"currency": "USD",
+		"value": 2289400020992
 	}
 }
 ```
@@ -151,7 +190,26 @@ Note that certain longer field examples may be truncated for readability in thes
 * **Example:**
 ```
 {
-	"categories": ""
+	"categories": [
+		{
+			"name": "Computer Hardware Companies",
+			"diffbotUri": "http://diffbot.com/entity/ElJodhysCPWW4dV-ag_gayQ",
+			"targetDiffbotUri": "http://diffbot.com/entity/ElJodhysCPWW4dV-ag_gayQ",
+			"surfaceForm": "Computer Hardware Companies"
+		},
+		{
+			"name": "Manufacturing Companies",
+			"diffbotUri": "http://diffbot.com/entity/E2uVXivaLO66MwG7epo9rxw",
+			"targetDiffbotUri": "http://diffbot.com/entity/E2uVXivaLO66MwG7epo9rxw",
+			"surfaceForm": "Manufacturing Companies"
+		},
+		{
+			"name": "Software Companies",
+			"diffbotUri": "http://diffbot.com/entity/EAOPmBTcTMHSKzwvcs3AjQA",
+			"targetDiffbotUri": "http://diffbot.com/entity/EAOPmBTcTMHSKzwvcs3AjQA",
+			"surfaceForm": "Software Companies"
+		}
+	]
 }
 ```
 ### ceo
@@ -160,7 +218,19 @@ Note that certain longer field examples may be truncated for readability in thes
 * **Example:**
 ```
 {
-	"ceo": "[See Person]"
+	"ceo": {
+		"summary": "American business executive",
+		"image": "https://kg.diffbot.com/image/api/get?fetch=yes&url=g%3Cj7P0St0DnBJf.x0KwLZrUn.%5B%3CR0Aa4Hh%3B%5Bv738ZqOr7U%3FEvts%3EyW9LF%3Bi6%40%7CXyH7iI%5CvTj%2F.%7CS%60",
+		"types": [
+			"Person"
+		],
+		"name": "Tim Cook",
+		"diffbotUri": "http://diffbot.com/entity/E84vWTe2yP6qQ0u7kbL3ZGA",
+		"nbIncomingEdges": 19,
+		"targetDiffbotUri": "http://diffbot.com/entity/E84vWTe2yP6qQ0u7kbL3ZGA",
+		"surfaceForm": "Tim Cook",
+		"type": "Person"
+	}
 }
 ```
 ### companiesHouseIds
@@ -178,7 +248,7 @@ Note that certain longer field examples may be truncated for readability in thes
 * **Example:**
 ```
 {
-	"crunchbaseUri": ""
+	"crunchbaseUri": "crunchbase.com/organization/apple"
 }
 ```
 ### descriptors
@@ -187,7 +257,11 @@ Note that certain longer field examples may be truncated for readability in thes
 * **Example:**
 ```
 {
-	"descriptors": ""
+	"descriptors": [
+		"consumer electronics",
+		"electronics",
+		"hardware"
+	]
 }
 ```
 ### facebookUri
@@ -196,7 +270,7 @@ Note that certain longer field examples may be truncated for readability in thes
 * **Example:**
 ```
 {
-	"facebookUri": ""
+	"facebookUri": "facebook.com/apple"
 }
 ```
 ### founders
@@ -205,7 +279,47 @@ Note that certain longer field examples may be truncated for readability in thes
 * **Example:**
 ```
 {
-	"founders": "[See Person]"
+	"founders": [
+		{
+			"summary": "American inventor, computer engineer and programmer",
+			"image": "https://kg.diffbot.com/image/api/get?fetch=yes&url=g%3Cj7P0St0DnBJf.x0KwLZrUn.%5B%3CR0Aa4Hh%3B%5Bv738ZqOr7U%3FGvvt%3Exb1ch%7BQ%3A%5BhAZz.pGT",
+			"types": [
+				"Person"
+			],
+			"name": "Steve Wozniak",
+			"diffbotUri": "http://diffbot.com/entity/ErFxuJCJVOhS-aJvxNMgrbg",
+			"nbIncomingEdges": 12,
+			"targetDiffbotUri": "http://diffbot.com/entity/ErFxuJCJVOhS-aJvxNMgrbg",
+			"surfaceForm": "Steve Wozniak",
+			"type": "Person"
+		},
+		{
+			"summary": "Co-founder of Apple Inc.",
+			"image": "https://kg.diffbot.com/image/api/get?fetch=yes&url=g%3Cj7P0St0DnBJf.x0KwLZrUn.%5B%3CR0Aa4Hh%3B%5Bv738ZqOr7U%3FGvvO%3Ew%5D%3ANo0Q%7CZh%3DFp%3B%7DF_rH7KdK.c2W",
+			"types": [
+				"Person"
+			],
+			"name": "Ron Wayne",
+			"diffbotUri": "http://diffbot.com/entity/EvGMnA45aO2Kaeu6udJI9EQ",
+			"nbIncomingEdges": 4,
+			"targetDiffbotUri": "http://diffbot.com/entity/EvGMnA45aO2Kaeu6udJI9EQ",
+			"surfaceForm": "Ron Wayne",
+			"type": "Person"
+		},
+		{
+			"summary": "American entrepreneur and co-founder of Apple Inc.",
+			"image": "https://kg.diffbot.com/image/api/get?fetch=yes&url=g%3Cj7P0St0DnBJf.x0KwLZrUn.%5B%3CR0Aa4Hh%3B%5Bv738ZqOr7U%3FGvvs%3Exb1ch%7BD%3ACm7At9jJUuXdMdCc-UB%60wr.Yu5",
+			"types": [
+				"Person"
+			],
+			"name": "Steve Jobs",
+			"diffbotUri": "http://diffbot.com/entity/EyauXV2QZOW2fEP8Cb_Hoxg",
+			"nbIncomingEdges": 36,
+			"targetDiffbotUri": "http://diffbot.com/entity/EyauXV2QZOW2fEP8Cb_Hoxg",
+			"surfaceForm": "Steve Jobs",
+			"type": "Person"
+		}
+	]
 }
 ```
 ### foundingDate
@@ -215,9 +329,9 @@ Note that certain longer field examples may be truncated for readability in thes
 ```
 {
 	"foundingDate": {
-		"str": "",
-		"precision": 0,
-		"timestamp": 0
+		"str": "d1977-XX-XX",
+		"precision": 1,
+		"timestamp": 220924800000
 	}
 }
 ```
@@ -227,7 +341,7 @@ Note that certain longer field examples may be truncated for readability in thes
 * **Example:**
 ```
 {
-	"githubUri": ""
+	"githubUri": "github.com/apple"
 }
 ```
 ### googlePlusUri
@@ -245,7 +359,7 @@ Note that certain longer field examples may be truncated for readability in thes
 * **Example:**
 ```
 {
-	"homepageUri": ""
+	"homepageUri": "apple.com"
 }
 ```
 ### iSicClassification
@@ -278,7 +392,11 @@ Note that certain longer field examples may be truncated for readability in thes
 * **Example:**
 ```
 {
-	"industries": ""
+	"industries": [
+		"Computer Hardware Companies",
+		"Manufacturing Companies",
+		"Software Companies"
+	]
 }
 ```
 ### investments
@@ -290,16 +408,76 @@ Note that certain longer field examples may be truncated for readability in thes
 	"investments": [
 		{
 			"date": {
-				"str": "",
-				"precision": 0,
-				"timestamp": 0
+				"str": "d1977-05-15",
+				"precision": 3,
+				"timestamp": 232502400000
 			},
 			"amount": {
-				"currency": "",
-				"value": ""
+				"currency": "USD",
+				"value": 80000
 			},
-			"series": "",
-			"investors": "[See Person or Organization]"
+			"series": "Seed",
+			"investors": [
+				{
+					"summary": "Former CEO at Apple",
+					"image": "https://kg.diffbot.com/image/api/get?fetch=yes&url=g%3Cj7P0St%7D9u.LnOv%7BI%7C%40g7.pBYINs%3Ff%7CGZ7jr-tGZhWf%3DK%2FOvy%5Bp%3CSKbs8i%7CEyNzC%5E%3E%5Dt6m%3BNc%7CY%5BvSsDWGg%7E9%5EVKlQ%7E%3B%3B.I%5Do",
+					"types": [
+						"Person"
+					],
+					"name": "Mike Markkula",
+					"diffbotUri": "http://diffbot.com/entity/E9JHQf-kPNKWitURTvyklWQ",
+					"nbIncomingEdges": 2,
+					"targetDiffbotUri": "http://diffbot.com/entity/E9JHQf-kPNKWitURTvyklWQ",
+					"surfaceForm": "Mike Markkula",
+					"type": "Person"
+				},
+				{
+					"recordId": "EHb0_0NEcMwyY8b083taTTw@64",
+					"name": "Matrix Partners",
+					"websiteUris": [
+						"crunchbase.com/organization/matrix-partners"
+					],
+					"surfaceForm": "Matrix Partners",
+					"position": "companyInvestmentInvestor",
+					"type": "Person"
+				}
+			]
+		},
+		{
+			"date": {
+				"str": "d2016-05-16",
+				"precision": 3,
+				"timestamp": 1463356800000
+			},
+			"amount": {
+				"currency": "USD",
+				"value": 1000000000
+			},
+			"series": "Post Ipo Equity",
+			"investors": [
+				{
+					"recordId": "EHb0_0NEcMwyY8b083taTTw@65",
+					"name": "Berkshire Hathaway",
+					"websiteUris": [
+						"crunchbase.com/organization/berkshire-hathaway-corp"
+					],
+					"surfaceForm": "Berkshire Hathaway",
+					"position": "companyInvestmentInvestor",
+					"type": "Person"
+				}
+			]
+		},
+		{
+			"date": {
+				"str": "d2017-09-06",
+				"precision": 3,
+				"timestamp": 1504656000000
+			},
+			"amount": {
+				"currency": "USD",
+				"value": 5000000000
+			},
+			"series": "Post Ipo Debt"
 		}
 	]
 }
@@ -312,11 +490,11 @@ Note that certain longer field examples may be truncated for readability in thes
 {
 	"ipo": {
 		"date": {
-			"str": "",
-			"precision": 0,
-			"timestamp": 0
+			"str": "d1980-XX-XX",
+			"precision": 1,
+			"timestamp": 315532800000
 		},
-		"stockExchange": ""
+		"stockExchange": "NASDAQ"
 	}
 }
 ```
@@ -326,7 +504,10 @@ Note that certain longer field examples may be truncated for readability in thes
 * **Example:**
 ```
 {
-	"irsEmployerIdentificationNumbers": ""
+	"irsEmployerIdentificationNumbers": [
+		"94-2404110",
+		"942404110"
+	]
 }
 ```
 ### isAcquired
@@ -385,7 +566,7 @@ Note that certain longer field examples may be truncated for readability in thes
 * **Example:**
 ```
 {
-	"linkedInUri": ""
+	"linkedInUri": "linkedin.com/company/apple"
 }
 ```
 ### location
@@ -395,20 +576,53 @@ Note that certain longer field examples may be truncated for readability in thes
 ```
 {
 	"location": {
-		"country": "[See AdministrativeArea]",
-		"address": "",
-		"city": "[See AdministrativeArea]",
-		"subregion": "[See AdministrativeArea]",
-		"latitude": "",
-		"precision": "",
-		"postalCode": "",
-		"surfaceForm": "",
-		"isCurrent": false,
-		"street": "",
-		"metroArea": "[See AdministrativeArea]",
-		"region": "[See AdministrativeArea]",
-		"rawAdministrativeArea": "[See AdministrativeArea]",
-		"longitude": ""
+		"country": {
+			"summary": "Sovereign state in North America",
+			"image": "https://kg.diffbot.com/image/api/get?fetch=yes&url=g%3Cj7P0St0DnBJf.x0KwLZrUn.%5B%3CR0Aa4Hh%3B%5Bv738ZqOr7U%3FfvEQ%3El%601Nw%7BM0Bf7hu7z%3FRe9s4XwGXedrKUAN%28%3D%5ECHnM%60%29.%7BOV",
+			"types": [
+				"Place",
+				"AdministrativeArea"
+			],
+			"name": "United States of America",
+			"diffbotUri": "http://diffbot.com/entity/E01d4EK33MmCosgI2KXa4-A",
+			"nbIncomingEdges": 1245575855,
+			"targetDiffbotUri": "http://diffbot.com/entity/E01d4EK33MmCosgI2KXa4-A",
+			"type": "AdministrativeArea"
+		},
+		"isCurrent": true,
+		"address": "One Apple Park Way, Cupertino, 95014, California, United States",
+		"city": {
+			"summary": "City in Santa Clara County, California, United States",
+			"image": "https://kg.diffbot.com/image/api/get?fetch=yes&url=g%3Cj7P0St0DnBJf.x0KwLZrUn.%5B%3CR0Aa4Hh%3B%5Bv738ZqOr7U%3FEvtp%3ExO%3Aad%7B%3D7Bl9XRG%7BEa%2FCH%7CP%7BIh4%5Ez8Og%5Dh%3Dn%3DRn%3Bov%3Eg%3A%5DlE%5C%3BO2Hj6b2KSDVk%2F_AJ_O%5CVQz%40c%7EQw%3EG%5EPd%7E%60%7EB%5CFXm.sGN",
+			"types": [
+				"Place",
+				"AdministrativeArea"
+			],
+			"name": "Cupertino",
+			"diffbotUri": "http://diffbot.com/entity/Exd-cghOPMcCHRez564r5EA",
+			"nbIncomingEdges": 287706,
+			"targetDiffbotUri": "http://diffbot.com/entity/Exd-cghOPMcCHRez564r5EA",
+			"type": "AdministrativeArea"
+		},
+		"street": "One Apple Park Way",
+		"latitude": 37.3316764831543,
+		"precision": 0.10000000149011612,
+		"postalCode": "95014",
+		"surfaceForm": "One Apple Park Way, Cupertino, 95014, California, United States",
+		"region": {
+			"summary": "State of the United States of America",
+			"image": "https://kg.diffbot.com/image/api/get?fetch=yes&url=g%3Cj7P0St0DnBJf.x0KwLZrUn.%5B%3CR0Aa4Hh%3B%5Bv738ZqOr7U%3Fav%40T%3ExS%7DYb%3B%60zt%5BDbuGxEVg.xAK",
+			"types": [
+				"Place",
+				"AdministrativeArea"
+			],
+			"name": "California",
+			"diffbotUri": "http://diffbot.com/entity/El0_8ehooNxOPT36Y4RdV9w",
+			"nbIncomingEdges": 136728414,
+			"targetDiffbotUri": "http://diffbot.com/entity/El0_8ehooNxOPT36Y4RdV9w",
+			"type": "AdministrativeArea"
+		},
+		"longitude": -122.0111083984375
 	}
 }
 ```
@@ -420,20 +634,146 @@ Note that certain longer field examples may be truncated for readability in thes
 {
 	"locations": [
 		{
-			"country": "[See AdministrativeArea]",
-			"address": "",
-			"city": "[See AdministrativeArea]",
-			"subregion": "[See AdministrativeArea]",
-			"latitude": "",
-			"precision": "",
-			"postalCode": "",
-			"surfaceForm": "",
+			"country": {
+				"summary": "Sovereign state in North America",
+				"image": "https://kg.diffbot.com/image/api/get?fetch=yes&url=g%3Cj7P0St0DnBJf.x0KwLZrUn.%5B%3CR0Aa4Hh%3B%5Bv738ZqOr7U%3FfvEQ%3El%601Nw%7BM0Bf7hu7z%3FRe9s4XwGXedrKUAN%28%3D%5ECHnM%60%29.%7BOV",
+				"types": [
+					"Place",
+					"AdministrativeArea"
+				],
+				"name": "United States of America",
+				"diffbotUri": "http://diffbot.com/entity/E01d4EK33MmCosgI2KXa4-A",
+				"nbIncomingEdges": 1245575855,
+				"targetDiffbotUri": "http://diffbot.com/entity/E01d4EK33MmCosgI2KXa4-A",
+				"type": "AdministrativeArea"
+			},
+			"isCurrent": true,
+			"address": "1 Apple Park Way, Cupertino, California",
+			"city": {
+				"summary": "City in Santa Clara County, California, United States",
+				"image": "https://kg.diffbot.com/image/api/get?fetch=yes&url=g%3Cj7P0St0DnBJf.x0KwLZrUn.%5B%3CR0Aa4Hh%3B%5Bv738ZqOr7U%3FEvtp%3ExO%3Aad%7B%3D7Bl9XRG%7BEa%2FCH%7CP%7BIh4%5Ez8Og%5Dh%3Dn%3DRn%3Bov%3Eg%3A%5DlE%5C%3BO2Hj6b2KSDVk%2F_AJ_O%5CVQz%40c%7EQw%3EG%5EPd%7E%60%7EB%5CFXm.sGN",
+				"types": [
+					"Place",
+					"AdministrativeArea"
+				],
+				"name": "Cupertino",
+				"diffbotUri": "http://diffbot.com/entity/Exd-cghOPMcCHRez564r5EA",
+				"nbIncomingEdges": 287706,
+				"targetDiffbotUri": "http://diffbot.com/entity/Exd-cghOPMcCHRez564r5EA",
+				"type": "AdministrativeArea"
+			},
+			"street": "1 Apple Park Way",
+			"subregion": {
+				"summary": "County in California, United States",
+				"image": "https://kg.diffbot.com/image/api/get?fetch=yes&url=g%3Cj7P0St0DnBJf.x0KwLZrUn.%5B%3CR0Aa4Hh%3B%5Bv738ZqOr7U%3Fav%40r%3ErO%3CLr2Y%5EBfA_%7EJt%40NeLn2L%7EL%60zdzEW%7DBf%3Cp%7EB%3FF%5C3%3Bgl%5E%7DT%7BF.7%5Bb",
+				"types": [
+					"Place",
+					"AdministrativeArea"
+				],
+				"name": "Santa Clara County",
+				"diffbotUri": "http://diffbot.com/entity/E8Sjxl9YuMRCajUEPN2k9ew",
+				"nbIncomingEdges": 7036662,
+				"targetDiffbotUri": "http://diffbot.com/entity/E8Sjxl9YuMRCajUEPN2k9ew",
+				"type": "AdministrativeArea"
+			},
+			"latitude": 37.334842681884766,
+			"precision": 0.10000000149011612,
+			"postalCode": "95014",
+			"region": {
+				"summary": "State of the United States of America",
+				"image": "https://kg.diffbot.com/image/api/get?fetch=yes&url=g%3Cj7P0St0DnBJf.x0KwLZrUn.%5B%3CR0Aa4Hh%3B%5Bv738ZqOr7U%3Fav%40T%3ExS%7DYb%3B%60zt%5BDbuGxEVg.xAK",
+				"types": [
+					"Place",
+					"AdministrativeArea"
+				],
+				"name": "California",
+				"diffbotUri": "http://diffbot.com/entity/El0_8ehooNxOPT36Y4RdV9w",
+				"nbIncomingEdges": 136728414,
+				"targetDiffbotUri": "http://diffbot.com/entity/El0_8ehooNxOPT36Y4RdV9w",
+				"type": "AdministrativeArea"
+			},
+			"longitude": -122.01129913330078
+		},
+		{
+			"country": {
+				"summary": "Sovereign state in North America",
+				"image": "https://kg.diffbot.com/image/api/get?fetch=yes&url=g%3Cj7P0St0DnBJf.x0KwLZrUn.%5B%3CR0Aa4Hh%3B%5Bv738ZqOr7U%3FfvEQ%3El%601Nw%7BM0Bf7hu7z%3FRe9s4XwGXedrKUAN%28%3D%5ECHnM%60%29.%7BOV",
+				"types": [
+					"Place",
+					"AdministrativeArea"
+				],
+				"name": "United States of America",
+				"diffbotUri": "http://diffbot.com/entity/E01d4EK33MmCosgI2KXa4-A",
+				"nbIncomingEdges": 1245575855,
+				"targetDiffbotUri": "http://diffbot.com/entity/E01d4EK33MmCosgI2KXa4-A",
+				"type": "AdministrativeArea"
+			},
 			"isCurrent": false,
-			"street": "",
-			"metroArea": "[See AdministrativeArea]",
-			"region": "[See AdministrativeArea]",
-			"rawAdministrativeArea": "[See AdministrativeArea]",
-			"longitude": ""
+			"address": "1 Infinite Loop, Cupertino, California",
+			"city": {
+				"summary": "City in Santa Clara County, California, United States",
+				"image": "https://kg.diffbot.com/image/api/get?fetch=yes&url=g%3Cj7P0St0DnBJf.x0KwLZrUn.%5B%3CR0Aa4Hh%3B%5Bv738ZqOr7U%3FEvtp%3ExO%3Aad%7B%3D7Bl9XRG%7BEa%2FCH%7CP%7BIh4%5Ez8Og%5Dh%3Dn%3DRn%3Bov%3Eg%3A%5DlE%5C%3BO2Hj6b2KSDVk%2F_AJ_O%5CVQz%40c%7EQw%3EG%5EPd%7E%60%7EB%5CFXm.sGN",
+				"types": [
+					"Place",
+					"AdministrativeArea"
+				],
+				"name": "Cupertino",
+				"diffbotUri": "http://diffbot.com/entity/Exd-cghOPMcCHRez564r5EA",
+				"nbIncomingEdges": 287706,
+				"targetDiffbotUri": "http://diffbot.com/entity/Exd-cghOPMcCHRez564r5EA",
+				"type": "AdministrativeArea"
+			},
+			"street": "1 Infinite Loop",
+			"subregion": {
+				"summary": "County in California, United States",
+				"image": "https://kg.diffbot.com/image/api/get?fetch=yes&url=g%3Cj7P0St0DnBJf.x0KwLZrUn.%5B%3CR0Aa4Hh%3B%5Bv738ZqOr7U%3Fav%40r%3ErO%3CLr2Y%5EBfA_%7EJt%40NeLn2L%7EL%60zdzEW%7DBf%3Cp%7EB%3FF%5C3%3Bgl%5E%7DT%7BF.7%5Bb",
+				"types": [
+					"Place",
+					"AdministrativeArea"
+				],
+				"name": "Santa Clara County",
+				"diffbotUri": "http://diffbot.com/entity/E8Sjxl9YuMRCajUEPN2k9ew",
+				"nbIncomingEdges": 7036662,
+				"targetDiffbotUri": "http://diffbot.com/entity/E8Sjxl9YuMRCajUEPN2k9ew",
+				"type": "AdministrativeArea"
+			},
+			"latitude": 37.33539962768555,
+			"precision": 0.10000000149011612,
+			"postalCode": "95014-2083",
+			"region": {
+				"summary": "State of the United States of America",
+				"image": "https://kg.diffbot.com/image/api/get?fetch=yes&url=g%3Cj7P0St0DnBJf.x0KwLZrUn.%5B%3CR0Aa4Hh%3B%5Bv738ZqOr7U%3Fav%40T%3ExS%7DYb%3B%60zt%5BDbuGxEVg.xAK",
+				"types": [
+					"Place",
+					"AdministrativeArea"
+				],
+				"name": "California",
+				"diffbotUri": "http://diffbot.com/entity/El0_8ehooNxOPT36Y4RdV9w",
+				"nbIncomingEdges": 136728414,
+				"targetDiffbotUri": "http://diffbot.com/entity/El0_8ehooNxOPT36Y4RdV9w",
+				"type": "AdministrativeArea"
+			},
+			"longitude": -122.01465606689453
+		},
+		{
+			"country": {
+				"summary": "Sovereign state in North America",
+				"image": "https://kg.diffbot.com/image/api/get?fetch=yes&url=g%3Cj7P0St0DnBJf.x0KwLZrUn.%5B%3CR0Aa4Hh%3B%5Bv738ZqOr7U%3FfvEQ%3El%601Nw%7BM0Bf7hu7z%3FRe9s4XwGXedrKUAN%28%3D%5ECHnM%60%29.%7BOV",
+				"types": [
+					"Place",
+					"AdministrativeArea"
+				],
+				"name": "United States of America",
+				"diffbotUri": "http://diffbot.com/entity/E01d4EK33MmCosgI2KXa4-A",
+				"nbIncomingEdges": 1245575855,
+				"targetDiffbotUri": "http://diffbot.com/entity/E01d4EK33MmCosgI2KXa4-A",
+				"type": "AdministrativeArea"
+			},
+			"isCurrent": false,
+			"address": "United States",
+			"latitude": 39.71595764160156,
+			"precision": 3133.158935546875,
+			"longitude": -96.99966430664062
 		}
 	]
 }
@@ -444,7 +784,7 @@ Note that certain longer field examples may be truncated for readability in thes
 * **Example:**
 ```
 {
-	"logo": ""
+	"logo": "https://kg.diffbot.com/image/api/get?fetch=yes&url=g%3Cj7P0St0DnBJf.x0KwLZrUn.%5B%3CR0Aa4Hh%3B%5Bv738ZqOr7U%3FGvvO%3Ef%5E%3CYh%7Bf%3AHi7%5B%7B9iB.yZl"
 }
 ```
 ### mccClassification
@@ -512,9 +852,14 @@ Note that certain longer field examples may be truncated for readability in thes
 {
 	"naicsClassification": [
 		{
-			"code": "",
+			"code": "334000",
 			"isPrimary": false,
-			"name": ""
+			"name": "Computer and Electronic Product Manufacturing"
+		},
+		{
+			"code": "511210",
+			"isPrimary": false,
+			"name": "Software Publishers"
 		}
 	]
 }
@@ -525,7 +870,7 @@ Note that certain longer field examples may be truncated for readability in thes
 * **Example:**
 ```
 {
-	"nbActiveEmployeeEdges": 0
+	"nbActiveEmployeeEdges": 75316
 }
 ```
 ### nbEmployeesMax
@@ -534,7 +879,7 @@ Note that certain longer field examples may be truncated for readability in thes
 * **Example:**
 ```
 {
-	"nbEmployeesMax": 0
+	"nbEmployeesMax": 137000
 }
 ```
 ### nbEmployeesMin
@@ -543,7 +888,7 @@ Note that certain longer field examples may be truncated for readability in thes
 * **Example:**
 ```
 {
-	"nbEmployeesMin": 0
+	"nbEmployeesMin": 137000
 }
 ```
 ### nbLocations
@@ -552,7 +897,7 @@ Note that certain longer field examples may be truncated for readability in thes
 * **Example:**
 ```
 {
-	"nbLocations": 0
+	"nbLocations": 6
 }
 ```
 ### nbUniqueInvestors
@@ -561,7 +906,7 @@ Note that certain longer field examples may be truncated for readability in thes
 * **Example:**
 ```
 {
-	"nbUniqueInvestors": 0
+	"nbUniqueInvestors": 6
 }
 ```
 ### parentCompany
@@ -581,8 +926,8 @@ Note that certain longer field examples may be truncated for readability in thes
 {
 	"phoneNumbers": [
 		{
-			"string": "",
-			"digits": ""
+			"string": "408-9961010",
+			"digits": "4089961010"
 		}
 	]
 }
@@ -596,22 +941,60 @@ Note that certain longer field examples may be truncated for readability in thes
 	"quarterlyRevenues": [
 		{
 			"revenue": {
-				"currency": "",
-				"value": ""
+				"currency": "USD",
+				"value": 91818999808
 			},
 			"isCurrent": false,
+			"year": 2020,
 			"filingDate": {
-				"str": "",
-				"precision": 0,
-				"timestamp": 0
+				"str": "d2020-01-29",
+				"precision": 3,
+				"timestamp": 1580256000000
 			},
-			"year": 0,
 			"revenueDate": {
-				"str": "",
-				"precision": 0,
-				"timestamp": 0
+				"str": "d2019-12-31",
+				"precision": 3,
+				"timestamp": 1577750400000
 			},
-			"quarter": 0
+			"quarter": 1
+		},
+		{
+			"revenue": {
+				"currency": "USD",
+				"value": 61136998400
+			},
+			"isCurrent": false,
+			"year": 2018,
+			"filingDate": {
+				"str": "d2019-10-31",
+				"precision": 3,
+				"timestamp": 1572480000000
+			},
+			"revenueDate": {
+				"str": "d2018-03-31",
+				"precision": 3,
+				"timestamp": 1522454400000
+			},
+			"quarter": 2
+		},
+		{
+			"revenue": {
+				"currency": "USD",
+				"value": 53809000448
+			},
+			"isCurrent": false,
+			"year": 2019,
+			"filingDate": {
+				"str": "d2019-10-31",
+				"precision": 3,
+				"timestamp": 1572480000000
+			},
+			"revenueDate": {
+				"str": "d2019-06-30",
+				"precision": 3,
+				"timestamp": 1561852800000
+			},
+			"quarter": 3
 		}
 	]
 }
@@ -622,7 +1005,10 @@ Note that certain longer field examples may be truncated for readability in thes
 * **Example:**
 ```
 {
-	"secCentralIndexKeys": ""
+	"secCentralIndexKeys": [
+		"0000320193",
+		"320193"
+	]
 }
 ```
 ### sicClassification
@@ -633,9 +1019,9 @@ Note that certain longer field examples may be truncated for readability in thes
 {
 	"sicClassification": [
 		{
-			"code": "",
+			"code": "3571",
 			"isPrimary": false,
-			"name": ""
+			"name": "Electronic Computers"
 		}
 	]
 }
@@ -665,8 +1051,8 @@ Note that certain longer field examples may be truncated for readability in thes
 ```
 {
 	"stock": {
-		"symbol": "",
-		"exchange": ""
+		"symbol": "AAPL",
+		"exchange": "NASDAQ"
 	}
 }
 ```
@@ -676,7 +1062,50 @@ Note that certain longer field examples may be truncated for readability in thes
 * **Example:**
 ```
 {
-	"subsidiaries": "[See Organization]"
+	"subsidiaries": [
+		{
+			"summary": "Company in Teltow, Germany",
+			"image": "https://kg.diffbot.com/image/api/get?fetch=yes&url=g%3Cj7P0St0DnBJf.x0KwLZrUn.%5B%3CR0Aa4Hh%3B%5Bv738ZqOr7U%3FEvtq%3Eq%5D3%5C-oGd-%60J%5Ex%3FkJakPq%3F-Ecy2h.G%5E5",
+			"types": [
+				"Organization",
+				"Corporation"
+			],
+			"name": "SensoMotoric Instruments (SMI)",
+			"diffbotUri": "http://diffbot.com/entity/EwFI_8nzYMEm5Iu4AGQ_AbA",
+			"nbIncomingEdges": 212,
+			"targetDiffbotUri": "http://diffbot.com/entity/EwFI_8nzYMEm5Iu4AGQ_AbA",
+			"surfaceForm": "SensoMotoric Instruments (SMI)",
+			"type": "Corporation"
+		},
+		{
+			"summary": "Corporation founded in 1982",
+			"image": "https://kg.diffbot.com/image/api/get?fetch=yes&url=g%3Cj7P0St%7D9u.LnOv%7BI%7C%40g7.pBYINs%3Ff%7CGZ7jr-tGZhWf%3DK%2FOvy%5Bp%3CSKbs8i%7CEyNzC%5E%3BZu%3Di9PczNk2svQbQsvA23Yo%3Cj%3BR.I%5Do",
+			"types": [
+				"Organization",
+				"Corporation"
+			],
+			"name": "Orion Network Systems",
+			"diffbotUri": "http://diffbot.com/entity/EZDj62U6rOxigMyWlI1zF-A",
+			"nbIncomingEdges": 2,
+			"targetDiffbotUri": "http://diffbot.com/entity/EZDj62U6rOxigMyWlI1zF-A",
+			"surfaceForm": "Orion Network Systems",
+			"type": "Corporation"
+		},
+		{
+			"summary": "Manufacturing company founded in 2006",
+			"image": "https://kg.diffbot.com/image/api/get?fetch=yes&url=g%3Cj7P0St%7D9u.LnOv%7BI%7C%40g7.pBYINs%3Ff%7CGZ7jr-tGZhWf%3DK%2FOvy%5Bp%3CSKbs8i%7CEyNzBa%3DXu8e9McDG%7DItAZrOqhU%7D%2Fl%60%3B2v%3E%3E%5BS%3BK71muK1K.%7DIY",
+			"types": [
+				"Organization",
+				"Corporation"
+			],
+			"name": "InVisage Technologies Inc",
+			"diffbotUri": "http://diffbot.com/entity/EzQ7_K3dFMAek71pYP_tq0w",
+			"nbIncomingEdges": 265,
+			"targetDiffbotUri": "http://diffbot.com/entity/EzQ7_K3dFMAek71pYP_tq0w",
+			"surfaceForm": "InVisage Technologies Inc",
+			"type": "Corporation"
+		}
+	]
 }
 ```
 ### totalInvestment
@@ -686,8 +1115,8 @@ Note that certain longer field examples may be truncated for readability in thes
 ```
 {
 	"totalInvestment": {
-		"currency": "",
-		"value": ""
+		"currency": "USD",
+		"value": 6150230016
 	}
 }
 ```
@@ -697,7 +1126,7 @@ Note that certain longer field examples may be truncated for readability in thes
 * **Example:**
 ```
 {
-	"twitterUri": ""
+	"twitterUri": "twitter.com/apple"
 }
 ```
 ### ukSicClassification
@@ -730,7 +1159,7 @@ Note that certain longer field examples may be truncated for readability in thes
 * **Example:**
 ```
 {
-	"wikipediaUri": ""
+	"wikipediaUri": "en.wikipedia.org/wiki/Apple_Inc."
 }
 ```
 ### yearlyRevenues
@@ -742,21 +1171,27 @@ Note that certain longer field examples may be truncated for readability in thes
 	"yearlyRevenues": [
 		{
 			"revenue": {
-				"currency": "",
-				"value": ""
+				"currency": "USD",
+				"value": 265594994688
 			},
 			"isCurrent": false,
-			"filingDate": {
-				"str": "",
-				"precision": 0,
-				"timestamp": 0
+			"year": 2018
+		},
+		{
+			"revenue": {
+				"currency": "USD",
+				"value": 274515017728
 			},
-			"year": 0,
-			"revenueDate": {
-				"str": "",
-				"precision": 0,
-				"timestamp": 0
-			}
+			"isCurrent": false,
+			"year": 2020
+		},
+		{
+			"revenue": {
+				"currency": "USD",
+				"value": 260174004224
+			},
+			"isCurrent": false,
+			"year": 2019
 		}
 	]
 }

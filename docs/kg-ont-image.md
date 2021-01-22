@@ -91,7 +91,7 @@ Note that certain longer field examples may be truncated for readability in thes
 * **Example:**
 ```
 {
-	"naturalHeight": 0
+	"naturalHeight": 459
 }
 ```
 ### naturalWidth
@@ -100,7 +100,7 @@ Note that certain longer field examples may be truncated for readability in thes
 * **Example:**
 ```
 {
-	"naturalWidth": 0
+	"naturalWidth": 306
 }
 ```
 ### tags
@@ -127,7 +127,7 @@ Note that certain longer field examples may be truncated for readability in thes
 * **Example:**
 ```
 {
-	"title": ""
+	"title": "Sparky the dog saved the woman after she fell down the sewer"
 }
 ```
 ### url
@@ -136,7 +136,7 @@ Note that certain longer field examples may be truncated for readability in thes
 * **Example:**
 ```
 {
-	"url": ""
+	"url": "https://i.dailymail.co.uk/1s/2019/04/03/11/11805062-6881369-image-a-83_1554287487623.jpg"
 }
 ```
 ### xpath

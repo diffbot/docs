@@ -24,9 +24,9 @@ Note that certain longer field examples may be truncated for readability in thes
 ```
 {
 	"endDateTime": {
-		"str": "",
-		"precision": 0,
-		"timestamp": 0
+		"str": "d2019-10-17T07:00",
+		"precision": 4,
+		"timestamp": 1571295600000
 	}
 }
 ```
@@ -38,20 +38,26 @@ Note that certain longer field examples may be truncated for readability in thes
 {
 	"locations": [
 		{
-			"country": "[See AdministrativeArea]",
-			"address": "",
-			"city": "[See AdministrativeArea]",
-			"subregion": "[See AdministrativeArea]",
-			"latitude": "",
-			"precision": "",
-			"postalCode": "",
-			"surfaceForm": "",
-			"isCurrent": false,
-			"street": "",
-			"metroArea": "[See AdministrativeArea]",
-			"region": "[See AdministrativeArea]",
-			"rawAdministrativeArea": "[See AdministrativeArea]",
-			"longitude": ""
+			"country": {
+				"name": "United States",
+				"surfaceForm": "United States"
+			},
+			"isCurrent": true,
+			"address": "Westin Chicago River North, Chicago, Illinois, IL, USA",
+			"city": {
+				"name": "Chicago",
+				"surfaceForm": "Chicago"
+			},
+			"street": "Westin Chicago River North",
+			"subregion": {
+				"name": "Illinois",
+				"surfaceForm": "Illinois"
+			},
+			"surfaceForm": "Westin Chicago River North, Chicago, Illinois, IL, USA",
+			"region": {
+				"name": "IL",
+				"surfaceForm": "IL"
+			}
 		}
 	]
 }
@@ -63,9 +69,9 @@ Note that certain longer field examples may be truncated for readability in thes
 ```
 {
 	"startDateTime": {
-		"str": "",
-		"precision": 0,
-		"timestamp": 0
+		"str": "d2019-10-14T07:00",
+		"precision": 4,
+		"timestamp": 1571036400000
 	}
 }
 ```

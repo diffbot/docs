@@ -25,7 +25,7 @@ Note that certain longer field examples may be truncated for readability in thes
 * **Example:**
 ```
 {
-	"area": 0
+	"area": 9826675
 }
 ```
 ### areaCodes
@@ -52,7 +52,7 @@ Note that certain longer field examples may be truncated for readability in thes
 * **Example:**
 ```
 {
-	"population": 0
+	"population": 328239523
 }
 ```
 ### postalCodes
