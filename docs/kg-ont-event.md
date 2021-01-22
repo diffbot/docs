@@ -15,6 +15,7 @@ Note that fields are not guaranteed to exist in every entity record.
 * [startDateTime](#startdatetime) 
 
 ## Event Field Details
+Note that certain longer field examples may be truncated for readability in these docs. 
 
 ### endDateTime
   

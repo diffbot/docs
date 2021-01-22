@@ -3,7 +3,7 @@ id: kg-ont-place
 title: Place
 ---
 
-The place entity type encompasses cities, landmarks, countries, and other locations known to the Knowledge Graph. 
+The place entity type encompasses cities, landmarks, countries, administrative areas, and other locations known to the Knowledge Graph. 
 
 Note that fields are not guaranteed to exist in every entity record.
 
@@ -15,6 +15,7 @@ Note that fields are not guaranteed to exist in every entity record.
 * [placeType](#placetype) 
 
 ## Place Field Details
+Note that certain longer field examples may be truncated for readability in these docs. 
 
 ### isPartOf
   

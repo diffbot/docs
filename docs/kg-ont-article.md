@@ -34,6 +34,7 @@ Note that fields are not guaranteed to exist in every entity record.
 * [videos](#videos) 
 
 ## Article Field Details
+Note that certain longer field examples may be truncated for readability in these docs. 
 
 ### author
   
@@ -101,7 +102,7 @@ Note that fields are not guaranteed to exist in every entity record.
 					"precision": 0,
 					"timestamp": 0
 				},
-				"sentiment": "",
+				"sentiment": 0,
 				"images": [
 					{
 						"displayHeight": 0,
@@ -135,7 +136,7 @@ Note that fields are not guaranteed to exist in every entity record.
 		"tags": [
 			{
 				"score": "",
-				"sentiment": "",
+				"sentiment": 0,
 				"types": "",
 				"count": 0,
 				"label": "",
@@ -280,7 +281,7 @@ Note that fields are not guaranteed to exist in every entity record.
 * **Example:**
 ```
 {
-	"sentiment": ""
+	"sentiment": 0
 }
 ```
 ### siteName
@@ -301,7 +302,7 @@ Note that fields are not guaranteed to exist in every entity record.
 	"tags": [
 		{
 			"score": "",
-			"sentiment": "",
+			"sentiment": 0,
 			"types": "",
 			"count": 0,
 			"label": "",

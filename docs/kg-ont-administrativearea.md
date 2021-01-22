@@ -17,6 +17,7 @@ Note that fields are not guaranteed to exist in every entity record.
 * [postalCodes](#postalcodes) 
 
 ## AdministrativeArea Field Details
+Note that certain longer field examples may be truncated for readability in these docs. 
 
 ### area
   Square kilometers of AdministrativeArea

@@ -24,6 +24,7 @@ Note that fields are not guaranteed to exist in every entity record.
 * [xpath](#xpath) 
 
 ## Image Field Details
+Note that certain longer field examples may be truncated for readability in these docs. 
 
 ### anchorUrl
   Points to an anchor within a page (like &#x60;href&#x3D;&quot;#top&quot;&#x60;)
@@ -111,7 +112,7 @@ Note that fields are not guaranteed to exist in every entity record.
 	"tags": [
 		{
 			"score": "",
-			"sentiment": "",
+			"sentiment": 0,
 			"types": "",
 			"count": 0,
 			"label": "",

@@ -57,6 +57,7 @@ Note that fields are not guaranteed to exist in every entity record.
 * [youtubeUri](#youtubeuri) 
 
 ## Person Field Details
+Note that certain longer field examples may be truncated for readability in these docs. 
 
 ### age
   A person&#39;s age.

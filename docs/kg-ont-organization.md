@@ -71,6 +71,7 @@ Note that fields are not guaranteed to exist in every entity record.
 * [yearlyRevenues](#yearlyrevenues) 
 
 ## Organization Field Details
+Note that certain longer field examples may be truncated for readability in these docs. 
 
 ### acquiredBy
   The organization that has most recently acquired this organization.

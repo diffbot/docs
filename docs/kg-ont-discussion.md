@@ -23,6 +23,7 @@ Note that fields are not guaranteed to exist in every entity record.
 * [title](#title) 
 
 ## Discussion Field Details
+Note that certain longer field examples may be truncated for readability in these docs. 
 
 ### language
   Refers to the language which a Discussion is written
@@ -91,7 +92,7 @@ Note that fields are not guaranteed to exist in every entity record.
 				"precision": 0,
 				"timestamp": 0
 			},
-			"sentiment": "",
+			"sentiment": 0,
 			"images": [
 				{
 					"displayHeight": 0,
@@ -150,7 +151,7 @@ Note that fields are not guaranteed to exist in every entity record.
 	"tags": [
 		{
 			"score": "",
-			"sentiment": "",
+			"sentiment": 0,
 			"types": "",
 			"count": 0,
 			"label": "",

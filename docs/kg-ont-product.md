@@ -36,6 +36,7 @@ Note that fields are not guaranteed to exist in every entity record.
 * [upc](#upc) 
 
 ## Product Field Details
+Note that certain longer field examples may be truncated for readability in these docs. 
 
 ### availability
   
@@ -99,7 +100,7 @@ Note that fields are not guaranteed to exist in every entity record.
 					"precision": 0,
 					"timestamp": 0
 				},
-				"sentiment": "",
+				"sentiment": 0,
 				"images": [
 					{
 						"displayHeight": 0,
@@ -133,7 +134,7 @@ Note that fields are not guaranteed to exist in every entity record.
 		"tags": [
 			{
 				"score": "",
-				"sentiment": "",
+				"sentiment": 0,
 				"types": "",
 				"count": 0,
 				"label": "",
@@ -225,7 +226,7 @@ Note that fields are not guaranteed to exist in every entity record.
 {
 	"offerPriceDetails": {
 		"symbol": "",
-		"amount": "",
+		"amount": 0,
 		"text": ""
 	}
 }
@@ -274,7 +275,7 @@ Note that fields are not guaranteed to exist in every entity record.
 {
 	"regularPriceDetails": {
 		"symbol": "",
-		"amount": "",
+		"amount": 0,
 		"text": ""
 	}
 }
@@ -296,7 +297,7 @@ Note that fields are not guaranteed to exist in every entity record.
 {
 	"saveAmountDetails": {
 		"symbol": "",
-		"amount": "",
+		"amount": 0,
 		"text": ""
 	}
 }
