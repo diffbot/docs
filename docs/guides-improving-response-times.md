@@ -23,4 +23,6 @@ todo: Modify links to old API docs
 <p>See more on POSTs in the <a href="api-intro">documentation</a> for your desired API.</p>
 <p><strong>Consider Our Bulk API</strong></p>
 <p>Our <a title="Diffbot Developer Dashboard Docs" href="cb-basics-bulk">Bulk API</a> is specifically built for processing large batches of URLs asynchronously. The Bulk service distributes your calls across a broad array of extraction servers for speedy processing, and provides the extracted output in a single JSON output — or, you can use our <a href="api-search">Search API</a> to fine-tune the output from your structured data.</p>
+<p><strong>Disable proxies</strong></p>
+<p>Proxies add additional layers for the data to go through which introduces further delay. Disabling them should increase the response time.</p>
 			</div>
