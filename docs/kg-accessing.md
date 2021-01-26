@@ -88,6 +88,12 @@ The data displayed in the Dashboard represents the results returned from more th
 
 An Entity page in the Dashboard may also show other information that cannot be obtained solely with Diffbot API calls and is not represented in the Entity JSON.  This data is typically gathered using third-party APIs.  For example, our Dashboard may show recent Tweets from an entity’s Twitter page.  For Organizations, we may also display various Technographic data.  For example, many Organizations in our Dashboard have a “Technologies Used” section describing technologies that are used on that organization’s website.
 
+## Exporting to CSV
+
+The Dashboard includes a CSV export feature that makes it easier to read and manipulate data exports in Microsoft Excel, Google Sheets, or similar spreadsheet software. Because of the nesting nature of JSON, data in CSV exports might not exactly reflect their representation in JSON. 
+
+> ⚠️  Microsoft Excel has a 32,767 character limit per cell. Entities like Articles might break this character limit, which results in a malformed import. There is no known workaround to this for Excel. Google Sheets (character limit of 50,000) or Numbers on Macs (no character limit) can be used as alternatives.
+
 ## Accessing the Knowledge Graph through the API
 
 To use the Knowledge Graph API, make an HTTP GET request to the following endpoint: `https://kg.diffbot.com/kg/dql_endpoint?token=...&type=...&query=...`
