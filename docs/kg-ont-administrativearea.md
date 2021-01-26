@@ -7,7 +7,7 @@ The Administrative Area entity type encompasses all cities, regions, counties, s
 
 Note that fields are not guaranteed to exist in every entity record.
 
->New to the Diffbot Knowledge Graph? [Start here](kg-quickstart).
+>New to the Diffbot Knowledge Graph? [Start here](dql-quickstart).
 
 ## AdministrativeArea Fields
 * [area](#area) 
@@ -17,6 +17,7 @@ Note that fields are not guaranteed to exist in every entity record.
 * [postalCodes](#postalcodes) 
 
 ## AdministrativeArea Field Details
+Note that certain longer field examples may be truncated for readability in these docs. 
 
 ### area
   Square kilometers of AdministrativeArea
@@ -24,7 +25,7 @@ Note that fields are not guaranteed to exist in every entity record.
 * **Example:**
 ```
 {
-	"area": 0
+	"area": 9826675
 }
 ```
 ### areaCodes
@@ -51,7 +52,7 @@ Note that fields are not guaranteed to exist in every entity record.
 * **Example:**
 ```
 {
-	"population": 0
+	"population": 328239523
 }
 ```
 ### postalCodes

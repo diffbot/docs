@@ -5,7 +5,7 @@ title: {{ title }}
 
 {{ description }}
 
->New to the Diffbot Knowledge Graph? [Start here](kg-quickstart).
+>New to the Diffbot Knowledge Graph? [Start here](dql-quickstart).
 
 ## {{ title }} Fields
 {{ #fields }}
@@ -13,6 +13,7 @@ title: {{ title }}
 {{ /fields }}
 
 ## {{ title }} Field Details
+Note that certain longer field examples may be truncated for readability in these docs. 
 
 {{ #fields }}
 ### {{ name }}

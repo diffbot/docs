@@ -295,6 +295,11 @@
       "kg-ont-person",
       "kg-ont-place",
       "kg-ont-creativework",
+      "kg-ont-product",
+      "kg-ont-image",
+      "kg-ont-video",
+      "kg-ont-event",
+      "kg-ont-discussion",
       {
         "type": "subcategory",
         "label": "Other",

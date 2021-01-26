@@ -7,7 +7,7 @@ The person entity type encompasses all people known to the Knowledge Graph.
 
 Note that fields are not guaranteed to exist in every entity record.
 
->New to the Diffbot Knowledge Graph? [Start here](kg-quickstart).
+>New to the Diffbot Knowledge Graph? [Start here](dql-quickstart).
 
 ## Person Fields
 * [age](#age) 
@@ -57,6 +57,7 @@ Note that fields are not guaranteed to exist in every entity record.
 * [youtubeUri](#youtubeuri) 
 
 ## Person Field Details
+Note that certain longer field examples may be truncated for readability in these docs. 
 
 ### age
   A person&#39;s age.
@@ -64,7 +65,7 @@ Note that fields are not guaranteed to exist in every entity record.
 * **Example:**
 ```
 {
-	"age": 0
+	"age": 64
 }
 ```
 ### angellistUri
@@ -82,7 +83,15 @@ Note that fields are not guaranteed to exist in every entity record.
 * **Example:**
 ```
 {
-	"articles": "[See Article]"
+	"articles": [
+		{
+			"recordId": "EyLhQX8YeNWOH19RPpdU7Kg@569",
+			"name": "Blue Magic //",
+			"surfaceForm": "Blue Magic //",
+			"position": "personArticles",
+			"type": "Article"
+		}
+	]
 }
 ```
 ### awards
@@ -110,9 +119,9 @@ Note that fields are not guaranteed to exist in every entity record.
 ```
 {
 	"birthDate": {
-		"str": "",
-		"precision": 0,
-		"timestamp": 0
+		"str": "d1957-01-08",
+		"precision": 3,
+		"timestamp": -409622400000
 	}
 }
 ```
@@ -198,7 +207,7 @@ Note that fields are not guaranteed to exist in every entity record.
 * **Example:**
 ```
 {
-	"crunchbaseUri": ""
+	"crunchbaseUri": "crunchbase.com/person/ted-leonsis"
 }
 ```
 ### deathDate
@@ -246,37 +255,42 @@ Note that fields are not guaranteed to exist in every entity record.
 {
 	"educations": [
 		{
-			"institution": "[See Organization]",
-			"isCurrent": false,
-			"hasDroppedOut": false,
-			"major": "[See EducationMajorEntity]",
-			"degree": "",
-			"description": "",
-			"location": {
-				"country": "[See AdministrativeArea]",
-				"address": "",
-				"city": "[See AdministrativeArea]",
-				"subregion": "[See AdministrativeArea]",
-				"latitude": "",
-				"precision": "",
-				"postalCode": "",
-				"surfaceForm": "",
-				"isCurrent": false,
-				"street": "",
-				"metroArea": "[See AdministrativeArea]",
-				"region": "[See AdministrativeArea]",
-				"rawAdministrativeArea": "[See AdministrativeArea]",
-				"longitude": ""
+			"institution": {
+				"summary": "Private university in Washington, D.C., United States",
+				"image": "https://kg.diffbot.com/image/api/get?fetch=yes&url=g%3Cj7P0St0DnBJf.x0KwLZrUn.%5B%3CR0Aa4Hh%3B%5Bv738ZqOr7U%3FjvIw%3ElS%3B_j1n%3AXh7N%7DA%7C%3C_yMyDC%5ER%601d%3AGU.b%7B5",
+				"types": [
+					"Organization"
+				],
+				"name": "Georgetown University",
+				"diffbotUri": "http://diffbot.com/entity/Erxd6erYyOeqlPSftx3FWJQ",
+				"nbIncomingEdges": 192259,
+				"targetDiffbotUri": "http://diffbot.com/entity/Erxd6erYyOeqlPSftx3FWJQ",
+				"surfaceForm": "Georgetown University",
+				"type": "Organization"
 			},
-			"from": {
-				"str": "",
-				"precision": 0,
-				"timestamp": 0
+			"isCurrent": false,
+			"major": {
+				"recordId": "EyLhQX8YeNWOH19RPpdU7Kg@542",
+				"name": "American Studies",
+				"surfaceForm": "American Studies",
+				"position": "personEducationMajor",
+				"type": "Major"
+			},
+			"degree": {
+				"types": [
+					"Intangible",
+					"DegreeEntity"
+				],
+				"name": "Bachelor's (4 year program)",
+				"diffbotUri": "http://diffbot.com/entity/EtWuqNi7UOGu2JRK_z95kDg",
+				"targetDiffbotUri": "http://diffbot.com/entity/EtWuqNi7UOGu2JRK_z95kDg",
+				"surfaceForm": "Bachelor's (4 year program)",
+				"type": "DegreeEntity"
 			},
 			"to": {
-				"str": "",
-				"precision": 0,
-				"timestamp": 0
+				"str": "d1977-XX-XX",
+				"precision": 1,
+				"timestamp": 220924800000
 			}
 		}
 	]
@@ -304,37 +318,135 @@ Note that fields are not guaranteed to exist in every entity record.
 {
 	"employments": [
 		{
-			"isCurrent": false,
-			"description": "",
-			"employer": "[See Organization]",
-			"location": {
-				"country": "[See AdministrativeArea]",
-				"address": "",
-				"city": "[See AdministrativeArea]",
-				"subregion": "[See AdministrativeArea]",
-				"latitude": "",
-				"precision": "",
-				"postalCode": "",
-				"surfaceForm": "",
-				"isCurrent": false,
-				"street": "",
-				"metroArea": "[See AdministrativeArea]",
-				"region": "[See AdministrativeArea]",
-				"rawAdministrativeArea": "[See AdministrativeArea]",
-				"longitude": ""
+			"isCurrent": true,
+			"employer": {
+				"summary": "American multinational financial services corporation",
+				"image": "https://kg.diffbot.com/image/api/get?fetch=yes&url=g%3Cj7P0St0DnBJf.x0KwLZrUn.%5B%3CR0Aa4Hh%3B%5Bv738ZqOr7U%3FGvvO%3Ef%5B1_l%2F%5B9%40%3FPi1%3DyJLrSl%3AC%25e1DpB_%25Px.Ar4",
+				"types": [
+					"Organization",
+					"Corporation"
+				],
+				"name": "American Express",
+				"diffbotUri": "http://diffbot.com/entity/E0WfaIUi8O5OJiCbVRwdj5Q",
+				"nbIncomingEdges": 242669,
+				"targetDiffbotUri": "http://diffbot.com/entity/E0WfaIUi8O5OJiCbVRwdj5Q",
+				"surfaceForm": "American Express",
+				"type": "Corporation"
+			},
+			"description": "Mr. Leonsis serves on the nominating, governance & public responsibility committee; and the compensation & benefits committee",
+			"from": {
+				"str": "d2010-07-01",
+				"precision": 3,
+				"timestamp": 1277942400000
+			},
+			"categories": [
+				{
+					"name": "Board Member",
+					"diffbotUri": "http://diffbot.com/entity/EnC5drWy1NVuOGQHd2ll0xw",
+					"targetDiffbotUri": "http://diffbot.com/entity/EnC5drWy1NVuOGQHd2ll0xw",
+					"surfaceForm": "Board Member"
+				},
+				{
+					"name": "Management",
+					"diffbotUri": "http://diffbot.com/entity/EpXGc9jmNPQW3wt-ny5SqCQ",
+					"targetDiffbotUri": "http://diffbot.com/entity/EpXGc9jmNPQW3wt-ny5SqCQ",
+					"surfaceForm": "Management"
+				},
+				{
+					"name": "Executive",
+					"diffbotUri": "http://diffbot.com/entity/EFHD6pfzYMtqdaaytNomkhA",
+					"targetDiffbotUri": "http://diffbot.com/entity/EFHD6pfzYMtqdaaytNomkhA",
+					"surfaceForm": "Executive"
+				}
+			],
+			"title": "Board of Directors"
+		},
+		{
+			"isCurrent": true,
+			"employer": {
+				"summary": "Financial services company founded in 2011",
+				"image": "https://kg.diffbot.com/image/api/get?fetch=yes&url=g%3Cj7P0St%7D9u.LnOv%7BI%7C%40g7.pBYINs%3Ff%7CGZ7jr-tGZhWf%3DK%2FOvy%5Bp%3CSKbs8i%7CEyKk7Q%7DPe%3FNq%2FP7e%5Bttw9V",
+				"types": [
+					"Organization",
+					"Corporation"
+				],
+				"name": "Revolution Growth",
+				"diffbotUri": "http://diffbot.com/entity/ECxtI0LTrMVWP1WK4UCXALA",
+				"nbIncomingEdges": 85,
+				"targetDiffbotUri": "http://diffbot.com/entity/ECxtI0LTrMVWP1WK4UCXALA",
+				"surfaceForm": "Revolution Growth",
+				"type": "Corporation"
+			},
+			"description": "As co-founder and partner at Revolution Growth, a $1 billion set of investment funds, Mr. Leonsis and his partners make a select group of speed-up capital investments each year in businesses outside of Silicon Valley that are leveraging technology and new models to disrupt existing, multi-billion dollar industries. Investments includes companies such as Sportradar USA, DraftKings, Bedrock Manufacturing (parent company of Shinola and Filson), Resonate, Optoro, CustomInk, Cava and sweetgreen.",
+			"from": {
+				"str": "d2011-11-XX",
+				"precision": 2,
+				"timestamp": 1320105600000
+			},
+			"categories": [
+				{
+					"name": "Management",
+					"diffbotUri": "http://diffbot.com/entity/EpXGc9jmNPQW3wt-ny5SqCQ",
+					"targetDiffbotUri": "http://diffbot.com/entity/EpXGc9jmNPQW3wt-ny5SqCQ",
+					"surfaceForm": "Management"
+				},
+				{
+					"name": "Founder",
+					"diffbotUri": "http://diffbot.com/entity/EoN4VH9EANdSbPUhVFBbVSQ",
+					"targetDiffbotUri": "http://diffbot.com/entity/EoN4VH9EANdSbPUhVFBbVSQ",
+					"surfaceForm": "Founder"
+				}
+			],
+			"title": "Co-Founder"
+		},
+		{
+			"isCurrent": true,
+			"employer": {
+				"summary": "Entertainment company founded in 1997",
+				"image": "https://kg.diffbot.com/image/api/get?fetch=yes&url=g%3Cj7P0St%7D9u.LnOv%7BI%7C%40g7.pBYINs%3Ff%7CGZ7jr-tGZhWf%3DK%2FOvy%5Bp%3CSKbs8i%7CEyNzC%5D%3C%60u%3Bl5Nc9ebv%5D5%5BZ9Zl%3E_OMa%5E%60xb.I%5Do",
+				"types": [
+					"Organization",
+					"Corporation"
+				],
+				"name": "Monumental Sports & Entertainment",
+				"diffbotUri": "http://diffbot.com/entity/E0T9lM-4cOB6KcFCN0ShBXg",
+				"nbIncomingEdges": 2244,
+				"targetDiffbotUri": "http://diffbot.com/entity/E0T9lM-4cOB6KcFCN0ShBXg",
+				"surfaceForm": "Monumental Sports & Entertainment",
+				"type": "Corporation"
 			},
 			"from": {
-				"str": "",
-				"precision": 0,
-				"timestamp": 0
+				"str": "d1999-01-01",
+				"precision": 3,
+				"timestamp": 915148800000
 			},
-			"categories": "[See Role]",
-			"to": {
-				"str": "",
-				"precision": 0,
-				"timestamp": 0
-			},
-			"title": ""
+			"categories": [
+				{
+					"name": "Board Member",
+					"diffbotUri": "http://diffbot.com/entity/EnC5drWy1NVuOGQHd2ll0xw",
+					"targetDiffbotUri": "http://diffbot.com/entity/EnC5drWy1NVuOGQHd2ll0xw",
+					"surfaceForm": "Board Member"
+				},
+				{
+					"name": "Management",
+					"diffbotUri": "http://diffbot.com/entity/EpXGc9jmNPQW3wt-ny5SqCQ",
+					"targetDiffbotUri": "http://diffbot.com/entity/EpXGc9jmNPQW3wt-ny5SqCQ",
+					"surfaceForm": "Management"
+				},
+				{
+					"name": "Executive",
+					"diffbotUri": "http://diffbot.com/entity/EFHD6pfzYMtqdaaytNomkhA",
+					"targetDiffbotUri": "http://diffbot.com/entity/EFHD6pfzYMtqdaaytNomkhA",
+					"surfaceForm": "Executive"
+				},
+				{
+					"name": "Chairman",
+					"diffbotUri": "http://diffbot.com/entity/ELiQhNkW0MuSuM5HPer8gpQ",
+					"targetDiffbotUri": "http://diffbot.com/entity/ELiQhNkW0MuSuM5HPer8gpQ",
+					"surfaceForm": "Chairman"
+				}
+			],
+			"title": "Chairman of the Board of Directors"
 		}
 	]
 }
@@ -354,7 +466,7 @@ Note that fields are not guaranteed to exist in every entity record.
 * **Example:**
 ```
 {
-	"facebookUri": ""
+	"facebookUri": "facebook.com/ted.leonsis"
 }
 ```
 ### friends
@@ -372,7 +484,9 @@ Note that fields are not guaranteed to exist in every entity record.
 * **Example:**
 ```
 {
-	"gender": ""
+	"gender": {
+		"normalizedValue": "Male"
+	}
 }
 ```
 ### githubUri
@@ -417,7 +531,7 @@ Note that fields are not guaranteed to exist in every entity record.
 * **Example:**
 ```
 {
-	"homepageUri": ""
+	"homepageUri": "tedstake.com"
 }
 ```
 ### instagramUri
@@ -435,7 +549,22 @@ Note that fields are not guaranteed to exist in every entity record.
 * **Example:**
 ```
 {
-	"interests": ""
+	"interests": [
+		{
+			"recordId": "EyLhQX8YeNWOH19RPpdU7Kg@603",
+			"name": "entrepreneurship",
+			"surfaceForm": "entrepreneurship",
+			"position": "personInterest",
+			"type": "Miscellaneous"
+		},
+		{
+			"recordId": "EyLhQX8YeNWOH19RPpdU7Kg@604",
+			"name": "investing",
+			"surfaceForm": "investing",
+			"position": "personInterest",
+			"type": "Miscellaneous"
+		}
+	]
 }
 ```
 ### languages
@@ -453,7 +582,7 @@ Note that fields are not guaranteed to exist in every entity record.
 * **Example:**
 ```
 {
-	"linkedInUri": ""
+	"linkedInUri": "linkedin.com/in/ted-leonsis-a9655378"
 }
 ```
 ### locations
@@ -464,20 +593,178 @@ Note that fields are not guaranteed to exist in every entity record.
 {
 	"locations": [
 		{
-			"country": "[See AdministrativeArea]",
-			"address": "",
-			"city": "[See AdministrativeArea]",
-			"subregion": "[See AdministrativeArea]",
-			"latitude": "",
-			"precision": "",
-			"postalCode": "",
-			"surfaceForm": "",
+			"country": {
+				"summary": "Sovereign state in North America",
+				"image": "https://kg.diffbot.com/image/api/get?fetch=yes&url=g%3Cj7P0St0DnBJf.x0KwLZrUn.%5B%3CR0Aa4Hh%3B%5Bv738ZqOr7U%3FfvEQ%3El%601Nw%7BM0Bf7hu7z%3FRe9s4XwGXedrKUAN%28%3D%5ECHnM%60%29.%7BOV",
+				"types": [
+					"Place",
+					"AdministrativeArea"
+				],
+				"name": "United States of America",
+				"diffbotUri": "http://diffbot.com/entity/E01d4EK33MmCosgI2KXa4-A",
+				"nbIncomingEdges": 1245575855,
+				"targetDiffbotUri": "http://diffbot.com/entity/E01d4EK33MmCosgI2KXa4-A",
+				"type": "AdministrativeArea"
+			},
+			"isCurrent": true,
+			"address": "Potomac, Maryland",
+			"city": {
+				"summary": "Census-designated place in Montgomery County, Maryland, United States",
+				"image": "https://kg.diffbot.com/image/api/get?fetch=yes&url=g%3Cj7P0St0DnBJf.x0KwLZrUn.%5B%3CR0Aa4Hh%3B%5Bv738ZqOr7U%3FDvsO%3Er%5D%3Aaj%3Bg0Ss7%3C%7EMtKfe1f%3D%5D%7EDgvOZES%3Dau%3Dn%7EWa%3EZrHl8DvOu0U6Uj6S7%3EV%2FRy5_BDNKq2Ik%3EPRQp7T%2FNe%3AYy.gHZ",
+				"types": [
+					"Place",
+					"AdministrativeArea"
+				],
+				"name": "Potomac",
+				"diffbotUri": "http://diffbot.com/entity/E2uNw5qOlNAqFMoVADNwLhw",
+				"nbIncomingEdges": 109966,
+				"targetDiffbotUri": "http://diffbot.com/entity/E2uNw5qOlNAqFMoVADNwLhw",
+				"type": "AdministrativeArea"
+			},
+			"subregion": {
+				"summary": "County in Maryland, United States",
+				"image": "https://kg.diffbot.com/image/api/get?fetch=yes&url=g%3Cj7P0St0DnBJf.x0KwLZrUn.%5B%3CR0Aa4Hh%3B%5Bv738ZqOr7U%3FgvFQ%3ErO%3CLr2YhBlQepFj6UoKm7MyKm%7B%5Ex6%3D%3D%5Dy5k%3AHnSZTI%7DGc1.zCM",
+				"types": [
+					"Place"
+				],
+				"name": "Montgomery County",
+				"diffbotUri": "http://diffbot.com/entity/EwhIaKn1qNi6TZQUBrPLqcg",
+				"nbIncomingEdges": 3104171,
+				"targetDiffbotUri": "http://diffbot.com/entity/EwhIaKn1qNi6TZQUBrPLqcg",
+				"type": "Place"
+			},
+			"latitude": 39.011817932128906,
+			"precision": 8.289426803588867,
+			"postalCode": "20817",
+			"surfaceForm": "Potomac, Maryland",
+			"region": {
+				"summary": "State of the United States of America",
+				"image": "https://kg.diffbot.com/image/api/get?fetch=yes&url=g%3Cj7P0St0DnBJf.x0KwLZrUn.%5B%3CR0Aa4Hh%3B%5Bv738ZqOr7U%3Fav%40n%3ExS%7DYb%3B%60z%7E%5BJr%7B9t%3BL%28VjAI4V%5E%29.4MW",
+				"types": [
+					"Place",
+					"AdministrativeArea"
+				],
+				"name": "Maryland",
+				"diffbotUri": "http://diffbot.com/entity/EglcJEUJCMkavBvSi16gKjA",
+				"nbIncomingEdges": 22057440,
+				"targetDiffbotUri": "http://diffbot.com/entity/EglcJEUJCMkavBvSi16gKjA",
+				"type": "AdministrativeArea"
+			},
+			"longitude": -77.1876220703125
+		},
+		{
+			"country": {
+				"summary": "Sovereign state in North America",
+				"image": "https://kg.diffbot.com/image/api/get?fetch=yes&url=g%3Cj7P0St0DnBJf.x0KwLZrUn.%5B%3CR0Aa4Hh%3B%5Bv738ZqOr7U%3FfvEQ%3El%601Nw%7BM0Bf7hu7z%3FRe9s4XwGXedrKUAN%28%3D%5ECHnM%60%29.%7BOV",
+				"types": [
+					"Place",
+					"AdministrativeArea"
+				],
+				"name": "United States of America",
+				"diffbotUri": "http://diffbot.com/entity/E01d4EK33MmCosgI2KXa4-A",
+				"nbIncomingEdges": 1245575855,
+				"targetDiffbotUri": "http://diffbot.com/entity/E01d4EK33MmCosgI2KXa4-A",
+				"type": "AdministrativeArea"
+			},
 			"isCurrent": false,
-			"street": "",
-			"metroArea": "[See AdministrativeArea]",
-			"region": "[See AdministrativeArea]",
-			"rawAdministrativeArea": "[See AdministrativeArea]",
-			"longitude": ""
+			"address": "New York, New York",
+			"city": {
+				"summary": "Largest city in the United States",
+				"image": "https://kg.diffbot.com/image/api/get?fetch=yes&url=g%3Cj7P0St0DnBJf.x0KwLZrUn.%5B%3CR0Aa4Hh%3B%5Bv738ZqOr7U%3FgvFo%3ExS%7DYb%3B%60z%2F_OXhGxBLIMyDCT%3A.5fx",
+				"types": [
+					"Place",
+					"AdministrativeArea"
+				],
+				"name": "New York City",
+				"diffbotUri": "http://diffbot.com/entity/EcMmgf99wMQ6XYnbChv5HiQ",
+				"nbIncomingEdges": 18337731,
+				"targetDiffbotUri": "http://diffbot.com/entity/EcMmgf99wMQ6XYnbChv5HiQ",
+				"type": "AdministrativeArea"
+			},
+			"subregion": {
+				"recordId": "EyLhQX8YeNWOH19RPpdU7Kg@550",
+				"name": "Kings County",
+				"position": "personLocationPlace",
+				"type": "AdministrativeArea"
+			},
+			"latitude": 40.68294906616211,
+			"precision": 27.989721298217773,
+			"postalCode": "11217",
+			"surfaceForm": "New York City, New York",
+			"region": {
+				"summary": "State of the United States of America",
+				"image": "https://kg.diffbot.com/image/api/get?fetch=yes&url=g%3Cj7P0St0DnBJf.x0KwLZrUn.%5B%3CR0Aa4Hh%3B%5Bv738ZqOr7U%3FDvsO%3ExS%7DYb%3B%60z%2F_OXhGxB.yZl",
+				"types": [
+					"Place",
+					"AdministrativeArea"
+				],
+				"name": "New York",
+				"diffbotUri": "http://diffbot.com/entity/E1NxI_KXaMbiP5g2aM9MRdw",
+				"nbIncomingEdges": 83627591,
+				"targetDiffbotUri": "http://diffbot.com/entity/E1NxI_KXaMbiP5g2aM9MRdw",
+				"type": "AdministrativeArea"
+			},
+			"longitude": -73.9708023071289
+		},
+		{
+			"country": {
+				"summary": "Sovereign state in North America",
+				"image": "https://kg.diffbot.com/image/api/get?fetch=yes&url=g%3Cj7P0St0DnBJf.x0KwLZrUn.%5B%3CR0Aa4Hh%3B%5Bv738ZqOr7U%3FfvEQ%3El%601Nw%7BM0Bf7hu7z%3FRe9s4XwGXedrKUAN%28%3D%5ECHnM%60%29.%7BOV",
+				"types": [
+					"Place",
+					"AdministrativeArea"
+				],
+				"name": "United States of America",
+				"diffbotUri": "http://diffbot.com/entity/E01d4EK33MmCosgI2KXa4-A",
+				"nbIncomingEdges": 1245575855,
+				"targetDiffbotUri": "http://diffbot.com/entity/E01d4EK33MmCosgI2KXa4-A",
+				"type": "AdministrativeArea"
+			},
+			"isCurrent": false,
+			"address": "Dulles, Virginia",
+			"city": {
+				"summary": "Unincorporated area located in Loudoun County, Virginia",
+				"types": [
+					"Place",
+					"AdministrativeArea"
+				],
+				"name": "Dulles",
+				"diffbotUri": "http://diffbot.com/entity/E2c6AmpoGP6mrk-AlSI21AQ",
+				"nbIncomingEdges": 46857,
+				"targetDiffbotUri": "http://diffbot.com/entity/E2c6AmpoGP6mrk-AlSI21AQ",
+				"type": "AdministrativeArea"
+			},
+			"subregion": {
+				"summary": "County in Virginia, United States",
+				"image": "https://kg.diffbot.com/image/api/get?fetch=yes&url=g%3Cj7P0St0DnBJf.x0KwLZrUn.%5B%3CR0Aa4Hh%3B%5Bv738ZqOr7U%3FivHQ%3ErO%3CLr2YqJl%3Fb%7DAg6UoKm7MyKm%7B%5Ex6%3C%3Ddi%3Dq%3BB%3FIp%2FN1.b%7EM",
+				"types": [
+					"Place",
+					"AdministrativeArea"
+				],
+				"name": "Loudoun County",
+				"diffbotUri": "http://diffbot.com/entity/EWXAzP3oGNICyxGdIZLT3Lg",
+				"nbIncomingEdges": 791012,
+				"targetDiffbotUri": "http://diffbot.com/entity/EWXAzP3oGNICyxGdIZLT3Lg",
+				"type": "AdministrativeArea"
+			},
+			"latitude": 39.0376091003418,
+			"precision": 0,
+			"postalCode": "20165",
+			"surfaceForm": "Dulles, Virginia",
+			"region": {
+				"summary": "State of the United States of America",
+				"image": "https://kg.diffbot.com/image/api/get?fetch=yes&url=g%3Cj7P0St0DnBJf.x0KwLZrUn.%5B%3CR0Aa4Hh%3B%5Bv738ZqOr7U%3FgvFT%3ExS%7DYb%3B%60z7cJ%60xFo8.yZl",
+				"types": [
+					"Place",
+					"AdministrativeArea"
+				],
+				"name": "Virginia",
+				"diffbotUri": "http://diffbot.com/entity/EIq1PftjrND-Nofzr7rGJbA",
+				"nbIncomingEdges": 31606048,
+				"targetDiffbotUri": "http://diffbot.com/entity/EIq1PftjrND-Nofzr7rGJbA",
+				"type": "AdministrativeArea"
+			},
+			"longitude": -77.41581726074219
 		}
 	]
 }
@@ -489,11 +776,11 @@ Note that fields are not guaranteed to exist in every entity record.
 ```
 {
 	"nameDetail": {
-		"firstName": "",
-		"lastName": "",
-		"prefixes": "",
-		"suffixes": "",
-		"middleName": ""
+		"firstName": "Theodore",
+		"lastName": "Leonsis",
+		"middleName": [
+			"'ted'"
+		]
 	}
 }
 ```
@@ -565,7 +852,9 @@ Note that fields are not guaranteed to exist in every entity record.
 * **Example:**
 ```
 {
-	"religion": ""
+	"religion": {
+		"str": "Greek Orthodox Church"
+	}
 }
 ```
 ### siblings
@@ -583,7 +872,26 @@ Note that fields are not guaranteed to exist in every entity record.
 * **Example:**
 ```
 {
-	"skills": "[See Skill]"
+	"skills": [
+		{
+			"name": "human resource management",
+			"diffbotUri": "http://diffbot.com/entity/EGbsKlNBiP2C24W80rbtTOg",
+			"targetDiffbotUri": "http://diffbot.com/entity/EGbsKlNBiP2C24W80rbtTOg",
+			"surfaceForm": "human resource management"
+		},
+		{
+			"name": "supply chain management",
+			"diffbotUri": "http://diffbot.com/entity/EvglNgl2jNCyhiMhRpVH9JA",
+			"targetDiffbotUri": "http://diffbot.com/entity/EvglNgl2jNCyhiMhRpVH9JA",
+			"surfaceForm": "supply chain management"
+		},
+		{
+			"name": "non-profit",
+			"diffbotUri": "http://diffbot.com/entity/EFbFr-nyKPcuAHtF3yLlQOg",
+			"targetDiffbotUri": "http://diffbot.com/entity/EFbFr-nyKPcuAHtF3yLlQOg",
+			"surfaceForm": "non-profit"
+		}
+	]
 }
 ```
 ### twitterUri
@@ -592,7 +900,7 @@ Note that fields are not guaranteed to exist in every entity record.
 * **Example:**
 ```
 {
-	"twitterUri": ""
+	"twitterUri": "twitter.com/TedLeonsis"
 }
 ```
 ### unions
@@ -635,7 +943,7 @@ Note that fields are not guaranteed to exist in every entity record.
 * **Example:**
 ```
 {
-	"wikipediaUri": ""
+	"wikipediaUri": "en.wikipedia.org/wiki/Ted_Leonsis"
 }
 ```
 ### youtubeUri

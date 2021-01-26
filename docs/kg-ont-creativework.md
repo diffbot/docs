@@ -7,7 +7,7 @@ The Creative Work entity type encompasses movies, tv shows, musicals, scripts, a
 
 Note that fields are not guaranteed to exist in every entity record.
 
->New to the Diffbot Knowledge Graph? [Start here](kg-quickstart).
+>New to the Diffbot Knowledge Graph? [Start here](dql-quickstart).
 
 ## CreativeWork Fields
 * [aspectRatio](#aspectratio) 
@@ -47,6 +47,7 @@ Note that fields are not guaranteed to exist in every entity record.
 * [writers](#writers) 
 
 ## CreativeWork Field Details
+Note that certain longer field examples may be truncated for readability in these docs. 
 
 ### aspectRatio
   
@@ -101,9 +102,39 @@ Note that fields are not guaranteed to exist in every entity record.
 {
 	"castmembers": [
 		{
-			"castmember": "[See Person]",
-			"characterName": "",
-			"characterLink": ""
+			"castmember": {
+				"recordId": "E36UrGbGyPzC0zOFH52H0-w@0",
+				"name": "Willie Nelson",
+				"websiteUris": [
+					"imdb.com/name/nm0005268"
+				],
+				"surfaceForm": "Willie Nelson",
+				"type": "Person"
+			},
+			"characterLink": "imdb.com/title/tt0364784/characters/nm0005268"
+		},
+		{
+			"castmember": {
+				"recordId": "E36UrGbGyPzC0zOFH52H0-w@1",
+				"name": "Lyle Lovett",
+				"websiteUris": [
+					"imdb.com/name/nm0005164"
+				],
+				"surfaceForm": "Lyle Lovett",
+				"type": "Person"
+			}
+		},
+		{
+			"castmember": {
+				"recordId": "E36UrGbGyPzC0zOFH52H0-w@2",
+				"name": "John Prine",
+				"websiteUris": [
+					"imdb.com/name/nm0697789"
+				],
+				"surfaceForm": "John Prine",
+				"type": "Person"
+			},
+			"characterLink": "imdb.com/title/tt0364784/characters/nm0697789"
 		}
 	]
 }
@@ -114,7 +145,7 @@ Note that fields are not guaranteed to exist in every entity record.
 * **Example:**
 ```
 {
-	"color": ""
+	"color": "Color"
 }
 ```
 ### countryOfOrigin
@@ -123,7 +154,9 @@ Note that fields are not guaranteed to exist in every entity record.
 * **Example:**
 ```
 {
-	"countryOfOrigin": ""
+	"countryOfOrigin": [
+		"USA"
+	]
 }
 ```
 ### creativeWorkType
@@ -132,7 +165,7 @@ Note that fields are not guaranteed to exist in every entity record.
 * **Example:**
 ```
 {
-	"creativeWorkType": ""
+	"creativeWorkType": "tv series"
 }
 ```
 ### creators
@@ -141,7 +174,18 @@ Note that fields are not guaranteed to exist in every entity record.
 * **Example:**
 ```
 {
-	"creators": "[See Person]"
+	"creators": [
+		{
+			"recordId": "E36UrGbGyPzC0zOFH52H0-w@398",
+			"name": "Bill Arhos",
+			"websiteUris": [
+				"imdb.com/name/nm0034638"
+			],
+			"surfaceForm": "Bill Arhos",
+			"position": "creativeWorkCreator",
+			"type": "Person"
+		}
+	]
 }
 ```
 ### directors
@@ -168,7 +212,10 @@ Note that fields are not guaranteed to exist in every entity record.
 * **Example:**
 ```
 {
-	"genres": ""
+	"genres": [
+		"Documentary",
+		"Music"
+	]
 }
 ```
 ### imdbPopularity
@@ -186,7 +233,7 @@ Note that fields are not guaranteed to exist in every entity record.
 * **Example:**
 ```
 {
-	"imdbRating": ""
+	"imdbRating": 8.1
 }
 ```
 ### imdbUri
@@ -195,7 +242,7 @@ Note that fields are not guaranteed to exist in every entity record.
 * **Example:**
 ```
 {
-	"imdbUri": ""
+	"imdbUri": "imdb.com/title/tt0364784"
 }
 ```
 ### languages
@@ -204,7 +251,9 @@ Note that fields are not guaranteed to exist in every entity record.
 * **Example:**
 ```
 {
-	"languages": ""
+	"languages": [
+		"English"
+	]
 }
 ```
 ### latestSeason
@@ -213,7 +262,7 @@ Note that fields are not guaranteed to exist in every entity record.
 * **Example:**
 ```
 {
-	"latestSeason": 0
+	"latestSeason": 45
 }
 ```
 ### latestSeasonYear
@@ -222,7 +271,7 @@ Note that fields are not guaranteed to exist in every entity record.
 * **Example:**
 ```
 {
-	"latestSeasonYear": 0
+	"latestSeasonYear": 2020
 }
 ```
 ### metaScore
@@ -249,7 +298,7 @@ Note that fields are not guaranteed to exist in every entity record.
 * **Example:**
 ```
 {
-	"numAwards": ""
+	"numAwards": "1 win."
 }
 ```
 ### numEpisodes
@@ -258,7 +307,7 @@ Note that fields are not guaranteed to exist in every entity record.
 * **Example:**
 ```
 {
-	"numEpisodes": 0
+	"numEpisodes": 394
 }
 ```
 ### officialSites
@@ -267,7 +316,9 @@ Note that fields are not guaranteed to exist in every entity record.
 * **Example:**
 ```
 {
-	"officialSites": ""
+	"officialSites": [
+		"imdb.com/offsite"
+	]
 }
 ```
 ### parentTitle
@@ -285,7 +336,11 @@ Note that fields are not guaranteed to exist in every entity record.
 * **Example:**
 ```
 {
-	"plotKeywords": ""
+	"plotKeywords": [
+		"three word title",
+		"place name in title",
+		"city name in title"
+	]
 }
 ```
 ### plotSummary
@@ -294,7 +349,7 @@ Note that fields are not guaranteed to exist in every entity record.
 * **Example:**
 ```
 {
-	"plotSummary": ""
+	"plotSummary": "Established singer-songwriters and acclaimed newcomers perform country, blues, rock, folk, bluegrass, and related styles of music from Studio 6A of public television station KLRU (formerly KLRN) at the University of Texas at Austin."
 }
 ```
 ### posterImgLink
@@ -303,7 +358,7 @@ Note that fields are not guaranteed to exist in every entity record.
 * **Example:**
 ```
 {
-	"posterImgLink": ""
+	"posterImgLink": "m.media-amazon.com/images/M/MV5BZWFlYjg5Y2ItNTQ0MS00OTQ4LThiYzgtZTQ5ZGViNDQ1MTAyXkEyXkFqcGdeQXVyMjA0NDYyNjc@._V1_UX182_CR0,0,182,268_AL_.jpg"
 }
 ```
 ### productionCompanies
@@ -312,7 +367,18 @@ Note that fields are not guaranteed to exist in every entity record.
 * **Example:**
 ```
 {
-	"productionCompanies": "[See Organization]"
+	"productionCompanies": [
+		{
+			"recordId": "E36UrGbGyPzC0zOFH52H0-w@397",
+			"name": "KLRU Austin",
+			"websiteUris": [
+				"imdb.com/company/co0143541"
+			],
+			"surfaceForm": "KLRU Austin",
+			"position": "creativeWorkProductionOrganization",
+			"type": "Organization"
+		}
+	]
 }
 ```
 ### releaseDate
@@ -322,9 +388,9 @@ Note that fields are not guaranteed to exist in every entity record.
 ```
 {
 	"releaseDate": {
-		"str": "",
-		"precision": 0,
-		"timestamp": 0
+		"str": "d1975-XX-XX",
+		"precision": 1,
+		"timestamp": 157766400000
 	}
 }
 ```
