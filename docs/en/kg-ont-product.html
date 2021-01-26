@@ -1,0 +1,501 @@
+<!DOCTYPE html><html lang="en"><head><meta charSet="utf-8"/><meta http-equiv="X-UA-Compatible" content="IE=edge"/><title>Product · Docs Suite</title><meta name="viewport" content="width=device-width"/><meta name="generator" content="Docusaurus"/><meta name="description" content="The product entity type encompasses products found throughout the web known to the Knowledge Graph. "/><meta name="docsearch:language" content="en"/><meta property="og:title" content="Product · Docs Suite"/><meta property="og:type" content="website"/><meta property="og:url" content="https://diffbot.github.io/"/><meta property="og:description" content="The product entity type encompasses products found throughout the web known to the Knowledge Graph. "/><meta property="og:image" content="https://diffbot.github.io/img/diagram.svg"/><meta name="twitter:card" content="summary"/><meta name="twitter:image" content="https://diffbot.github.io/img/diagram.svg"/><link rel="shortcut icon" href="/img/diffbot-head.png"/><link rel="stylesheet" href="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.css"/><link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/default.min.css"/><script type="text/javascript" src="https://buttons.github.io/buttons.js"></script><script type="text/javascript" src="/js/app.js"></script><script src="/js/scrollSpy.js"></script><link rel="stylesheet" href="/css/main.css"/><script src="/js/codetabs.js"></script></head><body class="sideNavVisible separateOnPageNav"><div class="fixedHeaderContainer"><div class="headerWrapper wrapper"><header><a href="/"><img class="logo" src="/img/diffbot_white.svg" alt="Docs Suite"/><h2 class="headerTitleWithLogo">Docs Suite</h2></a><div class="navigationWrapper navigationSlider"><nav class="slidingNav"><ul class="nav-site nav-site-internal"><li class=""><a href="/docs/en/error-intro" target="_self">Debugging</a></li><li class="navSearchWrapper reactNavSearchWrapper"><input type="text" id="search_input_react" placeholder="Search" title="Search"/></li></ul></nav></div></header></div></div><div class="navPusher"><div class="docMainWrapper wrapper"><div class="docsNavContainer" id="docsNav"><nav class="toc"><div class="toggleNav"><section class="navWrapper wrapper"><div class="navBreadcrumb wrapper"><div class="navToggle" id="navToggler"><div class="hamburger-menu"><div class="line1"></div><div class="line2"></div><div class="line3"></div></div></div><h2><i>›</i><span>KG Ontology</span></h2><div class="tocToggler" id="tocToggler"><i class="icon-toc"></i></div></div><div class="navGroups"><div class="navGroup"><h3 class="navGroupCategoryTitle collapsible">KG Ontology<span class="arrow"><svg width="24" height="24" viewBox="0 0 24 24"><path fill="#565656" d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z"></path><path d="M0 0h24v24H0z" fill="none"></path></svg></span></h3><ul class="hide"><li class="navListItem"><a class="navItem" href="/docs/en/kg-ont-diffbotentity">All</a></li><li class="navListItem"><a class="navItem" href="/docs/en/kg-ont-article">Article</a></li><li class="navListItem"><a class="navItem" href="/docs/en/kg-ont-organization">Organization</a></li><li class="navListItem"><a class="navItem" href="/docs/en/kg-ont-person">Person</a></li><li class="navListItem"><a class="navItem" href="/docs/en/kg-ont-place">Place</a></li><li class="navListItem"><a class="navItem" href="/docs/en/kg-ont-creativework">CreativeWork</a></li><li class="navListItem navListItemActive"><a class="navItem" href="/docs/en/kg-ont-product">Product</a></li><li class="navListItem"><a class="navItem" href="/docs/en/kg-ont-image">Image</a></li><li class="navListItem"><a class="navItem" href="/docs/en/kg-ont-video">Video</a></li><li class="navListItem"><a class="navItem" href="/docs/en/kg-ont-event">Event</a></li><li class="navListItem"><a class="navItem" href="/docs/en/kg-ont-discussion">Discussion</a></li><div class="navGroup subNavGroup"><h4 class="navGroupSubcategoryTitle">Other</h4><ul><li class="navListItem"><a class="navItem" href="/docs/en/kg-ont-administrativearea">AdministrativeArea</a></li></ul></div></ul></div></div></section></div><script>
+            var coll = document.getElementsByClassName('collapsible');
+            var checkActiveCategory = true;
+            for (var i = 0; i < coll.length; i++) {
+              var links = coll[i].nextElementSibling.getElementsByTagName('*');
+              if (checkActiveCategory){
+                for (var j = 0; j < links.length; j++) {
+                  if (links[j].classList.contains('navListItemActive')){
+                    coll[i].nextElementSibling.classList.toggle('hide');
+                    coll[i].childNodes[1].classList.toggle('rotate');
+                    checkActiveCategory = false;
+                    break;
+                  }
+                }
+              }
+
+              coll[i].addEventListener('click', function() {
+                var arrow = this.childNodes[1];
+                arrow.classList.toggle('rotate');
+                var content = this.nextElementSibling;
+                content.classList.toggle('hide');
+              });
+            }
+
+            document.addEventListener('DOMContentLoaded', function() {
+              createToggler('#navToggler', '#docsNav', 'docsSliderActive');
+              createToggler('#tocToggler', 'body', 'tocActive');
+
+              var headings = document.querySelector('.toc-headings');
+              headings && headings.addEventListener('click', function(event) {
+                var el = event.target;
+                while(el !== headings){
+                  if (el.tagName === 'A') {
+                    document.body.classList.remove('tocActive');
+                    break;
+                  } else{
+                    el = el.parentNode;
+                  }
+                }
+              }, false);
+
+              function createToggler(togglerSelector, targetSelector, className) {
+                var toggler = document.querySelector(togglerSelector);
+                var target = document.querySelector(targetSelector);
+
+                if (!toggler) {
+                  return;
+                }
+
+                toggler.onclick = function(event) {
+                  event.preventDefault();
+
+                  target.classList.toggle(className);
+                };
+              }
+            });
+        </script></nav></div><div class="container mainContainer docsContainer"><div class="wrapper"><div class="post"><header class="postHeader"><a class="edit-page-link button" href="https://github.com/diffbot/docs/edit/master/docs/kg-ont-product.md" target="_blank" rel="noreferrer noopener">Edit</a><h1 id="__docusaurus" class="postHeaderTitle">Product</h1></header><article><div><span><p>The product entity type encompasses products found throughout the web known to the Knowledge Graph.</p>
+<p>Note that fields are not guaranteed to exist in every entity record.</p>
+<blockquote>
+<p>New to the Diffbot Knowledge Graph? <a href="dql-quickstart">Start here</a>.</p>
+</blockquote>
+<h2><a class="anchor" aria-hidden="true" id="product-fields"></a><a href="#product-fields" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Product Fields</h2>
+<ul>
+<li><a href="#availability">availability</a></li>
+<li><a href="#brand">brand</a></li>
+<li><a href="#breadcrumb">breadcrumb</a></li>
+<li><a href="#category">category</a></li>
+<li><a href="#discussion">discussion</a></li>
+<li><a href="#images">images</a></li>
+<li><a href="#isbn">isbn</a></li>
+<li><a href="#language">language</a></li>
+<li><a href="#mpn">mpn</a></li>
+<li><a href="#multipleproducts">multipleProducts</a></li>
+<li><a href="#offerprice">offerPrice</a></li>
+<li><a href="#offerpricedetails">offerPriceDetails</a></li>
+<li><a href="#prefixcode">prefixCode</a></li>
+<li><a href="#productid">productId</a></li>
+<li><a href="#productorigin">productOrigin</a></li>
+<li><a href="#regularprice">regularPrice</a></li>
+<li><a href="#regularpricedetails">regularPriceDetails</a></li>
+<li><a href="#saveamount">saveAmount</a></li>
+<li><a href="#saveamountdetails">saveAmountDetails</a></li>
+<li><a href="#shippingamount">shippingAmount</a></li>
+<li><a href="#sku">sku</a></li>
+<li><a href="#text">text</a></li>
+<li><a href="#title">title</a></li>
+<li><a href="#upc">upc</a></li>
+</ul>
+<h2><a class="anchor" aria-hidden="true" id="product-field-details"></a><a href="#product-field-details" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Product Field Details</h2>
+<p>Note that certain longer field examples may be truncated for readability in these docs.</p>
+<h3><a class="anchor" aria-hidden="true" id="availability"></a><a href="#availability" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>availability</h3>
+<ul>
+<li><strong>Type:</strong> Boolean</li>
+<li><strong>Example:</strong></li>
+</ul>
+<pre><code class="hljs">{
+    <span class="hljs-attr">"availability"</span>: <span class="hljs-literal">false</span>
+}
+</code></pre>
+<h3><a class="anchor" aria-hidden="true" id="brand"></a><a href="#brand" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>brand</h3>
+<p>Item's brand name</p>
+<ul>
+<li><strong>Type:</strong> String</li>
+<li><strong>Example:</strong></li>
+</ul>
+<pre><code class="hljs">{
+    <span class="hljs-attr">"brand"</span>: <span class="hljs-string">"Digital Decor"</span>
+}
+</code></pre>
+<h3><a class="anchor" aria-hidden="true" id="breadcrumb"></a><a href="#breadcrumb" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>breadcrumb</h3>
+<ul>
+<li><strong>Type:</strong> GlobalIndexBreadcrumb</li>
+<li><strong>Example:</strong></li>
+</ul>
+<pre><code class="hljs">{
+    <span class="hljs-attr">"breadcrumb"</span>: [
+        {
+            <span class="hljs-attr">"link"</span>: <span class="hljs-string">""</span>,
+            <span class="hljs-attr">"name"</span>: <span class="hljs-string">""</span>
+        }
+    ]
+}
+</code></pre>
+<h3><a class="anchor" aria-hidden="true" id="category"></a><a href="#category" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>category</h3>
+<ul>
+<li><strong>Type:</strong> String</li>
+<li><strong>Example:</strong></li>
+</ul>
+<pre><code class="hljs">{
+    <span class="hljs-attr">"category"</span>: <span class="hljs-string">"Indoor Living"</span>
+}
+</code></pre>
+<h3><a class="anchor" aria-hidden="true" id="discussion"></a><a href="#discussion" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>discussion</h3>
+<ul>
+<li><strong>Type:</strong> GIDiscussionField</li>
+<li><strong>Example:</strong></li>
+</ul>
+<pre><code class="hljs">{
+    <span class="hljs-comment">"discussion"</span>: {
+        <span class="hljs-comment">"summary"</span>: <span class="hljs-comment">"Digital Decor Set of Two (2) Premium Gold Down Alternative Sleeping Pillows PLUS 2 FREE Pillowcases"</span>,
+        <span class="hljs-comment">"numPages"</span>: <span class="hljs-number">1</span>,
+        <span class="hljs-comment">"image"</span>: <span class="hljs-comment">""</span>,
+        <span class="hljs-comment">"name"</span>: <span class="hljs-comment">"Digital Decor Set of Two (2) Premium Gold Down Alternative Sleeping Pillows PLUS 2 FREE Pillowcases"</span>,
+        <span class="hljs-comment">"numPosts"</span>: <span class="hljs-number">8</span>,
+        <span class="hljs-comment">"title"</span>: <span class="hljs-comment">"Digital Decor Set of Two (2) Premium Gold Down Alternative Sleeping Pillows PLUS 2 FREE Pillowcases"</span>,
+        <span class="hljs-comment">"posts"</span>: [
+            {
+                <span class="hljs-comment">"date"</span>: {
+                    <span class="hljs-comment">"str"</span>: <span class="hljs-comment">"d2017-06-29T00:00"</span>,
+                    <span class="hljs-comment">"precision"</span>: <span class="hljs-number">4</span>,
+                    <span class="hljs-comment">"timestamp"</span>: <span class="hljs-number">1498694400000</span>
+                },
+                <span class="hljs-comment">"summary"</span>: <span class="hljs-comment">"Because buy these.\nI'm a freak about my bed being my #1 spot for comfort. I've been using the same d..."</span>,
+                <span class="hljs-comment">"image"</span>: <span class="hljs-comment">""</span>,
+                <span class="hljs-comment">"author"</span>: <span class="hljs-comment">"Jayme B"</span>,
+                <span class="hljs-comment">"authorUrl"</span>: <span class="hljs-comment">"https://www.amazon.com/gp/profile/amzn1.account.AGMHFY23GL6KJMTJCPDPAS6K7MYA/ref=cm_cr_dp_d_gw_tr?ie=UTF8"</span>,
+                <span class="hljs-comment">"name"</span>: <span class="hljs-comment">"Because buy these.\nI'm a freak..."</span>,
+                <span class="hljs-comment">"language"</span>: <span class="hljs-comment">"en"</span>,
+                <span class="hljs-comment">"html"</span>: <span class="hljs-comment">"&lt;p&gt;Because buy these.&lt;/p&gt;\n&lt;p&gt;I'm a freak about my bed being my #1 spot for comfort. I've been using the same damn feather pillows almost five years, and I simply cannot take it anymore! They're so comfortable to sleep on (layered with multiple pillowcases to keep my face from getting poked by feathers), but they're such a mess! I think I'll find little feathers in my belongings forever until I die. They. Are. LITERALLY. Everywhere.&lt;/p&gt;\n&lt;p&gt;Anyways, I purchased these pillows after reading reviews, which were obviously great considering I bought them, but I was still a skeptic because I was so used to sleeping on the same feather pillows for years. The packaging was really cute -- tied with a white, silky bow. Inside, the pillows were wrapped in plastic with all the air sucked out. They were completely flat, which made me nervous. I need fluffy. Still skeptical, but remembering the reviews said the pillows needed to be fluffed, I took them out of the plastic...&lt;/p&gt;\n&lt;p&gt;EXPECTATIONS -- BLOWN. AWAY.&lt;/p&gt;\n&lt;p&gt;They're just as soft, mushy, and all-around comfortable as my feathers pillows are. I can enjoy these and not getting stabbed in the face by feathers and still have the comfort of cuddling with a fluffy pillow!&lt;/p&gt;\n&lt;p&gt;If you're a miserable person/like your pillows firm, you will hate this product. If you're a normal human-being, you'll be like me and write a review about them after opening because BUY THESE!&lt;/p&gt;\n&lt;p&gt;In regard to price - these pillows cost at least half the price of my feather pillows. They also relieve some emotional stress because I no longer have to worry about finding new feathers stuck in my panties' fabric after wondering why I was feeling something prick me all day. 🙌🏼&lt;/p&gt;"</span>,
+                <span class="hljs-comment">"pageUrl"</span>: <span class="hljs-comment">"https://www.amazon.com/Digital-Decor-Alternative-Sleeping-Pillowcases/dp/B017MA074Y"</span>,
+                <span class="hljs-comment">"id"</span>: <span class="hljs-number">0</span>,
+                <span class="hljs-comment">"text"</span>: <span class="hljs-comment">"Because buy these.\nI'm a freak about my bed being my #1 spot for comfort. I've been using the same damn feather pillows almost five years, and I simply cannot take it anymore! They're so comfortable to sleep on (layered with multiple pillowcases to keep my face from getting poked by feathers), but they're such a mess! I think I'll find little feathers in my belongings forever until I die. They. Are. LITERALLY. Everywhere.\nAnyways, I purchased these pillows after reading reviews, which were obviously great considering I bought them, but I was still a skeptic because I was so used to sleeping on the same feather pillows for years. The packaging was really cute -- tied with a white, silky bow. Inside, the pillows were wrapped in plastic with all the air sucked out. They were completely flat, which made me nervous. I need fluffy. Still skeptical, but remembering the reviews said the pillows needed to be fluffed, I took them out of the plastic...\nEXPECTATIONS -- BLOWN. AWAY.\nThey're just as soft, mushy, and all-around comfortable as my feathers pillows are. I can enjoy these and not getting stabbed in the face by feathers and still have the comfort of cuddling with a fluffy pillow!\nIf you're a miserable person/like your pillows firm, you will hate this product. If you're a normal human-being, you'll be like me and write a review about them after opening because BUY THESE!\nIn regard to price - these pillows cost at least half the price of my feather pillows. They also relieve some emotional stress because I no longer have to worry about finding new feathers stuck in my panties' fabric after wondering why I was feeling something prick me all day. 🙌🏼"</span>
+            },
+            {
+                <span class="hljs-comment">"date"</span>: {
+                    <span class="hljs-comment">"str"</span>: <span class="hljs-comment">"d2017-06-01T00:00"</span>,
+                    <span class="hljs-comment">"precision"</span>: <span class="hljs-number">4</span>,
+                    <span class="hljs-comment">"timestamp"</span>: <span class="hljs-number">1496275200000</span>
+                },
+                <span class="hljs-comment">"summary"</span>: <span class="hljs-comment">"received a tiny box with 2 flat-as-a-pancake pillows folded in half. Was disappointed until I broke ..."</span>,
+                <span class="hljs-comment">"image"</span>: <span class="hljs-comment">""</span>,
+                <span class="hljs-comment">"author"</span>: <span class="hljs-comment">"Amazon Customer"</span>,
+                <span class="hljs-comment">"authorUrl"</span>: <span class="hljs-comment">"https://www.amazon.com/gp/profile/amzn1.account.AE7TGXIJ7M6WRFLJ77XFNEELCPOA/ref=cm_cr_dp_d_gw_tr?ie=UTF8"</span>,
+                <span class="hljs-comment">"name"</span>: <span class="hljs-comment">"received a tiny box with 2 fla..."</span>,
+                <span class="hljs-comment">"language"</span>: <span class="hljs-comment">"en"</span>,
+                <span class="hljs-comment">"html"</span>: <span class="hljs-comment">"&lt;p&gt;received a tiny box with 2 flat-as-a-pancake pillows folded in half. Was disappointed until I broke the seal on the bag. I couldn't unpack them fast enough! Better than a down pillow by far. If you're expecting a firm pillow, don't order. BUT if you want plush and snuggly, this is perfect!!!! Is it available in king size?&lt;/p&gt;"</span>,
+                <span class="hljs-comment">"pageUrl"</span>: <span class="hljs-comment">"https://www.amazon.com/Digital-Decor-Alternative-Sleeping-Pillowcases/dp/B017MA074Y"</span>,
+                <span class="hljs-comment">"id"</span>: <span class="hljs-number">1</span>,
+                <span class="hljs-comment">"text"</span>: <span class="hljs-comment">"received a tiny box with 2 flat-as-a-pancake pillows folded in half. Was disappointed until I broke the seal on the bag. I couldn't unpack them fast enough! Better than a down pillow by far. If you're expecting a firm pillow, don't order. BUT if you want plush and snuggly, this is perfect!!!! Is it available in king size?"</span>
+            },
+            {
+                <span class="hljs-comment">"date"</span>: {
+                    <span class="hljs-comment">"str"</span>: <span class="hljs-comment">"d2017-07-10T00:00"</span>,
+                    <span class="hljs-comment">"precision"</span>: <span class="hljs-number">4</span>,
+                    <span class="hljs-comment">"timestamp"</span>: <span class="hljs-number">1499644800000</span>
+                },
+                <span class="hljs-comment">"summary"</span>: <span class="hljs-comment">"I hardly ever take the time to write reviews (sorry) but I just had to for these pillows. They are g..."</span>,
+                <span class="hljs-comment">"image"</span>: <span class="hljs-comment">""</span>,
+                <span class="hljs-comment">"author"</span>: <span class="hljs-comment">"L"</span>,
+                <span class="hljs-comment">"authorUrl"</span>: <span class="hljs-comment">"https://www.amazon.com/gp/profile/amzn1.account.AHA2GWUY32DTXOWPJP3V76M7N4KA/ref=cm_cr_dp_d_gw_tr?ie=UTF8"</span>,
+                <span class="hljs-comment">"name"</span>: <span class="hljs-comment">"I hardly ever take the time to..."</span>,
+                <span class="hljs-comment">"language"</span>: <span class="hljs-comment">"en"</span>,
+                <span class="hljs-comment">"html"</span>: <span class="hljs-comment">"&lt;p&gt;I hardly ever take the time to write reviews (sorry) but I just had to for these pillows. They are great - very comfy and fluffy; they cradle your head perfectly without mushing down flat. I have neck issues, and these pillows keep my spine aligned without being too stiff. I ordered 6 to replace our pillows, and also some extra pillows. They were vacuum sealed and contained in a small box. So nice-they will be so easy to store - they don't take up much room. I placed my usual pillow cases over the ones that came with the pillows. I assume the extra cases will keep the pillows protected for longer.&lt;/p&gt;"</span>,
+                <span class="hljs-comment">"pageUrl"</span>: <span class="hljs-comment">"https://www.amazon.com/Digital-Decor-Alternative-Sleeping-Pillowcases/dp/B017MA074Y"</span>,
+                <span class="hljs-comment">"id"</span>: <span class="hljs-number">2</span>,
+                <span class="hljs-comment">"text"</span>: <span class="hljs-comment">"I hardly ever take the time to write reviews (sorry) but I just had to for these pillows. They are great - very comfy and fluffy; they cradle your head perfectly without mushing down flat. I have neck issues, and these pillows keep my spine aligned without being too stiff. I ordered 6 to replace our pillows, and also some extra pillows. They were vacuum sealed and contained in a small box. So nice-they will be so easy to store - they don't take up much room. I placed my usual pillow cases over the ones that came with the pillows. I assume the extra cases will keep the pillows protected for longer."</span>
+            },
+            {
+                <span class="hljs-comment">"date"</span>: {
+                    <span class="hljs-comment">"str"</span>: <span class="hljs-comment">"d2017-05-22T00:00"</span>,
+                    <span class="hljs-comment">"precision"</span>: <span class="hljs-number">4</span>,
+                    <span class="hljs-comment">"timestamp"</span>: <span class="hljs-number">1495411200000</span>
+                },
+                <span class="hljs-comment">"summary"</span>: <span class="hljs-comment">"Do not buy these. When I received these, the end seam was split on one pillow exposing stuffing. The..."</span>,
+                <span class="hljs-comment">"image"</span>: <span class="hljs-comment">""</span>,
+                <span class="hljs-comment">"author"</span>: <span class="hljs-comment">"Margaret Godfrey"</span>,
+                <span class="hljs-comment">"authorUrl"</span>: <span class="hljs-comment">"https://www.amazon.com/gp/profile/amzn1.account.AF2FU53KMWBOGMYNAHKM4KE5OMDA/ref=cm_cr_dp_d_gw_tr?ie=UTF8"</span>,
+                <span class="hljs-comment">"name"</span>: <span class="hljs-comment">"Do not buy these. When I recei..."</span>,
+                <span class="hljs-comment">"language"</span>: <span class="hljs-comment">"en"</span>,
+                <span class="hljs-comment">"html"</span>: <span class="hljs-comment">"&lt;p&gt;Do not buy these. When I received these, the end seam was split on one pillow exposing stuffing. The pillow cases are extremely rough. All in all poor quality. I had overnight guests arriving and this was forced to see up pillow seam in order to use it.&lt;/p&gt;"</span>,
+                <span class="hljs-comment">"pageUrl"</span>: <span class="hljs-comment">"https://www.amazon.com/Digital-Decor-Alternative-Sleeping-Pillowcases/dp/B017MA074Y"</span>,
+                <span class="hljs-comment">"id"</span>: <span class="hljs-number">3</span>,
+                <span class="hljs-comment">"text"</span>: <span class="hljs-comment">"Do not buy these. When I received these, the end seam was split on one pillow exposing stuffing. The pillow cases are extremely rough. All in all poor quality. I had overnight guests arriving and this was forced to see up pillow seam in order to use it."</span>
+            },
+            {
+                <span class="hljs-comment">"date"</span>: {
+                    <span class="hljs-comment">"str"</span>: <span class="hljs-comment">"d2018-02-20T00:00"</span>,
+                    <span class="hljs-comment">"precision"</span>: <span class="hljs-number">4</span>,
+                    <span class="hljs-comment">"timestamp"</span>: <span class="hljs-number">1519084800000</span>
+                },
+                <span class="hljs-comment">"summary"</span>: <span class="hljs-comment">"I ordered these 2 pillows for my guest bedroom and they came super quickly (you can't beat the price..."</span>,
+                <span class="hljs-comment">"image"</span>: <span class="hljs-comment">""</span>,
+                <span class="hljs-comment">"author"</span>: <span class="hljs-comment">"Bradley"</span>,
+                <span class="hljs-comment">"authorUrl"</span>: <span class="hljs-comment">"https://www.amazon.com/gp/profile/amzn1.account.AGL3Z5FQLJBNS43GKNO2OIYIHHRA/ref=cm_cr_dp_d_gw_tr?ie=UTF8"</span>,
+                <span class="hljs-comment">"name"</span>: <span class="hljs-comment">"I ordered these 2 pillows for ..."</span>,
+                <span class="hljs-comment">"language"</span>: <span class="hljs-comment">"en"</span>,
+                <span class="hljs-comment">"html"</span>: <span class="hljs-comment">"&lt;p&gt;I ordered these 2 pillows for my guest bedroom and they came super quickly (you can't beat the price either). They come vacuum sealed but upon opening them, within a few hours, they are large and plush. I didn't notice any smell, but before I used them I tossed them in the dryer (medium heat) with a damp towel and dryer sheet.&lt;/p&gt;\n&lt;p&gt;These pillows are literally the definition of a standard pillow. Neither firm nor soft, they are the perfect balance of in-between if that's what you're looking for. I wouldn't want to sleep on them every single night, but they are great for a guest/spare bedroom.&lt;/p&gt;"</span>,
+                <span class="hljs-comment">"pageUrl"</span>: <span class="hljs-comment">"https://www.amazon.com/Digital-Decor-Alternative-Sleeping-Pillowcases/dp/B017MA074Y"</span>,
+                <span class="hljs-comment">"id"</span>: <span class="hljs-number">4</span>,
+                <span class="hljs-comment">"text"</span>: <span class="hljs-comment">"I ordered these 2 pillows for my guest bedroom and they came super quickly (you can't beat the price either). They come vacuum sealed but upon opening them, within a few hours, they are large and plush. I didn't notice any smell, but before I used them I tossed them in the dryer (medium heat) with a damp towel and dryer sheet.\nThese pillows are literally the definition of a standard pillow. Neither firm nor soft, they are the perfect balance of in-between if that's what you're looking for. I wouldn't want to sleep on them every single night, but they are great for a guest/spare bedroom."</span>
+            },
+            {
+                <span class="hljs-comment">"date"</span>: {
+                    <span class="hljs-comment">"str"</span>: <span class="hljs-comment">"d2017-02-02T00:00"</span>,
+                    <span class="hljs-comment">"precision"</span>: <span class="hljs-number">4</span>,
+                    <span class="hljs-comment">"timestamp"</span>: <span class="hljs-number">1485993600000</span>
+                },
+                <span class="hljs-comment">"summary"</span>: <span class="hljs-comment">"LOVE the pillows.. They are exactly as I thought they would be... I had to contact the Seller and th..."</span>,
+                <span class="hljs-comment">"image"</span>: <span class="hljs-comment">""</span>,
+                <span class="hljs-comment">"author"</span>: <span class="hljs-comment">"brenda"</span>,
+                <span class="hljs-comment">"authorUrl"</span>: <span class="hljs-comment">"https://www.amazon.com/gp/profile/amzn1.account.AE7YYPF4VNJHQBXPYLEBVEUBJOMQ/ref=cm_cr_dp_d_gw_tr?ie=UTF8"</span>,
+                <span class="hljs-comment">"name"</span>: <span class="hljs-comment">"LOVE the pillows.. They are ex..."</span>,
+                <span class="hljs-comment">"language"</span>: <span class="hljs-comment">"en"</span>,
+                <span class="hljs-comment">"html"</span>: <span class="hljs-comment">"&lt;p&gt;LOVE the pillows.. They are exactly as I thought they would be... I had to contact the Seller and they are AWESOME people to do business with.. I would recommend these pillows to anyone.. Very pleased with them...&lt;/p&gt;"</span>,
+                <span class="hljs-comment">"pageUrl"</span>: <span class="hljs-comment">"https://www.amazon.com/Digital-Decor-Alternative-Sleeping-Pillowcases/dp/B017MA074Y"</span>,
+                <span class="hljs-comment">"id"</span>: <span class="hljs-number">5</span>,
+                <span class="hljs-comment">"text"</span>: <span class="hljs-comment">"LOVE the pillows.. They are exactly as I thought they would be... I had to contact the Seller and they are AWESOME people to do business with.. I would recommend these pillows to anyone.. Very pleased with them..."</span>
+            },
+            {
+                <span class="hljs-comment">"date"</span>: {
+                    <span class="hljs-comment">"str"</span>: <span class="hljs-comment">"d2017-06-07T00:00"</span>,
+                    <span class="hljs-comment">"precision"</span>: <span class="hljs-number">4</span>,
+                    <span class="hljs-comment">"timestamp"</span>: <span class="hljs-number">1496793600000</span>
+                },
+                <span class="hljs-comment">"summary"</span>: <span class="hljs-comment">"These weren't bad pillows at all. The cases are a bit rough, but nothing a good washing didn't fix. ..."</span>,
+                <span class="hljs-comment">"image"</span>: <span class="hljs-comment">""</span>,
+                <span class="hljs-comment">"author"</span>: <span class="hljs-comment">"Shade Koopa"</span>,
+                <span class="hljs-comment">"authorUrl"</span>: <span class="hljs-comment">"https://www.amazon.com/gp/profile/amzn1.account.AFJ42TVXCTZIRESNV7VXXRF5DGZA/ref=cm_cr_dp_d_gw_tr?ie=UTF8"</span>,
+                <span class="hljs-comment">"name"</span>: <span class="hljs-comment">"These weren't bad pillows at a..."</span>,
+                <span class="hljs-comment">"language"</span>: <span class="hljs-comment">"en"</span>,
+                <span class="hljs-comment">"html"</span>: <span class="hljs-comment">"&lt;p&gt;These weren't bad pillows at all. The cases are a bit rough, but nothing a good washing didn't fix. They did have a &amp;quot;new pillow&amp;quot; smell but again, washing or Febreze will take care of it. Comfortable to sleep on and didn't give me a headache like my usual standards pillow do. I don't see them lasting too long, but still a good pillow to have.&lt;/p&gt;"</span>,
+                <span class="hljs-comment">"pageUrl"</span>: <span class="hljs-comment">"https://www.amazon.com/Digital-Decor-Alternative-Sleeping-Pillowcases/dp/B017MA074Y"</span>,
+                <span class="hljs-comment">"id"</span>: <span class="hljs-number">6</span>,
+                <span class="hljs-comment">"text"</span>: <span class="hljs-comment">"These weren't bad pillows at all. The cases are a bit rough, but nothing a good washing didn't fix. They did have a \"</span>new pillow\<span class="hljs-comment">" smell but again, washing or Febreze will take care of it. Comfortable to sleep on and didn't give me a headache like my usual standards pillow do. I don't see them lasting too long, but still a good pillow to have."</span>
+            },
+            {
+                <span class="hljs-comment">"date"</span>: {
+                    <span class="hljs-comment">"str"</span>: <span class="hljs-comment">"d2017-07-21T00:00"</span>,
+                    <span class="hljs-comment">"precision"</span>: <span class="hljs-number">4</span>,
+                    <span class="hljs-comment">"timestamp"</span>: <span class="hljs-number">1500595200000</span>
+                },
+                <span class="hljs-comment">"summary"</span>: <span class="hljs-comment">"Poor quality outer fabric, not the same one ot the other, and smells terrible. No hotel i ever staye..."</span>,
+                <span class="hljs-comment">"image"</span>: <span class="hljs-comment">""</span>,
+                <span class="hljs-comment">"author"</span>: <span class="hljs-comment">"Knobsandfaders"</span>,
+                <span class="hljs-comment">"authorUrl"</span>: <span class="hljs-comment">"https://www.amazon.com/gp/profile/amzn1.account.AGMCYVTORI7FEJAUHZLRCCOJXXWA/ref=cm_cr_dp_d_gw_tr?ie=UTF8"</span>,
+                <span class="hljs-comment">"name"</span>: <span class="hljs-comment">"Poor quality outer fabric, not..."</span>,
+                <span class="hljs-comment">"language"</span>: <span class="hljs-comment">"en"</span>,
+                <span class="hljs-comment">"html"</span>: <span class="hljs-comment">"&lt;p&gt;Poor quality outer fabric, not the same one ot the other, and smells terrible. No hotel i ever stayed in had such awful pillows. The end they are filled from is practically empty and the 'down alternative' doesnt seem to be able to be repositioned. Seems more like stuffing. The 'free pillow cases' are just more if the same awful fabric used as the outer pillow. Thin, rough, with dirt already on them. Really disappointed in this purchase. I don't underatand all the good reviews. They were very slow to ship so maybe they had to outsource to a bad factory someplace.&lt;/p&gt;"</span>,
+                <span class="hljs-comment">"pageUrl"</span>: <span class="hljs-comment">"https://www.amazon.com/Digital-Decor-Alternative-Sleeping-Pillowcases/dp/B017MA074Y"</span>,
+                <span class="hljs-comment">"id"</span>: <span class="hljs-number">7</span>,
+                <span class="hljs-comment">"text"</span>: <span class="hljs-comment">"Poor quality outer fabric, not the same one ot the other, and smells terrible. No hotel i ever stayed in had such awful pillows. The end they are filled from is practically empty and the 'down alternative' doesnt seem to be able to be repositioned. Seems more like stuffing. The 'free pillow cases' are just more if the same awful fabric used as the outer pillow. Thin, rough, with dirt already on them. Really disappointed in this purchase. I don't underatand all the good reviews. They were very slow to ship so maybe they had to outsource to a bad factory someplace."</span>
+            }
+        ],
+        <span class="hljs-comment">"numParticipants"</span>: <span class="hljs-number">8</span>
+    }
+}
+</code></pre>
+<h3><a class="anchor" aria-hidden="true" id="images"></a><a href="#images" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>images</h3>
+<ul>
+<li><strong>Type:</strong> GlobalIndexImage</li>
+<li><strong>Example:</strong></li>
+</ul>
+<pre><code class="hljs">{
+    <span class="hljs-attr">"images"</span>: [
+        {
+            <span class="hljs-attr">"summary"</span>: <span class="hljs-string">""</span>,
+            <span class="hljs-attr">"image"</span>: <span class="hljs-string">"https://images-na.ssl-images-amazon.com/images/I/51y5AzETmPL.jpg"</span>,
+            <span class="hljs-attr">"naturalHeight"</span>: <span class="hljs-number">379</span>,
+            <span class="hljs-attr">"name"</span>: <span class="hljs-string">""</span>,
+            <span class="hljs-attr">"url"</span>: <span class="hljs-string">"https://images-na.ssl-images-amazon.com/images/I/51y5AzETmPL.jpg"</span>,
+            <span class="hljs-attr">"naturalWidth"</span>: <span class="hljs-number">569</span>
+        }
+    ]
+}
+</code></pre>
+<h3><a class="anchor" aria-hidden="true" id="isbn"></a><a href="#isbn" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>isbn</h3>
+<ul>
+<li><strong>Type:</strong> String</li>
+<li><strong>Example:</strong></li>
+</ul>
+<pre><code class="hljs">{
+    <span class="hljs-attr">"isbn"</span>: <span class="hljs-string">""</span>
+}
+</code></pre>
+<h3><a class="anchor" aria-hidden="true" id="language"></a><a href="#language" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>language</h3>
+<p>Refers to the language in which the Product page is written</p>
+<ul>
+<li><strong>Type:</strong> String</li>
+<li><strong>Example:</strong></li>
+</ul>
+<pre><code class="hljs">{
+    <span class="hljs-attr">"language"</span>: <span class="hljs-string">"en"</span>
+}
+</code></pre>
+<h3><a class="anchor" aria-hidden="true" id="mpn"></a><a href="#mpn" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>mpn</h3>
+<ul>
+<li><strong>Type:</strong> String</li>
+<li><strong>Example:</strong></li>
+</ul>
+<pre><code class="hljs">{
+    <span class="hljs-attr">"mpn"</span>: <span class="hljs-string">""</span>
+}
+</code></pre>
+<h3><a class="anchor" aria-hidden="true" id="multipleproducts"></a><a href="#multipleproducts" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>multipleProducts</h3>
+<ul>
+<li><strong>Type:</strong> Boolean</li>
+<li><strong>Example:</strong></li>
+</ul>
+<pre><code class="hljs">{
+    <span class="hljs-attr">"multipleProducts"</span>: <span class="hljs-literal">false</span>
+}
+</code></pre>
+<h3><a class="anchor" aria-hidden="true" id="offerprice"></a><a href="#offerprice" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>offerPrice</h3>
+<ul>
+<li><strong>Type:</strong> String</li>
+<li><strong>Example:</strong></li>
+</ul>
+<pre><code class="hljs">{
+    <span class="hljs-attr">"offerPrice"</span>: <span class="hljs-string">"$18.99"</span>
+}
+</code></pre>
+<h3><a class="anchor" aria-hidden="true" id="offerpricedetails"></a><a href="#offerpricedetails" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>offerPriceDetails</h3>
+<ul>
+<li><strong>Type:</strong> PriceDetails</li>
+<li><strong>Example:</strong></li>
+</ul>
+<pre><code class="hljs">{
+    <span class="hljs-attr">"offerPriceDetails"</span>: {
+        <span class="hljs-attr">"symbol"</span>: <span class="hljs-string">"$"</span>,
+        <span class="hljs-attr">"amount"</span>: <span class="hljs-number">18.99</span>,
+        <span class="hljs-attr">"text"</span>: <span class="hljs-string">"$18.99"</span>
+    }
+}
+</code></pre>
+<h3><a class="anchor" aria-hidden="true" id="prefixcode"></a><a href="#prefixcode" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>prefixCode</h3>
+<ul>
+<li><strong>Type:</strong> String</li>
+<li><strong>Example:</strong></li>
+</ul>
+<pre><code class="hljs">{
+    <span class="hljs-attr">"prefixCode"</span>: <span class="hljs-string">""</span>
+}
+</code></pre>
+<h3><a class="anchor" aria-hidden="true" id="productid"></a><a href="#productid" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>productId</h3>
+<ul>
+<li><strong>Type:</strong> String</li>
+<li><strong>Example:</strong></li>
+</ul>
+<pre><code class="hljs">{
+    <span class="hljs-attr">"productId"</span>: <span class="hljs-string">"B017MA074Y"</span>
+}
+</code></pre>
+<h3><a class="anchor" aria-hidden="true" id="productorigin"></a><a href="#productorigin" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>productOrigin</h3>
+<ul>
+<li><strong>Type:</strong> String</li>
+<li><strong>Example:</strong></li>
+</ul>
+<pre><code class="hljs">{
+    <span class="hljs-attr">"productOrigin"</span>: <span class="hljs-string">""</span>
+}
+</code></pre>
+<h3><a class="anchor" aria-hidden="true" id="regularprice"></a><a href="#regularprice" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>regularPrice</h3>
+<ul>
+<li><strong>Type:</strong> String</li>
+<li><strong>Example:</strong></li>
+</ul>
+<pre><code class="hljs">{
+    <span class="hljs-attr">"regularPrice"</span>: <span class="hljs-string">"$59.99"</span>
+}
+</code></pre>
+<h3><a class="anchor" aria-hidden="true" id="regularpricedetails"></a><a href="#regularpricedetails" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>regularPriceDetails</h3>
+<ul>
+<li><strong>Type:</strong> PriceDetails</li>
+<li><strong>Example:</strong></li>
+</ul>
+<pre><code class="hljs">{
+    <span class="hljs-attr">"regularPriceDetails"</span>: {
+        <span class="hljs-attr">"symbol"</span>: <span class="hljs-string">"$"</span>,
+        <span class="hljs-attr">"amount"</span>: <span class="hljs-number">59.99</span>,
+        <span class="hljs-attr">"text"</span>: <span class="hljs-string">"$59.99"</span>
+    }
+}
+</code></pre>
+<h3><a class="anchor" aria-hidden="true" id="saveamount"></a><a href="#saveamount" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>saveAmount</h3>
+<ul>
+<li><strong>Type:</strong> String</li>
+<li><strong>Example:</strong></li>
+</ul>
+<pre><code class="hljs">{
+    <span class="hljs-attr">"saveAmount"</span>: <span class="hljs-string">"$41.00"</span>
+}
+</code></pre>
+<h3><a class="anchor" aria-hidden="true" id="saveamountdetails"></a><a href="#saveamountdetails" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>saveAmountDetails</h3>
+<ul>
+<li><strong>Type:</strong> PriceDetails</li>
+<li><strong>Example:</strong></li>
+</ul>
+<pre><code class="hljs">{
+    <span class="hljs-attr">"saveAmountDetails"</span>: {
+        <span class="hljs-attr">"symbol"</span>: <span class="hljs-string">"$"</span>,
+        <span class="hljs-attr">"amount"</span>: <span class="hljs-number">41</span>,
+        <span class="hljs-attr">"text"</span>: <span class="hljs-string">"$41.00"</span>
+    }
+}
+</code></pre>
+<h3><a class="anchor" aria-hidden="true" id="shippingamount"></a><a href="#shippingamount" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>shippingAmount</h3>
+<ul>
+<li><strong>Type:</strong> String</li>
+<li><strong>Example:</strong></li>
+</ul>
+<pre><code class="hljs">{
+    <span class="hljs-attr">"shippingAmount"</span>: <span class="hljs-string">""</span>
+}
+</code></pre>
+<h3><a class="anchor" aria-hidden="true" id="sku"></a><a href="#sku" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>sku</h3>
+<ul>
+<li><strong>Type:</strong> String</li>
+<li><strong>Example:</strong></li>
+</ul>
+<pre><code class="hljs">{
+    <span class="hljs-attr">"sku"</span>: <span class="hljs-string">"B017MA074Y"</span>
+}
+</code></pre>
+<h3><a class="anchor" aria-hidden="true" id="text"></a><a href="#text" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>text</h3>
+<ul>
+<li><strong>Type:</strong> String</li>
+<li><strong>Example:</strong></li>
+</ul>
+<pre><code class="hljs">{
+    <span class="hljs-attr">"text"</span>: <span class="hljs-string">"100% Cotton Hypoallergenic Outer Fabric\n Made in USA\n DREAMY RESTFUL SLUMBER: Sink into our sleeping pillows and drift to sleep on soft clouds of comfort!\n HIGH THREAD COUNT: Pillows for sleeping with a T200 thread count for coolness and breath-ability\n 100% HYPOALLERGENIC PILLOW: Dust Mite Resistant and Down alternative pillow - gentle Virgin Polyester filling. No Irritation\n EVERY KIND OF SLEEPER: Hotel &amp; bed pillows perfect for all back, stomach &amp; side sleepers out there!\n MADE IN USA QUALITY: A sleeping pillow you can count on - crafted from Made in US premium materials."</span>
+}
+</code></pre>
+<h3><a class="anchor" aria-hidden="true" id="title"></a><a href="#title" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>title</h3>
+<p>Title of the Product</p>
+<ul>
+<li><strong>Type:</strong> String</li>
+<li><strong>Example:</strong></li>
+</ul>
+<pre><code class="hljs">{
+    <span class="hljs-attr">"title"</span>: <span class="hljs-string">"Digital Decor Set of Two (2) Premium Gold Down Alternative Sleeping Pillows PLUS 2 FREE Pillowcases"</span>
+}
+</code></pre>
+<h3><a class="anchor" aria-hidden="true" id="upc"></a><a href="#upc" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>upc</h3>
+<ul>
+<li><strong>Type:</strong> String</li>
+<li><strong>Example:</strong></li>
+</ul>
+<pre><code class="hljs">{
+    <span class="hljs-attr">"upc"</span>: <span class="hljs-string">""</span>
+}
+</code></pre>
+</span></div></article></div><div class="docLastUpdate"><em>Last updated by jeromechoo</em></div><div class="docs-prevnext"><a class="docs-prev button" href="/docs/en/kg-ont-creativework"><span class="arrow-prev">← </span><span class="function-name-prevnext">CreativeWork</span></a><a class="docs-next button" href="/docs/en/kg-ont-image"><span>Image</span><span class="arrow-next"> →</span></a></div></div></div><nav class="onPageNav"><ul class="toc-headings"><li><a href="#product-fields">Product Fields</a></li><li><a href="#product-field-details">Product Field Details</a><ul class="toc-headings"><li><a href="#availability">availability</a></li><li><a href="#brand">brand</a></li><li><a href="#breadcrumb">breadcrumb</a></li><li><a href="#category">category</a></li><li><a href="#discussion">discussion</a></li><li><a href="#images">images</a></li><li><a href="#isbn">isbn</a></li><li><a href="#language">language</a></li><li><a href="#mpn">mpn</a></li><li><a href="#multipleproducts">multipleProducts</a></li><li><a href="#offerprice">offerPrice</a></li><li><a href="#offerpricedetails">offerPriceDetails</a></li><li><a href="#prefixcode">prefixCode</a></li><li><a href="#productid">productId</a></li><li><a href="#productorigin">productOrigin</a></li><li><a href="#regularprice">regularPrice</a></li><li><a href="#regularpricedetails">regularPriceDetails</a></li><li><a href="#saveamount">saveAmount</a></li><li><a href="#saveamountdetails">saveAmountDetails</a></li><li><a href="#shippingamount">shippingAmount</a></li><li><a href="#sku">sku</a></li><li><a href="#text">text</a></li><li><a href="#title">title</a></li><li><a href="#upc">upc</a></li></ul></li></ul></nav></div><footer class="nav-footer" id="footer"><section class="sitemap"><a href="/" class="nav-home"><img src="/img/diffbot_white.svg" alt="Docs Suite" width="66" height="58"/></a><div><h5>Docs</h5><a href="/docs/en/api-basics-index">Extraction</a><a href="/docs/en/cb-basics-index">Crawling</a><a href="/docs/en/kg-index">Knowledge Graph</a><a href="/docs/en/explain-gdpr">Diffbot and GDPR</a></div><div><h5>Community</h5><a href="https://stackoverflow.com/questions/tagged/diffbot" target="_blank" rel="noreferrer noopener">Stack Overflow</a><a href="https://twitter.com/diffbot" target="_blank" rel="noreferrer noopener">Twitter</a></div><div><h5>More</h5><a href="/blog">Blog</a><a href="/help">Help</a><a href="https://github.com/diffbot">GitHub</a></div></section><a href="https://diffbot.com/" target="_blank" rel="noreferrer noopener" class="fbOpenSource"><img src="/img/diffbot_white.svg" alt="Diffbot.com" width="170" height="45"/></a><section class="copyright">Copyright © 2021 Diffbot.com</section></footer></div><script type="text/javascript" src="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.js"></script><script>
+                document.addEventListener('keyup', function(e) {
+                  if (e.target !== document.body) {
+                    return;
+                  }
+                  // keyCode for '/' (slash)
+                  if (e.keyCode === 191) {
+                    const search = document.getElementById('search_input_react');
+                    search && search.focus();
+                  }
+                });
+              </script><script>
+              var search = docsearch({
+                
+                apiKey: '2c24e5e78d724e77c46ef1b720700177',
+                indexName: 'diffbot',
+                inputSelector: '#search_input_react',
+                algoliaOptions: {}
+              });
+            </script></body></html>
