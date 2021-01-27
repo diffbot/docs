@@ -6,7 +6,7 @@ todo: Modify links to old Dashboard
 ---
 
 <div class="entry-content">
-		<p>Diffbot offers various filters you can apply to your custom fields in the <a href="https://www.diffbot.com/dev/customize/">Custom API toolkit</a>. One such filter is the <em>replace filter</em>.</p>
+		<p>Diffbot offers various filters you can apply to your custom fields in the <a href="https://app.diffbot.com/custom/">Custom API toolkit</a>. One such filter is the <em>replace filter</em>.</p>
 <p>The replace filter’s purpose is reading a regular expression and then replacing the part of the captured text with whatever the “replace with” field contains.</p>
 <p>Here is a rudimentary example.</p>
 <p>Let’s say we only want to extract the type of currency from <a href="https://www.justkidding-me.com/ae/daily-deals-uae/nobodinoz-arizona-teepee">this page</a>:</p>
@@ -45,5 +45,5 @@ todo: Modify links to old Dashboard
 <code>\W?</code> one or zero non-word characters</li>
 </ul>
 <p>In other words, it removes everything that doesn’t match the currency’s letters by replacing it with <em>nothing</em> – an empty second field. This regex could be re-used on any similar site now to solve a similar problem.</p>
-<p>You can read some more about filters <a href="https://www.diffbot.com/dev/customize/help.jsp#tab_filters">here</a>.</p>
+<p>You can read some more about filters <a href="api-selectors-filters">here</a>.</p>
 			</div>
