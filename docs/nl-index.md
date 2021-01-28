@@ -25,7 +25,8 @@ The Natural Language API allows developers to extract entities (e.g., people, or
 * **Salience**. This value helps answer the question: "What is this text mainly about?". Salience of 1.0 means the entity is the main topic of the document, while salience of 0.0 means that the entity is unnecessary to understand the document. 
 
 ## Supported Languages
- * Entities, sentiment and salience: English (en), French (fr), Spanish (es), Chinese (zh), German (de), Russian (ru), Japanese (ja), Dutch (nl)
+ * Sentiment: Over a 100 languages.
+ * Entities and salience: English (en), French (fr), Spanish (es), Chinese (zh), German (de), Russian (ru), Japanese (ja), Dutch (nl)
  * Other fields: English (en) only.
 
 ## Credits
