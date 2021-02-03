@@ -2,7 +2,7 @@
   "scripts": {
     "examples": "docusaurus-examples",
     "start": "docusaurus-start",
-    "build": "docusaurus-build",
+    "build": "docusaurus-build && node generateSidebarAnchors",
     "publish-gh-pages": "docusaurus-publish",
     "write-translations": "docusaurus-write-translations",
     "version": "docusaurus-version",
@@ -11,7 +11,8 @@
   "devDependencies": {
     "axios": "^0.21.1",
     "docusaurus": "^1.14.2",
-    "mustache": "^4.1.0"
+    "mustache": "^4.1.0",
+    "node-html-parser": "^2.1.0"
   },
   "license": "MIT"
 }
