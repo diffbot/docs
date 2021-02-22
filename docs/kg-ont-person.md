@@ -86,8 +86,8 @@ Note that certain longer field examples may be truncated for readability in thes
 	"articles": [
 		{
 			"recordId": "EyLhQX8YeNWOH19RPpdU7Kg@569",
-			"name": "Blue Magic //",
-			"surfaceForm": "Blue Magic //",
+			"name": "The Business of Happiness //",
+			"surfaceForm": "The Business of Happiness //",
 			"position": "personArticles",
 			"type": "Article"
 		}
@@ -132,20 +132,58 @@ Note that certain longer field examples may be truncated for readability in thes
 ```
 {
 	"birthPlace": {
-		"country": "[See AdministrativeArea]",
-		"address": "",
-		"city": "[See AdministrativeArea]",
-		"subregion": "[See AdministrativeArea]",
-		"latitude": "",
-		"precision": "",
-		"postalCode": "",
-		"surfaceForm": "",
+		"country": {
+			"summary": "Sovereign state in North America",
+			"image": "https://kg.diffbot.com/image/api/get?fetch=yes&url=g%3Cj7P0St0DnBJf.x0KwLZrUn.%5B%3CR0Aa4Hh%3B%5Bv738ZqOr7U%3FfvEQ%3El%601Nw%7BM0Bf7hu7z%3FRe9s4XwGXedrKUAN%28%3D%5ECHnM%60%29.%7BOV",
+			"types": [
+				"Place",
+				"AdministrativeArea"
+			],
+			"name": "United States of America",
+			"diffbotUri": "http://diffbot.com/entity/E01d4EK33MmCosgI2KXa4-A",
+			"nbIncomingEdges": 1245528825,
+			"targetDiffbotUri": "http://diffbot.com/entity/E01d4EK33MmCosgI2KXa4-A",
+			"type": "AdministrativeArea"
+		},
 		"isCurrent": false,
-		"street": "",
-		"metroArea": "[See AdministrativeArea]",
-		"region": "[See AdministrativeArea]",
-		"rawAdministrativeArea": "[See AdministrativeArea]",
-		"longitude": ""
+		"address": "New York, New York",
+		"city": {
+			"summary": "Largest city in the United States",
+			"image": "https://kg.diffbot.com/image/api/get?fetch=yes&url=g%3Cj7P0St0DnBJf.x0KwLZrUn.%5B%3CR0Aa4Hh%3B%5Bv738ZqOr7U%3FgvFo%3ExS%7DYb%3B%60z%2F_OXhGxBLIMyDCT%3A.5fx",
+			"types": [
+				"Place",
+				"AdministrativeArea"
+			],
+			"name": "New York City",
+			"diffbotUri": "http://diffbot.com/entity/EcMmgf99wMQ6XYnbChv5HiQ",
+			"nbIncomingEdges": 18330011,
+			"targetDiffbotUri": "http://diffbot.com/entity/EcMmgf99wMQ6XYnbChv5HiQ",
+			"type": "AdministrativeArea"
+		},
+		"subregion": {
+			"recordId": "EyLhQX8YeNWOH19RPpdU7Kg@566",
+			"name": "Kings County",
+			"position": "personLocationPlace",
+			"type": "AdministrativeArea"
+		},
+		"latitude": 40.68294906616211,
+		"precision": 27.989721298217773,
+		"postalCode": "11217",
+		"surfaceForm": "New York City, New York",
+		"region": {
+			"summary": "State of the United States of America",
+			"image": "https://kg.diffbot.com/image/api/get?fetch=yes&url=g%3Cj7P0St0DnBJf.x0KwLZrUn.%5B%3CR0Aa4Hh%3B%5Bv738ZqOr7U%3FDvsO%3ExS%7DYb%3B%60z%2F_OXhGxB.yZl",
+			"types": [
+				"Place",
+				"AdministrativeArea"
+			],
+			"name": "New York",
+			"diffbotUri": "http://diffbot.com/entity/E1NxI_KXaMbiP5g2aM9MRdw",
+			"nbIncomingEdges": 83642769,
+			"targetDiffbotUri": "http://diffbot.com/entity/E1NxI_KXaMbiP5g2aM9MRdw",
+			"type": "AdministrativeArea"
+		},
+		"longitude": -73.9708023071289
 	}
 }
 ```
@@ -230,20 +268,58 @@ Note that certain longer field examples may be truncated for readability in thes
 ```
 {
 	"deathPlace": {
-		"country": "[See AdministrativeArea]",
-		"address": "",
-		"city": "[See AdministrativeArea]",
-		"subregion": "[See AdministrativeArea]",
-		"latitude": "",
-		"precision": "",
-		"postalCode": "",
-		"surfaceForm": "",
+		"country": {
+			"summary": "Sovereign state in North America",
+			"image": "https://kg.diffbot.com/image/api/get?fetch=yes&url=g%3Cj7P0St0DnBJf.x0KwLZrUn.%5B%3CR0Aa4Hh%3B%5Bv738ZqOr7U%3FfvEQ%3El%601Nw%7BM0Bf7hu7z%3FRe9s4XwGXedrKUAN%28%3D%5ECHnM%60%29.%7BOV",
+			"types": [
+				"Place",
+				"AdministrativeArea"
+			],
+			"name": "United States of America",
+			"diffbotUri": "http://diffbot.com/entity/E01d4EK33MmCosgI2KXa4-A",
+			"nbIncomingEdges": 1245528825,
+			"targetDiffbotUri": "http://diffbot.com/entity/E01d4EK33MmCosgI2KXa4-A",
+			"type": "AdministrativeArea"
+		},
 		"isCurrent": false,
-		"street": "",
-		"metroArea": "[See AdministrativeArea]",
-		"region": "[See AdministrativeArea]",
-		"rawAdministrativeArea": "[See AdministrativeArea]",
-		"longitude": ""
+		"address": "New York, New York",
+		"city": {
+			"summary": "Largest city in the United States",
+			"image": "https://kg.diffbot.com/image/api/get?fetch=yes&url=g%3Cj7P0St0DnBJf.x0KwLZrUn.%5B%3CR0Aa4Hh%3B%5Bv738ZqOr7U%3FgvFo%3ExS%7DYb%3B%60z%2F_OXhGxBLIMyDCT%3A.5fx",
+			"types": [
+				"Place",
+				"AdministrativeArea"
+			],
+			"name": "New York City",
+			"diffbotUri": "http://diffbot.com/entity/EcMmgf99wMQ6XYnbChv5HiQ",
+			"nbIncomingEdges": 18330011,
+			"targetDiffbotUri": "http://diffbot.com/entity/EcMmgf99wMQ6XYnbChv5HiQ",
+			"type": "AdministrativeArea"
+		},
+		"subregion": {
+			"recordId": "EyLhQX8YeNWOH19RPpdU7Kg@566",
+			"name": "Kings County",
+			"position": "personLocationPlace",
+			"type": "AdministrativeArea"
+		},
+		"latitude": 40.68294906616211,
+		"precision": 27.989721298217773,
+		"postalCode": "11217",
+		"surfaceForm": "New York City, New York",
+		"region": {
+			"summary": "State of the United States of America",
+			"image": "https://kg.diffbot.com/image/api/get?fetch=yes&url=g%3Cj7P0St0DnBJf.x0KwLZrUn.%5B%3CR0Aa4Hh%3B%5Bv738ZqOr7U%3FDvsO%3ExS%7DYb%3B%60z%2F_OXhGxB.yZl",
+			"types": [
+				"Place",
+				"AdministrativeArea"
+			],
+			"name": "New York",
+			"diffbotUri": "http://diffbot.com/entity/E1NxI_KXaMbiP5g2aM9MRdw",
+			"nbIncomingEdges": 83642769,
+			"targetDiffbotUri": "http://diffbot.com/entity/E1NxI_KXaMbiP5g2aM9MRdw",
+			"type": "AdministrativeArea"
+		},
+		"longitude": -73.9708023071289
 	}
 }
 ```
@@ -263,7 +339,7 @@ Note that certain longer field examples may be truncated for readability in thes
 				],
 				"name": "Georgetown University",
 				"diffbotUri": "http://diffbot.com/entity/Erxd6erYyOeqlPSftx3FWJQ",
-				"nbIncomingEdges": 192259,
+				"nbIncomingEdges": 192373,
 				"targetDiffbotUri": "http://diffbot.com/entity/Erxd6erYyOeqlPSftx3FWJQ",
 				"surfaceForm": "Georgetown University",
 				"type": "Organization"
@@ -328,7 +404,7 @@ Note that certain longer field examples may be truncated for readability in thes
 				],
 				"name": "American Express",
 				"diffbotUri": "http://diffbot.com/entity/E0WfaIUi8O5OJiCbVRwdj5Q",
-				"nbIncomingEdges": 242669,
+				"nbIncomingEdges": 242795,
 				"targetDiffbotUri": "http://diffbot.com/entity/E0WfaIUi8O5OJiCbVRwdj5Q",
 				"surfaceForm": "American Express",
 				"type": "Corporation"
@@ -410,7 +486,7 @@ Note that certain longer field examples may be truncated for readability in thes
 				],
 				"name": "Monumental Sports & Entertainment",
 				"diffbotUri": "http://diffbot.com/entity/E0T9lM-4cOB6KcFCN0ShBXg",
-				"nbIncomingEdges": 2244,
+				"nbIncomingEdges": 2242,
 				"targetDiffbotUri": "http://diffbot.com/entity/E0T9lM-4cOB6KcFCN0ShBXg",
 				"surfaceForm": "Monumental Sports & Entertainment",
 				"type": "Corporation"
@@ -602,7 +678,7 @@ Note that certain longer field examples may be truncated for readability in thes
 				],
 				"name": "United States of America",
 				"diffbotUri": "http://diffbot.com/entity/E01d4EK33MmCosgI2KXa4-A",
-				"nbIncomingEdges": 1245575855,
+				"nbIncomingEdges": 1245528825,
 				"targetDiffbotUri": "http://diffbot.com/entity/E01d4EK33MmCosgI2KXa4-A",
 				"type": "AdministrativeArea"
 			},
@@ -617,19 +693,19 @@ Note that certain longer field examples may be truncated for readability in thes
 				],
 				"name": "Potomac",
 				"diffbotUri": "http://diffbot.com/entity/E2uNw5qOlNAqFMoVADNwLhw",
-				"nbIncomingEdges": 109966,
+				"nbIncomingEdges": 109942,
 				"targetDiffbotUri": "http://diffbot.com/entity/E2uNw5qOlNAqFMoVADNwLhw",
 				"type": "AdministrativeArea"
 			},
 			"subregion": {
 				"summary": "County in Maryland, United States",
-				"image": "https://kg.diffbot.com/image/api/get?fetch=yes&url=g%3Cj7P0St0DnBJf.x0KwLZrUn.%5B%3CR0Aa4Hh%3B%5Bv738ZqOr7U%3FgvFQ%3ErO%3CLr2YhBlQepFj6UoKm7MyKm%7B%5Ex6%3D%3D%5Dy5k%3AHnSZTI%7DGc1.zCM",
+				"image": "https://kg.diffbot.com/image/api/get?fetch=yes&url=g%3Cj7P0St0DnBJf.x0KwLZrUn.%5B%3CR0Aa4Hh%3B%5Bv738ZqOr7U%3FBvqT%3ExS%7DYb%3B%60z%7EiFmvGs%3C_%2FCH%3AY0Wr%2CO%5E8bG%5Bf%3C%60.VrA",
 				"types": [
 					"Place"
 				],
 				"name": "Montgomery County",
 				"diffbotUri": "http://diffbot.com/entity/EwhIaKn1qNi6TZQUBrPLqcg",
-				"nbIncomingEdges": 3104171,
+				"nbIncomingEdges": 3103533,
 				"targetDiffbotUri": "http://diffbot.com/entity/EwhIaKn1qNi6TZQUBrPLqcg",
 				"type": "Place"
 			},
@@ -646,7 +722,7 @@ Note that certain longer field examples may be truncated for readability in thes
 				],
 				"name": "Maryland",
 				"diffbotUri": "http://diffbot.com/entity/EglcJEUJCMkavBvSi16gKjA",
-				"nbIncomingEdges": 22057440,
+				"nbIncomingEdges": 22062794,
 				"targetDiffbotUri": "http://diffbot.com/entity/EglcJEUJCMkavBvSi16gKjA",
 				"type": "AdministrativeArea"
 			},
@@ -662,7 +738,7 @@ Note that certain longer field examples may be truncated for readability in thes
 				],
 				"name": "United States of America",
 				"diffbotUri": "http://diffbot.com/entity/E01d4EK33MmCosgI2KXa4-A",
-				"nbIncomingEdges": 1245575855,
+				"nbIncomingEdges": 1245528825,
 				"targetDiffbotUri": "http://diffbot.com/entity/E01d4EK33MmCosgI2KXa4-A",
 				"type": "AdministrativeArea"
 			},
@@ -677,7 +753,7 @@ Note that certain longer field examples may be truncated for readability in thes
 				],
 				"name": "New York City",
 				"diffbotUri": "http://diffbot.com/entity/EcMmgf99wMQ6XYnbChv5HiQ",
-				"nbIncomingEdges": 18337731,
+				"nbIncomingEdges": 18330011,
 				"targetDiffbotUri": "http://diffbot.com/entity/EcMmgf99wMQ6XYnbChv5HiQ",
 				"type": "AdministrativeArea"
 			},
@@ -700,7 +776,7 @@ Note that certain longer field examples may be truncated for readability in thes
 				],
 				"name": "New York",
 				"diffbotUri": "http://diffbot.com/entity/E1NxI_KXaMbiP5g2aM9MRdw",
-				"nbIncomingEdges": 83627591,
+				"nbIncomingEdges": 83642769,
 				"targetDiffbotUri": "http://diffbot.com/entity/E1NxI_KXaMbiP5g2aM9MRdw",
 				"type": "AdministrativeArea"
 			},
@@ -716,7 +792,7 @@ Note that certain longer field examples may be truncated for readability in thes
 				],
 				"name": "United States of America",
 				"diffbotUri": "http://diffbot.com/entity/E01d4EK33MmCosgI2KXa4-A",
-				"nbIncomingEdges": 1245575855,
+				"nbIncomingEdges": 1245528825,
 				"targetDiffbotUri": "http://diffbot.com/entity/E01d4EK33MmCosgI2KXa4-A",
 				"type": "AdministrativeArea"
 			},
@@ -730,7 +806,7 @@ Note that certain longer field examples may be truncated for readability in thes
 				],
 				"name": "Dulles",
 				"diffbotUri": "http://diffbot.com/entity/E2c6AmpoGP6mrk-AlSI21AQ",
-				"nbIncomingEdges": 46857,
+				"nbIncomingEdges": 46896,
 				"targetDiffbotUri": "http://diffbot.com/entity/E2c6AmpoGP6mrk-AlSI21AQ",
 				"type": "AdministrativeArea"
 			},
@@ -743,7 +819,7 @@ Note that certain longer field examples may be truncated for readability in thes
 				],
 				"name": "Loudoun County",
 				"diffbotUri": "http://diffbot.com/entity/EWXAzP3oGNICyxGdIZLT3Lg",
-				"nbIncomingEdges": 791012,
+				"nbIncomingEdges": 790846,
 				"targetDiffbotUri": "http://diffbot.com/entity/EWXAzP3oGNICyxGdIZLT3Lg",
 				"type": "AdministrativeArea"
 			},
@@ -760,7 +836,7 @@ Note that certain longer field examples may be truncated for readability in thes
 				],
 				"name": "Virginia",
 				"diffbotUri": "http://diffbot.com/entity/EIq1PftjrND-Nofzr7rGJbA",
-				"nbIncomingEdges": 31606048,
+				"nbIncomingEdges": 31601008,
 				"targetDiffbotUri": "http://diffbot.com/entity/EIq1PftjrND-Nofzr7rGJbA",
 				"type": "AdministrativeArea"
 			},
@@ -874,22 +950,25 @@ Note that certain longer field examples may be truncated for readability in thes
 {
 	"skills": [
 		{
+			"name": "entrepreneurship",
+			"diffbotUri": "http://diffbot.com/entity/Ee932fbe3MTqDdEFFVE1GKg",
+			"targetDiffbotUri": "http://diffbot.com/entity/Ee932fbe3MTqDdEFFVE1GKg",
+			"surfaceForm": "entrepreneurship"
+		},
+		{
+			"name": "economics",
+			"diffbotUri": "http://diffbot.com/entity/E9kGv6JTWPMyWBAvoCfaQuw",
+			"websiteUris": [
+				"wikidata.org/entity/Q8134#skill"
+			],
+			"targetDiffbotUri": "http://diffbot.com/entity/E9kGv6JTWPMyWBAvoCfaQuw",
+			"surfaceForm": "economics"
+		},
+		{
 			"name": "human resource management",
 			"diffbotUri": "http://diffbot.com/entity/EGbsKlNBiP2C24W80rbtTOg",
 			"targetDiffbotUri": "http://diffbot.com/entity/EGbsKlNBiP2C24W80rbtTOg",
 			"surfaceForm": "human resource management"
-		},
-		{
-			"name": "supply chain management",
-			"diffbotUri": "http://diffbot.com/entity/EvglNgl2jNCyhiMhRpVH9JA",
-			"targetDiffbotUri": "http://diffbot.com/entity/EvglNgl2jNCyhiMhRpVH9JA",
-			"surfaceForm": "supply chain management"
-		},
-		{
-			"name": "non-profit",
-			"diffbotUri": "http://diffbot.com/entity/EFbFr-nyKPcuAHtF3yLlQOg",
-			"targetDiffbotUri": "http://diffbot.com/entity/EFbFr-nyKPcuAHtF3yLlQOg",
-			"surfaceForm": "non-profit"
 		}
 	]
 }

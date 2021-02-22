@@ -91,7 +91,7 @@ var entityTypes = {
         id: "kg-ont-video",
         description: "The Video entity type encompasses videos found throughout the web and known to the Knowledge Graph. \n\nNote that fields are not guaranteed to exist in every entity record.",
         helpers: templateHelpers,
-        exampleRecord: "https://app.diffbot.com/entity/VID2021988"
+        exampleRecord: "https://app.diffbot.com/entity/VID2021988.json"
     },
     Event: { 
         title: "Event",

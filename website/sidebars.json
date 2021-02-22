@@ -274,17 +274,13 @@
   "dql": {
     "Knowledge Graph": [
       "kg-index",
-      "dql-quickstart",
       {
         "type": "subcategory",
-        "label": "Tools and Usage",
-        "ids": ["kg-accessing", "kg-clients", "dql-excel"]
+        "label": "Search",
+        "ids": ["kg-search-quickstart", "dql-index", "kg-search-bestpractices", "kg-search-clients", "kg-search-api"]
       },
-      {
-        "type": "subcategory",
-        "label": "In-Depth",
-        "ids": ["dql-index", "dql-workflows", "dql-faq"]
-      }
+      "kg-enhance",
+      "kg-ontology"
     ]
   },
   "knowledge-graph-ontology": {
@@ -305,6 +301,9 @@
         "label": "Other",
         "ids": ["kg-ont-administrativearea"]
       }
+    ],
+    "References": [
+      "kg-industry-list"
     ]
   },
   "nl": {

@@ -33,7 +33,7 @@ Note that certain longer field examples may be truncated for readability in thes
 			],
 			"name": "United States of America",
 			"diffbotUri": "http://diffbot.com/entity/E01d4EK33MmCosgI2KXa4-A",
-			"nbIncomingEdges": 1245575855,
+			"nbIncomingEdges": 1245528825,
 			"targetDiffbotUri": "http://diffbot.com/entity/E01d4EK33MmCosgI2KXa4-A",
 			"type": "AdministrativeArea"
 		}
@@ -56,7 +56,7 @@ Note that certain longer field examples may be truncated for readability in thes
 			],
 			"name": "United States of America",
 			"diffbotUri": "http://diffbot.com/entity/E01d4EK33MmCosgI2KXa4-A",
-			"nbIncomingEdges": 1245575855,
+			"nbIncomingEdges": 1245528825,
 			"targetDiffbotUri": "http://diffbot.com/entity/E01d4EK33MmCosgI2KXa4-A",
 			"type": "AdministrativeArea"
 		},

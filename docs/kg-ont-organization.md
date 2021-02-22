@@ -136,28 +136,29 @@ Note that certain longer field examples may be truncated for readability in thes
 			"type": "Person"
 		},
 		{
-			"summary": "Board Member at Apple",
-			"image": "https://kg.diffbot.com/image/api/get?fetch=yes&url=g%3Cj7P0Stn8p.%5DjEp9G.Bd%7BkETp%7CMfK%7B-h%7B%5C%5C-ZjXk-D4Kh-g%5DBtEVu%2Fu4%2F%2FzN_%3Cb4E.G%5Bm",
+			"summary": "Chairman at Uber",
+			"image": "https://kg.diffbot.com/image/api/get?fetch=yes&url=g%3Cj7P0St%7D9u.LnOv%7BI%7C%40g7.pBYINs%3Ff%7CGZ7jr-tGZhWf%3DK%2FOvy%5Bp%3CSKbs8i%7CEyNzC%5C%3FYt7l%3DKc%3AWe%3Byt_Y%3BUq%3Fk%3BcuB2FH.I%5Do",
 			"types": [
 				"Person"
 			],
-			"name": "Monica Lozano",
-			"diffbotUri": "http://diffbot.com/entity/EMcnGCdN_OluuOUl_fp8bjw",
-			"nbIncomingEdges": 1,
-			"targetDiffbotUri": "http://diffbot.com/entity/EMcnGCdN_OluuOUl_fp8bjw",
-			"surfaceForm": "Monica Lozano",
+			"name": "Ronald D Sugar",
+			"diffbotUri": "http://diffbot.com/entity/EQNfpmtV4MP2gmMPVyljUdA",
+			"nbIncomingEdges": 2,
+			"targetDiffbotUri": "http://diffbot.com/entity/EQNfpmtV4MP2gmMPVyljUdA",
+			"surfaceForm": "Ronald D Sugar",
 			"type": "Person"
 		},
 		{
-			"summary": "Canadian businessman",
+			"summary": "American businessman",
+			"image": "https://kg.diffbot.com/image/api/get?fetch=yes&url=g%3Cj7P0St0DnBJf.x0KwLZrUn.%5B%3CR0Aa4Hh%3B%5Bv738ZqOr7U%3FFvup%3EoO9Rv%7B%3B.%40%3C%3De%7B.pGT",
 			"types": [
 				"Person"
 			],
-			"name": "Ronald Sugar",
-			"diffbotUri": "http://diffbot.com/entity/EGYakVmlmMRiOr1bmvGpvUA",
-			"nbIncomingEdges": 1,
-			"targetDiffbotUri": "http://diffbot.com/entity/EGYakVmlmMRiOr1bmvGpvUA",
-			"surfaceForm": "Ronald Sugar",
+			"name": "James A Bell",
+			"diffbotUri": "http://diffbot.com/entity/ExEwgsfTzNAuZrDTfzBLcGA",
+			"nbIncomingEdges": 11,
+			"targetDiffbotUri": "http://diffbot.com/entity/ExEwgsfTzNAuZrDTfzBLcGA",
+			"surfaceForm": "James A Bell",
 			"type": "Person"
 		}
 	]
@@ -180,7 +181,7 @@ Note that certain longer field examples may be truncated for readability in thes
 {
 	"capitalization": {
 		"currency": "USD",
-		"value": 2289400020992
+		"value": 2372959993856
 	}
 }
 ```
@@ -198,10 +199,10 @@ Note that certain longer field examples may be truncated for readability in thes
 			"surfaceForm": "Computer Hardware Companies"
 		},
 		{
-			"name": "Manufacturing Companies",
-			"diffbotUri": "http://diffbot.com/entity/E2uVXivaLO66MwG7epo9rxw",
-			"targetDiffbotUri": "http://diffbot.com/entity/E2uVXivaLO66MwG7epo9rxw",
-			"surfaceForm": "Manufacturing Companies"
+			"name": "Networking Companies",
+			"diffbotUri": "http://diffbot.com/entity/EulcqzbXIN3iP3W_tr3pfpw",
+			"targetDiffbotUri": "http://diffbot.com/entity/EulcqzbXIN3iP3W_tr3pfpw",
+			"surfaceForm": "Networking Companies"
 		},
 		{
 			"name": "Software Companies",
@@ -226,7 +227,7 @@ Note that certain longer field examples may be truncated for readability in thes
 		],
 		"name": "Tim Cook",
 		"diffbotUri": "http://diffbot.com/entity/E84vWTe2yP6qQ0u7kbL3ZGA",
-		"nbIncomingEdges": 19,
+		"nbIncomingEdges": 18,
 		"targetDiffbotUri": "http://diffbot.com/entity/E84vWTe2yP6qQ0u7kbL3ZGA",
 		"surfaceForm": "Tim Cook",
 		"type": "Person"
@@ -370,9 +371,9 @@ Note that certain longer field examples may be truncated for readability in thes
 {
 	"iSicClassification": [
 		{
-			"code": "",
+			"code": "2620",
 			"isPrimary": false,
-			"name": ""
+			"name": "Manufacture of computers and peripheral equipment"
 		}
 	]
 }
@@ -394,8 +395,8 @@ Note that certain longer field examples may be truncated for readability in thes
 {
 	"industries": [
 		"Computer Hardware Companies",
-		"Manufacturing Companies",
-		"Software Companies"
+		"Software Companies",
+		"Networking Companies"
 	]
 }
 ```
@@ -585,7 +586,7 @@ Note that certain longer field examples may be truncated for readability in thes
 			],
 			"name": "United States of America",
 			"diffbotUri": "http://diffbot.com/entity/E01d4EK33MmCosgI2KXa4-A",
-			"nbIncomingEdges": 1245575855,
+			"nbIncomingEdges": 1245528825,
 			"targetDiffbotUri": "http://diffbot.com/entity/E01d4EK33MmCosgI2KXa4-A",
 			"type": "AdministrativeArea"
 		},
@@ -600,7 +601,7 @@ Note that certain longer field examples may be truncated for readability in thes
 			],
 			"name": "Cupertino",
 			"diffbotUri": "http://diffbot.com/entity/Exd-cghOPMcCHRez564r5EA",
-			"nbIncomingEdges": 287706,
+			"nbIncomingEdges": 287778,
 			"targetDiffbotUri": "http://diffbot.com/entity/Exd-cghOPMcCHRez564r5EA",
 			"type": "AdministrativeArea"
 		},
@@ -618,7 +619,7 @@ Note that certain longer field examples may be truncated for readability in thes
 			],
 			"name": "California",
 			"diffbotUri": "http://diffbot.com/entity/El0_8ehooNxOPT36Y4RdV9w",
-			"nbIncomingEdges": 136728414,
+			"nbIncomingEdges": 136727424,
 			"targetDiffbotUri": "http://diffbot.com/entity/El0_8ehooNxOPT36Y4RdV9w",
 			"type": "AdministrativeArea"
 		},
@@ -643,7 +644,7 @@ Note that certain longer field examples may be truncated for readability in thes
 				],
 				"name": "United States of America",
 				"diffbotUri": "http://diffbot.com/entity/E01d4EK33MmCosgI2KXa4-A",
-				"nbIncomingEdges": 1245575855,
+				"nbIncomingEdges": 1245528825,
 				"targetDiffbotUri": "http://diffbot.com/entity/E01d4EK33MmCosgI2KXa4-A",
 				"type": "AdministrativeArea"
 			},
@@ -658,7 +659,7 @@ Note that certain longer field examples may be truncated for readability in thes
 				],
 				"name": "Cupertino",
 				"diffbotUri": "http://diffbot.com/entity/Exd-cghOPMcCHRez564r5EA",
-				"nbIncomingEdges": 287706,
+				"nbIncomingEdges": 287778,
 				"targetDiffbotUri": "http://diffbot.com/entity/Exd-cghOPMcCHRez564r5EA",
 				"type": "AdministrativeArea"
 			},
@@ -672,7 +673,7 @@ Note that certain longer field examples may be truncated for readability in thes
 				],
 				"name": "Santa Clara County",
 				"diffbotUri": "http://diffbot.com/entity/E8Sjxl9YuMRCajUEPN2k9ew",
-				"nbIncomingEdges": 7036662,
+				"nbIncomingEdges": 7036389,
 				"targetDiffbotUri": "http://diffbot.com/entity/E8Sjxl9YuMRCajUEPN2k9ew",
 				"type": "AdministrativeArea"
 			},
@@ -688,7 +689,7 @@ Note that certain longer field examples may be truncated for readability in thes
 				],
 				"name": "California",
 				"diffbotUri": "http://diffbot.com/entity/El0_8ehooNxOPT36Y4RdV9w",
-				"nbIncomingEdges": 136728414,
+				"nbIncomingEdges": 136727424,
 				"targetDiffbotUri": "http://diffbot.com/entity/El0_8ehooNxOPT36Y4RdV9w",
 				"type": "AdministrativeArea"
 			},
@@ -704,7 +705,7 @@ Note that certain longer field examples may be truncated for readability in thes
 				],
 				"name": "United States of America",
 				"diffbotUri": "http://diffbot.com/entity/E01d4EK33MmCosgI2KXa4-A",
-				"nbIncomingEdges": 1245575855,
+				"nbIncomingEdges": 1245528825,
 				"targetDiffbotUri": "http://diffbot.com/entity/E01d4EK33MmCosgI2KXa4-A",
 				"type": "AdministrativeArea"
 			},
@@ -719,7 +720,7 @@ Note that certain longer field examples may be truncated for readability in thes
 				],
 				"name": "Cupertino",
 				"diffbotUri": "http://diffbot.com/entity/Exd-cghOPMcCHRez564r5EA",
-				"nbIncomingEdges": 287706,
+				"nbIncomingEdges": 287778,
 				"targetDiffbotUri": "http://diffbot.com/entity/Exd-cghOPMcCHRez564r5EA",
 				"type": "AdministrativeArea"
 			},
@@ -733,7 +734,7 @@ Note that certain longer field examples may be truncated for readability in thes
 				],
 				"name": "Santa Clara County",
 				"diffbotUri": "http://diffbot.com/entity/E8Sjxl9YuMRCajUEPN2k9ew",
-				"nbIncomingEdges": 7036662,
+				"nbIncomingEdges": 7036389,
 				"targetDiffbotUri": "http://diffbot.com/entity/E8Sjxl9YuMRCajUEPN2k9ew",
 				"type": "AdministrativeArea"
 			},
@@ -749,7 +750,7 @@ Note that certain longer field examples may be truncated for readability in thes
 				],
 				"name": "California",
 				"diffbotUri": "http://diffbot.com/entity/El0_8ehooNxOPT36Y4RdV9w",
-				"nbIncomingEdges": 136728414,
+				"nbIncomingEdges": 136727424,
 				"targetDiffbotUri": "http://diffbot.com/entity/El0_8ehooNxOPT36Y4RdV9w",
 				"type": "AdministrativeArea"
 			},
@@ -765,7 +766,7 @@ Note that certain longer field examples may be truncated for readability in thes
 				],
 				"name": "United States of America",
 				"diffbotUri": "http://diffbot.com/entity/E01d4EK33MmCosgI2KXa4-A",
-				"nbIncomingEdges": 1245575855,
+				"nbIncomingEdges": 1245528825,
 				"targetDiffbotUri": "http://diffbot.com/entity/E01d4EK33MmCosgI2KXa4-A",
 				"type": "AdministrativeArea"
 			},
@@ -837,9 +838,9 @@ Note that certain longer field examples may be truncated for readability in thes
 {
 	"naceClassification": [
 		{
-			"code": "",
+			"code": "2620",
 			"isPrimary": false,
-			"name": ""
+			"name": "Manufacture of computers and peripheral equipment"
 		}
 	]
 }
@@ -851,6 +852,11 @@ Note that certain longer field examples may be truncated for readability in thes
 ```
 {
 	"naicsClassification": [
+		{
+			"code": "334111",
+			"isPrimary": false,
+			"name": "Electronic Computer Manufacturing"
+		},
 		{
 			"code": "334000",
 			"isPrimary": false,
@@ -870,7 +876,7 @@ Note that certain longer field examples may be truncated for readability in thes
 * **Example:**
 ```
 {
-	"nbActiveEmployeeEdges": 75316
+	"nbActiveEmployeeEdges": 75333
 }
 ```
 ### nbEmployeesMax
@@ -1064,45 +1070,44 @@ Note that certain longer field examples may be truncated for readability in thes
 {
 	"subsidiaries": [
 		{
-			"summary": "Company in Teltow, Germany",
-			"image": "https://kg.diffbot.com/image/api/get?fetch=yes&url=g%3Cj7P0St0DnBJf.x0KwLZrUn.%5B%3CR0Aa4Hh%3B%5Bv738ZqOr7U%3FEvtq%3Eq%5D3%5C-oGd-%60J%5Ex%3FkJakPq%3F-Ecy2h.G%5E5",
-			"types": [
-				"Organization",
-				"Corporation"
-			],
-			"name": "SensoMotoric Instruments (SMI)",
-			"diffbotUri": "http://diffbot.com/entity/EwFI_8nzYMEm5Iu4AGQ_AbA",
-			"nbIncomingEdges": 212,
-			"targetDiffbotUri": "http://diffbot.com/entity/EwFI_8nzYMEm5Iu4AGQ_AbA",
-			"surfaceForm": "SensoMotoric Instruments (SMI)",
-			"type": "Corporation"
-		},
-		{
-			"summary": "Corporation founded in 1982",
-			"image": "https://kg.diffbot.com/image/api/get?fetch=yes&url=g%3Cj7P0St%7D9u.LnOv%7BI%7C%40g7.pBYINs%3Ff%7CGZ7jr-tGZhWf%3DK%2FOvy%5Bp%3CSKbs8i%7CEyNzC%5E%3BZu%3Di9PczNk2svQbQsvA23Yo%3Cj%3BR.I%5Do",
-			"types": [
-				"Organization",
-				"Corporation"
-			],
-			"name": "Orion Network Systems",
-			"diffbotUri": "http://diffbot.com/entity/EZDj62U6rOxigMyWlI1zF-A",
-			"nbIncomingEdges": 2,
-			"targetDiffbotUri": "http://diffbot.com/entity/EZDj62U6rOxigMyWlI1zF-A",
-			"surfaceForm": "Orion Network Systems",
-			"type": "Corporation"
-		},
-		{
 			"summary": "Manufacturing company founded in 2006",
-			"image": "https://kg.diffbot.com/image/api/get?fetch=yes&url=g%3Cj7P0St%7D9u.LnOv%7BI%7C%40g7.pBYINs%3Ff%7CGZ7jr-tGZhWf%3DK%2FOvy%5Bp%3CSKbs8i%7CEyNzBa%3DXu8e9McDG%7DItAZrOqhU%7D%2Fl%60%3B2v%3E%3E%5BS%3BK71muK1K.%7DIY",
+			"image": "https://kg.diffbot.com/image/api/get?fetch=yes&url=g%3Cj7P0St%7D9u.LnOv%7BI%7C%40g7.pBYINs%3Ff%7CGZ7jr-tGZhWf%3DK%2FOvy%5Bp%3CSKbs8i%7CEyNzC%5E%3E%5Cn%3Em5Tc%3CS%7Dzs6I%5C6_mHvRLdTm3D.I%5Do",
 			"types": [
 				"Organization",
 				"Corporation"
 			],
-			"name": "InVisage Technologies Inc",
-			"diffbotUri": "http://diffbot.com/entity/EzQ7_K3dFMAek71pYP_tq0w",
-			"nbIncomingEdges": 265,
-			"targetDiffbotUri": "http://diffbot.com/entity/EzQ7_K3dFMAek71pYP_tq0w",
-			"surfaceForm": "InVisage Technologies Inc",
+			"name": "Anobit Technologies",
+			"diffbotUri": "http://diffbot.com/entity/EtjG532UTPKqFYb3Kc52cLQ",
+			"nbIncomingEdges": 192,
+			"targetDiffbotUri": "http://diffbot.com/entity/EtjG532UTPKqFYb3Kc52cLQ",
+			"surfaceForm": "Anobit Technologies",
+			"type": "Corporation"
+		},
+		{
+			"summary": "American audio products manufacturer",
+			"image": "https://kg.diffbot.com/image/api/get?fetch=yes&url=g%3Cj7P0St0DnBJf.x0KwLZrUn.%5B%3CR0Aa4Hh%3B%5Bv738ZqOr7U%3FbvAu%3EgS%7Dav%7B%3F7F%5DLk%7EFo%3A%60ePt2S.Voy",
+			"types": [
+				"Organization",
+				"Corporation"
+			],
+			"name": "Beats Electronics",
+			"diffbotUri": "http://diffbot.com/entity/EIZivpmAMPZSFpRruQSlV6g",
+			"nbIncomingEdges": 2057,
+			"targetDiffbotUri": "http://diffbot.com/entity/EIZivpmAMPZSFpRruQSlV6g",
+			"surfaceForm": "Beats Electronics",
+			"type": "Corporation"
+		},
+		{
+			"summary": "Corporation founded in 1987",
+			"types": [
+				"Organization",
+				"Corporation"
+			],
+			"name": "Prismo Graphics",
+			"diffbotUri": "http://diffbot.com/entity/EP3_QsQ8mM3Kah4ps88ojxg",
+			"nbIncomingEdges": 3,
+			"targetDiffbotUri": "http://diffbot.com/entity/EP3_QsQ8mM3Kah4ps88ojxg",
+			"surfaceForm": "Prismo Graphics",
 			"type": "Corporation"
 		}
 	]

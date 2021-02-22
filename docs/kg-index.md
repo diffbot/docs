@@ -1,32 +1,36 @@
 ---
 id: kg-index
-title: Knowledge Graph and Enhance
-sidebar_label: Knowledge Graph and Enhance Index
+title: Knowledge Graph
+sidebar_label: Introduction
 ---
 
-The [Knowledge Graph](https://www.diffbot.com/products/knowledge-graph/) (KG) lets you search through over 10 billion entities (people, companies, products, articles, and discussions), discover the relationships between them, and analyze 1 trillion+ facts. Enhance provides mission critical org data from Fortune 1000 companies to the bakery down the street. Enrich leads, validate data, and get real-time org updates at web scale.
+The Diffbot Knowledge Graph (KG) is a collection of over 10 billion standard entities (697M+ people, 200M+ companies, 2.2M+ articles, 2.8M+ products, and more) [crawled](cb-intro-cb.md) and [extracted](TBD) by Diffbot from the public web. 
 
-This page is a directory of KG and Enhance related content.
+**How it Works —** [Search](TBD) for any entity, or [Enhance](TBD) your existing dataset of companies and people with facts from the Knowledge Graph. Both are available as REST API endpoints, though access via the [Dashboard](TBD) interface may be preferred for less technical users.
 
----
+**Highlights —** A unique benefit of the Diffbot Knowledge Graph is its ability to support a staggering array of search queries using [DQL](). Here are some examples (Diffbot account required to view):
 
-> New to Knowledge Graph? Start with this [Quickstart Tutorial](dql-quickstart)!
+- [Companies in San Francisco with a Female CEO and <500 Employees]()
+- [All Whole Foods Retail Store Locations]()
+- [People in Automotive Software Roles Based in Europe]()
+- [Recent Founders Who Were Previously FAANG Employees]()
+- [Largest Investors in Video Game Companies]()
+- [Positive Sentiment News on COVID-19]()
+- [News Coverage of Protests by Publishing Country]()
 
-## Tools and Usage
+Additionally, unlike other datasets, Knowledge Graph records can also be updated and refreshed on demand. This is currently supported as a beta feature for organizations and people through [Enhance Refresh & Search](TBD). *As of Q1 2021, we are actively improving this feature.*
 
-- [Accessing the Knowledge Graph](kg-accessing) - access the knowledge graph through the UI or the API
-- [API Clients](dql-api-clients) - use the API through your favorite programming language
-- [Microsoft Excel DQL Plugin](dql-excel) - use the power of DQL in your spreadsheets and enhance your data
 
-## API Reference Documentation
+## Getting Started
 
-- [Knowledge Graph API docs](/kgapi) - learn about the fields, parameters, and return values of interacting with the KG API directly
-- [Enhance API docs](/enhance) - learn about the fields, parameters, and return values of interacting with the Enhance API directly
-- [Ontology](/ontology) - understand the entities returned by the Enhance and KG APIs
-- [Hierarchy of Industry Categories](/industry_hierarchy) - understand the hierarchy of industry categories returned by the Enhance and KG APIs
+[Quickstart with Search]() is a 6 minute guide to finding companies and news/blog articles with the Knowledge Graph. Start with Search if you're looking to build a dataset similar to the ones highlighted in the section above.
 
-## In-Depth
+If you're looking instead to enrich your existing organization/people dataset with data like industries, logos, past employment, skills and more, [Quickstart with Enhance]() will get you setup in just 3 minutes.
 
-- [Diffbot Query Language (DQL)](dql-index) - learn to use the Diffbot Query Language on practical examples
-- [DQL Workflow Examples](dql-workflows) - learn on practical examples
-- [DQL FAQ](dql-faq) - actual customer questions
+None of the above quite what you're looking for? Try [Extract](), our automatic scraping algorithm for any website. 
+
+
+## Need More Help?
+
+Reach out to support@diffbot.com and I promise we won't yell. 
+

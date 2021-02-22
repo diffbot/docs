@@ -1,7 +1,7 @@
 ---
 id: dql-index
 title: Diffbot Query Language (DQL)
-sidebar_label: Diffbot Query Language (DQL)
+sidebar_label: Diffbot Query Language
 ---
 
 Diffbot's Query Language (DQL) is used to search and filter the [Knowledge Graph](kg-index).
