@@ -271,13 +271,13 @@
       }
     ]
   },
-  "dql": {
+  "knowledge-graph": {
     "Knowledge Graph": [
       "kg-index",
       {
         "type": "subcategory",
         "label": "Search",
-        "ids": ["kg-search-quickstart", "dql-index", "kg-search-bestpractices", "kg-search-clients", "kg-search-api"]
+        "ids": ["kg-search-quickstart", "kg-search-advanced", "kg-search-bestpractices", "dql-index", "kg-search-clients", "kg-search-api"]
       },
       "kg-enhance",
       "kg-ontology"

@@ -4,9 +4,9 @@ title: Knowledge Graph
 sidebar_label: Introduction
 ---
 
-The Diffbot Knowledge Graph (KG) is a collection of over 10 billion standard entities (697M+ people, 200M+ companies, 2.2M+ articles, 2.8M+ products, and more) [crawled](cb-intro-cb.md) and [extracted](TBD) by Diffbot from the public web. 
+The Diffbot Knowledge Graph (KG) is a collection of over 10 billion standard entities (697M+ people, 200M+ companies, 2.2M+ articles, 2.8M+ products, and more) [crawled](cb-intro-cb.md) and [extracted](api-basics-index.md) by Diffbot from the public web. 
 
-**How it Works —** [Search](TBD) for any entity, or [Enhance](TBD) your existing dataset of companies and people with facts from the Knowledge Graph. Both are available as REST API endpoints, though access via the [Dashboard](TBD) interface may be preferred for less technical users.
+**How it Works —** [Search](kg-search-quickstart.md) for any entity, or [Enhance](TBD) your existing dataset of companies and people with facts from the Knowledge Graph. Both are available as REST API endpoints, though access via the [Dashboard](TBD) interface may be preferred for less technical users.
 
 **Highlights —** A unique benefit of the Diffbot Knowledge Graph is its ability to support a staggering array of search queries using [DQL](). Here are some examples (Diffbot account required to view):
 
