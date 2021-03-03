@@ -6,13 +6,13 @@ sidebar_label: Accessing Knowledge Graph
 
 There are two ways in which you can use DQL to query the Knowledge Graph: the UI, and the API endpoint.
 
-Diffbot provides a UI interface via our [Developer Dashboard](https://app.diffbot.com/search/). This interface is designed to be accessible and user-friendly, and is suitable for users and researchers who do not have prior programming experience. The UI provides a form that can be used to submit DQL queries directly, and a query builder interface with various drop-down menus that allows you to build complex queries using text fields and drop-down boxes. For a primer on this dashboard, please see [this tutorial](tutorials-new-dashboard) and then refer to the rest of the content on this page.
+Diffbot provides a UI interface via our [Dashboard](https://app.diffbot.com/search/). This interface is designed to be accessible and user-friendly, and is suitable for users and researchers who do not have prior programming experience. The UI provides a form that can be used to submit DQL queries directly, and a query builder interface with various drop-down menus that allows you to build complex queries using text fields and drop-down boxes. For a primer on this dashboard, please see [this tutorial](tutorials-new-dashboard) and then refer to the rest of the content on this page.
  
 Diffbot also provides a REST API that can be accessed programmatically, and this is more suitable for technical users with programming experience. Usage of the REST API is discussed further below in this document, under the heading ["Accessing the Knowledge Graph through the API"](#accessing-the-knowledge-graph-through-the-api).
 
 ## Accessing the Knowledge Graph via the Dashboard
 
-In order to access the DQL/KG UI in the Developer Dashboard, navigate to [https://app.diffbot.com/search/](https://app.diffbot.com/search/) in your browser, and log in to your Diffbot account if prompted to do so. Alternatively, you may reach the search page by logging into the Dashboard and clicking _Knowledge Graph > Search_ from the left-hand navigation menu.
+In order to access the DQL/KG UI in the Dashboard, navigate to [https://app.diffbot.com/search/](https://app.diffbot.com/search/) in your browser, and log in to your Diffbot account if prompted to do so. Alternatively, you may reach the search page by logging into the Dashboard and clicking _Knowledge Graph > Search_ from the left-hand navigation menu.
 
 You are then presented with the KG Search page. This page has 3 tabs -- Visual, Query, and API Call:
 
