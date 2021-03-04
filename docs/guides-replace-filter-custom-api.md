@@ -45,5 +45,5 @@ todo: Modify links to old Dashboard
 <code>\W?</code> one or zero non-word characters</li>
 </ul>
 <p>In other words, it removes everything that doesn’t match the currency’s letters by replacing it with <em>nothing</em> – an empty second field. This regex could be re-used on any similar site now to solve a similar problem.</p>
-<p>You can read some more about filters <a href="api-selectors-filters">here</a>.</p>
+<p>You can read some more about filters <a href="api-selectors-filters#output-filters">here</a>.</p>
 			</div>
