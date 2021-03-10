@@ -4,7 +4,7 @@ title: Search the Knowledge Graph
 sidebar_label: Quickstart
 ---
 
-This quickstart guide will take you through your first Knowledge Graph search with the Dashboard and building a dataset in around 6 minutes. 
+This quickstart guide will take you through your first Knowledge Graph search for organizations and articles with the Dashboard and building a dataset in around 9 minutes. 
 
 If you fancy yourself a developer who doesn't need a web interface, feel free to jump ahead to [the API](kg-search-api).
 
@@ -55,7 +55,7 @@ That's it! When you're ready, hit Search!
 
 **So why use Diffbot?** It might be easy enough to find data on a few companies manually, but the process of filtering out junk and irrelevant sites becomes mechanically intensive and undeserving of human brain power when researching companies at the scale of 1000s or more. We believe in making menial data gathering obsolete. With Diffbot, when you search for organizations, you just get organizations. 
 
-**Is your data GDPR friendly?** Absolutely 👍. Unlike other data providers, every single property in the Knowledge Graph is fully cited to a publicly available web source. We call this [Data Provenance](TBD), and it allows Diffbot Knowledge Graph is to 100% compatible with GDPR and other privacy regulations. See our [privacy policy](https://www.diffbot.com/privacy/) for more details.
+**Is your data GDPR friendly?** Absolutely 👍. Unlike other data providers, every single data point in the Knowledge Graph is fully cited to a publicly available web source. We call this [Data Provenance](), and it allows Diffbot Knowledge Graph is to 100% compatible with GDPR and other privacy regulations. See our [privacy policy](https://www.diffbot.com/privacy/) for more details.
 
 **What's next —** Try narrowing your results even more by `locations` or `nbEmployeesMin` (minimum # of employees), or start a completely fresh search by industry. 
 
@@ -81,18 +81,18 @@ Make sure `Sort By` is set to `Date (Newest First)` to ensure that we're looking
 > 
 > ![Search Builder - Tags > Label set to Racism](/img/kg/search-visual-tags-label-racism-results.png)
 
-🤯 **Whoa! How does this work?** As Diffbot's global crawlers scrape articles for the Knowledge Graph, we also apply [Natural Language Processing](TBD) to infer and extrapolate important topics from content, even if it is not explicitly tagged with one. This data property allows for incredibly precise news aggregation.
+🤯 **Whoa! How does this work?** As Diffbot's global crawlers scrape articles for the Knowledge Graph, we also apply [Natural Language Processing]() to infer and extrapolate important topics from content, even if it is not explicitly tagged with any. This generated field allows for incredibly precise news aggregation. There are generally at least 2 or more tags with each article. 
 
 **I see Russian articles!** Unlike strict text searches that are common with other news databases, tag searches in the Knowledge Graph include both non-English language and other possible references to that same topic. For reference, here is [a full list of similar references and language translations for the "racism" tag.](https://app.diffbot.com/entity/E6aNyPmgGPe-ZtprhqAZG1Q)
 
 **What can I search as a tag?** While tag searches come with convenient features, their nature as normalized fields sometimes overly constricts a search query (especially with ultra-niche topics). If a tag search doesn't turn up enough results for your needs, try searching the text of the article instead. 
 
 #### 💥 Try This
-On the top right hand corner of the Search page, just left of the JSON & CSV buttons are options to `View as Card` or `View as Table`. Clicking on `View as Table` will transform the default card view into a tabular layout with key data points including a [Natural Language inferred sentiment score](TBD). 
+On the top right hand corner of the Search page, just left of the JSON & CSV buttons are options to `View as Card` or `View as Table`. Clicking on `View as Table` will transform the default card view into a tabular layout with key data points including a [Natural Language inferred sentiment score](). 
 
 ![Search Buider - View As Table](/img/kg/search-builder-viewastable.png)
 
-Later, we'll run a more advanced search to [find only articles with postive sentiment](TBD). 
+Later, we'll run a more advanced search to [find only articles with postive sentiment](kg-search-advanced#find-only-positive-or-negative-sentiment-articles). 
 
 As with organizations, feel free to experiment further with your article search. When you're ready, Step 4 will show you how to leverage this extrapolated tagging feature to solve news aggregation for commonly mis-matched company names.
 
@@ -143,11 +143,11 @@ Note that JSON is also the response format for the Knowledge Graph Search API an
 
 The CSV export option makes it easy to upload your dataset into your preferred spreadsheet tool and is a favorite for non-engineering users. Just like exporting as JSON, simply click the CSV button on the top right hand corner of the Search view. 
 
-This will open a CSV export editor, allowing you to customize your dataset to just the columns and size you need. 
+This will open a CSV export editor, allowing you to customize your dataset to just the specific columns and size you need. 
 
 ![Search Results - Export CSV](/img/kg/search-results-exportcsv.png)
 
 ## Takeaways & Next Steps
-We've learned how to search for the two most popular data types in the Diffbot Knowledge Graph, Organizations and Articles, using the visual search builder. We also leveraged extrapolated tags to make ultra-precise searches. 
+We've learned how to search for the two most popular data types in the Diffbot Knowledge Graph, Organizations and Articles, using the visual search builder. We also leveraged extrapolated tags to make ultra-precise searches for news on commonly mismatched organizations like Zoom Video Communications.
 
-Next, we'll take a look at making more [advanced techniques](kg-search-advanced) utilizing a search query language called DQL. If you're remotely familiar with SQL at all, you should not have a problem. DQL allows for many familiar operators, sorting, and even introduces unique methods for summarizing (or pivot tabling) datasets by a property. 
+Next, we'll take a look at making more [advanced techniques](kg-search-advanced) utilizing a search query language called DQL. If you're remotely familiar with SQL at all, you should not have a problem. DQL allows for many familiar operators, sorting, and even introduces unique methods for summarizing (or pivot tabling) datasets by a field. 

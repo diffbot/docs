@@ -8,6 +8,7 @@ The Ontology is a reference of all the fields available to each entity in the [D
 
 ### Browse by Entity »
 - [All Entities](kg-ont-diffbotentity)
+- [Articles](kg-ont-article)
 - [Organizations](kg-ont-organization) *(see also: [Organization Industry Reference](kg-industry-list))*
 - [People](kg-ont-person)
 - [Places](kg-ont-place)
