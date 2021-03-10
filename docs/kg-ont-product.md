@@ -36,7 +36,7 @@ Note that fields are not guaranteed to exist in every entity record.
 * [upc](#upc) 
 
 ## Product Field Details
-Note that certain longer field examples may be truncated for readability in these docs. 
+Note that certain longer field examples may be truncated for readability.
 
 ### availability
   
@@ -48,7 +48,7 @@ Note that certain longer field examples may be truncated for readability in thes
 }
 ```
 ### brand
-  Item&#39;s brand name
+  
 * **Type:** String
 * **Example:**
 ```
@@ -62,12 +62,7 @@ Note that certain longer field examples may be truncated for readability in thes
 * **Example:**
 ```
 {
-	"breadcrumb": [
-		{
-			"link": "",
-			"name": ""
-		}
-	]
+	"breadcrumb": []
 }
 ```
 ### category
@@ -262,7 +257,7 @@ Note that certain longer field examples may be truncated for readability in thes
 }
 ```
 ### language
-  Refers to the language in which the Product page is written
+  
 * **Type:** String
 * **Example:**
 ```
@@ -409,7 +404,7 @@ Note that certain longer field examples may be truncated for readability in thes
 }
 ```
 ### title
-  Title of the Product
+  
 * **Type:** String
 * **Example:**
 ```
