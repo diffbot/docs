@@ -13,12 +13,12 @@ title: {{ title }}
 {{ /fields }}
 
 ## {{ title }} Field Details
-Note that certain longer field examples may be truncated for readability in these docs. 
+Note that certain longer field examples may be truncated for readability.
 
 {{ #fields }}
 ### {{ name }}
-{{ #deprecated }}**`Deprecated`**{{ /deprecated }}  {{ desc }}
-* **Type:** {{ contentType }}
+{{ #isDeprecated }}**`Deprecated`**{{ /isDeprecated }}  {{ desc }}
+* **Type:** {{ type }}
 * **Example:**
 ```
 {{{ example }}}
