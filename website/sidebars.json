@@ -305,6 +305,9 @@
         "label": "Other",
         "ids": ["kg-ont-administrativearea"]
       }
+    ],
+    "References": [
+      "kg-industry-list"
     ]
   },
   "nl": {
