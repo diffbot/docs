@@ -10,7 +10,7 @@ Custom APIs allow you to extract nearly anything from nearly any site using Diff
 
 ## Creating a New API
 
-You first need to create a custom API using our <a href="https://app.diffbot.com/custom/">API Toolkit</a>. Point-and-click or use CSS selectors to identify the content you wish to extract from a sample page. Your new API will be ready immediately, either for individual calls, your own app integration, or from within <a href="/dev/crawl">Crawlbot</a> or our <a href="/dev/bulk">Bulk API</a> systems.
+You first need to create a custom API using our <a href="https://app.diffbot.com/custom/">API Toolkit</a>. Point-and-click or use CSS selectors to identify the content you wish to extract from a sample page. Your new API will be ready immediately, either for individual calls, your own app integration, or from within <a href="https://app.diffbot.com/crawls/">Crawlbot</a> or our <a href="https://app.diffbot.com/bulk/">Bulk API</a> systems.
 
 Custom APIs use Diffbot's cloud-based rendering engine, and fully execute most page-level Javascript in order to access Ajax-delivered elements.
 

@@ -4,7 +4,7 @@ title: Search API
 sidebar_label: Search API
 ---
 
-Diffbot's Search API allows you to search the extracted content of your Diffbot "collections." A collection is a discrete <a href="/dev/crawl">Crawlbot</a> or <a href="/dev/bulk">Bulk API</a> job, and includes all of the web pages processed within that job.
+Diffbot's Search API allows you to search the extracted content of your Diffbot "collections." A collection is a discrete <a href="https://app.diffbot.com/crawls/">Crawlbot</a> or <a href="https://app.diffbot.com/bulk/">Bulk API</a> job, and includes all of the web pages processed within that job.
 
 In order to search a collection, you must first create that collection using either Crawlbot or the Bulk API. A collection can be searched before a crawl or bulk job is finished.
 
