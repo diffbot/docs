@@ -15,7 +15,7 @@ Note that fields are not guaranteed to exist in every entity record.
 * [startDateTime](#startdatetime) 
 
 ## Event Field Details
-Note that certain longer field examples may be truncated for readability in these docs. 
+Note that certain longer field examples may be truncated for readability.
 
 ### endDateTime
   
@@ -24,9 +24,9 @@ Note that certain longer field examples may be truncated for readability in thes
 ```
 {
 	"endDateTime": {
-		"str": "d2019-10-17T07:00",
+		"str": "d2018-10-11T07:00",
 		"precision": 4,
-		"timestamp": 1571295600000
+		"timestamp": 1539241200000
 	}
 }
 ```
@@ -43,20 +43,20 @@ Note that certain longer field examples may be truncated for readability in thes
 				"surfaceForm": "United States"
 			},
 			"isCurrent": true,
-			"address": "Westin Chicago River North, Chicago, Illinois, IL, USA",
+			"address": "Anaheim Convention Center, Anaheim, California, CA, USA",
 			"city": {
-				"name": "Chicago",
-				"surfaceForm": "Chicago"
+				"name": "Anaheim",
+				"surfaceForm": "Anaheim"
 			},
-			"street": "Westin Chicago River North",
+			"street": "Anaheim Convention Center",
 			"subregion": {
-				"name": "Illinois",
-				"surfaceForm": "Illinois"
+				"name": "California",
+				"surfaceForm": "California"
 			},
-			"surfaceForm": "Westin Chicago River North, Chicago, Illinois, IL, USA",
+			"surfaceForm": "Anaheim Convention Center, Anaheim, California, CA, USA",
 			"region": {
-				"name": "IL",
-				"surfaceForm": "IL"
+				"name": "CA",
+				"surfaceForm": "CA"
 			}
 		}
 	]
@@ -69,9 +69,9 @@ Note that certain longer field examples may be truncated for readability in thes
 ```
 {
 	"startDateTime": {
-		"str": "d2019-10-14T07:00",
+		"str": "d2018-10-09T07:00",
 		"precision": 4,
-		"timestamp": 1571036400000
+		"timestamp": 1539068400000
 	}
 }
 ```

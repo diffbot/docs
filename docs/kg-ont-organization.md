@@ -50,6 +50,7 @@ Note that fields are not guaranteed to exist in every entity record.
 * [naceClassification](#naceclassification) 
 * [naicsClassification](#naicsclassification) 
 * [nbActiveEmployeeEdges](#nbactiveemployeeedges) 
+* [nbEmployees](#nbemployees) 
 * [nbEmployeesMax](#nbemployeesmax) 
 * [nbEmployeesMin](#nbemployeesmin) 
 * [nbLocations](#nblocations) 
@@ -57,6 +58,7 @@ Note that fields are not guaranteed to exist in every entity record.
 * [parentCompany](#parentcompany) 
 * [phoneNumbers](#phonenumbers) 
 * [quarterlyRevenues](#quarterlyrevenues) 
+* [revenue](#revenue) 
 * [secCentralIndexKeys](#seccentralindexkeys) 
 * [sicClassification](#sicclassification) 
 * [sicCode](#siccode) 
@@ -71,44 +73,38 @@ Note that fields are not guaranteed to exist in every entity record.
 * [yearlyRevenues](#yearlyrevenues) 
 
 ## Organization Field Details
-Note that certain longer field examples may be truncated for readability in these docs. 
+Note that certain longer field examples may be truncated for readability.
 
 ### acquiredBy
-  The organization that has most recently acquired this organization.
-* **Type:** com.diffbot.kg.fields.LinkedEntity
+  
+* **Type:** LinkedEntity
 * **Example:**
 ```
 {
-	"acquiredBy": "[See Organization]"
+	"acquiredBy": []
 }
 ```
 ### angellistUri
-  Link to the Angel List profile of this  entity
-* **Type:** 
+  
+* **Type:** DiffbotUrl
 * **Example:**
 ```
 {
-	"angellistUri": ""
+	"angellistUri": "angel.co/ibm"
 }
 ```
 ### anzSicClassification
-  The Australian and New Zealand Standard Industrial Classification (ANZSIC) is the standard classification used in Australia and New Zealand for the collection, compilation and publication of statistics by industry.
+  
 * **Type:** ClassificationCode
 * **Example:**
 ```
 {
-	"anzSicClassification": [
-		{
-			"code": "",
-			"isPrimary": false,
-			"name": ""
-		}
-	]
+	"anzSicClassification": []
 }
 ```
 ### blogUri
-  Link to the blog of this entity
-* **Type:** 
+  
+* **Type:** DiffbotUrl
 * **Example:**
 ```
 {
@@ -116,55 +112,59 @@ Note that certain longer field examples may be truncated for readability in thes
 }
 ```
 ### boardMembers
-  Member of the Board of Directors for this organization.
-* **Type:** com.diffbot.kg.fields.LinkedEntity
+  
+* **Type:** LinkedEntity
 * **Example:**
 ```
 {
 	"boardMembers": [
 		{
-			"summary": "American computer businessman and CEO of Calico",
-			"image": "https://kg.diffbot.com/image/api/get?fetch=yes&url=g%3Cj7P0St%7D9u.LnOv%7BI%7C%40g7.pBYINs%3Ff%7CGZ7jr-tGZhWf%3DK%2FOvy%5Bp%3CSKbs8i%7CEyNzC%5C%3CYm%3Eg%3DQc5Qq5TwMi%3BT%3ANfD%5BpF%60%2FQ.C_o",
+			"summary": "American business executive",
+			"image": "https://kg.diffbot.com/image/api/get?fetch=yes&url=g%3Cj7P0St0DnBJf.x0KwLZrUn.%5B%3CR0Aa4Hh%3B%5Bv738ZqOr7U%3FBvqP%3ElW%3A%5Bl%7BL%3AN_Lm87gKLzLjzz1Um7%5Ev6%3DnFdqq%3APeNZzHg%5Bo9g.7V%7B",
 			"types": [
 				"Person"
 			],
-			"name": "Arthur Levinson",
-			"diffbotUri": "http://diffbot.com/entity/EP0czxZv4P--hHu9RIc0oDw",
-			"nbIncomingEdges": 5,
-			"targetDiffbotUri": "http://diffbot.com/entity/EP0czxZv4P--hHu9RIc0oDw",
-			"surfaceForm": "Arthur Levinson",
+			"name": "Virginia 'Ginni' Rometty",
+			"diffbotUri": "http://diffbot.com/entity/EFCXA8DGjPMq5oTjl9RESEw",
+			"nbIncomingEdges": 9,
+			"targetDiffbotUri": "http://diffbot.com/entity/EFCXA8DGjPMq5oTjl9RESEw",
+			"targetDiffbotId": "EFCXA8DGjPMq5oTjl9RESEw",
+			"surfaceForm": "Virginia 'Ginni' Rometty",
 			"type": "Person"
 		},
 		{
-			"summary": "Board Member at Apple",
-			"image": "https://kg.diffbot.com/image/api/get?fetch=yes&url=g%3Cj7P0Stn8p.%5DjEp9G.Bd%7BkETp%7CMfK%7B-h%7B%5C%5C-ZjXk-D4Kh-g%5DBtEVu%2Fu4%2F%2FzN_%3Cb4E.G%5Bm",
+			"summary": "Australian businessman",
+			"image": "https://kg.diffbot.com/image/api/get?fetch=yes&url=g%3Cj7P0St0DnBJf.x0KwLZrUn.%5B%3CR0Aa4Hh%3B%5Bv738ZqOr7U%3FivHn%3Ef%5C0_hCYi.Ytb5%3Dx%40%60e%3Bt%3DPvB%3Eu_%2FF%5D7Rddk%3FXi9%7DA%5B%3B.YxM",
 			"types": [
 				"Person"
 			],
-			"name": "Monica Lozano",
-			"diffbotUri": "http://diffbot.com/entity/EMcnGCdN_OluuOUl_fp8bjw",
-			"nbIncomingEdges": 1,
-			"targetDiffbotUri": "http://diffbot.com/entity/EMcnGCdN_OluuOUl_fp8bjw",
-			"surfaceForm": "Monica Lozano",
+			"name": "Andrew N Liveris",
+			"diffbotUri": "http://diffbot.com/entity/E2XQtwbsDNVSO54QbAy6z7Q",
+			"nbIncomingEdges": 30,
+			"targetDiffbotUri": "http://diffbot.com/entity/E2XQtwbsDNVSO54QbAy6z7Q",
+			"targetDiffbotId": "E2XQtwbsDNVSO54QbAy6z7Q",
+			"surfaceForm": "Andrew N Liveris",
 			"type": "Person"
 		},
 		{
-			"summary": "Canadian businessman",
+			"summary": "CEO at ABB Technology Ventures Ltd",
+			"image": "https://kg.diffbot.com/image/api/get?fetch=yes&url=g%3Cj7P0St%7D9u.LnOv%7BI%7C%40g7.pBYINs%3Ff%7CGZ7jr-tGZhWf%3DK%2FOvy%5Bp%3CSKbs8i%7CEyNzC%5D%3F%5Cn6d7LczNzCY%7B%3AV2Tk5f1S%5ENf%7B%60.C_o",
 			"types": [
 				"Person"
 			],
-			"name": "Ronald Sugar",
-			"diffbotUri": "http://diffbot.com/entity/EGYakVmlmMRiOr1bmvGpvUA",
-			"nbIncomingEdges": 1,
-			"targetDiffbotUri": "http://diffbot.com/entity/EGYakVmlmMRiOr1bmvGpvUA",
-			"surfaceForm": "Ronald Sugar",
+			"name": "Peter Voser",
+			"diffbotUri": "http://diffbot.com/entity/EO9myMnvoM7-h9c6uDeCBdg",
+			"nbIncomingEdges": 11,
+			"targetDiffbotUri": "http://diffbot.com/entity/EO9myMnvoM7-h9c6uDeCBdg",
+			"targetDiffbotId": "EO9myMnvoM7-h9c6uDeCBdg",
+			"surfaceForm": "Peter Voser",
 			"type": "Person"
 		}
 	]
 }
 ```
 ### brands
-  Brands of an organization.
+  
 * **Type:** String
 * **Example:**
 ```
@@ -173,68 +173,62 @@ Note that certain longer field examples may be truncated for readability in thes
 }
 ```
 ### capitalization
-  Total market value of all outstanding shares of an organization.
+  
 * **Type:** Amount
 * **Example:**
 ```
 {
 	"capitalization": {
 		"currency": "USD",
-		"value": 2289400020992
+		"value": 124485099520
 	}
 }
 ```
 ### categories
   
-* **Type:** com.diffbot.kg.fields.LinkedEntity
+* **Type:** LinkedEntity
 * **Example:**
 ```
 {
 	"categories": [
 		{
+			"name": "Information Technology Consulting Firms",
+			"diffbotUri": "http://diffbot.com/entity/ENJMVgRRYOdCWuSXqwmfXxg",
+			"targetDiffbotUri": "http://diffbot.com/entity/ENJMVgRRYOdCWuSXqwmfXxg",
+			"targetDiffbotId": "ENJMVgRRYOdCWuSXqwmfXxg",
+			"surfaceForm": "Information Technology Consulting Firms",
+			"type": "IndustryCategory"
+		},
+		{
+			"name": "Display Technology Companies",
+			"diffbotUri": "http://diffbot.com/entity/EX8GX-IaIP2Oi0rsYy_Bqfw",
+			"targetDiffbotUri": "http://diffbot.com/entity/EX8GX-IaIP2Oi0rsYy_Bqfw",
+			"targetDiffbotId": "EX8GX-IaIP2Oi0rsYy_Bqfw",
+			"surfaceForm": "Display Technology Companies",
+			"type": "IndustryCategory"
+		},
+		{
 			"name": "Computer Hardware Companies",
-			"diffbotUri": "http://diffbot.com/entity/ElJodhysCPWW4dV-ag_gayQ",
-			"targetDiffbotUri": "http://diffbot.com/entity/ElJodhysCPWW4dV-ag_gayQ",
-			"surfaceForm": "Computer Hardware Companies"
-		},
-		{
-			"name": "Manufacturing Companies",
-			"diffbotUri": "http://diffbot.com/entity/E2uVXivaLO66MwG7epo9rxw",
-			"targetDiffbotUri": "http://diffbot.com/entity/E2uVXivaLO66MwG7epo9rxw",
-			"surfaceForm": "Manufacturing Companies"
-		},
-		{
-			"name": "Software Companies",
-			"diffbotUri": "http://diffbot.com/entity/EAOPmBTcTMHSKzwvcs3AjQA",
-			"targetDiffbotUri": "http://diffbot.com/entity/EAOPmBTcTMHSKzwvcs3AjQA",
-			"surfaceForm": "Software Companies"
+			"diffbotUri": "http://diffbot.com/entity/EqFeVtLRWOUqTdzVhcYwBBQ",
+			"targetDiffbotUri": "http://diffbot.com/entity/EqFeVtLRWOUqTdzVhcYwBBQ",
+			"targetDiffbotId": "EqFeVtLRWOUqTdzVhcYwBBQ",
+			"surfaceForm": "Computer Hardware Companies",
+			"type": "IndustryCategory"
 		}
 	]
 }
 ```
 ### ceo
-  Chief Executive Officer of this organization.
-* **Type:** com.diffbot.kg.fields.LinkedEntity
+  
+* **Type:** LinkedEntity
 * **Example:**
 ```
 {
-	"ceo": {
-		"summary": "American business executive",
-		"image": "https://kg.diffbot.com/image/api/get?fetch=yes&url=g%3Cj7P0St0DnBJf.x0KwLZrUn.%5B%3CR0Aa4Hh%3B%5Bv738ZqOr7U%3FEvts%3EyW9LF%3Bi6%40%7CXyH7iI%5CvTj%2F.%7CS%60",
-		"types": [
-			"Person"
-		],
-		"name": "Tim Cook",
-		"diffbotUri": "http://diffbot.com/entity/E84vWTe2yP6qQ0u7kbL3ZGA",
-		"nbIncomingEdges": 19,
-		"targetDiffbotUri": "http://diffbot.com/entity/E84vWTe2yP6qQ0u7kbL3ZGA",
-		"surfaceForm": "Tim Cook",
-		"type": "Person"
-	}
+	"ceo": []
 }
 ```
 ### companiesHouseIds
-  Identifier assigned by the U.K. Companies House.
+  
 * **Type:** String
 * **Example:**
 ```
@@ -243,12 +237,12 @@ Note that certain longer field examples may be truncated for readability in thes
 }
 ```
 ### crunchbaseUri
-  Link to the Crunchbase profile of this entity
-* **Type:** 
+  
+* **Type:** DiffbotUrl
 * **Example:**
 ```
 {
-	"crunchbaseUri": "crunchbase.com/organization/apple"
+	"crunchbaseUri": "crunchbase.com/organization/ibm"
 }
 ```
 ### descriptors
@@ -258,127 +252,110 @@ Note that certain longer field examples may be truncated for readability in thes
 ```
 {
 	"descriptors": [
-		"consumer electronics",
-		"electronics",
-		"hardware"
+		"computer and office equipment",
+		"computer manufacturing",
+		"technology"
 	]
 }
 ```
 ### facebookUri
-  Link to the Facebook profile of this entity
-* **Type:** 
+  
+* **Type:** DiffbotUrl
 * **Example:**
 ```
 {
-	"facebookUri": "facebook.com/apple"
+	"facebookUri": "facebook.com/IBM"
 }
 ```
 ### founders
-  Founders of this organization
-* **Type:** com.diffbot.kg.fields.LinkedEntity
+  
+* **Type:** LinkedEntity
 * **Example:**
 ```
 {
 	"founders": [
 		{
-			"summary": "American inventor, computer engineer and programmer",
-			"image": "https://kg.diffbot.com/image/api/get?fetch=yes&url=g%3Cj7P0St0DnBJf.x0KwLZrUn.%5B%3CR0Aa4Hh%3B%5Bv738ZqOr7U%3FGvvt%3Exb1ch%7BQ%3A%5BhAZz.pGT",
+			"summary": "American businessman",
+			"image": "https://kg.diffbot.com/image/api/get?fetch=yes&url=g%3Cj7P0St0DnBJf.x0KwLZrUn.%5B%3CR0Aa4Hh%3B%5Bv738ZqOr7U%3FBvqQ%3EhV%7D_o1mz3%5BFetLz63rMs%3F.%7CS%60",
 			"types": [
 				"Person"
 			],
-			"name": "Steve Wozniak",
-			"diffbotUri": "http://diffbot.com/entity/ErFxuJCJVOhS-aJvxNMgrbg",
-			"nbIncomingEdges": 12,
-			"targetDiffbotUri": "http://diffbot.com/entity/ErFxuJCJVOhS-aJvxNMgrbg",
-			"surfaceForm": "Steve Wozniak",
+			"name": "Charles Ranlett Flint",
+			"diffbotUri": "http://diffbot.com/entity/E75wc-P6GOF2SUspkvyJygg",
+			"nbIncomingEdges": 2,
+			"targetDiffbotUri": "http://diffbot.com/entity/E75wc-P6GOF2SUspkvyJygg",
+			"targetDiffbotId": "E75wc-P6GOF2SUspkvyJygg",
+			"surfaceForm": "Charles Ranlett Flint",
 			"type": "Person"
 		},
 		{
-			"summary": "Co-founder of Apple Inc.",
-			"image": "https://kg.diffbot.com/image/api/get?fetch=yes&url=g%3Cj7P0St0DnBJf.x0KwLZrUn.%5B%3CR0Aa4Hh%3B%5Bv738ZqOr7U%3FGvvO%3Ew%5D%3ANo0Q%7CZh%3DFp%3B%7DF_rH7KdK.c2W",
+			"summary": "American businessman; chairman and CEO of IBM",
+			"image": "https://kg.diffbot.com/image/api/get?fetch=yes&url=g%3Cj7P0St0DnBJf.x0KwLZrUn.%5B%3CR0Aa4Hh%3B%5Bv738ZqOr7U%3FhvGS%3EyV%3BZd%3FYe%40Q9m2Gt6%40x.o%3BK",
 			"types": [
 				"Person"
 			],
-			"name": "Ron Wayne",
-			"diffbotUri": "http://diffbot.com/entity/EvGMnA45aO2Kaeu6udJI9EQ",
-			"nbIncomingEdges": 4,
-			"targetDiffbotUri": "http://diffbot.com/entity/EvGMnA45aO2Kaeu6udJI9EQ",
-			"surfaceForm": "Ron Wayne",
-			"type": "Person"
-		},
-		{
-			"summary": "American entrepreneur and co-founder of Apple Inc.",
-			"image": "https://kg.diffbot.com/image/api/get?fetch=yes&url=g%3Cj7P0St0DnBJf.x0KwLZrUn.%5B%3CR0Aa4Hh%3B%5Bv738ZqOr7U%3FGvvs%3Exb1ch%7BD%3ACm7At9jJUuXdMdCc-UB%60wr.Yu5",
-			"types": [
-				"Person"
-			],
-			"name": "Steve Jobs",
-			"diffbotUri": "http://diffbot.com/entity/EyauXV2QZOW2fEP8Cb_Hoxg",
-			"nbIncomingEdges": 36,
-			"targetDiffbotUri": "http://diffbot.com/entity/EyauXV2QZOW2fEP8Cb_Hoxg",
-			"surfaceForm": "Steve Jobs",
+			"name": "Thomas J. Watson",
+			"diffbotUri": "http://diffbot.com/entity/Ebhc0c10rNrOp6ukkVrvrwA",
+			"nbIncomingEdges": 6,
+			"targetDiffbotUri": "http://diffbot.com/entity/Ebhc0c10rNrOp6ukkVrvrwA",
+			"targetDiffbotId": "Ebhc0c10rNrOp6ukkVrvrwA",
+			"surfaceForm": "Thomas J. Watson",
 			"type": "Person"
 		}
 	]
 }
 ```
 ### foundingDate
-  The date this organization was founded
+  
 * **Type:** DDate
 * **Example:**
 ```
 {
 	"foundingDate": {
-		"str": "d1977-XX-XX",
-		"precision": 1,
-		"timestamp": 220924800000
+		"str": "d1911-06-06",
+		"precision": 3,
+		"timestamp": -1848441600000
 	}
 }
 ```
 ### githubUri
-  Link to the Github profile of this entity
-* **Type:** 
+  
+* **Type:** DiffbotUrl
 * **Example:**
 ```
 {
-	"githubUri": "github.com/apple"
+	"githubUri": ""
 }
 ```
 ### googlePlusUri
-  Link to the Google+ profile of this entity
-* **Type:** 
+  
+* **Type:** DiffbotUrl
 * **Example:**
 ```
 {
-	"googlePlusUri": ""
+	"googlePlusUri": "plus.google.com/100296114230478191916"
 }
 ```
 ### homepageUri
-  Link to the homepage of this  entity
-* **Type:** 
+  
+* **Type:** DiffbotUrl
 * **Example:**
 ```
 {
-	"homepageUri": "apple.com"
+	"homepageUri": "ibm.com"
 }
 ```
 ### iSicClassification
-  The International Standard of Industrial Classification (ISIC) of All Economic Activities code was developed by the UN as a standard way of classifying economic activities into 4-digit group codes. We use ISIC Rev. 4 (Edition 2016).
+  
 * **Type:** ClassificationCode
 * **Example:**
 ```
 {
-	"iSicClassification": [
-		{
-			"code": "",
-			"isPrimary": false,
-			"name": ""
-		}
-	]
+	"iSicClassification": []
 }
 ```
 ### indianCorporateIdentityNumbers
-  Indian Corporate Identity Number (CIN).
+  
 * **Type:** String
 * **Example:**
 ```
@@ -394,124 +371,50 @@ Note that certain longer field examples may be truncated for readability in thes
 {
 	"industries": [
 		"Computer Hardware Companies",
-		"Manufacturing Companies",
-		"Software Companies"
+		"Computer Storage Companies",
+		"Manufacturing Companies"
 	]
 }
 ```
 ### investments
-  Investments received by this organization.
+  
 * **Type:** Investment
 * **Example:**
 ```
 {
-	"investments": [
-		{
-			"date": {
-				"str": "d1977-05-15",
-				"precision": 3,
-				"timestamp": 232502400000
-			},
-			"amount": {
-				"currency": "USD",
-				"value": 80000
-			},
-			"series": "Seed",
-			"investors": [
-				{
-					"summary": "Former CEO at Apple",
-					"image": "https://kg.diffbot.com/image/api/get?fetch=yes&url=g%3Cj7P0St%7D9u.LnOv%7BI%7C%40g7.pBYINs%3Ff%7CGZ7jr-tGZhWf%3DK%2FOvy%5Bp%3CSKbs8i%7CEyNzC%5E%3E%5Dt6m%3BNc%7CY%5BvSsDWGg%7E9%5EVKlQ%7E%3B%3B.I%5Do",
-					"types": [
-						"Person"
-					],
-					"name": "Mike Markkula",
-					"diffbotUri": "http://diffbot.com/entity/E9JHQf-kPNKWitURTvyklWQ",
-					"nbIncomingEdges": 2,
-					"targetDiffbotUri": "http://diffbot.com/entity/E9JHQf-kPNKWitURTvyklWQ",
-					"surfaceForm": "Mike Markkula",
-					"type": "Person"
-				},
-				{
-					"recordId": "EHb0_0NEcMwyY8b083taTTw@64",
-					"name": "Matrix Partners",
-					"websiteUris": [
-						"crunchbase.com/organization/matrix-partners"
-					],
-					"surfaceForm": "Matrix Partners",
-					"position": "companyInvestmentInvestor",
-					"type": "Person"
-				}
-			]
-		},
-		{
-			"date": {
-				"str": "d2016-05-16",
-				"precision": 3,
-				"timestamp": 1463356800000
-			},
-			"amount": {
-				"currency": "USD",
-				"value": 1000000000
-			},
-			"series": "Post Ipo Equity",
-			"investors": [
-				{
-					"recordId": "EHb0_0NEcMwyY8b083taTTw@65",
-					"name": "Berkshire Hathaway",
-					"websiteUris": [
-						"crunchbase.com/organization/berkshire-hathaway-corp"
-					],
-					"surfaceForm": "Berkshire Hathaway",
-					"position": "companyInvestmentInvestor",
-					"type": "Person"
-				}
-			]
-		},
-		{
-			"date": {
-				"str": "d2017-09-06",
-				"precision": 3,
-				"timestamp": 1504656000000
-			},
-			"amount": {
-				"currency": "USD",
-				"value": 5000000000
-			},
-			"series": "Post Ipo Debt"
-		}
-	]
+	"investments": []
 }
 ```
 ### ipo
-  Information about the company&#39;s Initial Public Offering.
+  
 * **Type:** IPO
 * **Example:**
 ```
 {
 	"ipo": {
 		"date": {
-			"str": "d1980-XX-XX",
-			"precision": 1,
-			"timestamp": 315532800000
+			"str": "d1978-01-13",
+			"precision": 3,
+			"timestamp": 253497600000
 		},
-		"stockExchange": "NASDAQ"
+		"stockExchange": "nyse"
 	}
 }
 ```
 ### irsEmployerIdentificationNumbers
-  Employer Identification Number as assigned by the U.S. Internal Revenue Service.
+  
 * **Type:** String
 * **Example:**
 ```
 {
 	"irsEmployerIdentificationNumbers": [
-		"94-2404110",
-		"942404110"
+		"13-0871985",
+		"130871985"
 	]
 }
 ```
 ### isAcquired
-  Indicates whether the company has been acquired in the past. To verify whether the company has been dissoved or not, refer to &#39;isDissolved&#39;.
+  
 * **Type:** Boolean
 * **Example:**
 ```
@@ -520,7 +423,7 @@ Note that certain longer field examples may be truncated for readability in thes
 }
 ```
 ### isDissolved
-  Whether this company is active or dissolved.
+  
 * **Type:** Boolean
 * **Example:**
 ```
@@ -529,7 +432,7 @@ Note that certain longer field examples may be truncated for readability in thes
 }
 ```
 ### isNonProfit
-  Whether this organization is a non-profit.
+  
 * **Type:** Boolean
 * **Example:**
 ```
@@ -538,7 +441,7 @@ Note that certain longer field examples may be truncated for readability in thes
 }
 ```
 ### isPublic
-  Whether the shares of this company are traded on a stock exchange.
+  
 * **Type:** Boolean
 * **Example:**
 ```
@@ -547,30 +450,25 @@ Note that certain longer field examples may be truncated for readability in thes
 }
 ```
 ### leadership
-  List of organization C-Level Officers.
+  
 * **Type:** Employee
 * **Example:**
 ```
 {
-	"leadership": [
-		{
-			"categories": "[See Role]",
-			"employee": "[See Person]"
-		}
-	]
+	"leadership": []
 }
 ```
 ### linkedInUri
-  Link to the LinkedIn profile of this entity
-* **Type:** 
+  
+* **Type:** DiffbotUrl
 * **Example:**
 ```
 {
-	"linkedInUri": "linkedin.com/company/apple"
+	"linkedInUri": "linkedin.com/company/ibm"
 }
 ```
 ### location
-  The main location of an organization.
+  
 * **Type:** Location
 * **Example:**
 ```
@@ -585,49 +483,52 @@ Note that certain longer field examples may be truncated for readability in thes
 			],
 			"name": "United States of America",
 			"diffbotUri": "http://diffbot.com/entity/E01d4EK33MmCosgI2KXa4-A",
-			"nbIncomingEdges": 1245575855,
+			"nbIncomingEdges": 1026989768,
 			"targetDiffbotUri": "http://diffbot.com/entity/E01d4EK33MmCosgI2KXa4-A",
+			"targetDiffbotId": "E01d4EK33MmCosgI2KXa4-A",
 			"type": "AdministrativeArea"
 		},
 		"isCurrent": true,
-		"address": "One Apple Park Way, Cupertino, 95014, California, United States",
+		"address": "1 New Orchard Road, Armonk, 10504-1722, New York, United States",
 		"city": {
-			"summary": "City in Santa Clara County, California, United States",
-			"image": "https://kg.diffbot.com/image/api/get?fetch=yes&url=g%3Cj7P0St0DnBJf.x0KwLZrUn.%5B%3CR0Aa4Hh%3B%5Bv738ZqOr7U%3FEvtp%3ExO%3Aad%7B%3D7Bl9XRG%7BEa%2FCH%7CP%7BIh4%5Ez8Og%5Dh%3Dn%3DRn%3Bov%3Eg%3A%5DlE%5C%3BO2Hj6b2KSDVk%2F_AJ_O%5CVQz%40c%7EQw%3EG%5EPd%7E%60%7EB%5CFXm.sGN",
+			"summary": "Hamlet in Westchester County, New York",
+			"image": "https://kg.diffbot.com/image/api/get?fetch=yes&url=g%3Cj7P0St0DnBJf.x0KwLZrUn.%5B%3CR0Aa4Hh%3B%5Bv738ZqOr7U%3FdvCo%3E%7CS%3Faf4_%3EU_JXRG%7BEa%2FCS0%5Bq%3Ch4%5Bp%40%5E1%5Ew%3Ek%3FDp%3F_p%3Bv%3DN%7DTp%3BI3Wk3dtMW4PhBc0X%5Dmo0KxFPrQp7T%2FNe%3AYy.gHZ",
 			"types": [
 				"Place",
 				"AdministrativeArea"
 			],
-			"name": "Cupertino",
-			"diffbotUri": "http://diffbot.com/entity/Exd-cghOPMcCHRez564r5EA",
-			"nbIncomingEdges": 287706,
-			"targetDiffbotUri": "http://diffbot.com/entity/Exd-cghOPMcCHRez564r5EA",
+			"name": "Armonk",
+			"diffbotUri": "http://diffbot.com/entity/EFYOMni-nNtScxpZwteaMxQ",
+			"nbIncomingEdges": 28407,
+			"targetDiffbotUri": "http://diffbot.com/entity/EFYOMni-nNtScxpZwteaMxQ",
+			"targetDiffbotId": "EFYOMni-nNtScxpZwteaMxQ",
 			"type": "AdministrativeArea"
 		},
-		"street": "One Apple Park Way",
-		"latitude": 37.3316764831543,
+		"street": "1 New Orchard Road",
+		"latitude": 41.1134033203125,
 		"precision": 0.10000000149011612,
-		"postalCode": "95014",
-		"surfaceForm": "One Apple Park Way, Cupertino, 95014, California, United States",
+		"postalCode": "10504-1722",
+		"surfaceForm": "1 New Orchard Road, Armonk, 10504-1722, New York, United States",
 		"region": {
 			"summary": "State of the United States of America",
-			"image": "https://kg.diffbot.com/image/api/get?fetch=yes&url=g%3Cj7P0St0DnBJf.x0KwLZrUn.%5B%3CR0Aa4Hh%3B%5Bv738ZqOr7U%3Fav%40T%3ExS%7DYb%3B%60zt%5BDbuGxEVg.xAK",
+			"image": "https://kg.diffbot.com/image/api/get?fetch=yes&url=g%3Cj7P0St0DnBJf.x0KwLZrUn.%5B%3CR0Aa4Hh%3B%5Bv738ZqOr7U%3FDvsO%3ExS%7DYb%3B%60z%2F_OXhGxB.yZl",
 			"types": [
 				"Place",
 				"AdministrativeArea"
 			],
-			"name": "California",
-			"diffbotUri": "http://diffbot.com/entity/El0_8ehooNxOPT36Y4RdV9w",
-			"nbIncomingEdges": 136728414,
-			"targetDiffbotUri": "http://diffbot.com/entity/El0_8ehooNxOPT36Y4RdV9w",
+			"name": "New York",
+			"diffbotUri": "http://diffbot.com/entity/E1NxI_KXaMbiP5g2aM9MRdw",
+			"nbIncomingEdges": 66347223,
+			"targetDiffbotUri": "http://diffbot.com/entity/E1NxI_KXaMbiP5g2aM9MRdw",
+			"targetDiffbotId": "E1NxI_KXaMbiP5g2aM9MRdw",
 			"type": "AdministrativeArea"
 		},
-		"longitude": -122.0111083984375
+		"longitude": -73.7203598022461
 	}
 }
 ```
 ### locations
-  All locations of an organization, including former locations (refer to the field &#39;isCurrent&#39;).
+  
 * **Type:** Location
 * **Example:**
 ```
@@ -643,56 +544,60 @@ Note that certain longer field examples may be truncated for readability in thes
 				],
 				"name": "United States of America",
 				"diffbotUri": "http://diffbot.com/entity/E01d4EK33MmCosgI2KXa4-A",
-				"nbIncomingEdges": 1245575855,
+				"nbIncomingEdges": 1026989768,
 				"targetDiffbotUri": "http://diffbot.com/entity/E01d4EK33MmCosgI2KXa4-A",
+				"targetDiffbotId": "E01d4EK33MmCosgI2KXa4-A",
 				"type": "AdministrativeArea"
 			},
 			"isCurrent": true,
-			"address": "1 Apple Park Way, Cupertino, California",
+			"address": "New Orchard Road, Armonk, New York",
 			"city": {
-				"summary": "City in Santa Clara County, California, United States",
-				"image": "https://kg.diffbot.com/image/api/get?fetch=yes&url=g%3Cj7P0St0DnBJf.x0KwLZrUn.%5B%3CR0Aa4Hh%3B%5Bv738ZqOr7U%3FEvtp%3ExO%3Aad%7B%3D7Bl9XRG%7BEa%2FCH%7CP%7BIh4%5Ez8Og%5Dh%3Dn%3DRn%3Bov%3Eg%3A%5DlE%5C%3BO2Hj6b2KSDVk%2F_AJ_O%5CVQz%40c%7EQw%3EG%5EPd%7E%60%7EB%5CFXm.sGN",
+				"summary": "Hamlet in Westchester County, New York",
+				"image": "https://kg.diffbot.com/image/api/get?fetch=yes&url=g%3Cj7P0St0DnBJf.x0KwLZrUn.%5B%3CR0Aa4Hh%3B%5Bv738ZqOr7U%3FdvCo%3E%7CS%3Faf4_%3EU_JXRG%7BEa%2FCS0%5Bq%3Ch4%5Bp%40%5E1%5Ew%3Ek%3FDp%3F_p%3Bv%3DN%7DTp%3BI3Wk3dtMW4PhBc0X%5Dmo0KxFPrQp7T%2FNe%3AYy.gHZ",
 				"types": [
 					"Place",
 					"AdministrativeArea"
 				],
-				"name": "Cupertino",
-				"diffbotUri": "http://diffbot.com/entity/Exd-cghOPMcCHRez564r5EA",
-				"nbIncomingEdges": 287706,
-				"targetDiffbotUri": "http://diffbot.com/entity/Exd-cghOPMcCHRez564r5EA",
+				"name": "Armonk",
+				"diffbotUri": "http://diffbot.com/entity/EFYOMni-nNtScxpZwteaMxQ",
+				"nbIncomingEdges": 28407,
+				"targetDiffbotUri": "http://diffbot.com/entity/EFYOMni-nNtScxpZwteaMxQ",
+				"targetDiffbotId": "EFYOMni-nNtScxpZwteaMxQ",
 				"type": "AdministrativeArea"
 			},
-			"street": "1 Apple Park Way",
+			"street": "New Orchard Road",
 			"subregion": {
-				"summary": "County in California, United States",
-				"image": "https://kg.diffbot.com/image/api/get?fetch=yes&url=g%3Cj7P0St0DnBJf.x0KwLZrUn.%5B%3CR0Aa4Hh%3B%5Bv738ZqOr7U%3Fav%40r%3ErO%3CLr2Y%5EBfA_%7EJt%40NeLn2L%7EL%60zdzEW%7DBf%3Cp%7EB%3FF%5C3%3Bgl%5E%7DT%7BF.7%5Bb",
+				"summary": "County in New York, United States. Connector between New York City/Long Island and the rest of New York",
+				"image": "https://kg.diffbot.com/image/api/get?fetch=yes&url=g%3Cj7P0St0DnBJf.x0KwLZrUn.%5B%3CR0Aa4Hh%3B%5Bv738ZqOr7U%3FivHt%3ErO%3CLr2YiFq7R%7EJq6UoKm7MyKm%7B%5Ex6G3by1d2Vp%3FmpmwN%5D%7C_.%40%5C%7B",
 				"types": [
 					"Place",
 					"AdministrativeArea"
 				],
-				"name": "Santa Clara County",
-				"diffbotUri": "http://diffbot.com/entity/E8Sjxl9YuMRCajUEPN2k9ew",
-				"nbIncomingEdges": 7036662,
-				"targetDiffbotUri": "http://diffbot.com/entity/E8Sjxl9YuMRCajUEPN2k9ew",
+				"name": "Westchester County",
+				"diffbotUri": "http://diffbot.com/entity/EoKezLIvJP82Xm_cWVQyCQA",
+				"nbIncomingEdges": 2643349,
+				"targetDiffbotUri": "http://diffbot.com/entity/EoKezLIvJP82Xm_cWVQyCQA",
+				"targetDiffbotId": "EoKezLIvJP82Xm_cWVQyCQA",
 				"type": "AdministrativeArea"
 			},
-			"latitude": 37.334842681884766,
+			"latitude": 41.1134033203125,
 			"precision": 0.10000000149011612,
-			"postalCode": "95014",
+			"postalCode": "10504-1722",
 			"region": {
 				"summary": "State of the United States of America",
-				"image": "https://kg.diffbot.com/image/api/get?fetch=yes&url=g%3Cj7P0St0DnBJf.x0KwLZrUn.%5B%3CR0Aa4Hh%3B%5Bv738ZqOr7U%3Fav%40T%3ExS%7DYb%3B%60zt%5BDbuGxEVg.xAK",
+				"image": "https://kg.diffbot.com/image/api/get?fetch=yes&url=g%3Cj7P0St0DnBJf.x0KwLZrUn.%5B%3CR0Aa4Hh%3B%5Bv738ZqOr7U%3FDvsO%3ExS%7DYb%3B%60z%2F_OXhGxB.yZl",
 				"types": [
 					"Place",
 					"AdministrativeArea"
 				],
-				"name": "California",
-				"diffbotUri": "http://diffbot.com/entity/El0_8ehooNxOPT36Y4RdV9w",
-				"nbIncomingEdges": 136728414,
-				"targetDiffbotUri": "http://diffbot.com/entity/El0_8ehooNxOPT36Y4RdV9w",
+				"name": "New York",
+				"diffbotUri": "http://diffbot.com/entity/E1NxI_KXaMbiP5g2aM9MRdw",
+				"nbIncomingEdges": 66347223,
+				"targetDiffbotUri": "http://diffbot.com/entity/E1NxI_KXaMbiP5g2aM9MRdw",
+				"targetDiffbotId": "E1NxI_KXaMbiP5g2aM9MRdw",
 				"type": "AdministrativeArea"
 			},
-			"longitude": -122.01129913330078
+			"longitude": -73.7203598022461
 		},
 		{
 			"country": {
@@ -704,69 +609,9 @@ Note that certain longer field examples may be truncated for readability in thes
 				],
 				"name": "United States of America",
 				"diffbotUri": "http://diffbot.com/entity/E01d4EK33MmCosgI2KXa4-A",
-				"nbIncomingEdges": 1245575855,
+				"nbIncomingEdges": 1026989768,
 				"targetDiffbotUri": "http://diffbot.com/entity/E01d4EK33MmCosgI2KXa4-A",
-				"type": "AdministrativeArea"
-			},
-			"isCurrent": false,
-			"address": "1 Infinite Loop, Cupertino, California",
-			"city": {
-				"summary": "City in Santa Clara County, California, United States",
-				"image": "https://kg.diffbot.com/image/api/get?fetch=yes&url=g%3Cj7P0St0DnBJf.x0KwLZrUn.%5B%3CR0Aa4Hh%3B%5Bv738ZqOr7U%3FEvtp%3ExO%3Aad%7B%3D7Bl9XRG%7BEa%2FCH%7CP%7BIh4%5Ez8Og%5Dh%3Dn%3DRn%3Bov%3Eg%3A%5DlE%5C%3BO2Hj6b2KSDVk%2F_AJ_O%5CVQz%40c%7EQw%3EG%5EPd%7E%60%7EB%5CFXm.sGN",
-				"types": [
-					"Place",
-					"AdministrativeArea"
-				],
-				"name": "Cupertino",
-				"diffbotUri": "http://diffbot.com/entity/Exd-cghOPMcCHRez564r5EA",
-				"nbIncomingEdges": 287706,
-				"targetDiffbotUri": "http://diffbot.com/entity/Exd-cghOPMcCHRez564r5EA",
-				"type": "AdministrativeArea"
-			},
-			"street": "1 Infinite Loop",
-			"subregion": {
-				"summary": "County in California, United States",
-				"image": "https://kg.diffbot.com/image/api/get?fetch=yes&url=g%3Cj7P0St0DnBJf.x0KwLZrUn.%5B%3CR0Aa4Hh%3B%5Bv738ZqOr7U%3Fav%40r%3ErO%3CLr2Y%5EBfA_%7EJt%40NeLn2L%7EL%60zdzEW%7DBf%3Cp%7EB%3FF%5C3%3Bgl%5E%7DT%7BF.7%5Bb",
-				"types": [
-					"Place",
-					"AdministrativeArea"
-				],
-				"name": "Santa Clara County",
-				"diffbotUri": "http://diffbot.com/entity/E8Sjxl9YuMRCajUEPN2k9ew",
-				"nbIncomingEdges": 7036662,
-				"targetDiffbotUri": "http://diffbot.com/entity/E8Sjxl9YuMRCajUEPN2k9ew",
-				"type": "AdministrativeArea"
-			},
-			"latitude": 37.33539962768555,
-			"precision": 0.10000000149011612,
-			"postalCode": "95014-2083",
-			"region": {
-				"summary": "State of the United States of America",
-				"image": "https://kg.diffbot.com/image/api/get?fetch=yes&url=g%3Cj7P0St0DnBJf.x0KwLZrUn.%5B%3CR0Aa4Hh%3B%5Bv738ZqOr7U%3Fav%40T%3ExS%7DYb%3B%60zt%5BDbuGxEVg.xAK",
-				"types": [
-					"Place",
-					"AdministrativeArea"
-				],
-				"name": "California",
-				"diffbotUri": "http://diffbot.com/entity/El0_8ehooNxOPT36Y4RdV9w",
-				"nbIncomingEdges": 136728414,
-				"targetDiffbotUri": "http://diffbot.com/entity/El0_8ehooNxOPT36Y4RdV9w",
-				"type": "AdministrativeArea"
-			},
-			"longitude": -122.01465606689453
-		},
-		{
-			"country": {
-				"summary": "Sovereign state in North America",
-				"image": "https://kg.diffbot.com/image/api/get?fetch=yes&url=g%3Cj7P0St0DnBJf.x0KwLZrUn.%5B%3CR0Aa4Hh%3B%5Bv738ZqOr7U%3FfvEQ%3El%601Nw%7BM0Bf7hu7z%3FRe9s4XwGXedrKUAN%28%3D%5ECHnM%60%29.%7BOV",
-				"types": [
-					"Place",
-					"AdministrativeArea"
-				],
-				"name": "United States of America",
-				"diffbotUri": "http://diffbot.com/entity/E01d4EK33MmCosgI2KXa4-A",
-				"nbIncomingEdges": 1245575855,
-				"targetDiffbotUri": "http://diffbot.com/entity/E01d4EK33MmCosgI2KXa4-A",
+				"targetDiffbotId": "E01d4EK33MmCosgI2KXa4-A",
 				"type": "AdministrativeArea"
 			},
 			"isCurrent": false,
@@ -774,36 +619,95 @@ Note that certain longer field examples may be truncated for readability in thes
 			"latitude": 39.71595764160156,
 			"precision": 3133.158935546875,
 			"longitude": -96.99966430664062
+		},
+		{
+			"country": {
+				"summary": "Sovereign state in North America",
+				"image": "https://kg.diffbot.com/image/api/get?fetch=yes&url=g%3Cj7P0St0DnBJf.x0KwLZrUn.%5B%3CR0Aa4Hh%3B%5Bv738ZqOr7U%3FfvEQ%3El%601Nw%7BM0Bf7hu7z%3FRe9s4XwGXedrKUAN%28%3D%5ECHnM%60%29.%7BOV",
+				"types": [
+					"Place",
+					"AdministrativeArea"
+				],
+				"name": "United States of America",
+				"diffbotUri": "http://diffbot.com/entity/E01d4EK33MmCosgI2KXa4-A",
+				"nbIncomingEdges": 1026989768,
+				"targetDiffbotUri": "http://diffbot.com/entity/E01d4EK33MmCosgI2KXa4-A",
+				"targetDiffbotId": "E01d4EK33MmCosgI2KXa4-A",
+				"type": "AdministrativeArea"
+			},
+			"isCurrent": false,
+			"address": "1 New Orchard Road, North Castle, New York",
+			"city": {
+				"summary": "Town in Westchester County, New York, United States",
+				"image": "https://kg.diffbot.com/image/api/get?fetch=yes&url=g%3Cj7P0St0DnBJf.x0KwLZrUn.%5B%3CR0Aa4Hh%3B%5Bv738ZqOr7U%3FevDu%3E%7CS%3Faf4_%3EU_JXRG%7BEa%2FCS0%5Bq%3Ch4%5Bp%40%5E1%5Ew%3Ek%3FDp%3F_p%3Bv%3DN%7DTp%3BI3Wk3dtMW4PhBc0X%5Dzl5Pr%3A4k%5B%7D%3BMuOf%7D%5C1D%5B%3Agn6.D%5Dg",
+				"types": [
+					"Place",
+					"AdministrativeArea"
+				],
+				"name": "North Castle",
+				"diffbotUri": "http://diffbot.com/entity/EsulWqYOjPseTau0QUH8Ruw",
+				"nbIncomingEdges": 2919,
+				"targetDiffbotUri": "http://diffbot.com/entity/EsulWqYOjPseTau0QUH8Ruw",
+				"targetDiffbotId": "EsulWqYOjPseTau0QUH8Ruw",
+				"type": "AdministrativeArea"
+			},
+			"street": "1 New Orchard Road",
+			"subregion": {
+				"summary": "County in New York, United States. Connector between New York City/Long Island and the rest of New York",
+				"image": "https://kg.diffbot.com/image/api/get?fetch=yes&url=g%3Cj7P0St0DnBJf.x0KwLZrUn.%5B%3CR0Aa4Hh%3B%5Bv738ZqOr7U%3FivHt%3ErO%3CLr2YiFq7R%7EJq6UoKm7MyKm%7B%5Ex6G3by1d2Vp%3FmpmwN%5D%7C_.%40%5C%7B",
+				"types": [
+					"Place",
+					"AdministrativeArea"
+				],
+				"name": "Westchester County",
+				"diffbotUri": "http://diffbot.com/entity/EoKezLIvJP82Xm_cWVQyCQA",
+				"nbIncomingEdges": 2643349,
+				"targetDiffbotUri": "http://diffbot.com/entity/EoKezLIvJP82Xm_cWVQyCQA",
+				"targetDiffbotId": "EoKezLIvJP82Xm_cWVQyCQA",
+				"type": "AdministrativeArea"
+			},
+			"latitude": 41.10810089111328,
+			"precision": 10,
+			"postalCode": "10504",
+			"region": {
+				"summary": "State of the United States of America",
+				"image": "https://kg.diffbot.com/image/api/get?fetch=yes&url=g%3Cj7P0St0DnBJf.x0KwLZrUn.%5B%3CR0Aa4Hh%3B%5Bv738ZqOr7U%3FDvsO%3ExS%7DYb%3B%60z%2F_OXhGxB.yZl",
+				"types": [
+					"Place",
+					"AdministrativeArea"
+				],
+				"name": "New York",
+				"diffbotUri": "http://diffbot.com/entity/E1NxI_KXaMbiP5g2aM9MRdw",
+				"nbIncomingEdges": 66347223,
+				"targetDiffbotUri": "http://diffbot.com/entity/E1NxI_KXaMbiP5g2aM9MRdw",
+				"targetDiffbotId": "E1NxI_KXaMbiP5g2aM9MRdw",
+				"type": "AdministrativeArea"
+			},
+			"longitude": -73.72029876708984
 		}
 	]
 }
 ```
 ### logo
-  A graphic mark, emblem, or symbol representative of an institution
+  
 * **Type:** String
 * **Example:**
 ```
 {
-	"logo": "https://kg.diffbot.com/image/api/get?fetch=yes&url=g%3Cj7P0St0DnBJf.x0KwLZrUn.%5B%3CR0Aa4Hh%3B%5Bv738ZqOr7U%3FGvvO%3Ef%5E%3CYh%7Bf%3AHi7%5B%7B9iB.yZl"
+	"logo": "https://kg.diffbot.com/image/api/get?fetch=yes&url=g%3Cj7P0St0DnBJf.x0KwLZrUn.%5B%3CR0Aa4Hh%3B%5Bv738ZqOr7U%3FfvEo%3En0iLo%3Ba%3A.mN%60"
 }
 ```
 ### mccClassification
-  A Merchant Category Code (MCC) is a four-digit number listed in ISO 18245 for retail financial services. An MCC is used to classify a business by the types of goods or services it provides.
+  
 * **Type:** ClassificationCode
 * **Example:**
 ```
 {
-	"mccClassification": [
-		{
-			"code": "",
-			"isPrimary": false,
-			"name": ""
-		}
-	]
+	"mccClassification": []
 }
 ```
 ### mccCode
-**`Deprecated`**  Deprecated field, please migrate to mccClassification field
+**`Deprecated`**  
 * **Type:** Integer
 * **Example:**
 ```
@@ -812,7 +716,7 @@ Note that certain longer field examples may be truncated for readability in thes
 }
 ```
 ### mccCodeDescription
-**`Deprecated`**  Deprecated field, please migrate to mccClassification field
+**`Deprecated`**  
 * **Type:** String
 * **Example:**
 ```
@@ -821,31 +725,25 @@ Note that certain longer field examples may be truncated for readability in thes
 }
 ```
 ### motto
-  A short sentence or phrase chosen as encapsulating the beliefs or ideals guiding an organization
+  
 * **Type:** String
 * **Example:**
 ```
 {
-	"motto": ""
+	"motto": "We're using technologies like AI, cloud, blockchain and IoT to help our clients transform their industries."
 }
 ```
 ### naceClassification
-  The Statistical classification of economic activities in the European Community (NACE) is is a 4-digit classification providing the framework for collecting and presenting a large range of statistical data. We use NACE Rev. 2 (2008).
+  
 * **Type:** ClassificationCode
 * **Example:**
 ```
 {
-	"naceClassification": [
-		{
-			"code": "",
-			"isPrimary": false,
-			"name": ""
-		}
-	]
+	"naceClassification": []
 }
 ```
 ### naicsClassification
-  The North American Industry Classification System (NAICS) is the standard used by Federal statistical agencies in classifying business establishments for the purpose of collecting, analyzing, and publishing statistical data related to the U.S. business economy.
+  
 * **Type:** ClassificationCode
 * **Example:**
 ```
@@ -857,83 +755,101 @@ Note that certain longer field examples may be truncated for readability in thes
 			"name": "Computer and Electronic Product Manufacturing"
 		},
 		{
-			"code": "511210",
+			"code": "334112",
 			"isPrimary": false,
-			"name": "Software Publishers"
+			"name": "Computer Storage Device Manufacturing"
+		},
+		{
+			"code": "334419",
+			"isPrimary": false,
+			"name": "Other Electronic Component Manufacturing"
 		}
 	]
 }
 ```
 ### nbActiveEmployeeEdges
-  Number of employees in the Diffbot KG who are currently employed by this organization.
+  
 * **Type:** Integer
 * **Example:**
 ```
 {
-	"nbActiveEmployeeEdges": 75316
+	"nbActiveEmployeeEdges": 156737
+}
+```
+### nbEmployees
+  
+* **Type:** Integer
+* **Example:**
+```
+{
+	"nbEmployees": 352600
 }
 ```
 ### nbEmployeesMax
-  Defines a upper bound for the number of employees of an organization
+  
 * **Type:** Integer
 * **Example:**
 ```
 {
-	"nbEmployeesMax": 137000
+	"nbEmployeesMax": 352600
 }
 ```
 ### nbEmployeesMin
-  Defines a lower bound for the number of employees of an organization
+  
 * **Type:** Integer
 * **Example:**
 ```
 {
-	"nbEmployeesMin": 137000
+	"nbEmployeesMin": 352600
 }
 ```
 ### nbLocations
-  Number of locations listed in the field &#39;locations&#39;
+  
 * **Type:** Integer
 * **Example:**
 ```
 {
-	"nbLocations": 6
+	"nbLocations": 46
 }
 ```
 ### nbUniqueInvestors
-  Number of unique investors.
+  
 * **Type:** Integer
 * **Example:**
 ```
 {
-	"nbUniqueInvestors": 6
+	"nbUniqueInvestors": 0
 }
 ```
 ### parentCompany
-  The parent company of this subsidiary.
-* **Type:** com.diffbot.kg.fields.LinkedEntity
+  
+* **Type:** LinkedEntity
 * **Example:**
 ```
 {
-	"parentCompany": "[See Organization]"
+	"parentCompany": []
 }
 ```
 ### phoneNumbers
-  Phone numbers of this organization.
+  
 * **Type:** PhoneNumber
 * **Example:**
 ```
 {
 	"phoneNumbers": [
 		{
-			"string": "408-9961010",
-			"digits": "4089961010"
+			"string": "1-914-499-1900",
+			"digits": "19144991900"
+		},
+		{
+			"string": "800-426-4968",
+			"digits": "8004264968"
 		}
 	]
 }
 ```
 ### quarterlyRevenues
-  An organization&#39;s revenue for a period of 3 months.
+  
 * **Type:** QuarterlyRevenue
 * **Example:**
 ```
@@ -942,92 +858,104 @@ Note that certain longer field examples may be truncated for readability in thes
 		{
 			"revenue": {
 				"currency": "USD",
-				"value": 91818999808
+				"value": 24672999424
 			},
 			"isCurrent": false,
-			"year": 2020,
+			"year": 2012,
 			"filingDate": {
-				"str": "d2020-01-29",
+				"str": "d2013-04-30",
 				"precision": 3,
-				"timestamp": 1580256000000
+				"timestamp": 1367280000000
 			},
 			"revenueDate": {
-				"str": "d2019-12-31",
+				"str": "d2012-03-31",
 				"precision": 3,
-				"timestamp": 1577750400000
+				"timestamp": 1333152000000
 			},
 			"quarter": 1
 		},
 		{
 			"revenue": {
 				"currency": "USD",
-				"value": 61136998400
+				"value": 26666000384
 			},
 			"isCurrent": false,
-			"year": 2018,
+			"year": 2011,
 			"filingDate": {
-				"str": "d2019-10-31",
+				"str": "d2012-07-31",
 				"precision": 3,
-				"timestamp": 1572480000000
+				"timestamp": 1343692800000
 			},
 			"revenueDate": {
-				"str": "d2018-03-31",
+				"str": "d2011-06-30",
 				"precision": 3,
-				"timestamp": 1522454400000
+				"timestamp": 1309392000000
 			},
 			"quarter": 2
 		},
 		{
 			"revenue": {
 				"currency": "USD",
-				"value": 53809000448
+				"value": 24746999808
 			},
 			"isCurrent": false,
-			"year": 2019,
+			"year": 2012,
 			"filingDate": {
-				"str": "d2019-10-31",
+				"str": "d2013-10-29",
 				"precision": 3,
-				"timestamp": 1572480000000
+				"timestamp": 1383004800000
 			},
 			"revenueDate": {
-				"str": "d2019-06-30",
+				"str": "d2012-09-30",
 				"precision": 3,
-				"timestamp": 1561852800000
+				"timestamp": 1348963200000
 			},
 			"quarter": 3
 		}
 	]
 }
 ```
+### revenue
+  
+* **Type:** Amount
+* **Example:**
+```
+{
+	"revenue": {
+		"currency": "USD",
+		"value": 76999999488
+	}
+}
+```
 ### secCentralIndexKeys
-  Central Index Key as assigned by the U.S. Securities and Exchange Commission.
+  
 * **Type:** String
 * **Example:**
 ```
 {
 	"secCentralIndexKeys": [
-		"0000320193",
-		"320193"
+		"0000051143",
+		"51143"
 	]
 }
 ```
 ### sicClassification
-  The Standard Industrial Classification (SIC) is a system for classifying industries by a four-digit code. We use the version adopted by the U.S. Securities and Exchange Commission.
+  
 * **Type:** ClassificationCode
 * **Example:**
 ```
 {
 	"sicClassification": [
 		{
-			"code": "3571",
+			"code": "3570",
 			"isPrimary": false,
-			"name": "Electronic Computers"
+			"name": "Computer And Office Equipment"
 		}
 	]
 }
 ```
 ### sicCode
-**`Deprecated`**  Deprecated field, please migrate to sicClassification field
+**`Deprecated`**  
 * **Type:** Integer
 * **Example:**
 ```
@@ -1036,7 +964,7 @@ Note that certain longer field examples may be truncated for readability in thes
 }
 ```
 ### sicCodeDescription
-**`Deprecated`**  Deprecated field, please migrate to sicClassification field
+**`Deprecated`**  
 * **Type:** String
 * **Example:**
 ```
@@ -1045,107 +973,101 @@ Note that certain longer field examples may be truncated for readability in thes
 }
 ```
 ### stock
-  Information about the company&#39;s stock.
+  
 * **Type:** Stock
 * **Example:**
 ```
 {
 	"stock": {
-		"symbol": "AAPL",
-		"exchange": "NASDAQ"
+		"symbol": "IBM",
+		"exchange": "NYSE"
 	}
 }
 ```
 ### subsidiaries
-  Current subsidiaries of this organization.
-* **Type:** com.diffbot.kg.fields.LinkedEntity
+  
+* **Type:** LinkedEntity
 * **Example:**
 ```
 {
 	"subsidiaries": [
 		{
-			"summary": "Company in Teltow, Germany",
-			"image": "https://kg.diffbot.com/image/api/get?fetch=yes&url=g%3Cj7P0St0DnBJf.x0KwLZrUn.%5B%3CR0Aa4Hh%3B%5Bv738ZqOr7U%3FEvtq%3Eq%5D3%5C-oGd-%60J%5Ex%3FkJakPq%3F-Ecy2h.G%5E5",
+			"summary": "American software company",
+			"image": "https://kg.diffbot.com/image/api/get?fetch=yes&url=g%3Cj7P0St%7D9u.LnOv%7BI%7C%40g7.pBYINs%3Ff%7CGZ7jr-tGZhWf%3DK%2FOvy%5Bp%3CSKbs8i%7CEyNzC%5D%3DWo%3Bm5LcuVb7y8KjHv%3DQtP%5CeOp%2FQ.I%5Do",
 			"types": [
 				"Organization",
 				"Corporation"
 			],
-			"name": "SensoMotoric Instruments (SMI)",
-			"diffbotUri": "http://diffbot.com/entity/EwFI_8nzYMEm5Iu4AGQ_AbA",
-			"nbIncomingEdges": 212,
-			"targetDiffbotUri": "http://diffbot.com/entity/EwFI_8nzYMEm5Iu4AGQ_AbA",
-			"surfaceForm": "SensoMotoric Instruments (SMI)",
+			"name": "Lotus Development",
+			"diffbotUri": "http://diffbot.com/entity/EYO3WDFj0MJOcLbiuwE9rCQ",
+			"nbIncomingEdges": 1734,
+			"targetDiffbotUri": "http://diffbot.com/entity/EYO3WDFj0MJOcLbiuwE9rCQ",
+			"targetDiffbotId": "EYO3WDFj0MJOcLbiuwE9rCQ",
+			"surfaceForm": "Lotus Development",
 			"type": "Corporation"
 		},
 		{
-			"summary": "Corporation founded in 1982",
-			"image": "https://kg.diffbot.com/image/api/get?fetch=yes&url=g%3Cj7P0St%7D9u.LnOv%7BI%7C%40g7.pBYINs%3Ff%7CGZ7jr-tGZhWf%3DK%2FOvy%5Bp%3CSKbs8i%7CEyNzC%5E%3BZu%3Di9PczNk2svQbQsvA23Yo%3Cj%3BR.I%5Do",
+			"summary": "Company",
+			"image": "https://kg.diffbot.com/image/api/get?fetch=yes&url=g%3Cj7P0St%7D9u.LnOv%7BI%7C%40g7.pBYINs%3Ff%7CGZ7jr-tGZhWf%3DK%2FOvy%5Bp%3CSKbs8i%7CEyNzC%5D%3DWs%3Cg5Mc8Y_%7D%604Qv%3D_p%3A0EMfMl4B.I%5Do",
 			"types": [
 				"Organization",
 				"Corporation"
 			],
-			"name": "Orion Network Systems",
-			"diffbotUri": "http://diffbot.com/entity/EZDj62U6rOxigMyWlI1zF-A",
-			"nbIncomingEdges": 2,
-			"targetDiffbotUri": "http://diffbot.com/entity/EZDj62U6rOxigMyWlI1zF-A",
-			"surfaceForm": "Orion Network Systems",
+			"name": "Internet Security Systems",
+			"diffbotUri": "http://diffbot.com/entity/Er8fZXT6TMxOdmnXwwbnGTA",
+			"nbIncomingEdges": 2173,
+			"targetDiffbotUri": "http://diffbot.com/entity/Er8fZXT6TMxOdmnXwwbnGTA",
+			"targetDiffbotId": "Er8fZXT6TMxOdmnXwwbnGTA",
+			"surfaceForm": "Internet Security Systems",
 			"type": "Corporation"
 		},
 		{
-			"summary": "Manufacturing company founded in 2006",
-			"image": "https://kg.diffbot.com/image/api/get?fetch=yes&url=g%3Cj7P0St%7D9u.LnOv%7BI%7C%40g7.pBYINs%3Ff%7CGZ7jr-tGZhWf%3DK%2FOvy%5Bp%3CSKbs8i%7CEyNzBa%3DXu8e9McDG%7DItAZrOqhU%7D%2Fl%60%3B2v%3E%3E%5BS%3BK71muK1K.%7DIY",
+			"summary": "Weather forecasting and information technology company",
+			"image": "https://kg.diffbot.com/image/api/get?fetch=yes&url=g%3Cj7P0St0DnBJf.x0KwLZrUn.%5B%3CR0Aa4Hh%3B%5Bv738ZqOr7U%3FcvBR%3EyV1LZ1%5B%3FI_JXRGsGNt%5Dddv_B%3B%3B%5CzEU.b%7B5",
 			"types": [
 				"Organization",
 				"Corporation"
 			],
-			"name": "InVisage Technologies Inc",
-			"diffbotUri": "http://diffbot.com/entity/EzQ7_K3dFMAek71pYP_tq0w",
-			"nbIncomingEdges": 265,
-			"targetDiffbotUri": "http://diffbot.com/entity/EzQ7_K3dFMAek71pYP_tq0w",
-			"surfaceForm": "InVisage Technologies Inc",
+			"name": "The Weather Company",
+			"diffbotUri": "http://diffbot.com/entity/EqNo-pjkfMDyH5hux3StckQ",
+			"nbIncomingEdges": 136,
+			"targetDiffbotUri": "http://diffbot.com/entity/EqNo-pjkfMDyH5hux3StckQ",
+			"targetDiffbotId": "EqNo-pjkfMDyH5hux3StckQ",
+			"surfaceForm": "The Weather Company",
 			"type": "Corporation"
 		}
 	]
 }
 ```
 ### totalInvestment
-  Sum of all investments.
+  
 * **Type:** Amount
 * **Example:**
 ```
 {
-	"totalInvestment": {
-		"currency": "USD",
-		"value": 6150230016
-	}
+	"totalInvestment": ""
 }
 ```
 ### twitterUri
-  Link to the LinkedIn profile of this entity
-* **Type:** 
+  
+* **Type:** DiffbotUrl
 * **Example:**
 ```
 {
-	"twitterUri": "twitter.com/apple"
+	"twitterUri": "twitter.com/IBM"
 }
 ```
 ### ukSicClassification
-  The U.K. Standard Industrial Classification (SIC) system used by Companies House. Companies House uses a condensed version of the full list of codes available from the Office of National Statistics (ONS).
+  
 * **Type:** ClassificationCode
 * **Example:**
 ```
 {
-	"ukSicClassification": [
-		{
-			"code": "",
-			"isPrimary": false,
-			"name": ""
-		}
-	]
+	"ukSicClassification": []
 }
 ```
 ### vatIdentificationNumbers
-  VAT identification number, an identifier used in many countries, including the countries of the European Union, for value added tax purposes
+  
 * **Type:** String
 * **Example:**
 ```
@@ -1154,16 +1076,16 @@ Note that certain longer field examples may be truncated for readability in thes
 }
 ```
 ### wikipediaUri
-  Link to the Crunchbase profile of this entity
-* **Type:** 
+  
+* **Type:** DiffbotUrl
 * **Example:**
 ```
 {
-	"wikipediaUri": "en.wikipedia.org/wiki/Apple_Inc."
+	"wikipediaUri": "en.wikipedia.org/wiki/IBM"
 }
 ```
 ### yearlyRevenues
-  An organization&#39;s revenue for a period of 12 months.
+  
 * **Type:** YearlyRevenue
 * **Example:**
 ```
@@ -1172,7 +1094,7 @@ Note that certain longer field examples may be truncated for readability in thes
 		{
 			"revenue": {
 				"currency": "USD",
-				"value": 265594994688
+				"value": 79591006208
 			},
 			"isCurrent": false,
 			"year": 2018
@@ -1180,18 +1102,28 @@ Note that certain longer field examples may be truncated for readability in thes
 		{
 			"revenue": {
 				"currency": "USD",
-				"value": 274515017728
+				"value": 77147004928
 			},
 			"isCurrent": false,
-			"year": 2020
+			"year": 2019,
+			"filingDate": {
+				"str": "d2020-03-31",
+				"precision": 3,
+				"timestamp": 1585612800000
+			},
+			"revenueDate": {
+				"str": "d2019-12-31",
+				"precision": 3,
+				"timestamp": 1577750400000
+			}
 		},
 		{
 			"revenue": {
 				"currency": "USD",
-				"value": 260174004224
+				"value": 79918997504
 			},
 			"isCurrent": false,
-			"year": 2019
+			"year": 2016
 		}
 	]
 }
