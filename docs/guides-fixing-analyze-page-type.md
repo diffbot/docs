@@ -7,7 +7,7 @@ todo: Add new dashboard instruction
 
 Sometimes Diffbot’s [Analyze API](api-basics-analyze) might misidentify a page as an unsupported type. In such cases, the page type might read `other` and not return any extracted content. There’s a way to override this.
 
-Go to the [Custom API UI](https://diffbot.com/dev/customize) and live preview the page being processed using the Analyze API:
+Go to the [Custom API UI](https://app.diffbot.com/custom/) and live preview the page being processed using the Analyze API:
 
 ![](/img/Screen-Shot-2018-10-28-at-02.50.24.png)
 

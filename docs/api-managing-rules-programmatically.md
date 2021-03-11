@@ -21,7 +21,7 @@ Provide the following arguments:
 | :------- | :---------- |
 | `token` | Developer token |
 
-This returns a JSON-formatted ruleset which corresponds to the UI elements of the <a href="/dev/customize">Custom API Toolkit</a>.
+This returns a JSON-formatted ruleset which corresponds to the UI elements of the <a href="https://app.diffbot.com/custom/">Custom API Toolkit</a>.
 
 | Field | Description |
 | :---- | :---------- |
@@ -32,7 +32,7 @@ This returns a JSON-formatted ruleset which corresponds to the UI elements of th
 | &#x21B3;`selector` | CSS selector to find the appropriate content on the page. |
 | &#x21B3;`value` | Optional: a specific value to hard-code, in lieu of a selector. |
 | &#x21B3;`filters` | Optional: additional options to replace content, ignore selectors, or extract HTML attribute values. See below. </td></tr><tr><td colspan="2">**Optional arguments:**</td> |
-| `testUrl` | A sample URL used to preview your rule within the <a href="/dev/customize">Custom API Toolkit</a>. |
+| `testUrl` | A sample URL used to preview your rule within the <a href="https://app.diffbot.com/custom/">Custom API Toolkit</a>. |
 | `prefilters` | An array of selectors that should be completely dropped from the DOM. These selectors will be fully ignored by all Diffbot processing. |
 | `renderOptions` | Querystring arguments to be passed to the Diffbot rendering engine, e.g. `wait=5000`. |
 | `xForwardHeaders` | An object containing any custom headers to be passed along in all requests to URLs matching the `urlPattern`. Header values can either be a single string, or an array of strings (from which one will be selected at request-time). Custom headers can include:
