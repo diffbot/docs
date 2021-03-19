@@ -15,8 +15,9 @@ This page is a directory of KG and Enhance related content.
 ## Tools and Usage
 
 - [Accessing the Knowledge Graph](kg-accessing) - access the knowledge graph through the UI or the API
-- [API Clients](dql-api-clients) - use the API through your favorite programming language
+- [API Clients](kg-clients) - use the API through your favorite programming language
 - [Microsoft Excel DQL Plugin](dql-excel) - use the power of DQL in your spreadsheets and enhance your data
+- [Google Sheets Add-on](kg-gsheets) - like the Excel plugin, but in Google Sheets
 
 ## API Reference Documentation
 
