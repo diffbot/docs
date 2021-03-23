@@ -20,7 +20,7 @@ Note that fields are not guaranteed to exist in every entity record.
 Note that certain longer field examples may be truncated for readability.
 
 ### area
-  
+  Square kilometers of AdministrativeArea
 * **Type:** Integer
 * **Example:**
 ```

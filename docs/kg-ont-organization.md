@@ -50,6 +50,7 @@ Note that fields are not guaranteed to exist in every entity record.
 * [naceClassification](#naceclassification) 
 * [naicsClassification](#naicsclassification) 
 * [nbActiveEmployeeEdges](#nbactiveemployeeedges) 
+* [nbEmployeeRanges](#nbemployeeranges) 
 * [nbEmployees](#nbemployees) 
 * [nbEmployeesMax](#nbemployeesmax) 
 * [nbEmployeesMin](#nbemployeesmin) 
@@ -76,7 +77,7 @@ Note that fields are not guaranteed to exist in every entity record.
 Note that certain longer field examples may be truncated for readability.
 
 ### acquiredBy
-  
+  The organization that has most recently acquired this organization.
 * **Type:** LinkedEntity
 * **Example:**
 ```
@@ -85,8 +86,8 @@ Note that certain longer field examples may be truncated for readability.
 }
 ```
 ### angellistUri
-  
-* **Type:** DiffbotUrl
+  Link to the Angel List profile of this  entity
+* **Type:** URL
 * **Example:**
 ```
 {
@@ -94,7 +95,7 @@ Note that certain longer field examples may be truncated for readability.
 }
 ```
 ### anzSicClassification
-  
+  The Australian and New Zealand Standard Industrial Classification (ANZSIC) is the standard classification used in Australia and New Zealand for the collection, compilation and publication of statistics by industry.
 * **Type:** ClassificationCode
 * **Example:**
 ```
@@ -103,8 +104,8 @@ Note that certain longer field examples may be truncated for readability.
 }
 ```
 ### blogUri
-  
-* **Type:** DiffbotUrl
+  Link to the blog of this entity
+* **Type:** URL
 * **Example:**
 ```
 {
@@ -112,7 +113,7 @@ Note that certain longer field examples may be truncated for readability.
 }
 ```
 ### boardMembers
-  
+  Member of the Board of Directors for this organization.
 * **Type:** LinkedEntity
 * **Example:**
 ```
@@ -133,38 +134,38 @@ Note that certain longer field examples may be truncated for readability.
 			"type": "Person"
 		},
 		{
-			"summary": "Australian businessman",
-			"image": "https://kg.diffbot.com/image/api/get?fetch=yes&url=g%3Cj7P0St0DnBJf.x0KwLZrUn.%5B%3CR0Aa4Hh%3B%5Bv738ZqOr7U%3FivHn%3Ef%5C0_hCYi.Ytb5%3Dx%40%60e%3Bt%3DPvB%3Eu_%2FF%5D7Rddk%3FXi9%7DA%5B%3B.YxM",
+			"summary": "American banker",
+			"image": "https://kg.diffbot.com/image/api/get?fetch=yes&url=g%3Cj7P0St0DnBJf.x0KwLZrUn.%5B%3CR0Aa4Hh%3B%5Bv738ZqOr7U%3FjvIs%3ElO%3Efb_i3OY9mnzk%3EVuRf7C_H%5D%7BQpkQGN%281n%3CSl%3F_%29.xGV",
 			"types": [
 				"Person"
 			],
-			"name": "Andrew N Liveris",
-			"diffbotUri": "http://diffbot.com/entity/E2XQtwbsDNVSO54QbAy6z7Q",
-			"nbIncomingEdges": 30,
-			"targetDiffbotUri": "http://diffbot.com/entity/E2XQtwbsDNVSO54QbAy6z7Q",
-			"targetDiffbotId": "E2XQtwbsDNVSO54QbAy6z7Q",
-			"surfaceForm": "Andrew N Liveris",
+			"name": "Gary Cohn",
+			"diffbotUri": "http://diffbot.com/entity/EpEweymvaM0ug7Y-pCJBB3w",
+			"nbIncomingEdges": 19,
+			"targetDiffbotUri": "http://diffbot.com/entity/EpEweymvaM0ug7Y-pCJBB3w",
+			"targetDiffbotId": "EpEweymvaM0ug7Y-pCJBB3w",
+			"surfaceForm": "Gary Cohn",
 			"type": "Person"
 		},
 		{
-			"summary": "CEO at ABB Technology Ventures Ltd",
-			"image": "https://kg.diffbot.com/image/api/get?fetch=yes&url=g%3Cj7P0St%7D9u.LnOv%7BI%7C%40g7.pBYINs%3Ff%7CGZ7jr-tGZhWf%3DK%2FOvy%5Bp%3CSKbs8i%7CEyNzC%5D%3F%5Cn6d7LczNzCY%7B%3AV2Tk5f1S%5ENf%7B%60.C_o",
+			"summary": "Indian American business executive and CEO of IBM",
+			"image": "https://kg.diffbot.com/image/api/get?fetch=yes&url=g%3Cj7P0Stx9f%3CJ-Ey7a.K%5EqP%7B.O9X0%7Ee%3C%5EaCXt%3B3hoIb6Z3VcevtG%7BflmD%5Dy%3BSi%3Eb%7B%3D-%3BVyTq%7C%5D2Kh6_-JX%40Xs9%5BUc%7C93AZ7Yn9k%3FSgHj4JwDZr_VDQ4Pi0%5D%7EE%5C%3A%26gGJnCI%26%5B%3AW_zu%60h%3CvoY%7B4JJugBP%5EdNo2lmY%3Egb%3EdzonMUA2jTUL1",
 			"types": [
 				"Person"
 			],
-			"name": "Peter Voser",
-			"diffbotUri": "http://diffbot.com/entity/EO9myMnvoM7-h9c6uDeCBdg",
-			"nbIncomingEdges": 11,
-			"targetDiffbotUri": "http://diffbot.com/entity/EO9myMnvoM7-h9c6uDeCBdg",
-			"targetDiffbotId": "EO9myMnvoM7-h9c6uDeCBdg",
-			"surfaceForm": "Peter Voser",
+			"name": "Arvind Krishna",
+			"diffbotUri": "http://diffbot.com/entity/E2w9R5RLuMCSUb511otaM-Q",
+			"nbIncomingEdges": 7,
+			"targetDiffbotUri": "http://diffbot.com/entity/E2w9R5RLuMCSUb511otaM-Q",
+			"targetDiffbotId": "E2w9R5RLuMCSUb511otaM-Q",
+			"surfaceForm": "Arvind Krishna",
 			"type": "Person"
 		}
 	]
 }
 ```
 ### brands
-  
+  Brands of an organization.
 * **Type:** String
 * **Example:**
 ```
@@ -173,7 +174,7 @@ Note that certain longer field examples may be truncated for readability.
 }
 ```
 ### capitalization
-  
+  Total market value of all outstanding shares of an organization.
 * **Type:** Amount
 * **Example:**
 ```
@@ -219,7 +220,7 @@ Note that certain longer field examples may be truncated for readability.
 }
 ```
 ### ceo
-  
+  Chief Executive Officer of this organization.
 * **Type:** LinkedEntity
 * **Example:**
 ```
@@ -228,7 +229,7 @@ Note that certain longer field examples may be truncated for readability.
 }
 ```
 ### companiesHouseIds
-  
+  Identifier assigned by the U.K. Companies House.
 * **Type:** String
 * **Example:**
 ```
@@ -237,8 +238,8 @@ Note that certain longer field examples may be truncated for readability.
 }
 ```
 ### crunchbaseUri
-  
-* **Type:** DiffbotUrl
+  Link to the Crunchbase profile of this entity
+* **Type:** URL
 * **Example:**
 ```
 {
@@ -259,8 +260,8 @@ Note that certain longer field examples may be truncated for readability.
 }
 ```
 ### facebookUri
-  
-* **Type:** DiffbotUrl
+  Link to the Facebook profile of this entity
+* **Type:** URL
 * **Example:**
 ```
 {
@@ -268,7 +269,7 @@ Note that certain longer field examples may be truncated for readability.
 }
 ```
 ### founders
-  
+  Founders of this organization
 * **Type:** LinkedEntity
 * **Example:**
 ```
@@ -306,7 +307,7 @@ Note that certain longer field examples may be truncated for readability.
 }
 ```
 ### foundingDate
-  
+  The date this organization was founded
 * **Type:** DDate
 * **Example:**
 ```
@@ -319,8 +320,8 @@ Note that certain longer field examples may be truncated for readability.
 }
 ```
 ### githubUri
-  
-* **Type:** DiffbotUrl
+  Link to the Github profile of this entity
+* **Type:** URL
 * **Example:**
 ```
 {
@@ -328,8 +329,8 @@ Note that certain longer field examples may be truncated for readability.
 }
 ```
 ### googlePlusUri
-  
-* **Type:** DiffbotUrl
+  Link to the Google+ profile of this entity
+* **Type:** URL
 * **Example:**
 ```
 {
@@ -337,8 +338,8 @@ Note that certain longer field examples may be truncated for readability.
 }
 ```
 ### homepageUri
-  
-* **Type:** DiffbotUrl
+  Link to the homepage of this  entity
+* **Type:** URL
 * **Example:**
 ```
 {
@@ -346,7 +347,7 @@ Note that certain longer field examples may be truncated for readability.
 }
 ```
 ### iSicClassification
-  
+  The International Standard of Industrial Classification (ISIC) of All Economic Activities code was developed by the UN as a standard way of classifying economic activities into 4-digit group codes. We use ISIC Rev. 4 (Edition 2016).
 * **Type:** ClassificationCode
 * **Example:**
 ```
@@ -355,7 +356,7 @@ Note that certain longer field examples may be truncated for readability.
 }
 ```
 ### indianCorporateIdentityNumbers
-  
+  Indian Corporate Identity Number (CIN).
 * **Type:** String
 * **Example:**
 ```
@@ -377,7 +378,7 @@ Note that certain longer field examples may be truncated for readability.
 }
 ```
 ### investments
-  
+  Investments received by this organization.
 * **Type:** Investment
 * **Example:**
 ```
@@ -386,7 +387,7 @@ Note that certain longer field examples may be truncated for readability.
 }
 ```
 ### ipo
-  
+  Information about the company&#39;s Initial Public Offering.
 * **Type:** IPO
 * **Example:**
 ```
@@ -402,7 +403,7 @@ Note that certain longer field examples may be truncated for readability.
 }
 ```
 ### irsEmployerIdentificationNumbers
-  
+  Employer Identification Number as assigned by the U.S. Internal Revenue Service.
 * **Type:** String
 * **Example:**
 ```
@@ -414,7 +415,7 @@ Note that certain longer field examples may be truncated for readability.
 }
 ```
 ### isAcquired
-  
+  Indicates whether the company has been acquired in the past. To verify whether the company has been dissoved or not, refer to &#39;isDissolved&#39;.
 * **Type:** Boolean
 * **Example:**
 ```
@@ -423,7 +424,7 @@ Note that certain longer field examples may be truncated for readability.
 }
 ```
 ### isDissolved
-  
+  Whether this company is active or dissolved.
 * **Type:** Boolean
 * **Example:**
 ```
@@ -432,7 +433,7 @@ Note that certain longer field examples may be truncated for readability.
 }
 ```
 ### isNonProfit
-  
+  Whether this organization is a non-profit.
 * **Type:** Boolean
 * **Example:**
 ```
@@ -441,7 +442,7 @@ Note that certain longer field examples may be truncated for readability.
 }
 ```
 ### isPublic
-  
+  Whether the shares of this company are traded on a stock exchange.
 * **Type:** Boolean
 * **Example:**
 ```
@@ -450,7 +451,7 @@ Note that certain longer field examples may be truncated for readability.
 }
 ```
 ### leadership
-  
+  List of organization C-Level Officers.
 * **Type:** Employee
 * **Example:**
 ```
@@ -459,8 +460,8 @@ Note that certain longer field examples may be truncated for readability.
 }
 ```
 ### linkedInUri
-  
-* **Type:** DiffbotUrl
+  Link to the LinkedIn profile of this entity
+* **Type:** URL
 * **Example:**
 ```
 {
@@ -468,7 +469,7 @@ Note that certain longer field examples may be truncated for readability.
 }
 ```
 ### location
-  
+  The main location of an organization.
 * **Type:** Location
 * **Example:**
 ```
@@ -483,7 +484,7 @@ Note that certain longer field examples may be truncated for readability.
 			],
 			"name": "United States of America",
 			"diffbotUri": "http://diffbot.com/entity/E01d4EK33MmCosgI2KXa4-A",
-			"nbIncomingEdges": 1026989768,
+			"nbIncomingEdges": 1033140662,
 			"targetDiffbotUri": "http://diffbot.com/entity/E01d4EK33MmCosgI2KXa4-A",
 			"targetDiffbotId": "E01d4EK33MmCosgI2KXa4-A",
 			"type": "AdministrativeArea"
@@ -499,7 +500,7 @@ Note that certain longer field examples may be truncated for readability.
 			],
 			"name": "Armonk",
 			"diffbotUri": "http://diffbot.com/entity/EFYOMni-nNtScxpZwteaMxQ",
-			"nbIncomingEdges": 28407,
+			"nbIncomingEdges": 28433,
 			"targetDiffbotUri": "http://diffbot.com/entity/EFYOMni-nNtScxpZwteaMxQ",
 			"targetDiffbotId": "EFYOMni-nNtScxpZwteaMxQ",
 			"type": "AdministrativeArea"
@@ -518,7 +519,7 @@ Note that certain longer field examples may be truncated for readability.
 			],
 			"name": "New York",
 			"diffbotUri": "http://diffbot.com/entity/E1NxI_KXaMbiP5g2aM9MRdw",
-			"nbIncomingEdges": 66347223,
+			"nbIncomingEdges": 66917489,
 			"targetDiffbotUri": "http://diffbot.com/entity/E1NxI_KXaMbiP5g2aM9MRdw",
 			"targetDiffbotId": "E1NxI_KXaMbiP5g2aM9MRdw",
 			"type": "AdministrativeArea"
@@ -528,7 +529,7 @@ Note that certain longer field examples may be truncated for readability.
 }
 ```
 ### locations
-  
+  All locations of an organization, including former locations (refer to the field &#39;isCurrent&#39;).
 * **Type:** Location
 * **Example:**
 ```
@@ -544,7 +545,7 @@ Note that certain longer field examples may be truncated for readability.
 				],
 				"name": "United States of America",
 				"diffbotUri": "http://diffbot.com/entity/E01d4EK33MmCosgI2KXa4-A",
-				"nbIncomingEdges": 1026989768,
+				"nbIncomingEdges": 1033140662,
 				"targetDiffbotUri": "http://diffbot.com/entity/E01d4EK33MmCosgI2KXa4-A",
 				"targetDiffbotId": "E01d4EK33MmCosgI2KXa4-A",
 				"type": "AdministrativeArea"
@@ -560,7 +561,7 @@ Note that certain longer field examples may be truncated for readability.
 				],
 				"name": "Armonk",
 				"diffbotUri": "http://diffbot.com/entity/EFYOMni-nNtScxpZwteaMxQ",
-				"nbIncomingEdges": 28407,
+				"nbIncomingEdges": 28433,
 				"targetDiffbotUri": "http://diffbot.com/entity/EFYOMni-nNtScxpZwteaMxQ",
 				"targetDiffbotId": "EFYOMni-nNtScxpZwteaMxQ",
 				"type": "AdministrativeArea"
@@ -575,7 +576,7 @@ Note that certain longer field examples may be truncated for readability.
 				],
 				"name": "Westchester County",
 				"diffbotUri": "http://diffbot.com/entity/EoKezLIvJP82Xm_cWVQyCQA",
-				"nbIncomingEdges": 2643349,
+				"nbIncomingEdges": 2647177,
 				"targetDiffbotUri": "http://diffbot.com/entity/EoKezLIvJP82Xm_cWVQyCQA",
 				"targetDiffbotId": "EoKezLIvJP82Xm_cWVQyCQA",
 				"type": "AdministrativeArea"
@@ -592,7 +593,7 @@ Note that certain longer field examples may be truncated for readability.
 				],
 				"name": "New York",
 				"diffbotUri": "http://diffbot.com/entity/E1NxI_KXaMbiP5g2aM9MRdw",
-				"nbIncomingEdges": 66347223,
+				"nbIncomingEdges": 66917489,
 				"targetDiffbotUri": "http://diffbot.com/entity/E1NxI_KXaMbiP5g2aM9MRdw",
 				"targetDiffbotId": "E1NxI_KXaMbiP5g2aM9MRdw",
 				"type": "AdministrativeArea"
@@ -609,7 +610,7 @@ Note that certain longer field examples may be truncated for readability.
 				],
 				"name": "United States of America",
 				"diffbotUri": "http://diffbot.com/entity/E01d4EK33MmCosgI2KXa4-A",
-				"nbIncomingEdges": 1026989768,
+				"nbIncomingEdges": 1033140662,
 				"targetDiffbotUri": "http://diffbot.com/entity/E01d4EK33MmCosgI2KXa4-A",
 				"targetDiffbotId": "E01d4EK33MmCosgI2KXa4-A",
 				"type": "AdministrativeArea"
@@ -630,7 +631,7 @@ Note that certain longer field examples may be truncated for readability.
 				],
 				"name": "United States of America",
 				"diffbotUri": "http://diffbot.com/entity/E01d4EK33MmCosgI2KXa4-A",
-				"nbIncomingEdges": 1026989768,
+				"nbIncomingEdges": 1033140662,
 				"targetDiffbotUri": "http://diffbot.com/entity/E01d4EK33MmCosgI2KXa4-A",
 				"targetDiffbotId": "E01d4EK33MmCosgI2KXa4-A",
 				"type": "AdministrativeArea"
@@ -646,7 +647,7 @@ Note that certain longer field examples may be truncated for readability.
 				],
 				"name": "North Castle",
 				"diffbotUri": "http://diffbot.com/entity/EsulWqYOjPseTau0QUH8Ruw",
-				"nbIncomingEdges": 2919,
+				"nbIncomingEdges": 2920,
 				"targetDiffbotUri": "http://diffbot.com/entity/EsulWqYOjPseTau0QUH8Ruw",
 				"targetDiffbotId": "EsulWqYOjPseTau0QUH8Ruw",
 				"type": "AdministrativeArea"
@@ -661,7 +662,7 @@ Note that certain longer field examples may be truncated for readability.
 				],
 				"name": "Westchester County",
 				"diffbotUri": "http://diffbot.com/entity/EoKezLIvJP82Xm_cWVQyCQA",
-				"nbIncomingEdges": 2643349,
+				"nbIncomingEdges": 2647177,
 				"targetDiffbotUri": "http://diffbot.com/entity/EoKezLIvJP82Xm_cWVQyCQA",
 				"targetDiffbotId": "EoKezLIvJP82Xm_cWVQyCQA",
 				"type": "AdministrativeArea"
@@ -678,7 +679,7 @@ Note that certain longer field examples may be truncated for readability.
 				],
 				"name": "New York",
 				"diffbotUri": "http://diffbot.com/entity/E1NxI_KXaMbiP5g2aM9MRdw",
-				"nbIncomingEdges": 66347223,
+				"nbIncomingEdges": 66917489,
 				"targetDiffbotUri": "http://diffbot.com/entity/E1NxI_KXaMbiP5g2aM9MRdw",
 				"targetDiffbotId": "E1NxI_KXaMbiP5g2aM9MRdw",
 				"type": "AdministrativeArea"
@@ -689,7 +690,7 @@ Note that certain longer field examples may be truncated for readability.
 }
 ```
 ### logo
-  
+  A graphic mark, emblem, or symbol representative of an institution
 * **Type:** String
 * **Example:**
 ```
@@ -698,7 +699,7 @@ Note that certain longer field examples may be truncated for readability.
 }
 ```
 ### mccClassification
-  
+  A Merchant Category Code (MCC) is a four-digit number listed in ISO 18245 for retail financial services. An MCC is used to classify a business by the types of goods or services it provides.
 * **Type:** ClassificationCode
 * **Example:**
 ```
@@ -707,7 +708,7 @@ Note that certain longer field examples may be truncated for readability.
 }
 ```
 ### mccCode
-**`Deprecated`**  
+**`Deprecated`**  Deprecated field, please migrate to mccClassification field
 * **Type:** Integer
 * **Example:**
 ```
@@ -716,7 +717,7 @@ Note that certain longer field examples may be truncated for readability.
 }
 ```
 ### mccCodeDescription
-**`Deprecated`**  
+**`Deprecated`**  Deprecated field, please migrate to mccClassification field
 * **Type:** String
 * **Example:**
 ```
@@ -725,7 +726,7 @@ Note that certain longer field examples may be truncated for readability.
 }
 ```
 ### motto
-  
+  A short sentence or phrase chosen as encapsulating the beliefs or ideals guiding an organization
 * **Type:** String
 * **Example:**
 ```
@@ -734,7 +735,7 @@ Note that certain longer field examples may be truncated for readability.
 }
 ```
 ### naceClassification
-  
+  The Statistical classification of economic activities in the European Community (NACE) is is a 4-digit classification providing the framework for collecting and presenting a large range of statistical data. We use NACE Rev. 2 (2008).
 * **Type:** ClassificationCode
 * **Example:**
 ```
@@ -743,7 +744,7 @@ Note that certain longer field examples may be truncated for readability.
 }
 ```
 ### naicsClassification
-  
+  The North American Industry Classification System (NAICS) is the standard used by Federal statistical agencies in classifying business establishments for the purpose of collecting, analyzing, and publishing statistical data related to the U.S. business economy.
 * **Type:** ClassificationCode
 * **Example:**
 ```
@@ -760,24 +761,33 @@ Note that certain longer field examples may be truncated for readability.
 			"name": "Computer Storage Device Manufacturing"
 		},
 		{
-			"code": "334419",
+			"code": "330000",
 			"isPrimary": false,
-			"name": "Other Electronic Component Manufacturing"
+			"name": "Manufacturing"
 		}
 	]
 }
 ```
 ### nbActiveEmployeeEdges
-  
+  Number of employees in the Diffbot KG who are currently employed by this organization.
 * **Type:** Integer
 * **Example:**
 ```
 {
-	"nbActiveEmployeeEdges": 156737
+	"nbActiveEmployeeEdges": 145560
+}
+```
+### nbEmployeeRanges
+  The list of all ranges found for an organization from different sources
+* **Type:** Range
+* **Example:**
+```
+{
+	"nbEmployeeRanges": []
 }
 ```
 ### nbEmployees
-  
+  The estimated number of employees of an organization
 * **Type:** Integer
 * **Example:**
 ```
@@ -786,7 +796,7 @@ Note that certain longer field examples may be truncated for readability.
 }
 ```
 ### nbEmployeesMax
-  
+  Defines a upper bound for the number of employees of an organization
 * **Type:** Integer
 * **Example:**
 ```
@@ -795,7 +805,7 @@ Note that certain longer field examples may be truncated for readability.
 }
 ```
 ### nbEmployeesMin
-  
+  Defines a lower bound for the number of employees of an organization
 * **Type:** Integer
 * **Example:**
 ```
@@ -804,7 +814,7 @@ Note that certain longer field examples may be truncated for readability.
 }
 ```
 ### nbLocations
-  
+  Number of locations listed in the field &#39;locations&#39;
 * **Type:** Integer
 * **Example:**
 ```
@@ -813,7 +823,7 @@ Note that certain longer field examples may be truncated for readability.
 }
 ```
 ### nbUniqueInvestors
-  
+  Number of unique investors.
 * **Type:** Integer
 * **Example:**
 ```
@@ -822,7 +832,7 @@ Note that certain longer field examples may be truncated for readability.
 }
 ```
 ### parentCompany
-  
+  The parent company of this subsidiary.
 * **Type:** LinkedEntity
 * **Example:**
 ```
@@ -831,7 +841,7 @@ Note that certain longer field examples may be truncated for readability.
 }
 ```
 ### phoneNumbers
-  
+  Phone numbers of this organization.
 * **Type:** PhoneNumber
 * **Example:**
 ```
@@ -849,7 +859,7 @@ Note that certain longer field examples may be truncated for readability.
 }
 ```
 ### quarterlyRevenues
-  
+  An organization&#39;s revenue for a period of 3 months.
 * **Type:** QuarterlyRevenue
 * **Example:**
 ```
@@ -916,7 +926,7 @@ Note that certain longer field examples may be truncated for readability.
 }
 ```
 ### revenue
-  
+  Income, especially that of a company or organization, generated from the sales of goods, services, capital or any other assets.
 * **Type:** Amount
 * **Example:**
 ```
@@ -928,7 +938,7 @@ Note that certain longer field examples may be truncated for readability.
 }
 ```
 ### secCentralIndexKeys
-  
+  Central Index Key as assigned by the U.S. Securities and Exchange Commission.
 * **Type:** String
 * **Example:**
 ```
@@ -940,7 +950,7 @@ Note that certain longer field examples may be truncated for readability.
 }
 ```
 ### sicClassification
-  
+  The Standard Industrial Classification (SIC) is a system for classifying industries by a four-digit code. We use the version adopted by the U.S. Securities and Exchange Commission.
 * **Type:** ClassificationCode
 * **Example:**
 ```
@@ -955,7 +965,7 @@ Note that certain longer field examples may be truncated for readability.
 }
 ```
 ### sicCode
-**`Deprecated`**  
+**`Deprecated`**  Deprecated field, please migrate to sicClassification field
 * **Type:** Integer
 * **Example:**
 ```
@@ -964,7 +974,7 @@ Note that certain longer field examples may be truncated for readability.
 }
 ```
 ### sicCodeDescription
-**`Deprecated`**  
+**`Deprecated`**  Deprecated field, please migrate to sicClassification field
 * **Type:** String
 * **Example:**
 ```
@@ -973,7 +983,7 @@ Note that certain longer field examples may be truncated for readability.
 }
 ```
 ### stock
-  
+  Information about the company&#39;s stock.
 * **Type:** Stock
 * **Example:**
 ```
@@ -985,7 +995,7 @@ Note that certain longer field examples may be truncated for readability.
 }
 ```
 ### subsidiaries
-  
+  Current subsidiaries of this organization.
 * **Type:** LinkedEntity
 * **Example:**
 ```
@@ -1000,7 +1010,7 @@ Note that certain longer field examples may be truncated for readability.
 			],
 			"name": "Lotus Development",
 			"diffbotUri": "http://diffbot.com/entity/EYO3WDFj0MJOcLbiuwE9rCQ",
-			"nbIncomingEdges": 1734,
+			"nbIncomingEdges": 1751,
 			"targetDiffbotUri": "http://diffbot.com/entity/EYO3WDFj0MJOcLbiuwE9rCQ",
 			"targetDiffbotId": "EYO3WDFj0MJOcLbiuwE9rCQ",
 			"surfaceForm": "Lotus Development",
@@ -1015,7 +1025,7 @@ Note that certain longer field examples may be truncated for readability.
 			],
 			"name": "Internet Security Systems",
 			"diffbotUri": "http://diffbot.com/entity/Er8fZXT6TMxOdmnXwwbnGTA",
-			"nbIncomingEdges": 2173,
+			"nbIncomingEdges": 2187,
 			"targetDiffbotUri": "http://diffbot.com/entity/Er8fZXT6TMxOdmnXwwbnGTA",
 			"targetDiffbotId": "Er8fZXT6TMxOdmnXwwbnGTA",
 			"surfaceForm": "Internet Security Systems",
@@ -1030,7 +1040,7 @@ Note that certain longer field examples may be truncated for readability.
 			],
 			"name": "The Weather Company",
 			"diffbotUri": "http://diffbot.com/entity/EqNo-pjkfMDyH5hux3StckQ",
-			"nbIncomingEdges": 136,
+			"nbIncomingEdges": 137,
 			"targetDiffbotUri": "http://diffbot.com/entity/EqNo-pjkfMDyH5hux3StckQ",
 			"targetDiffbotId": "EqNo-pjkfMDyH5hux3StckQ",
 			"surfaceForm": "The Weather Company",
@@ -1040,7 +1050,7 @@ Note that certain longer field examples may be truncated for readability.
 }
 ```
 ### totalInvestment
-  
+  Sum of all investments.
 * **Type:** Amount
 * **Example:**
 ```
@@ -1049,8 +1059,8 @@ Note that certain longer field examples may be truncated for readability.
 }
 ```
 ### twitterUri
-  
-* **Type:** DiffbotUrl
+  Link to the LinkedIn profile of this entity
+* **Type:** URL
 * **Example:**
 ```
 {
@@ -1058,7 +1068,7 @@ Note that certain longer field examples may be truncated for readability.
 }
 ```
 ### ukSicClassification
-  
+  The U.K. Standard Industrial Classification (SIC) system used by Companies House. Companies House uses a condensed version of the full list of codes available from the Office of National Statistics (ONS).
 * **Type:** ClassificationCode
 * **Example:**
 ```
@@ -1067,7 +1077,7 @@ Note that certain longer field examples may be truncated for readability.
 }
 ```
 ### vatIdentificationNumbers
-  
+  VAT identification number, an identifier used in many countries, including the countries of the European Union, for value added tax purposes
 * **Type:** String
 * **Example:**
 ```
@@ -1076,8 +1086,8 @@ Note that certain longer field examples may be truncated for readability.
 }
 ```
 ### wikipediaUri
-  
-* **Type:** DiffbotUrl
+  Link to the Crunchbase profile of this entity
+* **Type:** URL
 * **Example:**
 ```
 {
@@ -1085,7 +1095,7 @@ Note that certain longer field examples may be truncated for readability.
 }
 ```
 ### yearlyRevenues
-  
+  An organization&#39;s revenue for a period of 12 months.
 * **Type:** YearlyRevenue
 * **Example:**
 ```

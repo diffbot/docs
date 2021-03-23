@@ -145,7 +145,7 @@ Note that certain longer field examples may be truncated for readability.
 }
 ```
 ### language
-  
+  Refers to the language in which an Article is written
 * **Type:** String
 * **Example:**
 ```
@@ -199,7 +199,7 @@ Note that certain longer field examples may be truncated for readability.
 }
 ```
 ### quotes
-  
+  Returns quotes found in the article text and who said them. For English-language text only
 * **Type:** GlobalIndexQuote
 * **Example:**
 ```
@@ -208,7 +208,7 @@ Note that certain longer field examples may be truncated for readability.
 }
 ```
 ### sentiment
-  
+  Sentiment of the article. Positive sentiments have positive values and negative sentiments have a negative value.
 * **Type:** Float
 * **Example:**
 ```
@@ -226,7 +226,7 @@ Note that certain longer field examples may be truncated for readability.
 }
 ```
 ### tags
-  
+  Array of tags&#x2F;entities, generated from analysis of the extracted text and cross-referenced with DBpedia and other data sources. Language-specific tags will be returned if the source text is in English, Chinese, French, German, Spanish or Russian.
 * **Type:** GlobalIndexTag
 * **Example:**
 ```
@@ -277,7 +277,7 @@ Note that certain longer field examples may be truncated for readability.
 }
 ```
 ### title
-  
+  Title of the Article
 * **Type:** String
 * **Example:**
 ```

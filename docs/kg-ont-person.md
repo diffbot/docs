@@ -61,7 +61,7 @@ Note that fields are not guaranteed to exist in every entity record.
 Note that certain longer field examples may be truncated for readability.
 
 ### age
-  
+  A person&#39;s age.
 * **Type:** Integer
 * **Example:**
 ```
@@ -70,8 +70,8 @@ Note that certain longer field examples may be truncated for readability.
 }
 ```
 ### angellistUri
-  
-* **Type:** DiffbotUrl
+  Link to the Angel List profile of the Person entity
+* **Type:** URL
 * **Example:**
 ```
 {
@@ -79,14 +79,14 @@ Note that certain longer field examples may be truncated for readability.
 }
 ```
 ### articles
-  
+  Articles written by this person.
 * **Type:** LinkedEntity
 * **Example:**
 ```
 {
 	"articles": [
 		{
-			"recordId": "EEIzhzuLVPeKuQ7KjPSa6aQ@338",
+			"recordId": "EEIzhzuLVPeKuQ7KjPSa6aQ@315",
 			"name": "Mr. Lincoln's T-Mails: The Untold Story of How Abraham Lincoln Used the Telegraph to Win the Civil War // HarperCollins",
 			"websiteUris": [
 				"mrlincolnstmails.com"
@@ -96,7 +96,7 @@ Note that certain longer field examples may be truncated for readability.
 			"type": "Article"
 		},
 		{
-			"recordId": "EEIzhzuLVPeKuQ7KjPSa6aQ@339",
+			"recordId": "EEIzhzuLVPeKuQ7KjPSa6aQ@316",
 			"name": "Leadership Lessons from the Civil War // Doubleday",
 			"websiteUris": [
 				"civilwarleadership.com"
@@ -104,12 +104,19 @@ Note that certain longer field examples may be truncated for readability.
 			"surfaceForm": "Leadership Lessons from the Civil War // Doubleday",
 			"position": "personArticles",
 			"type": "Article"
+		},
+		{
+			"recordId": "EEIzhzuLVPeKuQ7KjPSa6aQ@318",
+			"name": "Take Command: Leadership Lessons from the Civil War // Doubleday - 2000",
+			"surfaceForm": "Take Command: Leadership Lessons from the Civil War // Doubleday - 2000",
+			"position": "personArticles",
+			"type": "Article"
 		}
 	]
 }
 ```
 ### awards
-  
+  Awards received.
 * **Type:** Award
 * **Example:**
 ```
@@ -118,7 +125,7 @@ Note that certain longer field examples may be truncated for readability.
 }
 ```
 ### birthDate
-  
+  A person&#39;s date of birth.
 * **Type:** DDate
 * **Example:**
 ```
@@ -131,7 +138,7 @@ Note that certain longer field examples may be truncated for readability.
 }
 ```
 ### birthPlace
-  
+  A person&#39;s place of birth.
 * **Type:** Location
 * **Example:**
 ```
@@ -146,7 +153,7 @@ Note that certain longer field examples may be truncated for readability.
 			],
 			"name": "United States of America",
 			"diffbotUri": "http://diffbot.com/entity/E01d4EK33MmCosgI2KXa4-A",
-			"nbIncomingEdges": 1026989768,
+			"nbIncomingEdges": 1033140662,
 			"targetDiffbotUri": "http://diffbot.com/entity/E01d4EK33MmCosgI2KXa4-A",
 			"targetDiffbotId": "E01d4EK33MmCosgI2KXa4-A",
 			"type": "AdministrativeArea"
@@ -162,7 +169,7 @@ Note that certain longer field examples may be truncated for readability.
 			],
 			"name": "Redlands",
 			"diffbotUri": "http://diffbot.com/entity/EEGqoBftsOZyh3_RKbQE3mw",
-			"nbIncomingEdges": 222124,
+			"nbIncomingEdges": 222804,
 			"targetDiffbotUri": "http://diffbot.com/entity/EEGqoBftsOZyh3_RKbQE3mw",
 			"targetDiffbotId": "EEGqoBftsOZyh3_RKbQE3mw",
 			"type": "AdministrativeArea"
@@ -176,7 +183,7 @@ Note that certain longer field examples may be truncated for readability.
 			],
 			"name": "San Bernardino County",
 			"diffbotUri": "http://diffbot.com/entity/EApueG2dHP3iRBLbjF2w2gQ",
-			"nbIncomingEdges": 5260421,
+			"nbIncomingEdges": 5273811,
 			"targetDiffbotUri": "http://diffbot.com/entity/EApueG2dHP3iRBLbjF2w2gQ",
 			"targetDiffbotId": "EApueG2dHP3iRBLbjF2w2gQ",
 			"type": "AdministrativeArea"
@@ -194,7 +201,7 @@ Note that certain longer field examples may be truncated for readability.
 			],
 			"name": "California",
 			"diffbotUri": "http://diffbot.com/entity/El0_8ehooNxOPT36Y4RdV9w",
-			"nbIncomingEdges": 112823978,
+			"nbIncomingEdges": 113588248,
 			"targetDiffbotUri": "http://diffbot.com/entity/El0_8ehooNxOPT36Y4RdV9w",
 			"targetDiffbotId": "El0_8ehooNxOPT36Y4RdV9w",
 			"type": "AdministrativeArea"
@@ -204,8 +211,8 @@ Note that certain longer field examples may be truncated for readability.
 }
 ```
 ### blogUri
-  
-* **Type:** DiffbotUrl
+  This is a link to Person entity&#39;s written journal
+* **Type:** URL
 * **Example:**
 ```
 {
@@ -213,7 +220,7 @@ Note that certain longer field examples may be truncated for readability.
 }
 ```
 ### children
-  
+  This person&#39;s children.
 * **Type:** LinkedEntity
 * **Example:**
 ```
@@ -222,7 +229,7 @@ Note that certain longer field examples may be truncated for readability.
 }
 ```
 ### colleagues
-  
+  People with whom this person has a work or academic relationship.
 * **Type:** Colleague
 * **Example:**
 ```
@@ -231,7 +238,7 @@ Note that certain longer field examples may be truncated for readability.
 }
 ```
 ### connectedIndustries
-  
+  Industries of current and former employers.
 * **Type:** Industry
 * **Example:**
 ```
@@ -240,8 +247,8 @@ Note that certain longer field examples may be truncated for readability.
 }
 ```
 ### crunchbaseUri
-  
-* **Type:** DiffbotUrl
+  Link to the Crunchbase profile of the Person entity
+* **Type:** URL
 * **Example:**
 ```
 {
@@ -249,7 +256,7 @@ Note that certain longer field examples may be truncated for readability.
 }
 ```
 ### deathDate
-  
+  A person&#39;s date of death.
 * **Type:** DDate
 * **Example:**
 ```
@@ -258,7 +265,7 @@ Note that certain longer field examples may be truncated for readability.
 }
 ```
 ### deathPlace
-  
+  A person&#39;s place of death.
 * **Type:** Location
 * **Example:**
 ```
@@ -273,7 +280,7 @@ Note that certain longer field examples may be truncated for readability.
 			],
 			"name": "United States of America",
 			"diffbotUri": "http://diffbot.com/entity/E01d4EK33MmCosgI2KXa4-A",
-			"nbIncomingEdges": 1026989768,
+			"nbIncomingEdges": 1033140662,
 			"targetDiffbotUri": "http://diffbot.com/entity/E01d4EK33MmCosgI2KXa4-A",
 			"targetDiffbotId": "E01d4EK33MmCosgI2KXa4-A",
 			"type": "AdministrativeArea"
@@ -289,7 +296,7 @@ Note that certain longer field examples may be truncated for readability.
 			],
 			"name": "Redlands",
 			"diffbotUri": "http://diffbot.com/entity/EEGqoBftsOZyh3_RKbQE3mw",
-			"nbIncomingEdges": 222124,
+			"nbIncomingEdges": 222804,
 			"targetDiffbotUri": "http://diffbot.com/entity/EEGqoBftsOZyh3_RKbQE3mw",
 			"targetDiffbotId": "EEGqoBftsOZyh3_RKbQE3mw",
 			"type": "AdministrativeArea"
@@ -303,7 +310,7 @@ Note that certain longer field examples may be truncated for readability.
 			],
 			"name": "San Bernardino County",
 			"diffbotUri": "http://diffbot.com/entity/EApueG2dHP3iRBLbjF2w2gQ",
-			"nbIncomingEdges": 5260421,
+			"nbIncomingEdges": 5273811,
 			"targetDiffbotUri": "http://diffbot.com/entity/EApueG2dHP3iRBLbjF2w2gQ",
 			"targetDiffbotId": "EApueG2dHP3iRBLbjF2w2gQ",
 			"type": "AdministrativeArea"
@@ -321,7 +328,7 @@ Note that certain longer field examples may be truncated for readability.
 			],
 			"name": "California",
 			"diffbotUri": "http://diffbot.com/entity/El0_8ehooNxOPT36Y4RdV9w",
-			"nbIncomingEdges": 112823978,
+			"nbIncomingEdges": 113588248,
 			"targetDiffbotUri": "http://diffbot.com/entity/El0_8ehooNxOPT36Y4RdV9w",
 			"targetDiffbotId": "El0_8ehooNxOPT36Y4RdV9w",
 			"type": "AdministrativeArea"
@@ -331,7 +338,7 @@ Note that certain longer field examples may be truncated for readability.
 }
 ```
 ### educations
-  
+  Education history.
 * **Type:** Education
 * **Example:**
 ```
@@ -346,7 +353,7 @@ Note that certain longer field examples may be truncated for readability.
 				],
 				"name": "The Ohio State University",
 				"diffbotUri": "http://diffbot.com/entity/Etz-X7KAZOQW3g6syRTT7bg",
-				"nbIncomingEdges": 101243,
+				"nbIncomingEdges": 108270,
 				"targetDiffbotUri": "http://diffbot.com/entity/Etz-X7KAZOQW3g6syRTT7bg",
 				"targetDiffbotId": "Etz-X7KAZOQW3g6syRTT7bg",
 				"surfaceForm": "The Ohio State University",
@@ -354,7 +361,7 @@ Note that certain longer field examples may be truncated for readability.
 			},
 			"isCurrent": false,
 			"major": {
-				"recordId": "EEIzhzuLVPeKuQ7KjPSa6aQ@310",
+				"recordId": "EEIzhzuLVPeKuQ7KjPSa6aQ@289",
 				"name": "International Trade",
 				"surfaceForm": "International Trade",
 				"position": "personEducationMajor",
@@ -392,38 +399,10 @@ Note that certain longer field examples may be truncated for readability.
 				],
 				"name": "OSU",
 				"diffbotUri": "http://diffbot.com/entity/EXqnLTSovNzi-4KlIxjHhyA",
-				"nbIncomingEdges": 342459,
+				"nbIncomingEdges": 358200,
 				"targetDiffbotUri": "http://diffbot.com/entity/EXqnLTSovNzi-4KlIxjHhyA",
 				"targetDiffbotId": "EXqnLTSovNzi-4KlIxjHhyA",
 				"surfaceForm": "OSU",
-				"type": "Organization"
-			},
-			"degree": {
-				"types": [
-					"Intangible",
-					"DegreeEntity"
-				],
-				"name": "Bachelor's (4 year program)",
-				"diffbotUri": "http://diffbot.com/entity/EtWuqNi7UOGu2JRK_z95kDg",
-				"targetDiffbotUri": "http://diffbot.com/entity/EtWuqNi7UOGu2JRK_z95kDg",
-				"targetDiffbotId": "EtWuqNi7UOGu2JRK_z95kDg",
-				"surfaceForm": "Bachelor's (4 year program)",
-				"type": "DegreeEntity"
-			}
-		},
-		{
-			"institution": {
-				"summary": "Public research university in Atlanta, GA, USA",
-				"image": "https://kg.diffbot.com/image/api/get?fetch=yes&url=g%3Cj7P0St0DnBJf.x0KwLZrUn.%5B%3CR0Aa4Hh%3B%5Bv738ZqOr7U%3FgvFQ%3ElS%3B_j5%5Bz4n9mt7%5BEV%7CIw%3EM6%5CX%5E_xF.Ael",
-				"types": [
-					"Organization"
-				],
-				"name": "Georgia State University",
-				"diffbotUri": "http://diffbot.com/entity/ESnrKP-7KM9m8ePAWc_wCBA",
-				"nbIncomingEdges": 187771,
-				"targetDiffbotUri": "http://diffbot.com/entity/ESnrKP-7KM9m8ePAWc_wCBA",
-				"targetDiffbotId": "ESnrKP-7KM9m8ePAWc_wCBA",
-				"surfaceForm": "Georgia State University",
 				"type": "Organization"
 			},
 			"degree": {
@@ -443,7 +422,7 @@ Note that certain longer field examples may be truncated for readability.
 }
 ```
 ### emailAddresses
-  
+  A person&#39;s public email address.
 * **Type:** Contact
 * **Example:**
 ```
@@ -452,7 +431,7 @@ Note that certain longer field examples may be truncated for readability.
 }
 ```
 ### employments
-  
+  Employment history, including significant investments, board memberships.
 * **Type:** Employment
 * **Example:**
 ```
@@ -470,7 +449,7 @@ Note that certain longer field examples may be truncated for readability.
 				],
 				"name": "Shiloh Technologies",
 				"diffbotUri": "http://diffbot.com/entity/Ei8Q97YP0NwqKVjOVZgpv9w",
-				"nbIncomingEdges": 439,
+				"nbIncomingEdges": 442,
 				"targetDiffbotUri": "http://diffbot.com/entity/Ei8Q97YP0NwqKVjOVZgpv9w",
 				"targetDiffbotId": "Ei8Q97YP0NwqKVjOVZgpv9w",
 				"surfaceForm": "Shiloh Technologies",
@@ -531,7 +510,7 @@ Note that certain longer field examples may be truncated for readability.
 				],
 				"name": "Willkie Farr & Gallagher LLP",
 				"diffbotUri": "http://diffbot.com/entity/EGlj5rYx7N5GIWUR9qs9aEg",
-				"nbIncomingEdges": 4484,
+				"nbIncomingEdges": 4728,
 				"targetDiffbotUri": "http://diffbot.com/entity/EGlj5rYx7N5GIWUR9qs9aEg",
 				"targetDiffbotId": "EGlj5rYx7N5GIWUR9qs9aEg",
 				"surfaceForm": "Willkie Farr & Gallagher LLP",
@@ -563,33 +542,26 @@ Note that certain longer field examples may be truncated for readability.
 		{
 			"isCurrent": true,
 			"employer": {
-				"summary": "Corporation founded in 2004",
-				"image": "https://kg.diffbot.com/image/api/get?fetch=yes&url=g%3Cj7P0St%7D9u.LnOv%7BI%7C%40g7.pBYINs%3Ff%7CGZ7jr-tGZhWf%3DK%2FOvy%5Bp%3CSKbs8i%7CEyO2%40%3F0FW9LpRQJSk8%5E5Jh",
+				"summary": "Financial services company founded in 1999",
+				"image": "https://kg.diffbot.com/image/api/get?fetch=yes&url=g%3Cj7P0St%7D9u.LnOv%7BI%7C%40g7.pBYINs%3Ff%7CGZ7jr-tGZhWf%3DK%2FOvy%5Bp%3CSKbs8i%7CEyNzBa%3DXt%3Ek5KcBD0vSA%5EvRq%3D0%5DUd%60%402r%3Fm%3BQ9H%3DTmJF%5DG.zBX",
 				"types": [
 					"Organization",
 					"Corporation"
 				],
-				"name": "BRIGHTCOVE INC",
-				"diffbotUri": "http://diffbot.com/entity/ExQ62VDi-OvWQ3qO1NhflJA",
-				"nbIncomingEdges": 2175,
-				"targetDiffbotUri": "http://diffbot.com/entity/ExQ62VDi-OvWQ3qO1NhflJA",
-				"targetDiffbotId": "ExQ62VDi-OvWQ3qO1NhflJA",
-				"surfaceForm": "BRIGHTCOVE INC",
+				"name": "Core Capital Partners",
+				"diffbotUri": "http://diffbot.com/entity/ErLfevHY1MzaATmqeEbm4AQ",
+				"nbIncomingEdges": 62,
+				"targetDiffbotUri": "http://diffbot.com/entity/ErLfevHY1MzaATmqeEbm4AQ",
+				"targetDiffbotId": "ErLfevHY1MzaATmqeEbm4AQ",
+				"surfaceForm": "Core Capital Partners",
 				"type": "Corporation"
 			},
 			"from": {
-				"str": "d2018-04-XX",
+				"str": "d2005-01-XX",
 				"precision": 2,
-				"timestamp": 1522540800000
+				"timestamp": 1104537600000
 			},
 			"categories": [
-				{
-					"name": "Board Member",
-					"diffbotUri": "http://diffbot.com/entity/EnC5drWy1NVuOGQHd2ll0xw",
-					"targetDiffbotUri": "http://diffbot.com/entity/EnC5drWy1NVuOGQHd2ll0xw",
-					"targetDiffbotId": "EnC5drWy1NVuOGQHd2ll0xw",
-					"surfaceForm": "Board Member"
-				},
 				{
 					"name": "Management",
 					"diffbotUri": "http://diffbot.com/entity/EpXGc9jmNPQW3wt-ny5SqCQ",
@@ -603,15 +575,22 @@ Note that certain longer field examples may be truncated for readability.
 					"targetDiffbotUri": "http://diffbot.com/entity/EFHD6pfzYMtqdaaytNomkhA",
 					"targetDiffbotId": "EFHD6pfzYMtqdaaytNomkhA",
 					"surfaceForm": "Executive"
+				},
+				{
+					"name": "Director",
+					"diffbotUri": "http://diffbot.com/entity/Eg3ddwx52PdewyUAwLb_Mmw",
+					"targetDiffbotUri": "http://diffbot.com/entity/Eg3ddwx52PdewyUAwLb_Mmw",
+					"targetDiffbotId": "Eg3ddwx52PdewyUAwLb_Mmw",
+					"surfaceForm": "Director"
 				}
 			],
-			"title": "Board Member"
+			"title": "Managing Director"
 		}
 	]
 }
 ```
 ### eyeColor
-  
+  This person&#39;s eye color.
 * **Type:** EyeColor
 * **Example:**
 ```
@@ -620,8 +599,8 @@ Note that certain longer field examples may be truncated for readability.
 }
 ```
 ### facebookUri
-  
-* **Type:** DiffbotUrl
+  Link to the Facebook profile of the Person entity
+* **Type:** URL
 * **Example:**
 ```
 {
@@ -629,7 +608,7 @@ Note that certain longer field examples may be truncated for readability.
 }
 ```
 ### friends
-  
+  This person&#39;s friends.
 * **Type:** LinkedEntity
 * **Example:**
 ```
@@ -638,7 +617,7 @@ Note that certain longer field examples may be truncated for readability.
 }
 ```
 ### gender
-  
+  A person&#39;s gender.
 * **Type:** Gender
 * **Example:**
 ```
@@ -649,8 +628,8 @@ Note that certain longer field examples may be truncated for readability.
 }
 ```
 ### githubUri
-  
-* **Type:** DiffbotUrl
+  Link to the Github page of the Person entity
+* **Type:** URL
 * **Example:**
 ```
 {
@@ -658,8 +637,8 @@ Note that certain longer field examples may be truncated for readability.
 }
 ```
 ### googlePlusUri
-  
-* **Type:** DiffbotUrl
+  Link to the Google+ profile of the Person entity
+* **Type:** URL
 * **Example:**
 ```
 {
@@ -667,7 +646,7 @@ Note that certain longer field examples may be truncated for readability.
 }
 ```
 ### hairColor
-  
+  This person&#39;s hair color.
 * **Type:** HairColor
 * **Example:**
 ```
@@ -676,7 +655,7 @@ Note that certain longer field examples may be truncated for readability.
 }
 ```
 ### height
-  
+  This person&#39;s height in meters.
 * **Type:** Float
 * **Example:**
 ```
@@ -685,8 +664,8 @@ Note that certain longer field examples may be truncated for readability.
 }
 ```
 ### homepageUri
-  
-* **Type:** DiffbotUrl
+  Link to the homepage of the Person entity
+* **Type:** URL
 * **Example:**
 ```
 {
@@ -694,8 +673,8 @@ Note that certain longer field examples may be truncated for readability.
 }
 ```
 ### instagramUri
-  
-* **Type:** DiffbotUrl
+  Link to the Instagram profile of the Person entity
+* **Type:** URL
 * **Example:**
 ```
 {
@@ -703,28 +682,28 @@ Note that certain longer field examples may be truncated for readability.
 }
 ```
 ### interests
-  
+  Organizations, products and activities of interest.
 * **Type:** LinkedEntity
 * **Example:**
 ```
 {
 	"interests": [
 		{
-			"recordId": "EEIzhzuLVPeKuQ7KjPSa6aQ@378",
+			"recordId": "EEIzhzuLVPeKuQ7KjPSa6aQ@357",
 			"name": "investing",
 			"surfaceForm": "investing",
 			"position": "personInterest",
 			"type": "Miscellaneous"
 		},
 		{
-			"recordId": "EEIzhzuLVPeKuQ7KjPSa6aQ@379",
+			"recordId": "EEIzhzuLVPeKuQ7KjPSa6aQ@358",
 			"name": "planning",
 			"surfaceForm": "planning",
 			"position": "personInterest",
 			"type": "Miscellaneous"
 		},
 		{
-			"recordId": "EEIzhzuLVPeKuQ7KjPSa6aQ@380",
+			"recordId": "EEIzhzuLVPeKuQ7KjPSa6aQ@359",
 			"name": "lobbying",
 			"surfaceForm": "lobbying",
 			"position": "personInterest",
@@ -734,7 +713,7 @@ Note that certain longer field examples may be truncated for readability.
 }
 ```
 ### languages
-  
+  Languages spoken, written or signed by this person.
 * **Type:** Language
 * **Example:**
 ```
@@ -743,8 +722,8 @@ Note that certain longer field examples may be truncated for readability.
 }
 ```
 ### linkedInUri
-  
-* **Type:** DiffbotUrl
+  Link to the LinkedIn profile of the Person entity
+* **Type:** URL
 * **Example:**
 ```
 {
@@ -752,7 +731,7 @@ Note that certain longer field examples may be truncated for readability.
 }
 ```
 ### location
-  
+  The most representative location for the Person entity
 * **Type:** Location
 * **Example:**
 ```
@@ -767,7 +746,7 @@ Note that certain longer field examples may be truncated for readability.
 			],
 			"name": "United States of America",
 			"diffbotUri": "http://diffbot.com/entity/E01d4EK33MmCosgI2KXa4-A",
-			"nbIncomingEdges": 1026989768,
+			"nbIncomingEdges": 1033140662,
 			"targetDiffbotUri": "http://diffbot.com/entity/E01d4EK33MmCosgI2KXa4-A",
 			"targetDiffbotId": "E01d4EK33MmCosgI2KXa4-A",
 			"type": "AdministrativeArea"
@@ -783,7 +762,7 @@ Note that certain longer field examples may be truncated for readability.
 			],
 			"name": "Washington, D.C.",
 			"diffbotUri": "http://diffbot.com/entity/Ep2MLLdkjO_C-R6NA7cOlcQ",
-			"nbIncomingEdges": 12304996,
+			"nbIncomingEdges": 12400618,
 			"targetDiffbotUri": "http://diffbot.com/entity/Ep2MLLdkjO_C-R6NA7cOlcQ",
 			"targetDiffbotId": "Ep2MLLdkjO_C-R6NA7cOlcQ",
 			"type": "AdministrativeArea"
@@ -797,7 +776,7 @@ Note that certain longer field examples may be truncated for readability.
 			],
 			"name": "Washington, D.C.",
 			"diffbotUri": "http://diffbot.com/entity/Ep2MLLdkjO_C-R6NA7cOlcQ",
-			"nbIncomingEdges": 12304996,
+			"nbIncomingEdges": 12400618,
 			"targetDiffbotUri": "http://diffbot.com/entity/Ep2MLLdkjO_C-R6NA7cOlcQ",
 			"targetDiffbotId": "Ep2MLLdkjO_C-R6NA7cOlcQ",
 			"type": "AdministrativeArea"
@@ -815,7 +794,7 @@ Note that certain longer field examples may be truncated for readability.
 			],
 			"name": "Washington, D.C.",
 			"diffbotUri": "http://diffbot.com/entity/Ep2MLLdkjO_C-R6NA7cOlcQ",
-			"nbIncomingEdges": 12304996,
+			"nbIncomingEdges": 12400618,
 			"targetDiffbotUri": "http://diffbot.com/entity/Ep2MLLdkjO_C-R6NA7cOlcQ",
 			"targetDiffbotId": "Ep2MLLdkjO_C-R6NA7cOlcQ",
 			"type": "AdministrativeArea"
@@ -825,7 +804,7 @@ Note that certain longer field examples may be truncated for readability.
 }
 ```
 ### locations
-  
+  All places where a person has lived. The field &#39;isCurrent&#39; indicates the current location for this person.
 * **Type:** Location
 * **Example:**
 ```
@@ -841,7 +820,7 @@ Note that certain longer field examples may be truncated for readability.
 				],
 				"name": "United States of America",
 				"diffbotUri": "http://diffbot.com/entity/E01d4EK33MmCosgI2KXa4-A",
-				"nbIncomingEdges": 1026989768,
+				"nbIncomingEdges": 1033140662,
 				"targetDiffbotUri": "http://diffbot.com/entity/E01d4EK33MmCosgI2KXa4-A",
 				"targetDiffbotId": "E01d4EK33MmCosgI2KXa4-A",
 				"type": "AdministrativeArea"
@@ -857,7 +836,7 @@ Note that certain longer field examples may be truncated for readability.
 				],
 				"name": "Washington, D.C.",
 				"diffbotUri": "http://diffbot.com/entity/Ep2MLLdkjO_C-R6NA7cOlcQ",
-				"nbIncomingEdges": 12304996,
+				"nbIncomingEdges": 12400618,
 				"targetDiffbotUri": "http://diffbot.com/entity/Ep2MLLdkjO_C-R6NA7cOlcQ",
 				"targetDiffbotId": "Ep2MLLdkjO_C-R6NA7cOlcQ",
 				"type": "AdministrativeArea"
@@ -871,7 +850,7 @@ Note that certain longer field examples may be truncated for readability.
 				],
 				"name": "Washington, D.C.",
 				"diffbotUri": "http://diffbot.com/entity/Ep2MLLdkjO_C-R6NA7cOlcQ",
-				"nbIncomingEdges": 12304996,
+				"nbIncomingEdges": 12400618,
 				"targetDiffbotUri": "http://diffbot.com/entity/Ep2MLLdkjO_C-R6NA7cOlcQ",
 				"targetDiffbotId": "Ep2MLLdkjO_C-R6NA7cOlcQ",
 				"type": "AdministrativeArea"
@@ -889,7 +868,7 @@ Note that certain longer field examples may be truncated for readability.
 				],
 				"name": "Washington, D.C.",
 				"diffbotUri": "http://diffbot.com/entity/Ep2MLLdkjO_C-R6NA7cOlcQ",
-				"nbIncomingEdges": 12304996,
+				"nbIncomingEdges": 12400618,
 				"targetDiffbotUri": "http://diffbot.com/entity/Ep2MLLdkjO_C-R6NA7cOlcQ",
 				"targetDiffbotId": "Ep2MLLdkjO_C-R6NA7cOlcQ",
 				"type": "AdministrativeArea"
@@ -906,7 +885,7 @@ Note that certain longer field examples may be truncated for readability.
 				],
 				"name": "United States of America",
 				"diffbotUri": "http://diffbot.com/entity/E01d4EK33MmCosgI2KXa4-A",
-				"nbIncomingEdges": 1026989768,
+				"nbIncomingEdges": 1033140662,
 				"targetDiffbotUri": "http://diffbot.com/entity/E01d4EK33MmCosgI2KXa4-A",
 				"targetDiffbotId": "E01d4EK33MmCosgI2KXa4-A",
 				"type": "AdministrativeArea"
@@ -922,7 +901,7 @@ Note that certain longer field examples may be truncated for readability.
 				],
 				"name": "Redlands",
 				"diffbotUri": "http://diffbot.com/entity/EEGqoBftsOZyh3_RKbQE3mw",
-				"nbIncomingEdges": 222124,
+				"nbIncomingEdges": 222804,
 				"targetDiffbotUri": "http://diffbot.com/entity/EEGqoBftsOZyh3_RKbQE3mw",
 				"targetDiffbotId": "EEGqoBftsOZyh3_RKbQE3mw",
 				"type": "AdministrativeArea"
@@ -936,7 +915,7 @@ Note that certain longer field examples may be truncated for readability.
 				],
 				"name": "San Bernardino County",
 				"diffbotUri": "http://diffbot.com/entity/EApueG2dHP3iRBLbjF2w2gQ",
-				"nbIncomingEdges": 5260421,
+				"nbIncomingEdges": 5273811,
 				"targetDiffbotUri": "http://diffbot.com/entity/EApueG2dHP3iRBLbjF2w2gQ",
 				"targetDiffbotId": "EApueG2dHP3iRBLbjF2w2gQ",
 				"type": "AdministrativeArea"
@@ -954,7 +933,7 @@ Note that certain longer field examples may be truncated for readability.
 				],
 				"name": "California",
 				"diffbotUri": "http://diffbot.com/entity/El0_8ehooNxOPT36Y4RdV9w",
-				"nbIncomingEdges": 112823978,
+				"nbIncomingEdges": 113588248,
 				"targetDiffbotUri": "http://diffbot.com/entity/El0_8ehooNxOPT36Y4RdV9w",
 				"targetDiffbotId": "El0_8ehooNxOPT36Y4RdV9w",
 				"type": "AdministrativeArea"
@@ -971,66 +950,51 @@ Note that certain longer field examples may be truncated for readability.
 				],
 				"name": "United States of America",
 				"diffbotUri": "http://diffbot.com/entity/E01d4EK33MmCosgI2KXa4-A",
-				"nbIncomingEdges": 1026989768,
+				"nbIncomingEdges": 1033140662,
 				"targetDiffbotUri": "http://diffbot.com/entity/E01d4EK33MmCosgI2KXa4-A",
 				"targetDiffbotId": "E01d4EK33MmCosgI2KXa4-A",
 				"type": "AdministrativeArea"
 			},
 			"isCurrent": false,
-			"address": "Cambridge, Massachusetts",
-			"city": {
-				"summary": "City in Middlesex County, Massachusetts, United States",
-				"image": "https://kg.diffbot.com/image/api/get?fetch=yes&url=g%3Cj7P0St0DnBJf.x0KwLZrUn.%5B%3CR0Aa4Hh%3B%5Bv738ZqOr7U%3Fav%40s%3EhO9Ou5%5E2FYEZn%40o%3EUrMl3X.Sgy",
-				"types": [
-					"Place",
-					"AdministrativeArea"
-				],
-				"name": "Cambridge",
-				"diffbotUri": "http://diffbot.com/entity/EKtEQ-seQOfuiSDMTnvM9tA",
-				"nbIncomingEdges": 660315,
-				"targetDiffbotUri": "http://diffbot.com/entity/EKtEQ-seQOfuiSDMTnvM9tA",
-				"targetDiffbotId": "EKtEQ-seQOfuiSDMTnvM9tA",
-				"type": "AdministrativeArea"
-			},
+			"address": "Washington D.C. Metro Area",
 			"subregion": {
-				"summary": "County in Massachusetts, United States",
-				"image": "https://kg.diffbot.com/image/api/get?fetch=yes&url=g%3Cj7P0St0DnBJf.x0KwLZrUn.%5B%3CR0Aa4Hh%3B%5Bv738ZqOr7U%3FcvBQ%3ErO%3CLr2YhBmKZr%40%7BJRzXxzL%7BJa%7EYx%3Fd7%5Dl%7DI6G%60F%604%3F082w%5BuA_.Xq%7B",
+				"summary": "Capital city of the United States",
+				"image": "https://kg.diffbot.com/image/api/get?fetch=yes&url=g%3Cj7P0St0DnBJf.x0KwLZrUn.%5B%3CR0Aa4Hh%3B%5Bv738ZqOr7U%3FbvAT%3ExS%7DYb%3B%60zUb%3DXSAyK_oGyzSxB%3C1%5C6DR7P.Ar4",
 				"types": [
 					"Place",
 					"AdministrativeArea"
 				],
-				"name": "Middlesex County",
-				"diffbotUri": "http://diffbot.com/entity/EfTXOkq9_P2GytZP4wTfK1g",
-				"nbIncomingEdges": 4946903,
-				"targetDiffbotUri": "http://diffbot.com/entity/EfTXOkq9_P2GytZP4wTfK1g",
-				"targetDiffbotId": "EfTXOkq9_P2GytZP4wTfK1g",
+				"name": "Washington, D.C.",
+				"diffbotUri": "http://diffbot.com/entity/Ep2MLLdkjO_C-R6NA7cOlcQ",
+				"nbIncomingEdges": 12400618,
+				"targetDiffbotUri": "http://diffbot.com/entity/Ep2MLLdkjO_C-R6NA7cOlcQ",
+				"targetDiffbotId": "Ep2MLLdkjO_C-R6NA7cOlcQ",
 				"type": "AdministrativeArea"
 			},
-			"latitude": 42.3803596496582,
-			"precision": 4.150404930114746,
-			"postalCode": "02138",
-			"surfaceForm": "Cambridge, MA",
+			"latitude": 38.82651901245117,
+			"precision": 75,
+			"surfaceForm": "Washington D.C. Metro Area",
 			"region": {
-				"summary": "State of the United States of America",
-				"image": "https://kg.diffbot.com/image/api/get?fetch=yes&url=g%3Cj7P0St0DnBJf.x0KwLZrUn.%5B%3CR0Aa4Hh%3B%5Bv738ZqOr7U%3FivHp%3ExS%7DYb%3B%60z%7E%5BKlp%3BnL%60kXy%3E.5Y%60",
+				"summary": "Capital city of the United States",
+				"image": "https://kg.diffbot.com/image/api/get?fetch=yes&url=g%3Cj7P0St0DnBJf.x0KwLZrUn.%5B%3CR0Aa4Hh%3B%5Bv738ZqOr7U%3FbvAT%3ExS%7DYb%3B%60zUb%3DXSAyK_oGyzSxB%3C1%5C6DR7P.Ar4",
 				"types": [
 					"Place",
 					"AdministrativeArea"
 				],
-				"name": "Massachusetts",
-				"diffbotUri": "http://diffbot.com/entity/E0VAbhEeRNsSvhHIpmhd3Xw",
-				"nbIncomingEdges": 20808864,
-				"targetDiffbotUri": "http://diffbot.com/entity/E0VAbhEeRNsSvhHIpmhd3Xw",
-				"targetDiffbotId": "E0VAbhEeRNsSvhHIpmhd3Xw",
+				"name": "Washington, D.C.",
+				"diffbotUri": "http://diffbot.com/entity/Ep2MLLdkjO_C-R6NA7cOlcQ",
+				"nbIncomingEdges": 12400618,
+				"targetDiffbotUri": "http://diffbot.com/entity/Ep2MLLdkjO_C-R6NA7cOlcQ",
+				"targetDiffbotId": "Ep2MLLdkjO_C-R6NA7cOlcQ",
 				"type": "AdministrativeArea"
 			},
-			"longitude": -71.1159896850586
+			"longitude": -77.01712036132812
 		}
 	]
 }
 ```
 ### nameDetail
-  
+  Parts of the name (e.g., first name, last name, middle name).
 * **Type:** NameDetail
 * **Example:**
 ```
@@ -1045,14 +1009,14 @@ Note that certain longer field examples may be truncated for readability.
 }
 ```
 ### nationalities
-  
+  The countries where this person is a national or a citizen.
 * **Type:** LinkedEntity
 * **Example:**
 ```
 {
 	"nationalities": [
 		{
-			"recordId": "EEIzhzuLVPeKuQ7KjPSa6aQ@385",
+			"recordId": "EEIzhzuLVPeKuQ7KjPSa6aQ@364",
 			"name": "United States of America",
 			"websiteUris": [
 				"wikidata.org/entity/Q30"
@@ -1064,7 +1028,7 @@ Note that certain longer field examples may be truncated for readability.
 }
 ```
 ### netWorth
-  
+  A person&#39;s estimated net worth (the value the assets minus liabilities).
 * **Type:** Amount
 * **Example:**
 ```
@@ -1073,7 +1037,7 @@ Note that certain longer field examples may be truncated for readability.
 }
 ```
 ### parents
-  
+  This person&#39;s parents.
 * **Type:** LinkedEntity
 * **Example:**
 ```
@@ -1082,7 +1046,7 @@ Note that certain longer field examples may be truncated for readability.
 }
 ```
 ### phoneNumbers
-  
+  A person&#39;s phone numbers.
 * **Type:** PhoneNumber
 * **Example:**
 ```
@@ -1091,14 +1055,14 @@ Note that certain longer field examples may be truncated for readability.
 }
 ```
 ### politicalAffiliation
-  
+  Political party to which this person is affiliated.
 * **Type:** LinkedEntity
 * **Example:**
 ```
 {
 	"politicalAffiliation": [
 		{
-			"recordId": "EEIzhzuLVPeKuQ7KjPSa6aQ@386",
+			"recordId": "EEIzhzuLVPeKuQ7KjPSa6aQ@365",
 			"name": "Democratic Party",
 			"websiteUris": [
 				"wikidata.org/entity/Q29552"
@@ -1111,7 +1075,7 @@ Note that certain longer field examples may be truncated for readability.
 }
 ```
 ### posts
-  
+  Posts written by this person.
 * **Type:** LinkedEntity
 * **Example:**
 ```
@@ -1120,7 +1084,7 @@ Note that certain longer field examples may be truncated for readability.
 }
 ```
 ### religion
-  
+  This person&#39;s religion.
 * **Type:** Religion
 * **Example:**
 ```
@@ -1129,7 +1093,7 @@ Note that certain longer field examples may be truncated for readability.
 }
 ```
 ### siblings
-  
+  This person&#39;s siblings.
 * **Type:** LinkedEntity
 * **Example:**
 ```
@@ -1138,7 +1102,7 @@ Note that certain longer field examples may be truncated for readability.
 }
 ```
 ### skills
-  
+  Professional skills.
 * **Type:** LinkedEntity
 * **Example:**
 ```
@@ -1169,8 +1133,8 @@ Note that certain longer field examples may be truncated for readability.
 }
 ```
 ### twitterUri
-  
-* **Type:** DiffbotUrl
+  Link to the Twitter profile of the Person entity
+* **Type:** URL
 * **Example:**
 ```
 {
@@ -1178,7 +1142,7 @@ Note that certain longer field examples may be truncated for readability.
 }
 ```
 ### unions
-  
+  This person&#39;s unions, including marriages and civil unions.
 * **Type:** Union
 * **Example:**
 ```
@@ -1187,7 +1151,7 @@ Note that certain longer field examples may be truncated for readability.
 }
 ```
 ### weight
-  
+  This person&#39;s weight in kilograms.
 * **Type:** Float
 * **Example:**
 ```
@@ -1196,8 +1160,8 @@ Note that certain longer field examples may be truncated for readability.
 }
 ```
 ### wikipediaUri
-  
-* **Type:** DiffbotUrl
+  Link to the Wikipedia page of the Person entity
+* **Type:** URL
 * **Example:**
 ```
 {
@@ -1205,8 +1169,8 @@ Note that certain longer field examples may be truncated for readability.
 }
 ```
 ### youtubeUri
-  
-* **Type:** DiffbotUrl
+  Link to the Youtube page of the Person entity
+* **Type:** URL
 * **Example:**
 ```
 {

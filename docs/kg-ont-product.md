@@ -48,7 +48,7 @@ Note that certain longer field examples may be truncated for readability.
 }
 ```
 ### brand
-  
+  Item&#39;s brand name
 * **Type:** String
 * **Example:**
 ```
@@ -257,7 +257,7 @@ Note that certain longer field examples may be truncated for readability.
 }
 ```
 ### language
-  
+  Refers to the language in which the Product page is written
 * **Type:** String
 * **Example:**
 ```
@@ -404,7 +404,7 @@ Note that certain longer field examples may be truncated for readability.
 }
 ```
 ### title
-  
+  Title of the Product
 * **Type:** String
 * **Example:**
 ```

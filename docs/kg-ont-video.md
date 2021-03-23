@@ -104,7 +104,7 @@ Note that certain longer field examples may be truncated for readability.
 }
 ```
 ### mime
-  
+  Indicates the nature and format of a document; MIME type, if available, as specified by the Video&#39;s &#x60;Content-Type.&#x60;
 * **Type:** String
 * **Example:**
 ```
@@ -140,7 +140,7 @@ Note that certain longer field examples may be truncated for readability.
 }
 ```
 ### title
-  
+  Title of the Video
 * **Type:** String
 * **Example:**
 ```
@@ -149,7 +149,7 @@ Note that certain longer field examples may be truncated for readability.
 }
 ```
 ### url
-  
+  URL of the video
 * **Type:** String
 * **Example:**
 ```

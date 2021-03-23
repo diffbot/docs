@@ -150,7 +150,7 @@ Note that certain longer field examples may be truncated for readability.
 }
 ```
 ### countryOfOrigin
-  
+  This indicates where the work is created. Usually where the production companies or original publisher are from.
 * **Type:** String
 * **Example:**
 ```
@@ -175,7 +175,7 @@ Note that certain longer field examples may be truncated for readability.
 {
 	"creators": [
 		{
-			"recordId": "ETeVENUXKM5yT9kLY27xFHA@674",
+			"recordId": "ETeVENUXKM5yT9kLY27xFHA@664",
 			"name": "Susan Lacy",
 			"websiteUris": [
 				"imdb.com/name/nm0480402"
@@ -206,7 +206,7 @@ Note that certain longer field examples may be truncated for readability.
 }
 ```
 ### genres
-  
+  Genres of the work. It can be multiple genres.
 * **Type:** String
 * **Example:**
 ```
@@ -234,7 +234,7 @@ Note that certain longer field examples may be truncated for readability.
 ```
 ### imdbUri
   
-* **Type:** DiffbotUrl
+* **Type:** URL
 * **Example:**
 ```
 {
@@ -242,7 +242,7 @@ Note that certain longer field examples may be truncated for readability.
 }
 ```
 ### languages
-  
+  This is the language in which the work is originally created.
 * **Type:** String
 * **Example:**
 ```
@@ -306,7 +306,7 @@ Note that certain longer field examples may be truncated for readability.
 ```
 ### officialSites
   
-* **Type:** DiffbotUrl
+* **Type:** URL
 * **Example:**
 ```
 {
@@ -342,7 +342,7 @@ Note that certain longer field examples may be truncated for readability.
 ```
 ### posterImgLink
   
-* **Type:** DiffbotUrl
+* **Type:** URL
 * **Example:**
 ```
 {
@@ -396,7 +396,7 @@ Note that certain longer field examples may be truncated for readability.
 ```
 ### videoMainLink
   
-* **Type:** DiffbotUrl
+* **Type:** URL
 * **Example:**
 ```
 {

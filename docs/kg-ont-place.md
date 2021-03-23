@@ -33,7 +33,7 @@ Note that certain longer field examples may be truncated for readability.
 			],
 			"name": "United States of America",
 			"diffbotUri": "http://diffbot.com/entity/E01d4EK33MmCosgI2KXa4-A",
-			"nbIncomingEdges": 1026989768,
+			"nbIncomingEdges": 1033140662,
 			"targetDiffbotUri": "http://diffbot.com/entity/E01d4EK33MmCosgI2KXa4-A",
 			"targetDiffbotId": "E01d4EK33MmCosgI2KXa4-A",
 			"type": "AdministrativeArea"
@@ -57,7 +57,7 @@ Note that certain longer field examples may be truncated for readability.
 			],
 			"name": "United States of America",
 			"diffbotUri": "http://diffbot.com/entity/E01d4EK33MmCosgI2KXa4-A",
-			"nbIncomingEdges": 1026989768,
+			"nbIncomingEdges": 1033140662,
 			"targetDiffbotUri": "http://diffbot.com/entity/E01d4EK33MmCosgI2KXa4-A",
 			"targetDiffbotId": "E01d4EK33MmCosgI2KXa4-A",
 			"type": "AdministrativeArea"
@@ -71,7 +71,7 @@ Note that certain longer field examples may be truncated for readability.
 }
 ```
 ### placeType
-  
+  Place category for a location; ex. Park, City, etc.
 * **Type:** PlaceType
 * **Example:**
 ```

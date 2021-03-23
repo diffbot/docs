@@ -26,7 +26,7 @@ Note that fields are not guaranteed to exist in every entity record.
 Note that certain longer field examples may be truncated for readability.
 
 ### language
-  
+  Refers to the language which a Discussion is written
 * **Type:** String
 * **Example:**
 ```
@@ -35,7 +35,7 @@ Note that certain longer field examples may be truncated for readability.
 }
 ```
 ### nextPage
-  
+  If discussion spans multiple pages, nextPage will return the subsequent page URL
 * **Type:** String
 * **Example:**
 ```
@@ -44,7 +44,7 @@ Note that certain longer field examples may be truncated for readability.
 }
 ```
 ### nextPages
-  
+  Array of all page URLs concatenated in a multipage discussion
 * **Type:** String
 * **Example:**
 ```
@@ -62,7 +62,7 @@ Note that certain longer field examples may be truncated for readability.
 }
 ```
 ### numParticipants
-  
+  Number of unique participants in the discussion thread or comments
 * **Type:** Integer
 * **Example:**
 ```
@@ -107,7 +107,7 @@ Note that certain longer field examples may be truncated for readability.
 }
 ```
 ### tags
-  
+  Array of tags&#x2F;entities, generated from analysis of the extracted text and cross-referenced with DBpedia and other data sources. Language-specific tags will be returned if the source text is in English, Chinese, French, German, Spanish or Russian.
 * **Type:** GlobalIndexTag
 * **Example:**
 ```
@@ -116,7 +116,7 @@ Note that certain longer field examples may be truncated for readability.
 }
 ```
 ### title
-  
+  Title of the Article
 * **Type:** String
 * **Example:**
 ```
