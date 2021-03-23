@@ -17,7 +17,7 @@ Note that certain longer field examples may be truncated for readability.
 
 {{ #fields }}
 ### {{ name }}
-{{ #isDeprecated }}**`Deprecated`**{{ /isDeprecated }}  {{ desc }}
+{{ #isDeprecated }}**`Deprecated`**{{ /isDeprecated }}  {{ description }}
 * **Type:** {{ type }}
 * **Example:**
 ```

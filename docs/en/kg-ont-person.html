@@ -111,6 +111,7 @@
 <h2><a class="anchor" aria-hidden="true" id="person-field-details"></a><a href="#person-field-details" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Person Field Details</h2>
 <p>Note that certain longer field examples may be truncated for readability.</p>
 <h3><a class="anchor" aria-hidden="true" id="age"></a><a href="#age" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>age</h3>
+<p>A person's age.</p>
 <ul>
 <li><strong>Type:</strong> Integer</li>
 <li><strong>Example:</strong></li>
@@ -120,8 +121,9 @@
 }
 </code></pre>
 <h3><a class="anchor" aria-hidden="true" id="angellisturi"></a><a href="#angellisturi" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>angellistUri</h3>
+<p>Link to the Angel List profile of the Person entity</p>
 <ul>
-<li><strong>Type:</strong> DiffbotUrl</li>
+<li><strong>Type:</strong> URL</li>
 <li><strong>Example:</strong></li>
 </ul>
 <pre><code class="hljs">{
@@ -129,6 +131,7 @@
 }
 </code></pre>
 <h3><a class="anchor" aria-hidden="true" id="articles"></a><a href="#articles" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>articles</h3>
+<p>Articles written by this person.</p>
 <ul>
 <li><strong>Type:</strong> LinkedEntity</li>
 <li><strong>Example:</strong></li>
@@ -136,7 +139,7 @@
 <pre><code class="hljs">{
     <span class="hljs-attr">"articles"</span>: [
         {
-            <span class="hljs-attr">"recordId"</span>: <span class="hljs-string">"EEIzhzuLVPeKuQ7KjPSa6aQ@338"</span>,
+            <span class="hljs-attr">"recordId"</span>: <span class="hljs-string">"EEIzhzuLVPeKuQ7KjPSa6aQ@315"</span>,
             <span class="hljs-attr">"name"</span>: <span class="hljs-string">"Mr. Lincoln's T-Mails: The Untold Story of How Abraham Lincoln Used the Telegraph to Win the Civil War // HarperCollins"</span>,
             <span class="hljs-attr">"websiteUris"</span>: [
                 <span class="hljs-string">"mrlincolnstmails.com"</span>
@@ -146,7 +149,7 @@
             <span class="hljs-attr">"type"</span>: <span class="hljs-string">"Article"</span>
         },
         {
-            <span class="hljs-attr">"recordId"</span>: <span class="hljs-string">"EEIzhzuLVPeKuQ7KjPSa6aQ@339"</span>,
+            <span class="hljs-attr">"recordId"</span>: <span class="hljs-string">"EEIzhzuLVPeKuQ7KjPSa6aQ@316"</span>,
             <span class="hljs-attr">"name"</span>: <span class="hljs-string">"Leadership Lessons from the Civil War // Doubleday"</span>,
             <span class="hljs-attr">"websiteUris"</span>: [
                 <span class="hljs-string">"civilwarleadership.com"</span>
@@ -154,11 +157,19 @@
             <span class="hljs-attr">"surfaceForm"</span>: <span class="hljs-string">"Leadership Lessons from the Civil War // Doubleday"</span>,
             <span class="hljs-attr">"position"</span>: <span class="hljs-string">"personArticles"</span>,
             <span class="hljs-attr">"type"</span>: <span class="hljs-string">"Article"</span>
+        },
+        {
+            <span class="hljs-attr">"recordId"</span>: <span class="hljs-string">"EEIzhzuLVPeKuQ7KjPSa6aQ@318"</span>,
+            <span class="hljs-attr">"name"</span>: <span class="hljs-string">"Take Command: Leadership Lessons from the Civil War // Doubleday - 2000"</span>,
+            <span class="hljs-attr">"surfaceForm"</span>: <span class="hljs-string">"Take Command: Leadership Lessons from the Civil War // Doubleday - 2000"</span>,
+            <span class="hljs-attr">"position"</span>: <span class="hljs-string">"personArticles"</span>,
+            <span class="hljs-attr">"type"</span>: <span class="hljs-string">"Article"</span>
         }
     ]
 }
 </code></pre>
 <h3><a class="anchor" aria-hidden="true" id="awards"></a><a href="#awards" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>awards</h3>
+<p>Awards received.</p>
 <ul>
 <li><strong>Type:</strong> Award</li>
 <li><strong>Example:</strong></li>
@@ -168,6 +179,7 @@
 }
 </code></pre>
 <h3><a class="anchor" aria-hidden="true" id="birthdate"></a><a href="#birthdate" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>birthDate</h3>
+<p>A person's date of birth.</p>
 <ul>
 <li><strong>Type:</strong> DDate</li>
 <li><strong>Example:</strong></li>
@@ -181,6 +193,7 @@
 }
 </code></pre>
 <h3><a class="anchor" aria-hidden="true" id="birthplace"></a><a href="#birthplace" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>birthPlace</h3>
+<p>A person's place of birth.</p>
 <ul>
 <li><strong>Type:</strong> Location</li>
 <li><strong>Example:</strong></li>
@@ -196,7 +209,7 @@
             ],
             <span class="hljs-string">"name"</span>: <span class="hljs-string">"United States of America"</span>,
             <span class="hljs-string">"diffbotUri"</span>: <span class="hljs-string">"http://diffbot.com/entity/E01d4EK33MmCosgI2KXa4-A"</span>,
-            <span class="hljs-string">"nbIncomingEdges"</span>: <span class="hljs-number">1026989768</span>,
+            <span class="hljs-string">"nbIncomingEdges"</span>: <span class="hljs-number">1033140662</span>,
             <span class="hljs-string">"targetDiffbotUri"</span>: <span class="hljs-string">"http://diffbot.com/entity/E01d4EK33MmCosgI2KXa4-A"</span>,
             <span class="hljs-string">"targetDiffbotId"</span>: <span class="hljs-string">"E01d4EK33MmCosgI2KXa4-A"</span>,
             <span class="hljs-string">"type"</span>: <span class="hljs-string">"AdministrativeArea"</span>
@@ -212,7 +225,7 @@
             ],
             <span class="hljs-string">"name"</span>: <span class="hljs-string">"Redlands"</span>,
             <span class="hljs-string">"diffbotUri"</span>: <span class="hljs-string">"http://diffbot.com/entity/EEGqoBftsOZyh3_RKbQE3mw"</span>,
-            <span class="hljs-string">"nbIncomingEdges"</span>: <span class="hljs-number">222124</span>,
+            <span class="hljs-string">"nbIncomingEdges"</span>: <span class="hljs-number">222804</span>,
             <span class="hljs-string">"targetDiffbotUri"</span>: <span class="hljs-string">"http://diffbot.com/entity/EEGqoBftsOZyh3_RKbQE3mw"</span>,
             <span class="hljs-string">"targetDiffbotId"</span>: <span class="hljs-string">"EEGqoBftsOZyh3_RKbQE3mw"</span>,
             <span class="hljs-string">"type"</span>: <span class="hljs-string">"AdministrativeArea"</span>
@@ -226,7 +239,7 @@
             ],
             <span class="hljs-string">"name"</span>: <span class="hljs-string">"San Bernardino County"</span>,
             <span class="hljs-string">"diffbotUri"</span>: <span class="hljs-string">"http://diffbot.com/entity/EApueG2dHP3iRBLbjF2w2gQ"</span>,
-            <span class="hljs-string">"nbIncomingEdges"</span>: <span class="hljs-number">5260421</span>,
+            <span class="hljs-string">"nbIncomingEdges"</span>: <span class="hljs-number">5273811</span>,
             <span class="hljs-string">"targetDiffbotUri"</span>: <span class="hljs-string">"http://diffbot.com/entity/EApueG2dHP3iRBLbjF2w2gQ"</span>,
             <span class="hljs-string">"targetDiffbotId"</span>: <span class="hljs-string">"EApueG2dHP3iRBLbjF2w2gQ"</span>,
             <span class="hljs-string">"type"</span>: <span class="hljs-string">"AdministrativeArea"</span>
@@ -244,7 +257,7 @@
             ],
             <span class="hljs-string">"name"</span>: <span class="hljs-string">"California"</span>,
             <span class="hljs-string">"diffbotUri"</span>: <span class="hljs-string">"http://diffbot.com/entity/El0_8ehooNxOPT36Y4RdV9w"</span>,
-            <span class="hljs-string">"nbIncomingEdges"</span>: <span class="hljs-number">112823978</span>,
+            <span class="hljs-string">"nbIncomingEdges"</span>: <span class="hljs-number">113588248</span>,
             <span class="hljs-string">"targetDiffbotUri"</span>: <span class="hljs-string">"http://diffbot.com/entity/El0_8ehooNxOPT36Y4RdV9w"</span>,
             <span class="hljs-string">"targetDiffbotId"</span>: <span class="hljs-string">"El0_8ehooNxOPT36Y4RdV9w"</span>,
             <span class="hljs-string">"type"</span>: <span class="hljs-string">"AdministrativeArea"</span>
@@ -254,8 +267,9 @@
 }
 </code></pre>
 <h3><a class="anchor" aria-hidden="true" id="bloguri"></a><a href="#bloguri" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>blogUri</h3>
+<p>This is a link to Person entity's written journal</p>
 <ul>
-<li><strong>Type:</strong> DiffbotUrl</li>
+<li><strong>Type:</strong> URL</li>
 <li><strong>Example:</strong></li>
 </ul>
 <pre><code class="hljs">{
@@ -263,6 +277,7 @@
 }
 </code></pre>
 <h3><a class="anchor" aria-hidden="true" id="children"></a><a href="#children" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>children</h3>
+<p>This person's children.</p>
 <ul>
 <li><strong>Type:</strong> LinkedEntity</li>
 <li><strong>Example:</strong></li>
@@ -272,6 +287,7 @@
 }
 </code></pre>
 <h3><a class="anchor" aria-hidden="true" id="colleagues"></a><a href="#colleagues" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>colleagues</h3>
+<p>People with whom this person has a work or academic relationship.</p>
 <ul>
 <li><strong>Type:</strong> Colleague</li>
 <li><strong>Example:</strong></li>
@@ -281,6 +297,7 @@
 }
 </code></pre>
 <h3><a class="anchor" aria-hidden="true" id="connectedindustries"></a><a href="#connectedindustries" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>connectedIndustries</h3>
+<p>Industries of current and former employers.</p>
 <ul>
 <li><strong>Type:</strong> Industry</li>
 <li><strong>Example:</strong></li>
@@ -290,8 +307,9 @@
 }
 </code></pre>
 <h3><a class="anchor" aria-hidden="true" id="crunchbaseuri"></a><a href="#crunchbaseuri" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>crunchbaseUri</h3>
+<p>Link to the Crunchbase profile of the Person entity</p>
 <ul>
-<li><strong>Type:</strong> DiffbotUrl</li>
+<li><strong>Type:</strong> URL</li>
 <li><strong>Example:</strong></li>
 </ul>
 <pre><code class="hljs">{
@@ -299,6 +317,7 @@
 }
 </code></pre>
 <h3><a class="anchor" aria-hidden="true" id="deathdate"></a><a href="#deathdate" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>deathDate</h3>
+<p>A person's date of death.</p>
 <ul>
 <li><strong>Type:</strong> DDate</li>
 <li><strong>Example:</strong></li>
@@ -308,6 +327,7 @@
 }
 </code></pre>
 <h3><a class="anchor" aria-hidden="true" id="deathplace"></a><a href="#deathplace" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>deathPlace</h3>
+<p>A person's place of death.</p>
 <ul>
 <li><strong>Type:</strong> Location</li>
 <li><strong>Example:</strong></li>
@@ -323,7 +343,7 @@
             ],
             <span class="hljs-string">"name"</span>: <span class="hljs-string">"United States of America"</span>,
             <span class="hljs-string">"diffbotUri"</span>: <span class="hljs-string">"http://diffbot.com/entity/E01d4EK33MmCosgI2KXa4-A"</span>,
-            <span class="hljs-string">"nbIncomingEdges"</span>: <span class="hljs-number">1026989768</span>,
+            <span class="hljs-string">"nbIncomingEdges"</span>: <span class="hljs-number">1033140662</span>,
             <span class="hljs-string">"targetDiffbotUri"</span>: <span class="hljs-string">"http://diffbot.com/entity/E01d4EK33MmCosgI2KXa4-A"</span>,
             <span class="hljs-string">"targetDiffbotId"</span>: <span class="hljs-string">"E01d4EK33MmCosgI2KXa4-A"</span>,
             <span class="hljs-string">"type"</span>: <span class="hljs-string">"AdministrativeArea"</span>
@@ -339,7 +359,7 @@
             ],
             <span class="hljs-string">"name"</span>: <span class="hljs-string">"Redlands"</span>,
             <span class="hljs-string">"diffbotUri"</span>: <span class="hljs-string">"http://diffbot.com/entity/EEGqoBftsOZyh3_RKbQE3mw"</span>,
-            <span class="hljs-string">"nbIncomingEdges"</span>: <span class="hljs-number">222124</span>,
+            <span class="hljs-string">"nbIncomingEdges"</span>: <span class="hljs-number">222804</span>,
             <span class="hljs-string">"targetDiffbotUri"</span>: <span class="hljs-string">"http://diffbot.com/entity/EEGqoBftsOZyh3_RKbQE3mw"</span>,
             <span class="hljs-string">"targetDiffbotId"</span>: <span class="hljs-string">"EEGqoBftsOZyh3_RKbQE3mw"</span>,
             <span class="hljs-string">"type"</span>: <span class="hljs-string">"AdministrativeArea"</span>
@@ -353,7 +373,7 @@
             ],
             <span class="hljs-string">"name"</span>: <span class="hljs-string">"San Bernardino County"</span>,
             <span class="hljs-string">"diffbotUri"</span>: <span class="hljs-string">"http://diffbot.com/entity/EApueG2dHP3iRBLbjF2w2gQ"</span>,
-            <span class="hljs-string">"nbIncomingEdges"</span>: <span class="hljs-number">5260421</span>,
+            <span class="hljs-string">"nbIncomingEdges"</span>: <span class="hljs-number">5273811</span>,
             <span class="hljs-string">"targetDiffbotUri"</span>: <span class="hljs-string">"http://diffbot.com/entity/EApueG2dHP3iRBLbjF2w2gQ"</span>,
             <span class="hljs-string">"targetDiffbotId"</span>: <span class="hljs-string">"EApueG2dHP3iRBLbjF2w2gQ"</span>,
             <span class="hljs-string">"type"</span>: <span class="hljs-string">"AdministrativeArea"</span>
@@ -371,7 +391,7 @@
             ],
             <span class="hljs-string">"name"</span>: <span class="hljs-string">"California"</span>,
             <span class="hljs-string">"diffbotUri"</span>: <span class="hljs-string">"http://diffbot.com/entity/El0_8ehooNxOPT36Y4RdV9w"</span>,
-            <span class="hljs-string">"nbIncomingEdges"</span>: <span class="hljs-number">112823978</span>,
+            <span class="hljs-string">"nbIncomingEdges"</span>: <span class="hljs-number">113588248</span>,
             <span class="hljs-string">"targetDiffbotUri"</span>: <span class="hljs-string">"http://diffbot.com/entity/El0_8ehooNxOPT36Y4RdV9w"</span>,
             <span class="hljs-string">"targetDiffbotId"</span>: <span class="hljs-string">"El0_8ehooNxOPT36Y4RdV9w"</span>,
             <span class="hljs-string">"type"</span>: <span class="hljs-string">"AdministrativeArea"</span>
@@ -381,6 +401,7 @@
 }
 </code></pre>
 <h3><a class="anchor" aria-hidden="true" id="educations"></a><a href="#educations" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>educations</h3>
+<p>Education history.</p>
 <ul>
 <li><strong>Type:</strong> Education</li>
 <li><strong>Example:</strong></li>
@@ -396,7 +417,7 @@
                 ],
                 <span class="hljs-attr">"name"</span>: <span class="hljs-string">"The Ohio State University"</span>,
                 <span class="hljs-attr">"diffbotUri"</span>: <span class="hljs-string">"http://diffbot.com/entity/Etz-X7KAZOQW3g6syRTT7bg"</span>,
-                <span class="hljs-attr">"nbIncomingEdges"</span>: <span class="hljs-number">101243</span>,
+                <span class="hljs-attr">"nbIncomingEdges"</span>: <span class="hljs-number">108270</span>,
                 <span class="hljs-attr">"targetDiffbotUri"</span>: <span class="hljs-string">"http://diffbot.com/entity/Etz-X7KAZOQW3g6syRTT7bg"</span>,
                 <span class="hljs-attr">"targetDiffbotId"</span>: <span class="hljs-string">"Etz-X7KAZOQW3g6syRTT7bg"</span>,
                 <span class="hljs-attr">"surfaceForm"</span>: <span class="hljs-string">"The Ohio State University"</span>,
@@ -404,7 +425,7 @@
             },
             <span class="hljs-attr">"isCurrent"</span>: <span class="hljs-literal">false</span>,
             <span class="hljs-attr">"major"</span>: {
-                <span class="hljs-attr">"recordId"</span>: <span class="hljs-string">"EEIzhzuLVPeKuQ7KjPSa6aQ@310"</span>,
+                <span class="hljs-attr">"recordId"</span>: <span class="hljs-string">"EEIzhzuLVPeKuQ7KjPSa6aQ@289"</span>,
                 <span class="hljs-attr">"name"</span>: <span class="hljs-string">"International Trade"</span>,
                 <span class="hljs-attr">"surfaceForm"</span>: <span class="hljs-string">"International Trade"</span>,
                 <span class="hljs-attr">"position"</span>: <span class="hljs-string">"personEducationMajor"</span>,
@@ -442,38 +463,10 @@
                 ],
                 <span class="hljs-attr">"name"</span>: <span class="hljs-string">"OSU"</span>,
                 <span class="hljs-attr">"diffbotUri"</span>: <span class="hljs-string">"http://diffbot.com/entity/EXqnLTSovNzi-4KlIxjHhyA"</span>,
-                <span class="hljs-attr">"nbIncomingEdges"</span>: <span class="hljs-number">342459</span>,
+                <span class="hljs-attr">"nbIncomingEdges"</span>: <span class="hljs-number">358200</span>,
                 <span class="hljs-attr">"targetDiffbotUri"</span>: <span class="hljs-string">"http://diffbot.com/entity/EXqnLTSovNzi-4KlIxjHhyA"</span>,
                 <span class="hljs-attr">"targetDiffbotId"</span>: <span class="hljs-string">"EXqnLTSovNzi-4KlIxjHhyA"</span>,
                 <span class="hljs-attr">"surfaceForm"</span>: <span class="hljs-string">"OSU"</span>,
-                <span class="hljs-attr">"type"</span>: <span class="hljs-string">"Organization"</span>
-            },
-            <span class="hljs-attr">"degree"</span>: {
-                <span class="hljs-attr">"types"</span>: [
-                    <span class="hljs-string">"Intangible"</span>,
-                    <span class="hljs-string">"DegreeEntity"</span>
-                ],
-                <span class="hljs-attr">"name"</span>: <span class="hljs-string">"Bachelor's (4 year program)"</span>,
-                <span class="hljs-attr">"diffbotUri"</span>: <span class="hljs-string">"http://diffbot.com/entity/EtWuqNi7UOGu2JRK_z95kDg"</span>,
-                <span class="hljs-attr">"targetDiffbotUri"</span>: <span class="hljs-string">"http://diffbot.com/entity/EtWuqNi7UOGu2JRK_z95kDg"</span>,
-                <span class="hljs-attr">"targetDiffbotId"</span>: <span class="hljs-string">"EtWuqNi7UOGu2JRK_z95kDg"</span>,
-                <span class="hljs-attr">"surfaceForm"</span>: <span class="hljs-string">"Bachelor's (4 year program)"</span>,
-                <span class="hljs-attr">"type"</span>: <span class="hljs-string">"DegreeEntity"</span>
-            }
-        },
-        {
-            <span class="hljs-attr">"institution"</span>: {
-                <span class="hljs-attr">"summary"</span>: <span class="hljs-string">"Public research university in Atlanta, GA, USA"</span>,
-                <span class="hljs-attr">"image"</span>: <span class="hljs-string">"https://kg.diffbot.com/image/api/get?fetch=yes&amp;url=g%3Cj7P0St0DnBJf.x0KwLZrUn.%5B%3CR0Aa4Hh%3B%5Bv738ZqOr7U%3FgvFQ%3ElS%3B_j5%5Bz4n9mt7%5BEV%7CIw%3EM6%5CX%5E_xF.Ael"</span>,
-                <span class="hljs-attr">"types"</span>: [
-                    <span class="hljs-string">"Organization"</span>
-                ],
-                <span class="hljs-attr">"name"</span>: <span class="hljs-string">"Georgia State University"</span>,
-                <span class="hljs-attr">"diffbotUri"</span>: <span class="hljs-string">"http://diffbot.com/entity/ESnrKP-7KM9m8ePAWc_wCBA"</span>,
-                <span class="hljs-attr">"nbIncomingEdges"</span>: <span class="hljs-number">187771</span>,
-                <span class="hljs-attr">"targetDiffbotUri"</span>: <span class="hljs-string">"http://diffbot.com/entity/ESnrKP-7KM9m8ePAWc_wCBA"</span>,
-                <span class="hljs-attr">"targetDiffbotId"</span>: <span class="hljs-string">"ESnrKP-7KM9m8ePAWc_wCBA"</span>,
-                <span class="hljs-attr">"surfaceForm"</span>: <span class="hljs-string">"Georgia State University"</span>,
                 <span class="hljs-attr">"type"</span>: <span class="hljs-string">"Organization"</span>
             },
             <span class="hljs-attr">"degree"</span>: {
@@ -493,6 +486,7 @@
 }
 </code></pre>
 <h3><a class="anchor" aria-hidden="true" id="emailaddresses"></a><a href="#emailaddresses" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>emailAddresses</h3>
+<p>A person's public email address.</p>
 <ul>
 <li><strong>Type:</strong> Contact</li>
 <li><strong>Example:</strong></li>
@@ -502,6 +496,7 @@
 }
 </code></pre>
 <h3><a class="anchor" aria-hidden="true" id="employments"></a><a href="#employments" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>employments</h3>
+<p>Employment history, including significant investments, board memberships.</p>
 <ul>
 <li><strong>Type:</strong> Employment</li>
 <li><strong>Example:</strong></li>
@@ -520,7 +515,7 @@
                 ],
                 <span class="hljs-attr">"name"</span>: <span class="hljs-string">"Shiloh Technologies"</span>,
                 <span class="hljs-attr">"diffbotUri"</span>: <span class="hljs-string">"http://diffbot.com/entity/Ei8Q97YP0NwqKVjOVZgpv9w"</span>,
-                <span class="hljs-attr">"nbIncomingEdges"</span>: <span class="hljs-number">439</span>,
+                <span class="hljs-attr">"nbIncomingEdges"</span>: <span class="hljs-number">442</span>,
                 <span class="hljs-attr">"targetDiffbotUri"</span>: <span class="hljs-string">"http://diffbot.com/entity/Ei8Q97YP0NwqKVjOVZgpv9w"</span>,
                 <span class="hljs-attr">"targetDiffbotId"</span>: <span class="hljs-string">"Ei8Q97YP0NwqKVjOVZgpv9w"</span>,
                 <span class="hljs-attr">"surfaceForm"</span>: <span class="hljs-string">"Shiloh Technologies"</span>,
@@ -581,7 +576,7 @@
                 ],
                 <span class="hljs-attr">"name"</span>: <span class="hljs-string">"Willkie Farr &amp; Gallagher LLP"</span>,
                 <span class="hljs-attr">"diffbotUri"</span>: <span class="hljs-string">"http://diffbot.com/entity/EGlj5rYx7N5GIWUR9qs9aEg"</span>,
-                <span class="hljs-attr">"nbIncomingEdges"</span>: <span class="hljs-number">4484</span>,
+                <span class="hljs-attr">"nbIncomingEdges"</span>: <span class="hljs-number">4728</span>,
                 <span class="hljs-attr">"targetDiffbotUri"</span>: <span class="hljs-string">"http://diffbot.com/entity/EGlj5rYx7N5GIWUR9qs9aEg"</span>,
                 <span class="hljs-attr">"targetDiffbotId"</span>: <span class="hljs-string">"EGlj5rYx7N5GIWUR9qs9aEg"</span>,
                 <span class="hljs-attr">"surfaceForm"</span>: <span class="hljs-string">"Willkie Farr &amp; Gallagher LLP"</span>,
@@ -613,33 +608,26 @@
         {
             <span class="hljs-attr">"isCurrent"</span>: <span class="hljs-literal">true</span>,
             <span class="hljs-attr">"employer"</span>: {
-                <span class="hljs-attr">"summary"</span>: <span class="hljs-string">"Corporation founded in 2004"</span>,
-                <span class="hljs-attr">"image"</span>: <span class="hljs-string">"https://kg.diffbot.com/image/api/get?fetch=yes&amp;url=g%3Cj7P0St%7D9u.LnOv%7BI%7C%40g7.pBYINs%3Ff%7CGZ7jr-tGZhWf%3DK%2FOvy%5Bp%3CSKbs8i%7CEyO2%40%3F0FW9LpRQJSk8%5E5Jh"</span>,
+                <span class="hljs-attr">"summary"</span>: <span class="hljs-string">"Financial services company founded in 1999"</span>,
+                <span class="hljs-attr">"image"</span>: <span class="hljs-string">"https://kg.diffbot.com/image/api/get?fetch=yes&amp;url=g%3Cj7P0St%7D9u.LnOv%7BI%7C%40g7.pBYINs%3Ff%7CGZ7jr-tGZhWf%3DK%2FOvy%5Bp%3CSKbs8i%7CEyNzBa%3DXt%3Ek5KcBD0vSA%5EvRq%3D0%5DUd%60%402r%3Fm%3BQ9H%3DTmJF%5DG.zBX"</span>,
                 <span class="hljs-attr">"types"</span>: [
                     <span class="hljs-string">"Organization"</span>,
                     <span class="hljs-string">"Corporation"</span>
                 ],
-                <span class="hljs-attr">"name"</span>: <span class="hljs-string">"BRIGHTCOVE INC"</span>,
-                <span class="hljs-attr">"diffbotUri"</span>: <span class="hljs-string">"http://diffbot.com/entity/ExQ62VDi-OvWQ3qO1NhflJA"</span>,
-                <span class="hljs-attr">"nbIncomingEdges"</span>: <span class="hljs-number">2175</span>,
-                <span class="hljs-attr">"targetDiffbotUri"</span>: <span class="hljs-string">"http://diffbot.com/entity/ExQ62VDi-OvWQ3qO1NhflJA"</span>,
-                <span class="hljs-attr">"targetDiffbotId"</span>: <span class="hljs-string">"ExQ62VDi-OvWQ3qO1NhflJA"</span>,
-                <span class="hljs-attr">"surfaceForm"</span>: <span class="hljs-string">"BRIGHTCOVE INC"</span>,
+                <span class="hljs-attr">"name"</span>: <span class="hljs-string">"Core Capital Partners"</span>,
+                <span class="hljs-attr">"diffbotUri"</span>: <span class="hljs-string">"http://diffbot.com/entity/ErLfevHY1MzaATmqeEbm4AQ"</span>,
+                <span class="hljs-attr">"nbIncomingEdges"</span>: <span class="hljs-number">62</span>,
+                <span class="hljs-attr">"targetDiffbotUri"</span>: <span class="hljs-string">"http://diffbot.com/entity/ErLfevHY1MzaATmqeEbm4AQ"</span>,
+                <span class="hljs-attr">"targetDiffbotId"</span>: <span class="hljs-string">"ErLfevHY1MzaATmqeEbm4AQ"</span>,
+                <span class="hljs-attr">"surfaceForm"</span>: <span class="hljs-string">"Core Capital Partners"</span>,
                 <span class="hljs-attr">"type"</span>: <span class="hljs-string">"Corporation"</span>
             },
             <span class="hljs-attr">"from"</span>: {
-                <span class="hljs-attr">"str"</span>: <span class="hljs-string">"d2018-04-XX"</span>,
+                <span class="hljs-attr">"str"</span>: <span class="hljs-string">"d2005-01-XX"</span>,
                 <span class="hljs-attr">"precision"</span>: <span class="hljs-number">2</span>,
-                <span class="hljs-attr">"timestamp"</span>: <span class="hljs-number">1522540800000</span>
+                <span class="hljs-attr">"timestamp"</span>: <span class="hljs-number">1104537600000</span>
             },
             <span class="hljs-attr">"categories"</span>: [
-                {
-                    <span class="hljs-attr">"name"</span>: <span class="hljs-string">"Board Member"</span>,
-                    <span class="hljs-attr">"diffbotUri"</span>: <span class="hljs-string">"http://diffbot.com/entity/EnC5drWy1NVuOGQHd2ll0xw"</span>,
-                    <span class="hljs-attr">"targetDiffbotUri"</span>: <span class="hljs-string">"http://diffbot.com/entity/EnC5drWy1NVuOGQHd2ll0xw"</span>,
-                    <span class="hljs-attr">"targetDiffbotId"</span>: <span class="hljs-string">"EnC5drWy1NVuOGQHd2ll0xw"</span>,
-                    <span class="hljs-attr">"surfaceForm"</span>: <span class="hljs-string">"Board Member"</span>
-                },
                 {
                     <span class="hljs-attr">"name"</span>: <span class="hljs-string">"Management"</span>,
                     <span class="hljs-attr">"diffbotUri"</span>: <span class="hljs-string">"http://diffbot.com/entity/EpXGc9jmNPQW3wt-ny5SqCQ"</span>,
@@ -653,14 +641,22 @@
                     <span class="hljs-attr">"targetDiffbotUri"</span>: <span class="hljs-string">"http://diffbot.com/entity/EFHD6pfzYMtqdaaytNomkhA"</span>,
                     <span class="hljs-attr">"targetDiffbotId"</span>: <span class="hljs-string">"EFHD6pfzYMtqdaaytNomkhA"</span>,
                     <span class="hljs-attr">"surfaceForm"</span>: <span class="hljs-string">"Executive"</span>
+                },
+                {
+                    <span class="hljs-attr">"name"</span>: <span class="hljs-string">"Director"</span>,
+                    <span class="hljs-attr">"diffbotUri"</span>: <span class="hljs-string">"http://diffbot.com/entity/Eg3ddwx52PdewyUAwLb_Mmw"</span>,
+                    <span class="hljs-attr">"targetDiffbotUri"</span>: <span class="hljs-string">"http://diffbot.com/entity/Eg3ddwx52PdewyUAwLb_Mmw"</span>,
+                    <span class="hljs-attr">"targetDiffbotId"</span>: <span class="hljs-string">"Eg3ddwx52PdewyUAwLb_Mmw"</span>,
+                    <span class="hljs-attr">"surfaceForm"</span>: <span class="hljs-string">"Director"</span>
                 }
             ],
-            <span class="hljs-attr">"title"</span>: <span class="hljs-string">"Board Member"</span>
+            <span class="hljs-attr">"title"</span>: <span class="hljs-string">"Managing Director"</span>
         }
     ]
 }
 </code></pre>
 <h3><a class="anchor" aria-hidden="true" id="eyecolor"></a><a href="#eyecolor" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>eyeColor</h3>
+<p>This person's eye color.</p>
 <ul>
 <li><strong>Type:</strong> EyeColor</li>
 <li><strong>Example:</strong></li>
@@ -670,8 +666,9 @@
 }
 </code></pre>
 <h3><a class="anchor" aria-hidden="true" id="facebookuri"></a><a href="#facebookuri" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>facebookUri</h3>
+<p>Link to the Facebook profile of the Person entity</p>
 <ul>
-<li><strong>Type:</strong> DiffbotUrl</li>
+<li><strong>Type:</strong> URL</li>
 <li><strong>Example:</strong></li>
 </ul>
 <pre><code class="hljs">{
@@ -679,6 +676,7 @@
 }
 </code></pre>
 <h3><a class="anchor" aria-hidden="true" id="friends"></a><a href="#friends" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>friends</h3>
+<p>This person's friends.</p>
 <ul>
 <li><strong>Type:</strong> LinkedEntity</li>
 <li><strong>Example:</strong></li>
@@ -688,6 +686,7 @@
 }
 </code></pre>
 <h3><a class="anchor" aria-hidden="true" id="gender"></a><a href="#gender" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>gender</h3>
+<p>A person's gender.</p>
 <ul>
 <li><strong>Type:</strong> Gender</li>
 <li><strong>Example:</strong></li>
@@ -699,8 +698,9 @@
 }
 </code></pre>
 <h3><a class="anchor" aria-hidden="true" id="githuburi"></a><a href="#githuburi" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>githubUri</h3>
+<p>Link to the Github page of the Person entity</p>
 <ul>
-<li><strong>Type:</strong> DiffbotUrl</li>
+<li><strong>Type:</strong> URL</li>
 <li><strong>Example:</strong></li>
 </ul>
 <pre><code class="hljs">{
@@ -708,8 +708,9 @@
 }
 </code></pre>
 <h3><a class="anchor" aria-hidden="true" id="googleplusuri"></a><a href="#googleplusuri" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>googlePlusUri</h3>
+<p>Link to the Google+ profile of the Person entity</p>
 <ul>
-<li><strong>Type:</strong> DiffbotUrl</li>
+<li><strong>Type:</strong> URL</li>
 <li><strong>Example:</strong></li>
 </ul>
 <pre><code class="hljs">{
@@ -717,6 +718,7 @@
 }
 </code></pre>
 <h3><a class="anchor" aria-hidden="true" id="haircolor"></a><a href="#haircolor" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>hairColor</h3>
+<p>This person's hair color.</p>
 <ul>
 <li><strong>Type:</strong> HairColor</li>
 <li><strong>Example:</strong></li>
@@ -726,6 +728,7 @@
 }
 </code></pre>
 <h3><a class="anchor" aria-hidden="true" id="height"></a><a href="#height" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>height</h3>
+<p>This person's height in meters.</p>
 <ul>
 <li><strong>Type:</strong> Float</li>
 <li><strong>Example:</strong></li>
@@ -735,8 +738,9 @@
 }
 </code></pre>
 <h3><a class="anchor" aria-hidden="true" id="homepageuri"></a><a href="#homepageuri" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>homepageUri</h3>
+<p>Link to the homepage of the Person entity</p>
 <ul>
-<li><strong>Type:</strong> DiffbotUrl</li>
+<li><strong>Type:</strong> URL</li>
 <li><strong>Example:</strong></li>
 </ul>
 <pre><code class="hljs">{
@@ -744,8 +748,9 @@
 }
 </code></pre>
 <h3><a class="anchor" aria-hidden="true" id="instagramuri"></a><a href="#instagramuri" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>instagramUri</h3>
+<p>Link to the Instagram profile of the Person entity</p>
 <ul>
-<li><strong>Type:</strong> DiffbotUrl</li>
+<li><strong>Type:</strong> URL</li>
 <li><strong>Example:</strong></li>
 </ul>
 <pre><code class="hljs">{
@@ -753,6 +758,7 @@
 }
 </code></pre>
 <h3><a class="anchor" aria-hidden="true" id="interests"></a><a href="#interests" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>interests</h3>
+<p>Organizations, products and activities of interest.</p>
 <ul>
 <li><strong>Type:</strong> LinkedEntity</li>
 <li><strong>Example:</strong></li>
@@ -760,21 +766,21 @@
 <pre><code class="hljs">{
     <span class="hljs-attr">"interests"</span>: [
         {
-            <span class="hljs-attr">"recordId"</span>: <span class="hljs-string">"EEIzhzuLVPeKuQ7KjPSa6aQ@378"</span>,
+            <span class="hljs-attr">"recordId"</span>: <span class="hljs-string">"EEIzhzuLVPeKuQ7KjPSa6aQ@357"</span>,
             <span class="hljs-attr">"name"</span>: <span class="hljs-string">"investing"</span>,
             <span class="hljs-attr">"surfaceForm"</span>: <span class="hljs-string">"investing"</span>,
             <span class="hljs-attr">"position"</span>: <span class="hljs-string">"personInterest"</span>,
             <span class="hljs-attr">"type"</span>: <span class="hljs-string">"Miscellaneous"</span>
         },
         {
-            <span class="hljs-attr">"recordId"</span>: <span class="hljs-string">"EEIzhzuLVPeKuQ7KjPSa6aQ@379"</span>,
+            <span class="hljs-attr">"recordId"</span>: <span class="hljs-string">"EEIzhzuLVPeKuQ7KjPSa6aQ@358"</span>,
             <span class="hljs-attr">"name"</span>: <span class="hljs-string">"planning"</span>,
             <span class="hljs-attr">"surfaceForm"</span>: <span class="hljs-string">"planning"</span>,
             <span class="hljs-attr">"position"</span>: <span class="hljs-string">"personInterest"</span>,
             <span class="hljs-attr">"type"</span>: <span class="hljs-string">"Miscellaneous"</span>
         },
         {
-            <span class="hljs-attr">"recordId"</span>: <span class="hljs-string">"EEIzhzuLVPeKuQ7KjPSa6aQ@380"</span>,
+            <span class="hljs-attr">"recordId"</span>: <span class="hljs-string">"EEIzhzuLVPeKuQ7KjPSa6aQ@359"</span>,
             <span class="hljs-attr">"name"</span>: <span class="hljs-string">"lobbying"</span>,
             <span class="hljs-attr">"surfaceForm"</span>: <span class="hljs-string">"lobbying"</span>,
             <span class="hljs-attr">"position"</span>: <span class="hljs-string">"personInterest"</span>,
@@ -784,6 +790,7 @@
 }
 </code></pre>
 <h3><a class="anchor" aria-hidden="true" id="languages"></a><a href="#languages" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>languages</h3>
+<p>Languages spoken, written or signed by this person.</p>
 <ul>
 <li><strong>Type:</strong> Language</li>
 <li><strong>Example:</strong></li>
@@ -793,8 +800,9 @@
 }
 </code></pre>
 <h3><a class="anchor" aria-hidden="true" id="linkedinuri"></a><a href="#linkedinuri" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>linkedInUri</h3>
+<p>Link to the LinkedIn profile of the Person entity</p>
 <ul>
-<li><strong>Type:</strong> DiffbotUrl</li>
+<li><strong>Type:</strong> URL</li>
 <li><strong>Example:</strong></li>
 </ul>
 <pre><code class="hljs">{
@@ -802,6 +810,7 @@
 }
 </code></pre>
 <h3><a class="anchor" aria-hidden="true" id="location"></a><a href="#location" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>location</h3>
+<p>The most representative location for the Person entity</p>
 <ul>
 <li><strong>Type:</strong> Location</li>
 <li><strong>Example:</strong></li>
@@ -817,7 +826,7 @@
             ],
             <span class="hljs-attr">"name"</span>: <span class="hljs-string">"United States of America"</span>,
             <span class="hljs-attr">"diffbotUri"</span>: <span class="hljs-string">"http://diffbot.com/entity/E01d4EK33MmCosgI2KXa4-A"</span>,
-            <span class="hljs-attr">"nbIncomingEdges"</span>: <span class="hljs-number">1026989768</span>,
+            <span class="hljs-attr">"nbIncomingEdges"</span>: <span class="hljs-number">1033140662</span>,
             <span class="hljs-attr">"targetDiffbotUri"</span>: <span class="hljs-string">"http://diffbot.com/entity/E01d4EK33MmCosgI2KXa4-A"</span>,
             <span class="hljs-attr">"targetDiffbotId"</span>: <span class="hljs-string">"E01d4EK33MmCosgI2KXa4-A"</span>,
             <span class="hljs-attr">"type"</span>: <span class="hljs-string">"AdministrativeArea"</span>
@@ -833,7 +842,7 @@
             ],
             <span class="hljs-attr">"name"</span>: <span class="hljs-string">"Washington, D.C."</span>,
             <span class="hljs-attr">"diffbotUri"</span>: <span class="hljs-string">"http://diffbot.com/entity/Ep2MLLdkjO_C-R6NA7cOlcQ"</span>,
-            <span class="hljs-attr">"nbIncomingEdges"</span>: <span class="hljs-number">12304996</span>,
+            <span class="hljs-attr">"nbIncomingEdges"</span>: <span class="hljs-number">12400618</span>,
             <span class="hljs-attr">"targetDiffbotUri"</span>: <span class="hljs-string">"http://diffbot.com/entity/Ep2MLLdkjO_C-R6NA7cOlcQ"</span>,
             <span class="hljs-attr">"targetDiffbotId"</span>: <span class="hljs-string">"Ep2MLLdkjO_C-R6NA7cOlcQ"</span>,
             <span class="hljs-attr">"type"</span>: <span class="hljs-string">"AdministrativeArea"</span>
@@ -847,7 +856,7 @@
             ],
             <span class="hljs-attr">"name"</span>: <span class="hljs-string">"Washington, D.C."</span>,
             <span class="hljs-attr">"diffbotUri"</span>: <span class="hljs-string">"http://diffbot.com/entity/Ep2MLLdkjO_C-R6NA7cOlcQ"</span>,
-            <span class="hljs-attr">"nbIncomingEdges"</span>: <span class="hljs-number">12304996</span>,
+            <span class="hljs-attr">"nbIncomingEdges"</span>: <span class="hljs-number">12400618</span>,
             <span class="hljs-attr">"targetDiffbotUri"</span>: <span class="hljs-string">"http://diffbot.com/entity/Ep2MLLdkjO_C-R6NA7cOlcQ"</span>,
             <span class="hljs-attr">"targetDiffbotId"</span>: <span class="hljs-string">"Ep2MLLdkjO_C-R6NA7cOlcQ"</span>,
             <span class="hljs-attr">"type"</span>: <span class="hljs-string">"AdministrativeArea"</span>
@@ -865,7 +874,7 @@
             ],
             <span class="hljs-attr">"name"</span>: <span class="hljs-string">"Washington, D.C."</span>,
             <span class="hljs-attr">"diffbotUri"</span>: <span class="hljs-string">"http://diffbot.com/entity/Ep2MLLdkjO_C-R6NA7cOlcQ"</span>,
-            <span class="hljs-attr">"nbIncomingEdges"</span>: <span class="hljs-number">12304996</span>,
+            <span class="hljs-attr">"nbIncomingEdges"</span>: <span class="hljs-number">12400618</span>,
             <span class="hljs-attr">"targetDiffbotUri"</span>: <span class="hljs-string">"http://diffbot.com/entity/Ep2MLLdkjO_C-R6NA7cOlcQ"</span>,
             <span class="hljs-attr">"targetDiffbotId"</span>: <span class="hljs-string">"Ep2MLLdkjO_C-R6NA7cOlcQ"</span>,
             <span class="hljs-attr">"type"</span>: <span class="hljs-string">"AdministrativeArea"</span>
@@ -875,6 +884,7 @@
 }
 </code></pre>
 <h3><a class="anchor" aria-hidden="true" id="locations"></a><a href="#locations" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>locations</h3>
+<p>All places where a person has lived. The field 'isCurrent' indicates the current location for this person.</p>
 <ul>
 <li><strong>Type:</strong> Location</li>
 <li><strong>Example:</strong></li>
@@ -891,7 +901,7 @@
                 ],
                 <span class="hljs-attr">"name"</span>: <span class="hljs-string">"United States of America"</span>,
                 <span class="hljs-attr">"diffbotUri"</span>: <span class="hljs-string">"http://diffbot.com/entity/E01d4EK33MmCosgI2KXa4-A"</span>,
-                <span class="hljs-attr">"nbIncomingEdges"</span>: <span class="hljs-number">1026989768</span>,
+                <span class="hljs-attr">"nbIncomingEdges"</span>: <span class="hljs-number">1033140662</span>,
                 <span class="hljs-attr">"targetDiffbotUri"</span>: <span class="hljs-string">"http://diffbot.com/entity/E01d4EK33MmCosgI2KXa4-A"</span>,
                 <span class="hljs-attr">"targetDiffbotId"</span>: <span class="hljs-string">"E01d4EK33MmCosgI2KXa4-A"</span>,
                 <span class="hljs-attr">"type"</span>: <span class="hljs-string">"AdministrativeArea"</span>
@@ -907,7 +917,7 @@
                 ],
                 <span class="hljs-attr">"name"</span>: <span class="hljs-string">"Washington, D.C."</span>,
                 <span class="hljs-attr">"diffbotUri"</span>: <span class="hljs-string">"http://diffbot.com/entity/Ep2MLLdkjO_C-R6NA7cOlcQ"</span>,
-                <span class="hljs-attr">"nbIncomingEdges"</span>: <span class="hljs-number">12304996</span>,
+                <span class="hljs-attr">"nbIncomingEdges"</span>: <span class="hljs-number">12400618</span>,
                 <span class="hljs-attr">"targetDiffbotUri"</span>: <span class="hljs-string">"http://diffbot.com/entity/Ep2MLLdkjO_C-R6NA7cOlcQ"</span>,
                 <span class="hljs-attr">"targetDiffbotId"</span>: <span class="hljs-string">"Ep2MLLdkjO_C-R6NA7cOlcQ"</span>,
                 <span class="hljs-attr">"type"</span>: <span class="hljs-string">"AdministrativeArea"</span>
@@ -921,7 +931,7 @@
                 ],
                 <span class="hljs-attr">"name"</span>: <span class="hljs-string">"Washington, D.C."</span>,
                 <span class="hljs-attr">"diffbotUri"</span>: <span class="hljs-string">"http://diffbot.com/entity/Ep2MLLdkjO_C-R6NA7cOlcQ"</span>,
-                <span class="hljs-attr">"nbIncomingEdges"</span>: <span class="hljs-number">12304996</span>,
+                <span class="hljs-attr">"nbIncomingEdges"</span>: <span class="hljs-number">12400618</span>,
                 <span class="hljs-attr">"targetDiffbotUri"</span>: <span class="hljs-string">"http://diffbot.com/entity/Ep2MLLdkjO_C-R6NA7cOlcQ"</span>,
                 <span class="hljs-attr">"targetDiffbotId"</span>: <span class="hljs-string">"Ep2MLLdkjO_C-R6NA7cOlcQ"</span>,
                 <span class="hljs-attr">"type"</span>: <span class="hljs-string">"AdministrativeArea"</span>
@@ -939,7 +949,7 @@
                 ],
                 <span class="hljs-attr">"name"</span>: <span class="hljs-string">"Washington, D.C."</span>,
                 <span class="hljs-attr">"diffbotUri"</span>: <span class="hljs-string">"http://diffbot.com/entity/Ep2MLLdkjO_C-R6NA7cOlcQ"</span>,
-                <span class="hljs-attr">"nbIncomingEdges"</span>: <span class="hljs-number">12304996</span>,
+                <span class="hljs-attr">"nbIncomingEdges"</span>: <span class="hljs-number">12400618</span>,
                 <span class="hljs-attr">"targetDiffbotUri"</span>: <span class="hljs-string">"http://diffbot.com/entity/Ep2MLLdkjO_C-R6NA7cOlcQ"</span>,
                 <span class="hljs-attr">"targetDiffbotId"</span>: <span class="hljs-string">"Ep2MLLdkjO_C-R6NA7cOlcQ"</span>,
                 <span class="hljs-attr">"type"</span>: <span class="hljs-string">"AdministrativeArea"</span>
@@ -956,7 +966,7 @@
                 ],
                 <span class="hljs-attr">"name"</span>: <span class="hljs-string">"United States of America"</span>,
                 <span class="hljs-attr">"diffbotUri"</span>: <span class="hljs-string">"http://diffbot.com/entity/E01d4EK33MmCosgI2KXa4-A"</span>,
-                <span class="hljs-attr">"nbIncomingEdges"</span>: <span class="hljs-number">1026989768</span>,
+                <span class="hljs-attr">"nbIncomingEdges"</span>: <span class="hljs-number">1033140662</span>,
                 <span class="hljs-attr">"targetDiffbotUri"</span>: <span class="hljs-string">"http://diffbot.com/entity/E01d4EK33MmCosgI2KXa4-A"</span>,
                 <span class="hljs-attr">"targetDiffbotId"</span>: <span class="hljs-string">"E01d4EK33MmCosgI2KXa4-A"</span>,
                 <span class="hljs-attr">"type"</span>: <span class="hljs-string">"AdministrativeArea"</span>
@@ -972,7 +982,7 @@
                 ],
                 <span class="hljs-attr">"name"</span>: <span class="hljs-string">"Redlands"</span>,
                 <span class="hljs-attr">"diffbotUri"</span>: <span class="hljs-string">"http://diffbot.com/entity/EEGqoBftsOZyh3_RKbQE3mw"</span>,
-                <span class="hljs-attr">"nbIncomingEdges"</span>: <span class="hljs-number">222124</span>,
+                <span class="hljs-attr">"nbIncomingEdges"</span>: <span class="hljs-number">222804</span>,
                 <span class="hljs-attr">"targetDiffbotUri"</span>: <span class="hljs-string">"http://diffbot.com/entity/EEGqoBftsOZyh3_RKbQE3mw"</span>,
                 <span class="hljs-attr">"targetDiffbotId"</span>: <span class="hljs-string">"EEGqoBftsOZyh3_RKbQE3mw"</span>,
                 <span class="hljs-attr">"type"</span>: <span class="hljs-string">"AdministrativeArea"</span>
@@ -986,7 +996,7 @@
                 ],
                 <span class="hljs-attr">"name"</span>: <span class="hljs-string">"San Bernardino County"</span>,
                 <span class="hljs-attr">"diffbotUri"</span>: <span class="hljs-string">"http://diffbot.com/entity/EApueG2dHP3iRBLbjF2w2gQ"</span>,
-                <span class="hljs-attr">"nbIncomingEdges"</span>: <span class="hljs-number">5260421</span>,
+                <span class="hljs-attr">"nbIncomingEdges"</span>: <span class="hljs-number">5273811</span>,
                 <span class="hljs-attr">"targetDiffbotUri"</span>: <span class="hljs-string">"http://diffbot.com/entity/EApueG2dHP3iRBLbjF2w2gQ"</span>,
                 <span class="hljs-attr">"targetDiffbotId"</span>: <span class="hljs-string">"EApueG2dHP3iRBLbjF2w2gQ"</span>,
                 <span class="hljs-attr">"type"</span>: <span class="hljs-string">"AdministrativeArea"</span>
@@ -1004,7 +1014,7 @@
                 ],
                 <span class="hljs-attr">"name"</span>: <span class="hljs-string">"California"</span>,
                 <span class="hljs-attr">"diffbotUri"</span>: <span class="hljs-string">"http://diffbot.com/entity/El0_8ehooNxOPT36Y4RdV9w"</span>,
-                <span class="hljs-attr">"nbIncomingEdges"</span>: <span class="hljs-number">112823978</span>,
+                <span class="hljs-attr">"nbIncomingEdges"</span>: <span class="hljs-number">113588248</span>,
                 <span class="hljs-attr">"targetDiffbotUri"</span>: <span class="hljs-string">"http://diffbot.com/entity/El0_8ehooNxOPT36Y4RdV9w"</span>,
                 <span class="hljs-attr">"targetDiffbotId"</span>: <span class="hljs-string">"El0_8ehooNxOPT36Y4RdV9w"</span>,
                 <span class="hljs-attr">"type"</span>: <span class="hljs-string">"AdministrativeArea"</span>
@@ -1021,65 +1031,51 @@
                 ],
                 <span class="hljs-attr">"name"</span>: <span class="hljs-string">"United States of America"</span>,
                 <span class="hljs-attr">"diffbotUri"</span>: <span class="hljs-string">"http://diffbot.com/entity/E01d4EK33MmCosgI2KXa4-A"</span>,
-                <span class="hljs-attr">"nbIncomingEdges"</span>: <span class="hljs-number">1026989768</span>,
+                <span class="hljs-attr">"nbIncomingEdges"</span>: <span class="hljs-number">1033140662</span>,
                 <span class="hljs-attr">"targetDiffbotUri"</span>: <span class="hljs-string">"http://diffbot.com/entity/E01d4EK33MmCosgI2KXa4-A"</span>,
                 <span class="hljs-attr">"targetDiffbotId"</span>: <span class="hljs-string">"E01d4EK33MmCosgI2KXa4-A"</span>,
                 <span class="hljs-attr">"type"</span>: <span class="hljs-string">"AdministrativeArea"</span>
             },
             <span class="hljs-attr">"isCurrent"</span>: <span class="hljs-literal">false</span>,
-            <span class="hljs-attr">"address"</span>: <span class="hljs-string">"Cambridge, Massachusetts"</span>,
-            <span class="hljs-attr">"city"</span>: {
-                <span class="hljs-attr">"summary"</span>: <span class="hljs-string">"City in Middlesex County, Massachusetts, United States"</span>,
-                <span class="hljs-attr">"image"</span>: <span class="hljs-string">"https://kg.diffbot.com/image/api/get?fetch=yes&amp;url=g%3Cj7P0St0DnBJf.x0KwLZrUn.%5B%3CR0Aa4Hh%3B%5Bv738ZqOr7U%3Fav%40s%3EhO9Ou5%5E2FYEZn%40o%3EUrMl3X.Sgy"</span>,
-                <span class="hljs-attr">"types"</span>: [
-                    <span class="hljs-string">"Place"</span>,
-                    <span class="hljs-string">"AdministrativeArea"</span>
-                ],
-                <span class="hljs-attr">"name"</span>: <span class="hljs-string">"Cambridge"</span>,
-                <span class="hljs-attr">"diffbotUri"</span>: <span class="hljs-string">"http://diffbot.com/entity/EKtEQ-seQOfuiSDMTnvM9tA"</span>,
-                <span class="hljs-attr">"nbIncomingEdges"</span>: <span class="hljs-number">660315</span>,
-                <span class="hljs-attr">"targetDiffbotUri"</span>: <span class="hljs-string">"http://diffbot.com/entity/EKtEQ-seQOfuiSDMTnvM9tA"</span>,
-                <span class="hljs-attr">"targetDiffbotId"</span>: <span class="hljs-string">"EKtEQ-seQOfuiSDMTnvM9tA"</span>,
-                <span class="hljs-attr">"type"</span>: <span class="hljs-string">"AdministrativeArea"</span>
-            },
+            <span class="hljs-attr">"address"</span>: <span class="hljs-string">"Washington D.C. Metro Area"</span>,
             <span class="hljs-attr">"subregion"</span>: {
-                <span class="hljs-attr">"summary"</span>: <span class="hljs-string">"County in Massachusetts, United States"</span>,
-                <span class="hljs-attr">"image"</span>: <span class="hljs-string">"https://kg.diffbot.com/image/api/get?fetch=yes&amp;url=g%3Cj7P0St0DnBJf.x0KwLZrUn.%5B%3CR0Aa4Hh%3B%5Bv738ZqOr7U%3FcvBQ%3ErO%3CLr2YhBmKZr%40%7BJRzXxzL%7BJa%7EYx%3Fd7%5Dl%7DI6G%60F%604%3F082w%5BuA_.Xq%7B"</span>,
+                <span class="hljs-attr">"summary"</span>: <span class="hljs-string">"Capital city of the United States"</span>,
+                <span class="hljs-attr">"image"</span>: <span class="hljs-string">"https://kg.diffbot.com/image/api/get?fetch=yes&amp;url=g%3Cj7P0St0DnBJf.x0KwLZrUn.%5B%3CR0Aa4Hh%3B%5Bv738ZqOr7U%3FbvAT%3ExS%7DYb%3B%60zUb%3DXSAyK_oGyzSxB%3C1%5C6DR7P.Ar4"</span>,
                 <span class="hljs-attr">"types"</span>: [
                     <span class="hljs-string">"Place"</span>,
                     <span class="hljs-string">"AdministrativeArea"</span>
                 ],
-                <span class="hljs-attr">"name"</span>: <span class="hljs-string">"Middlesex County"</span>,
-                <span class="hljs-attr">"diffbotUri"</span>: <span class="hljs-string">"http://diffbot.com/entity/EfTXOkq9_P2GytZP4wTfK1g"</span>,
-                <span class="hljs-attr">"nbIncomingEdges"</span>: <span class="hljs-number">4946903</span>,
-                <span class="hljs-attr">"targetDiffbotUri"</span>: <span class="hljs-string">"http://diffbot.com/entity/EfTXOkq9_P2GytZP4wTfK1g"</span>,
-                <span class="hljs-attr">"targetDiffbotId"</span>: <span class="hljs-string">"EfTXOkq9_P2GytZP4wTfK1g"</span>,
+                <span class="hljs-attr">"name"</span>: <span class="hljs-string">"Washington, D.C."</span>,
+                <span class="hljs-attr">"diffbotUri"</span>: <span class="hljs-string">"http://diffbot.com/entity/Ep2MLLdkjO_C-R6NA7cOlcQ"</span>,
+                <span class="hljs-attr">"nbIncomingEdges"</span>: <span class="hljs-number">12400618</span>,
+                <span class="hljs-attr">"targetDiffbotUri"</span>: <span class="hljs-string">"http://diffbot.com/entity/Ep2MLLdkjO_C-R6NA7cOlcQ"</span>,
+                <span class="hljs-attr">"targetDiffbotId"</span>: <span class="hljs-string">"Ep2MLLdkjO_C-R6NA7cOlcQ"</span>,
                 <span class="hljs-attr">"type"</span>: <span class="hljs-string">"AdministrativeArea"</span>
             },
-            <span class="hljs-attr">"latitude"</span>: <span class="hljs-number">42.3803596496582</span>,
-            <span class="hljs-attr">"precision"</span>: <span class="hljs-number">4.150404930114746</span>,
-            <span class="hljs-attr">"postalCode"</span>: <span class="hljs-string">"02138"</span>,
-            <span class="hljs-attr">"surfaceForm"</span>: <span class="hljs-string">"Cambridge, MA"</span>,
+            <span class="hljs-attr">"latitude"</span>: <span class="hljs-number">38.82651901245117</span>,
+            <span class="hljs-attr">"precision"</span>: <span class="hljs-number">75</span>,
+            <span class="hljs-attr">"surfaceForm"</span>: <span class="hljs-string">"Washington D.C. Metro Area"</span>,
             <span class="hljs-attr">"region"</span>: {
-                <span class="hljs-attr">"summary"</span>: <span class="hljs-string">"State of the United States of America"</span>,
-                <span class="hljs-attr">"image"</span>: <span class="hljs-string">"https://kg.diffbot.com/image/api/get?fetch=yes&amp;url=g%3Cj7P0St0DnBJf.x0KwLZrUn.%5B%3CR0Aa4Hh%3B%5Bv738ZqOr7U%3FivHp%3ExS%7DYb%3B%60z%7E%5BKlp%3BnL%60kXy%3E.5Y%60"</span>,
+                <span class="hljs-attr">"summary"</span>: <span class="hljs-string">"Capital city of the United States"</span>,
+                <span class="hljs-attr">"image"</span>: <span class="hljs-string">"https://kg.diffbot.com/image/api/get?fetch=yes&amp;url=g%3Cj7P0St0DnBJf.x0KwLZrUn.%5B%3CR0Aa4Hh%3B%5Bv738ZqOr7U%3FbvAT%3ExS%7DYb%3B%60zUb%3DXSAyK_oGyzSxB%3C1%5C6DR7P.Ar4"</span>,
                 <span class="hljs-attr">"types"</span>: [
                     <span class="hljs-string">"Place"</span>,
                     <span class="hljs-string">"AdministrativeArea"</span>
                 ],
-                <span class="hljs-attr">"name"</span>: <span class="hljs-string">"Massachusetts"</span>,
-                <span class="hljs-attr">"diffbotUri"</span>: <span class="hljs-string">"http://diffbot.com/entity/E0VAbhEeRNsSvhHIpmhd3Xw"</span>,
-                <span class="hljs-attr">"nbIncomingEdges"</span>: <span class="hljs-number">20808864</span>,
-                <span class="hljs-attr">"targetDiffbotUri"</span>: <span class="hljs-string">"http://diffbot.com/entity/E0VAbhEeRNsSvhHIpmhd3Xw"</span>,
-                <span class="hljs-attr">"targetDiffbotId"</span>: <span class="hljs-string">"E0VAbhEeRNsSvhHIpmhd3Xw"</span>,
+                <span class="hljs-attr">"name"</span>: <span class="hljs-string">"Washington, D.C."</span>,
+                <span class="hljs-attr">"diffbotUri"</span>: <span class="hljs-string">"http://diffbot.com/entity/Ep2MLLdkjO_C-R6NA7cOlcQ"</span>,
+                <span class="hljs-attr">"nbIncomingEdges"</span>: <span class="hljs-number">12400618</span>,
+                <span class="hljs-attr">"targetDiffbotUri"</span>: <span class="hljs-string">"http://diffbot.com/entity/Ep2MLLdkjO_C-R6NA7cOlcQ"</span>,
+                <span class="hljs-attr">"targetDiffbotId"</span>: <span class="hljs-string">"Ep2MLLdkjO_C-R6NA7cOlcQ"</span>,
                 <span class="hljs-attr">"type"</span>: <span class="hljs-string">"AdministrativeArea"</span>
             },
-            <span class="hljs-attr">"longitude"</span>: <span class="hljs-number">-71.1159896850586</span>
+            <span class="hljs-attr">"longitude"</span>: <span class="hljs-number">-77.01712036132812</span>
         }
     ]
 }
 </code></pre>
 <h3><a class="anchor" aria-hidden="true" id="namedetail"></a><a href="#namedetail" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>nameDetail</h3>
+<p>Parts of the name (e.g., first name, last name, middle name).</p>
 <ul>
 <li><strong>Type:</strong> NameDetail</li>
 <li><strong>Example:</strong></li>
@@ -1095,6 +1091,7 @@
 }
 </code></pre>
 <h3><a class="anchor" aria-hidden="true" id="nationalities"></a><a href="#nationalities" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>nationalities</h3>
+<p>The countries where this person is a national or a citizen.</p>
 <ul>
 <li><strong>Type:</strong> LinkedEntity</li>
 <li><strong>Example:</strong></li>
@@ -1102,7 +1099,7 @@
 <pre><code class="hljs">{
     <span class="hljs-attr">"nationalities"</span>: [
         {
-            <span class="hljs-attr">"recordId"</span>: <span class="hljs-string">"EEIzhzuLVPeKuQ7KjPSa6aQ@385"</span>,
+            <span class="hljs-attr">"recordId"</span>: <span class="hljs-string">"EEIzhzuLVPeKuQ7KjPSa6aQ@364"</span>,
             <span class="hljs-attr">"name"</span>: <span class="hljs-string">"United States of America"</span>,
             <span class="hljs-attr">"websiteUris"</span>: [
                 <span class="hljs-string">"wikidata.org/entity/Q30"</span>
@@ -1114,6 +1111,7 @@
 }
 </code></pre>
 <h3><a class="anchor" aria-hidden="true" id="networth"></a><a href="#networth" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>netWorth</h3>
+<p>A person's estimated net worth (the value the assets minus liabilities).</p>
 <ul>
 <li><strong>Type:</strong> Amount</li>
 <li><strong>Example:</strong></li>
@@ -1123,6 +1121,7 @@
 }
 </code></pre>
 <h3><a class="anchor" aria-hidden="true" id="parents"></a><a href="#parents" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>parents</h3>
+<p>This person's parents.</p>
 <ul>
 <li><strong>Type:</strong> LinkedEntity</li>
 <li><strong>Example:</strong></li>
@@ -1132,6 +1131,7 @@
 }
 </code></pre>
 <h3><a class="anchor" aria-hidden="true" id="phonenumbers"></a><a href="#phonenumbers" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>phoneNumbers</h3>
+<p>A person's phone numbers.</p>
 <ul>
 <li><strong>Type:</strong> PhoneNumber</li>
 <li><strong>Example:</strong></li>
@@ -1141,6 +1141,7 @@
 }
 </code></pre>
 <h3><a class="anchor" aria-hidden="true" id="politicalaffiliation"></a><a href="#politicalaffiliation" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>politicalAffiliation</h3>
+<p>Political party to which this person is affiliated.</p>
 <ul>
 <li><strong>Type:</strong> LinkedEntity</li>
 <li><strong>Example:</strong></li>
@@ -1148,7 +1149,7 @@
 <pre><code class="hljs">{
     <span class="hljs-attr">"politicalAffiliation"</span>: [
         {
-            <span class="hljs-attr">"recordId"</span>: <span class="hljs-string">"EEIzhzuLVPeKuQ7KjPSa6aQ@386"</span>,
+            <span class="hljs-attr">"recordId"</span>: <span class="hljs-string">"EEIzhzuLVPeKuQ7KjPSa6aQ@365"</span>,
             <span class="hljs-attr">"name"</span>: <span class="hljs-string">"Democratic Party"</span>,
             <span class="hljs-attr">"websiteUris"</span>: [
                 <span class="hljs-string">"wikidata.org/entity/Q29552"</span>
@@ -1161,6 +1162,7 @@
 }
 </code></pre>
 <h3><a class="anchor" aria-hidden="true" id="posts"></a><a href="#posts" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>posts</h3>
+<p>Posts written by this person.</p>
 <ul>
 <li><strong>Type:</strong> LinkedEntity</li>
 <li><strong>Example:</strong></li>
@@ -1170,6 +1172,7 @@
 }
 </code></pre>
 <h3><a class="anchor" aria-hidden="true" id="religion"></a><a href="#religion" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>religion</h3>
+<p>This person's religion.</p>
 <ul>
 <li><strong>Type:</strong> Religion</li>
 <li><strong>Example:</strong></li>
@@ -1179,6 +1182,7 @@
 }
 </code></pre>
 <h3><a class="anchor" aria-hidden="true" id="siblings"></a><a href="#siblings" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>siblings</h3>
+<p>This person's siblings.</p>
 <ul>
 <li><strong>Type:</strong> LinkedEntity</li>
 <li><strong>Example:</strong></li>
@@ -1188,6 +1192,7 @@
 }
 </code></pre>
 <h3><a class="anchor" aria-hidden="true" id="skills"></a><a href="#skills" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>skills</h3>
+<p>Professional skills.</p>
 <ul>
 <li><strong>Type:</strong> LinkedEntity</li>
 <li><strong>Example:</strong></li>
@@ -1219,8 +1224,9 @@
 }
 </code></pre>
 <h3><a class="anchor" aria-hidden="true" id="twitteruri"></a><a href="#twitteruri" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>twitterUri</h3>
+<p>Link to the Twitter profile of the Person entity</p>
 <ul>
-<li><strong>Type:</strong> DiffbotUrl</li>
+<li><strong>Type:</strong> URL</li>
 <li><strong>Example:</strong></li>
 </ul>
 <pre><code class="hljs">{
@@ -1228,6 +1234,7 @@
 }
 </code></pre>
 <h3><a class="anchor" aria-hidden="true" id="unions"></a><a href="#unions" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>unions</h3>
+<p>This person's unions, including marriages and civil unions.</p>
 <ul>
 <li><strong>Type:</strong> Union</li>
 <li><strong>Example:</strong></li>
@@ -1237,6 +1244,7 @@
 }
 </code></pre>
 <h3><a class="anchor" aria-hidden="true" id="weight"></a><a href="#weight" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>weight</h3>
+<p>This person's weight in kilograms.</p>
 <ul>
 <li><strong>Type:</strong> Float</li>
 <li><strong>Example:</strong></li>
@@ -1246,8 +1254,9 @@
 }
 </code></pre>
 <h3><a class="anchor" aria-hidden="true" id="wikipediauri"></a><a href="#wikipediauri" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>wikipediaUri</h3>
+<p>Link to the Wikipedia page of the Person entity</p>
 <ul>
-<li><strong>Type:</strong> DiffbotUrl</li>
+<li><strong>Type:</strong> URL</li>
 <li><strong>Example:</strong></li>
 </ul>
 <pre><code class="hljs">{
@@ -1255,8 +1264,9 @@
 }
 </code></pre>
 <h3><a class="anchor" aria-hidden="true" id="youtubeuri"></a><a href="#youtubeuri" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>youtubeUri</h3>
+<p>Link to the Youtube page of the Person entity</p>
 <ul>
-<li><strong>Type:</strong> DiffbotUrl</li>
+<li><strong>Type:</strong> URL</li>
 <li><strong>Example:</strong></li>
 </ul>
 <pre><code class="hljs">{

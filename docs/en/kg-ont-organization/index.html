@@ -101,6 +101,7 @@
 <li><a href="#naceclassification">naceClassification</a></li>
 <li><a href="#naicsclassification">naicsClassification</a></li>
 <li><a href="#nbactiveemployeeedges">nbActiveEmployeeEdges</a></li>
+<li><a href="#nbemployeeranges">nbEmployeeRanges</a></li>
 <li><a href="#nbemployees">nbEmployees</a></li>
 <li><a href="#nbemployeesmax">nbEmployeesMax</a></li>
 <li><a href="#nbemployeesmin">nbEmployeesMin</a></li>
@@ -126,6 +127,7 @@
 <h2><a class="anchor" aria-hidden="true" id="organization-field-details"></a><a href="#organization-field-details" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Organization Field Details</h2>
 <p>Note that certain longer field examples may be truncated for readability.</p>
 <h3><a class="anchor" aria-hidden="true" id="acquiredby"></a><a href="#acquiredby" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>acquiredBy</h3>
+<p>The organization that has most recently acquired this organization.</p>
 <ul>
 <li><strong>Type:</strong> LinkedEntity</li>
 <li><strong>Example:</strong></li>
@@ -135,8 +137,9 @@
 }
 </code></pre>
 <h3><a class="anchor" aria-hidden="true" id="angellisturi"></a><a href="#angellisturi" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>angellistUri</h3>
+<p>Link to the Angel List profile of this  entity</p>
 <ul>
-<li><strong>Type:</strong> DiffbotUrl</li>
+<li><strong>Type:</strong> URL</li>
 <li><strong>Example:</strong></li>
 </ul>
 <pre><code class="hljs">{
@@ -144,6 +147,7 @@
 }
 </code></pre>
 <h3><a class="anchor" aria-hidden="true" id="anzsicclassification"></a><a href="#anzsicclassification" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>anzSicClassification</h3>
+<p>The Australian and New Zealand Standard Industrial Classification (ANZSIC) is the standard classification used in Australia and New Zealand for the collection, compilation and publication of statistics by industry.</p>
 <ul>
 <li><strong>Type:</strong> ClassificationCode</li>
 <li><strong>Example:</strong></li>
@@ -153,8 +157,9 @@
 }
 </code></pre>
 <h3><a class="anchor" aria-hidden="true" id="bloguri"></a><a href="#bloguri" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>blogUri</h3>
+<p>Link to the blog of this entity</p>
 <ul>
-<li><strong>Type:</strong> DiffbotUrl</li>
+<li><strong>Type:</strong> URL</li>
 <li><strong>Example:</strong></li>
 </ul>
 <pre><code class="hljs">{
@@ -162,6 +167,7 @@
 }
 </code></pre>
 <h3><a class="anchor" aria-hidden="true" id="boardmembers"></a><a href="#boardmembers" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>boardMembers</h3>
+<p>Member of the Board of Directors for this organization.</p>
 <ul>
 <li><strong>Type:</strong> LinkedEntity</li>
 <li><strong>Example:</strong></li>
@@ -183,37 +189,38 @@
             <span class="hljs-string">"type"</span>: <span class="hljs-string">"Person"</span>
         },
         {
-            <span class="hljs-string">"summary"</span>: <span class="hljs-string">"Australian businessman"</span>,
-            <span class="hljs-string">"image"</span>: <span class="hljs-string">"https://kg.diffbot.com/image/api/get?fetch=yes&amp;url=g%3Cj7P0St0DnBJf.x0KwLZrUn.%5B%3CR0Aa4Hh%3B%5Bv738ZqOr7U%3FivHn%3Ef%5C0_hCYi.Ytb5%3Dx%40%60e%3Bt%3DPvB%3Eu_%2FF%5D7Rddk%3FXi9%7DA%5B%3B.YxM"</span>,
+            <span class="hljs-string">"summary"</span>: <span class="hljs-string">"American banker"</span>,
+            <span class="hljs-string">"image"</span>: <span class="hljs-string">"https://kg.diffbot.com/image/api/get?fetch=yes&amp;url=g%3Cj7P0St0DnBJf.x0KwLZrUn.%5B%3CR0Aa4Hh%3B%5Bv738ZqOr7U%3FjvIs%3ElO%3Efb_i3OY9mnzk%3EVuRf7C_H%5D%7BQpkQGN%281n%3CSl%3F_%29.xGV"</span>,
             <span class="hljs-string">"types"</span>: [
                 <span class="hljs-string">"Person"</span>
             ],
-            <span class="hljs-string">"name"</span>: <span class="hljs-string">"Andrew N Liveris"</span>,
-            <span class="hljs-string">"diffbotUri"</span>: <span class="hljs-string">"http://diffbot.com/entity/E2XQtwbsDNVSO54QbAy6z7Q"</span>,
-            <span class="hljs-string">"nbIncomingEdges"</span>: <span class="hljs-number">30</span>,
-            <span class="hljs-string">"targetDiffbotUri"</span>: <span class="hljs-string">"http://diffbot.com/entity/E2XQtwbsDNVSO54QbAy6z7Q"</span>,
-            <span class="hljs-string">"targetDiffbotId"</span>: <span class="hljs-string">"E2XQtwbsDNVSO54QbAy6z7Q"</span>,
-            <span class="hljs-string">"surfaceForm"</span>: <span class="hljs-string">"Andrew N Liveris"</span>,
+            <span class="hljs-string">"name"</span>: <span class="hljs-string">"Gary Cohn"</span>,
+            <span class="hljs-string">"diffbotUri"</span>: <span class="hljs-string">"http://diffbot.com/entity/EpEweymvaM0ug7Y-pCJBB3w"</span>,
+            <span class="hljs-string">"nbIncomingEdges"</span>: <span class="hljs-number">19</span>,
+            <span class="hljs-string">"targetDiffbotUri"</span>: <span class="hljs-string">"http://diffbot.com/entity/EpEweymvaM0ug7Y-pCJBB3w"</span>,
+            <span class="hljs-string">"targetDiffbotId"</span>: <span class="hljs-string">"EpEweymvaM0ug7Y-pCJBB3w"</span>,
+            <span class="hljs-string">"surfaceForm"</span>: <span class="hljs-string">"Gary Cohn"</span>,
             <span class="hljs-string">"type"</span>: <span class="hljs-string">"Person"</span>
         },
         {
-            <span class="hljs-string">"summary"</span>: <span class="hljs-string">"CEO at ABB Technology Ventures Ltd"</span>,
-            <span class="hljs-string">"image"</span>: <span class="hljs-string">"https://kg.diffbot.com/image/api/get?fetch=yes&amp;url=g%3Cj7P0St%7D9u.LnOv%7BI%7C%40g7.pBYINs%3Ff%7CGZ7jr-tGZhWf%3DK%2FOvy%5Bp%3CSKbs8i%7CEyNzC%5D%3F%5Cn6d7LczNzCY%7B%3AV2Tk5f1S%5ENf%7B%60.C_o"</span>,
+            <span class="hljs-string">"summary"</span>: <span class="hljs-string">"Indian American business executive and CEO of IBM"</span>,
+            <span class="hljs-string">"image"</span>: <span class="hljs-string">"https://kg.diffbot.com/image/api/get?fetch=yes&amp;url=g%3Cj7P0Stx9f%3CJ-Ey7a.K%5EqP%7B.O9X0%7Ee%3C%5EaCXt%3B3hoIb6Z3VcevtG%7BflmD%5Dy%3BSi%3Eb%7B%3D-%3BVyTq%7C%5D2Kh6_-JX%40Xs9%5BUc%7C93AZ7Yn9k%3FSgHj4JwDZr_VDQ4Pi0%5D%7EE%5C%3A%26gGJnCI%26%5B%3AW_zu%60h%3CvoY%7B4JJugBP%5EdNo2lmY%3Egb%3EdzonMUA2jTUL1"</span>,
             <span class="hljs-string">"types"</span>: [
                 <span class="hljs-string">"Person"</span>
             ],
-            <span class="hljs-string">"name"</span>: <span class="hljs-string">"Peter Voser"</span>,
-            <span class="hljs-string">"diffbotUri"</span>: <span class="hljs-string">"http://diffbot.com/entity/EO9myMnvoM7-h9c6uDeCBdg"</span>,
-            <span class="hljs-string">"nbIncomingEdges"</span>: <span class="hljs-number">11</span>,
-            <span class="hljs-string">"targetDiffbotUri"</span>: <span class="hljs-string">"http://diffbot.com/entity/EO9myMnvoM7-h9c6uDeCBdg"</span>,
-            <span class="hljs-string">"targetDiffbotId"</span>: <span class="hljs-string">"EO9myMnvoM7-h9c6uDeCBdg"</span>,
-            <span class="hljs-string">"surfaceForm"</span>: <span class="hljs-string">"Peter Voser"</span>,
+            <span class="hljs-string">"name"</span>: <span class="hljs-string">"Arvind Krishna"</span>,
+            <span class="hljs-string">"diffbotUri"</span>: <span class="hljs-string">"http://diffbot.com/entity/E2w9R5RLuMCSUb511otaM-Q"</span>,
+            <span class="hljs-string">"nbIncomingEdges"</span>: <span class="hljs-number">7</span>,
+            <span class="hljs-string">"targetDiffbotUri"</span>: <span class="hljs-string">"http://diffbot.com/entity/E2w9R5RLuMCSUb511otaM-Q"</span>,
+            <span class="hljs-string">"targetDiffbotId"</span>: <span class="hljs-string">"E2w9R5RLuMCSUb511otaM-Q"</span>,
+            <span class="hljs-string">"surfaceForm"</span>: <span class="hljs-string">"Arvind Krishna"</span>,
             <span class="hljs-string">"type"</span>: <span class="hljs-string">"Person"</span>
         }
     ]
 }
 </code></pre>
 <h3><a class="anchor" aria-hidden="true" id="brands"></a><a href="#brands" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>brands</h3>
+<p>Brands of an organization.</p>
 <ul>
 <li><strong>Type:</strong> String</li>
 <li><strong>Example:</strong></li>
@@ -223,6 +230,7 @@
 }
 </code></pre>
 <h3><a class="anchor" aria-hidden="true" id="capitalization"></a><a href="#capitalization" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>capitalization</h3>
+<p>Total market value of all outstanding shares of an organization.</p>
 <ul>
 <li><strong>Type:</strong> Amount</li>
 <li><strong>Example:</strong></li>
@@ -269,6 +277,7 @@
 }
 </code></pre>
 <h3><a class="anchor" aria-hidden="true" id="ceo"></a><a href="#ceo" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>ceo</h3>
+<p>Chief Executive Officer of this organization.</p>
 <ul>
 <li><strong>Type:</strong> LinkedEntity</li>
 <li><strong>Example:</strong></li>
@@ -278,6 +287,7 @@
 }
 </code></pre>
 <h3><a class="anchor" aria-hidden="true" id="companieshouseids"></a><a href="#companieshouseids" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>companiesHouseIds</h3>
+<p>Identifier assigned by the U.K. Companies House.</p>
 <ul>
 <li><strong>Type:</strong> String</li>
 <li><strong>Example:</strong></li>
@@ -287,8 +297,9 @@
 }
 </code></pre>
 <h3><a class="anchor" aria-hidden="true" id="crunchbaseuri"></a><a href="#crunchbaseuri" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>crunchbaseUri</h3>
+<p>Link to the Crunchbase profile of this entity</p>
 <ul>
-<li><strong>Type:</strong> DiffbotUrl</li>
+<li><strong>Type:</strong> URL</li>
 <li><strong>Example:</strong></li>
 </ul>
 <pre><code class="hljs">{
@@ -309,8 +320,9 @@
 }
 </code></pre>
 <h3><a class="anchor" aria-hidden="true" id="facebookuri"></a><a href="#facebookuri" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>facebookUri</h3>
+<p>Link to the Facebook profile of this entity</p>
 <ul>
-<li><strong>Type:</strong> DiffbotUrl</li>
+<li><strong>Type:</strong> URL</li>
 <li><strong>Example:</strong></li>
 </ul>
 <pre><code class="hljs">{
@@ -318,6 +330,7 @@
 }
 </code></pre>
 <h3><a class="anchor" aria-hidden="true" id="founders"></a><a href="#founders" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>founders</h3>
+<p>Founders of this organization</p>
 <ul>
 <li><strong>Type:</strong> LinkedEntity</li>
 <li><strong>Example:</strong></li>
@@ -356,6 +369,7 @@
 }
 </code></pre>
 <h3><a class="anchor" aria-hidden="true" id="foundingdate"></a><a href="#foundingdate" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>foundingDate</h3>
+<p>The date this organization was founded</p>
 <ul>
 <li><strong>Type:</strong> DDate</li>
 <li><strong>Example:</strong></li>
@@ -369,8 +383,9 @@
 }
 </code></pre>
 <h3><a class="anchor" aria-hidden="true" id="githuburi"></a><a href="#githuburi" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>githubUri</h3>
+<p>Link to the Github profile of this entity</p>
 <ul>
-<li><strong>Type:</strong> DiffbotUrl</li>
+<li><strong>Type:</strong> URL</li>
 <li><strong>Example:</strong></li>
 </ul>
 <pre><code class="hljs">{
@@ -378,8 +393,9 @@
 }
 </code></pre>
 <h3><a class="anchor" aria-hidden="true" id="googleplusuri"></a><a href="#googleplusuri" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>googlePlusUri</h3>
+<p>Link to the Google+ profile of this entity</p>
 <ul>
-<li><strong>Type:</strong> DiffbotUrl</li>
+<li><strong>Type:</strong> URL</li>
 <li><strong>Example:</strong></li>
 </ul>
 <pre><code class="hljs">{
@@ -387,8 +403,9 @@
 }
 </code></pre>
 <h3><a class="anchor" aria-hidden="true" id="homepageuri"></a><a href="#homepageuri" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>homepageUri</h3>
+<p>Link to the homepage of this  entity</p>
 <ul>
-<li><strong>Type:</strong> DiffbotUrl</li>
+<li><strong>Type:</strong> URL</li>
 <li><strong>Example:</strong></li>
 </ul>
 <pre><code class="hljs">{
@@ -396,6 +413,7 @@
 }
 </code></pre>
 <h3><a class="anchor" aria-hidden="true" id="isicclassification"></a><a href="#isicclassification" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>iSicClassification</h3>
+<p>The International Standard of Industrial Classification (ISIC) of All Economic Activities code was developed by the UN as a standard way of classifying economic activities into 4-digit group codes. We use ISIC Rev. 4 (Edition 2016).</p>
 <ul>
 <li><strong>Type:</strong> ClassificationCode</li>
 <li><strong>Example:</strong></li>
@@ -405,6 +423,7 @@
 }
 </code></pre>
 <h3><a class="anchor" aria-hidden="true" id="indiancorporateidentitynumbers"></a><a href="#indiancorporateidentitynumbers" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>indianCorporateIdentityNumbers</h3>
+<p>Indian Corporate Identity Number (CIN).</p>
 <ul>
 <li><strong>Type:</strong> String</li>
 <li><strong>Example:</strong></li>
@@ -427,6 +446,7 @@
 }
 </code></pre>
 <h3><a class="anchor" aria-hidden="true" id="investments"></a><a href="#investments" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>investments</h3>
+<p>Investments received by this organization.</p>
 <ul>
 <li><strong>Type:</strong> Investment</li>
 <li><strong>Example:</strong></li>
@@ -436,6 +456,7 @@
 }
 </code></pre>
 <h3><a class="anchor" aria-hidden="true" id="ipo"></a><a href="#ipo" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>ipo</h3>
+<p>Information about the company's Initial Public Offering.</p>
 <ul>
 <li><strong>Type:</strong> IPO</li>
 <li><strong>Example:</strong></li>
@@ -452,6 +473,7 @@
 }
 </code></pre>
 <h3><a class="anchor" aria-hidden="true" id="irsemployeridentificationnumbers"></a><a href="#irsemployeridentificationnumbers" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>irsEmployerIdentificationNumbers</h3>
+<p>Employer Identification Number as assigned by the U.S. Internal Revenue Service.</p>
 <ul>
 <li><strong>Type:</strong> String</li>
 <li><strong>Example:</strong></li>
@@ -464,6 +486,7 @@
 }
 </code></pre>
 <h3><a class="anchor" aria-hidden="true" id="isacquired"></a><a href="#isacquired" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>isAcquired</h3>
+<p>Indicates whether the company has been acquired in the past. To verify whether the company has been dissoved or not, refer to 'isDissolved'.</p>
 <ul>
 <li><strong>Type:</strong> Boolean</li>
 <li><strong>Example:</strong></li>
@@ -473,6 +496,7 @@
 }
 </code></pre>
 <h3><a class="anchor" aria-hidden="true" id="isdissolved"></a><a href="#isdissolved" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>isDissolved</h3>
+<p>Whether this company is active or dissolved.</p>
 <ul>
 <li><strong>Type:</strong> Boolean</li>
 <li><strong>Example:</strong></li>
@@ -482,6 +506,7 @@
 }
 </code></pre>
 <h3><a class="anchor" aria-hidden="true" id="isnonprofit"></a><a href="#isnonprofit" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>isNonProfit</h3>
+<p>Whether this organization is a non-profit.</p>
 <ul>
 <li><strong>Type:</strong> Boolean</li>
 <li><strong>Example:</strong></li>
@@ -491,6 +516,7 @@
 }
 </code></pre>
 <h3><a class="anchor" aria-hidden="true" id="ispublic"></a><a href="#ispublic" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>isPublic</h3>
+<p>Whether the shares of this company are traded on a stock exchange.</p>
 <ul>
 <li><strong>Type:</strong> Boolean</li>
 <li><strong>Example:</strong></li>
@@ -500,6 +526,7 @@
 }
 </code></pre>
 <h3><a class="anchor" aria-hidden="true" id="leadership"></a><a href="#leadership" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>leadership</h3>
+<p>List of organization C-Level Officers.</p>
 <ul>
 <li><strong>Type:</strong> Employee</li>
 <li><strong>Example:</strong></li>
@@ -509,8 +536,9 @@
 }
 </code></pre>
 <h3><a class="anchor" aria-hidden="true" id="linkedinuri"></a><a href="#linkedinuri" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>linkedInUri</h3>
+<p>Link to the LinkedIn profile of this entity</p>
 <ul>
-<li><strong>Type:</strong> DiffbotUrl</li>
+<li><strong>Type:</strong> URL</li>
 <li><strong>Example:</strong></li>
 </ul>
 <pre><code class="hljs">{
@@ -518,6 +546,7 @@
 }
 </code></pre>
 <h3><a class="anchor" aria-hidden="true" id="location"></a><a href="#location" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>location</h3>
+<p>The main location of an organization.</p>
 <ul>
 <li><strong>Type:</strong> Location</li>
 <li><strong>Example:</strong></li>
@@ -533,7 +562,7 @@
             ],
             <span class="hljs-string">"name"</span>: <span class="hljs-string">"United States of America"</span>,
             <span class="hljs-string">"diffbotUri"</span>: <span class="hljs-string">"http://diffbot.com/entity/E01d4EK33MmCosgI2KXa4-A"</span>,
-            <span class="hljs-string">"nbIncomingEdges"</span>: <span class="hljs-number">1026989768</span>,
+            <span class="hljs-string">"nbIncomingEdges"</span>: <span class="hljs-number">1033140662</span>,
             <span class="hljs-string">"targetDiffbotUri"</span>: <span class="hljs-string">"http://diffbot.com/entity/E01d4EK33MmCosgI2KXa4-A"</span>,
             <span class="hljs-string">"targetDiffbotId"</span>: <span class="hljs-string">"E01d4EK33MmCosgI2KXa4-A"</span>,
             <span class="hljs-string">"type"</span>: <span class="hljs-string">"AdministrativeArea"</span>
@@ -549,7 +578,7 @@
             ],
             <span class="hljs-string">"name"</span>: <span class="hljs-string">"Armonk"</span>,
             <span class="hljs-string">"diffbotUri"</span>: <span class="hljs-string">"http://diffbot.com/entity/EFYOMni-nNtScxpZwteaMxQ"</span>,
-            <span class="hljs-string">"nbIncomingEdges"</span>: <span class="hljs-number">28407</span>,
+            <span class="hljs-string">"nbIncomingEdges"</span>: <span class="hljs-number">28433</span>,
             <span class="hljs-string">"targetDiffbotUri"</span>: <span class="hljs-string">"http://diffbot.com/entity/EFYOMni-nNtScxpZwteaMxQ"</span>,
             <span class="hljs-string">"targetDiffbotId"</span>: <span class="hljs-string">"EFYOMni-nNtScxpZwteaMxQ"</span>,
             <span class="hljs-string">"type"</span>: <span class="hljs-string">"AdministrativeArea"</span>
@@ -568,7 +597,7 @@
             ],
             <span class="hljs-string">"name"</span>: <span class="hljs-string">"New York"</span>,
             <span class="hljs-string">"diffbotUri"</span>: <span class="hljs-string">"http://diffbot.com/entity/E1NxI_KXaMbiP5g2aM9MRdw"</span>,
-            <span class="hljs-string">"nbIncomingEdges"</span>: <span class="hljs-number">66347223</span>,
+            <span class="hljs-string">"nbIncomingEdges"</span>: <span class="hljs-number">66917489</span>,
             <span class="hljs-string">"targetDiffbotUri"</span>: <span class="hljs-string">"http://diffbot.com/entity/E1NxI_KXaMbiP5g2aM9MRdw"</span>,
             <span class="hljs-string">"targetDiffbotId"</span>: <span class="hljs-string">"E1NxI_KXaMbiP5g2aM9MRdw"</span>,
             <span class="hljs-string">"type"</span>: <span class="hljs-string">"AdministrativeArea"</span>
@@ -578,6 +607,7 @@
 }
 </code></pre>
 <h3><a class="anchor" aria-hidden="true" id="locations"></a><a href="#locations" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>locations</h3>
+<p>All locations of an organization, including former locations (refer to the field 'isCurrent').</p>
 <ul>
 <li><strong>Type:</strong> Location</li>
 <li><strong>Example:</strong></li>
@@ -594,7 +624,7 @@
                 ],
                 <span class="hljs-string">"name"</span>: <span class="hljs-string">"United States of America"</span>,
                 <span class="hljs-string">"diffbotUri"</span>: <span class="hljs-string">"http://diffbot.com/entity/E01d4EK33MmCosgI2KXa4-A"</span>,
-                <span class="hljs-string">"nbIncomingEdges"</span>: <span class="hljs-number">1026989768</span>,
+                <span class="hljs-string">"nbIncomingEdges"</span>: <span class="hljs-number">1033140662</span>,
                 <span class="hljs-string">"targetDiffbotUri"</span>: <span class="hljs-string">"http://diffbot.com/entity/E01d4EK33MmCosgI2KXa4-A"</span>,
                 <span class="hljs-string">"targetDiffbotId"</span>: <span class="hljs-string">"E01d4EK33MmCosgI2KXa4-A"</span>,
                 <span class="hljs-string">"type"</span>: <span class="hljs-string">"AdministrativeArea"</span>
@@ -610,7 +640,7 @@
                 ],
                 <span class="hljs-string">"name"</span>: <span class="hljs-string">"Armonk"</span>,
                 <span class="hljs-string">"diffbotUri"</span>: <span class="hljs-string">"http://diffbot.com/entity/EFYOMni-nNtScxpZwteaMxQ"</span>,
-                <span class="hljs-string">"nbIncomingEdges"</span>: <span class="hljs-number">28407</span>,
+                <span class="hljs-string">"nbIncomingEdges"</span>: <span class="hljs-number">28433</span>,
                 <span class="hljs-string">"targetDiffbotUri"</span>: <span class="hljs-string">"http://diffbot.com/entity/EFYOMni-nNtScxpZwteaMxQ"</span>,
                 <span class="hljs-string">"targetDiffbotId"</span>: <span class="hljs-string">"EFYOMni-nNtScxpZwteaMxQ"</span>,
                 <span class="hljs-string">"type"</span>: <span class="hljs-string">"AdministrativeArea"</span>
@@ -625,7 +655,7 @@
                 ],
                 <span class="hljs-string">"name"</span>: <span class="hljs-string">"Westchester County"</span>,
                 <span class="hljs-string">"diffbotUri"</span>: <span class="hljs-string">"http://diffbot.com/entity/EoKezLIvJP82Xm_cWVQyCQA"</span>,
-                <span class="hljs-string">"nbIncomingEdges"</span>: <span class="hljs-number">2643349</span>,
+                <span class="hljs-string">"nbIncomingEdges"</span>: <span class="hljs-number">2647177</span>,
                 <span class="hljs-string">"targetDiffbotUri"</span>: <span class="hljs-string">"http://diffbot.com/entity/EoKezLIvJP82Xm_cWVQyCQA"</span>,
                 <span class="hljs-string">"targetDiffbotId"</span>: <span class="hljs-string">"EoKezLIvJP82Xm_cWVQyCQA"</span>,
                 <span class="hljs-string">"type"</span>: <span class="hljs-string">"AdministrativeArea"</span>
@@ -642,7 +672,7 @@
                 ],
                 <span class="hljs-string">"name"</span>: <span class="hljs-string">"New York"</span>,
                 <span class="hljs-string">"diffbotUri"</span>: <span class="hljs-string">"http://diffbot.com/entity/E1NxI_KXaMbiP5g2aM9MRdw"</span>,
-                <span class="hljs-string">"nbIncomingEdges"</span>: <span class="hljs-number">66347223</span>,
+                <span class="hljs-string">"nbIncomingEdges"</span>: <span class="hljs-number">66917489</span>,
                 <span class="hljs-string">"targetDiffbotUri"</span>: <span class="hljs-string">"http://diffbot.com/entity/E1NxI_KXaMbiP5g2aM9MRdw"</span>,
                 <span class="hljs-string">"targetDiffbotId"</span>: <span class="hljs-string">"E1NxI_KXaMbiP5g2aM9MRdw"</span>,
                 <span class="hljs-string">"type"</span>: <span class="hljs-string">"AdministrativeArea"</span>
@@ -659,7 +689,7 @@
                 ],
                 <span class="hljs-string">"name"</span>: <span class="hljs-string">"United States of America"</span>,
                 <span class="hljs-string">"diffbotUri"</span>: <span class="hljs-string">"http://diffbot.com/entity/E01d4EK33MmCosgI2KXa4-A"</span>,
-                <span class="hljs-string">"nbIncomingEdges"</span>: <span class="hljs-number">1026989768</span>,
+                <span class="hljs-string">"nbIncomingEdges"</span>: <span class="hljs-number">1033140662</span>,
                 <span class="hljs-string">"targetDiffbotUri"</span>: <span class="hljs-string">"http://diffbot.com/entity/E01d4EK33MmCosgI2KXa4-A"</span>,
                 <span class="hljs-string">"targetDiffbotId"</span>: <span class="hljs-string">"E01d4EK33MmCosgI2KXa4-A"</span>,
                 <span class="hljs-string">"type"</span>: <span class="hljs-string">"AdministrativeArea"</span>
@@ -680,7 +710,7 @@
                 ],
                 <span class="hljs-string">"name"</span>: <span class="hljs-string">"United States of America"</span>,
                 <span class="hljs-string">"diffbotUri"</span>: <span class="hljs-string">"http://diffbot.com/entity/E01d4EK33MmCosgI2KXa4-A"</span>,
-                <span class="hljs-string">"nbIncomingEdges"</span>: <span class="hljs-number">1026989768</span>,
+                <span class="hljs-string">"nbIncomingEdges"</span>: <span class="hljs-number">1033140662</span>,
                 <span class="hljs-string">"targetDiffbotUri"</span>: <span class="hljs-string">"http://diffbot.com/entity/E01d4EK33MmCosgI2KXa4-A"</span>,
                 <span class="hljs-string">"targetDiffbotId"</span>: <span class="hljs-string">"E01d4EK33MmCosgI2KXa4-A"</span>,
                 <span class="hljs-string">"type"</span>: <span class="hljs-string">"AdministrativeArea"</span>
@@ -696,7 +726,7 @@
                 ],
                 <span class="hljs-string">"name"</span>: <span class="hljs-string">"North Castle"</span>,
                 <span class="hljs-string">"diffbotUri"</span>: <span class="hljs-string">"http://diffbot.com/entity/EsulWqYOjPseTau0QUH8Ruw"</span>,
-                <span class="hljs-string">"nbIncomingEdges"</span>: <span class="hljs-number">2919</span>,
+                <span class="hljs-string">"nbIncomingEdges"</span>: <span class="hljs-number">2920</span>,
                 <span class="hljs-string">"targetDiffbotUri"</span>: <span class="hljs-string">"http://diffbot.com/entity/EsulWqYOjPseTau0QUH8Ruw"</span>,
                 <span class="hljs-string">"targetDiffbotId"</span>: <span class="hljs-string">"EsulWqYOjPseTau0QUH8Ruw"</span>,
                 <span class="hljs-string">"type"</span>: <span class="hljs-string">"AdministrativeArea"</span>
@@ -711,7 +741,7 @@
                 ],
                 <span class="hljs-string">"name"</span>: <span class="hljs-string">"Westchester County"</span>,
                 <span class="hljs-string">"diffbotUri"</span>: <span class="hljs-string">"http://diffbot.com/entity/EoKezLIvJP82Xm_cWVQyCQA"</span>,
-                <span class="hljs-string">"nbIncomingEdges"</span>: <span class="hljs-number">2643349</span>,
+                <span class="hljs-string">"nbIncomingEdges"</span>: <span class="hljs-number">2647177</span>,
                 <span class="hljs-string">"targetDiffbotUri"</span>: <span class="hljs-string">"http://diffbot.com/entity/EoKezLIvJP82Xm_cWVQyCQA"</span>,
                 <span class="hljs-string">"targetDiffbotId"</span>: <span class="hljs-string">"EoKezLIvJP82Xm_cWVQyCQA"</span>,
                 <span class="hljs-string">"type"</span>: <span class="hljs-string">"AdministrativeArea"</span>
@@ -728,7 +758,7 @@
                 ],
                 <span class="hljs-string">"name"</span>: <span class="hljs-string">"New York"</span>,
                 <span class="hljs-string">"diffbotUri"</span>: <span class="hljs-string">"http://diffbot.com/entity/E1NxI_KXaMbiP5g2aM9MRdw"</span>,
-                <span class="hljs-string">"nbIncomingEdges"</span>: <span class="hljs-number">66347223</span>,
+                <span class="hljs-string">"nbIncomingEdges"</span>: <span class="hljs-number">66917489</span>,
                 <span class="hljs-string">"targetDiffbotUri"</span>: <span class="hljs-string">"http://diffbot.com/entity/E1NxI_KXaMbiP5g2aM9MRdw"</span>,
                 <span class="hljs-string">"targetDiffbotId"</span>: <span class="hljs-string">"E1NxI_KXaMbiP5g2aM9MRdw"</span>,
                 <span class="hljs-string">"type"</span>: <span class="hljs-string">"AdministrativeArea"</span>
@@ -739,6 +769,7 @@
 }
 </code></pre>
 <h3><a class="anchor" aria-hidden="true" id="logo"></a><a href="#logo" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>logo</h3>
+<p>A graphic mark, emblem, or symbol representative of an institution</p>
 <ul>
 <li><strong>Type:</strong> String</li>
 <li><strong>Example:</strong></li>
@@ -748,6 +779,7 @@
 }
 </code></pre>
 <h3><a class="anchor" aria-hidden="true" id="mccclassification"></a><a href="#mccclassification" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>mccClassification</h3>
+<p>A Merchant Category Code (MCC) is a four-digit number listed in ISO 18245 for retail financial services. An MCC is used to classify a business by the types of goods or services it provides.</p>
 <ul>
 <li><strong>Type:</strong> ClassificationCode</li>
 <li><strong>Example:</strong></li>
@@ -757,7 +789,7 @@
 }
 </code></pre>
 <h3><a class="anchor" aria-hidden="true" id="mcccode"></a><a href="#mcccode" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>mccCode</h3>
-<p><strong><code>Deprecated</code></strong></p>
+<p><strong><code>Deprecated</code></strong>  Deprecated field, please migrate to mccClassification field</p>
 <ul>
 <li><strong>Type:</strong> Integer</li>
 <li><strong>Example:</strong></li>
@@ -767,7 +799,7 @@
 }
 </code></pre>
 <h3><a class="anchor" aria-hidden="true" id="mcccodedescription"></a><a href="#mcccodedescription" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>mccCodeDescription</h3>
-<p><strong><code>Deprecated</code></strong></p>
+<p><strong><code>Deprecated</code></strong>  Deprecated field, please migrate to mccClassification field</p>
 <ul>
 <li><strong>Type:</strong> String</li>
 <li><strong>Example:</strong></li>
@@ -777,6 +809,7 @@
 }
 </code></pre>
 <h3><a class="anchor" aria-hidden="true" id="motto"></a><a href="#motto" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>motto</h3>
+<p>A short sentence or phrase chosen as encapsulating the beliefs or ideals guiding an organization</p>
 <ul>
 <li><strong>Type:</strong> String</li>
 <li><strong>Example:</strong></li>
@@ -786,6 +819,7 @@
 }
 </code></pre>
 <h3><a class="anchor" aria-hidden="true" id="naceclassification"></a><a href="#naceclassification" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>naceClassification</h3>
+<p>The Statistical classification of economic activities in the European Community (NACE) is is a 4-digit classification providing the framework for collecting and presenting a large range of statistical data. We use NACE Rev. 2 (2008).</p>
 <ul>
 <li><strong>Type:</strong> ClassificationCode</li>
 <li><strong>Example:</strong></li>
@@ -795,6 +829,7 @@
 }
 </code></pre>
 <h3><a class="anchor" aria-hidden="true" id="naicsclassification"></a><a href="#naicsclassification" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>naicsClassification</h3>
+<p>The North American Industry Classification System (NAICS) is the standard used by Federal statistical agencies in classifying business establishments for the purpose of collecting, analyzing, and publishing statistical data related to the U.S. business economy.</p>
 <ul>
 <li><strong>Type:</strong> ClassificationCode</li>
 <li><strong>Example:</strong></li>
@@ -812,23 +847,35 @@
             <span class="hljs-attr">"name"</span>: <span class="hljs-string">"Computer Storage Device Manufacturing"</span>
         },
         {
-            <span class="hljs-attr">"code"</span>: <span class="hljs-string">"334419"</span>,
+            <span class="hljs-attr">"code"</span>: <span class="hljs-string">"330000"</span>,
             <span class="hljs-attr">"isPrimary"</span>: <span class="hljs-literal">false</span>,
-            <span class="hljs-attr">"name"</span>: <span class="hljs-string">"Other Electronic Component Manufacturing"</span>
+            <span class="hljs-attr">"name"</span>: <span class="hljs-string">"Manufacturing"</span>
         }
     ]
 }
 </code></pre>
 <h3><a class="anchor" aria-hidden="true" id="nbactiveemployeeedges"></a><a href="#nbactiveemployeeedges" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>nbActiveEmployeeEdges</h3>
+<p>Number of employees in the Diffbot KG who are currently employed by this organization.</p>
 <ul>
 <li><strong>Type:</strong> Integer</li>
 <li><strong>Example:</strong></li>
 </ul>
 <pre><code class="hljs">{
-    <span class="hljs-attr">"nbActiveEmployeeEdges"</span>: <span class="hljs-number">156737</span>
+    <span class="hljs-attr">"nbActiveEmployeeEdges"</span>: <span class="hljs-number">145560</span>
+}
+</code></pre>
+<h3><a class="anchor" aria-hidden="true" id="nbemployeeranges"></a><a href="#nbemployeeranges" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>nbEmployeeRanges</h3>
+<p>The list of all ranges found for an organization from different sources</p>
+<ul>
+<li><strong>Type:</strong> Range</li>
+<li><strong>Example:</strong></li>
+</ul>
+<pre><code class="hljs">{
+    <span class="hljs-attr">"nbEmployeeRanges"</span>: []
 }
 </code></pre>
 <h3><a class="anchor" aria-hidden="true" id="nbemployees"></a><a href="#nbemployees" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>nbEmployees</h3>
+<p>The estimated number of employees of an organization</p>
 <ul>
 <li><strong>Type:</strong> Integer</li>
 <li><strong>Example:</strong></li>
@@ -838,6 +885,7 @@
 }
 </code></pre>
 <h3><a class="anchor" aria-hidden="true" id="nbemployeesmax"></a><a href="#nbemployeesmax" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>nbEmployeesMax</h3>
+<p>Defines a upper bound for the number of employees of an organization</p>
 <ul>
 <li><strong>Type:</strong> Integer</li>
 <li><strong>Example:</strong></li>
@@ -847,6 +895,7 @@
 }
 </code></pre>
 <h3><a class="anchor" aria-hidden="true" id="nbemployeesmin"></a><a href="#nbemployeesmin" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>nbEmployeesMin</h3>
+<p>Defines a lower bound for the number of employees of an organization</p>
 <ul>
 <li><strong>Type:</strong> Integer</li>
 <li><strong>Example:</strong></li>
@@ -856,6 +905,7 @@
 }
 </code></pre>
 <h3><a class="anchor" aria-hidden="true" id="nblocations"></a><a href="#nblocations" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>nbLocations</h3>
+<p>Number of locations listed in the field 'locations'</p>
 <ul>
 <li><strong>Type:</strong> Integer</li>
 <li><strong>Example:</strong></li>
@@ -865,6 +915,7 @@
 }
 </code></pre>
 <h3><a class="anchor" aria-hidden="true" id="nbuniqueinvestors"></a><a href="#nbuniqueinvestors" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>nbUniqueInvestors</h3>
+<p>Number of unique investors.</p>
 <ul>
 <li><strong>Type:</strong> Integer</li>
 <li><strong>Example:</strong></li>
@@ -874,6 +925,7 @@
 }
 </code></pre>
 <h3><a class="anchor" aria-hidden="true" id="parentcompany"></a><a href="#parentcompany" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>parentCompany</h3>
+<p>The parent company of this subsidiary.</p>
 <ul>
 <li><strong>Type:</strong> LinkedEntity</li>
 <li><strong>Example:</strong></li>
@@ -883,6 +935,7 @@
 }
 </code></pre>
 <h3><a class="anchor" aria-hidden="true" id="phonenumbers"></a><a href="#phonenumbers" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>phoneNumbers</h3>
+<p>Phone numbers of this organization.</p>
 <ul>
 <li><strong>Type:</strong> PhoneNumber</li>
 <li><strong>Example:</strong></li>
@@ -901,6 +954,7 @@
 }
 </code></pre>
 <h3><a class="anchor" aria-hidden="true" id="quarterlyrevenues"></a><a href="#quarterlyrevenues" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>quarterlyRevenues</h3>
+<p>An organization's revenue for a period of 3 months.</p>
 <ul>
 <li><strong>Type:</strong> QuarterlyRevenue</li>
 <li><strong>Example:</strong></li>
@@ -968,6 +1022,7 @@
 }
 </code></pre>
 <h3><a class="anchor" aria-hidden="true" id="revenue"></a><a href="#revenue" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>revenue</h3>
+<p>Income, especially that of a company or organization, generated from the sales of goods, services, capital or any other assets.</p>
 <ul>
 <li><strong>Type:</strong> Amount</li>
 <li><strong>Example:</strong></li>
@@ -980,6 +1035,7 @@
 }
 </code></pre>
 <h3><a class="anchor" aria-hidden="true" id="seccentralindexkeys"></a><a href="#seccentralindexkeys" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>secCentralIndexKeys</h3>
+<p>Central Index Key as assigned by the U.S. Securities and Exchange Commission.</p>
 <ul>
 <li><strong>Type:</strong> String</li>
 <li><strong>Example:</strong></li>
@@ -992,6 +1048,7 @@
 }
 </code></pre>
 <h3><a class="anchor" aria-hidden="true" id="sicclassification"></a><a href="#sicclassification" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>sicClassification</h3>
+<p>The Standard Industrial Classification (SIC) is a system for classifying industries by a four-digit code. We use the version adopted by the U.S. Securities and Exchange Commission.</p>
 <ul>
 <li><strong>Type:</strong> ClassificationCode</li>
 <li><strong>Example:</strong></li>
@@ -1007,7 +1064,7 @@
 }
 </code></pre>
 <h3><a class="anchor" aria-hidden="true" id="siccode"></a><a href="#siccode" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>sicCode</h3>
-<p><strong><code>Deprecated</code></strong></p>
+<p><strong><code>Deprecated</code></strong>  Deprecated field, please migrate to sicClassification field</p>
 <ul>
 <li><strong>Type:</strong> Integer</li>
 <li><strong>Example:</strong></li>
@@ -1017,7 +1074,7 @@
 }
 </code></pre>
 <h3><a class="anchor" aria-hidden="true" id="siccodedescription"></a><a href="#siccodedescription" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>sicCodeDescription</h3>
-<p><strong><code>Deprecated</code></strong></p>
+<p><strong><code>Deprecated</code></strong>  Deprecated field, please migrate to sicClassification field</p>
 <ul>
 <li><strong>Type:</strong> String</li>
 <li><strong>Example:</strong></li>
@@ -1027,6 +1084,7 @@
 }
 </code></pre>
 <h3><a class="anchor" aria-hidden="true" id="stock"></a><a href="#stock" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>stock</h3>
+<p>Information about the company's stock.</p>
 <ul>
 <li><strong>Type:</strong> Stock</li>
 <li><strong>Example:</strong></li>
@@ -1039,6 +1097,7 @@
 }
 </code></pre>
 <h3><a class="anchor" aria-hidden="true" id="subsidiaries"></a><a href="#subsidiaries" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>subsidiaries</h3>
+<p>Current subsidiaries of this organization.</p>
 <ul>
 <li><strong>Type:</strong> LinkedEntity</li>
 <li><strong>Example:</strong></li>
@@ -1054,7 +1113,7 @@
             ],
             <span class="hljs-string">"name"</span>: <span class="hljs-string">"Lotus Development"</span>,
             <span class="hljs-string">"diffbotUri"</span>: <span class="hljs-string">"http://diffbot.com/entity/EYO3WDFj0MJOcLbiuwE9rCQ"</span>,
-            <span class="hljs-string">"nbIncomingEdges"</span>: <span class="hljs-number">1734</span>,
+            <span class="hljs-string">"nbIncomingEdges"</span>: <span class="hljs-number">1751</span>,
             <span class="hljs-string">"targetDiffbotUri"</span>: <span class="hljs-string">"http://diffbot.com/entity/EYO3WDFj0MJOcLbiuwE9rCQ"</span>,
             <span class="hljs-string">"targetDiffbotId"</span>: <span class="hljs-string">"EYO3WDFj0MJOcLbiuwE9rCQ"</span>,
             <span class="hljs-string">"surfaceForm"</span>: <span class="hljs-string">"Lotus Development"</span>,
@@ -1069,7 +1128,7 @@
             ],
             <span class="hljs-string">"name"</span>: <span class="hljs-string">"Internet Security Systems"</span>,
             <span class="hljs-string">"diffbotUri"</span>: <span class="hljs-string">"http://diffbot.com/entity/Er8fZXT6TMxOdmnXwwbnGTA"</span>,
-            <span class="hljs-string">"nbIncomingEdges"</span>: <span class="hljs-number">2173</span>,
+            <span class="hljs-string">"nbIncomingEdges"</span>: <span class="hljs-number">2187</span>,
             <span class="hljs-string">"targetDiffbotUri"</span>: <span class="hljs-string">"http://diffbot.com/entity/Er8fZXT6TMxOdmnXwwbnGTA"</span>,
             <span class="hljs-string">"targetDiffbotId"</span>: <span class="hljs-string">"Er8fZXT6TMxOdmnXwwbnGTA"</span>,
             <span class="hljs-string">"surfaceForm"</span>: <span class="hljs-string">"Internet Security Systems"</span>,
@@ -1084,7 +1143,7 @@
             ],
             <span class="hljs-string">"name"</span>: <span class="hljs-string">"The Weather Company"</span>,
             <span class="hljs-string">"diffbotUri"</span>: <span class="hljs-string">"http://diffbot.com/entity/EqNo-pjkfMDyH5hux3StckQ"</span>,
-            <span class="hljs-string">"nbIncomingEdges"</span>: <span class="hljs-number">136</span>,
+            <span class="hljs-string">"nbIncomingEdges"</span>: <span class="hljs-number">137</span>,
             <span class="hljs-string">"targetDiffbotUri"</span>: <span class="hljs-string">"http://diffbot.com/entity/EqNo-pjkfMDyH5hux3StckQ"</span>,
             <span class="hljs-string">"targetDiffbotId"</span>: <span class="hljs-string">"EqNo-pjkfMDyH5hux3StckQ"</span>,
             <span class="hljs-string">"surfaceForm"</span>: <span class="hljs-string">"The Weather Company"</span>,
@@ -1094,6 +1153,7 @@
 }
 </code></pre>
 <h3><a class="anchor" aria-hidden="true" id="totalinvestment"></a><a href="#totalinvestment" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>totalInvestment</h3>
+<p>Sum of all investments.</p>
 <ul>
 <li><strong>Type:</strong> Amount</li>
 <li><strong>Example:</strong></li>
@@ -1103,8 +1163,9 @@
 }
 </code></pre>
 <h3><a class="anchor" aria-hidden="true" id="twitteruri"></a><a href="#twitteruri" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>twitterUri</h3>
+<p>Link to the LinkedIn profile of this entity</p>
 <ul>
-<li><strong>Type:</strong> DiffbotUrl</li>
+<li><strong>Type:</strong> URL</li>
 <li><strong>Example:</strong></li>
 </ul>
 <pre><code class="hljs">{
@@ -1112,6 +1173,7 @@
 }
 </code></pre>
 <h3><a class="anchor" aria-hidden="true" id="uksicclassification"></a><a href="#uksicclassification" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>ukSicClassification</h3>
+<p>The U.K. Standard Industrial Classification (SIC) system used by Companies House. Companies House uses a condensed version of the full list of codes available from the Office of National Statistics (ONS).</p>
 <ul>
 <li><strong>Type:</strong> ClassificationCode</li>
 <li><strong>Example:</strong></li>
@@ -1121,6 +1183,7 @@
 }
 </code></pre>
 <h3><a class="anchor" aria-hidden="true" id="vatidentificationnumbers"></a><a href="#vatidentificationnumbers" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>vatIdentificationNumbers</h3>
+<p>VAT identification number, an identifier used in many countries, including the countries of the European Union, for value added tax purposes</p>
 <ul>
 <li><strong>Type:</strong> String</li>
 <li><strong>Example:</strong></li>
@@ -1130,8 +1193,9 @@
 }
 </code></pre>
 <h3><a class="anchor" aria-hidden="true" id="wikipediauri"></a><a href="#wikipediauri" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>wikipediaUri</h3>
+<p>Link to the Crunchbase profile of this entity</p>
 <ul>
-<li><strong>Type:</strong> DiffbotUrl</li>
+<li><strong>Type:</strong> URL</li>
 <li><strong>Example:</strong></li>
 </ul>
 <pre><code class="hljs">{
@@ -1139,6 +1203,7 @@
 }
 </code></pre>
 <h3><a class="anchor" aria-hidden="true" id="yearlyrevenues"></a><a href="#yearlyrevenues" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>yearlyRevenues</h3>
+<p>An organization's revenue for a period of 12 months.</p>
 <ul>
 <li><strong>Type:</strong> YearlyRevenue</li>
 <li><strong>Example:</strong></li>
@@ -1182,7 +1247,7 @@
     ]
 }
 </code></pre>
-</span></div></article></div><div class="docLastUpdate"><em>Last updated by jeromechoo</em></div><div class="docs-prevnext"><a class="docs-prev button" href="/docs/en/kg-ont-article"><span class="arrow-prev">← </span><span>Article</span></a><a class="docs-next button" href="/docs/en/kg-ont-person"><span>Person</span><span class="arrow-next"> →</span></a></div></div></div><nav class="onPageNav"><ul class="toc-headings"><li><a href="#organization-fields">Organization Fields</a></li><li><a href="#organization-field-details">Organization Field Details</a><ul class="toc-headings"><li><a href="#acquiredby">acquiredBy</a></li><li><a href="#angellisturi">angellistUri</a></li><li><a href="#anzsicclassification">anzSicClassification</a></li><li><a href="#bloguri">blogUri</a></li><li><a href="#boardmembers">boardMembers</a></li><li><a href="#brands">brands</a></li><li><a href="#capitalization">capitalization</a></li><li><a href="#categories">categories</a></li><li><a href="#ceo">ceo</a></li><li><a href="#companieshouseids">companiesHouseIds</a></li><li><a href="#crunchbaseuri">crunchbaseUri</a></li><li><a href="#descriptors">descriptors</a></li><li><a href="#facebookuri">facebookUri</a></li><li><a href="#founders">founders</a></li><li><a href="#foundingdate">foundingDate</a></li><li><a href="#githuburi">githubUri</a></li><li><a href="#googleplusuri">googlePlusUri</a></li><li><a href="#homepageuri">homepageUri</a></li><li><a href="#isicclassification">iSicClassification</a></li><li><a href="#indiancorporateidentitynumbers">indianCorporateIdentityNumbers</a></li><li><a href="#industries">industries</a></li><li><a href="#investments">investments</a></li><li><a href="#ipo">ipo</a></li><li><a href="#irsemployeridentificationnumbers">irsEmployerIdentificationNumbers</a></li><li><a href="#isacquired">isAcquired</a></li><li><a href="#isdissolved">isDissolved</a></li><li><a href="#isnonprofit">isNonProfit</a></li><li><a href="#ispublic">isPublic</a></li><li><a href="#leadership">leadership</a></li><li><a href="#linkedinuri">linkedInUri</a></li><li><a href="#location">location</a></li><li><a href="#locations">locations</a></li><li><a href="#logo">logo</a></li><li><a href="#mccclassification">mccClassification</a></li><li><a href="#mcccode">mccCode</a></li><li><a href="#mcccodedescription">mccCodeDescription</a></li><li><a href="#motto">motto</a></li><li><a href="#naceclassification">naceClassification</a></li><li><a href="#naicsclassification">naicsClassification</a></li><li><a href="#nbactiveemployeeedges">nbActiveEmployeeEdges</a></li><li><a href="#nbemployees">nbEmployees</a></li><li><a href="#nbemployeesmax">nbEmployeesMax</a></li><li><a href="#nbemployeesmin">nbEmployeesMin</a></li><li><a href="#nblocations">nbLocations</a></li><li><a href="#nbuniqueinvestors">nbUniqueInvestors</a></li><li><a href="#parentcompany">parentCompany</a></li><li><a href="#phonenumbers">phoneNumbers</a></li><li><a href="#quarterlyrevenues">quarterlyRevenues</a></li><li><a href="#revenue">revenue</a></li><li><a href="#seccentralindexkeys">secCentralIndexKeys</a></li><li><a href="#sicclassification">sicClassification</a></li><li><a href="#siccode">sicCode</a></li><li><a href="#siccodedescription">sicCodeDescription</a></li><li><a href="#stock">stock</a></li><li><a href="#subsidiaries">subsidiaries</a></li><li><a href="#totalinvestment">totalInvestment</a></li><li><a href="#twitteruri">twitterUri</a></li><li><a href="#uksicclassification">ukSicClassification</a></li><li><a href="#vatidentificationnumbers">vatIdentificationNumbers</a></li><li><a href="#wikipediauri">wikipediaUri</a></li><li><a href="#yearlyrevenues">yearlyRevenues</a></li></ul></li></ul></nav></div><footer class="nav-footer" id="footer"><section class="sitemap"><a href="/" class="nav-home"><img src="/img/diffbot_white.svg" alt="Docs Suite" width="66" height="58"/></a><div><h5>Docs</h5><a href="/docs/en/api-basics-index">Extraction</a><a href="/docs/en/cb-basics-index">Crawling</a><a href="/docs/en/kg-index">Knowledge Graph</a><a href="/docs/en/explain-gdpr">Diffbot and GDPR</a></div><div><h5>Community</h5><a href="https://stackoverflow.com/questions/tagged/diffbot" target="_blank" rel="noreferrer noopener">Stack Overflow</a><a href="https://twitter.com/diffbot" target="_blank" rel="noreferrer noopener">Twitter</a></div><div><h5>More</h5><a href="/blog">Blog</a><a href="/help">Help</a><a href="https://github.com/diffbot">GitHub</a></div></section><a href="https://diffbot.com/" target="_blank" rel="noreferrer noopener" class="fbOpenSource"><img src="/img/diffbot_white.svg" alt="Diffbot.com" width="170" height="45"/></a><section class="copyright">Copyright © 2021 Diffbot.com</section></footer></div><script type="text/javascript" src="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.js"></script><script>
+</span></div></article></div><div class="docLastUpdate"><em>Last updated by jeromechoo</em></div><div class="docs-prevnext"><a class="docs-prev button" href="/docs/en/kg-ont-article"><span class="arrow-prev">← </span><span>Article</span></a><a class="docs-next button" href="/docs/en/kg-ont-person"><span>Person</span><span class="arrow-next"> →</span></a></div></div></div><nav class="onPageNav"><ul class="toc-headings"><li><a href="#organization-fields">Organization Fields</a></li><li><a href="#organization-field-details">Organization Field Details</a><ul class="toc-headings"><li><a href="#acquiredby">acquiredBy</a></li><li><a href="#angellisturi">angellistUri</a></li><li><a href="#anzsicclassification">anzSicClassification</a></li><li><a href="#bloguri">blogUri</a></li><li><a href="#boardmembers">boardMembers</a></li><li><a href="#brands">brands</a></li><li><a href="#capitalization">capitalization</a></li><li><a href="#categories">categories</a></li><li><a href="#ceo">ceo</a></li><li><a href="#companieshouseids">companiesHouseIds</a></li><li><a href="#crunchbaseuri">crunchbaseUri</a></li><li><a href="#descriptors">descriptors</a></li><li><a href="#facebookuri">facebookUri</a></li><li><a href="#founders">founders</a></li><li><a href="#foundingdate">foundingDate</a></li><li><a href="#githuburi">githubUri</a></li><li><a href="#googleplusuri">googlePlusUri</a></li><li><a href="#homepageuri">homepageUri</a></li><li><a href="#isicclassification">iSicClassification</a></li><li><a href="#indiancorporateidentitynumbers">indianCorporateIdentityNumbers</a></li><li><a href="#industries">industries</a></li><li><a href="#investments">investments</a></li><li><a href="#ipo">ipo</a></li><li><a href="#irsemployeridentificationnumbers">irsEmployerIdentificationNumbers</a></li><li><a href="#isacquired">isAcquired</a></li><li><a href="#isdissolved">isDissolved</a></li><li><a href="#isnonprofit">isNonProfit</a></li><li><a href="#ispublic">isPublic</a></li><li><a href="#leadership">leadership</a></li><li><a href="#linkedinuri">linkedInUri</a></li><li><a href="#location">location</a></li><li><a href="#locations">locations</a></li><li><a href="#logo">logo</a></li><li><a href="#mccclassification">mccClassification</a></li><li><a href="#mcccode">mccCode</a></li><li><a href="#mcccodedescription">mccCodeDescription</a></li><li><a href="#motto">motto</a></li><li><a href="#naceclassification">naceClassification</a></li><li><a href="#naicsclassification">naicsClassification</a></li><li><a href="#nbactiveemployeeedges">nbActiveEmployeeEdges</a></li><li><a href="#nbemployeeranges">nbEmployeeRanges</a></li><li><a href="#nbemployees">nbEmployees</a></li><li><a href="#nbemployeesmax">nbEmployeesMax</a></li><li><a href="#nbemployeesmin">nbEmployeesMin</a></li><li><a href="#nblocations">nbLocations</a></li><li><a href="#nbuniqueinvestors">nbUniqueInvestors</a></li><li><a href="#parentcompany">parentCompany</a></li><li><a href="#phonenumbers">phoneNumbers</a></li><li><a href="#quarterlyrevenues">quarterlyRevenues</a></li><li><a href="#revenue">revenue</a></li><li><a href="#seccentralindexkeys">secCentralIndexKeys</a></li><li><a href="#sicclassification">sicClassification</a></li><li><a href="#siccode">sicCode</a></li><li><a href="#siccodedescription">sicCodeDescription</a></li><li><a href="#stock">stock</a></li><li><a href="#subsidiaries">subsidiaries</a></li><li><a href="#totalinvestment">totalInvestment</a></li><li><a href="#twitteruri">twitterUri</a></li><li><a href="#uksicclassification">ukSicClassification</a></li><li><a href="#vatidentificationnumbers">vatIdentificationNumbers</a></li><li><a href="#wikipediauri">wikipediaUri</a></li><li><a href="#yearlyrevenues">yearlyRevenues</a></li></ul></li></ul></nav></div><footer class="nav-footer" id="footer"><section class="sitemap"><a href="/" class="nav-home"><img src="/img/diffbot_white.svg" alt="Docs Suite" width="66" height="58"/></a><div><h5>Docs</h5><a href="/docs/en/api-basics-index">Extraction</a><a href="/docs/en/cb-basics-index">Crawling</a><a href="/docs/en/kg-index">Knowledge Graph</a><a href="/docs/en/explain-gdpr">Diffbot and GDPR</a></div><div><h5>Community</h5><a href="https://stackoverflow.com/questions/tagged/diffbot" target="_blank" rel="noreferrer noopener">Stack Overflow</a><a href="https://twitter.com/diffbot" target="_blank" rel="noreferrer noopener">Twitter</a></div><div><h5>More</h5><a href="/blog">Blog</a><a href="/help">Help</a><a href="https://github.com/diffbot">GitHub</a></div></section><a href="https://diffbot.com/" target="_blank" rel="noreferrer noopener" class="fbOpenSource"><img src="/img/diffbot_white.svg" alt="Diffbot.com" width="170" height="45"/></a><section class="copyright">Copyright © 2021 Diffbot.com</section></footer></div><script type="text/javascript" src="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.js"></script><script>
                 document.addEventListener('keyup', function(e) {
                   if (e.target !== document.body) {
                     return;
