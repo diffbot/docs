@@ -12,7 +12,7 @@ Note: The Bulk Processor is not a crawler: it does not spider a site for additio
 
 ## Data Retention
 
-Inactive bulk jobs will be deleted within ten days of completion. This includes the extracted data as well as the job meta information (name, settings, etc.).
+Inactive bulk jobs will be deleted within thrity days of completion. This includes the extracted data as well as the job meta information (name, settings, etc.).
 
 “Active” jobs are those that are not in a permanently “paused” state. Currently active jobs will not be deleted or removed from your account. After a job finishes, it will be subject to regular deletion policies.
 
