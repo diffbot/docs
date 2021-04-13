@@ -12,7 +12,6 @@ sidebar_label: Crawlbot index
 - [Crawling vs Processing](explain-crawling-versus-processing)
 - [How does Diffbot handle duplicate pages/content while crawling?](explain-page-deduplication)
 - [How long does it take to crawl a site?](explain-how-long-crawl-site)
-- [When is crawl or bulk job data deleted?](explain-when-crawl-bulk-data-deleted)
 - [Crawlbot URL Report](explain-crawl-url-report)
 
 ## Crawlbot debugging

@@ -19,7 +19,6 @@ Inactive bulk jobs will be deleted within ten days of completion. This includes 
 ## Bulk Processing Basics
 
 - [Diffbot Regex Syntax](explain-regex)
-- [When is bulk job data deleted?](explain-when-crawl-bulk-data-deleted)
 - [Bulk Processing URL Report](explain-bulk-url-report)
 - [Do Diffbot APIs Follow Redirects?](explain-apis-follow-redirects)
 - [Do Diffbot APIs Execute JavaScript?](explain-apis-javascript-support)
