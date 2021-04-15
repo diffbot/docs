@@ -9,7 +9,7 @@ The Natural Language API allows developers to extract entities (e.g., people, or
 
 ## API Reference
 * [Quickstart](nl-quickstart)
-* [Demo](http://relex.diffbot.com/)
+* [Demo](http://demo.nl.diffbot.com/)
 * [API documentation](https://nl.diffbot.com/documentation/)
 * [Getting started with Python](https://colab.research.google.com/drive/1gvCCbuRRiF5ISo6oaQ2uDQLX2_ySMdyl)
 * [Entity types and properties](http://relex.diffbot.com/schema/)
