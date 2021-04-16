@@ -14,6 +14,15 @@ type:Organization industry:"Medical Associations"
 
 | Primary Industry    | Secondary Industry | Tertiary Industry | NAICS         |
 | ------------------- | ------------------ | ----------------- | ------------------ |
+{{ #industries }}
+| {{ name }}          |                    |                   | {{ naicsMapping }} |
+{{ #children }}
+|                     | {{ name }}         |                   | {{ naicsMapping }} |
+{{ #children }}
+|                     |                    | {{ name }}        | {{ naicsMapping }} |
+{{ /children }}
+{{ /children }}
+{{ /industries }}
 
 <style>
 /* Hides the Right-Hand Secondary Nav for a Full Width Industry Table */

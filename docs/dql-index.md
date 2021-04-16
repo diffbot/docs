@@ -298,6 +298,26 @@ For example: This query returns all companies whose business is associated in so
 
 ---
 
+## SimilarTo Operator
+
+(Note: this is still in experimental phase, so results may be off for some queries. Please use with caution)
+
+The `similarTo` operator looks for entities that are similar to a query entity based on different criteria. It currently supports Organization only.
+
+`similarTo` accepts id query or type query that can identify an entity. When the type query returns multiple entities, the first one is used as the query entity. Below are some example queries showing how to use it:
+
+Find similar entities to a query entity identified by its id: 
+
+[`type:Organization similarTo(id:ExADb18D6MAmunRrlVELe8A)`](https://app.diffbot.com/search/?query=type%3AOrganization+similarTo%28id%3AExADb18D6MAmunRrlVELe8A%29&from=0&size=50&output_format=&kgversion=)
+
+Find similar entities to a query entity identified by a typed query:
+
+[`type:Organization similarTo(type:Organization wikipediaUri:"https://en.wikipedia.org/wiki/Walmart")`](https://app.diffbot.com/search/?query=type%3AOrganization+similarTo%28type%3AOrganization+wikipediaUri%3A%22https%3A%2F%2Fen.wikipedia.org%2Fwiki%2FWalmart%22%29&from=0&size=50&output_format=&kgversion=)
+
+When combined with other operators, we can filter `similarTo` results accordingly. For example, we can limit the results to organizations in the `Online Retailers` industry with query [`type:Organization similarTo(id:ExADb18D6MAmunRrlVELe8A) industries:"Online Retailers"`](https://app.diffbot.com/search/?query=type%3AOrganization+similarTo%28id%3AExADb18D6MAmunRrlVELe8A%29+industries%3A%22Online+Retailers%22&from=0&size=50&output_format=&kgversion=) or select organizations with employee number less than 5000: [`type:Organization similarTo(id:ExADb18D6MAmunRrlVELe8A) nbEmployeesMax<5000`](https://app.diffbot.com/search/?query=type%3AOrganization+similarTo%28id%3AExADb18D6MAmunRrlVELe8A%29+nbEmployeesMax%3C5000&from=0&size=50&output_format=&kgversion=)
+
+---
+
 ## Sorting Results
 
 DQL allows you to define the sort order of your results in various ways, including sorting on a particular response field, reverse-sorting on a field, and sorting in a random order.

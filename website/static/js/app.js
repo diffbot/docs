@@ -99,7 +99,7 @@ docReady(function () {
   dd1html += '<a href="/kgapi">KG API Reference</a>';
   dd1html += '<a href="/enhance">Enhance API Reference</a>';
   dd1html += '<a href="/docs/en/kg-ont-diffbotentity">Ontology</a>';
-  dd1html += '<a href="/industry_hierarchy">Industry Hierarchy</a>';
+  dd1html += '<a href="/docs/en/kg-industry-list">Industry Hierarchy</a>';
   dd1html += '<a href="/docs/en/dql-index">Diffbot Query Language</a>';
   dd1html += "</div>";
   dropDown1.innerHTML = dd1html;
@@ -162,16 +162,6 @@ docReady(function () {
     }
   });
 
-  // // Add a subsection into the sidebar for API docs
-  // if (inKgSection) {
-  //   console.log("Writing new section");
-  //   let newSection =
-  //     '<div class="navGroup subNavGroup"><h4 class="navGroupSubcategoryTitle">API Reference Docs</h4><ul><li class="navListItem"><a class="navItem" href="/kgapi">Knowledge Graph API Reference</a></li><li class="navListItem"><a class="navItem" href="/enhance">Enhance API Reference</a></li><li class="navListItem"><a class="navItem" href="/docs/en/kg-ont-diffbotentity">Ontology Reference</a></li><li class="navListItem"><a class="navItem" href="/industry_hierarchy">Industry Hierarchy</a></li></ul></div>';
-  //   document.querySelector(
-  //     ".toc .toggleNav .navGroups .navGroup>ul"
-  //   ).innerHTML += newSection;
-  // }
-
   // Store sidebar in localstorage if exists
   let sidebar = document.querySelector("#docsNav");
   if (null !== sidebar) {
@@ -197,66 +187,12 @@ docReady(function () {
   script.setAttribute("site", "OGXCNLPJ");
   document.querySelector("body").appendChild(script);
 
-  // Add Segment
-  !(function () {
-    var analytics = (window.analytics = window.analytics || []);
-    if (!analytics.initialize)
-      if (analytics.invoked)
-        window.console &&
-          console.error &&
-          console.error("Segment snippet included twice.");
-      else {
-        analytics.invoked = !0;
-        analytics.methods = [
-          "trackSubmit",
-          "trackClick",
-          "trackLink",
-          "trackForm",
-          "pageview",
-          "identify",
-          "reset",
-          "group",
-          "track",
-          "ready",
-          "alias",
-          "debug",
-          "page",
-          "once",
-          "off",
-          "on",
-          "addSourceMiddleware",
-          "addIntegrationMiddleware",
-          "setAnonymousId",
-          "addDestinationMiddleware",
-        ];
-        analytics.factory = function (e) {
-          return function () {
-            var t = Array.prototype.slice.call(arguments);
-            t.unshift(e);
-            analytics.push(t);
-            return analytics;
-          };
-        };
-        for (var e = 0; e < analytics.methods.length; e++) {
-          var t = analytics.methods[e];
-          analytics[t] = analytics.factory(t);
-        }
-        analytics.load = function (e, t) {
-          var n = document.createElement("script");
-          n.type = "text/javascript";
-          n.async = !0;
-          n.src =
-            "https://cdn.segment.com/analytics.js/v1/" +
-            e +
-            "/analytics.min.js";
-          var a = document.getElementsByTagName("script")[0];
-          a.parentNode.insertBefore(n, a);
-          analytics._loadOptions = t;
-        };
-        analytics.SNIPPET_VERSION = "4.1.0";
-        analytics.load("sQoH4GafKS6QYcbQHc4aQVX3grmKkJJM");
-        analytics.page();
-      }
-    return true;
-  })();
+  // Add Plausible
+  let plausible = document.createElement("script");
+  plausible.setAttribute("src", "https://stats.diffbot.com/js/index.js");
+  plausible.setAttribute("data-domain", "docs.diffbot.com");
+  plausible.setAttribute("async", "async");
+  plausible.setAttribute("defer", "defer");
+  document.querySelector("head").appendChild(plausible);
+
 });

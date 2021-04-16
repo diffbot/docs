@@ -17,7 +17,7 @@ Note that fields are not guaranteed to exist in every entity record.
 * [postalCodes](#postalcodes) 
 
 ## AdministrativeArea Field Details
-Note that certain longer field examples may be truncated for readability in these docs. 
+Note that certain longer field examples may be truncated for readability.
 
 ### area
   Square kilometers of AdministrativeArea
@@ -25,7 +25,7 @@ Note that certain longer field examples may be truncated for readability in thes
 * **Example:**
 ```
 {
-	"area": 9826675
+	"area": 423970
 }
 ```
 ### areaCodes
@@ -52,7 +52,7 @@ Note that certain longer field examples may be truncated for readability in thes
 * **Example:**
 ```
 {
-	"population": 328239523
+	"population": 39144818
 }
 ```
 ### postalCodes

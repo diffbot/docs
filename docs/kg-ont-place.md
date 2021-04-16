@@ -15,11 +15,11 @@ Note that fields are not guaranteed to exist in every entity record.
 * [placeType](#placetype) 
 
 ## Place Field Details
-Note that certain longer field examples may be truncated for readability in these docs. 
+Note that certain longer field examples may be truncated for readability.
 
 ### isPartOf
   
-* **Type:** com.diffbot.kg.fields.LinkedEntity
+* **Type:** LinkedEntity
 * **Example:**
 ```
 {
@@ -33,8 +33,9 @@ Note that certain longer field examples may be truncated for readability in thes
 			],
 			"name": "United States of America",
 			"diffbotUri": "http://diffbot.com/entity/E01d4EK33MmCosgI2KXa4-A",
-			"nbIncomingEdges": 1245528825,
+			"nbIncomingEdges": 1046964005,
 			"targetDiffbotUri": "http://diffbot.com/entity/E01d4EK33MmCosgI2KXa4-A",
+			"targetDiffbotId": "E01d4EK33MmCosgI2KXa4-A",
 			"type": "AdministrativeArea"
 		}
 	]
@@ -56,8 +57,9 @@ Note that certain longer field examples may be truncated for readability in thes
 			],
 			"name": "United States of America",
 			"diffbotUri": "http://diffbot.com/entity/E01d4EK33MmCosgI2KXa4-A",
-			"nbIncomingEdges": 1245528825,
+			"nbIncomingEdges": 1046964005,
 			"targetDiffbotUri": "http://diffbot.com/entity/E01d4EK33MmCosgI2KXa4-A",
+			"targetDiffbotId": "E01d4EK33MmCosgI2KXa4-A",
 			"type": "AdministrativeArea"
 		},
 		"isCurrent": false,
@@ -70,7 +72,7 @@ Note that certain longer field examples may be truncated for readability in thes
 ```
 ### placeType
   Place category for a location; ex. Park, City, etc.
-* **Type:** com.diffbot.kg.entities.Place$PlaceType
+* **Type:** PlaceType
 * **Example:**
 ```
 {

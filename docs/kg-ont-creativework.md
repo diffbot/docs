@@ -47,7 +47,7 @@ Note that fields are not guaranteed to exist in every entity record.
 * [writers](#writers) 
 
 ## CreativeWork Field Details
-Note that certain longer field examples may be truncated for readability in these docs. 
+Note that certain longer field examples may be truncated for readability.
 
 ### aspectRatio
   
@@ -103,38 +103,39 @@ Note that certain longer field examples may be truncated for readability in thes
 	"castmembers": [
 		{
 			"castmember": {
-				"recordId": "E36UrGbGyPzC0zOFH52H0-w@0",
-				"name": "Willie Nelson",
+				"recordId": "ETeVENUXKM5yT9kLY27xFHA@0",
+				"name": "Martin Scorsese",
 				"websiteUris": [
-					"imdb.com/name/nm0005268"
+					"imdb.com/name/nm0000217"
 				],
-				"surfaceForm": "Willie Nelson",
+				"surfaceForm": "Martin Scorsese",
 				"type": "Person"
 			},
-			"characterLink": "imdb.com/title/tt0364784/characters/nm0005268"
+			"characterLink": "imdb.com/title/tt0364151/characters/nm0000217"
 		},
 		{
 			"castmember": {
-				"recordId": "E36UrGbGyPzC0zOFH52H0-w@1",
-				"name": "Lyle Lovett",
+				"recordId": "ETeVENUXKM5yT9kLY27xFHA@1",
+				"name": "Peter Bogdanovich",
 				"websiteUris": [
-					"imdb.com/name/nm0005164"
+					"imdb.com/name/nm0000953"
 				],
-				"surfaceForm": "Lyle Lovett",
+				"surfaceForm": "Peter Bogdanovich",
 				"type": "Person"
-			}
+			},
+			"characterLink": "imdb.com/title/tt0364151/characters/nm0000953"
 		},
 		{
 			"castmember": {
-				"recordId": "E36UrGbGyPzC0zOFH52H0-w@2",
-				"name": "John Prine",
+				"recordId": "ETeVENUXKM5yT9kLY27xFHA@2",
+				"name": "Tony Bennett",
 				"websiteUris": [
-					"imdb.com/name/nm0697789"
+					"imdb.com/name/nm0004746"
 				],
-				"surfaceForm": "John Prine",
+				"surfaceForm": "Tony Bennett",
 				"type": "Person"
 			},
-			"characterLink": "imdb.com/title/tt0364784/characters/nm0697789"
+			"characterLink": "imdb.com/title/tt0364151/characters/nm0004746"
 		}
 	]
 }
@@ -145,7 +146,7 @@ Note that certain longer field examples may be truncated for readability in thes
 * **Example:**
 ```
 {
-	"color": "Color"
+	"color": ""
 }
 ```
 ### countryOfOrigin
@@ -154,9 +155,7 @@ Note that certain longer field examples may be truncated for readability in thes
 * **Example:**
 ```
 {
-	"countryOfOrigin": [
-		"USA"
-	]
+	"countryOfOrigin": ""
 }
 ```
 ### creativeWorkType
@@ -170,18 +169,18 @@ Note that certain longer field examples may be truncated for readability in thes
 ```
 ### creators
   
-* **Type:** com.diffbot.kg.fields.LinkedEntity
+* **Type:** LinkedEntity
 * **Example:**
 ```
 {
 	"creators": [
 		{
-			"recordId": "E36UrGbGyPzC0zOFH52H0-w@398",
-			"name": "Bill Arhos",
+			"recordId": "ETeVENUXKM5yT9kLY27xFHA@664",
+			"name": "Susan Lacy",
 			"websiteUris": [
-				"imdb.com/name/nm0034638"
+				"imdb.com/name/nm0480402"
 			],
-			"surfaceForm": "Bill Arhos",
+			"surfaceForm": "Susan Lacy",
 			"position": "creativeWorkCreator",
 			"type": "Person"
 		}
@@ -190,11 +189,11 @@ Note that certain longer field examples may be truncated for readability in thes
 ```
 ### directors
   
-* **Type:** com.diffbot.kg.fields.LinkedEntity
+* **Type:** LinkedEntity
 * **Example:**
 ```
 {
-	"directors": "[See Person]"
+	"directors": []
 }
 ```
 ### episodeNum
@@ -212,10 +211,7 @@ Note that certain longer field examples may be truncated for readability in thes
 * **Example:**
 ```
 {
-	"genres": [
-		"Documentary",
-		"Music"
-	]
+	"genres": ""
 }
 ```
 ### imdbPopularity
@@ -233,16 +229,16 @@ Note that certain longer field examples may be truncated for readability in thes
 * **Example:**
 ```
 {
-	"imdbRating": 8.1
+	"imdbRating": 8
 }
 ```
 ### imdbUri
   
-* **Type:** String
+* **Type:** URL
 * **Example:**
 ```
 {
-	"imdbUri": "imdb.com/title/tt0364784"
+	"imdbUri": "imdb.com/title/tt0364151"
 }
 ```
 ### languages
@@ -251,9 +247,7 @@ Note that certain longer field examples may be truncated for readability in thes
 * **Example:**
 ```
 {
-	"languages": [
-		"English"
-	]
+	"languages": ""
 }
 ```
 ### latestSeason
@@ -262,7 +256,7 @@ Note that certain longer field examples may be truncated for readability in thes
 * **Example:**
 ```
 {
-	"latestSeason": 45
+	"latestSeason": 35
 }
 ```
 ### latestSeasonYear
@@ -271,7 +265,7 @@ Note that certain longer field examples may be truncated for readability in thes
 * **Example:**
 ```
 {
-	"latestSeasonYear": 2020
+	"latestSeasonYear": 2021
 }
 ```
 ### metaScore
@@ -298,7 +292,7 @@ Note that certain longer field examples may be truncated for readability in thes
 * **Example:**
 ```
 {
-	"numAwards": "1 win."
+	"numAwards": "Won 27 Primetime Emmys. Another 29 wins & 71 nominations."
 }
 ```
 ### numEpisodes
@@ -307,27 +301,25 @@ Note that certain longer field examples may be truncated for readability in thes
 * **Example:**
 ```
 {
-	"numEpisodes": 394
+	"numEpisodes": 247
 }
 ```
 ### officialSites
   
-* **Type:** String
+* **Type:** URL
 * **Example:**
 ```
 {
-	"officialSites": [
-		"imdb.com/offsite"
-	]
+	"officialSites": []
 }
 ```
 ### parentTitle
   
-* **Type:** com.diffbot.kg.fields.LinkedEntity
+* **Type:** LinkedEntity
 * **Example:**
 ```
 {
-	"parentTitle": "[See CreativeWork]"
+	"parentTitle": ""
 }
 ```
 ### plotKeywords
@@ -336,11 +328,7 @@ Note that certain longer field examples may be truncated for readability in thes
 * **Example:**
 ```
 {
-	"plotKeywords": [
-		"three word title",
-		"place name in title",
-		"city name in title"
-	]
+	"plotKeywords": ""
 }
 ```
 ### plotSummary
@@ -349,36 +337,25 @@ Note that certain longer field examples may be truncated for readability in thes
 * **Example:**
 ```
 {
-	"plotSummary": "Established singer-songwriters and acclaimed newcomers perform country, blues, rock, folk, bluegrass, and related styles of music from Studio 6A of public television station KLRU (formerly KLRN) at the University of Texas at Austin."
+	"plotSummary": "Documentary series focusing on great American artists and personalities."
 }
 ```
 ### posterImgLink
   
-* **Type:** String
+* **Type:** URL
 * **Example:**
 ```
 {
-	"posterImgLink": "m.media-amazon.com/images/M/MV5BZWFlYjg5Y2ItNTQ0MS00OTQ4LThiYzgtZTQ5ZGViNDQ1MTAyXkEyXkFqcGdeQXVyMjA0NDYyNjc@._V1_UX182_CR0,0,182,268_AL_.jpg"
+	"posterImgLink": "m.media-amazon.com/images/M/MV5BMTQ3ODc5ODQ0NV5BMl5BanBnXkFtZTgwNzM1MjUzMDI@._V1_UX182_CR0,0,182,268_AL_.jpg"
 }
 ```
 ### productionCompanies
   
-* **Type:** com.diffbot.kg.fields.LinkedEntity
+* **Type:** LinkedEntity
 * **Example:**
 ```
 {
-	"productionCompanies": [
-		{
-			"recordId": "E36UrGbGyPzC0zOFH52H0-w@397",
-			"name": "KLRU Austin",
-			"websiteUris": [
-				"imdb.com/company/co0143541"
-			],
-			"surfaceForm": "KLRU Austin",
-			"position": "creativeWorkProductionOrganization",
-			"type": "Organization"
-		}
-	]
+	"productionCompanies": []
 }
 ```
 ### releaseDate
@@ -387,11 +364,7 @@ Note that certain longer field examples may be truncated for readability in thes
 * **Example:**
 ```
 {
-	"releaseDate": {
-		"str": "d1975-XX-XX",
-		"precision": 1,
-		"timestamp": 157766400000
-	}
+	"releaseDate": ""
 }
 ```
 ### runtime
@@ -423,7 +396,7 @@ Note that certain longer field examples may be truncated for readability in thes
 ```
 ### videoMainLink
   
-* **Type:** String
+* **Type:** URL
 * **Example:**
 ```
 {
@@ -432,10 +405,10 @@ Note that certain longer field examples may be truncated for readability in thes
 ```
 ### writers
   
-* **Type:** com.diffbot.kg.fields.LinkedEntity
+* **Type:** LinkedEntity
 * **Example:**
 ```
 {
-	"writers": "[See Person]"
+	"writers": []
 }
 ```

@@ -34,7 +34,7 @@ See the left navigation panel for fields and attributes for specific entities,
 * [types](#types) 
 
 ## All Field Details
-Note that certain longer field examples may be truncated for readability in these docs. 
+Note that certain longer field examples may be truncated for readability.
 
 ### allDescriptions
   All descriptions found for this entity. For the best description, refer to the field &#39;description&#39;.
@@ -69,29 +69,21 @@ Note that certain longer field examples may be truncated for readability in thes
 * **Example:**
 ```
 {
-	"allUriDetails": [
-		{
-			"nbFollowing": 0,
-			"uriType": "",
-			"verified": false,
-			"nbFollowers": 0,
-			"uri": ""
-		}
-	]
+	"allUriDetails": []
 }
 ```
 ### allUris
   All URIs associated with an entity. A URI (uniform resource identifier) is a page on the web that describes an entity (e.g., an company&#39;s homepage or a person&#39;s social network profile).
-* **Type:** 
+* **Type:** URL
 * **Example:**
 ```
 {
-	"allUris": ""
+	"allUris": []
 }
 ```
 ### crawlTimestamp
   The default crawlTimestamp is the most recent date of all of the crawlTimestamps of the origins used to compute the Entity, returned as a UNIX time.
-* **Type:** Long
+* **Type:** Integer
 * **Example:**
 ```
 {
@@ -109,7 +101,7 @@ Note that certain longer field examples may be truncated for readability in thes
 ```
 ### diffbotUri
   diffbotUri is the URI an entity&#39;s  (URI), which is defined by appending the Diffbot ID to the URL https:&#x2F;&#x2F;diffbot.com&#x2F;entity&#x2F;. For example, Diffbot&#39;s entityID is CWSwJ_SWQPfqO3HQsxY4lGg and its DiffbotUri is https:&#x2F;&#x2F;diffbot.com&#x2F;entity&#x2F;CWSwJ_SWQPfqO3HQsxY4lGg
-* **Type:** 
+* **Type:** URL
 * **Example:**
 ```
 {
@@ -140,15 +132,7 @@ Note that certain longer field examples may be truncated for readability in thes
 * **Example:**
 ```
 {
-	"images": [
-		{
-			"classifications": "",
-			"fingerprint": "",
-			"title": "",
-			"isCached": false,
-			"url": ""
-		}
-	]
+	"images": []
 }
 ```
 ### importance
@@ -189,7 +173,7 @@ Note that certain longer field examples may be truncated for readability in thes
 ```
 ### nonCanonicalFacts
   Enumerates all the non-canonical fields (i.e., those not defined in the ontology) that have a value for this entity. For instance, if &#39;numberOfChildren&#39; is listed in &#39;nonCanonicalFacts&#39; then the entity JSON will have the key &#39;numberOfChildren&#39; with an associated value. This field is only provided when the parameter nonCanonicalFacts&#x3D;1 is set. See: https:&#x2F;&#x2F;docs.diffbot.com&#x2F;kgapi
-* **Type:** 
+* **Type:** String
 * **Example:**
 ```
 {
@@ -202,16 +186,7 @@ Note that certain longer field examples may be truncated for readability in thes
 * **Example:**
 ```
 {
-	"originDetails": [
-		{
-			"crawledAt": {
-				"str": "",
-				"precision": 0,
-				"timestamp": 0
-			},
-			"origin": ""
-		}
-	]
+	"originDetails": []
 }
 ```
 ### origins
@@ -243,7 +218,7 @@ Note that certain longer field examples may be truncated for readability in thes
 ```
 ### type
   The main type of a Diffbot entity. Examples of type include Person, Organization, Article, Product.
-* **Type:** 
+* **Type:** String
 * **Example:**
 ```
 {
@@ -252,7 +227,7 @@ Note that certain longer field examples may be truncated for readability in thes
 ```
 ### types
   All types of a Diffbot entity, including the value of the field &#39;type&#39;.
-* **Type:** 
+* **Type:** String
 * **Example:**
 ```
 {

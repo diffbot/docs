@@ -13,7 +13,7 @@ There are many authentication schemes on the web, but two of the most common are
 
 Form-based authentication works by the setting a cookie in your browser using the Set-Cookie header. Here is a [full tutorial on how to use login cookies to access content behind login walls](guides-data-behind-login) in individual APIs. Follow the same procedure for retrieving the login cookie.
 
-If you're using the [old Diffbot dashboard](https://diffbot.com/dev/crawl) to create the crawljob, place the cookie value into the Cookie field:
+If you're using the [old Diffbot dashboard](https://www.diffbot.com/dev/crawl/) to create the crawljob, place the cookie value into the Cookie field:
 
 ![The custom headers fields in the old dashboard's UI](/img/cookie/01.jpg)
 

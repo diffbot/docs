@@ -24,7 +24,7 @@ Note that fields are not guaranteed to exist in every entity record.
 * [xpath](#xpath) 
 
 ## Image Field Details
-Note that certain longer field examples may be truncated for readability in these docs. 
+Note that certain longer field examples may be truncated for readability.
 
 ### anchorUrl
   Points to an anchor within a page (like &#x60;href&#x3D;&quot;#top&quot;&#x60;)
@@ -41,12 +41,7 @@ Note that certain longer field examples may be truncated for readability in thes
 * **Example:**
 ```
 {
-	"breadcrumb": [
-		{
-			"link": "",
-			"name": ""
-		}
-	]
+	"breadcrumb": []
 }
 ```
 ### displayHeight
@@ -91,7 +86,7 @@ Note that certain longer field examples may be truncated for readability in thes
 * **Example:**
 ```
 {
-	"naturalHeight": 459
+	"naturalHeight": 1056
 }
 ```
 ### naturalWidth
@@ -100,7 +95,7 @@ Note that certain longer field examples may be truncated for readability in thes
 * **Example:**
 ```
 {
-	"naturalWidth": 306
+	"naturalWidth": 1176
 }
 ```
 ### tags
@@ -109,16 +104,7 @@ Note that certain longer field examples may be truncated for readability in thes
 * **Example:**
 ```
 {
-	"tags": [
-		{
-			"score": "",
-			"sentiment": 0,
-			"types": "",
-			"count": 0,
-			"label": "",
-			"uri": ""
-		}
-	]
+	"tags": []
 }
 ```
 ### title
@@ -127,7 +113,7 @@ Note that certain longer field examples may be truncated for readability in thes
 * **Example:**
 ```
 {
-	"title": "Sparky the dog saved the woman after she fell down the sewer"
+	"title": "A visualization of the Knowledge Graph"
 }
 ```
 ### url
@@ -136,7 +122,7 @@ Note that certain longer field examples may be truncated for readability in thes
 * **Example:**
 ```
 {
-	"url": "https://i.dailymail.co.uk/1s/2019/04/03/11/11805062-6881369-image-a-83_1554287487623.jpg"
+	"url": "https://cdn-images-1.medium.com/max/1600/1*sYLBdAl7pP2krTspeWZosA.png"
 }
 ```
 ### xpath

@@ -36,7 +36,7 @@ Note that fields are not guaranteed to exist in every entity record.
 * [upc](#upc) 
 
 ## Product Field Details
-Note that certain longer field examples may be truncated for readability in these docs. 
+Note that certain longer field examples may be truncated for readability.
 
 ### availability
   
@@ -62,12 +62,7 @@ Note that certain longer field examples may be truncated for readability in thes
 * **Example:**
 ```
 {
-	"breadcrumb": [
-		{
-			"link": "",
-			"name": ""
-		}
-	]
+	"breadcrumb": []
 }
 ```
 ### category

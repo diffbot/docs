@@ -7,11 +7,11 @@ sidebar_label: How to correct Article, Product, or other API output with a custo
 
 
 <div class="entry-content">
-		<p>Have you run into a problem where the Diffbot extraction from a particular site is incorrect or needs adjusting? Our <a href="https://www.diffbot.com/dev/customize">API Toolkit</a> not only allows you to create new APIs entirely, but also to override or correct the output returned by our Automatic APIs.</p>
+		<p>Have you run into a problem where the Diffbot extraction from a particular site is incorrect or needs adjusting? Our <a href="https://app.diffbot.com/custom/">API Toolkit</a> not only allows you to create new APIs entirely, but also to override or correct the output returned by our Automatic APIs.</p>
 <p>Correcting a field’s output takes immediate effect for your account, and also serves to train our system, improving Diffbot extraction over the long run.</p>
 <p>Here’s how to make a correction if you have a problem with a particular site:</p>
 <p><strong>Find a problematic URL</strong></p>
-<p>Start with a web page that is exhibiting the problem, then visit the <a href="https://www.diffbot.com/dev/customize">API Toolkit</a> in your Developer Dashboard.</p>
+<p>Start with a web page that is exhibiting the problem, then visit the <a href="https://app.diffbot.com/custom/">API Toolkit</a> in your Developer Dashboard.</p>
 <p><strong>Create a rule in the API Toolkit</strong></p>
 
 ![Toolkit](/img/toolkit1.png)

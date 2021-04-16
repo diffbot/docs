@@ -2,7 +2,7 @@
  *   --------------------------------------------------------------------------------------
  *   Diffbot Knowledge Graph Ontology Generator (Author: @jeromechoo)
  *   --------------------------------------------------------------------------------------
- *   - Sources published ontology from https://kg.diffbot.com/kg/enhance_endpoint/ont_docs
+ *   - Sources published ontology from https://kg.diffbot.com/kg/ontology
  *     and builds markdown files (which are then rendered into HTML by Docusaurus).
  *   - Running this script is not necessary with each production build of docs.diffbot.com,
  *     but is highly recommended to ensure the latest ontology is available.
@@ -42,77 +42,76 @@ var entityTypes = {
         id: "kg-ont-article",
         description: "The article entity type encompasses news, blog posts, and article content known to the Knowledge Graph. \n\nNote that fields are not guaranteed to exist in every entity record.",
         helpers: templateHelpers,
-        exampleRecord: "https://app.diffbot.com/entity/ART128524946192.json"
+        exampleRecord: 'type:Article title:"The web as a database: The biggest knowledge graph ever"'
     },
     Organization: { 
         title: "Organization",
         id: "kg-ont-organization",
         description: "The organization entity type encompasses corporations, local businesses, non-profits, and other organizations known to the Knowledge Graph. \n\nNote that fields are not guaranteed to exist in every entity record.",
         helpers: templateHelpers,
-        exampleRecord: "https://app.diffbot.com/entity/EHb0_0NEcMwyY8b083taTTw.json"
+        exampleRecord: 'type:Organization name:"IBM"'
     },
     Person: { 
         title: "Person",
         id: "kg-ont-person",
         description: "The person entity type encompasses all people known to the Knowledge Graph. \n\nNote that fields are not guaranteed to exist in every entity record.",
         helpers: templateHelpers,
-        exampleRecord: "https://app.diffbot.com/entity/EyLhQX8YeNWOH19RPpdU7Kg.json"
+        exampleRecord: 'type:Person name:"Tom Wheeler" revSortBy:importance'
     },
     Place: { 
         title: "Place",
         id: "kg-ont-place",
         description: "The place entity type encompasses cities, landmarks, countries, administrative areas, and other locations known to the Knowledge Graph. \n\nNote that fields are not guaranteed to exist in every entity record.",
         helpers: templateHelpers,
-        exampleRecord: "https://app.diffbot.com/entity/E01d4EK33MmCosgI2KXa4-A.json"
+        exampleRecord: 'type:Place revSortBy:importance'
     },
     CreativeWork: { 
         title: "CreativeWork",
         id: "kg-ont-creativework",
         description: "The Creative Work entity type encompasses movies, tv shows, musicals, scripts, and other creative works known to the Knowledge Graph. \n\nNote that fields are not guaranteed to exist in every entity record.",
         helpers: templateHelpers,
-        exampleRecord: "https://app.diffbot.com/entity/E36UrGbGyPzC0zOFH52H0-w.json"
+        exampleRecord: 'type:CreativeWork name:"American Masters" revSortBy:importance'
     },
     Product: { 
         title: "Product",
         id: "kg-ont-product",
         description: "The product entity type encompasses products found throughout the web known to the Knowledge Graph. \n\nNote that fields are not guaranteed to exist in every entity record.",
         helpers: templateHelpers,
-        exampleRecord: "https://app.diffbot.com/entity/PRD306806.json"
+        exampleRecord: 'type:Product name:"Gold Down Alternative Sleeping Pillows"'
     },
     Image: { 
         title: "Image",
         id: "kg-ont-image",
         description: "The Image entity type encompasses images found throughout the web and known to the Knowledge Graph. \n\nNote that fields are not guaranteed to exist in every entity record.",
         helpers: templateHelpers,
-        exampleRecord: "https://app.diffbot.com/entity/IMG90666.json"
+        exampleRecord: 'type:Image title:"a visualization of the knowledge graph"'
     },
     Video: { 
         title: "Video",
         id: "kg-ont-video",
         description: "The Video entity type encompasses videos found throughout the web and known to the Knowledge Graph. \n\nNote that fields are not guaranteed to exist in every entity record.",
         helpers: templateHelpers,
-        exampleRecord: "https://app.diffbot.com/entity/VID2021988.json"
+        exampleRecord: 'type:Video title:"Deconstructing Data Complexity and the Case for AI-Driven Smart Data Discovery"'
     },
     Event: { 
         title: "Event",
         id: "kg-ont-event",
         description: "The Event entity type encompasses webinars, meet ups, conferences, and other events known to the Knowledge Graph. \n\nNote that fields are not guaranteed to exist in every entity record.",
         helpers: templateHelpers,
-        exampleRecord: "https://app.diffbot.com/entity/EvAo5Nr_VPVyS20xVOuuduQ.json"
+        exampleRecord: 'type:Event name:"Talent Connect"'
     },
     Discussion: { 
         title: "Discussion",
         id: "kg-ont-discussion",
         description: "The Discussion entity type encompasses forum and other similar discussions found throughout the web and known to the Knowledge Graph. \n\nNote that fields are not guaranteed to exist in every entity record.",
-        helpers: templateHelpers,
-        exampleRecord: "https://app.diffbot.com/entity/DISC5631557.json"
+        helpers: templateHelpers
     },
     AdministrativeArea: { 
         title: "AdministrativeArea",
         id: "kg-ont-administrativearea",
         description: "The Administrative Area entity type encompasses all cities, regions, counties, sub-regions, provinces, and countries known to the Knowledge Graph. \n\nNote that fields are not guaranteed to exist in every entity record.",
         helpers: templateHelpers,
-        exampleRecord: "https://app.diffbot.com/entity/E01d4EK33MmCosgI2KXa4-A.json"
+        exampleRecord: 'type:AdministrativeArea name:"California"'
     },
     // ROLE ONTOLOGY IS MISSING
     // Role: { 
@@ -124,7 +123,7 @@ var entityTypes = {
 };
 
 // Translates technical content type definitions to layman descriptions & examples
-const CONTENTTYPES = {
+const typeS = {
   DDateTime: {
     name: "DateTime",
     example:
@@ -142,7 +141,7 @@ if (exampleRecord && exampleRecord[fieldName]) {
 let example = {};
     // String & Intangible/Misc/DegreeEntity Types
     if (
-        fieldEntity["fields"][fieldName]["contentType"] === "String" ||
+        fieldEntity["fields"][fieldName]["type"] === "String" ||
         (fieldEntity["fields"][fieldName]["leType"] && fieldEntity["fields"][fieldName]["leType"][0] === "Intangible") ||
         (fieldEntity["fields"][fieldName]["leType"] && fieldEntity["fields"][fieldName]["leType"][0] === "Miscellaneous") ||
         (fieldEntity["fields"][fieldName]["leType"] && fieldEntity["fields"][fieldName]["leType"][0] === "DegreeEntity")
@@ -151,20 +150,20 @@ let example = {};
     }
     // Numerical Type
     else if (
-        fieldEntity["fields"][fieldName]["contentType"] === "Short" || 
-        fieldEntity["fields"][fieldName]["contentType"] === "Long" ||
-        fieldEntity["fields"][fieldName]["contentType"] === "Double" ||
-        fieldEntity["fields"][fieldName]["contentType"] === "Integer") 
+        fieldEntity["fields"][fieldName]["type"] === "Short" || 
+        fieldEntity["fields"][fieldName]["type"] === "Long" ||
+        fieldEntity["fields"][fieldName]["type"] === "Double" ||
+        fieldEntity["fields"][fieldName]["type"] === "Integer") 
         {
             example = exampleRecord && exampleRecord[fieldName] ? exampleRecord[fieldName] : 0;
     }
     // Boolean Type
-    else if (fieldEntity["fields"][fieldName]["contentType"] === "Boolean") {
+    else if (fieldEntity["fields"][fieldName]["type"] === "Boolean") {
         example = false;
     }
     // Composite Type
     else if (fieldEntity["fields"][fieldName]["isComposite"] === true) {
-        let compositeField = ontDocs["compositedocs"][fieldEntity["fields"][fieldName]["contentType"]];
+        let compositeField = ontDocs["compositedocs"][fieldEntity["fields"][fieldName]["type"]];
         let compositeSubFieldNames = Object.keys(compositeField["fields"]);
 
         if (exampleRecord && exampleRecord[fieldName]) {
@@ -200,7 +199,12 @@ let example = {};
     }
     // List Type
     else if (fieldEntity["fields"][fieldName]["isList"] === true) {
-        example = [];
+        if (exampleRecord && exampleRecord[fieldName] && exampleRecord[fieldName][0]) {
+            example = exampleRecord[fieldName].slice(0,3);
+        }
+        else {
+            example = [];
+        }
     }
     // Other/Non-Declared Type
     else {
@@ -236,9 +240,9 @@ const getExamples = (entityTypes) => {
     for (entityIndex in entities) {
         let entityTemplate = entityTypes[entities[entityIndex]];
         if (entityTemplate['exampleRecord']) {
-            promises.push(axios.get(`${entityTemplate['exampleRecord']}?token=${DIFFBOTTOKEN}`).then((response) => {
+            promises.push(axios.get(`https://kg.diffbot.com/kg/dql_endpoint?type=query&token=${DIFFBOTTOKEN}&size=1&query=${encodeURIComponent(entityTemplate['exampleRecord'])}`).then((response) => {
                 let example = {}
-                example[entityTemplate.title] = response.data;
+                example[entityTemplate.title] = response.data.data[0];
                 return example;
             }));
         }
@@ -253,7 +257,8 @@ getExamples(entityTypes)
         let entityType = Object.keys(examples[exampleIndex])[0];
         entityTypes[entityType]['exampleRecord'] = examples[exampleIndex][entityType];
     }
-    return axios.get('https://kg.diffbot.com/kg/enhance_endpoint/ont_docs')
+
+    return axios.get('https://kg.diffbot.com/kg/ontology')
 })
 .then((response) => {
     var ontology = response.data;
@@ -263,7 +268,7 @@ getExamples(entityTypes)
     for (supportedEntityIndex in supportedEntities) {
 
         // Get Template Model
-        let entityModel = ontTransform(ontology['typedocs'][supportedEntities[supportedEntityIndex]], ontology);
+        let entityModel = ontTransform(ontology['types'][supportedEntities[supportedEntityIndex]], ontology);
 
         // Get Template
         let template = fs.readFileSync("./static/md/entity-ontology.md").toString();

@@ -32,5 +32,5 @@ None of the above quite what you're looking for? Try [Extract](), our automatic 
 
 ## Need More Help?
 
-Reach out to support@diffbot.com and I promise we won't yell. 
+Give us a shout at support@diffbot.com. We'd love to hear from you.
 
