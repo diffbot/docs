@@ -197,66 +197,12 @@ docReady(function () {
   script.setAttribute("site", "OGXCNLPJ");
   document.querySelector("body").appendChild(script);
 
-  // Add Segment
-  !(function () {
-    var analytics = (window.analytics = window.analytics || []);
-    if (!analytics.initialize)
-      if (analytics.invoked)
-        window.console &&
-          console.error &&
-          console.error("Segment snippet included twice.");
-      else {
-        analytics.invoked = !0;
-        analytics.methods = [
-          "trackSubmit",
-          "trackClick",
-          "trackLink",
-          "trackForm",
-          "pageview",
-          "identify",
-          "reset",
-          "group",
-          "track",
-          "ready",
-          "alias",
-          "debug",
-          "page",
-          "once",
-          "off",
-          "on",
-          "addSourceMiddleware",
-          "addIntegrationMiddleware",
-          "setAnonymousId",
-          "addDestinationMiddleware",
-        ];
-        analytics.factory = function (e) {
-          return function () {
-            var t = Array.prototype.slice.call(arguments);
-            t.unshift(e);
-            analytics.push(t);
-            return analytics;
-          };
-        };
-        for (var e = 0; e < analytics.methods.length; e++) {
-          var t = analytics.methods[e];
-          analytics[t] = analytics.factory(t);
-        }
-        analytics.load = function (e, t) {
-          var n = document.createElement("script");
-          n.type = "text/javascript";
-          n.async = !0;
-          n.src =
-            "https://cdn.segment.com/analytics.js/v1/" +
-            e +
-            "/analytics.min.js";
-          var a = document.getElementsByTagName("script")[0];
-          a.parentNode.insertBefore(n, a);
-          analytics._loadOptions = t;
-        };
-        analytics.SNIPPET_VERSION = "4.1.0";
-        analytics.load("sQoH4GafKS6QYcbQHc4aQVX3grmKkJJM");
-        analytics.page();
-      }
-    return true;
-  })();
+  // Add Plausible
+  let plausible = document.createElement("script");
+  plausible.setAttribute("src", "https://stats.diffbot.com/js/index.js");
+  plausible.setAttribute("data-domain", "docs.diffbot.com");
+  plausible.setAttribute("async", "async");
+  plausible.setAttribute("defer", "defer");
+  document.querySelector("head").appendChild(plausible);
+
 });
