@@ -31,7 +31,7 @@ The Natural Language API allows developers to extract entities (e.g., people, or
 
 ## Credits
 
-Each document consumes 1 credit up to 10K characters. Additional blocks of 10,000 characters consume 1 credit each. 
+Each document consumes 1 credit up to 10,000 characters. Additional blocks of 10,000 characters consume 1 credit each. 
 
 ## Limits
 
