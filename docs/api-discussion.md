@@ -24,8 +24,8 @@ Provide the following arguments:
 | `timeout` | Sets a value in milliseconds to wait for the retrieval/fetch of content from the requested URL. The default timeout for the third-party response is 30 seconds (30000). |
 | `callback` | Use for jsonp requests. Needed for cross-domain ajax. |
 | `maxPages` | Set the maximum number of pages in a thread to automatically concatenate in a single response. Default = 1 (no concatenation). Set `maxPages=all` to retrieve all pages of a thread regardless of length. Each individual page will count as a separate API call. |
-| `proxy` | Used to specify the IP address of a custom proxy that will be used to fetch the target page, instead of Diffbot's default IPs/proxies. (Ex: `&proxy=168.212.226.204`) |
-| `proxyAuth` | Used to specify the authentication parameters that will be used with the proxy specified in the `&proxy` parameter. (Ex: `&proxyAuth=username:password`) |
+| `proxy` | Leave value empty to use default proxies, or specify an IP address of a custom proxy that will be used to fetch the target page, instead of Diffbot's default IPs/proxies. (Ex: `&proxy` or `&proxy=168.212.226.204`) |
+| `proxyAuth` | Used to specify the authentication parameters that will be used with a custom proxy specified in the `&proxy` parameter. (Ex: `&proxyAuth=username:password`) |
 
 ### The fields argument
 
