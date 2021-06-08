@@ -11,7 +11,7 @@ The Natural Language API allows developers to extract entities (e.g., people, or
 * [Quickstart with python](nl-quickstart)
 * [Demo](http://demo.nl.diffbot.com/)
 * [API documentation](https://nl.diffbot.com/documentation/)
-* [Entity types and properties](http://relex.diffbot.com/schema/)
+* [Entity types and properties](https://demo.nl.diffbot.com/schema/)
 
 ## Terminology:
 * **Entity**. Anything in the real world. Example: Apple Inc, Steve Jobs. 
