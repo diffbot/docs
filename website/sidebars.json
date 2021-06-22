@@ -283,7 +283,7 @@
       {
         "type": "subcategory",
         "label": "In-Depth",
-        "ids": ["dql-index", "dql-workflows", "dql-faq"]
+        "ids": ["dql-index", "dql-workflows", "dql-faq", "dql-effective-queries]
       }
     ]
   },
