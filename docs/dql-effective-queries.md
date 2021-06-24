@@ -1,3 +1,9 @@
+---
+id: dql-effective-queries
+title: Creating Effective Queries
+sidebar_label: Creating Effective Queries
+---
+
 # How to create effective queries that return relevant articles
 
 Are you looking for a solution to help your team stay abreast with the latest news in key areas of technology relevant to your industry?
