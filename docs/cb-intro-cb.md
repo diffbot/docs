@@ -18,7 +18,7 @@ To whitelist Crawlbot for a site, specify the “Diffbot” user-agent in the si
 
 ```txt
 User-agent: Diffbot 
-Disallow
+Disallow: 
 ```
 
 Note that Crawlbot does not adhere to the `Allow` directive.
