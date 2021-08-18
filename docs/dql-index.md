@@ -314,7 +314,16 @@ Find similar entities to a query entity identified by a typed query:
 
 [`type:Organization similarTo(type:Organization wikipediaUri:"https://en.wikipedia.org/wiki/Walmart")`](https://app.diffbot.com/search/?query=type%3AOrganization+similarTo%28type%3AOrganization+wikipediaUri%3A%22https%3A%2F%2Fen.wikipedia.org%2Fwiki%2FWalmart%22%29&from=0&size=50&output_format=&kgversion=)
 
-When combined with other operators, we can filter `similarTo` results accordingly. For example, we can limit the results to organizations in the `Online Retailers` industry with query [`type:Organization similarTo(id:ExADb18D6MAmunRrlVELe8A) industries:"Online Retailers"`](https://app.diffbot.com/search/?query=type%3AOrganization+similarTo%28id%3AExADb18D6MAmunRrlVELe8A%29+industries%3A%22Online+Retailers%22&from=0&size=50&output_format=&kgversion=) or select organizations with employee number less than 5000: [`type:Organization similarTo(id:ExADb18D6MAmunRrlVELe8A) nbEmployeesMax<5000`](https://app.diffbot.com/search/?query=type%3AOrganization+similarTo%28id%3AExADb18D6MAmunRrlVELe8A%29+nbEmployeesMax%3C5000&from=0&size=50&output_format=&kgversion=)
+You can use `similarTo` to find companies that are similar to a _set_ of companies, for example for finding prospects that are simliar to your current customers. Currently, passing in multiple entities to `similarTo` is only supported by using the `or()` operator on a set of `ids`.
+
+Companies similar to Target and Walmart:
+
+[`type:Organization similarTo(id:or("ExADb18D6MAmunRrlVELe8A", "EOU1WEvHYN6K83Etm91H9fQ")) `](https://app.diffbot.com/search/?query=type%3AOrganization+similarTo%28id%3Aor%28%22ExADb18D6MAmunRrlVELe8A%22%2C+%22EOU1WEvHYN6K83Etm91H9fQ%22%29%29+&size=25)
+
+
+When combined with other operators, we can filter `similarTo` results accordingly. For example, we can limit the results to organizations in the `Online Retailers` industry with query [`type:Organization similarTo(id:ExADb18D6MAmunRrlVELe8A) industries:"Online Retailers"`](https://app.diffbot.com/search/?query=type%3AOrganization+similarTo%28id%3AExADb18D6MAmunRrlVELe8A%29+industries%3A%22Online+Retailers%22&from=0&size=50&output_format=&kgversion=) or select organizations with employee number less than 5000: [`type:Organization similarTo(id:ExADb18D6MAmunRrlVELe8A) nbEmployeesMax<5000`](https://app.diffbot.com/search/?query=type%3AOrganization+similarTo%28id%3AExADb18D6MAmunRrlVELe8A%29+nbEmployeesMax%3C5000&from=0&size=50&output_format=&kgversion=).  This can also be combined with passing in a set, e.g. Companies like Target and Walmart in Germany:
+
+[`type:Organization similarTo(id:or("ExADb18D6MAmunRrlVELe8A", "EOU1WEvHYN6K83Etm91H9fQ")) location.country.name:"Germany"`](https://app.diffbot.com/search/?query=type%3AOrganization+similarTo%28id%3Aor%28%22ExADb18D6MAmunRrlVELe8A%22%2C+%22EOU1WEvHYN6K83Etm91H9fQ%22%29%29+location.country.name%3A%22Germany%22&size=25)
 
 ---
 
