@@ -312,7 +312,7 @@ Find similar entities to a query entity identified by its id:
 
 Find similar entities to a query entity identified by a typed query:
 
-[`type:Organization similarTo(type:Organization wikipediaUri:"https://en.wikipedia.org/wiki/Walmart")`](https://app.diffbot.com/search/?query=type%3AOrganization+similarTo%28type%3AOrganization+wikipediaUri%3A%22https%3A%2F%2Fen.wikipedia.org%2Fwiki%2FWalmart%22%29&from=0&size=50&output_format=&kgversion=)
+[`type:Organization similarTo(type:Organization homepageUri:"https://walmart.com")`](https://app.diffbot.com/search/?query=type%3AOrganization+similarTo%28type%3AOrganization+homepageUri%3A%22https%3A%2F%2Fwalmart.com%22%29&from=0&size=25&output_format=&kgversion=)
 
 You can use `similarTo` to find companies that are similar to a _set_ of companies, for example for finding prospects that are simliar to your current customers. Currently, passing in multiple entities to `similarTo` is only supported by using the `or()` operator on a set of `ids`.
 
