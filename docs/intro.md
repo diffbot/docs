@@ -10,8 +10,6 @@ Welcome to the Diffbot docs! Here you'll learn all about Diffbot's features and 
 
 To begin, please make sure you've registered for an API account at [Diffbot.com](https://diffbot.com) - we have two-week trials available which are identical to paid accounts in almost every way except crawling ability. If you want to test crawls, please [get in touch](mailto:support@diffbot.com) and we'll give you a temporary account boost.
 
-If you'd like to experiment with [Knowledge Graph](kg-index) (KG), please note that due KG being available only on request at the moment, your trial token will not grant you access to it. Again, if you wish to take it for a spin, please [get in touch](mailto:support@diffbot.com).
-
 ## Categories and Sections
 
 The categories are divided into isolated collections of content focused on a specific skill level. **Tutorials** are good for newbies, but someone who has grasped the basics and knows what they are looking for will feel more at home in the **How To Guides**, reading specific solutions to specific problems. If you're interested in the philosophy or technology behind some of the features or choices we at Diffbot have made, there's the **Explainers** category.
