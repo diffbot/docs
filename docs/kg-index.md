@@ -8,7 +8,7 @@ The Diffbot Knowledge Graph (KG) is a collection of over 10 billion standard ent
 
 **How it Works —** [Search](kg-search-quickstart.md) for any entity, or [Enhance]() your existing dataset of companies and people with facts from the Knowledge Graph. Both are available as REST API endpoints, though access via the [Dashboard]() interface may be preferred for less technical users.
 
-**Highlights —** A unique benefit of the Diffbot Knowledge Graph is its ability to support a staggering array of search queries. Here are some examples (Diffbot account required to view):
+**Highlights —** A unique benefit of the Diffbot Knowledge Graph is its ability to support a staggering array of search queries. Here are some examples (login required to view, [get a trial token here](https://app.diffbot.com/get-started)):
 
 - [Companies in San Francisco with a Female CEO and <500 Employees]()
 - [All Whole Foods Retail Store Locations]()
