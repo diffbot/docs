@@ -222,23 +222,6 @@
 <blockquote>
 <p>Note: X-Evaluate will only be executed if called from the API the rule resides in. If you have an X-Evaluate script in your Article API rule and make a request with the Analyze API that identifies the page as an article, the X-Evaluate will not be executed.</p>
 </blockquote>
-<h4><a class="anchor" aria-hidden="true" id="saving-data-to-a-custom-field-using-javascript"></a><a href="#saving-data-to-a-custom-field-using-javascript" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Saving Data to a Custom Field Using Javascript</h4>
-<p>We support a custom function <code>save(_name_, _value_)</code> that can be used to save Javascript data directly to the JSON output of an extraction API.  For example, the following code will grab the JSON object from a <code>&lt;script&gt;</code> tag wholesale, and output the entire object to the JSON output of the Extraction API:</p>
-<pre><code class="hljs css language-js"><span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>) </span>{
-    start();
-    setTimeout(<span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>) </span>{
-        <span class="hljs-keyword">var</span> jsonNode = <span class="hljs-built_in">document</span>.querySelector(<span class="hljs-string">'script#PRODUCT_PROPERTIES'</span>);
-        <span class="hljs-keyword">if</span> (jsonNode !== <span class="hljs-literal">null</span>) {
-            save(<span class="hljs-string">"json"</span>, <span class="hljs-built_in">JSON</span>.parse(jsonNode.innerText));
-            setTimeout(<span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>) </span>{
-                end();
-            }, <span class="hljs-number">800</span>);
-        } <span class="hljs-keyword">else</span> {
-            end();
-        }
-    }, <span class="hljs-number">500</span>);
-}
-</code></pre>
 <h2><a class="anchor" aria-hidden="true" id="posting-content"></a><a href="#posting-content" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Posting Content</h2>
 <p>If your content is not publicly available (e.g., behind a firewall), you can POST markup directly to the Discussion API endpoint for analysis:</p>
 <pre><code class="hljs css language-plaintext">https://api.diffbot.com/v3/discussion?token=...&amp;url=...
