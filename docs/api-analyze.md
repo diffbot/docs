@@ -150,6 +150,29 @@ Delivered as a string value as a custom header:
 
 > Note: X-Evaluate will only be executed if called from the API the rule resides in. If you have an X-Evaluate script in your Article API rule and make a request with the Analyze API that identifies the page as an article, the X-Evaluate will not be executed.
 
+
+#### Saving Data to a Custom Field Using Javascript
+
+We support a custom function `save(_name_, _value_)` that can be used to save Javascript data directly to the JSON output of an extraction API.  For example, the following code will grab the JSON object from a `<script>` tag wholesale, and output the entire object to the JSON output of the Extraction API:
+
+```js
+function() {
+    start();
+    setTimeout(function() {
+        var jsonNode = document.querySelector('script#PRODUCT_PROPERTIES');
+        if (jsonNode !== null) {
+            save("json", JSON.parse(jsonNode.innerText));
+            setTimeout(function() {
+                end();
+            }, 800);
+        } else {
+            end();
+        }
+    }, 500);
+}
+```
+
+
 ## Posting Content
 
 If your content is not publicly available (e.g., behind a firewall), you can POST markup or plain text directly to the Analyze API endpoint for analysis. Note that the quality of analysis is dependent on many factors, among them the accessibility of page assets (images, CSS) and how reliant the page layout is on those that are unavailable.
