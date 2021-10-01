@@ -24,7 +24,7 @@ class HomeSplash extends React.Component {
     const SplashContainer = props => (
       <div className="homeContainer">
         <div class="fixedHeaderContainer" style={{backgroundColor: '#fa383e'}}>
-          <div class="headerWrapper wrapper"><header style={{textAlign: 'center', display: 'block', paddingTop: '5px'}}><a style={{display: 'block'}} target="_blank" href="https://docs.diffbot.com/docs/en/explain-letsencrypt-certificate-expiration">SSL Errors? Read here for why and how to solve it!</a></header>
+          <div class="headerWrapper wrapper"><header style={{textAlign: 'center', display: 'block', paddingTop: '5px'}}><a style={{display: 'block'}} target="_blank" href="https://docs.diffbot.com/docs/en/explain-letsencrypt-certificate-expiration">SSL Error? Read here for why and how to solve it!</a></header>
           </div>
         </div>
         <div className="homeSplashFade" style={{paddingTop:"40px"}}>
