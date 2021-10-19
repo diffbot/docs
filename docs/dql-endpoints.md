@@ -4,8 +4,6 @@ title: DQL Endpoints
 sidebar_label: DQL Endpoints
 ---
 
-# DQL Endpoints
-
 Diffbot offers 2 different API endpoints for sending DQL queries, the DQL API and the DQL Stream API.  The endpoints differ only in the formats they return by default.
 
 The standard DQL endpoint contains all the functionality of the Stream API, and we recommend this standard endpoint for all general use.  The Stream API is maintained for backwards compatibility with legacy customer implementations.
