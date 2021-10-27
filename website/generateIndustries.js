@@ -14,26 +14,64 @@ let fs = require("fs");
 let { render } = require("mustache");
 const axios = require("axios");
 
+// Recursively loop through each object to ensure a defined 'children' property (even if empty)
+// -- This fixes weak typing collision, resulting in mustache inadvertently accessing parent scopes when property is null in current scope
+const ensureChildrenProperty = (arr) => {
+    arr.forEach((item) => {
+        if (!item['children']) {
+            item['children'] = [];
+        }
+        else {
+            ensureChildrenProperty(item['children'])
+        }
+    })
+    return arr;
+}
+
 axios.get('https://kg.diffbot.com/kg/ontology')
 .then((response) => {
-    // Template Model
-    var industries = response['data']['industryCategories'];
+    
+    // Template Model for Industry Categories
+    var industries = response['data']['taxonomies']['IndustryCategory']['categories'];
+    industries = ensureChildrenProperty(industries);
     // -- Convert to Array for mustache template iteration
     let industriesArray = [];
-    for (var industry in industries) {
+    for (let industry in industries) {
         industriesArray.push(industries[industry]);
     }
+
+    // Template Model for Employment Categories
+    var employmentCategories = response['data']['taxonomies']['EmploymentCategory']['categories'];
+    employmentCategories = ensureChildrenProperty(employmentCategories);
+    // -- Convert to Arrays for mustache template iteration
+    let employmentCategoriesByType = {};
+    for (let category in employmentCategories) {
+        if (!employmentCategoriesByType[employmentCategories[category]["info"]["facet"]]) {
+            employmentCategoriesByType[employmentCategories[category]["info"]["facet"]] = [];
+        }
+        employmentCategoriesByType[employmentCategories[category]["info"]["facet"]].push(employmentCategories[category]);
+    }
+
     var templateModel = {
-        industries: industriesArray
+        industries: industriesArray,
+        employmentCategories: employmentCategoriesByType
     };
 
 
-    // Get Template
-    let template = fs.readFileSync("./static/md/kg-industries.md").toString();
+    // Get Industries Template
+    let industriesTemplate = fs.readFileSync("./static/md/kg-industries.md").toString();
 
-    // Render Template
-    let output = render(template, templateModel);
+    // Render Industries Template
+    let industriesOutput = render(industriesTemplate, templateModel);
     console.log(`Rendered Industry Reference! Writing Markdown...`);
-    fs.writeFileSync(`../docs/kg-industry-list.md`, output);
+    fs.writeFileSync(`../docs/kg-industry-list.md`, industriesOutput);
+
+    // Get Employment Categories Template
+    let employmentCategoriesTemplate = fs.readFileSync("./static/md/kg-employment-categories.md").toString();
+
+    // Render Employment Categories Template
+    let employmentCategoriesOutput = render(employmentCategoriesTemplate, templateModel);
+    console.log(`Rendered Employment Categories Reference! Writing Markdown...`);
+    fs.writeFileSync(`../docs/kg-employment-categories-list.md`, employmentCategoriesOutput);
 
 });

@@ -10,19 +10,27 @@ Note that fields are not guaranteed to exist in every entity record.
 >New to the Diffbot Knowledge Graph? [Start here](dql-quickstart).
 
 ## CreativeWork Fields
+* [RSS feed](#rss feed) 
+* [appleGuid](#appleguid) 
+* [artistCredit](#artistcredit) 
 * [aspectRatio](#aspectratio) 
+* [authors](#authors) 
 * [boxOfficeGrossUsa](#boxofficegrossusa) 
 * [boxOfficeOpeningWeekendUsa](#boxofficeopeningweekendusa) 
 * [boxOfficeWorldGross](#boxofficeworldgross) 
 * [budget](#budget) 
 * [castmembers](#castmembers) 
 * [color](#color) 
+* [complete](#complete) 
 * [countryOfOrigin](#countryoforigin) 
 * [creativeWorkType](#creativeworktype) 
 * [creators](#creators) 
+* [creditedArtists](#creditedartists) 
 * [directors](#directors) 
 * [episodeNum](#episodenum) 
+* [explicit](#explicit) 
 * [genres](#genres) 
+* [guests](#guests) 
 * [imdbPopularity](#imdbpopularity) 
 * [imdbRating](#imdbrating) 
 * [imdbUri](#imdburi) 
@@ -31,31 +39,92 @@ Note that fields are not guaranteed to exist in every entity record.
 * [latestSeasonYear](#latestseasonyear) 
 * [metaScore](#metascore) 
 * [mpaaRating](#mpaarating) 
+* [musicbrainzUri](#musicbrainzuri) 
 * [numAwards](#numawards) 
 * [numEpisodes](#numepisodes) 
+* [numTracks](#numtracks) 
 * [officialSites](#officialsites) 
 * [parentTitle](#parenttitle) 
 * [plotKeywords](#plotkeywords) 
 * [plotSummary](#plotsummary) 
+* [podCategories](#podcategories) 
+* [podDescription](#poddescription) 
 * [posterImgLink](#posterimglink) 
 * [productionCompanies](#productioncompanies) 
 * [releaseDate](#releasedate) 
 * [runtime](#runtime) 
 * [seasonNum](#seasonnum) 
 * [taglines](#taglines) 
+* [trackPosition](#trackposition) 
 * [videoMainLink](#videomainlink) 
 * [writers](#writers) 
 
 ## CreativeWork Field Details
 Note that certain longer field examples may be truncated for readability.
 
+### RSS feed
+  
+* **Type:** URL
+* **Example:**
+```
+{
+	"RSS feed": ""
+}
+```
+### appleGuid
+  
+* **Type:** String
+* **Example:**
+```
+{
+	"appleGuid": ""
+}
+```
+### artistCredit
+  Artist Credit String
+* **Type:** String
+* **Example:**
+```
+{
+	"artistCredit": ""
+}
+```
 ### aspectRatio
   
 * **Type:** String
 * **Example:**
 ```
 {
-	"aspectRatio": ""
+	"aspectRatio": "1.78 : 1"
+}
+```
+### authors
+  
+* **Type:** LinkedEntity
+* **Example:**
+```
+{
+	"authors": [
+		{
+			"summary": "",
+			"image": "",
+			"images": [
+				{
+					"classifications": "",
+					"fingerprint": "",
+					"title": "",
+					"isCached": false,
+					"url": ""
+				}
+			],
+			"types": "",
+			"websiteUris": "",
+			"diffbotUri": "",
+			"name": "",
+			"targetDiffbotUri": "",
+			"surfaceForm": ""
+		}
+	]
 }
 ```
 ### boxOfficeGrossUsa
@@ -103,39 +172,36 @@ Note that certain longer field examples may be truncated for readability.
 	"castmembers": [
 		{
 			"castmember": {
-				"recordId": "ETeVENUXKM5yT9kLY27xFHA@0",
-				"name": "Martin Scorsese",
+				"recordId": "ErgKVmOjIOeiFEge88_z0Ow@0",
+				"name": "Joni Mitchell",
 				"websiteUris": [
-					"imdb.com/name/nm0000217"
+					"imdb.com/name/nm0593474"
 				],
-				"surfaceForm": "Martin Scorsese",
+				"surfaceForm": "Joni Mitchell",
 				"type": "Person"
-			},
-			"characterLink": "imdb.com/title/tt0364151/characters/nm0000217"
+			}
 		},
 		{
 			"castmember": {
-				"recordId": "ETeVENUXKM5yT9kLY27xFHA@1",
-				"name": "Peter Bogdanovich",
+				"recordId": "ErgKVmOjIOeiFEge88_z0Ow@1",
+				"name": "Bill Flanagan",
 				"websiteUris": [
-					"imdb.com/name/nm0000953"
+					"imdb.com/name/nm1940634"
 				],
-				"surfaceForm": "Peter Bogdanovich",
+				"surfaceForm": "Bill Flanagan",
 				"type": "Person"
-			},
-			"characterLink": "imdb.com/title/tt0364151/characters/nm0000953"
+			}
 		},
 		{
 			"castmember": {
-				"recordId": "ETeVENUXKM5yT9kLY27xFHA@2",
-				"name": "Tony Bennett",
+				"recordId": "ErgKVmOjIOeiFEge88_z0Ow@2",
+				"name": "David Crosby",
 				"websiteUris": [
-					"imdb.com/name/nm0004746"
+					"imdb.com/name/nm0004849"
 				],
-				"surfaceForm": "Tony Bennett",
+				"surfaceForm": "David Crosby",
 				"type": "Person"
-			},
-			"characterLink": "imdb.com/title/tt0364151/characters/nm0004746"
+			}
 		}
 	]
 }
@@ -146,7 +212,16 @@ Note that certain longer field examples may be truncated for readability.
 * **Example:**
 ```
 {
-	"color": ""
+	"color": "Color | Black and White"
+}
+```
+### complete
+  
+* **Type:** Boolean
+* **Example:**
+```
+{
+	"complete": false
 }
 ```
 ### countryOfOrigin
@@ -155,7 +230,9 @@ Note that certain longer field examples may be truncated for readability.
 * **Example:**
 ```
 {
-	"countryOfOrigin": ""
+	"countryOfOrigin": [
+		"USA"
+	]
 }
 ```
 ### creativeWorkType
@@ -164,7 +241,7 @@ Note that certain longer field examples may be truncated for readability.
 * **Example:**
 ```
 {
-	"creativeWorkType": "tv series"
+	"creativeWorkType": "tv episode"
 }
 ```
 ### creators
@@ -175,14 +252,52 @@ Note that certain longer field examples may be truncated for readability.
 {
 	"creators": [
 		{
-			"recordId": "ETeVENUXKM5yT9kLY27xFHA@664",
-			"name": "Susan Lacy",
-			"websiteUris": [
-				"imdb.com/name/nm0480402"
+			"summary": "",
+			"image": "",
+			"images": [
+				{
+					"classifications": "",
+					"fingerprint": "",
+					"title": "",
+					"isCached": false,
+					"url": ""
+				}
 			],
-			"surfaceForm": "Susan Lacy",
-			"position": "creativeWorkCreator",
-			"type": "Person"
+			"types": "",
+			"websiteUris": "",
+			"diffbotUri": "",
+			"name": "",
+			"targetDiffbotUri": "",
+			"surfaceForm": ""
+		}
+	]
+}
+```
+### creditedArtists
+  List of credited artists
+* **Type:** LinkedEntity
+* **Example:**
+```
+{
+	"creditedArtists": [
+		{
+			"summary": "",
+			"image": "",
+			"images": [
+				{
+					"classifications": "",
+					"fingerprint": "",
+					"title": "",
+					"isCached": false,
+					"url": ""
+				}
+			],
+			"types": "",
+			"websiteUris": "",
+			"diffbotUri": "",
+			"name": "",
+			"targetDiffbotUri": "",
+			"surfaceForm": ""
 		}
 	]
 }
@@ -193,7 +308,18 @@ Note that certain longer field examples may be truncated for readability.
 * **Example:**
 ```
 {
-	"directors": []
+	"directors": [
+		{
+			"recordId": "ErgKVmOjIOeiFEge88_z0Ow@18",
+			"name": "Susan Lacy",
+			"websiteUris": [
+				"imdb.com/name/nm0480402"
+			],
+			"surfaceForm": "Susan Lacy",
+			"position": "creativeWorkDirector",
+			"type": "Person"
+		}
+	]
 }
 ```
 ### episodeNum
@@ -202,7 +328,16 @@ Note that certain longer field examples may be truncated for readability.
 * **Example:**
 ```
 {
-	"episodeNum": 0
+	"episodeNum": 5
+}
+```
+### explicit
+  
+* **Type:** Boolean
+* **Example:**
+```
+{
+	"explicit": false
 }
 ```
 ### genres
@@ -211,7 +346,39 @@ Note that certain longer field examples may be truncated for readability.
 * **Example:**
 ```
 {
-	"genres": ""
+	"genres": [
+		"Documentary",
+		"Biography"
+	]
+}
+```
+### guests
+  
+* **Type:** LinkedEntity
+* **Example:**
+```
+{
+	"guests": [
+		{
+			"summary": "",
+			"image": "",
+			"images": [
+				{
+					"classifications": "",
+					"fingerprint": "",
+					"title": "",
+					"isCached": false,
+					"url": ""
+				}
+			],
+			"types": "",
+			"websiteUris": "",
+			"diffbotUri": "",
+			"name": "",
+			"targetDiffbotUri": "",
+			"surfaceForm": ""
+		}
+	]
 }
 ```
 ### imdbPopularity
@@ -229,7 +396,7 @@ Note that certain longer field examples may be truncated for readability.
 * **Example:**
 ```
 {
-	"imdbRating": 8
+	"imdbRating": 7.9
 }
 ```
 ### imdbUri
@@ -238,7 +405,7 @@ Note that certain longer field examples may be truncated for readability.
 * **Example:**
 ```
 {
-	"imdbUri": "imdb.com/title/tt0364151"
+	"imdbUri": "imdb.com/title/tt0778181"
 }
 ```
 ### languages
@@ -247,7 +414,9 @@ Note that certain longer field examples may be truncated for readability.
 * **Example:**
 ```
 {
-	"languages": ""
+	"languages": [
+		"English"
+	]
 }
 ```
 ### latestSeason
@@ -256,7 +425,7 @@ Note that certain longer field examples may be truncated for readability.
 * **Example:**
 ```
 {
-	"latestSeason": 35
+	"latestSeason": 0
 }
 ```
 ### latestSeasonYear
@@ -265,7 +434,7 @@ Note that certain longer field examples may be truncated for readability.
 * **Example:**
 ```
 {
-	"latestSeasonYear": 2021
+	"latestSeasonYear": 0
 }
 ```
 ### metaScore
@@ -286,13 +455,22 @@ Note that certain longer field examples may be truncated for readability.
 	"mpaaRating": ""
 }
 ```
+### musicbrainzUri
+  
+* **Type:** URL
+* **Example:**
+```
+{
+	"musicbrainzUri": ""
+}
+```
 ### numAwards
   
 * **Type:** String
 * **Example:**
 ```
 {
-	"numAwards": "Won 27 Primetime Emmys. Another 29 wins & 71 nominations."
+	"numAwards": ""
 }
 ```
 ### numEpisodes
@@ -301,7 +479,16 @@ Note that certain longer field examples may be truncated for readability.
 * **Example:**
 ```
 {
-	"numEpisodes": 247
+	"numEpisodes": 0
+}
+```
+### numTracks
+  
+* **Type:** Integer
+* **Example:**
+```
+{
+	"numTracks": 0
 }
 ```
 ### officialSites
@@ -319,7 +506,16 @@ Note that certain longer field examples may be truncated for readability.
 * **Example:**
 ```
 {
-	"parentTitle": ""
+	"parentTitle": {
+		"recordId": "ErgKVmOjIOeiFEge88_z0Ow@19",
+		"name": "American Masters",
+		"websiteUris": [
+			"imdb.com/title/tt0364151"
+		],
+		"surfaceForm": "American Masters",
+		"position": "creativeWorkParentWork",
+		"type": "CreativeWork"
+	}
 }
 ```
 ### plotKeywords
@@ -328,7 +524,11 @@ Note that certain longer field examples may be truncated for readability.
 * **Example:**
 ```
 {
-	"plotKeywords": ""
+	"plotKeywords": [
+		"music episode",
+		"song",
+		"singer"
+	]
 }
 ```
 ### plotSummary
@@ -337,7 +537,25 @@ Note that certain longer field examples may be truncated for readability.
 * **Example:**
 ```
 {
-	"plotSummary": "Documentary series focusing on great American artists and personalities."
+	"plotSummary": "A profile of Canadian singer-songwriter Joni Mitchell, and how her music evolved from personal folk into pop, jazz and avant-garde."
+}
+```
+### podCategories
+  
+* **Type:** String
+* **Example:**
+```
+{
+	"podCategories": ""
+}
+```
+### podDescription
+  
+* **Type:** String
+* **Example:**
+```
+{
+	"podDescription": ""
 }
 ```
 ### posterImgLink
@@ -346,7 +564,7 @@ Note that certain longer field examples may be truncated for readability.
 * **Example:**
 ```
 {
-	"posterImgLink": "m.media-amazon.com/images/M/MV5BMTQ3ODc5ODQ0NV5BMl5BanBnXkFtZTgwNzM1MjUzMDI@._V1_UX182_CR0,0,182,268_AL_.jpg"
+	"posterImgLink": ""
 }
 ```
 ### productionCompanies
@@ -355,7 +573,28 @@ Note that certain longer field examples may be truncated for readability.
 * **Example:**
 ```
 {
-	"productionCompanies": []
+	"productionCompanies": [
+		{
+			"recordId": "ErgKVmOjIOeiFEge88_z0Ow@15",
+			"name": "Eagle Rock Entertainment",
+			"websiteUris": [
+				"imdb.com/company/co0015070"
+			],
+			"surfaceForm": "Eagle Rock Entertainment",
+			"position": "creativeWorkProductionOrganization",
+			"type": "Organization"
+		},
+		{
+			"recordId": "ErgKVmOjIOeiFEge88_z0Ow@16",
+			"name": "WNET Channel 13 New York",
+			"websiteUris": [
+				"imdb.com/company/co0037666"
+			],
+			"surfaceForm": "WNET Channel 13 New York",
+			"position": "creativeWorkProductionOrganization",
+			"type": "Organization"
+		}
+	]
 }
 ```
 ### releaseDate
@@ -364,7 +603,11 @@ Note that certain longer field examples may be truncated for readability.
 * **Example:**
 ```
 {
-	"releaseDate": ""
+	"releaseDate": {
+		"str": "d2003-XX-XX",
+		"precision": 1,
+		"timestamp": 1041379200000
+	}
 }
 ```
 ### runtime
@@ -373,7 +616,7 @@ Note that certain longer field examples may be truncated for readability.
 * **Example:**
 ```
 {
-	"runtime": ""
+	"runtime": "92 min"
 }
 ```
 ### seasonNum
@@ -382,7 +625,7 @@ Note that certain longer field examples may be truncated for readability.
 * **Example:**
 ```
 {
-	"seasonNum": 0
+	"seasonNum": 17
 }
 ```
 ### taglines
@@ -392,6 +635,15 @@ Note that certain longer field examples may be truncated for readability.
 ```
 {
 	"taglines": ""
+}
+```
+### trackPosition
+  
+* **Type:** Integer
+* **Example:**
+```
+{
+	"trackPosition": 0
 }
 ```
 ### videoMainLink
@@ -409,6 +661,17 @@ Note that certain longer field examples may be truncated for readability.
 * **Example:**
 ```
 {
-	"writers": []
+	"writers": [
+		{
+			"recordId": "ErgKVmOjIOeiFEge88_z0Ow@17",
+			"name": "Susan Lacy",
+			"websiteUris": [
+				"imdb.com/name/nm0480402"
+			],
+			"surfaceForm": "Susan Lacy",
+			"position": "creativeWorkWriter",
+			"type": "Person"
+		}
+	]
 }
 ```

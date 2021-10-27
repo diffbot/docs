@@ -62,7 +62,12 @@ Note that certain longer field examples may be truncated for readability.
 * **Example:**
 ```
 {
-	"breadcrumb": []
+	"breadcrumb": [
+		{
+			"link": "",
+			"name": ""
+		}
+	]
 }
 ```
 ### category
@@ -102,7 +107,6 @@ Note that certain longer field examples may be truncated for readability.
 				"language": "en",
 				"html": "<p>Because buy these.</p>\n<p>I'm a freak about my bed being my #1 spot for comfort. I've been using the same damn feather pillows almost five years, and I simply cannot take it anymore! They're so comfortable to sleep on (layered with multiple pillowcases to keep my face from getting poked by feathers), but they're such a mess! I think I'll find little feathers in my belongings forever until I die. They. Are. LITERALLY. Everywhere.</p>\n<p>Anyways, I purchased these pillows after reading reviews, which were obviously great considering I bought them, but I was still a skeptic because I was so used to sleeping on the same feather pillows for years. The packaging was really cute -- tied with a white, silky bow. Inside, the pillows were wrapped in plastic with all the air sucked out. They were completely flat, which made me nervous. I need fluffy. Still skeptical, but remembering the reviews said the pillows needed to be fluffed, I took them out of the plastic...</p>\n<p>EXPECTATIONS -- BLOWN. AWAY.</p>\n<p>They're just as soft, mushy, and all-around comfortable as my feathers pillows are. I can enjoy these and not getting stabbed in the face by feathers and still have the comfort of cuddling with a fluffy pillow!</p>\n<p>If you're a miserable person/like your pillows firm, you will hate this product. If you're a normal human-being, you'll be like me and write a review about them after opening because BUY THESE!</p>\n<p>In regard to price - these pillows cost at least half the price of my feather pillows. They also relieve some emotional stress because I no longer have to worry about finding new feathers stuck in my panties' fabric after wondering why I was feeling something prick me all day. 🙌🏼</p>",
 				"pageUrl": "https://www.amazon.com/Digital-Decor-Alternative-Sleeping-Pillowcases/dp/B017MA074Y",
-				"id": 0,
 				"text": "Because buy these.\nI'm a freak about my bed being my #1 spot for comfort. I've been using the same damn feather pillows almost five years, and I simply cannot take it anymore! They're so comfortable to sleep on (layered with multiple pillowcases to keep my face from getting poked by feathers), but they're such a mess! I think I'll find little feathers in my belongings forever until I die. They. Are. LITERALLY. Everywhere.\nAnyways, I purchased these pillows after reading reviews, which were obviously great considering I bought them, but I was still a skeptic because I was so used to sleeping on the same feather pillows for years. The packaging was really cute -- tied with a white, silky bow. Inside, the pillows were wrapped in plastic with all the air sucked out. They were completely flat, which made me nervous. I need fluffy. Still skeptical, but remembering the reviews said the pillows needed to be fluffed, I took them out of the plastic...\nEXPECTATIONS -- BLOWN. AWAY.\nThey're just as soft, mushy, and all-around comfortable as my feathers pillows are. I can enjoy these and not getting stabbed in the face by feathers and still have the comfort of cuddling with a fluffy pillow!\nIf you're a miserable person/like your pillows firm, you will hate this product. If you're a normal human-being, you'll be like me and write a review about them after opening because BUY THESE!\nIn regard to price - these pillows cost at least half the price of my feather pillows. They also relieve some emotional stress because I no longer have to worry about finding new feathers stuck in my panties' fabric after wondering why I was feeling something prick me all day. 🙌🏼"
 			},
 			{
@@ -119,7 +123,6 @@ Note that certain longer field examples may be truncated for readability.
 				"language": "en",
 				"html": "<p>received a tiny box with 2 flat-as-a-pancake pillows folded in half. Was disappointed until I broke the seal on the bag. I couldn't unpack them fast enough! Better than a down pillow by far. If you're expecting a firm pillow, don't order. BUT if you want plush and snuggly, this is perfect!!!! Is it available in king size?</p>",
 				"pageUrl": "https://www.amazon.com/Digital-Decor-Alternative-Sleeping-Pillowcases/dp/B017MA074Y",
-				"id": 1,
 				"text": "received a tiny box with 2 flat-as-a-pancake pillows folded in half. Was disappointed until I broke the seal on the bag. I couldn't unpack them fast enough! Better than a down pillow by far. If you're expecting a firm pillow, don't order. BUT if you want plush and snuggly, this is perfect!!!! Is it available in king size?"
 			},
 			{
@@ -136,7 +139,6 @@ Note that certain longer field examples may be truncated for readability.
 				"language": "en",
 				"html": "<p>I hardly ever take the time to write reviews (sorry) but I just had to for these pillows. They are great - very comfy and fluffy; they cradle your head perfectly without mushing down flat. I have neck issues, and these pillows keep my spine aligned without being too stiff. I ordered 6 to replace our pillows, and also some extra pillows. They were vacuum sealed and contained in a small box. So nice-they will be so easy to store - they don't take up much room. I placed my usual pillow cases over the ones that came with the pillows. I assume the extra cases will keep the pillows protected for longer.</p>",
 				"pageUrl": "https://www.amazon.com/Digital-Decor-Alternative-Sleeping-Pillowcases/dp/B017MA074Y",
-				"id": 2,
 				"text": "I hardly ever take the time to write reviews (sorry) but I just had to for these pillows. They are great - very comfy and fluffy; they cradle your head perfectly without mushing down flat. I have neck issues, and these pillows keep my spine aligned without being too stiff. I ordered 6 to replace our pillows, and also some extra pillows. They were vacuum sealed and contained in a small box. So nice-they will be so easy to store - they don't take up much room. I placed my usual pillow cases over the ones that came with the pillows. I assume the extra cases will keep the pillows protected for longer."
 			},
 			{
@@ -153,7 +155,6 @@ Note that certain longer field examples may be truncated for readability.
 				"language": "en",
 				"html": "<p>Do not buy these. When I received these, the end seam was split on one pillow exposing stuffing. The pillow cases are extremely rough. All in all poor quality. I had overnight guests arriving and this was forced to see up pillow seam in order to use it.</p>",
 				"pageUrl": "https://www.amazon.com/Digital-Decor-Alternative-Sleeping-Pillowcases/dp/B017MA074Y",
-				"id": 3,
 				"text": "Do not buy these. When I received these, the end seam was split on one pillow exposing stuffing. The pillow cases are extremely rough. All in all poor quality. I had overnight guests arriving and this was forced to see up pillow seam in order to use it."
 			},
 			{
@@ -170,7 +171,6 @@ Note that certain longer field examples may be truncated for readability.
 				"language": "en",
 				"html": "<p>I ordered these 2 pillows for my guest bedroom and they came super quickly (you can't beat the price either). They come vacuum sealed but upon opening them, within a few hours, they are large and plush. I didn't notice any smell, but before I used them I tossed them in the dryer (medium heat) with a damp towel and dryer sheet.</p>\n<p>These pillows are literally the definition of a standard pillow. Neither firm nor soft, they are the perfect balance of in-between if that's what you're looking for. I wouldn't want to sleep on them every single night, but they are great for a guest/spare bedroom.</p>",
 				"pageUrl": "https://www.amazon.com/Digital-Decor-Alternative-Sleeping-Pillowcases/dp/B017MA074Y",
-				"id": 4,
 				"text": "I ordered these 2 pillows for my guest bedroom and they came super quickly (you can't beat the price either). They come vacuum sealed but upon opening them, within a few hours, they are large and plush. I didn't notice any smell, but before I used them I tossed them in the dryer (medium heat) with a damp towel and dryer sheet.\nThese pillows are literally the definition of a standard pillow. Neither firm nor soft, they are the perfect balance of in-between if that's what you're looking for. I wouldn't want to sleep on them every single night, but they are great for a guest/spare bedroom."
 			},
 			{
@@ -187,7 +187,6 @@ Note that certain longer field examples may be truncated for readability.
 				"language": "en",
 				"html": "<p>LOVE the pillows.. They are exactly as I thought they would be... I had to contact the Seller and they are AWESOME people to do business with.. I would recommend these pillows to anyone.. Very pleased with them...</p>",
 				"pageUrl": "https://www.amazon.com/Digital-Decor-Alternative-Sleeping-Pillowcases/dp/B017MA074Y",
-				"id": 5,
 				"text": "LOVE the pillows.. They are exactly as I thought they would be... I had to contact the Seller and they are AWESOME people to do business with.. I would recommend these pillows to anyone.. Very pleased with them..."
 			},
 			{
@@ -204,7 +203,6 @@ Note that certain longer field examples may be truncated for readability.
 				"language": "en",
 				"html": "<p>These weren't bad pillows at all. The cases are a bit rough, but nothing a good washing didn't fix. They did have a &quot;new pillow&quot; smell but again, washing or Febreze will take care of it. Comfortable to sleep on and didn't give me a headache like my usual standards pillow do. I don't see them lasting too long, but still a good pillow to have.</p>",
 				"pageUrl": "https://www.amazon.com/Digital-Decor-Alternative-Sleeping-Pillowcases/dp/B017MA074Y",
-				"id": 6,
 				"text": "These weren't bad pillows at all. The cases are a bit rough, but nothing a good washing didn't fix. They did have a \"new pillow\" smell but again, washing or Febreze will take care of it. Comfortable to sleep on and didn't give me a headache like my usual standards pillow do. I don't see them lasting too long, but still a good pillow to have."
 			},
 			{
@@ -221,7 +219,6 @@ Note that certain longer field examples may be truncated for readability.
 				"language": "en",
 				"html": "<p>Poor quality outer fabric, not the same one ot the other, and smells terrible. No hotel i ever stayed in had such awful pillows. The end they are filled from is practically empty and the 'down alternative' doesnt seem to be able to be repositioned. Seems more like stuffing. The 'free pillow cases' are just more if the same awful fabric used as the outer pillow. Thin, rough, with dirt already on them. Really disappointed in this purchase. I don't underatand all the good reviews. They were very slow to ship so maybe they had to outsource to a bad factory someplace.</p>",
 				"pageUrl": "https://www.amazon.com/Digital-Decor-Alternative-Sleeping-Pillowcases/dp/B017MA074Y",
-				"id": 7,
 				"text": "Poor quality outer fabric, not the same one ot the other, and smells terrible. No hotel i ever stayed in had such awful pillows. The end they are filled from is practically empty and the 'down alternative' doesnt seem to be able to be repositioned. Seems more like stuffing. The 'free pillow cases' are just more if the same awful fabric used as the outer pillow. Thin, rough, with dirt already on them. Really disappointed in this purchase. I don't underatand all the good reviews. They were very slow to ship so maybe they had to outsource to a bad factory someplace."
 			}
 		],

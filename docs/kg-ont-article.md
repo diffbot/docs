@@ -60,7 +60,12 @@ Note that certain longer field examples may be truncated for readability.
 * **Example:**
 ```
 {
-	"breadcrumb": []
+	"breadcrumb": [
+		{
+			"link": "",
+			"name": ""
+		}
+	]
 }
 ```
 ### date
@@ -82,7 +87,73 @@ Note that certain longer field examples may be truncated for readability.
 * **Example:**
 ```
 {
-	"discussion": ""
+	"discussion": {
+		"nextPages": "",
+		"numPages": 0,
+		"provider": "",
+		"nextPage": "",
+		"language": "",
+		"numPosts": 0,
+		"title": "",
+		"posts": [
+			{
+				"date": {
+					"str": "",
+					"precision": 0,
+					"timestamp": 0
+				},
+				"sentiment": "",
+				"images": [
+					{
+						"displayHeight": 0,
+						"xpath": "",
+						"breadcrumb": [
+							{
+								"link": "",
+								"name": ""
+							}
+						],
+						"displayWidth": 0,
+						"naturalHeight": 0,
+						"language": "",
+						"links": "",
+						"anchorUrl": "",
+						"title": "",
+						"url": "",
+						"naturalWidth": 0,
+						"tags": [
+							{
+								"score": "",
+								"sentiment": "",
+								"types": "",
+								"count": 0,
+								"label": "",
+								"uri": ""
+							}
+						]
+					}
+				],
+				"author": "",
+				"authorUrl": "",
+				"language": "",
+				"html": "",
+				"pageUrl": "",
+				"text": ""
+			}
+		],
+		"numParticipants": 0,
+		"tags": [
+			{
+				"score": "",
+				"sentiment": "",
+				"types": "",
+				"count": 0,
+				"label": "",
+				"uri": ""
+			}
+		],
+		"rssUrl": ""
+	}
 }
 ```
 ### estimatedDate
@@ -204,7 +275,13 @@ Note that certain longer field examples may be truncated for readability.
 * **Example:**
 ```
 {
-	"quotes": []
+	"quotes": [
+		{
+			"speakerUri": "",
+			"quote": "",
+			"speaker": ""
+		}
+	]
 }
 ```
 ### sentiment
@@ -233,12 +310,6 @@ Note that certain longer field examples may be truncated for readability.
 {
 	"tags": [
 		{
-			"score": 0.62,
-			"count": 2,
-			"label": "Artificial intelligence",
-			"uri": "http://dbpedia.org/page/Artificial_intelligence"
-		},
-		{
 			"score": 0.94,
 			"sentiment": -0.15,
 			"types": [
@@ -253,6 +324,12 @@ Note that certain longer field examples may be truncated for readability.
 			"count": 12,
 			"label": "Knowledge Graph",
 			"uri": "http://dbpedia.org/page/Knowledge_Graph"
+		},
+		{
+			"score": 0.62,
+			"count": 2,
+			"label": "Artificial intelligence",
+			"uri": "http://dbpedia.org/page/Artificial_intelligence"
 		},
 		{
 			"score": 0.58,
@@ -291,6 +368,56 @@ Note that certain longer field examples may be truncated for readability.
 * **Example:**
 ```
 {
-	"videos": []
+	"videos": [
+		{
+			"embedUrl": "",
+			"date": {
+				"str": "",
+				"precision": 0,
+				"timestamp": 0
+			},
+			"images": [
+				{
+					"displayHeight": 0,
+					"xpath": "",
+					"breadcrumb": [
+						{
+							"link": "",
+							"name": ""
+						}
+					],
+					"displayWidth": 0,
+					"naturalHeight": 0,
+					"language": "",
+					"links": "",
+					"anchorUrl": "",
+					"title": "",
+					"url": "",
+					"naturalWidth": 0,
+					"tags": [
+						{
+							"score": "",
+							"sentiment": "",
+							"types": "",
+							"count": 0,
+							"label": "",
+							"uri": ""
+						}
+					]
+				}
+			],
+			"author": "",
+			"mime": "",
+			"naturalHeight": 0,
+			"language": "",
+			"title": "",
+			"url": "",
+			"naturalWidth": 0,
+			"duration": 0,
+			"html": "",
+			"text": "",
+			"viewCount": 0
+		}
+	]
 }
 ```

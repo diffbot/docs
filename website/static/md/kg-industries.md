@@ -12,14 +12,14 @@ An example [DQL](dql-index) query using an industry on this list might look like
 type:Organization industry:"Medical Associations"
 ```
 
-| Primary Industry    | Secondary Industry | Tertiary Industry | NAICS         |
-| ------------------- | ------------------ | ----------------- | ------------------ |
+| Primary Industry    | Secondary Industry | Tertiary Industry | NAICS                   |
+| ------------------- | ------------------ | ----------------- | ----------------------- |
 {{ #industries }}
-| {{ name }}          |                    |                   | {{ naicsMapping }} |
+| {{ name }}          |                    |                   | {{ info.naicsMapping }} |
 {{ #children }}
-|                     | {{ name }}         |                   | {{ naicsMapping }} |
+|                     | {{ name }}         |                   | {{ info.naicsMapping }} |
 {{ #children }}
-|                     |                    | {{ name }}        | {{ naicsMapping }} |
+|                     |                    | {{ name }}        | {{ info.naicsMapping }} |
 {{ /children }}
 {{ /children }}
 {{ /industries }}

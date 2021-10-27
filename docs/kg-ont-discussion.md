@@ -85,7 +85,52 @@ Note that certain longer field examples may be truncated for readability.
 * **Example:**
 ```
 {
-	"posts": []
+	"posts": [
+		{
+			"date": {
+				"str": "",
+				"precision": 0,
+				"timestamp": 0
+			},
+			"sentiment": "",
+			"images": [
+				{
+					"displayHeight": 0,
+					"xpath": "",
+					"breadcrumb": [
+						{
+							"link": "",
+							"name": ""
+						}
+					],
+					"displayWidth": 0,
+					"naturalHeight": 0,
+					"language": "",
+					"links": "",
+					"anchorUrl": "",
+					"title": "",
+					"url": "",
+					"naturalWidth": 0,
+					"tags": [
+						{
+							"score": "",
+							"sentiment": "",
+							"types": "",
+							"count": 0,
+							"label": "",
+							"uri": ""
+						}
+					]
+				}
+			],
+			"author": "",
+			"authorUrl": "",
+			"language": "",
+			"html": "",
+			"pageUrl": "",
+			"text": ""
+		}
+	]
 }
 ```
 ### provider
@@ -112,7 +157,16 @@ Note that certain longer field examples may be truncated for readability.
 * **Example:**
 ```
 {
-	"tags": []
+	"tags": [
+		{
+			"score": "",
+			"sentiment": "",
+			"types": "",
+			"count": 0,
+			"label": "",
+			"uri": ""
+		}
+	]
 }
 ```
 ### title

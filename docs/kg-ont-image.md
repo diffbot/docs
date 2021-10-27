@@ -41,7 +41,12 @@ Note that certain longer field examples may be truncated for readability.
 * **Example:**
 ```
 {
-	"breadcrumb": []
+	"breadcrumb": [
+		{
+			"link": "",
+			"name": ""
+		}
+	]
 }
 ```
 ### displayHeight
@@ -104,7 +109,16 @@ Note that certain longer field examples may be truncated for readability.
 * **Example:**
 ```
 {
-	"tags": []
+	"tags": [
+		{
+			"score": "",
+			"sentiment": "",
+			"types": "",
+			"count": 0,
+			"label": "",
+			"uri": ""
+		}
+	]
 }
 ```
 ### title

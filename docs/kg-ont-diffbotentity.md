@@ -15,6 +15,7 @@ See the left navigation panel for fields and attributes for specific entities,
 * [allOriginHashes](#alloriginhashes) 
 * [allUriDetails](#alluridetails) 
 * [allUris](#alluris) 
+* [clusterWithOrigin](#clusterwithorigin) 
 * [crawlTimestamp](#crawltimestamp) 
 * [description](#description) 
 * [diffbotUri](#diffboturi) 
@@ -25,6 +26,7 @@ See the left navigation panel for fields and attributes for specific entities,
 * [name](#name) 
 * [nbIncomingEdges](#nbincomingedges) 
 * [nbOrigins](#nborigins) 
+* [nestedRecords](#nestedrecords) 
 * [nonCanonicalFacts](#noncanonicalfacts) 
 * [originDetails](#origindetails) 
 * [origins](#origins) 
@@ -69,7 +71,18 @@ Note that certain longer field examples may be truncated for readability.
 * **Example:**
 ```
 {
-	"allUriDetails": []
+	"allUriDetails": [
+		{
+			"nbFollowing": 0,
+			"uriType": "",
+			"verified": false,
+			"nbLinkedAccounts": 0,
+			"nbFollowers": 0,
+			"httpCodeTimestamp": 0,
+			"httpCode": "",
+			"uri": ""
+		}
+	]
 }
 ```
 ### allUris
@@ -79,6 +92,15 @@ Note that certain longer field examples may be truncated for readability.
 ```
 {
 	"allUris": []
+}
+```
+### clusterWithOrigin
+  
+* **Type:** String
+* **Example:**
+```
+{
+	"clusterWithOrigin": ""
 }
 ```
 ### crawlTimestamp
@@ -132,7 +154,15 @@ Note that certain longer field examples may be truncated for readability.
 * **Example:**
 ```
 {
-	"images": []
+	"images": [
+		{
+			"classifications": "",
+			"fingerprint": "",
+			"title": "",
+			"isCached": false,
+			"url": ""
+		}
+	]
 }
 ```
 ### importance
@@ -171,6 +201,15 @@ Note that certain longer field examples may be truncated for readability.
 	"nbOrigins": 0
 }
 ```
+### nestedRecords
+  
+* **Type:** DiffbotEntity
+* **Example:**
+```
+{
+	"nestedRecords": {}
+}
+```
 ### nonCanonicalFacts
   Enumerates all the non-canonical fields (i.e., those not defined in the ontology) that have a value for this entity. For instance, if &#39;numberOfChildren&#39; is listed in &#39;nonCanonicalFacts&#39; then the entity JSON will have the key &#39;numberOfChildren&#39; with an associated value. This field is only provided when the parameter nonCanonicalFacts&#x3D;1 is set. See: https:&#x2F;&#x2F;docs.diffbot.com&#x2F;kgapi
 * **Type:** String
@@ -186,7 +225,16 @@ Note that certain longer field examples may be truncated for readability.
 * **Example:**
 ```
 {
-	"originDetails": []
+	"originDetails": [
+		{
+			"crawledAt": {
+				"str": "",
+				"precision": 0,
+				"timestamp": 0
+			},
+			"origin": ""
+		}
+	]
 }
 ```
 ### origins

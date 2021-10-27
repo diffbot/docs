@@ -132,13 +132,20 @@ const typeS = {
 };
 
 const buildFieldExample = (fieldName, fieldEntity, ontDocs, exampleRecord) => {
-// Truncate example records
-if (exampleRecord && exampleRecord[fieldName]) {
-    exampleRecord[fieldName] = Array.isArray(exampleRecord[fieldName]) ? exampleRecord[fieldName].slice(0, 3) : exampleRecord[fieldName];
-}
 
-// Build object/list examples for each field
-let example = {};
+    // console.log("Field Name: ", fieldName);
+    // console.log(fieldEntity);
+    // console.log(ontDocs);
+    // console.log("Example Record: ", exampleRecord);
+
+    // Truncate example records
+    if (exampleRecord && exampleRecord[fieldName]) {
+        exampleRecord[fieldName] = Array.isArray(exampleRecord[fieldName]) ? exampleRecord[fieldName].slice(0, 3) : exampleRecord[fieldName];
+    }
+
+    // Build object/list examples for each field
+    let example = {};
+
     // String & Intangible/Misc/DegreeEntity Types
     if (
         fieldEntity["fields"][fieldName]["type"] === "String" ||
@@ -163,30 +170,34 @@ let example = {};
     }
     // Composite Type
     else if (fieldEntity["fields"][fieldName]["isComposite"] === true) {
-        let compositeField = ontDocs["compositedocs"][fieldEntity["fields"][fieldName]["type"]];
-        let compositeSubFieldNames = Object.keys(compositeField["fields"]);
+        let compositeField = ontDocs["composites"][fieldEntity["fields"][fieldName]["type"]];
+        if (compositeField) {
+            let compositeSubFieldNames = Object.keys(compositeField["fields"]);
 
-        if (exampleRecord && exampleRecord[fieldName]) {
-            example = exampleRecord[fieldName];
+            if (exampleRecord && exampleRecord[fieldName]) {
+                example = exampleRecord[fieldName];
+            }
+            else {
+                if (fieldEntity["fields"][fieldName]["isList"] === true) {
+                    example = [{}];
+                }
+                compositeSubFieldNames.forEach(subFieldName => {
+                    if (fieldEntity["fields"][fieldName]["isList"] === true) {
+                        example[0][subFieldName] = buildFieldExample(subFieldName, compositeField, ontDocs, exampleRecord && exampleRecord[fieldName] ? exampleRecord[fieldName] : false);
+                    }
+                    else {
+                        example[subFieldName] = buildFieldExample(subFieldName, compositeField, ontDocs, exampleRecord && exampleRecord[fieldName] ? exampleRecord[fieldName] : false);
+                    }
+                })
+            }
         }
         else {
-            if (fieldEntity["fields"][fieldName]["isList"] === true) {
-                example = [{}];
-            }
-            compositeSubFieldNames.forEach(subFieldName => {
-                if (fieldEntity["fields"][fieldName]["isList"] === true) {
-                    example[0][subFieldName] = buildFieldExample(subFieldName, compositeField, ontDocs, exampleRecord && exampleRecord[fieldName] ? exampleRecord[fieldName] : false);
-                }
-                else {
-                    example[subFieldName] = buildFieldExample(subFieldName, compositeField, ontDocs, exampleRecord && exampleRecord[fieldName] ? exampleRecord[fieldName] : false);
-                }
-            })
+            console.error(`WARNING: The definition for composite field ${fieldEntity["fields"][fieldName]["type"]} does not exist in the ontology`)
         }
     }
     // Linked Entity Type
     else if (
-        fieldEntity["fields"][fieldName]["isLinkedEntity"] === true &&
-        fieldEntity["fields"][fieldName]["leType"]
+        fieldEntity["fields"][fieldName]["type"] === "LinkedEntity"
     ) {
         // The call stack becomes insane here if we try to build this example with Linked Entities, so we'll just set string references if example doesn't exist
         if (exampleRecord && exampleRecord[fieldName]) {
@@ -211,7 +222,7 @@ let example = {};
         example = exampleRecord && exampleRecord[fieldName] ? exampleRecord[fieldName] : "";
     }
 
-return example;
+    return example;
 };
 
 // Transforms ont_docs to Mustache consumable JSON
@@ -279,4 +290,7 @@ getExamples(entityTypes)
         fs.writeFileSync(`../docs/${entityModel.id}.md`, output);
 
     }
-});
+})
+.catch((error) => {
+    console.log(error);
+})

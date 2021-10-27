@@ -307,7 +307,8 @@
       }
     ],
     "References": [
-      "kg-industry-list"
+      "kg-industry-list",
+      "kg-employment-categories-list"
     ]
   },
   "nl": {
