@@ -25,7 +25,7 @@ The Natural Language API allows developers to extract entities (e.g., people, or
 
 ## Supported Languages
  * Sentiment: Over a 100 languages.
- * Entities and salience: English (en), French (fr), Spanish (es), Chinese (zh), German (de), Russian (ru), Japanese (ja), Dutch (nl)
+ * Entities and salience: English (en), French (fr), Spanish (es), Chinese (zh), German (de), Russian (ru), Japanese (ja), Dutch (nl), Polish (pl), Norwegian (no), Danish (da), Swedish (sv)
  * Other fields: English (en) only.
 
 ## Credits
