@@ -75,7 +75,7 @@ Objects in the Article API's `objects` array will include the following fields:
 | `publisherCountry` | If known, the country of the article publication. |
 | `pageUrl` | URL of submitted page / page from which the article is extracted. |
 | `resolvedPageUrl` | Returned if the `pageUrl` redirects to another URL. |
-| `tags` | Array of tags/entities, generated from analysis of the extracted `text` and cross-referenced with [DBpedia](https://wiki.dbpedia.org/About) and other data sources. Language-specific tags will be returned if the source text is in English, Chinese, French, German, Spanish or Russian. |
+| `tags` | Array of tags/entities, generated from analysis of the extracted `text` and cross-referenced with [DBpedia](https://wiki.dbpedia.org/About) and other data sources. Language-specific tags will be returned if the source text is in English, Chinese, French, German, Spanish, Russian, Japanese, Dutch, Polish, Norwegian, Danish or Swedish. |
 | &#x21B3;`label` | Name of the entity or tag. |
 | &#x21B3;`count` | Number of appearances the entity makes within the text content. |
 | &#x21B3;`score` | Rating of the entity's relevance to the overall text content (range of 0 to 1) based on various factors. |
