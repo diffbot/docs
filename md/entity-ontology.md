@@ -1,6 +1,7 @@
 ---
 id: {{ id }}
 title: {{ title }}
+generatedBy: generateOntology.js
 ---
 
 {{ description }}
