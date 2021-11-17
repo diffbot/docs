@@ -2,6 +2,7 @@
 id: kg-industry-list
 title: Organization Industries
 onPageNav: false
+generatedBy: generateIndustries.js
 ---
 
 This reference is helpful for narrowing down queries for organizations on the [Diffbot Knowledge Graph](dql-quickstart) by [industry](kg-ont-organization#industries). Diffbot Knowledge Graph Search supports querying by industry names or NAICS codes. Feel free to use either.
