@@ -201,27 +201,9 @@ docReady(function () {
     }
   }
 
- //google analytics external script
+  //google analytics external script
   let google_analytics = document.createElement("script");
   google_analytics.setAttribute("src","https://www.googletagmanager.com/gtag/js?id=UA-74291704-1")
   document.querySelector("body").appendChild(google_analytics);
-
-
-
-
-
-  // Add fathom analytics
-  let script = document.createElement("script");
-  script.setAttribute("src", "https://cdn.usefathom.com/3.js");
-  script.setAttribute("site", "OGXCNLPJ");
-  document.querySelector("body").appendChild(script);
-
-  // Add Plausible
-  let plausible = document.createElement("script");
-  plausible.setAttribute("src", "https://stats.diffbot.com/js/index.js");
-  plausible.setAttribute("data-domain", "docs.diffbot.com");
-  plausible.setAttribute("async", "async");
-  plausible.setAttribute("defer", "defer");
-  document.querySelector("head").appendChild(plausible);
 
 });
