@@ -29,6 +29,18 @@ An employment category reflecting various career types (e.g. *Human Resources*, 
 | ------------------- | ------------------ | ----------------------------------- | ---- | --- | -- |
 {{ #employmentCategories.Domain }}
 | {{ info.facet }}          |  {{ name }}         |                   |   |  |  |
+{{ #children }}
+|                     |          |  {{ name }}                 |  |  |  |
+{{ #children }}
+|                     |          |                  | {{ name }}  |  |  |
+{{ #children }}
+|                     |          |                  |   | {{ name }} |  |
+{{ #children }}
+|                     |          |                  |   |  | {{ name }} |
+{{ /children }}
+{{ /children }}
+{{ /children }}
+{{ /children }}
 {{ /employmentCategories.Domain }}
 
 ## By Role
