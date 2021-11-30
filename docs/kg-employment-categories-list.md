@@ -2,6 +2,7 @@
 id: kg-employment-categories-list
 title: Employment Categories
 onPageNav: false
+generatedBy: generateIndustries.js
 ---
 
 Employment categories (see [employments ontology reference](kg-ont-person#employments)) are canonicalized Domains, Seniority, and/or Roles inferred from a given person's employment title and description. Employment categories are only applicable for the [Person data type](kg-ont-person).
@@ -33,8 +34,18 @@ An employment category reflecting various career types (e.g. *Human Resources*, 
 | Domain          |  Business         |                   |   |  |  |
 | Domain          |  Construction, Electricity, Plumbing         |                   |   |  |  |
 | Domain          |  Counseling, Social Work, Person Care         |                   |   |  |  |
+|                     |          |  Academic Administration                 |  |  |  |
 | Domain          |  Design and Graphic Arts         |                   |   |  |  |
 | Domain          |  Engineering, IT and Software Development         |                   |   |  |  |
+|                     |          |  Artificial Intelligence                 |  |  |  |
+|                     |          |  Backend Developer                 |  |  |  |
+|                     |          |  Cybersecurity                 |  |  |  |
+|                     |          |  Data Science                 |  |  |  |
+|                     |          |  DevOps Developer                 |  |  |  |
+|                     |          |  Frontend Developer                 |  |  |  |
+|                     |          |  Fullstack Developer or Architect                 |  |  |  |
+|                     |          |  Games Developer                 |  |  |  |
+|                     |          |  Mobile Developer                 |  |  |  |
 | Domain          |  Finance         |                   |   |  |  |
 | Domain          |  Food Preparation and Service         |                   |   |  |  |
 | Domain          |  Healthcare and Medicine         |                   |   |  |  |
