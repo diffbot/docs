@@ -52,9 +52,19 @@ axios.get('https://kg.diffbot.com/kg/ontology')
         employmentCategoriesByType[employmentCategories[category]["info"]["facet"]].push(employmentCategories[category]);
     }
 
+    // Template Model for Article Categories
+    var articleCategories = response['data']['taxonomies']['ArticleCategory']['categories'];
+    articleCategories = ensureChildrenProperty(articleCategories);
+    // -- Convert to Array for mustache template iteration
+    let articleCategoriesArray = [];
+    for (let industry in articleCategories) {
+        articleCategoriesArray.push(articleCategories[industry]);
+    }
+
     var templateModel = {
         industries: industriesArray,
-        employmentCategories: employmentCategoriesByType
+        employmentCategories: employmentCategoriesByType,
+        articleCategories: articleCategoriesArray
     };
 
 
@@ -73,5 +83,13 @@ axios.get('https://kg.diffbot.com/kg/ontology')
     let employmentCategoriesOutput = render(employmentCategoriesTemplate, templateModel);
     console.log(`Rendered Employment Categories Reference! Writing Markdown...`);
     fs.writeFileSync(`../docs/kg-employment-categories-list.md`, employmentCategoriesOutput);
+
+    // Get Article Categories Template
+    let articleCategoriesTemplate = fs.readFileSync("./static/md/kg-article-categories.md").toString();
+
+    // Render Article Categories Template
+    let articleCategoriesOutput = render(articleCategoriesTemplate, templateModel);
+    console.log(`Rendered Article Category Reference! Writing Markdown...`);
+    fs.writeFileSync(`../docs/kg-article-categories-list.md`, articleCategoriesOutput);
 
 });
