@@ -56,7 +56,7 @@
             });
         </script></nav></div><div class="container mainContainer docsContainer"><div class="wrapper"><div class="post"><header class="postHeader"><a class="edit-page-link button" href="https://github.com/diffbot/docs/edit/master/docs/kg-article-categories-list.md" target="_blank" rel="noreferrer noopener">Edit</a><h1 id="__docusaurus" class="postHeaderTitle">Article Categories</h1></header><article><div><span><p><strong>BETA</strong> — Article categories provide structured context to the topic discussed in a particular piece of text. Unlike <a href="kg-ont-article#tags">tags</a>, categories describe the text as a whole and tend to be more abstract.</p>
 <blockquote>
-<p>As of Nov 17, 2021, article categories is in beta and is only supported through <a href="api-intro-article">Article Extract</a> currently. Ontology and access may be subject to change at any time.</p>
+<p>As of Nov 17, 2021, article categories is in beta and is only supported through <a href="api-intro-article">Article Extract</a>. Ontology and access may be subject to change at any time.</p>
 </blockquote>
 <p>Here's a sample request to extract categories alongside your article extraction —</p>
 <pre><code class="hljs css language-python">https://api.diffbot.com/v3/article?token=TOKEN&amp;url=https://blog.diffbot.com/a-less-biased-way-to-discern-media-bias-using-knowledge-graph-enhanced-ai/&amp;naturalLanguage=categories
@@ -64,30 +64,441 @@
 <p>The category list below outlines all possible categories that may be returned by Diffbot Extract.</p>
 <table>
 <thead>
-<tr><th>Name</th><th>Category Type</th><th>Notes</th></tr>
+<tr><th>Primary Category</th><th>Secondary Category</th><th>Tertiary Category</th><th>Quaternary Category</th></tr>
 </thead>
 <tbody>
-<tr><td>Acquisitions, Mergers and Takeovers</td><td>Diffbot</td><td></td></tr>
-<tr><td>Partnerships and Joint Ventures</td><td>Diffbot</td><td>Strategic Partner, Supplier, Distributor, Promoter, Agent, Joint Venture, etc.</td></tr>
-<tr><td>Stock Offerings and IPOs</td><td>Diffbot</td><td></td></tr>
-<tr><td>Products and Services Announcements</td><td>Diffbot</td><td>Launch, Integration, Innovation</td></tr>
-<tr><td>Sales and Earnings</td><td>Diffbot</td><td>Quarterly, Annual, Any article where sales/earning reporting is the main topic</td></tr>
-<tr><td>Awards</td><td>Diffbot</td><td></td></tr>
-<tr><td>Real Estate Transactions</td><td>Diffbot</td><td>Land, Office, Manufacturing Facility, Distribution Center, Branch/Store, Lease, Sale, Opening, Closure, etc.</td></tr>
-<tr><td>Bankruptcy</td><td>Diffbot</td><td></td></tr>
-<tr><td>Personnel Changes</td><td>Diffbot</td><td>Leadership Change, Key Exit , Key Hire, Promotion, Succession, Executive Search, Layoff, Downsizing, Hiring, Death</td></tr>
-<tr><td>Environmental, Social and Governance (ESG)</td><td>Diffbot</td><td>Environment impact, Carbon footprint, Diversity issues, Fraud, Labor issues (child labor, modern slavery)</td></tr>
-<tr><td>Funding</td><td>Diffbot</td><td>Investments and financing received by a company</td></tr>
-<tr><td>Bond Issue</td><td>Diffbot</td><td></td></tr>
-<tr><td>Contracts and Agreements</td><td>Diffbot</td><td></td></tr>
-<tr><td>Dividends</td><td>Diffbot</td><td></td></tr>
-<tr><td>Investment Opinion</td><td>Diffbot</td><td></td></tr>
-<tr><td>Litigation</td><td>Diffbot</td><td></td></tr>
-<tr><td>Stock Split</td><td>Diffbot</td><td></td></tr>
-<tr><td>Intellectual Property</td><td>Diffbot</td><td>Patent, Copyright, Awarded, Renewed, Filed</td></tr>
+<tr><td>Automotive</td><td></td><td></td><td></td></tr>
+<tr><td></td><td>Auto Body Styles</td><td></td><td></td></tr>
+<tr><td></td><td></td><td>Commercial Trucks</td><td></td></tr>
+<tr><td></td><td></td><td>Convertible</td><td></td></tr>
+<tr><td></td><td></td><td>Coupe</td><td></td></tr>
+<tr><td></td><td></td><td>Crossover</td><td></td></tr>
+<tr><td></td><td></td><td>Hatchback</td><td></td></tr>
+<tr><td></td><td></td><td>Minivan</td><td></td></tr>
+<tr><td></td><td></td><td>Off-Road Vehicles</td><td></td></tr>
+<tr><td></td><td></td><td>Pickup Trucks</td><td></td></tr>
+<tr><td></td><td></td><td>SUV</td><td></td></tr>
+<tr><td></td><td></td><td>Sedan</td><td></td></tr>
+<tr><td></td><td></td><td>Van</td><td></td></tr>
+<tr><td></td><td>Auto Buying and Selling</td><td></td><td></td></tr>
+<tr><td></td><td>Auto Insurance</td><td></td><td></td></tr>
+<tr><td></td><td>Auto Parts</td><td></td><td></td></tr>
+<tr><td></td><td>Auto Recalls</td><td></td><td></td></tr>
+<tr><td></td><td>Auto Rentals</td><td></td><td></td></tr>
+<tr><td></td><td>Auto Repair</td><td></td><td></td></tr>
+<tr><td></td><td>Auto Safety</td><td></td><td></td></tr>
+<tr><td></td><td>Auto Shows</td><td></td><td></td></tr>
+<tr><td></td><td>Auto Type</td><td></td><td></td></tr>
+<tr><td></td><td></td><td>Budget Cars</td><td></td></tr>
+<tr><td></td><td></td><td>Certified Pre-Owned Cars</td><td></td></tr>
+<tr><td></td><td></td><td>Classic Cars</td><td></td></tr>
+<tr><td></td><td></td><td>Concept Cars</td><td></td></tr>
+<tr><td></td><td></td><td>Driverless Cars</td><td></td></tr>
+<tr><td></td><td></td><td>Green Vehicles</td><td></td></tr>
+<tr><td></td><td></td><td>Luxury Cars</td><td></td></tr>
+<tr><td></td><td></td><td>Performance Cars</td><td></td></tr>
+<tr><td></td><td>Car Culture</td><td></td><td></td></tr>
+<tr><td></td><td>Motorcycles</td><td></td><td></td></tr>
+<tr><td></td><td>Scooters</td><td></td><td></td></tr>
+<tr><td>Careers</td><td></td><td></td><td></td></tr>
+<tr><td></td><td>Apprenticeships</td><td></td><td></td></tr>
+<tr><td></td><td>Career Advice</td><td></td><td></td></tr>
+<tr><td></td><td>Career Planning</td><td></td><td></td></tr>
+<tr><td></td><td>Job Search</td><td></td><td></td></tr>
+<tr><td></td><td>Remote Working</td><td></td><td></td></tr>
+<tr><td></td><td>Vocational Training</td><td></td><td></td></tr>
+<tr><td>Education</td><td></td><td></td><td></td></tr>
+<tr><td></td><td>Adult Education</td><td></td><td></td></tr>
+<tr><td></td><td>College Education</td><td></td><td></td></tr>
+<tr><td></td><td>Early Childhood Education</td><td></td><td></td></tr>
+<tr><td></td><td>Educational Assessment</td><td></td><td></td></tr>
+<tr><td></td><td>Homeschooling</td><td></td><td></td></tr>
+<tr><td></td><td>Homework and Study</td><td></td><td></td></tr>
+<tr><td></td><td>Language Learning</td><td></td><td></td></tr>
+<tr><td></td><td>Online Education</td><td></td><td></td></tr>
+<tr><td></td><td>Primary Education</td><td></td><td></td></tr>
+<tr><td></td><td>Private School</td><td></td><td></td></tr>
+<tr><td></td><td>Secondary Education</td><td></td><td></td></tr>
+<tr><td></td><td>Special Education</td><td></td><td></td></tr>
+<tr><td>Events and Attractions</td><td></td><td></td><td></td></tr>
+<tr><td></td><td>Amusement and Theme Parks</td><td></td><td></td></tr>
+<tr><td></td><td>Bars &amp; Restaurants</td><td></td><td></td></tr>
+<tr><td></td><td>Business Expos &amp; Conferences</td><td></td><td></td></tr>
+<tr><td></td><td>Casinos &amp; Gambling</td><td></td><td></td></tr>
+<tr><td></td><td>Comedy Events</td><td></td><td></td></tr>
+<tr><td></td><td>Concerts &amp; Music Events</td><td></td><td></td></tr>
+<tr><td></td><td>Historic Site and Landmark Tours</td><td></td><td></td></tr>
+<tr><td></td><td>Museums &amp; Galleries</td><td></td><td></td></tr>
+<tr><td></td><td>Musicals</td><td></td><td></td></tr>
+<tr><td></td><td>National &amp; Civic Holidays</td><td></td><td></td></tr>
+<tr><td></td><td>Nightclubs</td><td></td><td></td></tr>
+<tr><td></td><td>Outdoor Activities</td><td></td><td></td></tr>
+<tr><td></td><td>Parks &amp; Nature</td><td></td><td></td></tr>
+<tr><td></td><td>Party Supplies and Decorations</td><td></td><td></td></tr>
+<tr><td></td><td>Zoos &amp; Aquariums</td><td></td><td></td></tr>
+<tr><td>Family and Relationships</td><td></td><td></td><td></td></tr>
+<tr><td></td><td>Bereavement</td><td></td><td></td></tr>
+<tr><td></td><td>Dating</td><td></td><td></td></tr>
+<tr><td></td><td>Divorce</td><td></td><td></td></tr>
+<tr><td></td><td>Eldercare</td><td></td><td></td></tr>
+<tr><td></td><td>Parenting</td><td></td><td></td></tr>
+<tr><td>Fine Art</td><td></td><td></td><td></td></tr>
+<tr><td></td><td>Digital Arts</td><td></td><td></td></tr>
+<tr><td></td><td>Modern Art</td><td></td><td></td></tr>
+<tr><td></td><td>Opera</td><td></td><td></td></tr>
+<tr><td></td><td>Theater</td><td></td><td></td></tr>
+<tr><td>Food &amp; Drink</td><td></td><td></td><td></td></tr>
+<tr><td></td><td>Alcoholic Beverages</td><td></td><td></td></tr>
+<tr><td></td><td>Barbecues and Grilling</td><td></td><td></td></tr>
+<tr><td></td><td>Cooking</td><td></td><td></td></tr>
+<tr><td></td><td>Desserts and Baking</td><td></td><td></td></tr>
+<tr><td></td><td>Dining Out</td><td></td><td></td></tr>
+<tr><td></td><td>Food Allergies</td><td></td><td></td></tr>
+<tr><td></td><td>Healthy Cooking and Eating</td><td></td><td></td></tr>
+<tr><td></td><td>Non-Alcoholic Beverages</td><td></td><td></td></tr>
+<tr><td></td><td>Vegan Diets</td><td></td><td></td></tr>
+<tr><td></td><td>Vegetarian Diets</td><td></td><td></td></tr>
+<tr><td>Healthy Living</td><td></td><td></td><td></td></tr>
+<tr><td></td><td>Fitness and Exercise</td><td></td><td></td></tr>
+<tr><td></td><td>Men's Health</td><td></td><td></td></tr>
+<tr><td></td><td>Nutrition</td><td></td><td></td></tr>
+<tr><td></td><td>Senior Health</td><td></td><td></td></tr>
+<tr><td></td><td>Weight Loss</td><td></td><td></td></tr>
+<tr><td></td><td>Wellness</td><td></td><td></td></tr>
+<tr><td></td><td>Women's Health</td><td></td><td></td></tr>
+<tr><td>Hobbies &amp; Interests</td><td></td><td></td><td></td></tr>
+<tr><td></td><td>Antiquing and Antiques</td><td></td><td></td></tr>
+<tr><td></td><td>Arts and Crafts</td><td></td><td></td></tr>
+<tr><td></td><td>Beekeeping</td><td></td><td></td></tr>
+<tr><td></td><td>Birdwatching</td><td></td><td></td></tr>
+<tr><td></td><td>Cigars</td><td></td><td></td></tr>
+<tr><td></td><td>Musical Instruments</td><td></td><td></td></tr>
+<tr><td>Home &amp; Garden</td><td></td><td></td><td></td></tr>
+<tr><td></td><td>Gardening</td><td></td><td></td></tr>
+<tr><td></td><td>Home Appliances</td><td></td><td></td></tr>
+<tr><td></td><td>Home Improvement</td><td></td><td></td></tr>
+<tr><td></td><td>Home Security</td><td></td><td></td></tr>
+<tr><td></td><td>Interior Decorating</td><td></td><td></td></tr>
+<tr><td></td><td>Landscaping</td><td></td><td></td></tr>
+<tr><td></td><td>Remodeling &amp; Construction</td><td></td><td></td></tr>
+<tr><td></td><td>Smart Home</td><td></td><td></td></tr>
+<tr><td>Medical Health</td><td></td><td></td><td></td></tr>
+<tr><td></td><td>Cosmetic Medical Services</td><td></td><td></td></tr>
+<tr><td></td><td>Diseases and Conditions</td><td></td><td></td></tr>
+<tr><td></td><td></td><td>Allergies</td><td></td></tr>
+<tr><td></td><td></td><td>Blood Disorders</td><td></td></tr>
+<tr><td></td><td></td><td>Bone and Joint Conditions</td><td></td></tr>
+<tr><td></td><td></td><td>Brain and Nervous System Disorders</td><td></td></tr>
+<tr><td></td><td></td><td>Cancer</td><td></td></tr>
+<tr><td></td><td></td><td>Cold and Flu</td><td></td></tr>
+<tr><td></td><td></td><td>Dental Health</td><td></td></tr>
+<tr><td></td><td></td><td>Diabetes</td><td></td></tr>
+<tr><td></td><td></td><td>Digestive Disorders</td><td></td></tr>
+<tr><td></td><td></td><td>Ear, Nose and Throat Conditions</td><td></td></tr>
+<tr><td></td><td></td><td>Endocrine and Metabolic Diseases</td><td></td></tr>
+<tr><td></td><td></td><td></td><td>Hormonal Disorders</td></tr>
+<tr><td></td><td></td><td></td><td>Menopause</td></tr>
+<tr><td></td><td></td><td></td><td>Thyroid Disorders</td></tr>
+<tr><td></td><td></td><td>Eye and Vision Conditions</td><td></td></tr>
+<tr><td></td><td></td><td>Foot Health</td><td></td></tr>
+<tr><td></td><td></td><td>Heart and Cardiovascular Diseases</td><td></td></tr>
+<tr><td></td><td></td><td>Infectious Diseases</td><td></td></tr>
+<tr><td></td><td></td><td>Injuries</td><td></td></tr>
+<tr><td></td><td></td><td></td><td>First Aid</td></tr>
+<tr><td></td><td></td><td>Lung and Respiratory Health</td><td></td></tr>
+<tr><td></td><td></td><td>Mental Health</td><td></td></tr>
+<tr><td></td><td></td><td>Reproductive Health</td><td></td></tr>
+<tr><td></td><td></td><td></td><td>Birth Control</td></tr>
+<tr><td></td><td></td><td></td><td>Infertility</td></tr>
+<tr><td></td><td></td><td></td><td>Pregnancy</td></tr>
+<tr><td></td><td></td><td>Sexual Health</td><td></td></tr>
+<tr><td></td><td></td><td></td><td>Sexual Conditions</td></tr>
+<tr><td></td><td></td><td>Skin and Dermatology</td><td></td></tr>
+<tr><td></td><td></td><td>Sleep Disorders</td><td></td></tr>
+<tr><td></td><td></td><td>Substance Abuse</td><td></td></tr>
+<tr><td></td><td>Medical Tests</td><td></td><td></td></tr>
+<tr><td></td><td>Surgery</td><td></td><td></td></tr>
+<tr><td></td><td>Vaccines</td><td></td><td></td></tr>
+<tr><td>Movies</td><td></td><td></td><td></td></tr>
+<tr><td>Music and Audio</td><td></td><td></td><td></td></tr>
+<tr><td>News and Politics</td><td></td><td></td><td></td></tr>
+<tr><td></td><td>Crime</td><td></td><td></td></tr>
+<tr><td></td><td>Disasters</td><td></td><td></td></tr>
+<tr><td></td><td>Law</td><td></td><td></td></tr>
+<tr><td></td><td>Politics</td><td></td><td></td></tr>
+<tr><td></td><td></td><td>Elections</td><td></td></tr>
+<tr><td></td><td></td><td>Political Issues</td><td></td></tr>
+<tr><td></td><td></td><td>War and Conflicts</td><td></td></tr>
+<tr><td></td><td>Weather</td><td></td><td></td></tr>
+<tr><td>Personal Finance</td><td></td><td></td><td></td></tr>
+<tr><td></td><td>Financial Assistance</td><td></td><td></td></tr>
+<tr><td></td><td>Financial Planning</td><td></td><td></td></tr>
+<tr><td></td><td>Frugal Living</td><td></td><td></td></tr>
+<tr><td></td><td>Insurance</td><td></td><td></td></tr>
+<tr><td></td><td>Personal Investing</td><td></td><td></td></tr>
+<tr><td></td><td>Retirement Planning</td><td></td><td></td></tr>
+<tr><td>Books and Literature</td><td></td><td></td><td></td></tr>
+<tr><td></td><td>Biographies</td><td></td><td></td></tr>
+<tr><td></td><td>Cookbooks</td><td></td><td></td></tr>
+<tr><td></td><td>Poetry</td><td></td><td></td></tr>
+<tr><td>Pets</td><td></td><td></td><td></td></tr>
+<tr><td></td><td>Birds</td><td></td><td></td></tr>
+<tr><td></td><td>Cats</td><td></td><td></td></tr>
+<tr><td></td><td>Dogs</td><td></td><td></td></tr>
+<tr><td></td><td>Pet Supplies</td><td></td><td></td></tr>
+<tr><td></td><td>Reptiles</td><td></td><td></td></tr>
+<tr><td></td><td>Veterinary Medicine</td><td></td><td></td></tr>
+<tr><td>Pop Culture</td><td></td><td></td><td></td></tr>
+<tr><td></td><td>Celebrity Deaths</td><td></td><td></td></tr>
+<tr><td></td><td>Celebrity Homes</td><td></td><td></td></tr>
+<tr><td></td><td>Celebrity Style</td><td></td><td></td></tr>
+<tr><td></td><td>Humor and Satire</td><td></td><td></td></tr>
+<tr><td>Real Estate</td><td></td><td></td><td></td></tr>
+<tr><td>Religion &amp; Spirituality</td><td></td><td></td><td></td></tr>
+<tr><td></td><td>Astrology</td><td></td><td></td></tr>
+<tr><td></td><td>Atheism</td><td></td><td></td></tr>
+<tr><td></td><td>Buddhism</td><td></td><td></td></tr>
+<tr><td></td><td>Christianity</td><td></td><td></td></tr>
+<tr><td></td><td>Hinduism</td><td></td><td></td></tr>
+<tr><td></td><td>Islam</td><td></td><td></td></tr>
+<tr><td></td><td>Judaism</td><td></td><td></td></tr>
+<tr><td></td><td>Spirituality</td><td></td><td></td></tr>
+<tr><td>Science</td><td></td><td></td><td></td></tr>
+<tr><td></td><td>Biological Sciences</td><td></td><td></td></tr>
+<tr><td></td><td>Chemistry</td><td></td><td></td></tr>
+<tr><td></td><td>Environment</td><td></td><td></td></tr>
+<tr><td></td><td>Genetics</td><td></td><td></td></tr>
+<tr><td></td><td>Geography</td><td></td><td></td></tr>
+<tr><td></td><td>Geology</td><td></td><td></td></tr>
+<tr><td></td><td>Physics</td><td></td><td></td></tr>
+<tr><td></td><td>Space and Astronomy</td><td></td><td></td></tr>
+<tr><td>Shopping</td><td></td><td></td><td></td></tr>
+<tr><td></td><td>Coupons and Discounts</td><td></td><td></td></tr>
+<tr><td></td><td>Flower Shopping</td><td></td><td></td></tr>
+<tr><td></td><td>Gifts and Greetings Cards</td><td></td><td></td></tr>
+<tr><td></td><td>Grocery Shopping</td><td></td><td></td></tr>
+<tr><td></td><td>Holiday Shopping</td><td></td><td></td></tr>
+<tr><td>Sports</td><td></td><td></td><td></td></tr>
+<tr><td></td><td>American Football</td><td></td><td></td></tr>
+<tr><td></td><td>Australian Rules Football</td><td></td><td></td></tr>
+<tr><td></td><td>Auto Racing</td><td></td><td></td></tr>
+<tr><td></td><td>Badminton</td><td></td><td></td></tr>
+<tr><td></td><td>Baseball</td><td></td><td></td></tr>
+<tr><td></td><td>Basketball</td><td></td><td></td></tr>
+<tr><td></td><td>Bodybuilding</td><td></td><td></td></tr>
+<tr><td></td><td>Bowling</td><td></td><td></td></tr>
+<tr><td></td><td>Boxing</td><td></td><td></td></tr>
+<tr><td></td><td>College Sports</td><td></td><td></td></tr>
+<tr><td></td><td></td><td>College Baseball</td><td></td></tr>
+<tr><td></td><td></td><td>College Basketball</td><td></td></tr>
+<tr><td></td><td></td><td>College Football</td><td></td></tr>
+<tr><td></td><td>Cricket</td><td></td><td></td></tr>
+<tr><td></td><td>Cycling</td><td></td><td></td></tr>
+<tr><td></td><td>Darts</td><td></td><td></td></tr>
+<tr><td></td><td>Disabled Sports</td><td></td><td></td></tr>
+<tr><td></td><td>Diving</td><td></td><td></td></tr>
+<tr><td></td><td>Extreme Sports</td><td></td><td></td></tr>
+<tr><td></td><td></td><td>Canoeing and Kayaking</td><td></td></tr>
+<tr><td></td><td></td><td>Climbing</td><td></td></tr>
+<tr><td></td><td></td><td>Scuba Diving</td><td></td></tr>
+<tr><td></td><td></td><td>Skateboarding</td><td></td></tr>
+<tr><td></td><td></td><td>Snowboarding</td><td></td></tr>
+<tr><td></td><td></td><td>Surfing and Bodyboarding</td><td></td></tr>
+<tr><td></td><td>Fantasy Sports</td><td></td><td></td></tr>
+<tr><td></td><td>Field Hockey</td><td></td><td></td></tr>
+<tr><td></td><td>Figure Skating</td><td></td><td></td></tr>
+<tr><td></td><td>Golf</td><td></td><td></td></tr>
+<tr><td></td><td>Gymnastics</td><td></td><td></td></tr>
+<tr><td></td><td>Horse Racing</td><td></td><td></td></tr>
+<tr><td></td><td>Ice Hockey</td><td></td><td></td></tr>
+<tr><td></td><td>Lacrosse</td><td></td><td></td></tr>
+<tr><td></td><td>Martial Arts</td><td></td><td></td></tr>
+<tr><td></td><td>Olympic Sports</td><td></td><td></td></tr>
+<tr><td></td><td></td><td>Summer Olympic Sports</td><td></td></tr>
+<tr><td></td><td></td><td>Winter Olympic Sports</td><td></td></tr>
+<tr><td></td><td>Poker and Professional Gambling</td><td></td><td></td></tr>
+<tr><td></td><td>Rodeo</td><td></td><td></td></tr>
+<tr><td></td><td>Rowing</td><td></td><td></td></tr>
+<tr><td></td><td>Rugby</td><td></td><td></td></tr>
+<tr><td></td><td>Sailing</td><td></td><td></td></tr>
+<tr><td></td><td>Skiing</td><td></td><td></td></tr>
+<tr><td></td><td>Snooker/Pool/Billiards</td><td></td><td></td></tr>
+<tr><td></td><td>Soccer</td><td></td><td></td></tr>
+<tr><td></td><td>Softball</td><td></td><td></td></tr>
+<tr><td></td><td>Sports Equipment</td><td></td><td></td></tr>
+<tr><td></td><td>Squash</td><td></td><td></td></tr>
+<tr><td></td><td>Swimming</td><td></td><td></td></tr>
+<tr><td></td><td>Table Tennis</td><td></td><td></td></tr>
+<tr><td></td><td>Tennis</td><td></td><td></td></tr>
+<tr><td></td><td>Track and Field</td><td></td><td></td></tr>
+<tr><td></td><td>Volleyball</td><td></td><td></td></tr>
+<tr><td></td><td>Walking</td><td></td><td></td></tr>
+<tr><td></td><td>Water Polo</td><td></td><td></td></tr>
+<tr><td></td><td>Weightlifting</td><td></td><td></td></tr>
+<tr><td></td><td>Wrestling</td><td></td><td></td></tr>
+<tr><td>Business and Finance</td><td></td><td></td><td></td></tr>
+<tr><td></td><td>Business</td><td></td><td></td></tr>
+<tr><td></td><td></td><td>Awards</td><td></td></tr>
+<tr><td></td><td></td><td>Business Accounting &amp; Finance</td><td></td></tr>
+<tr><td></td><td></td><td>Business Administration</td><td></td></tr>
+<tr><td></td><td></td><td>Business Banking &amp; Finance</td><td></td></tr>
+<tr><td></td><td></td><td></td><td>Acquisitions, Mergers and Takeovers</td></tr>
+<tr><td></td><td></td><td></td><td>Angel Investment</td></tr>
+<tr><td></td><td></td><td></td><td>Bankruptcy</td></tr>
+<tr><td></td><td></td><td></td><td>Business Loans</td></tr>
+<tr><td></td><td></td><td></td><td>Debt Factoring &amp; Invoice Discounting</td></tr>
+<tr><td></td><td></td><td></td><td>Private Equity</td></tr>
+<tr><td></td><td></td><td></td><td>Venture Capital</td></tr>
+<tr><td></td><td></td><td>Business I.T.</td><td></td></tr>
+<tr><td></td><td></td><td>Business Operations</td><td></td></tr>
+<tr><td></td><td></td><td>Business Utilities</td><td></td></tr>
+<tr><td></td><td></td><td>Consumer Issues</td><td></td></tr>
+<tr><td></td><td></td><td></td><td>Recalls</td></tr>
+<tr><td></td><td></td><td>Contracts and Agreements</td><td></td></tr>
+<tr><td></td><td></td><td>Dividends</td><td></td></tr>
+<tr><td></td><td></td><td>Environmental, Social and Governance (ESG)</td><td></td></tr>
+<tr><td></td><td></td><td>Executive Leadership &amp; Management</td><td></td></tr>
+<tr><td></td><td></td><td>Funding</td><td></td></tr>
+<tr><td></td><td></td><td>Government Business</td><td></td></tr>
+<tr><td></td><td></td><td>Green Solutions</td><td></td></tr>
+<tr><td></td><td></td><td>Human Resources</td><td></td></tr>
+<tr><td></td><td></td><td>Intellectual Property</td><td></td></tr>
+<tr><td></td><td></td><td>Investment Opinion</td><td></td></tr>
+<tr><td></td><td></td><td>Large Business</td><td></td></tr>
+<tr><td></td><td></td><td>Logistics</td><td></td></tr>
+<tr><td></td><td></td><td>Marketing and Advertising</td><td></td></tr>
+<tr><td></td><td></td><td>Partnerships and Joint Ventures</td><td></td></tr>
+<tr><td></td><td></td><td>Personnel Changes</td><td></td></tr>
+<tr><td></td><td></td><td>Products and Services Announcements</td><td></td></tr>
+<tr><td></td><td></td><td>Real Estate Transactions</td><td></td></tr>
+<tr><td></td><td></td><td>Sales</td><td></td></tr>
+<tr><td></td><td></td><td>Sales and Earnings</td><td></td></tr>
+<tr><td></td><td></td><td>Small and Medium-sized Business</td><td></td></tr>
+<tr><td></td><td></td><td>Startups</td><td></td></tr>
+<tr><td></td><td></td><td>Stock Offerings and IPOs</td><td></td></tr>
+<tr><td></td><td></td><td>Stock Split</td><td></td></tr>
+<tr><td></td><td>Economy</td><td></td><td></td></tr>
+<tr><td></td><td></td><td>Commodities</td><td></td></tr>
+<tr><td></td><td></td><td>Currencies</td><td></td></tr>
+<tr><td></td><td></td><td>Financial Crisis</td><td></td></tr>
+<tr><td></td><td></td><td>Financial Reform</td><td></td></tr>
+<tr><td></td><td></td><td>Financial Regulation</td><td></td></tr>
+<tr><td></td><td></td><td>Gasoline Prices, Gas Prices</td><td></td></tr>
+<tr><td></td><td></td><td>Housing Market</td><td></td></tr>
+<tr><td></td><td></td><td>Interest Rates</td><td></td></tr>
+<tr><td></td><td></td><td>Job Market</td><td></td></tr>
+<tr><td></td><td>Industries</td><td></td><td></td></tr>
+<tr><td></td><td></td><td>Advertising Industry</td><td></td></tr>
+<tr><td></td><td></td><td>Agriculture</td><td></td></tr>
+<tr><td></td><td></td><td>Apparel Industry</td><td></td></tr>
+<tr><td></td><td></td><td>Automotive Industry</td><td></td></tr>
+<tr><td></td><td></td><td>Aviation Industry</td><td></td></tr>
+<tr><td></td><td></td><td>Biotech and Biomedical Industry</td><td></td></tr>
+<tr><td></td><td></td><td>Civil Engineering Industry</td><td></td></tr>
+<tr><td></td><td></td><td>Construction Industry</td><td></td></tr>
+<tr><td></td><td></td><td>Defense Industry</td><td></td></tr>
+<tr><td></td><td></td><td>Education industry</td><td></td></tr>
+<tr><td></td><td></td><td>Entertainment Industry</td><td></td></tr>
+<tr><td></td><td></td><td>Environmental Services Industry</td><td></td></tr>
+<tr><td></td><td></td><td>Financial Industry</td><td></td></tr>
+<tr><td></td><td></td><td>Food Industry</td><td></td></tr>
+<tr><td></td><td></td><td>Healthcare Industry</td><td></td></tr>
+<tr><td></td><td></td><td>Hospitality Industry</td><td></td></tr>
+<tr><td></td><td></td><td>Information Services Industry</td><td></td></tr>
+<tr><td></td><td></td><td>Legal Services Industry</td><td></td></tr>
+<tr><td></td><td></td><td>Logistics and Transportation Industry</td><td></td></tr>
+<tr><td></td><td></td><td>Management Consulting Industry</td><td></td></tr>
+<tr><td></td><td></td><td>Manufacturing Industry</td><td></td></tr>
+<tr><td></td><td></td><td>Mechanical and Industrial Engineering Industry</td><td></td></tr>
+<tr><td></td><td></td><td>Media Industry</td><td></td></tr>
+<tr><td></td><td></td><td>Metals Industry</td><td></td></tr>
+<tr><td></td><td></td><td>Non-Profit Organizations</td><td></td></tr>
+<tr><td></td><td></td><td>Pharmaceutical Industry</td><td></td></tr>
+<tr><td></td><td></td><td>Power and Energy Industry</td><td></td></tr>
+<tr><td></td><td></td><td>Publishing Industry</td><td></td></tr>
+<tr><td></td><td></td><td>Real Estate Industry</td><td></td></tr>
+<tr><td></td><td></td><td>Retail Industry</td><td></td></tr>
+<tr><td></td><td></td><td>Technology Industry</td><td></td></tr>
+<tr><td></td><td></td><td>Telecommunications Industry</td><td></td></tr>
+<tr><td>Style &amp; Fashion</td><td></td><td></td><td></td></tr>
+<tr><td></td><td>Beauty</td><td></td><td></td></tr>
+<tr><td></td><td>Body Art</td><td></td><td></td></tr>
+<tr><td></td><td>Fashion Trends</td><td></td><td></td></tr>
+<tr><td>Technology &amp; Computing</td><td></td><td></td><td></td></tr>
+<tr><td></td><td>Artificial Intelligence</td><td></td><td></td></tr>
+<tr><td></td><td>Augmented Reality</td><td></td><td></td></tr>
+<tr><td></td><td>Computing</td><td></td><td></td></tr>
+<tr><td></td><td></td><td>Computer Networking</td><td></td></tr>
+<tr><td></td><td></td><td>Computer Peripherals</td><td></td></tr>
+<tr><td></td><td></td><td>Computer Software and Applications</td><td></td></tr>
+<tr><td></td><td></td><td></td><td>3-D Graphics</td></tr>
+<tr><td></td><td></td><td></td><td>Antivirus Software</td></tr>
+<tr><td></td><td></td><td></td><td>Browsers</td></tr>
+<tr><td></td><td></td><td></td><td>Computer Animation</td></tr>
+<tr><td></td><td></td><td></td><td>Databases</td></tr>
+<tr><td></td><td></td><td></td><td>Desktop Publishing</td></tr>
+<tr><td></td><td></td><td></td><td>Digital Audio</td></tr>
+<tr><td></td><td></td><td></td><td>Graphics Software</td></tr>
+<tr><td></td><td></td><td></td><td>Operating Systems</td></tr>
+<tr><td></td><td></td><td></td><td>Photo Editing Software</td></tr>
+<tr><td></td><td></td><td></td><td>Shareware and Freeware</td></tr>
+<tr><td></td><td></td><td></td><td>Video Software</td></tr>
+<tr><td></td><td></td><td></td><td>Web Conferencing</td></tr>
+<tr><td></td><td></td><td>Data Storage and Warehousing</td><td></td></tr>
+<tr><td></td><td></td><td>Desktops</td><td></td></tr>
+<tr><td></td><td></td><td>Information and Network Security</td><td></td></tr>
+<tr><td></td><td></td><td>Internet</td><td></td></tr>
+<tr><td></td><td></td><td></td><td>Cloud Computing</td></tr>
+<tr><td></td><td></td><td></td><td>Email</td></tr>
+<tr><td></td><td></td><td></td><td>IT and Internet Support</td></tr>
+<tr><td></td><td></td><td></td><td>Internet for Beginners</td></tr>
+<tr><td></td><td></td><td></td><td>Internet of Things</td></tr>
+<tr><td></td><td></td><td></td><td>Search</td></tr>
+<tr><td></td><td></td><td></td><td>Social Networking</td></tr>
+<tr><td></td><td></td><td></td><td>Web Design and HTML</td></tr>
+<tr><td></td><td></td><td></td><td>Web Development</td></tr>
+<tr><td></td><td></td><td></td><td>Web Hosting</td></tr>
+<tr><td></td><td></td><td>Laptops</td><td></td></tr>
+<tr><td></td><td></td><td>Programming Languages</td><td></td></tr>
+<tr><td></td><td>Consumer Electronics</td><td></td><td></td></tr>
+<tr><td></td><td></td><td>Cameras and Camcorders</td><td></td></tr>
+<tr><td></td><td></td><td>Home Entertainment Systems</td><td></td></tr>
+<tr><td></td><td></td><td>Smartphones</td><td></td></tr>
+<tr><td></td><td></td><td>Tablets and E-readers</td><td></td></tr>
+<tr><td></td><td></td><td>Wearable Technology</td><td></td></tr>
+<tr><td></td><td>Robotics</td><td></td><td></td></tr>
+<tr><td></td><td>Virtual Reality</td><td></td><td></td></tr>
+<tr><td>Television</td><td></td><td></td><td></td></tr>
+<tr><td>Travel</td><td></td><td></td><td></td></tr>
+<tr><td></td><td>Travel Locations</td><td></td><td></td></tr>
+<tr><td></td><td></td><td>Africa Travel</td><td></td></tr>
+<tr><td></td><td></td><td>Asia Travel</td><td></td></tr>
+<tr><td></td><td></td><td>Europe Travel</td><td></td></tr>
+<tr><td></td><td></td><td>North America Travel</td><td></td></tr>
+<tr><td></td><td></td><td>Polar Travel</td><td></td></tr>
+<tr><td></td><td></td><td>South America Travel</td><td></td></tr>
+<tr><td></td><td>Travel Preparation and Advice</td><td></td><td></td></tr>
+<tr><td></td><td>Travel Type</td><td></td><td></td></tr>
+<tr><td></td><td></td><td>Adventure Travel</td><td></td></tr>
+<tr><td></td><td></td><td>Air Travel</td><td></td></tr>
+<tr><td></td><td></td><td>Budget Travel</td><td></td></tr>
+<tr><td></td><td></td><td>Business Travel</td><td></td></tr>
+<tr><td></td><td></td><td>Camping</td><td></td></tr>
+<tr><td></td><td></td><td>Cruises</td><td></td></tr>
+<tr><td></td><td></td><td>Day Trips</td><td></td></tr>
+<tr><td></td><td></td><td>Family Travel</td><td></td></tr>
+<tr><td></td><td></td><td>Honeymoons and Getaways</td><td></td></tr>
+<tr><td></td><td></td><td>Hotels and Motels</td><td></td></tr>
+<tr><td></td><td></td><td>Rail Travel</td><td></td></tr>
+<tr><td></td><td></td><td>Road Trips</td><td></td></tr>
+<tr><td></td><td></td><td>Spas</td><td></td></tr>
+<tr><td>Video Gaming</td><td></td><td></td><td></td></tr>
+<tr><td></td><td>Console Games</td><td></td><td></td></tr>
+<tr><td></td><td>Mobile Games</td><td></td><td></td></tr>
+<tr><td></td><td>PC Games</td><td></td><td></td></tr>
+<tr><td></td><td>eSports</td><td></td><td></td></tr>
 </tbody>
 </table>
-<p>Additionally, most of the IABv2 categories are supported as well. (See the <a href="https://www.iab.com/wp-content/uploads/2017/11/IAB_Tech_Lab_Content_Taxonomy_V2_Final_2017-11.xlsx">full excel list</a>)</p>
 <style>
 /* Hides the Right-Hand Secondary Nav for a Full Width Industry Table */
 .onPageNav {
