@@ -106,6 +106,7 @@ docReady(function () {
   let dd1html =
     '<a href="/docs/en/kg-index" class="dropbtn">Knowledge Graph</a><div class="dropdown-content">';
   dd1html += '<a href="/kgapi">KG API Reference</a>';
+  dd1html += '<a href="/docs/en/dql-quickstart">KG Getting Started</a>';
   dd1html += '<a href="/enhance">Enhance API Reference</a>';
   dd1html += '<a href="/docs/en/kg-ont-diffbotentity">Ontology</a>';
   dd1html += '<a href="/docs/en/kg-industry-list">Industry Hierarchy</a>';
