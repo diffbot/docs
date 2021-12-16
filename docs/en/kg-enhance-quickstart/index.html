@@ -1,0 +1,142 @@
+<!DOCTYPE html><html lang="en"><head><meta charSet="utf-8"/><meta http-equiv="X-UA-Compatible" content="IE=edge"/><title>Enhance Quick Start · Docs Suite</title><meta name="viewport" content="width=device-width"/><meta name="generator" content="Docusaurus"/><meta name="description" content="This guide is meant to provide techniques for using Diffbot&#x27;s Enhance (data enrichment) product using our visual interface. For API access, see our [Enhance API Reference](/enhance)."/><meta name="docsearch:language" content="en"/><meta property="og:title" content="Enhance Quick Start · Docs Suite"/><meta property="og:type" content="website"/><meta property="og:url" content="https://diffbot.github.io/"/><meta property="og:description" content="This guide is meant to provide techniques for using Diffbot&#x27;s Enhance (data enrichment) product using our visual interface. For API access, see our [Enhance API Reference](/enhance)."/><meta property="og:image" content="https://diffbot.github.io/img/diagram.svg"/><meta name="twitter:card" content="summary"/><meta name="twitter:image" content="https://diffbot.github.io/img/diagram.svg"/><link rel="shortcut icon" href="/img/diffbot-head.png"/><link rel="stylesheet" href="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.css"/><link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/default.min.css"/><script type="text/javascript" src="https://buttons.github.io/buttons.js"></script><script type="text/javascript" src="/js/app.js"></script><script src="/js/scrollSpy.js"></script><link rel="stylesheet" href="/css/main.css"/><script src="/js/codetabs.js"></script></head><body class="sideNavVisible separateOnPageNav"><div class="fixedHeaderContainer"><div class="headerWrapper wrapper"><header><a href="/"><img class="logo" src="/img/diffbot_white.svg" alt="Docs Suite"/><h2 class="headerTitleWithLogo">Docs Suite</h2></a><div class="navigationWrapper navigationSlider"><nav class="slidingNav"><ul class="nav-site nav-site-internal"><li class=""><a href="/docs/en/error-intro" target="_self">Debugging</a></li><li class="navSearchWrapper reactNavSearchWrapper"><input type="text" id="search_input_react" placeholder="Search" title="Search"/></li></ul></nav></div></header></div></div><div class="navPusher"><div class="docMainWrapper wrapper"><div class="docsNavContainer" id="docsNav"><nav class="toc"><div class="toggleNav"><section class="navWrapper wrapper"><div class="navBreadcrumb wrapper"><div class="navToggle" id="navToggler"><div class="hamburger-menu"><div class="line1"></div><div class="line2"></div><div class="line3"></div></div></div><h2><i>›</i><span>Tools and Usage</span></h2><div class="tocToggler" id="tocToggler"><i class="icon-toc"></i></div></div><div class="navGroups"><div class="navGroup"><h3 class="navGroupCategoryTitle collapsible">Knowledge Graph<span class="arrow"><svg width="24" height="24" viewBox="0 0 24 24"><path fill="#565656" d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z"></path><path d="M0 0h24v24H0z" fill="none"></path></svg></span></h3><ul class="hide"><li class="navListItem"><a class="navItem" href="/docs/en/kg-index">Knowledge Graph and Enhance Index</a></li><li class="navListItem"><a class="navItem" href="/docs/en/dql-quickstart">Knowledge Graph Quick Start</a></li><div class="navGroup subNavGroup"><h4 class="navGroupSubcategoryTitle">Tools and Usage</h4><ul><li class="navListItem"><a class="navItem" href="/docs/en/kg-accessing">Accessing Knowledge Graph</a></li><li class="navListItem"><a class="navItem" href="/docs/en/kg-clients">API Clients</a></li><li class="navListItem"><a class="navItem" href="/docs/en/dql-excel">Diffbot Excel Add-In</a></li><li class="navListItem navListItemActive"><a class="navItem" href="/docs/en/kg-enhance-quickstart">Enhance Quick Start</a></li><li class="navListItem"><a class="navItem" href="/docs/en/dql-endpoints">DQL Endpoints</a></li><li class="navListItem"><a class="navItem" href="/docs/en/kg-filtering">Filter Data Output</a></li></ul></div><div class="navGroup subNavGroup"><h4 class="navGroupSubcategoryTitle">In-Depth</h4><ul><li class="navListItem"><a class="navItem" href="/docs/en/dql-index">Diffbot Query Language (DQL)</a></li><li class="navListItem"><a class="navItem" href="/docs/en/dql-workflows">DQL Workflow Example</a></li><li class="navListItem"><a class="navItem" href="/docs/en/dql-faq">DQL FAQ</a></li><li class="navListItem"><a class="navItem" href="/docs/en/dql-effective-queries">Creating Effective Queries</a></li></ul></div></ul></div></div></section></div><script>
+            var coll = document.getElementsByClassName('collapsible');
+            var checkActiveCategory = true;
+            for (var i = 0; i < coll.length; i++) {
+              var links = coll[i].nextElementSibling.getElementsByTagName('*');
+              if (checkActiveCategory){
+                for (var j = 0; j < links.length; j++) {
+                  if (links[j].classList.contains('navListItemActive')){
+                    coll[i].nextElementSibling.classList.toggle('hide');
+                    coll[i].childNodes[1].classList.toggle('rotate');
+                    checkActiveCategory = false;
+                    break;
+                  }
+                }
+              }
+
+              coll[i].addEventListener('click', function() {
+                var arrow = this.childNodes[1];
+                arrow.classList.toggle('rotate');
+                var content = this.nextElementSibling;
+                content.classList.toggle('hide');
+              });
+            }
+
+            document.addEventListener('DOMContentLoaded', function() {
+              createToggler('#navToggler', '#docsNav', 'docsSliderActive');
+              createToggler('#tocToggler', 'body', 'tocActive');
+
+              var headings = document.querySelector('.toc-headings');
+              headings && headings.addEventListener('click', function(event) {
+                var el = event.target;
+                while(el !== headings){
+                  if (el.tagName === 'A') {
+                    document.body.classList.remove('tocActive');
+                    break;
+                  } else{
+                    el = el.parentNode;
+                  }
+                }
+              }, false);
+
+              function createToggler(togglerSelector, targetSelector, className) {
+                var toggler = document.querySelector(togglerSelector);
+                var target = document.querySelector(targetSelector);
+
+                if (!toggler) {
+                  return;
+                }
+
+                toggler.onclick = function(event) {
+                  event.preventDefault();
+
+                  target.classList.toggle(className);
+                };
+              }
+            });
+        </script></nav></div><div class="container mainContainer docsContainer"><div class="wrapper"><div class="post"><header class="postHeader"><a class="edit-page-link button" href="https://github.com/diffbot/docs/edit/master/docs/kg-enhance-quickstart.md" target="_blank" rel="noreferrer noopener">Edit</a><h1 id="__docusaurus" class="postHeaderTitle">Enhance Quick Start</h1></header><article><div><span><p>This guide is meant to provide techniques for using Diffbot's Enhance (data enrichment) product using our visual interface. For API access, see our <a href="/enhance">Enhance API Reference</a>.</p>
+<h2><a class="anchor" aria-hidden="true" id="enriching-organization-or-person-data-in-the-interface"></a><a href="#enriching-organization-or-person-data-in-the-interface" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Enriching Organization or Person Data In The Interface</h2>
+<p>From the home screen of the <a href="https://app.diffbot.com">Diffbot dashboard</a> users may find our data enrichment offering in the sidebar or main content area listed as Enhance.</p>
+<p>Once you've arrived at the manual Enhance interface, users may select whether they would like to enrich a person or organization.</p>
+<p><img src="/img/enhance-get-started/enhance-one.png" alt="Enhance Page"></p>
+<p>At least one input field is required, and the greater the number of fields provided the higher likelihood that data will be successfully enriched.</p>
+<p><img src="/img/enhance-get-started/enhance-two.png" alt="Additional Options">
+After toggling additional options, users may alter several settings. These include:</p>
+<ul>
+<li><strong>Toggling refresh mode</strong> - refresh mode recrawls the origin pages for all facts associated with an entity refreshing data.</li>
+<li><strong>Toggling search mode</strong> - search mode searches across our web crawl data to seek out and merge in new facts that are not presently attached to the entity in question.</li>
+<li><strong>Altering the match threshhold</strong> - by default entities must match the input to be enriched by a threshold of .29 or above on a 0-1 scale. Lower the threshold to lower match criteria or raise the threshold to perform the inverse.</li>
+<li><strong>Specifying the number of matches</strong> - By default our enrichment seeks to match input with a single entity. Raise the match number to return multiple of the top-matching results. Within the visual interface multiple results will be shown in a results page.</li>
+</ul>
+<p><strong>Note:</strong> Refresh and search mode increase credit usage compared to default setting Enhance jobs.</p>
+<p>After executing an Enhance job, results may be clicked through to see visual Knowledge Graph entity pages. Additionally, results may be exported via JSON or CSV in the upper right corner of the results page.</p>
+<p><img src="/img/enhance-get-started/enhance-three.png" alt="Export Enhance Via CSV"></p>
+<p>While JSON export results will return all default fields, CSV export allows users to choose from a range of fields to export. A preview of results allows you to select which fields you would like and alter column names.</p>
+<p>The &quot;for multi-value fields, select all the value&quot; toggle specifies whether you want the latest entry or all entries for multi-value fields. An example of this could be a list of employers for a person data enrichment.</p>
+<h2><a class="anchor" aria-hidden="true" id="enriching-in-bulk-using-bulk-enhance"></a><a href="#enriching-in-bulk-using-bulk-enhance" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Enriching In Bulk Using Bulk Enhance</h2>
+<p>Typically you will have more than one entity you will want to manually enrich. A new bulk Enhance job can be started in the left sidebar under Enhance in the <a href="https://app.diffbot.com">Knowledge Graph Interface</a>.</p>
+<p>First, name your bulk Enhance job so that you can return to it once it is completed. Completed or in-progress bulk Enhance jobs as well as a range of statistics about records processed, remaining time, and match rate can be viewed in the <a href="https://app.diffbot.com/enhance/bulk/">All bulk Enhance Jobs</a> tab of the interface.</p>
+<p>Next you'll have the choice of uploading a csv or manually inputting the entities to enrich. For manual input, you'll need to follow the standard column order if supplying multiple fields. When supplying name input alone, commas may be skipped in input.</p>
+<p><strong>Standard Bulk Enhance Column Order:</strong>
+<code>Name, Location, Description, URL</code></p>
+<p>For CSV upload, you can provide custom ordered columns utilizing the same column names above or utilize our standard template.</p>
+<p>After toggling additional options, users may alter several settings. These include:</p>
+<ul>
+<li><strong>Toggling refresh mode</strong> - refresh mode recrawls the origin pages for all facts associated with an entity refreshing data.</li>
+<li><strong>Toggling search mode</strong> - search mode searches across our web crawl data to seek out and merge in new facts that are not presently attached to the entity in question.</li>
+<li><strong>Altering the match threshhold</strong> - by default entities must match the input to be enriched by a threshold of .32 or above on a 0-1 scale. Lower the threshold to lower match criteria or raise the threshold to perform the inverse.</li>
+<li><strong>Specifying the number of matches</strong> - By default our enrichment seeks to match input with a single entity. Raise the match number to return multiple of the top-matching results. Within the visual interface multiple results will be shown in a results page.</li>
+</ul>
+<p><strong>Note:</strong> Refresh and search mode increase credit usage compared to default setting Enhance jobs.
+<img src="/img/enhance-get-started/enhance-four.png" alt="Bulk Enhance Job Started">
+Upon executing your bulk Enhance job, your job will enter the queue. During this time and throughout the execution of your enrichment you may check in on the status of your crawl including match rates and estimated time until completion in the overview, results, and stats tabs. Additionally you may leave the page and find a view of your ongoing or completed bulk Enhances in the sidebar under Enhance labelled &quot;All Bulk Enhance Jobs.&quot;</p>
+<p>You can export your results in the &quot;All Bulk Enhance Jobs&quot; tab in JSON or CSV.</p>
+<p><img src="/img/enhance-get-started/enhance-three.png" alt="Export Enhance Via CSV"></p>
+<p>While JSON export results will return all default fields, CSV export allows users to choose from a range of fields to export. A preview of results allows you to select which fields you would like and alter column names.</p>
+<p>The &quot;for multi-value fields, select all the value&quot; toggle specifies whether you want the latest entry or all entries for multi-value fields. An example of this could be a list of employers for a person data enrichment.</p>
+<h2><a class="anchor" aria-hidden="true" id="enriching-a-spreadsheet-using-integrations"></a><a href="#enriching-a-spreadsheet-using-integrations" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Enriching A Spreadsheet Using Integrations</h2>
+<p>One benefit of utilizing Diffbot's Google Sheets or Excel integrations for CSV enrichment is that you can inject data directly into your working sheet.
+<img src="/img/enhance-get-started/install-g-sheets.gif" alt="Installing Diffbot For Sheets">
+Enriching data using <strong>Diffbot's Google Sheets Add-On</strong> involves first installing the add-on, then logging in with your API token which can be found in the top right corner of the home screen of the <a href="https://app.diffbot.com">Knowledge Graph Interface</a>.
+<img src="/img/enhance-get-started/g-sheets-function.gif" alt="Enriching in Google Sheets">
+Enrichment utilizes two Google Sheets functions. <code>=ENHANCE_ORGANIZATION</code> and <code>=ENHANCE_PERSON</code>.</p>
+<p>For organizations, the following fields may be passed to the function.</p>
+<ul>
+<li><code>field</code> - The field of an organization entity to return. Multiple fields may be supplied separated by commas. For a full list of fields attached to organizations, see our <a href="/docs/en/kg-ont-organization">organization ontology page</a>.</li>
+<li><code>name</code> (optional) - a provided name for an organization.</li>
+<li><code>url</code> (optional) - a provided homepage for the organization.</li>
+<li><code>location</code> (optional) - a provided location for the organization.</li>
+<li><code>description</code> (optional) - a provided description of what the organization does.</li>
+</ul>
+<p>For person enrichment the following fields may be passed to the function.</p>
+<ul>
+<li><code>field</code> - The field of an organization entity to return. Multiple fields may be supplied separated by commas. For a full list of fields attached to organizations, see our <a href="/docs/en/kg-ont-person">organization ontology page</a>.</li>
+<li><code>name</code> (optional) - a provided name for an organization.</li>
+<li><code>email</code> (optional) - a provided email for the organization.</li>
+<li><code>employer</code> (optional) - a provided employer for the organization.</li>
+<li><code>location</code> (optional) - a provided location for the organization.</li>
+<li><code>description</code> (optional) - a provided description of what the organization does.</li>
+</ul>
+<p><strong>Tip:</strong> for the field input, use absolute references to column header cells so you can apply your function to many cells at once by dragging (shown in prior GIF).</p>
+<p>Enriching data using <strong>Diffbot's Excel Add-On</strong> provides a way to feed your existing spreadsheet of organizations or people through a visual interface where you can map your input and choose which fields to output.</p>
+<p>Check out our <a href="/docs/en/dql-excel#enhance-an-organization-profile-with-sample-data">Diffbot Excel Add-In docs</a> for more information on using Enhance in docs, or watch our walkthrough video below.</p>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/lbG5fl5foD8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></span></div></article></div><div class="docLastUpdate"><em>Last updated by Merrill</em></div><div class="docs-prevnext"><a class="docs-prev button" href="/docs/en/dql-excel"><span class="arrow-prev">← </span><span>Diffbot Excel Add-In</span></a><a class="docs-next button" href="/docs/en/dql-endpoints"><span>DQL Endpoints</span><span class="arrow-next"> →</span></a></div></div></div><nav class="onPageNav"><ul class="toc-headings"><li><a href="#enriching-organization-or-person-data-in-the-interface">Enriching Organization or Person Data In The Interface</a></li><li><a href="#enriching-in-bulk-using-bulk-enhance">Enriching In Bulk Using Bulk Enhance</a></li><li><a href="#enriching-a-spreadsheet-using-integrations">Enriching A Spreadsheet Using Integrations</a></li></ul></nav></div><footer class="nav-footer" id="footer"><section class="sitemap"><a href="/" class="nav-home"><img src="/img/diffbot_white.svg" alt="Docs Suite" width="66" height="58"/></a><div><h5>Docs</h5><a href="/docs/en/api-basics-index">Extraction</a><a href="/docs/en/cb-basics-index">Crawling</a><a href="/docs/en/kg-index">Knowledge Graph</a><a href="/docs/en/explain-gdpr">Diffbot and GDPR</a></div><div><h5>Community</h5><a href="https://stackoverflow.com/questions/tagged/diffbot" target="_blank" rel="noreferrer noopener">Stack Overflow</a><a href="https://twitter.com/diffbot" target="_blank" rel="noreferrer noopener">Twitter</a></div><div><h5>More</h5><a href="/blog">Blog</a><a href="/help">Help</a><a href="https://github.com/diffbot">GitHub</a></div></section><a href="https://diffbot.com/" target="_blank" rel="noreferrer noopener" class="fbOpenSource"><img src="/img/diffbot_white.svg" alt="Diffbot.com" width="170" height="45"/></a><section class="copyright">Copyright © 2021 Diffbot.com</section></footer></div><script type="text/javascript" src="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.js"></script><script>
+                document.addEventListener('keyup', function(e) {
+                  if (e.target !== document.body) {
+                    return;
+                  }
+                  // keyCode for '/' (slash)
+                  if (e.keyCode === 191) {
+                    const search = document.getElementById('search_input_react');
+                    search && search.focus();
+                  }
+                });
+              </script><script>
+              var search = docsearch({
+                
+                apiKey: '2c24e5e78d724e77c46ef1b720700177',
+                indexName: 'diffbot',
+                inputSelector: '#search_input_react',
+                algoliaOptions: {}
+              });
+            </script></body></html>
