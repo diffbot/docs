@@ -122,7 +122,7 @@ docReady(function () {
   dd2html += '<a href="/docs/en/api-intro-product">Product API</a>';
   dd2html += '<a href="/docs/en/api-intro-article">Article API</a>';
   dd2html += '<a href="/docs/en/api-intro-analyze">Analyze API</a>';
-  dd2html += '<a href="/docs/en/api-event">Event API</a>';
+  dd2html += '<a href="/docs/en/api-intro-event">Event API</a>';
   dd2html += '<a href="/docs/en/api-intro-image">Image API</a>';
   dd2html += '<a href="/docs/en/api-intro-video">Video API</a>';
   dd2html += '<a href="/docs/en/api-intro-discussion">Discussion API</a>';
