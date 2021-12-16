@@ -16,6 +16,8 @@ This page is a directory of KG and Enhance related content.
 
 - [Accessing the Knowledge Graph](kg-accessing) - access the knowledge graph through the UI or the API
 - [API Clients](kg-clients) - use the API through your favorite programming language
+- [Knowledge Graph Quick Start](/docs/en/dql-quickstart) spend a few hours gaining mastery of Diffbot's Knowledge Graph and Diffbot Query Language
+- [Enhance Quick Start](/docs/en/kg-enhance-quickstart) - use our visual interface to Enrich data using Diffbot Enhance
 - [Microsoft Excel DQL Plugin](dql-excel) - use the power of DQL in your spreadsheets and enhance your data
 - [Google Sheets Add-on](kg-gsheets) - like the Excel plugin, but in Google Sheets
 

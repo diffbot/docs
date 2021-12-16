@@ -279,7 +279,7 @@
       {
         "type": "subcategory",
         "label": "Tools and Usage",
-        "ids": ["kg-accessing", "kg-clients", "dql-excel", "dql-endpoints", "kg-filtering"]
+        "ids": ["kg-accessing", "kg-clients", "dql-excel","kg-enhance-quickstart", "dql-endpoints", "kg-filtering"]
       },
       {
         "type": "subcategory",
