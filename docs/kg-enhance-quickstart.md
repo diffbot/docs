@@ -10,11 +10,11 @@ From the home screen of the [Diffbot dashboard](https://app.diffbot.com) users m
 
 Once you've arrived at the manual Enhance interface, users may select whether they would like to enrich a person or organization. 
 
-![Enhance Page](/img/enhance-get-started/enhance-one.png)
+![Enhance Page](/img/enhance-get-started/enhance-one.PNG)
 
 At least one input field is required, and the greater the number of fields provided the higher likelihood that data will be successfully enriched. 
 
-![Additional Options](/img/enhance-get-started/enhance-two.png)
+![Additional Options](/img/enhance-get-started/enhance-two.PNG)
 After toggling additional options, users may alter several settings. These include: 
 
 - **Toggling refresh mode** - refresh mode recrawls the origin pages for all facts associated with an entity refreshing data. 
@@ -26,7 +26,7 @@ After toggling additional options, users may alter several settings. These inclu
 
 After executing an Enhance job, results may be clicked through to see visual Knowledge Graph entity pages. Additionally, results may be exported via JSON or CSV in the upper right corner of the results page. 
 
-![Export Enhance Via CSV](/img/enhance-get-started/enhance-three.png)
+![Export Enhance Via CSV](/img/enhance-get-started/enhance-three.PNG)
 
 While JSON export results will return all default fields, CSV export allows users to choose from a range of fields to export. A preview of results allows you to select which fields you would like and alter column names. 
 
@@ -53,12 +53,12 @@ After toggling additional options, users may alter several settings. These inclu
 - **Specifying the number of matches** - By default our enrichment seeks to match input with a single entity. Raise the match number to return multiple of the top-matching results. Within the visual interface multiple results will be shown in a results page. 
 
 **Note:** Refresh and search mode increase credit usage compared to default setting Enhance jobs.
-![Bulk Enhance Job Started](/img/enhance-get-started/enhance-four.png)
+![Bulk Enhance Job Started](/img/enhance-get-started/enhance-four.PNG)
 Upon executing your bulk Enhance job, your job will enter the queue. During this time and throughout the execution of your enrichment you may check in on the status of your crawl including match rates and estimated time until completion in the overview, results, and stats tabs. Additionally you may leave the page and find a view of your ongoing or completed bulk Enhances in the sidebar under Enhance labelled "All Bulk Enhance Jobs." 
 
 You can export your results in the "All Bulk Enhance Jobs" tab in JSON or CSV. 
 
-![Export Enhance Via CSV](/img/enhance-get-started/enhance-three.png)
+![Export Enhance Via CSV](/img/enhance-get-started/enhance-three.PNG)
 
 While JSON export results will return all default fields, CSV export allows users to choose from a range of fields to export. A preview of results allows you to select which fields you would like and alter column names. 
 
