@@ -22,6 +22,8 @@ If you know what type of content your URL is, or what to force extraction as a s
 - [Discussion API](api-discussion) is used for extracting threads of content. This can be a review section of a product (indeed, Product API uses the Discussion API internally when extracting comments to include them in the output), a forum or Reddit thread, or a comment section in a blog.
 - [Event API (BETA)](api-event) is used for extracting online and in-person event details for standalone events that occur within a single day. Support for multi-day, multi-track events, i.e. full conferences and festivals, is planned but not yet scheduled.
 
+- [List API (BETA)](api-list) is used for extracting data from any single listings page, such as news index pages, product listings pages, and search engine results pages.
+
 ## Custom API
 
 - [Custom API](api-custom) The Custom API can be used to either correct & augment automatically extracted output or create entirely new custom extractions by defining rules. We have a point-and-click interface that allows you to easily build CSS-based selectors, regular expressions, and attribute filters, or you can also use the Custom API programmatically via..and API.
