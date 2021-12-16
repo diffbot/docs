@@ -39,16 +39,16 @@ For example, to return `links` and `meta` (in addition to the default fields), y
 
 ## Response
 
-The Event API returns data in JSON format.
+The List API returns data in JSON format.
 
 Each V3 response includes a `request` object (which returns request-specific metadata), and an `objects` array, which will include the extracted information for all objects on a submitted page.
 
-Objects in the Event API's `objects` array will include the following fields:
+Objects in the List API's `objects` array will include the following fields:
 
 | Field | Description |
 | :---- | :---------- |
-| `type` | Type of object (always `event`). |
-| `pageUrl` | URL of submitted page / page from which the event is extracted. |
+| `type` | Type of object (always `list`). |
+| `pageUrl` | URL of submitted page / page from which the list is extracted. |
 | `resolvedPageUrl` | Returned if the `pageUrl` redirects to another URL. |
 | `title` | Title of the page. |
 | `items` | The primary list of items found on the page. |
@@ -166,7 +166,7 @@ Delivered as a string value as a custom header:
 "X-Forward-X-Evaluate": "function() {start();setTimeout(function(){var loadMoreNode=document.querySelector('a.loadMore');if (loadMoreNode != null) {loadMoreNode.click();setTimeout(function(){end();}, 800);} else {end();}},500);}"
 ```
 
-> Note: X-Evaluate will only be executed if called from the API the rule resides in. If you have an X-Evaluate script in your Article API rule and make a request with the Analyze API that identifies the page as an article, the X-Evaluate will not be executed.
+> Note: X-Evaluate will only be executed if called from the API the rule resides in. If you have an X-Evaluate script in your List API rule and make a request with the Analyze API that identifies the page as a list, the X-Evaluate will not be executed.
 
 ### Saving Data to a Custom Field Using Javascript
 
@@ -191,7 +191,7 @@ function() {
 
 ## Posting Content
 
-If your content is not publicly available (e.g., behind a firewall), you can POST markup directly to the Event API endpoint for analysis:
+If your content is not publicly available (e.g., behind a firewall), you can POST markup directly to the List API endpoint for analysis:
 
 ```plaintext
 https://api.diffbot.com/v3/list?token=...&url=...
@@ -204,5 +204,5 @@ Provide the content to analyze as your POST body, and specify the `Content-Type`
 ### HTML Post Sample
 
 ```plaintext
-curl -H "Content-Type: text/html" -d '<html><head><title>Some List Name</title></head><body><h2>Come join us on February 22nd, 2020</h2><div> at the Chase Center, 1301 2nd Ave, Seattle, WA 98101</div></body></html>' 'https://api.diffbot.com/v3/event?token=...&url=http%3A%2F%2Fstore.diffbot.com'
+curl -H "Content-Type: text/html" -d '<html><head><title>Some List Name</title></head><body><h2>Today's Top News</h2><div> ... </div></body></html>' 'https://api.diffbot.com/v3/list?token=...&url=http%3A%2F%2Fstore.diffbot.com'
 ```
