@@ -160,6 +160,11 @@
       },
       {
         "type": "subcategory",
+        "label": "Basics",
+        "ids": ["api-basics-list"]
+      },
+      {
+        "type": "subcategory",
         "label": "API",
         "ids": ["api-list"]
       }
