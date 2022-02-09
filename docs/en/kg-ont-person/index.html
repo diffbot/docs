@@ -56,6 +56,7 @@
             });
         </script></nav></div><div class="container mainContainer docsContainer"><div class="wrapper"><div class="post"><header class="postHeader"><a class="edit-page-link button" href="https://github.com/diffbot/docs/edit/master/docs/kg-ont-person.md" target="_blank" rel="noreferrer noopener">Edit</a><h1 id="__docusaurus" class="postHeaderTitle">Person</h1></header><article><div><span><p>The person entity type encompasses all people known to the Knowledge Graph.</p>
 <p>Note that fields are not guaranteed to exist in every entity record.</p>
+<p>For convenience, a complete ontology source in JSON format is also <a href="https://kg.diffbot.com/kg/ontology">available here</a>.</p>
 <blockquote>
 <p>New to the Diffbot Knowledge Graph? <a href="dql-quickstart">Start here</a>.</p>
 </blockquote>
@@ -117,7 +118,7 @@
 <li><strong>Example:</strong></li>
 </ul>
 <pre><code class="hljs">{
-    <span class="hljs-attr">"age"</span>: <span class="hljs-number">76</span>
+    <span class="hljs-attr">"age"</span>: <span class="hljs-number">75</span>
 }
 </code></pre>
 <h3><a class="anchor" aria-hidden="true" id="angellisturi"></a><a href="#angellisturi" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>angellistUri</h3>
@@ -217,7 +218,8 @@
             <span class="hljs-string">"image"</span>: <span class="hljs-string">"https://kg.diffbot.com/image/api/get?fetch=yes&amp;url=g%3Cj7P0St0DnBJf.x0KwLZrUn.%5B%3CR0Aa4Hh%3B%5Bv738ZqOr7U%3FfvEQ%3El%601Nw%7BM0Bf7hu7z%3FRe9s4XwGXedrKUAN%28%3D%5ECHnM%60%29.%7BOV"</span>,
             <span class="hljs-string">"types"</span>: [
                 <span class="hljs-string">"Place"</span>,
-                <span class="hljs-string">"AdministrativeArea"</span>
+                <span class="hljs-string">"AdministrativeArea"</span>,
+                <span class="hljs-string">"Country"</span>
             ],
             <span class="hljs-string">"name"</span>: <span class="hljs-string">"United States of America"</span>,
             <span class="hljs-string">"diffbotUri"</span>: <span class="hljs-string">"http://diffbot.com/entity/E01d4EK33MmCosgI2KXa4-A"</span>,
@@ -232,7 +234,8 @@
             <span class="hljs-string">"image"</span>: <span class="hljs-string">"https://kg.diffbot.com/image/api/get?fetch=yes&amp;url=g%3Cj7P0St0DnBJf.x0KwLZrUn.%5B%3CR0Aa4Hh%3B%5Bv738ZqOr7U%3FCvrv%3ExO%3ALE1l9Bl%3Cb%7DGej%5C%7BRyDCUDe%7BV0I%5E7Pdgj0RnJj3%3B%7C%3ESgGu1EiSd2U2Kb%3FchDc3D_NbtOi%7DVnTj%3DL9FE%2F%5B%7DG%5D9%5B%7D7d.ZvE"</span>,
             <span class="hljs-string">"types"</span>: [
                 <span class="hljs-string">"Place"</span>,
-                <span class="hljs-string">"AdministrativeArea"</span>
+                <span class="hljs-string">"AdministrativeArea"</span>,
+                <span class="hljs-string">"City"</span>
             ],
             <span class="hljs-string">"name"</span>: <span class="hljs-string">"Redlands"</span>,
             <span class="hljs-string">"diffbotUri"</span>: <span class="hljs-string">"http://diffbot.com/entity/EEGqoBftsOZyh3_RKbQE3mw"</span>,
@@ -262,7 +265,8 @@
             <span class="hljs-string">"image"</span>: <span class="hljs-string">"https://kg.diffbot.com/image/api/get?fetch=yes&amp;url=g%3Cj7P0St0DnBJf.x0KwLZrUn.%5B%3CR0Aa4Hh%3B%5Bv738ZqOr7U%3Fav%40T%3ExS%7DYb%3B%60zt%5BDbuGxEVg.xAK"</span>,
             <span class="hljs-string">"types"</span>: [
                 <span class="hljs-string">"Place"</span>,
-                <span class="hljs-string">"AdministrativeArea"</span>
+                <span class="hljs-string">"AdministrativeArea"</span>,
+                <span class="hljs-string">"Region"</span>
             ],
             <span class="hljs-string">"name"</span>: <span class="hljs-string">"California"</span>,
             <span class="hljs-string">"diffbotUri"</span>: <span class="hljs-string">"http://diffbot.com/entity/El0_8ehooNxOPT36Y4RdV9w"</span>,
@@ -334,7 +338,7 @@
                 <span class="hljs-attr">"precision"</span>: <span class="hljs-number">0</span>,
                 <span class="hljs-attr">"timestamp"</span>: <span class="hljs-number">0</span>
             },
-            <span class="hljs-attr">"relationship"</span>: <span class="hljs-string">""</span>,
+            <span class="hljs-attr">"relationship"</span>: {},
             <span class="hljs-attr">"colleague"</span>: {
                 <span class="hljs-attr">"summary"</span>: <span class="hljs-string">""</span>,
                 <span class="hljs-attr">"image"</span>: <span class="hljs-string">""</span>,
@@ -365,7 +369,7 @@
 <li><strong>Example:</strong></li>
 </ul>
 <pre><code class="hljs">{
-    <span class="hljs-attr">"connectedIndustries"</span>: []
+    <span class="hljs-attr">"connectedIndustries"</span>: {}
 }
 </code></pre>
 <h3><a class="anchor" aria-hidden="true" id="crunchbaseuri"></a><a href="#crunchbaseuri" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>crunchbaseUri</h3>
@@ -551,8 +555,11 @@
             },
             <span class="hljs-attr">"isCurrent"</span>: <span class="hljs-literal">false</span>,
             <span class="hljs-attr">"major"</span>: {
+                <span class="hljs-attr">"recordId"</span>: <span class="hljs-string">"EEIzhzuLVPeKuQ7KjPSa6aQ@269"</span>,
                 <span class="hljs-attr">"name"</span>: <span class="hljs-string">"International Trade"</span>,
-                <span class="hljs-attr">"surfaceForm"</span>: <span class="hljs-string">"International Trade"</span>
+                <span class="hljs-attr">"surfaceForm"</span>: <span class="hljs-string">"International Trade"</span>,
+                <span class="hljs-attr">"position"</span>: <span class="hljs-string">"personEducationMajor"</span>,
+                <span class="hljs-attr">"type"</span>: <span class="hljs-string">"EducationMajorEntity"</span>
             },
             <span class="hljs-attr">"degree"</span>: {
                 <span class="hljs-attr">"types"</span>: [
@@ -609,13 +616,12 @@
                 <span class="hljs-attr">"summary"</span>: <span class="hljs-string">"Organization based in United States"</span>,
                 <span class="hljs-attr">"types"</span>: [
                     <span class="hljs-string">"Organization"</span>,
-                    <span class="hljs-string">"LocalBusiness"</span>,
-                    <span class="hljs-string">"Place"</span>
+                    <span class="hljs-string">"LocalBusiness"</span>
                 ],
                 <span class="hljs-attr">"name"</span>: <span class="hljs-string">"Shiloh Group"</span>,
-                <span class="hljs-attr">"diffbotUri"</span>: <span class="hljs-string">"http://diffbot.com/entity/ELF4ccy36PMug3N0XWxDdrg"</span>,
-                <span class="hljs-attr">"targetDiffbotUri"</span>: <span class="hljs-string">"http://diffbot.com/entity/ELF4ccy36PMug3N0XWxDdrg"</span>,
-                <span class="hljs-attr">"targetDiffbotId"</span>: <span class="hljs-string">"ELF4ccy36PMug3N0XWxDdrg"</span>,
+                <span class="hljs-attr">"diffbotUri"</span>: <span class="hljs-string">"http://diffbot.com/entity/EuTIRQ1kUPqGgSxUxjP0ieQ"</span>,
+                <span class="hljs-attr">"targetDiffbotUri"</span>: <span class="hljs-string">"http://diffbot.com/entity/EuTIRQ1kUPqGgSxUxjP0ieQ"</span>,
+                <span class="hljs-attr">"targetDiffbotId"</span>: <span class="hljs-string">"EuTIRQ1kUPqGgSxUxjP0ieQ"</span>,
                 <span class="hljs-attr">"surfaceForm"</span>: <span class="hljs-string">"Shiloh Group"</span>,
                 <span class="hljs-attr">"type"</span>: <span class="hljs-string">"LocalBusiness"</span>
             },
@@ -626,13 +632,21 @@
             },
             <span class="hljs-attr">"categories"</span>: [
                 {
-                    <span class="hljs-attr">"name"</span>: <span class="hljs-string">"Chief Officer"</span>,
-                    <span class="hljs-attr">"diffbotUri"</span>: <span class="hljs-string">"http://diffbot.com/entity/ETONJ_vUmODK7D7WTWa6OhA"</span>,
-                    <span class="hljs-attr">"targetDiffbotUri"</span>: <span class="hljs-string">"http://diffbot.com/entity/ETONJ_vUmODK7D7WTWa6OhA"</span>,
-                    <span class="hljs-attr">"targetDiffbotId"</span>: <span class="hljs-string">"ETONJ_vUmODK7D7WTWa6OhA"</span>,
+                    <span class="hljs-attr">"types"</span>: [
+                        <span class="hljs-string">"Intangible"</span>,
+                        <span class="hljs-string">"EmploymentCategory"</span>
+                    ],
+                    <span class="hljs-attr">"name"</span>: <span class="hljs-string">"Executive"</span>,
+                    <span class="hljs-attr">"diffbotUri"</span>: <span class="hljs-string">"http://diffbot.com/entity/EFHD6pfzYMtqdaaytNomkhA"</span>,
+                    <span class="hljs-attr">"targetDiffbotUri"</span>: <span class="hljs-string">"http://diffbot.com/entity/EFHD6pfzYMtqdaaytNomkhA"</span>,
+                    <span class="hljs-attr">"targetDiffbotId"</span>: <span class="hljs-string">"EFHD6pfzYMtqdaaytNomkhA"</span>,
                     <span class="hljs-attr">"type"</span>: <span class="hljs-string">"EmploymentCategory"</span>
                 },
                 {
+                    <span class="hljs-attr">"types"</span>: [
+                        <span class="hljs-string">"Intangible"</span>,
+                        <span class="hljs-string">"EmploymentCategory"</span>
+                    ],
                     <span class="hljs-attr">"name"</span>: <span class="hljs-string">"Management"</span>,
                     <span class="hljs-attr">"diffbotUri"</span>: <span class="hljs-string">"http://diffbot.com/entity/EpXGc9jmNPQW3wt-ny5SqCQ"</span>,
                     <span class="hljs-attr">"targetDiffbotUri"</span>: <span class="hljs-string">"http://diffbot.com/entity/EpXGc9jmNPQW3wt-ny5SqCQ"</span>,
@@ -640,10 +654,14 @@
                     <span class="hljs-attr">"type"</span>: <span class="hljs-string">"EmploymentCategory"</span>
                 },
                 {
-                    <span class="hljs-attr">"name"</span>: <span class="hljs-string">"Executive"</span>,
-                    <span class="hljs-attr">"diffbotUri"</span>: <span class="hljs-string">"http://diffbot.com/entity/EFHD6pfzYMtqdaaytNomkhA"</span>,
-                    <span class="hljs-attr">"targetDiffbotUri"</span>: <span class="hljs-string">"http://diffbot.com/entity/EFHD6pfzYMtqdaaytNomkhA"</span>,
-                    <span class="hljs-attr">"targetDiffbotId"</span>: <span class="hljs-string">"EFHD6pfzYMtqdaaytNomkhA"</span>,
+                    <span class="hljs-attr">"types"</span>: [
+                        <span class="hljs-string">"Intangible"</span>,
+                        <span class="hljs-string">"EmploymentCategory"</span>
+                    ],
+                    <span class="hljs-attr">"name"</span>: <span class="hljs-string">"Chief Officer"</span>,
+                    <span class="hljs-attr">"diffbotUri"</span>: <span class="hljs-string">"http://diffbot.com/entity/ETONJ_vUmODK7D7WTWa6OhA"</span>,
+                    <span class="hljs-attr">"targetDiffbotUri"</span>: <span class="hljs-string">"http://diffbot.com/entity/ETONJ_vUmODK7D7WTWa6OhA"</span>,
+                    <span class="hljs-attr">"targetDiffbotId"</span>: <span class="hljs-string">"ETONJ_vUmODK7D7WTWa6OhA"</span>,
                     <span class="hljs-attr">"type"</span>: <span class="hljs-string">"EmploymentCategory"</span>
                 }
             ],
@@ -672,13 +690,21 @@
             },
             <span class="hljs-attr">"categories"</span>: [
                 {
-                    <span class="hljs-attr">"name"</span>: <span class="hljs-string">"Management"</span>,
-                    <span class="hljs-attr">"diffbotUri"</span>: <span class="hljs-string">"http://diffbot.com/entity/EpXGc9jmNPQW3wt-ny5SqCQ"</span>,
-                    <span class="hljs-attr">"targetDiffbotUri"</span>: <span class="hljs-string">"http://diffbot.com/entity/EpXGc9jmNPQW3wt-ny5SqCQ"</span>,
-                    <span class="hljs-attr">"targetDiffbotId"</span>: <span class="hljs-string">"EpXGc9jmNPQW3wt-ny5SqCQ"</span>,
+                    <span class="hljs-attr">"types"</span>: [
+                        <span class="hljs-string">"Intangible"</span>,
+                        <span class="hljs-string">"EmploymentCategory"</span>
+                    ],
+                    <span class="hljs-attr">"name"</span>: <span class="hljs-string">"Executive"</span>,
+                    <span class="hljs-attr">"diffbotUri"</span>: <span class="hljs-string">"http://diffbot.com/entity/EFHD6pfzYMtqdaaytNomkhA"</span>,
+                    <span class="hljs-attr">"targetDiffbotUri"</span>: <span class="hljs-string">"http://diffbot.com/entity/EFHD6pfzYMtqdaaytNomkhA"</span>,
+                    <span class="hljs-attr">"targetDiffbotId"</span>: <span class="hljs-string">"EFHD6pfzYMtqdaaytNomkhA"</span>,
                     <span class="hljs-attr">"type"</span>: <span class="hljs-string">"EmploymentCategory"</span>
                 },
                 {
+                    <span class="hljs-attr">"types"</span>: [
+                        <span class="hljs-string">"Intangible"</span>,
+                        <span class="hljs-string">"EmploymentCategory"</span>
+                    ],
                     <span class="hljs-attr">"name"</span>: <span class="hljs-string">"Shareholder"</span>,
                     <span class="hljs-attr">"diffbotUri"</span>: <span class="hljs-string">"http://diffbot.com/entity/EnjEbsIYNORq7LaLzpGLaeg"</span>,
                     <span class="hljs-attr">"targetDiffbotUri"</span>: <span class="hljs-string">"http://diffbot.com/entity/EnjEbsIYNORq7LaLzpGLaeg"</span>,
@@ -686,10 +712,14 @@
                     <span class="hljs-attr">"type"</span>: <span class="hljs-string">"EmploymentCategory"</span>
                 },
                 {
-                    <span class="hljs-attr">"name"</span>: <span class="hljs-string">"Executive"</span>,
-                    <span class="hljs-attr">"diffbotUri"</span>: <span class="hljs-string">"http://diffbot.com/entity/EFHD6pfzYMtqdaaytNomkhA"</span>,
-                    <span class="hljs-attr">"targetDiffbotUri"</span>: <span class="hljs-string">"http://diffbot.com/entity/EFHD6pfzYMtqdaaytNomkhA"</span>,
-                    <span class="hljs-attr">"targetDiffbotId"</span>: <span class="hljs-string">"EFHD6pfzYMtqdaaytNomkhA"</span>,
+                    <span class="hljs-attr">"types"</span>: [
+                        <span class="hljs-string">"Intangible"</span>,
+                        <span class="hljs-string">"EmploymentCategory"</span>
+                    ],
+                    <span class="hljs-attr">"name"</span>: <span class="hljs-string">"Management"</span>,
+                    <span class="hljs-attr">"diffbotUri"</span>: <span class="hljs-string">"http://diffbot.com/entity/EpXGc9jmNPQW3wt-ny5SqCQ"</span>,
+                    <span class="hljs-attr">"targetDiffbotUri"</span>: <span class="hljs-string">"http://diffbot.com/entity/EpXGc9jmNPQW3wt-ny5SqCQ"</span>,
+                    <span class="hljs-attr">"targetDiffbotId"</span>: <span class="hljs-string">"EpXGc9jmNPQW3wt-ny5SqCQ"</span>,
                     <span class="hljs-attr">"type"</span>: <span class="hljs-string">"EmploymentCategory"</span>
                 }
             ],
@@ -718,13 +748,21 @@
             },
             <span class="hljs-attr">"categories"</span>: [
                 {
-                    <span class="hljs-attr">"name"</span>: <span class="hljs-string">"Management"</span>,
-                    <span class="hljs-attr">"diffbotUri"</span>: <span class="hljs-string">"http://diffbot.com/entity/EpXGc9jmNPQW3wt-ny5SqCQ"</span>,
-                    <span class="hljs-attr">"targetDiffbotUri"</span>: <span class="hljs-string">"http://diffbot.com/entity/EpXGc9jmNPQW3wt-ny5SqCQ"</span>,
-                    <span class="hljs-attr">"targetDiffbotId"</span>: <span class="hljs-string">"EpXGc9jmNPQW3wt-ny5SqCQ"</span>,
+                    <span class="hljs-attr">"types"</span>: [
+                        <span class="hljs-string">"Intangible"</span>,
+                        <span class="hljs-string">"EmploymentCategory"</span>
+                    ],
+                    <span class="hljs-attr">"name"</span>: <span class="hljs-string">"Executive"</span>,
+                    <span class="hljs-attr">"diffbotUri"</span>: <span class="hljs-string">"http://diffbot.com/entity/EFHD6pfzYMtqdaaytNomkhA"</span>,
+                    <span class="hljs-attr">"targetDiffbotUri"</span>: <span class="hljs-string">"http://diffbot.com/entity/EFHD6pfzYMtqdaaytNomkhA"</span>,
+                    <span class="hljs-attr">"targetDiffbotId"</span>: <span class="hljs-string">"EFHD6pfzYMtqdaaytNomkhA"</span>,
                     <span class="hljs-attr">"type"</span>: <span class="hljs-string">"EmploymentCategory"</span>
                 },
                 {
+                    <span class="hljs-attr">"types"</span>: [
+                        <span class="hljs-string">"Intangible"</span>,
+                        <span class="hljs-string">"EmploymentCategory"</span>
+                    ],
                     <span class="hljs-attr">"name"</span>: <span class="hljs-string">"Board Member"</span>,
                     <span class="hljs-attr">"diffbotUri"</span>: <span class="hljs-string">"http://diffbot.com/entity/EnC5drWy1NVuOGQHd2ll0xw"</span>,
                     <span class="hljs-attr">"targetDiffbotUri"</span>: <span class="hljs-string">"http://diffbot.com/entity/EnC5drWy1NVuOGQHd2ll0xw"</span>,
@@ -732,10 +770,14 @@
                     <span class="hljs-attr">"type"</span>: <span class="hljs-string">"EmploymentCategory"</span>
                 },
                 {
-                    <span class="hljs-attr">"name"</span>: <span class="hljs-string">"Executive"</span>,
-                    <span class="hljs-attr">"diffbotUri"</span>: <span class="hljs-string">"http://diffbot.com/entity/EFHD6pfzYMtqdaaytNomkhA"</span>,
-                    <span class="hljs-attr">"targetDiffbotUri"</span>: <span class="hljs-string">"http://diffbot.com/entity/EFHD6pfzYMtqdaaytNomkhA"</span>,
-                    <span class="hljs-attr">"targetDiffbotId"</span>: <span class="hljs-string">"EFHD6pfzYMtqdaaytNomkhA"</span>,
+                    <span class="hljs-attr">"types"</span>: [
+                        <span class="hljs-string">"Intangible"</span>,
+                        <span class="hljs-string">"EmploymentCategory"</span>
+                    ],
+                    <span class="hljs-attr">"name"</span>: <span class="hljs-string">"Management"</span>,
+                    <span class="hljs-attr">"diffbotUri"</span>: <span class="hljs-string">"http://diffbot.com/entity/EpXGc9jmNPQW3wt-ny5SqCQ"</span>,
+                    <span class="hljs-attr">"targetDiffbotUri"</span>: <span class="hljs-string">"http://diffbot.com/entity/EpXGc9jmNPQW3wt-ny5SqCQ"</span>,
+                    <span class="hljs-attr">"targetDiffbotId"</span>: <span class="hljs-string">"EpXGc9jmNPQW3wt-ny5SqCQ"</span>,
                     <span class="hljs-attr">"type"</span>: <span class="hljs-string">"EmploymentCategory"</span>
                 }
             ],
@@ -751,7 +793,7 @@
 <li><strong>Example:</strong></li>
 </ul>
 <pre><code class="hljs">{
-    <span class="hljs-attr">"eyeColor"</span>: <span class="hljs-string">""</span>
+    <span class="hljs-attr">"eyeColor"</span>: {}
 }
 </code></pre>
 <h3><a class="anchor" aria-hidden="true" id="facebookuri"></a><a href="#facebookuri" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>facebookUri</h3>
@@ -801,9 +843,7 @@
 <li><strong>Example:</strong></li>
 </ul>
 <pre><code class="hljs">{
-    <span class="hljs-attr">"gender"</span>: {
-        <span class="hljs-attr">"normalizedValue"</span>: <span class="hljs-string">"Male"</span>
-    }
+    <span class="hljs-attr">"gender"</span>: {}
 }
 </code></pre>
 <h3><a class="anchor" aria-hidden="true" id="githuburi"></a><a href="#githuburi" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>githubUri</h3>
@@ -833,7 +873,7 @@
 <li><strong>Example:</strong></li>
 </ul>
 <pre><code class="hljs">{
-    <span class="hljs-attr">"hairColor"</span>: <span class="hljs-string">""</span>
+    <span class="hljs-attr">"hairColor"</span>: {}
 }
 </code></pre>
 <h3><a class="anchor" aria-hidden="true" id="height"></a><a href="#height" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>height</h3>
@@ -876,15 +916,15 @@
     <span class="hljs-attr">"interests"</span>: [
         {
             <span class="hljs-attr">"recordId"</span>: <span class="hljs-string">"EEIzhzuLVPeKuQ7KjPSa6aQ@329"</span>,
-            <span class="hljs-attr">"name"</span>: <span class="hljs-string">"investing"</span>,
-            <span class="hljs-attr">"surfaceForm"</span>: <span class="hljs-string">"investing"</span>,
+            <span class="hljs-attr">"name"</span>: <span class="hljs-string">"planning"</span>,
+            <span class="hljs-attr">"surfaceForm"</span>: <span class="hljs-string">"planning"</span>,
             <span class="hljs-attr">"position"</span>: <span class="hljs-string">"personInterest"</span>,
             <span class="hljs-attr">"type"</span>: <span class="hljs-string">"Miscellaneous"</span>
         },
         {
             <span class="hljs-attr">"recordId"</span>: <span class="hljs-string">"EEIzhzuLVPeKuQ7KjPSa6aQ@330"</span>,
-            <span class="hljs-attr">"name"</span>: <span class="hljs-string">"planning"</span>,
-            <span class="hljs-attr">"surfaceForm"</span>: <span class="hljs-string">"planning"</span>,
+            <span class="hljs-attr">"name"</span>: <span class="hljs-string">"investing"</span>,
+            <span class="hljs-attr">"surfaceForm"</span>: <span class="hljs-string">"investing"</span>,
             <span class="hljs-attr">"position"</span>: <span class="hljs-string">"personInterest"</span>,
             <span class="hljs-attr">"type"</span>: <span class="hljs-string">"Miscellaneous"</span>
         },
@@ -905,7 +945,7 @@
 <li><strong>Example:</strong></li>
 </ul>
 <pre><code class="hljs">{
-    <span class="hljs-attr">"languages"</span>: []
+    <span class="hljs-attr">"languages"</span>: {}
 }
 </code></pre>
 <h3><a class="anchor" aria-hidden="true" id="linkedinuri"></a><a href="#linkedinuri" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>linkedInUri</h3>
@@ -931,7 +971,8 @@
             <span class="hljs-attr">"image"</span>: <span class="hljs-string">"https://kg.diffbot.com/image/api/get?fetch=yes&amp;url=g%3Cj7P0St0DnBJf.x0KwLZrUn.%5B%3CR0Aa4Hh%3B%5Bv738ZqOr7U%3FfvEQ%3El%601Nw%7BM0Bf7hu7z%3FRe9s4XwGXedrKUAN%28%3D%5ECHnM%60%29.%7BOV"</span>,
             <span class="hljs-attr">"types"</span>: [
                 <span class="hljs-string">"Place"</span>,
-                <span class="hljs-string">"AdministrativeArea"</span>
+                <span class="hljs-string">"AdministrativeArea"</span>,
+                <span class="hljs-string">"Country"</span>
             ],
             <span class="hljs-attr">"name"</span>: <span class="hljs-string">"United States of America"</span>,
             <span class="hljs-attr">"diffbotUri"</span>: <span class="hljs-string">"http://diffbot.com/entity/E01d4EK33MmCosgI2KXa4-A"</span>,
@@ -942,11 +983,12 @@
         <span class="hljs-attr">"isCurrent"</span>: <span class="hljs-literal">true</span>,
         <span class="hljs-attr">"address"</span>: <span class="hljs-string">"Washington, D.C."</span>,
         <span class="hljs-attr">"city"</span>: {
-            <span class="hljs-attr">"summary"</span>: <span class="hljs-string">"Capital city of the United States"</span>,
+            <span class="hljs-attr">"summary"</span>: <span class="hljs-string">"Capital city of the United States of America"</span>,
             <span class="hljs-attr">"image"</span>: <span class="hljs-string">"https://kg.diffbot.com/image/api/get?fetch=yes&amp;url=g%3Cj7P0St0DnBJf.x0KwLZrUn.%5B%3CR0Aa4Hh%3B%5Bv738ZqOr7U%3FbvAT%3ExS%7DYb%3B%60zUb%3DXSAyK_oGyzSxB%3C1%5C6DR7P.Ar4"</span>,
             <span class="hljs-attr">"types"</span>: [
                 <span class="hljs-string">"Place"</span>,
-                <span class="hljs-string">"AdministrativeArea"</span>
+                <span class="hljs-string">"AdministrativeArea"</span>,
+                <span class="hljs-string">"City"</span>
             ],
             <span class="hljs-attr">"name"</span>: <span class="hljs-string">"Washington, D.C."</span>,
             <span class="hljs-attr">"diffbotUri"</span>: <span class="hljs-string">"http://diffbot.com/entity/Ep2MLLdkjO_C-R6NA7cOlcQ"</span>,
@@ -968,11 +1010,12 @@
             <span class="hljs-attr">"type"</span>: <span class="hljs-string">"AdministrativeArea"</span>
         },
         <span class="hljs-attr">"subregion"</span>: {
-            <span class="hljs-attr">"summary"</span>: <span class="hljs-string">"Capital city of the United States"</span>,
+            <span class="hljs-attr">"summary"</span>: <span class="hljs-string">"Capital city of the United States of America"</span>,
             <span class="hljs-attr">"image"</span>: <span class="hljs-string">"https://kg.diffbot.com/image/api/get?fetch=yes&amp;url=g%3Cj7P0St0DnBJf.x0KwLZrUn.%5B%3CR0Aa4Hh%3B%5Bv738ZqOr7U%3FbvAT%3ExS%7DYb%3B%60zUb%3DXSAyK_oGyzSxB%3C1%5C6DR7P.Ar4"</span>,
             <span class="hljs-attr">"types"</span>: [
                 <span class="hljs-string">"Place"</span>,
-                <span class="hljs-string">"AdministrativeArea"</span>
+                <span class="hljs-string">"AdministrativeArea"</span>,
+                <span class="hljs-string">"City"</span>
             ],
             <span class="hljs-attr">"name"</span>: <span class="hljs-string">"Washington, D.C."</span>,
             <span class="hljs-attr">"diffbotUri"</span>: <span class="hljs-string">"http://diffbot.com/entity/Ep2MLLdkjO_C-R6NA7cOlcQ"</span>,
@@ -985,11 +1028,12 @@
         <span class="hljs-attr">"postalCode"</span>: <span class="hljs-string">"20032"</span>,
         <span class="hljs-attr">"surfaceForm"</span>: <span class="hljs-string">"Washington, District of Columbia, USA"</span>,
         <span class="hljs-attr">"region"</span>: {
-            <span class="hljs-attr">"summary"</span>: <span class="hljs-string">"Capital city of the United States"</span>,
+            <span class="hljs-attr">"summary"</span>: <span class="hljs-string">"Capital city of the United States of America"</span>,
             <span class="hljs-attr">"image"</span>: <span class="hljs-string">"https://kg.diffbot.com/image/api/get?fetch=yes&amp;url=g%3Cj7P0St0DnBJf.x0KwLZrUn.%5B%3CR0Aa4Hh%3B%5Bv738ZqOr7U%3FbvAT%3ExS%7DYb%3B%60zUb%3DXSAyK_oGyzSxB%3C1%5C6DR7P.Ar4"</span>,
             <span class="hljs-attr">"types"</span>: [
                 <span class="hljs-string">"Place"</span>,
-                <span class="hljs-string">"AdministrativeArea"</span>
+                <span class="hljs-string">"AdministrativeArea"</span>,
+                <span class="hljs-string">"City"</span>
             ],
             <span class="hljs-attr">"name"</span>: <span class="hljs-string">"Washington, D.C."</span>,
             <span class="hljs-attr">"diffbotUri"</span>: <span class="hljs-string">"http://diffbot.com/entity/Ep2MLLdkjO_C-R6NA7cOlcQ"</span>,
@@ -1015,7 +1059,8 @@
                 <span class="hljs-attr">"image"</span>: <span class="hljs-string">"https://kg.diffbot.com/image/api/get?fetch=yes&amp;url=g%3Cj7P0St0DnBJf.x0KwLZrUn.%5B%3CR0Aa4Hh%3B%5Bv738ZqOr7U%3FfvEQ%3El%601Nw%7BM0Bf7hu7z%3FRe9s4XwGXedrKUAN%28%3D%5ECHnM%60%29.%7BOV"</span>,
                 <span class="hljs-attr">"types"</span>: [
                     <span class="hljs-string">"Place"</span>,
-                    <span class="hljs-string">"AdministrativeArea"</span>
+                    <span class="hljs-string">"AdministrativeArea"</span>,
+                    <span class="hljs-string">"Country"</span>
                 ],
                 <span class="hljs-attr">"name"</span>: <span class="hljs-string">"United States of America"</span>,
                 <span class="hljs-attr">"diffbotUri"</span>: <span class="hljs-string">"http://diffbot.com/entity/E01d4EK33MmCosgI2KXa4-A"</span>,
@@ -1026,11 +1071,12 @@
             <span class="hljs-attr">"isCurrent"</span>: <span class="hljs-literal">true</span>,
             <span class="hljs-attr">"address"</span>: <span class="hljs-string">"Washington, D.C."</span>,
             <span class="hljs-attr">"city"</span>: {
-                <span class="hljs-attr">"summary"</span>: <span class="hljs-string">"Capital city of the United States"</span>,
+                <span class="hljs-attr">"summary"</span>: <span class="hljs-string">"Capital city of the United States of America"</span>,
                 <span class="hljs-attr">"image"</span>: <span class="hljs-string">"https://kg.diffbot.com/image/api/get?fetch=yes&amp;url=g%3Cj7P0St0DnBJf.x0KwLZrUn.%5B%3CR0Aa4Hh%3B%5Bv738ZqOr7U%3FbvAT%3ExS%7DYb%3B%60zUb%3DXSAyK_oGyzSxB%3C1%5C6DR7P.Ar4"</span>,
                 <span class="hljs-attr">"types"</span>: [
                     <span class="hljs-string">"Place"</span>,
-                    <span class="hljs-string">"AdministrativeArea"</span>
+                    <span class="hljs-string">"AdministrativeArea"</span>,
+                    <span class="hljs-string">"City"</span>
                 ],
                 <span class="hljs-attr">"name"</span>: <span class="hljs-string">"Washington, D.C."</span>,
                 <span class="hljs-attr">"diffbotUri"</span>: <span class="hljs-string">"http://diffbot.com/entity/Ep2MLLdkjO_C-R6NA7cOlcQ"</span>,
@@ -1052,11 +1098,12 @@
                 <span class="hljs-attr">"type"</span>: <span class="hljs-string">"AdministrativeArea"</span>
             },
             <span class="hljs-attr">"subregion"</span>: {
-                <span class="hljs-attr">"summary"</span>: <span class="hljs-string">"Capital city of the United States"</span>,
+                <span class="hljs-attr">"summary"</span>: <span class="hljs-string">"Capital city of the United States of America"</span>,
                 <span class="hljs-attr">"image"</span>: <span class="hljs-string">"https://kg.diffbot.com/image/api/get?fetch=yes&amp;url=g%3Cj7P0St0DnBJf.x0KwLZrUn.%5B%3CR0Aa4Hh%3B%5Bv738ZqOr7U%3FbvAT%3ExS%7DYb%3B%60zUb%3DXSAyK_oGyzSxB%3C1%5C6DR7P.Ar4"</span>,
                 <span class="hljs-attr">"types"</span>: [
                     <span class="hljs-string">"Place"</span>,
-                    <span class="hljs-string">"AdministrativeArea"</span>
+                    <span class="hljs-string">"AdministrativeArea"</span>,
+                    <span class="hljs-string">"City"</span>
                 ],
                 <span class="hljs-attr">"name"</span>: <span class="hljs-string">"Washington, D.C."</span>,
                 <span class="hljs-attr">"diffbotUri"</span>: <span class="hljs-string">"http://diffbot.com/entity/Ep2MLLdkjO_C-R6NA7cOlcQ"</span>,
@@ -1069,11 +1116,12 @@
             <span class="hljs-attr">"postalCode"</span>: <span class="hljs-string">"20032"</span>,
             <span class="hljs-attr">"surfaceForm"</span>: <span class="hljs-string">"Washington, District of Columbia, USA"</span>,
             <span class="hljs-attr">"region"</span>: {
-                <span class="hljs-attr">"summary"</span>: <span class="hljs-string">"Capital city of the United States"</span>,
+                <span class="hljs-attr">"summary"</span>: <span class="hljs-string">"Capital city of the United States of America"</span>,
                 <span class="hljs-attr">"image"</span>: <span class="hljs-string">"https://kg.diffbot.com/image/api/get?fetch=yes&amp;url=g%3Cj7P0St0DnBJf.x0KwLZrUn.%5B%3CR0Aa4Hh%3B%5Bv738ZqOr7U%3FbvAT%3ExS%7DYb%3B%60zUb%3DXSAyK_oGyzSxB%3C1%5C6DR7P.Ar4"</span>,
                 <span class="hljs-attr">"types"</span>: [
                     <span class="hljs-string">"Place"</span>,
-                    <span class="hljs-string">"AdministrativeArea"</span>
+                    <span class="hljs-string">"AdministrativeArea"</span>,
+                    <span class="hljs-string">"City"</span>
                 ],
                 <span class="hljs-attr">"name"</span>: <span class="hljs-string">"Washington, D.C."</span>,
                 <span class="hljs-attr">"diffbotUri"</span>: <span class="hljs-string">"http://diffbot.com/entity/Ep2MLLdkjO_C-R6NA7cOlcQ"</span>,
@@ -1089,7 +1137,8 @@
                 <span class="hljs-attr">"image"</span>: <span class="hljs-string">"https://kg.diffbot.com/image/api/get?fetch=yes&amp;url=g%3Cj7P0St0DnBJf.x0KwLZrUn.%5B%3CR0Aa4Hh%3B%5Bv738ZqOr7U%3FfvEQ%3El%601Nw%7BM0Bf7hu7z%3FRe9s4XwGXedrKUAN%28%3D%5ECHnM%60%29.%7BOV"</span>,
                 <span class="hljs-attr">"types"</span>: [
                     <span class="hljs-string">"Place"</span>,
-                    <span class="hljs-string">"AdministrativeArea"</span>
+                    <span class="hljs-string">"AdministrativeArea"</span>,
+                    <span class="hljs-string">"Country"</span>
                 ],
                 <span class="hljs-attr">"name"</span>: <span class="hljs-string">"United States of America"</span>,
                 <span class="hljs-attr">"diffbotUri"</span>: <span class="hljs-string">"http://diffbot.com/entity/E01d4EK33MmCosgI2KXa4-A"</span>,
@@ -1104,7 +1153,8 @@
                 <span class="hljs-attr">"image"</span>: <span class="hljs-string">"https://kg.diffbot.com/image/api/get?fetch=yes&amp;url=g%3Cj7P0St0DnBJf.x0KwLZrUn.%5B%3CR0Aa4Hh%3B%5Bv738ZqOr7U%3FCvrv%3ExO%3ALE1l9Bl%3Cb%7DGej%5C%7BRyDCUDe%7BV0I%5E7Pdgj0RnJj3%3B%7C%3ESgGu1EiSd2U2Kb%3FchDc3D_NbtOi%7DVnTj%3DL9FE%2F%5B%7DG%5D9%5B%7D7d.ZvE"</span>,
                 <span class="hljs-attr">"types"</span>: [
                     <span class="hljs-string">"Place"</span>,
-                    <span class="hljs-string">"AdministrativeArea"</span>
+                    <span class="hljs-string">"AdministrativeArea"</span>,
+                    <span class="hljs-string">"City"</span>
                 ],
                 <span class="hljs-attr">"name"</span>: <span class="hljs-string">"Redlands"</span>,
                 <span class="hljs-attr">"diffbotUri"</span>: <span class="hljs-string">"http://diffbot.com/entity/EEGqoBftsOZyh3_RKbQE3mw"</span>,
@@ -1134,7 +1184,8 @@
                 <span class="hljs-attr">"image"</span>: <span class="hljs-string">"https://kg.diffbot.com/image/api/get?fetch=yes&amp;url=g%3Cj7P0St0DnBJf.x0KwLZrUn.%5B%3CR0Aa4Hh%3B%5Bv738ZqOr7U%3Fav%40T%3ExS%7DYb%3B%60zt%5BDbuGxEVg.xAK"</span>,
                 <span class="hljs-attr">"types"</span>: [
                     <span class="hljs-string">"Place"</span>,
-                    <span class="hljs-string">"AdministrativeArea"</span>
+                    <span class="hljs-string">"AdministrativeArea"</span>,
+                    <span class="hljs-string">"Region"</span>
                 ],
                 <span class="hljs-attr">"name"</span>: <span class="hljs-string">"California"</span>,
                 <span class="hljs-attr">"diffbotUri"</span>: <span class="hljs-string">"http://diffbot.com/entity/El0_8ehooNxOPT36Y4RdV9w"</span>,
@@ -1150,7 +1201,8 @@
                 <span class="hljs-attr">"image"</span>: <span class="hljs-string">"https://kg.diffbot.com/image/api/get?fetch=yes&amp;url=g%3Cj7P0St0DnBJf.x0KwLZrUn.%5B%3CR0Aa4Hh%3B%5Bv738ZqOr7U%3FfvEQ%3El%601Nw%7BM0Bf7hu7z%3FRe9s4XwGXedrKUAN%28%3D%5ECHnM%60%29.%7BOV"</span>,
                 <span class="hljs-attr">"types"</span>: [
                     <span class="hljs-string">"Place"</span>,
-                    <span class="hljs-string">"AdministrativeArea"</span>
+                    <span class="hljs-string">"AdministrativeArea"</span>,
+                    <span class="hljs-string">"Country"</span>
                 ],
                 <span class="hljs-attr">"name"</span>: <span class="hljs-string">"United States of America"</span>,
                 <span class="hljs-attr">"diffbotUri"</span>: <span class="hljs-string">"http://diffbot.com/entity/E01d4EK33MmCosgI2KXa4-A"</span>,
@@ -1165,7 +1217,8 @@
                 <span class="hljs-attr">"image"</span>: <span class="hljs-string">"https://kg.diffbot.com/image/api/get?fetch=yes&amp;url=g%3Cj7P0St0DnBJf.x0KwLZrUn.%5B%3CR0Aa4Hh%3B%5Bv738ZqOr7U%3Fav%40s%3EhO9Ou5%5E2FYEZn%40o%3EUrMl3X.Sgy"</span>,
                 <span class="hljs-attr">"types"</span>: [
                     <span class="hljs-string">"Place"</span>,
-                    <span class="hljs-string">"AdministrativeArea"</span>
+                    <span class="hljs-string">"AdministrativeArea"</span>,
+                    <span class="hljs-string">"City"</span>
                 ],
                 <span class="hljs-attr">"name"</span>: <span class="hljs-string">"Cambridge"</span>,
                 <span class="hljs-attr">"diffbotUri"</span>: <span class="hljs-string">"http://diffbot.com/entity/EKtEQ-seQOfuiSDMTnvM9tA"</span>,
@@ -1190,7 +1243,8 @@
                 <span class="hljs-attr">"image"</span>: <span class="hljs-string">"https://kg.diffbot.com/image/api/get?fetch=yes&amp;url=g%3Cj7P0St0DnBJf.x0KwLZrUn.%5B%3CR0Aa4Hh%3B%5Bv738ZqOr7U%3FcvBQ%3ErO%3CLr2YhBmKZr%40%7BJRzXxzL%7BJa%7EYx%3Fd7%5Dl%7DI6G%60F%604%3F082w%5BuA_.Xq%7B"</span>,
                 <span class="hljs-attr">"types"</span>: [
                     <span class="hljs-string">"Place"</span>,
-                    <span class="hljs-string">"AdministrativeArea"</span>
+                    <span class="hljs-string">"AdministrativeArea"</span>,
+                    <span class="hljs-string">"Subregion"</span>
                 ],
                 <span class="hljs-attr">"name"</span>: <span class="hljs-string">"Middlesex County"</span>,
                 <span class="hljs-attr">"diffbotUri"</span>: <span class="hljs-string">"http://diffbot.com/entity/EfTXOkq9_P2GytZP4wTfK1g"</span>,
@@ -1207,7 +1261,8 @@
                 <span class="hljs-attr">"image"</span>: <span class="hljs-string">"https://kg.diffbot.com/image/api/get?fetch=yes&amp;url=g%3Cj7P0St0DnBJf.x0KwLZrUn.%5B%3CR0Aa4Hh%3B%5Bv738ZqOr7U%3FivHp%3ExS%7DYb%3B%60z%7E%5BKlp%3BnL%60kXy%3E.5Y%60"</span>,
                 <span class="hljs-attr">"types"</span>: [
                     <span class="hljs-string">"Place"</span>,
-                    <span class="hljs-string">"AdministrativeArea"</span>
+                    <span class="hljs-string">"AdministrativeArea"</span>,
+                    <span class="hljs-string">"Region"</span>
                 ],
                 <span class="hljs-attr">"name"</span>: <span class="hljs-string">"Massachusetts"</span>,
                 <span class="hljs-attr">"diffbotUri"</span>: <span class="hljs-string">"http://diffbot.com/entity/E0VAbhEeRNsSvhHIpmhd3Xw"</span>,
@@ -1369,7 +1424,7 @@
 <li><strong>Example:</strong></li>
 </ul>
 <pre><code class="hljs">{
-    <span class="hljs-attr">"religion"</span>: <span class="hljs-string">""</span>
+    <span class="hljs-attr">"religion"</span>: {}
 }
 </code></pre>
 <h3><a class="anchor" aria-hidden="true" id="siblings"></a><a href="#siblings" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>siblings</h3>
@@ -1411,25 +1466,25 @@
 <pre><code class="hljs">{
     <span class="hljs-attr">"skills"</span>: [
         {
-            <span class="hljs-attr">"name"</span>: <span class="hljs-string">"investment"</span>,
-            <span class="hljs-attr">"diffbotUri"</span>: <span class="hljs-string">"http://diffbot.com/entity/Emyrk4p-WOvGnIkgRO_yaGA"</span>,
-            <span class="hljs-attr">"targetDiffbotUri"</span>: <span class="hljs-string">"http://diffbot.com/entity/Emyrk4p-WOvGnIkgRO_yaGA"</span>,
-            <span class="hljs-attr">"targetDiffbotId"</span>: <span class="hljs-string">"Emyrk4p-WOvGnIkgRO_yaGA"</span>,
-            <span class="hljs-attr">"surfaceForm"</span>: <span class="hljs-string">"investment"</span>
+            <span class="hljs-attr">"name"</span>: <span class="hljs-string">"human resource management"</span>,
+            <span class="hljs-attr">"diffbotUri"</span>: <span class="hljs-string">"http://diffbot.com/entity/EGbsKlNBiP2C24W80rbtTOg"</span>,
+            <span class="hljs-attr">"targetDiffbotUri"</span>: <span class="hljs-string">"http://diffbot.com/entity/EGbsKlNBiP2C24W80rbtTOg"</span>,
+            <span class="hljs-attr">"targetDiffbotId"</span>: <span class="hljs-string">"EGbsKlNBiP2C24W80rbtTOg"</span>,
+            <span class="hljs-attr">"surfaceForm"</span>: <span class="hljs-string">"human resource management"</span>
         },
         {
-            <span class="hljs-attr">"name"</span>: <span class="hljs-string">"economics"</span>,
-            <span class="hljs-attr">"diffbotUri"</span>: <span class="hljs-string">"http://diffbot.com/entity/EoQMvZcJoP42rI4Eo0Avfdg"</span>,
-            <span class="hljs-attr">"targetDiffbotUri"</span>: <span class="hljs-string">"http://diffbot.com/entity/EoQMvZcJoP42rI4Eo0Avfdg"</span>,
-            <span class="hljs-attr">"targetDiffbotId"</span>: <span class="hljs-string">"EoQMvZcJoP42rI4Eo0Avfdg"</span>,
-            <span class="hljs-attr">"surfaceForm"</span>: <span class="hljs-string">"economics"</span>
+            <span class="hljs-attr">"name"</span>: <span class="hljs-string">"mergers and acquisitions"</span>,
+            <span class="hljs-attr">"diffbotUri"</span>: <span class="hljs-string">"http://diffbot.com/entity/EpSY71sAqMYa9H4C3CNXJ2A"</span>,
+            <span class="hljs-attr">"targetDiffbotUri"</span>: <span class="hljs-string">"http://diffbot.com/entity/EpSY71sAqMYa9H4C3CNXJ2A"</span>,
+            <span class="hljs-attr">"targetDiffbotId"</span>: <span class="hljs-string">"EpSY71sAqMYa9H4C3CNXJ2A"</span>,
+            <span class="hljs-attr">"surfaceForm"</span>: <span class="hljs-string">"mergers and acquisitions"</span>
         },
         {
-            <span class="hljs-attr">"name"</span>: <span class="hljs-string">"teaching"</span>,
-            <span class="hljs-attr">"diffbotUri"</span>: <span class="hljs-string">"http://diffbot.com/entity/Ez8ugmNmEN3mp_4eMLqGSsA"</span>,
-            <span class="hljs-attr">"targetDiffbotUri"</span>: <span class="hljs-string">"http://diffbot.com/entity/Ez8ugmNmEN3mp_4eMLqGSsA"</span>,
-            <span class="hljs-attr">"targetDiffbotId"</span>: <span class="hljs-string">"Ez8ugmNmEN3mp_4eMLqGSsA"</span>,
-            <span class="hljs-attr">"surfaceForm"</span>: <span class="hljs-string">"teaching"</span>
+            <span class="hljs-attr">"name"</span>: <span class="hljs-string">"supply chain management"</span>,
+            <span class="hljs-attr">"diffbotUri"</span>: <span class="hljs-string">"http://diffbot.com/entity/EvglNgl2jNCyhiMhRpVH9JA"</span>,
+            <span class="hljs-attr">"targetDiffbotUri"</span>: <span class="hljs-string">"http://diffbot.com/entity/EvglNgl2jNCyhiMhRpVH9JA"</span>,
+            <span class="hljs-attr">"targetDiffbotId"</span>: <span class="hljs-string">"EvglNgl2jNCyhiMhRpVH9JA"</span>,
+            <span class="hljs-attr">"surfaceForm"</span>: <span class="hljs-string">"supply chain management"</span>
         }
     ]
 }
