@@ -1,11 +1,14 @@
 ---
 id: kg-ont-image
 title: Image
+generatedBy: generateOntology.js
 ---
 
 The Image entity type encompasses images found throughout the web and known to the Knowledge Graph. 
 
 Note that fields are not guaranteed to exist in every entity record.
+
+For convenience, a complete ontology source in JSON format is also [available here](https://kg.diffbot.com/kg/ontology).
 
 >New to the Diffbot Knowledge Graph? [Start here](dql-quickstart).
 

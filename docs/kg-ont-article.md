@@ -1,11 +1,14 @@
 ---
 id: kg-ont-article
 title: Article
+generatedBy: generateOntology.js
 ---
 
 The article entity type encompasses news, blog posts, and article content known to the Knowledge Graph. 
 
 Note that fields are not guaranteed to exist in every entity record.
+
+For convenience, a complete ontology source in JSON format is also [available here](https://kg.diffbot.com/kg/ontology).
 
 >New to the Diffbot Knowledge Graph? [Start here](dql-quickstart).
 
@@ -13,6 +16,7 @@ Note that fields are not guaranteed to exist in every entity record.
 * [author](#author) 
 * [authorUrl](#authorurl) 
 * [breadcrumb](#breadcrumb) 
+* [categories](#categories) 
 * [date](#date) 
 * [discussion](#discussion) 
 * [estimatedDate](#estimateddate) 
@@ -64,6 +68,21 @@ Note that certain longer field examples may be truncated for readability.
 		{
 			"link": "",
 			"name": ""
+		}
+	]
+}
+```
+### categories
+  
+* **Type:** ArticleCategory
+* **Example:**
+```
+{
+	"categories": [
+		{
+			"score": "",
+			"name": "",
+			"id": ""
 		}
 	]
 }

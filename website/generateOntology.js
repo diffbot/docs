@@ -17,8 +17,8 @@ let fs = require("fs");
 let { render } = require("mustache");
 const axios = require("axios");
 
-// Delete this
-const DIFFBOTTOKEN = ""
+let args = process.argv.slice(2);
+const DIFFBOTTOKEN = args[0] ? args[0] : "";
 
 // Template helpers
 const templateHelpers = {
@@ -34,7 +34,7 @@ var entityTypes = {
     DiffbotEntity: { 
         title: "All",
         id: "kg-ont-diffbotentity",
-        description: "All Knowledge Graph entities will include the fields below, which are often generalized, linking, or metadata attributes common to all records. \n\nSee the left navigation panel for fields and attributes for specific entities,",
+        description: "All Knowledge Graph entities will include the fields below, which are often generalized, linking, or metadata attributes common to all records. \n\nSee the left navigation panel for fields and attributes of specific entities.",
         helpers: templateHelpers
     },
     Article: { 

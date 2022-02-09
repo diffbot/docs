@@ -1,27 +1,37 @@
 ---
 id: kg-ont-organization
 title: Organization
+generatedBy: generateOntology.js
 ---
 
 The organization entity type encompasses corporations, local businesses, non-profits, and other organizations known to the Knowledge Graph. 
 
 Note that fields are not guaranteed to exist in every entity record.
 
+For convenience, a complete ontology source in JSON format is also [available here](https://kg.diffbot.com/kg/ontology).
+
 >New to the Diffbot Knowledge Graph? [Start here](dql-quickstart).
 
 ## Organization Fields
+* [abnNumbers](#abnnumbers) 
+* [acnNumbers](#acnnumbers) 
 * [acquiredBy](#acquiredby) 
 * [angellistUri](#angellisturi) 
 * [anzSicClassification](#anzsicclassification) 
 * [blogUri](#bloguri) 
 * [boardMembers](#boardmembers) 
 * [brands](#brands) 
+* [canadianBusinessNumbers](#canadianbusinessnumbers) 
 * [capitalization](#capitalization) 
 * [categories](#categories) 
 * [ceo](#ceo) 
+* [chineseSocialCreditCodes](#chinesesocialcreditcodes) 
 * [companiesHouseIds](#companieshouseids) 
 * [crunchbaseUri](#crunchbaseuri) 
+* [cuitNumbers](#cuitnumbers) 
+* [customers](#customers) 
 * [descriptors](#descriptors) 
+* [edrpouNumbers](#edrpounumbers) 
 * [facebookUri](#facebookuri) 
 * [founders](#founders) 
 * [foundingDate](#foundingdate) 
@@ -40,6 +50,7 @@ Note that fields are not guaranteed to exist in every entity record.
 * [isNonProfit](#isnonprofit) 
 * [isPublic](#ispublic) 
 * [japaneseCorporateNumbers](#japanesecorporatenumbers) 
+* [kvedClassification](#kvedclassification) 
 * [leadership](#leadership) 
 * [linkedInUri](#linkedinuri) 
 * [location](#location) 
@@ -71,6 +82,7 @@ Note that fields are not guaranteed to exist in every entity record.
 * [russianTaxpayerIdentificationNumbers](#russiantaxpayeridentificationnumbers) 
 * [secCentralIndexKeys](#seccentralindexkeys) 
 * [secForms](#secforms) 
+* [sepaIds](#sepaids) 
 * [sicClassification](#sicclassification) 
 * [sicCode](#siccode) 
 * [sicCodeDescription](#siccodedescription) 
@@ -79,9 +91,13 @@ Note that fields are not guaranteed to exist in every entity record.
 * [stock](#stock) 
 * [subsidiaries](#subsidiaries) 
 * [successors](#successors) 
+* [suppliers](#suppliers) 
 * [technographics](#technographics) 
+* [thaiTaxpayerIds](#thaitaxpayerids) 
 * [totalInvestment](#totalinvestment) 
+* [tsicClassification](#tsicclassification) 
 * [twitterUri](#twitteruri) 
+* [uenNumbers](#uennumbers) 
 * [ukSicClassification](#uksicclassification) 
 * [vatIdentificationNumbers](#vatidentificationnumbers) 
 * [wikipediaUri](#wikipediauri) 
@@ -90,6 +106,24 @@ Note that fields are not guaranteed to exist in every entity record.
 ## Organization Field Details
 Note that certain longer field examples may be truncated for readability.
 
+### abnNumbers
+  Australian Business Number (ABN) is a unique identifier provided by Australian Business Register (ABR).
+* **Type:** String
+* **Example:**
+```
+{
+	"abnNumbers": ""
+}
+```
+### acnNumbers
+  Australian Company Number (ACN) is a unique identifier given to all Australian companies.
+* **Type:** String
+* **Example:**
+```
+{
+	"acnNumbers": ""
+}
+```
 ### acquiredBy
   The organization that has most recently acquired this organization.
 * **Type:** LinkedEntity
@@ -174,29 +208,28 @@ Note that certain longer field examples may be truncated for readability.
 			"type": "Person"
 		},
 		{
-			"summary": "American business executive",
-			"image": "https://kg.diffbot.com/image/api/get?fetch=yes&url=g%3Cj7P0St%7D9u.LnOv%7BI%7C%40g7.pBYINs%3Ff%7CGZ7jr-tGZhWf%3DK%2FOvy%5Bp%3CSKbs8i%7CEyNzC%60%3B%5Bv%3Ci6Lc%7Bhs%3Ac5Ii%40W%7DVjN%5D4bnrC.I%5Do",
+			"summary": "Chairman at IBM Retirement Funds",
+			"image": "https://kg.diffbot.com/image/api/get?fetch=yes&url=g%3Cj7P0St%7D9u.LnOv%7BI%7C%40g7.pBYINs%3Ff%7CGZ7jr-tGZhWf%3DK%2FOvy%5Bp%3CSKbs8i%7CEyNzC%5D%3F%5Bo%3Ag%3EPc%7Dg_9p%3AGw4hg%3Dk7fdMdtS.C_o",
 			"types": [
 				"Person"
 			],
-			"name": "Ginni Rometty",
-			"diffbotUri": "http://diffbot.com/entity/EFCXA8DGjPMq5oTjl9RESEw",
-			"targetDiffbotUri": "http://diffbot.com/entity/EFCXA8DGjPMq5oTjl9RESEw",
-			"targetDiffbotId": "EFCXA8DGjPMq5oTjl9RESEw",
-			"surfaceForm": "Ginni Rometty",
+			"name": "David Farr",
+			"diffbotUri": "http://diffbot.com/entity/ER3tuAKIoMBq05xKDDZr6DQ",
+			"targetDiffbotUri": "http://diffbot.com/entity/ER3tuAKIoMBq05xKDDZr6DQ",
+			"targetDiffbotId": "ER3tuAKIoMBq05xKDDZr6DQ",
+			"surfaceForm": "David Farr",
 			"type": "Person"
 		},
 		{
-			"summary": "American banker",
-			"image": "https://kg.diffbot.com/image/api/get?fetch=yes&url=g%3Cj7P0St0DnBJf.x0KwLZrUn.%5B%3CR0Aa4Hh%3B%5Bv738ZqOr7U%3FjvIs%3ElO%3Efb_i3OY9mnzk%3EVuRf7C_H%5D%7BQpkQGN%281n%3CSl%3F_%29.xGV",
+			"summary": "CEO",
 			"types": [
 				"Person"
 			],
-			"name": "Gary Cohn",
-			"diffbotUri": "http://diffbot.com/entity/EpEweymvaM0ug7Y-pCJBB3w",
-			"targetDiffbotUri": "http://diffbot.com/entity/EpEweymvaM0ug7Y-pCJBB3w",
-			"targetDiffbotId": "EpEweymvaM0ug7Y-pCJBB3w",
-			"surfaceForm": "Gary Cohn",
+			"name": "Michael Eskew",
+			"diffbotUri": "http://diffbot.com/entity/EOtRcekZPNmmUcf20y3uv6g",
+			"targetDiffbotUri": "http://diffbot.com/entity/EOtRcekZPNmmUcf20y3uv6g",
+			"targetDiffbotId": "EOtRcekZPNmmUcf20y3uv6g",
+			"surfaceForm": "Michael Eskew",
 			"type": "Person"
 		}
 	]
@@ -211,6 +244,15 @@ Note that certain longer field examples may be truncated for readability.
 	"brands": ""
 }
 ```
+### canadianBusinessNumbers
+  Canadian business number is an identifier given to all businesses in Canada.
+* **Type:** String
+* **Example:**
+```
+{
+	"canadianBusinessNumbers": ""
+}
+```
 ### capitalization
   Total market value of all outstanding shares of an organization.
 * **Type:** Amount
@@ -219,7 +261,7 @@ Note that certain longer field examples may be truncated for readability.
 {
 	"capitalization": {
 		"currency": "USD",
-		"value": 112935797000
+		"value": 124485100000
 	}
 }
 ```
@@ -290,6 +332,15 @@ Note that certain longer field examples may be truncated for readability.
 	}
 }
 ```
+### chineseSocialCreditCodes
+  Chinese social credit code.
+* **Type:** String
+* **Example:**
+```
+{
+	"chineseSocialCreditCodes": ""
+}
+```
 ### companiesHouseIds
   Identifier assigned by the U.K. Companies House.
 * **Type:** String
@@ -308,6 +359,55 @@ Note that certain longer field examples may be truncated for readability.
 	"crunchbaseUri": "crunchbase.com/organization/ibm"
 }
 ```
+### cuitNumbers
+  CUIT is a unique taxpayer identifier in Argentina.
+* **Type:** String
+* **Example:**
+```
+{
+	"cuitNumbers": ""
+}
+```
+### customers
+  Current customers of this organization.
+* **Type:** LinkedEntity
+* **Example:**
+```
+{
+	"customers": [
+		{
+			"recordId": "EPdsrDmLiMQCskvBLp_dloQ@1050",
+			"name": "Baseline Telematics",
+			"websiteUris": [
+				"wikidata.org/entity/Q3632283"
+			],
+			"surfaceForm": "Baseline Telematics",
+			"position": "companyCustomersCompany",
+			"type": "Organization"
+		},
+		{
+			"recordId": "EPdsrDmLiMQCskvBLp_dloQ@629",
+			"name": "United States Tennis Association (USTA)",
+			"websiteUris": [
+				"wikidata.org/entity/Q815369"
+			],
+			"surfaceForm": "United States Tennis Association (USTA)",
+			"position": "companyCustomersCompany",
+			"type": "Organization"
+		},
+		{
+			"recordId": "EPdsrDmLiMQCskvBLp_dloQ@897",
+			"name": "Korean Air Lines Co. Ltd",
+			"websiteUris": [
+				"wikidata.org/entity/Q188920"
+			],
+			"surfaceForm": "Korean Air Lines Co. Ltd",
+			"position": "companyCustomersCompany",
+			"type": "Organization"
+		}
+	]
+}
+```
 ### descriptors
   
 * **Type:** String
@@ -315,10 +415,19 @@ Note that certain longer field examples may be truncated for readability.
 ```
 {
 	"descriptors": [
-		"computer and office equipment",
+		"computer manufacturing",
 		"data storage systems manufacturing",
 		"computer peripheral equipment manufacturing"
 	]
+}
+```
+### edrpouNumbers
+  Ukrainian state registry legal entity identifier (EDRPOU).
+* **Type:** String
+* **Example:**
+```
+{
+	"edrpouNumbers": ""
 }
 ```
 ### facebookUri
@@ -520,8 +629,8 @@ Note that certain longer field examples may be truncated for readability.
 ```
 {
 	"irsEmployerIdentificationNumbers": [
-		"13-0871985",
-		"130871985"
+		"130871985",
+		"13-0871985"
 	]
 }
 ```
@@ -568,6 +677,22 @@ Note that certain longer field examples may be truncated for readability.
 ```
 {
 	"japaneseCorporateNumbers": ""
+}
+```
+### kvedClassification
+  Ukrainian Economic Activities Classification System code (KVED).
+* **Type:** ClassificationCode
+* **Example:**
+```
+{
+	"kvedClassification": [
+		{
+			"code": "",
+			"isPrimary": false,
+			"name": "",
+			"version": ""
+		}
+	]
 }
 ```
 ### leadership
@@ -655,7 +780,8 @@ Note that certain longer field examples may be truncated for readability.
 			"image": "https://kg.diffbot.com/image/api/get?fetch=yes&url=g%3Cj7P0St0DnBJf.x0KwLZrUn.%5B%3CR0Aa4Hh%3B%5Bv738ZqOr7U%3FfvEQ%3El%601Nw%7BM0Bf7hu7z%3FRe9s4XwGXedrKUAN%28%3D%5ECHnM%60%29.%7BOV",
 			"types": [
 				"Place",
-				"AdministrativeArea"
+				"AdministrativeArea",
+				"Country"
 			],
 			"name": "United States of America",
 			"diffbotUri": "http://diffbot.com/entity/E01d4EK33MmCosgI2KXa4-A",
@@ -688,7 +814,8 @@ Note that certain longer field examples may be truncated for readability.
 			"image": "https://kg.diffbot.com/image/api/get?fetch=yes&url=g%3Cj7P0St0DnBJf.x0KwLZrUn.%5B%3CR0Aa4Hh%3B%5Bv738ZqOr7U%3FevDp%3EsGo0d%3Cc%3FPfxZ%7DGx8Zg.o%3BK",
 			"types": [
 				"Place",
-				"AdministrativeArea"
+				"AdministrativeArea",
+				"Region"
 			],
 			"name": "New York",
 			"diffbotUri": "http://diffbot.com/entity/E1NxI_KXaMbiP5g2aM9MRdw",
@@ -713,7 +840,8 @@ Note that certain longer field examples may be truncated for readability.
 				"image": "https://kg.diffbot.com/image/api/get?fetch=yes&url=g%3Cj7P0St0DnBJf.x0KwLZrUn.%5B%3CR0Aa4Hh%3B%5Bv738ZqOr7U%3FfvEQ%3El%601Nw%7BM0Bf7hu7z%3FRe9s4XwGXedrKUAN%28%3D%5ECHnM%60%29.%7BOV",
 				"types": [
 					"Place",
-					"AdministrativeArea"
+					"AdministrativeArea",
+					"Country"
 				],
 				"name": "United States of America",
 				"diffbotUri": "http://diffbot.com/entity/E01d4EK33MmCosgI2KXa4-A",
@@ -771,7 +899,8 @@ Note that certain longer field examples may be truncated for readability.
 				"image": "https://kg.diffbot.com/image/api/get?fetch=yes&url=g%3Cj7P0St0DnBJf.x0KwLZrUn.%5B%3CR0Aa4Hh%3B%5Bv738ZqOr7U%3FevDp%3EsGo0d%3Cc%3FPfxZ%7DGx8Zg.o%3BK",
 				"types": [
 					"Place",
-					"AdministrativeArea"
+					"AdministrativeArea",
+					"Region"
 				],
 				"name": "New York",
 				"diffbotUri": "http://diffbot.com/entity/E1NxI_KXaMbiP5g2aM9MRdw",
@@ -787,7 +916,8 @@ Note that certain longer field examples may be truncated for readability.
 				"image": "https://kg.diffbot.com/image/api/get?fetch=yes&url=g%3Cj7P0St0DnBJf.x0KwLZrUn.%5B%3CR0Aa4Hh%3B%5Bv738ZqOr7U%3FfvEQ%3El%601Nw%7BM0Bf7hu7z%3FRe9s4XwGXedrKUAN%28%3D%5ECHnM%60%29.%7BOV",
 				"types": [
 					"Place",
-					"AdministrativeArea"
+					"AdministrativeArea",
+					"Country"
 				],
 				"name": "United States of America",
 				"diffbotUri": "http://diffbot.com/entity/E01d4EK33MmCosgI2KXa4-A",
@@ -844,7 +974,8 @@ Note that certain longer field examples may be truncated for readability.
 				"image": "https://kg.diffbot.com/image/api/get?fetch=yes&url=g%3Cj7P0St0DnBJf.x0KwLZrUn.%5B%3CR0Aa4Hh%3B%5Bv738ZqOr7U%3FevDp%3EsGo0d%3Cc%3FPfxZ%7DGx8Zg.o%3BK",
 				"types": [
 					"Place",
-					"AdministrativeArea"
+					"AdministrativeArea",
+					"Region"
 				],
 				"name": "New York",
 				"diffbotUri": "http://diffbot.com/entity/E1NxI_KXaMbiP5g2aM9MRdw",
@@ -860,7 +991,8 @@ Note that certain longer field examples may be truncated for readability.
 				"image": "https://kg.diffbot.com/image/api/get?fetch=yes&url=g%3Cj7P0St0DnBJf.x0KwLZrUn.%5B%3CR0Aa4Hh%3B%5Bv738ZqOr7U%3FfvEQ%3El%601Nw%7BM0Bf7hu7z%3FRe9s4XwGXedrKUAN%28%3D%5ECHnM%60%29.%7BOV",
 				"types": [
 					"Place",
-					"AdministrativeArea"
+					"AdministrativeArea",
+					"Country"
 				],
 				"name": "United States of America",
 				"diffbotUri": "http://diffbot.com/entity/E01d4EK33MmCosgI2KXa4-A",
@@ -926,7 +1058,7 @@ Note that certain longer field examples may be truncated for readability.
 * **Example:**
 ```
 {
-	"motto": "We're using technologies like AI, cloud, blockchain and IoT to help our clients transform their industries."
+	"motto": ""
 }
 ```
 ### naceClassification
@@ -992,7 +1124,7 @@ Note that certain longer field examples may be truncated for readability.
 * **Example:**
 ```
 {
-	"nbActiveEmployeeEdges": 162466
+	"nbActiveEmployeeEdges": 125909
 }
 ```
 ### nbEmployeeRanges
@@ -1069,7 +1201,7 @@ Note that certain longer field examples may be truncated for readability.
 * **Example:**
 ```
 {
-	"nbLocations": 47
+	"nbLocations": 7
 }
 ```
 ### nbUniqueInvestors
@@ -1275,8 +1407,8 @@ Note that certain longer field examples may be truncated for readability.
 ```
 {
 	"secCentralIndexKeys": [
-		"0000051143",
-		"51143"
+		"51143",
+		"0000051143"
 	]
 }
 ```
@@ -1333,6 +1465,15 @@ Note that certain longer field examples may be truncated for readability.
 			"filingUrl": "https://www.sec.gov/Archives/edgar/data/51143/000155837019006914/0001558370-19-006914-index.htm"
 		}
 	]
+}
+```
+### sepaIds
+  Single Euro Payments Area (SEPA) Identifier is given to European organizations located in Euro zone.
+* **Type:** String
+* **Example:**
+```
+{
+	"sepaIds": ""
 }
 ```
 ### sicClassification
@@ -1438,16 +1579,16 @@ Note that certain longer field examples may be truncated for readability.
 		},
 		{
 			"summary": "American multinational software company",
-			"image": "https://kg.diffbot.com/image/api/get?fetch=yes&url=g%3Cj7P0St0DnBJf.x0KwLZrUn.%5B%3CR0Aa4Hh%3B%5Bv73%3AY3i2Pk%3F3%5CtMW6b%7B9r3izczY2.K%7C%3E",
+			"image": "https://kg.diffbot.com/image/api/get?fetch=yes&url=g%3Cj7P0St0DnBJf.x0KwLZrUn.%5B%3CR0Aa4Hh%3B%5Bv738ZqOr7U%3FhvGt%3Er%5D0Vi5_%2F%40L%3D%5DnpgKL8d6TC%7ER%601O8%40d6%5EzB%5BcH%60Imr9p%3Ac.Y%7D4",
 			"types": [
 				"Organization",
 				"Corporation"
 			],
-			"name": "Red Hat, Inc.",
+			"name": "RED HAT INC",
 			"diffbotUri": "http://diffbot.com/entity/EIATbb7uwOhSYiGqLBPUD0w",
 			"targetDiffbotUri": "http://diffbot.com/entity/EIATbb7uwOhSYiGqLBPUD0w",
 			"targetDiffbotId": "EIATbb7uwOhSYiGqLBPUD0w",
-			"surfaceForm": "Red Hat, Inc.",
+			"surfaceForm": "RED HAT INC",
 			"type": "Corporation"
 		},
 		{
@@ -1495,6 +1636,35 @@ Note that certain longer field examples may be truncated for readability.
 	]
 }
 ```
+### suppliers
+  Current suppliers of this organization.
+* **Type:** LinkedEntity
+* **Example:**
+```
+{
+	"suppliers": [
+		{
+			"summary": "",
+			"image": "",
+			"images": [
+				{
+					"classifications": "",
+					"fingerprint": "",
+					"title": "",
+					"isCached": false,
+					"url": ""
+				}
+			],
+			"types": "",
+			"websiteUris": "",
+			"diffbotUri": "",
+			"name": "",
+			"targetDiffbotUri": "",
+			"surfaceForm": ""
+		}
+	]
+}
+```
 ### technographics
   
 * **Type:** Technographics
@@ -1504,14 +1674,59 @@ Note that certain longer field examples may be truncated for readability.
 	"technographics": [
 		{
 			"technology": {
-				"recordId": "EPdsrDmLiMQCskvBLp_dloQ@735",
-				"name": "salesforce",
-				"surfaceForm": "salesforce",
+				"recordId": "EPdsrDmLiMQCskvBLp_dloQ@2099",
+				"name": "React",
+				"websiteUris": [
+					"reactjs.org"
+				],
+				"surfaceForm": "React",
 				"position": "companyTechnographicsTechnology",
 				"type": "DiffbotEntity"
-			}
+			},
+			"categories": [
+				"JavaScript frameworks"
+			]
+		},
+		{
+			"technology": {
+				"recordId": "EPdsrDmLiMQCskvBLp_dloQ@2100",
+				"name": "TrustArc",
+				"websiteUris": [
+					"trustarc.com"
+				],
+				"surfaceForm": "TrustArc",
+				"position": "companyTechnographicsTechnology",
+				"type": "DiffbotEntity"
+			},
+			"categories": [
+				"Cookie compliance"
+			]
+		},
+		{
+			"technology": {
+				"recordId": "EPdsrDmLiMQCskvBLp_dloQ@2101",
+				"name": "Tealium AudienceStream",
+				"websiteUris": [
+					"tealium.com/products/audiencestream"
+				],
+				"surfaceForm": "Tealium AudienceStream",
+				"position": "companyTechnographicsTechnology",
+				"type": "DiffbotEntity"
+			},
+			"categories": [
+				"Segmentation"
+			]
 		}
 	]
+}
+```
+### thaiTaxpayerIds
+  Unique taxpayer number for company in Thailand, also known as company registration number.
+* **Type:** String
+* **Example:**
+```
+{
+	"thaiTaxpayerIds": ""
 }
 ```
 ### totalInvestment
@@ -1526,13 +1741,38 @@ Note that certain longer field examples may be truncated for readability.
 	}
 }
 ```
+### tsicClassification
+  Thailand Standard Industrial Classification (TSIC).
+* **Type:** ClassificationCode
+* **Example:**
+```
+{
+	"tsicClassification": [
+		{
+			"code": "",
+			"isPrimary": false,
+			"name": "",
+			"version": ""
+		}
+	]
+}
+```
 ### twitterUri
-  Link to the LinkedIn profile of this entity
+  Link to the Twitter profile of this entity
 * **Type:** URL
 * **Example:**
 ```
 {
 	"twitterUri": "twitter.com/IBM"
+}
+```
+### uenNumbers
+  Unique Entity Number (UEN) is a business identification number in Singapore.
+* **Type:** String
+* **Example:**
+```
+{
+	"uenNumbers": ""
 }
 ```
 ### ukSicClassification

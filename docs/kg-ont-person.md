@@ -1,11 +1,14 @@
 ---
 id: kg-ont-person
 title: Person
+generatedBy: generateOntology.js
 ---
 
 The person entity type encompasses all people known to the Knowledge Graph. 
 
 Note that fields are not guaranteed to exist in every entity record.
+
+For convenience, a complete ontology source in JSON format is also [available here](https://kg.diffbot.com/kg/ontology).
 
 >New to the Diffbot Knowledge Graph? [Start here](dql-quickstart).
 
@@ -66,7 +69,7 @@ Note that certain longer field examples may be truncated for readability.
 * **Example:**
 ```
 {
-	"age": 76
+	"age": 75
 }
 ```
 ### angellistUri
@@ -161,7 +164,8 @@ Note that certain longer field examples may be truncated for readability.
 			"image": "https://kg.diffbot.com/image/api/get?fetch=yes&url=g%3Cj7P0St0DnBJf.x0KwLZrUn.%5B%3CR0Aa4Hh%3B%5Bv738ZqOr7U%3FfvEQ%3El%601Nw%7BM0Bf7hu7z%3FRe9s4XwGXedrKUAN%28%3D%5ECHnM%60%29.%7BOV",
 			"types": [
 				"Place",
-				"AdministrativeArea"
+				"AdministrativeArea",
+				"Country"
 			],
 			"name": "United States of America",
 			"diffbotUri": "http://diffbot.com/entity/E01d4EK33MmCosgI2KXa4-A",
@@ -176,7 +180,8 @@ Note that certain longer field examples may be truncated for readability.
 			"image": "https://kg.diffbot.com/image/api/get?fetch=yes&url=g%3Cj7P0St0DnBJf.x0KwLZrUn.%5B%3CR0Aa4Hh%3B%5Bv738ZqOr7U%3FCvrv%3ExO%3ALE1l9Bl%3Cb%7DGej%5C%7BRyDCUDe%7BV0I%5E7Pdgj0RnJj3%3B%7C%3ESgGu1EiSd2U2Kb%3FchDc3D_NbtOi%7DVnTj%3DL9FE%2F%5B%7DG%5D9%5B%7D7d.ZvE",
 			"types": [
 				"Place",
-				"AdministrativeArea"
+				"AdministrativeArea",
+				"City"
 			],
 			"name": "Redlands",
 			"diffbotUri": "http://diffbot.com/entity/EEGqoBftsOZyh3_RKbQE3mw",
@@ -206,7 +211,8 @@ Note that certain longer field examples may be truncated for readability.
 			"image": "https://kg.diffbot.com/image/api/get?fetch=yes&url=g%3Cj7P0St0DnBJf.x0KwLZrUn.%5B%3CR0Aa4Hh%3B%5Bv738ZqOr7U%3Fav%40T%3ExS%7DYb%3B%60zt%5BDbuGxEVg.xAK",
 			"types": [
 				"Place",
-				"AdministrativeArea"
+				"AdministrativeArea",
+				"Region"
 			],
 			"name": "California",
 			"diffbotUri": "http://diffbot.com/entity/El0_8ehooNxOPT36Y4RdV9w",
@@ -275,7 +281,7 @@ Note that certain longer field examples may be truncated for readability.
 				"precision": 0,
 				"timestamp": 0
 			},
-			"relationship": "",
+			"relationship": {},
 			"colleague": {
 				"summary": "",
 				"image": "",
@@ -305,7 +311,7 @@ Note that certain longer field examples may be truncated for readability.
 * **Example:**
 ```
 {
-	"connectedIndustries": []
+	"connectedIndustries": {}
 }
 ```
 ### crunchbaseUri
@@ -487,8 +493,11 @@ Note that certain longer field examples may be truncated for readability.
 			},
 			"isCurrent": false,
 			"major": {
+				"recordId": "EEIzhzuLVPeKuQ7KjPSa6aQ@269",
 				"name": "International Trade",
-				"surfaceForm": "International Trade"
+				"surfaceForm": "International Trade",
+				"position": "personEducationMajor",
+				"type": "EducationMajorEntity"
 			},
 			"degree": {
 				"types": [
@@ -543,13 +552,12 @@ Note that certain longer field examples may be truncated for readability.
 				"summary": "Organization based in United States",
 				"types": [
 					"Organization",
-					"LocalBusiness",
-					"Place"
+					"LocalBusiness"
 				],
 				"name": "Shiloh Group",
-				"diffbotUri": "http://diffbot.com/entity/ELF4ccy36PMug3N0XWxDdrg",
-				"targetDiffbotUri": "http://diffbot.com/entity/ELF4ccy36PMug3N0XWxDdrg",
-				"targetDiffbotId": "ELF4ccy36PMug3N0XWxDdrg",
+				"diffbotUri": "http://diffbot.com/entity/EuTIRQ1kUPqGgSxUxjP0ieQ",
+				"targetDiffbotUri": "http://diffbot.com/entity/EuTIRQ1kUPqGgSxUxjP0ieQ",
+				"targetDiffbotId": "EuTIRQ1kUPqGgSxUxjP0ieQ",
 				"surfaceForm": "Shiloh Group",
 				"type": "LocalBusiness"
 			},
@@ -560,13 +568,21 @@ Note that certain longer field examples may be truncated for readability.
 			},
 			"categories": [
 				{
-					"name": "Chief Officer",
-					"diffbotUri": "http://diffbot.com/entity/ETONJ_vUmODK7D7WTWa6OhA",
-					"targetDiffbotUri": "http://diffbot.com/entity/ETONJ_vUmODK7D7WTWa6OhA",
-					"targetDiffbotId": "ETONJ_vUmODK7D7WTWa6OhA",
+					"types": [
+						"Intangible",
+						"EmploymentCategory"
+					],
+					"name": "Executive",
+					"diffbotUri": "http://diffbot.com/entity/EFHD6pfzYMtqdaaytNomkhA",
+					"targetDiffbotUri": "http://diffbot.com/entity/EFHD6pfzYMtqdaaytNomkhA",
+					"targetDiffbotId": "EFHD6pfzYMtqdaaytNomkhA",
 					"type": "EmploymentCategory"
 				},
 				{
+					"types": [
+						"Intangible",
+						"EmploymentCategory"
+					],
 					"name": "Management",
 					"diffbotUri": "http://diffbot.com/entity/EpXGc9jmNPQW3wt-ny5SqCQ",
 					"targetDiffbotUri": "http://diffbot.com/entity/EpXGc9jmNPQW3wt-ny5SqCQ",
@@ -574,10 +590,14 @@ Note that certain longer field examples may be truncated for readability.
 					"type": "EmploymentCategory"
 				},
 				{
-					"name": "Executive",
-					"diffbotUri": "http://diffbot.com/entity/EFHD6pfzYMtqdaaytNomkhA",
-					"targetDiffbotUri": "http://diffbot.com/entity/EFHD6pfzYMtqdaaytNomkhA",
-					"targetDiffbotId": "EFHD6pfzYMtqdaaytNomkhA",
+					"types": [
+						"Intangible",
+						"EmploymentCategory"
+					],
+					"name": "Chief Officer",
+					"diffbotUri": "http://diffbot.com/entity/ETONJ_vUmODK7D7WTWa6OhA",
+					"targetDiffbotUri": "http://diffbot.com/entity/ETONJ_vUmODK7D7WTWa6OhA",
+					"targetDiffbotId": "ETONJ_vUmODK7D7WTWa6OhA",
 					"type": "EmploymentCategory"
 				}
 			],
@@ -606,13 +626,21 @@ Note that certain longer field examples may be truncated for readability.
 			},
 			"categories": [
 				{
-					"name": "Management",
-					"diffbotUri": "http://diffbot.com/entity/EpXGc9jmNPQW3wt-ny5SqCQ",
-					"targetDiffbotUri": "http://diffbot.com/entity/EpXGc9jmNPQW3wt-ny5SqCQ",
-					"targetDiffbotId": "EpXGc9jmNPQW3wt-ny5SqCQ",
+					"types": [
+						"Intangible",
+						"EmploymentCategory"
+					],
+					"name": "Executive",
+					"diffbotUri": "http://diffbot.com/entity/EFHD6pfzYMtqdaaytNomkhA",
+					"targetDiffbotUri": "http://diffbot.com/entity/EFHD6pfzYMtqdaaytNomkhA",
+					"targetDiffbotId": "EFHD6pfzYMtqdaaytNomkhA",
 					"type": "EmploymentCategory"
 				},
 				{
+					"types": [
+						"Intangible",
+						"EmploymentCategory"
+					],
 					"name": "Shareholder",
 					"diffbotUri": "http://diffbot.com/entity/EnjEbsIYNORq7LaLzpGLaeg",
 					"targetDiffbotUri": "http://diffbot.com/entity/EnjEbsIYNORq7LaLzpGLaeg",
@@ -620,10 +648,14 @@ Note that certain longer field examples may be truncated for readability.
 					"type": "EmploymentCategory"
 				},
 				{
-					"name": "Executive",
-					"diffbotUri": "http://diffbot.com/entity/EFHD6pfzYMtqdaaytNomkhA",
-					"targetDiffbotUri": "http://diffbot.com/entity/EFHD6pfzYMtqdaaytNomkhA",
-					"targetDiffbotId": "EFHD6pfzYMtqdaaytNomkhA",
+					"types": [
+						"Intangible",
+						"EmploymentCategory"
+					],
+					"name": "Management",
+					"diffbotUri": "http://diffbot.com/entity/EpXGc9jmNPQW3wt-ny5SqCQ",
+					"targetDiffbotUri": "http://diffbot.com/entity/EpXGc9jmNPQW3wt-ny5SqCQ",
+					"targetDiffbotId": "EpXGc9jmNPQW3wt-ny5SqCQ",
 					"type": "EmploymentCategory"
 				}
 			],
@@ -652,13 +684,21 @@ Note that certain longer field examples may be truncated for readability.
 			},
 			"categories": [
 				{
-					"name": "Management",
-					"diffbotUri": "http://diffbot.com/entity/EpXGc9jmNPQW3wt-ny5SqCQ",
-					"targetDiffbotUri": "http://diffbot.com/entity/EpXGc9jmNPQW3wt-ny5SqCQ",
-					"targetDiffbotId": "EpXGc9jmNPQW3wt-ny5SqCQ",
+					"types": [
+						"Intangible",
+						"EmploymentCategory"
+					],
+					"name": "Executive",
+					"diffbotUri": "http://diffbot.com/entity/EFHD6pfzYMtqdaaytNomkhA",
+					"targetDiffbotUri": "http://diffbot.com/entity/EFHD6pfzYMtqdaaytNomkhA",
+					"targetDiffbotId": "EFHD6pfzYMtqdaaytNomkhA",
 					"type": "EmploymentCategory"
 				},
 				{
+					"types": [
+						"Intangible",
+						"EmploymentCategory"
+					],
 					"name": "Board Member",
 					"diffbotUri": "http://diffbot.com/entity/EnC5drWy1NVuOGQHd2ll0xw",
 					"targetDiffbotUri": "http://diffbot.com/entity/EnC5drWy1NVuOGQHd2ll0xw",
@@ -666,10 +706,14 @@ Note that certain longer field examples may be truncated for readability.
 					"type": "EmploymentCategory"
 				},
 				{
-					"name": "Executive",
-					"diffbotUri": "http://diffbot.com/entity/EFHD6pfzYMtqdaaytNomkhA",
-					"targetDiffbotUri": "http://diffbot.com/entity/EFHD6pfzYMtqdaaytNomkhA",
-					"targetDiffbotId": "EFHD6pfzYMtqdaaytNomkhA",
+					"types": [
+						"Intangible",
+						"EmploymentCategory"
+					],
+					"name": "Management",
+					"diffbotUri": "http://diffbot.com/entity/EpXGc9jmNPQW3wt-ny5SqCQ",
+					"targetDiffbotUri": "http://diffbot.com/entity/EpXGc9jmNPQW3wt-ny5SqCQ",
+					"targetDiffbotId": "EpXGc9jmNPQW3wt-ny5SqCQ",
 					"type": "EmploymentCategory"
 				}
 			],
@@ -684,7 +728,7 @@ Note that certain longer field examples may be truncated for readability.
 * **Example:**
 ```
 {
-	"eyeColor": ""
+	"eyeColor": {}
 }
 ```
 ### facebookUri
@@ -731,9 +775,7 @@ Note that certain longer field examples may be truncated for readability.
 * **Example:**
 ```
 {
-	"gender": {
-		"normalizedValue": "Male"
-	}
+	"gender": {}
 }
 ```
 ### githubUri
@@ -760,7 +802,7 @@ Note that certain longer field examples may be truncated for readability.
 * **Example:**
 ```
 {
-	"hairColor": ""
+	"hairColor": {}
 }
 ```
 ### height
@@ -799,15 +841,15 @@ Note that certain longer field examples may be truncated for readability.
 	"interests": [
 		{
 			"recordId": "EEIzhzuLVPeKuQ7KjPSa6aQ@329",
-			"name": "investing",
-			"surfaceForm": "investing",
+			"name": "planning",
+			"surfaceForm": "planning",
 			"position": "personInterest",
 			"type": "Miscellaneous"
 		},
 		{
 			"recordId": "EEIzhzuLVPeKuQ7KjPSa6aQ@330",
-			"name": "planning",
-			"surfaceForm": "planning",
+			"name": "investing",
+			"surfaceForm": "investing",
 			"position": "personInterest",
 			"type": "Miscellaneous"
 		},
@@ -827,7 +869,7 @@ Note that certain longer field examples may be truncated for readability.
 * **Example:**
 ```
 {
-	"languages": []
+	"languages": {}
 }
 ```
 ### linkedInUri
@@ -851,7 +893,8 @@ Note that certain longer field examples may be truncated for readability.
 			"image": "https://kg.diffbot.com/image/api/get?fetch=yes&url=g%3Cj7P0St0DnBJf.x0KwLZrUn.%5B%3CR0Aa4Hh%3B%5Bv738ZqOr7U%3FfvEQ%3El%601Nw%7BM0Bf7hu7z%3FRe9s4XwGXedrKUAN%28%3D%5ECHnM%60%29.%7BOV",
 			"types": [
 				"Place",
-				"AdministrativeArea"
+				"AdministrativeArea",
+				"Country"
 			],
 			"name": "United States of America",
 			"diffbotUri": "http://diffbot.com/entity/E01d4EK33MmCosgI2KXa4-A",
@@ -862,11 +905,12 @@ Note that certain longer field examples may be truncated for readability.
 		"isCurrent": true,
 		"address": "Washington, D.C.",
 		"city": {
-			"summary": "Capital city of the United States",
+			"summary": "Capital city of the United States of America",
 			"image": "https://kg.diffbot.com/image/api/get?fetch=yes&url=g%3Cj7P0St0DnBJf.x0KwLZrUn.%5B%3CR0Aa4Hh%3B%5Bv738ZqOr7U%3FbvAT%3ExS%7DYb%3B%60zUb%3DXSAyK_oGyzSxB%3C1%5C6DR7P.Ar4",
 			"types": [
 				"Place",
-				"AdministrativeArea"
+				"AdministrativeArea",
+				"City"
 			],
 			"name": "Washington, D.C.",
 			"diffbotUri": "http://diffbot.com/entity/Ep2MLLdkjO_C-R6NA7cOlcQ",
@@ -888,11 +932,12 @@ Note that certain longer field examples may be truncated for readability.
 			"type": "AdministrativeArea"
 		},
 		"subregion": {
-			"summary": "Capital city of the United States",
+			"summary": "Capital city of the United States of America",
 			"image": "https://kg.diffbot.com/image/api/get?fetch=yes&url=g%3Cj7P0St0DnBJf.x0KwLZrUn.%5B%3CR0Aa4Hh%3B%5Bv738ZqOr7U%3FbvAT%3ExS%7DYb%3B%60zUb%3DXSAyK_oGyzSxB%3C1%5C6DR7P.Ar4",
 			"types": [
 				"Place",
-				"AdministrativeArea"
+				"AdministrativeArea",
+				"City"
 			],
 			"name": "Washington, D.C.",
 			"diffbotUri": "http://diffbot.com/entity/Ep2MLLdkjO_C-R6NA7cOlcQ",
@@ -905,11 +950,12 @@ Note that certain longer field examples may be truncated for readability.
 		"postalCode": "20032",
 		"surfaceForm": "Washington, District of Columbia, USA",
 		"region": {
-			"summary": "Capital city of the United States",
+			"summary": "Capital city of the United States of America",
 			"image": "https://kg.diffbot.com/image/api/get?fetch=yes&url=g%3Cj7P0St0DnBJf.x0KwLZrUn.%5B%3CR0Aa4Hh%3B%5Bv738ZqOr7U%3FbvAT%3ExS%7DYb%3B%60zUb%3DXSAyK_oGyzSxB%3C1%5C6DR7P.Ar4",
 			"types": [
 				"Place",
-				"AdministrativeArea"
+				"AdministrativeArea",
+				"City"
 			],
 			"name": "Washington, D.C.",
 			"diffbotUri": "http://diffbot.com/entity/Ep2MLLdkjO_C-R6NA7cOlcQ",
@@ -934,7 +980,8 @@ Note that certain longer field examples may be truncated for readability.
 				"image": "https://kg.diffbot.com/image/api/get?fetch=yes&url=g%3Cj7P0St0DnBJf.x0KwLZrUn.%5B%3CR0Aa4Hh%3B%5Bv738ZqOr7U%3FfvEQ%3El%601Nw%7BM0Bf7hu7z%3FRe9s4XwGXedrKUAN%28%3D%5ECHnM%60%29.%7BOV",
 				"types": [
 					"Place",
-					"AdministrativeArea"
+					"AdministrativeArea",
+					"Country"
 				],
 				"name": "United States of America",
 				"diffbotUri": "http://diffbot.com/entity/E01d4EK33MmCosgI2KXa4-A",
@@ -945,11 +992,12 @@ Note that certain longer field examples may be truncated for readability.
 			"isCurrent": true,
 			"address": "Washington, D.C.",
 			"city": {
-				"summary": "Capital city of the United States",
+				"summary": "Capital city of the United States of America",
 				"image": "https://kg.diffbot.com/image/api/get?fetch=yes&url=g%3Cj7P0St0DnBJf.x0KwLZrUn.%5B%3CR0Aa4Hh%3B%5Bv738ZqOr7U%3FbvAT%3ExS%7DYb%3B%60zUb%3DXSAyK_oGyzSxB%3C1%5C6DR7P.Ar4",
 				"types": [
 					"Place",
-					"AdministrativeArea"
+					"AdministrativeArea",
+					"City"
 				],
 				"name": "Washington, D.C.",
 				"diffbotUri": "http://diffbot.com/entity/Ep2MLLdkjO_C-R6NA7cOlcQ",
@@ -971,11 +1019,12 @@ Note that certain longer field examples may be truncated for readability.
 				"type": "AdministrativeArea"
 			},
 			"subregion": {
-				"summary": "Capital city of the United States",
+				"summary": "Capital city of the United States of America",
 				"image": "https://kg.diffbot.com/image/api/get?fetch=yes&url=g%3Cj7P0St0DnBJf.x0KwLZrUn.%5B%3CR0Aa4Hh%3B%5Bv738ZqOr7U%3FbvAT%3ExS%7DYb%3B%60zUb%3DXSAyK_oGyzSxB%3C1%5C6DR7P.Ar4",
 				"types": [
 					"Place",
-					"AdministrativeArea"
+					"AdministrativeArea",
+					"City"
 				],
 				"name": "Washington, D.C.",
 				"diffbotUri": "http://diffbot.com/entity/Ep2MLLdkjO_C-R6NA7cOlcQ",
@@ -988,11 +1037,12 @@ Note that certain longer field examples may be truncated for readability.
 			"postalCode": "20032",
 			"surfaceForm": "Washington, District of Columbia, USA",
 			"region": {
-				"summary": "Capital city of the United States",
+				"summary": "Capital city of the United States of America",
 				"image": "https://kg.diffbot.com/image/api/get?fetch=yes&url=g%3Cj7P0St0DnBJf.x0KwLZrUn.%5B%3CR0Aa4Hh%3B%5Bv738ZqOr7U%3FbvAT%3ExS%7DYb%3B%60zUb%3DXSAyK_oGyzSxB%3C1%5C6DR7P.Ar4",
 				"types": [
 					"Place",
-					"AdministrativeArea"
+					"AdministrativeArea",
+					"City"
 				],
 				"name": "Washington, D.C.",
 				"diffbotUri": "http://diffbot.com/entity/Ep2MLLdkjO_C-R6NA7cOlcQ",
@@ -1008,7 +1058,8 @@ Note that certain longer field examples may be truncated for readability.
 				"image": "https://kg.diffbot.com/image/api/get?fetch=yes&url=g%3Cj7P0St0DnBJf.x0KwLZrUn.%5B%3CR0Aa4Hh%3B%5Bv738ZqOr7U%3FfvEQ%3El%601Nw%7BM0Bf7hu7z%3FRe9s4XwGXedrKUAN%28%3D%5ECHnM%60%29.%7BOV",
 				"types": [
 					"Place",
-					"AdministrativeArea"
+					"AdministrativeArea",
+					"Country"
 				],
 				"name": "United States of America",
 				"diffbotUri": "http://diffbot.com/entity/E01d4EK33MmCosgI2KXa4-A",
@@ -1023,7 +1074,8 @@ Note that certain longer field examples may be truncated for readability.
 				"image": "https://kg.diffbot.com/image/api/get?fetch=yes&url=g%3Cj7P0St0DnBJf.x0KwLZrUn.%5B%3CR0Aa4Hh%3B%5Bv738ZqOr7U%3FCvrv%3ExO%3ALE1l9Bl%3Cb%7DGej%5C%7BRyDCUDe%7BV0I%5E7Pdgj0RnJj3%3B%7C%3ESgGu1EiSd2U2Kb%3FchDc3D_NbtOi%7DVnTj%3DL9FE%2F%5B%7DG%5D9%5B%7D7d.ZvE",
 				"types": [
 					"Place",
-					"AdministrativeArea"
+					"AdministrativeArea",
+					"City"
 				],
 				"name": "Redlands",
 				"diffbotUri": "http://diffbot.com/entity/EEGqoBftsOZyh3_RKbQE3mw",
@@ -1053,7 +1105,8 @@ Note that certain longer field examples may be truncated for readability.
 				"image": "https://kg.diffbot.com/image/api/get?fetch=yes&url=g%3Cj7P0St0DnBJf.x0KwLZrUn.%5B%3CR0Aa4Hh%3B%5Bv738ZqOr7U%3Fav%40T%3ExS%7DYb%3B%60zt%5BDbuGxEVg.xAK",
 				"types": [
 					"Place",
-					"AdministrativeArea"
+					"AdministrativeArea",
+					"Region"
 				],
 				"name": "California",
 				"diffbotUri": "http://diffbot.com/entity/El0_8ehooNxOPT36Y4RdV9w",
@@ -1069,7 +1122,8 @@ Note that certain longer field examples may be truncated for readability.
 				"image": "https://kg.diffbot.com/image/api/get?fetch=yes&url=g%3Cj7P0St0DnBJf.x0KwLZrUn.%5B%3CR0Aa4Hh%3B%5Bv738ZqOr7U%3FfvEQ%3El%601Nw%7BM0Bf7hu7z%3FRe9s4XwGXedrKUAN%28%3D%5ECHnM%60%29.%7BOV",
 				"types": [
 					"Place",
-					"AdministrativeArea"
+					"AdministrativeArea",
+					"Country"
 				],
 				"name": "United States of America",
 				"diffbotUri": "http://diffbot.com/entity/E01d4EK33MmCosgI2KXa4-A",
@@ -1084,7 +1138,8 @@ Note that certain longer field examples may be truncated for readability.
 				"image": "https://kg.diffbot.com/image/api/get?fetch=yes&url=g%3Cj7P0St0DnBJf.x0KwLZrUn.%5B%3CR0Aa4Hh%3B%5Bv738ZqOr7U%3Fav%40s%3EhO9Ou5%5E2FYEZn%40o%3EUrMl3X.Sgy",
 				"types": [
 					"Place",
-					"AdministrativeArea"
+					"AdministrativeArea",
+					"City"
 				],
 				"name": "Cambridge",
 				"diffbotUri": "http://diffbot.com/entity/EKtEQ-seQOfuiSDMTnvM9tA",
@@ -1109,7 +1164,8 @@ Note that certain longer field examples may be truncated for readability.
 				"image": "https://kg.diffbot.com/image/api/get?fetch=yes&url=g%3Cj7P0St0DnBJf.x0KwLZrUn.%5B%3CR0Aa4Hh%3B%5Bv738ZqOr7U%3FcvBQ%3ErO%3CLr2YhBmKZr%40%7BJRzXxzL%7BJa%7EYx%3Fd7%5Dl%7DI6G%60F%604%3F082w%5BuA_.Xq%7B",
 				"types": [
 					"Place",
-					"AdministrativeArea"
+					"AdministrativeArea",
+					"Subregion"
 				],
 				"name": "Middlesex County",
 				"diffbotUri": "http://diffbot.com/entity/EfTXOkq9_P2GytZP4wTfK1g",
@@ -1126,7 +1182,8 @@ Note that certain longer field examples may be truncated for readability.
 				"image": "https://kg.diffbot.com/image/api/get?fetch=yes&url=g%3Cj7P0St0DnBJf.x0KwLZrUn.%5B%3CR0Aa4Hh%3B%5Bv738ZqOr7U%3FivHp%3ExS%7DYb%3B%60z%7E%5BKlp%3BnL%60kXy%3E.5Y%60",
 				"types": [
 					"Place",
-					"AdministrativeArea"
+					"AdministrativeArea",
+					"Region"
 				],
 				"name": "Massachusetts",
 				"diffbotUri": "http://diffbot.com/entity/E0VAbhEeRNsSvhHIpmhd3Xw",
@@ -1280,7 +1337,7 @@ Note that certain longer field examples may be truncated for readability.
 * **Example:**
 ```
 {
-	"religion": ""
+	"religion": {}
 }
 ```
 ### siblings
@@ -1320,25 +1377,25 @@ Note that certain longer field examples may be truncated for readability.
 {
 	"skills": [
 		{
-			"name": "investment",
-			"diffbotUri": "http://diffbot.com/entity/Emyrk4p-WOvGnIkgRO_yaGA",
-			"targetDiffbotUri": "http://diffbot.com/entity/Emyrk4p-WOvGnIkgRO_yaGA",
-			"targetDiffbotId": "Emyrk4p-WOvGnIkgRO_yaGA",
-			"surfaceForm": "investment"
+			"name": "human resource management",
+			"diffbotUri": "http://diffbot.com/entity/EGbsKlNBiP2C24W80rbtTOg",
+			"targetDiffbotUri": "http://diffbot.com/entity/EGbsKlNBiP2C24W80rbtTOg",
+			"targetDiffbotId": "EGbsKlNBiP2C24W80rbtTOg",
+			"surfaceForm": "human resource management"
 		},
 		{
-			"name": "economics",
-			"diffbotUri": "http://diffbot.com/entity/EoQMvZcJoP42rI4Eo0Avfdg",
-			"targetDiffbotUri": "http://diffbot.com/entity/EoQMvZcJoP42rI4Eo0Avfdg",
-			"targetDiffbotId": "EoQMvZcJoP42rI4Eo0Avfdg",
-			"surfaceForm": "economics"
+			"name": "mergers and acquisitions",
+			"diffbotUri": "http://diffbot.com/entity/EpSY71sAqMYa9H4C3CNXJ2A",
+			"targetDiffbotUri": "http://diffbot.com/entity/EpSY71sAqMYa9H4C3CNXJ2A",
+			"targetDiffbotId": "EpSY71sAqMYa9H4C3CNXJ2A",
+			"surfaceForm": "mergers and acquisitions"
 		},
 		{
-			"name": "teaching",
-			"diffbotUri": "http://diffbot.com/entity/Ez8ugmNmEN3mp_4eMLqGSsA",
-			"targetDiffbotUri": "http://diffbot.com/entity/Ez8ugmNmEN3mp_4eMLqGSsA",
-			"targetDiffbotId": "Ez8ugmNmEN3mp_4eMLqGSsA",
-			"surfaceForm": "teaching"
+			"name": "supply chain management",
+			"diffbotUri": "http://diffbot.com/entity/EvglNgl2jNCyhiMhRpVH9JA",
+			"targetDiffbotUri": "http://diffbot.com/entity/EvglNgl2jNCyhiMhRpVH9JA",
+			"targetDiffbotId": "EvglNgl2jNCyhiMhRpVH9JA",
+			"surfaceForm": "supply chain management"
 		}
 	]
 }

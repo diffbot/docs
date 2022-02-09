@@ -1,11 +1,14 @@
 ---
 id: kg-ont-diffbotentity
 title: All
+generatedBy: generateOntology.js
 ---
 
 All Knowledge Graph entities will include the fields below, which are often generalized, linking, or metadata attributes common to all records. 
 
-See the left navigation panel for fields and attributes for specific entities,
+See the left navigation panel for fields and attributes of specific entities.
+
+For convenience, a complete ontology source in JSON format is also [available here](https://kg.diffbot.com/kg/ontology).
 
 >New to the Diffbot Knowledge Graph? [Start here](dql-quickstart).
 
@@ -73,6 +76,7 @@ Note that certain longer field examples may be truncated for readability.
 {
 	"allUriDetails": [
 		{
+			"domainMonthlyTraffic": 0,
 			"nbFollowing": 0,
 			"uriType": "",
 			"verified": false,
@@ -232,7 +236,8 @@ Note that certain longer field examples may be truncated for readability.
 				"precision": 0,
 				"timestamp": 0
 			},
-			"origin": ""
+			"origin": "",
+			"isUsedAsIdBefore": false
 		}
 	]
 }
@@ -266,7 +271,7 @@ Note that certain longer field examples may be truncated for readability.
 ```
 ### type
   The main type of a Diffbot entity. Examples of type include Person, Organization, Article, Product.
-* **Type:** String
+* **Type:** Type
 * **Example:**
 ```
 {

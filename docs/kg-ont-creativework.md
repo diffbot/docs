@@ -1,11 +1,14 @@
 ---
 id: kg-ont-creativework
 title: CreativeWork
+generatedBy: generateOntology.js
 ---
 
 The Creative Work entity type encompasses movies, tv shows, musicals, scripts, and other creative works known to the Knowledge Graph. 
 
 Note that fields are not guaranteed to exist in every entity record.
+
+For convenience, a complete ontology source in JSON format is also [available here](https://kg.diffbot.com/kg/ontology).
 
 >New to the Diffbot Knowledge Graph? [Start here](dql-quickstart).
 
@@ -23,7 +26,6 @@ Note that fields are not guaranteed to exist in every entity record.
 * [color](#color) 
 * [complete](#complete) 
 * [countryOfOrigin](#countryoforigin) 
-* [creativeWorkType](#creativeworktype) 
 * [creators](#creators) 
 * [creditedArtists](#creditedartists) 
 * [directors](#directors) 
@@ -95,7 +97,7 @@ Note that certain longer field examples may be truncated for readability.
 * **Example:**
 ```
 {
-	"aspectRatio": "1.78 : 1"
+	"aspectRatio": "16:9 HD"
 }
 ```
 ### authors
@@ -160,7 +162,7 @@ Note that certain longer field examples may be truncated for readability.
 * **Example:**
 ```
 {
-	"budget": ""
+	"budget": "$700,000 (estimated)"
 }
 ```
 ### castmembers
@@ -172,36 +174,26 @@ Note that certain longer field examples may be truncated for readability.
 	"castmembers": [
 		{
 			"castmember": {
-				"recordId": "ErgKVmOjIOeiFEge88_z0Ow@0",
-				"name": "Joni Mitchell",
-				"websiteUris": [
-					"imdb.com/name/nm0593474"
+				"summary": "",
+				"image": "",
+				"images": [
+					{
+						"classifications": "",
+						"fingerprint": "",
+						"title": "",
+						"isCached": false,
+						"url": ""
+					}
 				],
-				"surfaceForm": "Joni Mitchell",
-				"type": "Person"
-			}
-		},
-		{
-			"castmember": {
-				"recordId": "ErgKVmOjIOeiFEge88_z0Ow@1",
-				"name": "Bill Flanagan",
-				"websiteUris": [
-					"imdb.com/name/nm1940634"
-				],
-				"surfaceForm": "Bill Flanagan",
-				"type": "Person"
-			}
-		},
-		{
-			"castmember": {
-				"recordId": "ErgKVmOjIOeiFEge88_z0Ow@2",
-				"name": "David Crosby",
-				"websiteUris": [
-					"imdb.com/name/nm0004849"
-				],
-				"surfaceForm": "David Crosby",
-				"type": "Person"
-			}
+				"types": "",
+				"websiteUris": "",
+				"diffbotUri": "",
+				"name": "",
+				"targetDiffbotUri": "",
+				"surfaceForm": ""
+			},
+			"characterName": "",
+			"characterLink": ""
 		}
 	]
 }
@@ -231,17 +223,9 @@ Note that certain longer field examples may be truncated for readability.
 ```
 {
 	"countryOfOrigin": [
-		"USA"
+		"USA",
+		"UK"
 	]
-}
-```
-### creativeWorkType
-  
-* **Type:** String
-* **Example:**
-```
-{
-	"creativeWorkType": "tv episode"
 }
 ```
 ### creators
@@ -310,12 +294,12 @@ Note that certain longer field examples may be truncated for readability.
 {
 	"directors": [
 		{
-			"recordId": "ErgKVmOjIOeiFEge88_z0Ow@18",
-			"name": "Susan Lacy",
+			"recordId": "EHLrH5S6NO1WRCHfaqeuujg@1",
+			"name": "Rex Miller",
 			"websiteUris": [
-				"imdb.com/name/nm0480402"
+				"imdb.com/name/nm2682297"
 			],
-			"surfaceForm": "Susan Lacy",
+			"surfaceForm": "Rex Miller",
 			"position": "creativeWorkDirector",
 			"type": "Person"
 		}
@@ -328,7 +312,7 @@ Note that certain longer field examples may be truncated for readability.
 * **Example:**
 ```
 {
-	"episodeNum": 5
+	"episodeNum": 0
 }
 ```
 ### explicit
@@ -348,7 +332,8 @@ Note that certain longer field examples may be truncated for readability.
 {
 	"genres": [
 		"Documentary",
-		"Biography"
+		"Biography",
+		"History"
 	]
 }
 ```
@@ -396,16 +381,16 @@ Note that certain longer field examples may be truncated for readability.
 * **Example:**
 ```
 {
-	"imdbRating": 7.9
+	"imdbRating": 6.9
 }
 ```
 ### imdbUri
-  
+  Link to the IMDB profile of this entity
 * **Type:** URL
 * **Example:**
 ```
 {
-	"imdbUri": "imdb.com/title/tt0778181"
+	"imdbUri": "imdb.com/title/tt2214799"
 }
 ```
 ### languages
@@ -456,7 +441,7 @@ Note that certain longer field examples may be truncated for readability.
 }
 ```
 ### musicbrainzUri
-  
+  Link to the Musicbrainz profile of this entity
 * **Type:** URL
 * **Example:**
 ```
@@ -470,7 +455,7 @@ Note that certain longer field examples may be truncated for readability.
 * **Example:**
 ```
 {
-	"numAwards": ""
+	"numAwards": "2 wins."
 }
 ```
 ### numEpisodes
@@ -507,14 +492,23 @@ Note that certain longer field examples may be truncated for readability.
 ```
 {
 	"parentTitle": {
-		"recordId": "ErgKVmOjIOeiFEge88_z0Ow@19",
-		"name": "American Masters",
-		"websiteUris": [
-			"imdb.com/title/tt0364151"
+		"summary": "",
+		"image": "",
+		"images": [
+			{
+				"classifications": "",
+				"fingerprint": "",
+				"title": "",
+				"isCached": false,
+				"url": ""
+			}
 		],
-		"surfaceForm": "American Masters",
-		"position": "creativeWorkParentWork",
-		"type": "CreativeWork"
+		"types": "",
+		"websiteUris": "",
+		"diffbotUri": "",
+		"name": "",
+		"targetDiffbotUri": "",
+		"surfaceForm": ""
 	}
 }
 ```
@@ -524,11 +518,7 @@ Note that certain longer field examples may be truncated for readability.
 * **Example:**
 ```
 {
-	"plotKeywords": [
-		"music episode",
-		"song",
-		"singer"
-	]
+	"plotKeywords": ""
 }
 ```
 ### plotSummary
@@ -537,7 +527,7 @@ Note that certain longer field examples may be truncated for readability.
 * **Example:**
 ```
 {
-	"plotSummary": "A profile of Canadian singer-songwriter Joni Mitchell, and how her music evolved from personal folk into pop, jazz and avant-garde."
+	"plotSummary": "Meet Althea Gibson, the first African American to play and win at Wimbledon and the U.S. Nationals."
 }
 ```
 ### podCategories
@@ -564,7 +554,7 @@ Note that certain longer field examples may be truncated for readability.
 * **Example:**
 ```
 {
-	"posterImgLink": ""
+	"posterImgLink": "m.media-amazon.com/images/M/MV5BYzI2NDlkZmQtZmU5ZS00ZGMzLTk2ZjktNGQwODcxMDQ3ZmQzXkEyXkFqcGdeQXVyNTM3MDMyMDQ@._V1_UY268_CR9,0,182,268_AL_.jpg"
 }
 ```
 ### productionCompanies
@@ -575,22 +565,12 @@ Note that certain longer field examples may be truncated for readability.
 {
 	"productionCompanies": [
 		{
-			"recordId": "ErgKVmOjIOeiFEge88_z0Ow@15",
-			"name": "Eagle Rock Entertainment",
+			"recordId": "EHLrH5S6NO1WRCHfaqeuujg@0",
+			"name": "Rexpix Media",
 			"websiteUris": [
-				"imdb.com/company/co0015070"
+				"imdb.com/company/co0211205"
 			],
-			"surfaceForm": "Eagle Rock Entertainment",
-			"position": "creativeWorkProductionOrganization",
-			"type": "Organization"
-		},
-		{
-			"recordId": "ErgKVmOjIOeiFEge88_z0Ow@16",
-			"name": "WNET Channel 13 New York",
-			"websiteUris": [
-				"imdb.com/company/co0037666"
-			],
-			"surfaceForm": "WNET Channel 13 New York",
+			"surfaceForm": "Rexpix Media",
 			"position": "creativeWorkProductionOrganization",
 			"type": "Organization"
 		}
@@ -604,9 +584,9 @@ Note that certain longer field examples may be truncated for readability.
 ```
 {
 	"releaseDate": {
-		"str": "d2003-XX-XX",
+		"str": "d2014-XX-XX",
 		"precision": 1,
-		"timestamp": 1041379200000
+		"timestamp": 1388534400000
 	}
 }
 ```
@@ -616,7 +596,7 @@ Note that certain longer field examples may be truncated for readability.
 * **Example:**
 ```
 {
-	"runtime": "92 min"
+	"runtime": "83 min"
 }
 ```
 ### seasonNum
@@ -625,7 +605,7 @@ Note that certain longer field examples may be truncated for readability.
 * **Example:**
 ```
 {
-	"seasonNum": 17
+	"seasonNum": 0
 }
 ```
 ### taglines
@@ -663,14 +643,23 @@ Note that certain longer field examples may be truncated for readability.
 {
 	"writers": [
 		{
-			"recordId": "ErgKVmOjIOeiFEge88_z0Ow@17",
-			"name": "Susan Lacy",
-			"websiteUris": [
-				"imdb.com/name/nm0480402"
+			"summary": "",
+			"image": "",
+			"images": [
+				{
+					"classifications": "",
+					"fingerprint": "",
+					"title": "",
+					"isCached": false,
+					"url": ""
+				}
 			],
-			"surfaceForm": "Susan Lacy",
-			"position": "creativeWorkWriter",
-			"type": "Person"
+			"types": "",
+			"websiteUris": "",
+			"diffbotUri": "",
+			"name": "",
+			"targetDiffbotUri": "",
+			"surfaceForm": ""
 		}
 	]
 }

@@ -1,11 +1,14 @@
 ---
 id: kg-ont-administrativearea
 title: AdministrativeArea
+generatedBy: generateOntology.js
 ---
 
 The Administrative Area entity type encompasses all cities, regions, counties, sub-regions, provinces, and countries known to the Knowledge Graph. 
 
 Note that fields are not guaranteed to exist in every entity record.
+
+For convenience, a complete ontology source in JSON format is also [available here](https://kg.diffbot.com/kg/ontology).
 
 >New to the Diffbot Knowledge Graph? [Start here](dql-quickstart).
 
