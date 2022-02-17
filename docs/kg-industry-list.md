@@ -13,7 +13,7 @@ An example [DQL](dql-index) query using an industry on this list might look like
 type:Organization industries:"Medical Associations"
 ```
 
-| Primary Industry    | Secondary Industry | Tertiary Industry | NAICS                   |
+| Industry (1st-level)    | Industry (2nd-level) | Industry (3rd-level) | NAICS                   |
 | ------------------- | ------------------ | ----------------- | ----------------------- |
 | Agricultural Organizations          |                    |                   | 110000 |
 |                     | Animal Farms         |                   | 112900 |
