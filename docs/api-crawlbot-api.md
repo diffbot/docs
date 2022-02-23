@@ -14,6 +14,8 @@ The Crawlbot API allows you to programmatically manage <a href="https://app.diff
 
 To create a crawl, make a POST request to `https://api.diffbot.com/v3/crawl`.
 
+> Note: The `Content-Type` header should be set to `application/x-www-form-urlencoded`
+
 Provide the following data:
 
 | Argument | Description |
