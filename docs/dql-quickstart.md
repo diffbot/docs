@@ -571,7 +571,7 @@ Many new and learning users find Diffbot Query Language and the Knowledge Graph 
 
 **_Companies in a City with Female CEO and Specified Size (San Francisco, &lt;500 FTE)_**
 
-`type:Organization location.city.name:"San Francisco" nbEmployeesMax&lt;500 ceo.gender:"Female"`
+`type:Organization location.city.name:"San Francisco" nbEmployeesMax<500 ceo.gender:"Female"`
 
 **_Top Current Employers of Data Science Roles_**
 
@@ -583,11 +583,11 @@ Many new and learning users find Diffbot Query Language and the Knowledge Graph 
 
 **_Global Mid-Market Software Companies_**
 
-`type:Organization nbEmployeesMin>100 nbEmployeesMax&lt;1000 industries:"Software Companies" not(industries:"Educational Companies") not(has:parentCompany) not(has:acquiredBy) revSortBy:nbActiveEmployeeEdges`
+`type:Organization nbEmployeesMin>100 nbEmployeesMax<1000 industries:"Software Companies" not(industries:"Educational Companies") not(has:parentCompany) not(has:acquiredBy) revSortBy:nbActiveEmployeeEdges`
 
 **_SMB Advertising Companies With No Investments_**
 
-`type:Organization not(has:investments.amount.value) industries:"Advertising Companies" nbEmployeesMax&lt;=100 nbEmployeesMin>=50`
+`type:Organization not(has:investments.amount.value) industries:"Advertising Companies" nbEmployeesMax<=100 nbEmployeesMin>=50`
 
 **_Individuals Employed In Automotive Software Roles In Europe (&lt;1,100 miles from Hamburg)_**
 
@@ -603,7 +603,7 @@ Many new and learning users find Diffbot Query Language and the Knowledge Graph 
 
 **_Small B2B Marketing Agencies Near Atlanta_**
 
-`type:Organization industries:"Service Companies" industries:"Marketing Companies" industries:"Advertising Companies" nbEmployeesMax&lt;=15 location.country.name:"United States" description:"b2b" not(description:or("b2c", "consumer")) near30mi`
+`type:Organization industries:"Service Companies" industries:"Marketing Companies" industries:"Advertising Companies" nbEmployeesMax<=15 location.country.name:"United States" description:"b2b" not(description:or("b2c", "consumer")) near[30mi](name:"Atlanta")`
 
 **_All Whole Foods Locations (By Fact Page Origin)_**
 
@@ -615,26 +615,26 @@ Many new and learning users find Diffbot Query Language and the Knowledge Graph 
 
 **_Hires Post a Specific Date at Google_**
 
-`type:Person employments.{employer.name:"Google" from>"2020-01-21" not(from&lt;"2020-01-21")}`
+`type:Person employments.{employer.name:"Google" from>"2020-01-21" not(from<"2020-01-21")}`
 
 **_Industries FAANG Companies Invested In IN 2019_**
 
-`type:Organization investments.{investors.name:or("Facebook","Alphabet","Amazon","Microsoft","Apple","Netflix") date>="01/01/2019" date&lt;="01/01/2020"} facet:industries`
+`type:Organization investments.{investors.name:or("Facebook","Alphabet","Amazon","Microsoft","Apple","Netflix") date>="01/01/2019" date<="01/01/2020"} facet:industries`
 
 
 ### News Monitoring Search Queries
 
 **_Negative Articles About Apple By Week_**
 
-`type:Article tags.{uri:"http://diffbot.com/entity/CHb0_0NEcMwyY8b083taTTw" sentiment&lt;0.0} facet[week]:date`
+`type:Article tags.{uri:"http://diffbot.com/entity/CHb0_0NEcMwyY8b083taTTw" sentiment<0.0} facet[week]:date`
 
 **_Media Mentions of Competitors_**
 
-`type:Article date&lt;30d tags.label:or("Microsoft Teams", "Facebook Workplace”)`
+`type:Article date<30d tags.label:or("Microsoft Teams", "Facebook Workplace")`
 
 **_Most Recirculated Quotes By Joe Biden (Last 30d)_**
 
-`type:Article date&lt;30d quotes.speaker:"Joe Biden" facet:quotes.quote`
+`type:Article date<30d quotes.speaker:"Joe Biden" facet:quotes.quote`
 
 **_Coverage About Protests By Country_**
 
