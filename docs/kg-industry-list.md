@@ -10,7 +10,7 @@ This reference is helpful for narrowing down queries for organizations on the [D
 An example [DQL](dql-index) query using an industry on this list might look like this —
 
 ```
-type:Organization industries:"Medical Associations"
+type:Organization industry:"Medical Associations"
 ```
 
 | Industry (1st-level)    | Industry (2nd-level) | Industry (3rd-level) | NAICS                   |

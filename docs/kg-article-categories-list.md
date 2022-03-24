@@ -4,21 +4,15 @@ title: Article Categories
 onPageNav: false
 ---
 
-Article categories provide structured context to the topic discussed in a particular piece of text. Unlike [tags](kg-ont-article#tags), categories describe the text as a whole and tend to be more abstract. 
+**BETA** — Article categories provide structured context to the topic discussed in a particular piece of text. Unlike [tags](kg-ont-article#tags), categories describe the text as a whole and tend to be more abstract. 
 
-Categories are fully supported for article data types across all relevant Diffbot products, including Extract, Crawl, and Knowledge Graph.
+> As of Nov 17, 2021, article categories is in beta and is only supported through [Article Extract](api-intro-article). Ontology and access may be subject to change at any time.
 
 Here's a sample request to extract categories alongside your article extraction —
 
 
 ```python
 https://api.diffbot.com/v3/article?token=TOKEN&url=https://blog.diffbot.com/a-less-biased-way-to-discern-media-bias-using-knowledge-graph-enhanced-ai/&naturalLanguage=categories
-```
-
-To search the Knowledge Graph for articles falling under a particular category, [try this DQL](https://app.diffbot.com/search/?query=type%3AArticle+categories.name%3A%22Acquisitions%2C+Mergers+and+Takeovers%22&from=0&size=25&output_format=&kgversion=) —
-
-```python
-type:Article categories.name:"Acquisitions, Mergers and Takeovers"
 ```
 
 The category list below outlines all possible categories that may be returned by Diffbot Extract.
