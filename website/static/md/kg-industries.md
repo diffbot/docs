@@ -21,7 +21,9 @@ type:Organization industry:"Medical Associations"
 |                     | {{ name }}         |                   | {{ info.naicsMapping }} | {{ info.sicMapping }} |
 {{ #children }}                                                                                                      
 |                     |                    | {{ name }}        | {{ info.naicsMapping }} | {{ info.sicMapping }} |
-
+{{ /children }}
+{{ /children }}
+{{ /industries }}
 
 <style>
 /* Hides the Right-Hand Secondary Nav for a Full Width Industry Table */
