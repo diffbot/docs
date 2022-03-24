@@ -19,7 +19,7 @@ jobs:
             git config --global user.email "swader@users.noreply.github.com"
             git config --global user.name "Bruno"
             echo "machine github.com login swader password $GITHUB_TOKEN" > ~/.netrc
-            cd website && yarn install && node --use-openssl-ca generateOntology && node generateIndustries && GIT_USER=swader yarn run publish-gh-pages
+            cd website && yarn install && node generateOntology $DIFFBOT_TOKEN && node generateIndustries && GIT_USER=swader yarn run publish-gh-pages
 
 workflows:
   version: 2
