@@ -17,8 +17,10 @@ let fs = require("fs");
 let { render } = require("mustache");
 const axios = require("axios");
 
+var DIFFBOTTOKEN = process.env.DIFFBOT_TOKEN ? process.env.DIFFBOTTOKEN : "";
+
 let args = process.argv.slice(2);
-const DIFFBOTTOKEN = args[0] ? args[0] : "";
+DIFFBOTTOKEN = args[0] ? args[0] : DIFFBOTTOKEN;
 
 // Template helpers
 const templateHelpers = {
