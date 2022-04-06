@@ -10,10 +10,10 @@ This reference is helpful for narrowing down queries for organizations on the [D
 An example [DQL](dql-index) query using an industry on this list might look like this —
 
 ```
-type:Organization industry:"Medical Associations"
+type:Organization industries:"Medical Associations"
 ```
 
-| Primary Industry    | Secondary Industry | Tertiary Industry | NAICS                   | SIC                   |
+| Level 1 Industry    | Level 2 Industry | Level 3 Industry | NAICS                   | SIC                   |
 | ------------------- | ------------------ | ----------------- | ----------------------- | --------------------- |
 {{ #industries }}                                                                                                    
 | {{ name }}          |                    |                   | {{ info.naicsMapping }} | {{ info.sicMapping }} |
