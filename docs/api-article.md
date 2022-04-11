@@ -73,6 +73,7 @@ Objects in the Article API's `objects` array will include the following fields:
 | `siteName` | The plain-text name of the site (e.g. `The New York Times` or `Diffbot`). If no site name is automatically determined, the root domain (`diffbot.com`) will be returned. |
 | `publisherRegion` | If known, the region of the article publication. |
 | `publisherCountry` | If known, the country of the article publication. |
+| `location`| Location mentioned at the beginning of the article. |
 | `pageUrl` | URL of submitted page / page from which the article is extracted. |
 | `resolvedPageUrl` | Returned if the `pageUrl` redirects to another URL. |
 | `tags` | Array of tags/entities, generated from analysis of the extracted `text` and cross-referenced with [DBpedia](https://wiki.dbpedia.org/About) and other data sources. Language-specific tags will be returned if the source text is in English, Chinese, French, German, Spanish, Russian, Japanese, Dutch, Polish, Norwegian, Danish or Swedish. |
