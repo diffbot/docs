@@ -31,7 +31,7 @@ Provide the following arguments:
 | `callback` | Use for jsonp requests. Needed for cross-domain ajax. |
 | `proxy` | Leave value empty to use default proxies, or specify an IP address of a custom proxy that will be used to fetch the target page, instead of Diffbot's default IPs/proxies. (Ex: `&proxy` or `&proxy=168.212.226.204`) |
 | `proxyAuth` | Used to specify the authentication parameters that will be used with a custom proxy specified in the `&proxy` parameter. (Ex: `&proxyAuth=username:password`) |
-| `naturalLanguage` | Used to request the output of the Diffbot Natural Language API in the field `naturalLanguage`. Example: `&naturalLanguage=entities,facts,categories,sentiment`. |
+| `naturalLanguage` | Used to request the output of the [Diffbot Natural Language API](https://docs.diffbot.com/docs/en/nl-index) in the field `naturalLanguage`. Use this for in-depth analysis of the article text. Example: `&naturalLanguage=entities,facts,categories,sentiment`. |
 
 ### The fields argument
 
