@@ -76,13 +76,17 @@ Objects in the Article API's `objects` array will include the following fields:
 | `location`| Location mentioned at the beginning of the article. |
 | `pageUrl` | URL of submitted page / page from which the article is extracted. |
 | `resolvedPageUrl` | Returned if the `pageUrl` redirects to another URL. |
-| `tags` | Array of tags/entities, generated from analysis of the extracted `text` and cross-referenced with [DBpedia](https://wiki.dbpedia.org/About) and other data sources. Language-specific tags will be returned if the source text is in English, Chinese, French, German, Spanish, Russian, Japanese, Dutch, Polish, Norwegian, Danish or Swedish. |
+| `tags` | Array of tags/entities, generated from analysis of the extracted `title` and `text` fields. Tags are extracted by the [Diffbot Natural Language API](https://docs.diffbot.com/docs/en/nl-index) and linked to the [Diffbot Knowledge Graph](https://www.diffbot.com/products/knowledge-graph/). Tags will be returned if the text is in one of the following languages: English (en), French (fr), Spanish (es), Chinese (zh), German (de), Russian (ru), Japanese (ja), Dutch (nl), Polish (pl), Norwegian (no), Danish (da), Swedish (sv), Italian (it). |
 | &#x21B3;`label` | Name of the entity or tag. |
 | &#x21B3;`count` | Number of appearances the entity makes within the text content. |
 | &#x21B3;`score` | Rating of the entity's relevance to the overall text content (range of 0 to 1) based on various factors. |
 | &#x21B3;`rdfTypes` | If the entity can be represented by multiple resources, all of the possible URIs will be returned. |
 | &#x21B3;`type` | This legacy field is a simplified precursor to `rdfTypes`, and will return either `organization` or `person` if the entity is either of those types. |
-| &#x21B3;`uri` | Link to the primary Diffbot entity for this tag in the [Diffbot Knowledge Graph](https://www.diffbot.com/knowledge-graph/). On older articles, this might be the URI to the entity at DBpedia or another data source, but in most cases it will lead to Diffbot's KG entry which will contain more information about the tag. |
+| &#x21B3;`uri` | Link to the primary Diffbot entity for this tag in the [Diffbot Knowledge Graph](https://www.diffbot.com/knowledge-graph/). |
+| `categories` | Array of categories, generated from analysis of the extracted `title` and `text` fields. This field is available for over 100 languages. The complete list of categories can be found at [this link](https://docs.diffbot.com/docs/en/kg-article-categories-list). |
+| &#x21B3;`name` | Name of the category. |
+| &#x21B3;`score` | Score of how relevant this category is for the article. |
+| &#x21B3;`id` | Id of the category. |
 | `images` | Array of images, if present within the article body. |
 | &#x21B3;`url` |Fully resolved link to image. If the image `SRC` is encoded as base64 data, the complete data URI will be returned. |
 | &#x21B3;`title` | Description or caption of the image. |
