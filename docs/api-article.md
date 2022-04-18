@@ -26,6 +26,7 @@ Provide the following arguments:
 | `paging` | Pass `paging=false` to disable automatic concatenation of multiple-page articles. (By default, Diffbot will concatenate up to 20 pages of a single article.) [More on automatic concatenation](guides-multi-page-articles-discussions.md). |
 | `maxTags` | Set the maximum number of automatically-generated tags to return. By default a maximum of ten tags will be returned. |
 | `tagConfidence` | Set the minimum relevance `score` of tags to return, between 0.0 and 1.0. By default only tags with a score equal to or above 0.5 will be returned. |
+| `categoryConfidence` | Set the minimum relevance `score` of categories to return, between 0.5 and 1.0. By default only categories with a score equal to or above 0.5 will be returned. |
 | `discussion` | Pass `discussion=false` to disable automatic extraction of article comments. See [below](#comment-extraction). |
 | `timeout` | Sets a value in milliseconds to wait for the retrieval/fetch of content from the requested URL. The default timeout for the third-party response is 30 seconds (30000). |
 | `callback` | Use for jsonp requests. Needed for cross-domain ajax. |
