@@ -10,7 +10,9 @@ See the left navigation panel for fields and attributes of specific entities.
 
 For convenience, a complete ontology source in JSON format is also [available here](https://kg.diffbot.com/kg/ontology).
 
->New to the Diffbot Knowledge Graph? [Start here](dql-quickstart).
+> 🙋 
+> 
+> New to the Diffbot Knowledge Graph? [Start here](doc:getting-started-with-diffbot-knowledge-graph).
 
 ## All Fields
 * [allDescriptions](#alldescriptions) 
@@ -18,7 +20,6 @@ For convenience, a complete ontology source in JSON format is also [available he
 * [allOriginHashes](#alloriginhashes) 
 * [allUriDetails](#alluridetails) 
 * [allUris](#alluris) 
-* [clusterWithOrigin](#clusterwithorigin) 
 * [crawlTimestamp](#crawltimestamp) 
 * [description](#description) 
 * [diffbotUri](#diffboturi) 
@@ -29,7 +30,6 @@ For convenience, a complete ontology source in JSON format is also [available he
 * [name](#name) 
 * [nbIncomingEdges](#nbincomingedges) 
 * [nbOrigins](#nborigins) 
-* [nestedRecords](#nestedrecords) 
 * [nonCanonicalFacts](#noncanonicalfacts) 
 * [originDetails](#origindetails) 
 * [origins](#origins) 
@@ -37,6 +37,12 @@ For convenience, a complete ontology source in JSON format is also [available he
 * [summary](#summary) 
 * [type](#type) 
 * [types](#types) 
+* [wikipediaPageviews](#wikipediapageviews) 
+* [wikipediaPageviewsGrowth](#wikipediapageviewsgrowth) 
+* [wikipediaPageviewsLastQuarter](#wikipediapageviewslastquarter) 
+* [wikipediaPageviewsLastQuarterGrowth](#wikipediapageviewslastquartergrowth) 
+* [wikipediaPageviewsLastYear](#wikipediapageviewslastyear) 
+* [wikipediaPageviewsLastYearGrowth](#wikipediapageviewslastyeargrowth) 
 
 ## All Field Details
 Note that certain longer field examples may be truncated for readability.
@@ -76,6 +82,7 @@ Note that certain longer field examples may be truncated for readability.
 {
 	"allUriDetails": [
 		{
+			"domainMonthlyTrafficGrowth": "",
 			"domainMonthlyTraffic": 0,
 			"nbFollowing": 0,
 			"uriType": "",
@@ -96,15 +103,6 @@ Note that certain longer field examples may be truncated for readability.
 ```
 {
 	"allUris": []
-}
-```
-### clusterWithOrigin
-  
-* **Type:** String
-* **Example:**
-```
-{
-	"clusterWithOrigin": ""
 }
 ```
 ### crawlTimestamp
@@ -205,15 +203,6 @@ Note that certain longer field examples may be truncated for readability.
 	"nbOrigins": 0
 }
 ```
-### nestedRecords
-  
-* **Type:** DiffbotEntity
-* **Example:**
-```
-{
-	"nestedRecords": {}
-}
-```
 ### nonCanonicalFacts
   Enumerates all the non-canonical fields (i.e., those not defined in the ontology) that have a value for this entity. For instance, if &#39;numberOfChildren&#39; is listed in &#39;nonCanonicalFacts&#39; then the entity JSON will have the key &#39;numberOfChildren&#39; with an associated value. This field is only provided when the parameter nonCanonicalFacts&#x3D;1 is set. See: https:&#x2F;&#x2F;docs.diffbot.com&#x2F;kgapi
 * **Type:** String
@@ -236,8 +225,7 @@ Note that certain longer field examples may be truncated for readability.
 				"precision": 0,
 				"timestamp": 0
 			},
-			"origin": "",
-			"isUsedAsIdBefore": false
+			"origin": ""
 		}
 	]
 }
@@ -270,7 +258,7 @@ Note that certain longer field examples may be truncated for readability.
 }
 ```
 ### type
-  The main type of a Diffbot entity. Examples of type include Person, Organization, Article, Product.
+  The top-level type of a Diffbot entity. Examples of type include Person, Organization, Article, Product.
 * **Type:** Type
 * **Example:**
 ```
@@ -285,5 +273,59 @@ Note that certain longer field examples may be truncated for readability.
 ```
 {
 	"types": ""
+}
+```
+### wikipediaPageviews
+  The number of views of its Wikipedia page of the last month if it exists.
+* **Type:** Integer
+* **Example:**
+```
+{
+	"wikipediaPageviews": 0
+}
+```
+### wikipediaPageviewsGrowth
+  The month over month growth of wikipediaPageviews, where we count the increment of the number of page views of the second to last (full) month, compared with that of the last (full) month. if today was Aug 16th, 2022, the last complete month is July. So it refers to the increment from June to July, i.e., ( f(July) - f(June) ) ÷ f(June) x 100%. The f(.) only counts the first 28 days of a month, to avoid fluctuations between 31-days months like Jan and 28(29)-days months like Feb.
+* **Type:** Float
+* **Example:**
+```
+{
+	"wikipediaPageviewsGrowth": ""
+}
+```
+### wikipediaPageviewsLastQuarter
+  The number of views of its Wikipedia page of the last quarter if it exists.
+* **Type:** Integer
+* **Example:**
+```
+{
+	"wikipediaPageviewsLastQuarter": 0
+}
+```
+### wikipediaPageviewsLastQuarterGrowth
+  The quarter over quarter growth of wikipediaPageviews, where we count the increment of the number of page views of the second to last (full) quarter, compared with that of the last (full) quarter. If today was Aug 16th, 2022, the last complete quarter is Q2 (April, May, June). So it refers to the increment from Q1 to Q2, i.e., ( f(Q2) - f(Q1) ) ÷ f(Q1) x 100%.
+* **Type:** Float
+* **Example:**
+```
+{
+	"wikipediaPageviewsLastQuarterGrowth": ""
+}
+```
+### wikipediaPageviewsLastYear
+  The number of views of its Wikipedia page of the last year if it exists.
+* **Type:** Integer
+* **Example:**
+```
+{
+	"wikipediaPageviewsLastYear": 0
+}
+```
+### wikipediaPageviewsLastYearGrowth
+  The year over year growth of wikipediaPageviews, where we count the monthly-rolling increment of the year before last than the last year. It today was Aug 16th, 2022, it is computed by comparing the numbers from Aug 2021 to July 2022 and from Aug 2020 to July 2021, i.e., ( f(Aug 2021 to July 2022) - f(Aug 2020 to July 2021) ) ÷ f(Aug 2020 to July 2021) x 100%.
+* **Type:** Float
+* **Example:**
+```
+{
+	"wikipediaPageviewsLastYearGrowth": ""
 }
 ```

@@ -26,6 +26,7 @@ The category list below outlines all possible categories that may be returned by
 |          |                  | Coupe  |  |
 |          |                  | Crossover  |  |
 |          |                  | Hatchback  |  |
+|          |                  | Microcar  |  |
 |          |                  | Minivan  |  |
 |          |                  | Off-Road Vehicles  |  |
 |          |                  | Pickup Trucks  |  |
@@ -87,12 +88,15 @@ The category list below outlines all possible categories that may be returned by
 |          |  Outdoor Activities                 |  |  |
 |          |  Parks &amp; Nature                 |  |  |
 |          |  Party Supplies and Decorations                 |  |  |
+|          |  Personal Celebrations &amp; Life Events                 |  |  |
+|          |                  | Funeral  |  |
 |          |  Zoos &amp; Aquariums                 |  |  |
 |  Family and Relationships         |                   |   |  |
 |          |  Bereavement                 |  |  |
 |          |  Dating                 |  |  |
 |          |  Divorce                 |  |  |
 |          |  Eldercare                 |  |  |
+|          |  Marriage and Civil Unions                 |  |  |
 |          |  Parenting                 |  |  |
 |  Fine Art         |                   |   |  |
 |          |  Digital Arts                 |  |  |
@@ -111,6 +115,7 @@ The category list below outlines all possible categories that may be returned by
 |          |  Vegan Diets                 |  |  |
 |          |  Vegetarian Diets                 |  |  |
 |  Healthy Living         |                   |   |  |
+|          |  Children&#39;s Health                 |  |  |
 |          |  Fitness and Exercise                 |  |  |
 |          |  Men&#39;s Health                 |  |  |
 |          |  Nutrition                 |  |  |
@@ -125,6 +130,7 @@ The category list below outlines all possible categories that may be returned by
 |          |  Birdwatching                 |  |  |
 |          |  Cigars                 |  |  |
 |          |  Musical Instruments                 |  |  |
+|          |  Paranormal Phenomena                 |  |  |
 |  Home &amp; Garden         |                   |   |  |
 |          |  Gardening                 |  |  |
 |          |  Home Appliances                 |  |  |
@@ -132,6 +138,7 @@ The category list below outlines all possible categories that may be returned by
 |          |  Home Security                 |  |  |
 |          |  Interior Decorating                 |  |  |
 |          |  Landscaping                 |  |  |
+|          |  Outdoor Decorating                 |  |  |
 |          |  Remodeling &amp; Construction                 |  |  |
 |          |  Smart Home                 |  |  |
 |  Medical Health         |                   |   |  |
@@ -169,6 +176,7 @@ The category list below outlines all possible categories that may be returned by
 |          |                  | Sleep Disorders  |  |
 |          |                  | Substance Abuse  |  |
 |          |  Medical Tests                 |  |  |
+|          |  Pharmaceutical Drugs                 |  |  |
 |          |  Surgery                 |  |  |
 |          |  Vaccines                 |  |  |
 |  Movies         |                   |   |  |
@@ -177,6 +185,7 @@ The category list below outlines all possible categories that may be returned by
 |          |  Crime                 |  |  |
 |          |  Disasters                 |  |  |
 |          |  Law                 |  |  |
+|          |  Local News                 |  |  |
 |          |  Politics                 |  |  |
 |          |                  | Elections  |  |
 |          |                  | Political Issues  |  |
@@ -191,18 +200,21 @@ The category list below outlines all possible categories that may be returned by
 |          |  Retirement Planning                 |  |  |
 |  Books and Literature         |                   |   |  |
 |          |  Biographies                 |  |  |
+|          |  Comics and Graphic Novels                 |  |  |
 |          |  Cookbooks                 |  |  |
 |          |  Poetry                 |  |  |
 |  Pets         |                   |   |  |
 |          |  Birds                 |  |  |
 |          |  Cats                 |  |  |
 |          |  Dogs                 |  |  |
+|          |  Pet Adoptions                 |  |  |
 |          |  Pet Supplies                 |  |  |
 |          |  Reptiles                 |  |  |
 |          |  Veterinary Medicine                 |  |  |
 |  Pop Culture         |                   |   |  |
 |          |  Celebrity Deaths                 |  |  |
 |          |  Celebrity Homes                 |  |  |
+|          |  Celebrity Relationships                 |  |  |
 |          |  Celebrity Style                 |  |  |
 |          |  Humor and Satire                 |  |  |
 |  Real Estate         |                   |   |  |
@@ -230,6 +242,7 @@ The category list below outlines all possible categories that may be returned by
 |          |  Gifts and Greetings Cards                 |  |  |
 |          |  Grocery Shopping                 |  |  |
 |          |  Holiday Shopping                 |  |  |
+|          |  Sales and Promotions                 |  |  |
 |  Sports         |                   |   |  |
 |          |  American Football                 |  |  |
 |          |  Australian Rules Football                 |  |  |
@@ -237,9 +250,11 @@ The category list below outlines all possible categories that may be returned by
 |          |  Badminton                 |  |  |
 |          |  Baseball                 |  |  |
 |          |  Basketball                 |  |  |
+|          |  Beach Volleyball                 |  |  |
 |          |  Bodybuilding                 |  |  |
 |          |  Bowling                 |  |  |
 |          |  Boxing                 |  |  |
+|          |  Cheerleading                 |  |  |
 |          |  College Sports                 |  |  |
 |          |                  | College Baseball  |  |
 |          |                  | College Basketball  |  |
@@ -252,6 +267,7 @@ The category list below outlines all possible categories that may be returned by
 |          |  Extreme Sports                 |  |  |
 |          |                  | Canoeing and Kayaking  |  |
 |          |                  | Climbing  |  |
+|          |                  | Paintball  |  |
 |          |                  | Scuba Diving  |  |
 |          |                  | Skateboarding  |  |
 |          |                  | Snowboarding  |  |
@@ -259,6 +275,7 @@ The category list below outlines all possible categories that may be returned by
 |          |  Fantasy Sports                 |  |  |
 |          |  Field Hockey                 |  |  |
 |          |  Figure Skating                 |  |  |
+|          |  Fishing Sports                 |  |  |
 |          |  Golf                 |  |  |
 |          |  Gymnastics                 |  |  |
 |          |  Horse Racing                 |  |  |
@@ -278,7 +295,6 @@ The category list below outlines all possible categories that may be returned by
 |          |  Soccer                 |  |  |
 |          |  Softball                 |  |  |
 |          |  Sports Equipment                 |  |  |
-|          |  Squash                 |  |  |
 |          |  Swimming                 |  |  |
 |          |  Table Tennis                 |  |  |
 |          |  Tennis                 |  |  |
@@ -300,6 +316,7 @@ The category list below outlines all possible categories that may be returned by
 |          |                  |   | Business Loans |
 |          |                  |   | Debt Factoring &amp; Invoice Discounting |
 |          |                  |   | Private Equity |
+|          |                  |   | Sale &amp; Lease Back |
 |          |                  |   | Venture Capital |
 |          |                  | Business I.T.  |  |
 |          |                  | Business Operations  |  |
@@ -307,7 +324,6 @@ The category list below outlines all possible categories that may be returned by
 |          |                  | Consumer Issues  |  |
 |          |                  |   | Recalls |
 |          |                  | Contracts and Agreements  |  |
-|          |                  | Dividends  |  |
 |          |                  | Environmental, Social and Governance (ESG)  |  |
 |          |                  | Executive Leadership &amp; Management  |  |
 |          |                  | Funding  |  |
@@ -315,20 +331,26 @@ The category list below outlines all possible categories that may be returned by
 |          |                  | Green Solutions  |  |
 |          |                  | Human Resources  |  |
 |          |                  | Intellectual Property  |  |
-|          |                  | Investment Opinion  |  |
 |          |                  | Large Business  |  |
+|          |                  | Litigation  |  |
 |          |                  | Logistics  |  |
 |          |                  | Marketing and Advertising  |  |
 |          |                  | Partnerships and Joint Ventures  |  |
 |          |                  | Personnel Changes  |  |
+|          |                  |   | Key Hires |
+|          |                  |   | Layoffs |
 |          |                  | Products and Services Announcements  |  |
 |          |                  | Real Estate Transactions  |  |
+|          |                  | Regulatory Approvals  |  |
 |          |                  | Sales  |  |
-|          |                  | Sales and Earnings  |  |
 |          |                  | Small and Medium-sized Business  |  |
 |          |                  | Startups  |  |
 |          |                  | Stock Offerings and IPOs  |  |
-|          |                  | Stock Split  |  |
+|          |                  | Stock Price News  |  |
+|          |                  |   | Dividends |
+|          |                  |   | Investment Opinion |
+|          |                  |   | Sales and Earnings |
+|          |                  |   | Stock Split |
 |          |  Economy                 |  |  |
 |          |                  | Commodities  |  |
 |          |                  | Currencies  |  |
@@ -376,6 +398,8 @@ The category list below outlines all possible categories that may be returned by
 |          |  Beauty                 |  |  |
 |          |  Body Art                 |  |  |
 |          |  Fashion Trends                 |  |  |
+|          |  Men&#39;s Fashion                 |  |  |
+|          |  Women&#39;s Fashion                 |  |  |
 |  Technology &amp; Computing         |                   |   |  |
 |          |  Artificial Intelligence                 |  |  |
 |          |  Augmented Reality                 |  |  |
@@ -425,6 +449,7 @@ The category list below outlines all possible categories that may be returned by
 |          |  Travel Locations                 |  |  |
 |          |                  | Africa Travel  |  |
 |          |                  | Asia Travel  |  |
+|          |                  | Australia and Oceania Travel  |  |
 |          |                  | Europe Travel  |  |
 |          |                  | North America Travel  |  |
 |          |                  | Polar Travel  |  |
@@ -433,6 +458,7 @@ The category list below outlines all possible categories that may be returned by
 |          |  Travel Type                 |  |  |
 |          |                  | Adventure Travel  |  |
 |          |                  | Air Travel  |  |
+|          |                  | Beach Travel  |  |
 |          |                  | Budget Travel  |  |
 |          |                  | Business Travel  |  |
 |          |                  | Camping  |  |

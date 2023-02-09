@@ -8,7 +8,9 @@ generatedBy: generateOntology.js
 
 For convenience, a complete ontology source in JSON format is also [available here](https://kg.diffbot.com/kg/ontology).
 
->New to the Diffbot Knowledge Graph? [Start here](dql-quickstart).
+> 🙋 
+> 
+> New to the Diffbot Knowledge Graph? [Start here](doc:getting-started-with-diffbot-knowledge-graph).
 
 ## {{ title }} Fields
 {{ #fields }}

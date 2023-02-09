@@ -45,6 +45,7 @@ An employment category reflecting various career types (e.g. *Human Resources*, 
 |                     |          |  Frontend Developer                 |  |  |  |
 |                     |          |  Fullstack Developer or Architect                 |  |  |  |
 |                     |          |  Games Developer                 |  |  |  |
+|                     |          |  Information Technology                 |  |  |  |
 |                     |          |  Mobile Developer                 |  |  |  |
 | Domain          |  Finance         |                   |   |  |  |
 | Domain          |  Food Preparation and Service         |                   |   |  |  |
@@ -82,6 +83,7 @@ An employment category indicating a person's relative rank (e.g. *Junior*, or *S
 |                     |          |                  | Leadership  |  |  |
 |                     |          |                  |   | Chief Officer |  |
 |                     |          |                  |   |  | CAO |
+|                     |          |                  |   |  | CBO |
 |                     |          |                  |   |  | CCO |
 |                     |          |                  |   |  | CEO |
 |                     |          |                  |   |  | CFO |
@@ -93,6 +95,8 @@ An employment category indicating a person's relative rank (e.g. *Junior*, or *S
 |                     |          |                  |   | President |  |
 |                     |          |                  |   | Vice President |  |
 |                     |          |                  | Shareholder  |  |  |
+|                     |          |  Head of government                 |  |  |  |
+|                     |          |  Head of state                 |  |  |  |
 |                     |          |  Manager                 |  |  |  |
 
 ## By Seniority

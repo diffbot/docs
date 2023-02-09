@@ -75,7 +75,7 @@ var entityTypes = {
     Product: { 
         title: "Product",
         id: "kg-ont-product",
-        description: "The product entity type encompasses products found throughout the web known to the Knowledge Graph. \n\nNote that fields are not guaranteed to exist in every entity record.",
+        description: "The product entity type encompasses retail products found throughout the web known to the Knowledge Graph. \n\nNote that fields are not guaranteed to exist in every entity record.",
         helpers: templateHelpers,
         exampleRecord: 'type:Product name:"Gold Down Alternative Sleeping Pillows"'
     },
@@ -106,10 +106,22 @@ var entityTypes = {
         description: "The Discussion entity type encompasses forum and other similar discussions found throughout the web and known to the Knowledge Graph. \n\nNote that fields are not guaranteed to exist in every entity record.",
         helpers: templateHelpers
     },
+    Job: { 
+        title: "Job",
+        id: "kg-ont-job",
+        description: "The Job entity type represents unique roles of employment found throughout the web and known to the Knowledge Graph. \n\nNote that fields are not guaranteed to exist in every entity record.",
+        helpers: templateHelpers
+    },
+    JobPost: { 
+        title: "Job Post",
+        id: "kg-ont-JobPost",
+        description: "The Job Post entity type encompasses all job postings found throughout the web and known to the Knowledge Graph. \n\nNote that fields are not guaranteed to exist in every entity record.",
+        helpers: templateHelpers
+    },
     AdministrativeArea: { 
         title: "AdministrativeArea",
         id: "kg-ont-administrativearea",
-        description: "The Administrative Area entity type encompasses all cities, regions, counties, sub-regions, provinces, and countries known to the Knowledge Graph. \n\nNote that fields are not guaranteed to exist in every entity record.",
+        description: "A sub-type of [Place](doc:place), the Administrative Area entity type encompasses all cities, regions, counties, sub-regions, provinces, and countries known to the Knowledge Graph. \n\nNote that fields are not guaranteed to exist in every entity record.",
         helpers: templateHelpers,
         exampleRecord: 'type:AdministrativeArea name:"California"'
     },
@@ -286,7 +298,7 @@ getExamples(entityTypes)
 
         // Render Template
         let output = render(template, entityModel);
-        console.log(`Rendered ${entityModel.title} Ontology! Writing Markdown...`);
+        console.log(`Rendered ${entityModel.title} Ontology! Generating Markdown... /docs/${entityModel.id}.md`);
         fs.writeFileSync(`../docs/${entityModel.id}.md`, output);
 
     }

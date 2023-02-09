@@ -10,7 +10,9 @@ Note that fields are not guaranteed to exist in every entity record.
 
 For convenience, a complete ontology source in JSON format is also [available here](https://kg.diffbot.com/kg/ontology).
 
->New to the Diffbot Knowledge Graph? [Start here](dql-quickstart).
+> 🙋 
+> 
+> New to the Diffbot Knowledge Graph? [Start here](doc:getting-started-with-diffbot-knowledge-graph).
 
 ## Organization Fields
 * [abnNumbers](#abnnumbers) 
@@ -27,14 +29,19 @@ For convenience, a complete ontology source in JSON format is also [available he
 * [ceo](#ceo) 
 * [chineseSocialCreditCodes](#chinesesocialcreditcodes) 
 * [companiesHouseIds](#companieshouseids) 
+* [competitors](#competitors) 
 * [crunchbaseUri](#crunchbaseuri) 
 * [cuitNumbers](#cuitnumbers) 
 * [customers](#customers) 
 * [descriptors](#descriptors) 
+* [diffbotClassification](#diffbotclassification) 
 * [edrpouNumbers](#edrpounumbers) 
+* [emailAddresses](#emailaddresses) 
+* [employeeCategories](#employeecategories) 
 * [facebookUri](#facebookuri) 
 * [founders](#founders) 
 * [foundingDate](#foundingdate) 
+* [fullName](#fullname) 
 * [githubUri](#githuburi) 
 * [googlePlusUri](#googleplusuri) 
 * [guiNumbers](#guinumbers) 
@@ -49,9 +56,9 @@ For convenience, a complete ontology source in JSON format is also [available he
 * [isDissolved](#isdissolved) 
 * [isNonProfit](#isnonprofit) 
 * [isPublic](#ispublic) 
+* [israeliCompanyNumbers](#israelicompanynumbers) 
 * [japaneseCorporateNumbers](#japanesecorporatenumbers) 
 * [kvedClassification](#kvedclassification) 
-* [leadership](#leadership) 
 * [linkedInUri](#linkedinuri) 
 * [location](#location) 
 * [locations](#locations) 
@@ -59,22 +66,25 @@ For convenience, a complete ontology source in JSON format is also [available he
 * [mccClassification](#mccclassification) 
 * [mccCode](#mcccode) 
 * [mccCodeDescription](#mcccodedescription) 
+* [monthlyTraffic](#monthlytraffic) 
+* [monthlyTrafficGrowth](#monthlytrafficgrowth) 
 * [motto](#motto) 
 * [naceClassification](#naceclassification) 
 * [nafClassification](#nafclassification) 
 * [naicsClassification](#naicsclassification) 
+* [naicsClassification2017](#naicsclassification2017) 
 * [nbActiveEmployeeEdges](#nbactiveemployeeedges) 
 * [nbEmployeeRanges](#nbemployeeranges) 
 * [nbEmployees](#nbemployees) 
 * [nbEmployeesMax](#nbemployeesmax) 
 * [nbEmployeesMin](#nbemployeesmin) 
-* [nbEmployeesOnLinkedIn](#nbemployeesonlinkedin) 
-* [nbEmployeesOnLinkedInOverTime](#nbemployeesonlinkedinovertime) 
 * [nbLocations](#nblocations) 
 * [nbUniqueInvestors](#nbuniqueinvestors) 
 * [norwegianOrganizationNumbers](#norwegianorganizationnumbers) 
+* [npiNumbers](#npinumbers) 
 * [okvedClassification](#okvedclassification) 
 * [parentCompany](#parentcompany) 
+* [partnerships](#partnerships) 
 * [phoneNumbers](#phonenumbers) 
 * [predecessors](#predecessors) 
 * [quarterlyRevenues](#quarterlyrevenues) 
@@ -99,6 +109,7 @@ For convenience, a complete ontology source in JSON format is also [available he
 * [twitterUri](#twitteruri) 
 * [uenNumbers](#uennumbers) 
 * [ukSicClassification](#uksicclassification) 
+* [ultimateParent](#ultimateparent) 
 * [vatIdentificationNumbers](#vatidentificationnumbers) 
 * [wikipediaUri](#wikipediauri) 
 * [yearlyRevenues](#yearlyrevenues) 
@@ -159,7 +170,7 @@ Note that certain longer field examples may be truncated for readability.
 * **Example:**
 ```
 {
-	"angellistUri": "angel.co/ibm"
+	"angellistUri": "angel.co/ibm-india-1"
 }
 ```
 ### anzSicClassification
@@ -171,8 +182,10 @@ Note that certain longer field examples may be truncated for readability.
 	"anzSicClassification": [
 		{
 			"code": "",
+			"level": 0,
 			"isPrimary": false,
 			"name": "",
+			"diffbotUri": "",
 			"version": ""
 		}
 	]
@@ -196,7 +209,7 @@ Note that certain longer field examples may be truncated for readability.
 	"boardMembers": [
 		{
 			"summary": "Indian American business executive and CEO of IBM",
-			"image": "https://kg.diffbot.com/image/api/get?fetch=yes&url=g%3Cj7P0St%7D9u.LnOv%7BI%7C%40g7.pBYINs%3Ff%7CGZ7jr-tGZhWf%3DK%2FOvy%5Bp%3CSKbs8i%7CEyNzC%60%3C_s8m5LcwEg%3CryObFQxFtEU3Cl%7DQ.I%5Do",
+			"image": "https://kg.diffbot.com/image/api/get?fetch=yes&url=g%3Cj7P0Stn8p.%5DjEp9G.Bd%7BkpWQMQfM%7B-by%3A%7B-Z6%3Aq-kf%7Bi-Eztos%5DtRnh%2F%7BzN_%3Cb4E.A%5Dm",
 			"types": [
 				"Person"
 			],
@@ -221,15 +234,16 @@ Note that certain longer field examples may be truncated for readability.
 			"type": "Person"
 		},
 		{
-			"summary": "CEO",
+			"summary": "Chairman at Surgical Care Group",
+			"image": "https://kg.diffbot.com/image/api/get?fetch=yes&url=g%3Cj7guSXzAoBWu.x0KwLZrUn.%5B%3CR0Aa4Hwygr9m6W%3Exl5G%60BkxmPASD4r%3Em6Z.Biv",
 			"types": [
 				"Person"
 			],
-			"name": "Michael Eskew",
-			"diffbotUri": "http://diffbot.com/entity/EOtRcekZPNmmUcf20y3uv6g",
-			"targetDiffbotUri": "http://diffbot.com/entity/EOtRcekZPNmmUcf20y3uv6g",
-			"targetDiffbotId": "EOtRcekZPNmmUcf20y3uv6g",
-			"surfaceForm": "Michael Eskew",
+			"name": "Alex Gorsky",
+			"diffbotUri": "http://diffbot.com/entity/Ee_LAfNCLMK-VpvaJV4xpAA",
+			"targetDiffbotUri": "http://diffbot.com/entity/Ee_LAfNCLMK-VpvaJV4xpAA",
+			"targetDiffbotId": "Ee_LAfNCLMK-VpvaJV4xpAA",
+			"surfaceForm": "Alex Gorsky",
 			"type": "Person"
 		}
 	]
@@ -261,7 +275,7 @@ Note that certain longer field examples may be truncated for readability.
 {
 	"capitalization": {
 		"currency": "USD",
-		"value": 124485100000
+		"value": 112935797000
 	}
 }
 ```
@@ -289,11 +303,11 @@ Note that certain longer field examples may be truncated for readability.
 				"Intangible",
 				"IndustryCategory"
 			],
-			"name": "Display Technology Companies",
-			"diffbotUri": "http://diffbot.com/entity/EX8GX-IaIP2Oi0rsYy_Bqfw",
-			"targetDiffbotUri": "http://diffbot.com/entity/EX8GX-IaIP2Oi0rsYy_Bqfw",
-			"targetDiffbotId": "EX8GX-IaIP2Oi0rsYy_Bqfw",
-			"surfaceForm": "Display Technology Companies",
+			"name": "Professional Service Companies",
+			"diffbotUri": "http://diffbot.com/entity/EwtPyR2IaMIWoUPbM6R7SAw",
+			"targetDiffbotUri": "http://diffbot.com/entity/EwtPyR2IaMIWoUPbM6R7SAw",
+			"targetDiffbotId": "EwtPyR2IaMIWoUPbM6R7SAw",
+			"surfaceForm": "Professional Service Companies",
 			"type": "IndustryCategory"
 		},
 		{
@@ -301,11 +315,11 @@ Note that certain longer field examples may be truncated for readability.
 				"Intangible",
 				"IndustryCategory"
 			],
-			"name": "Computer Hardware Companies",
-			"diffbotUri": "http://diffbot.com/entity/EqFeVtLRWOUqTdzVhcYwBBQ",
-			"targetDiffbotUri": "http://diffbot.com/entity/EqFeVtLRWOUqTdzVhcYwBBQ",
-			"targetDiffbotId": "EqFeVtLRWOUqTdzVhcYwBBQ",
-			"surfaceForm": "Computer Hardware Companies",
+			"name": "Display Technology Companies",
+			"diffbotUri": "http://diffbot.com/entity/EX8GX-IaIP2Oi0rsYy_Bqfw",
+			"targetDiffbotUri": "http://diffbot.com/entity/EX8GX-IaIP2Oi0rsYy_Bqfw",
+			"targetDiffbotId": "EX8GX-IaIP2Oi0rsYy_Bqfw",
+			"surfaceForm": "Display Technology Companies",
 			"type": "IndustryCategory"
 		}
 	]
@@ -319,7 +333,7 @@ Note that certain longer field examples may be truncated for readability.
 {
 	"ceo": {
 		"summary": "Indian American business executive and CEO of IBM",
-		"image": "https://kg.diffbot.com/image/api/get?fetch=yes&url=g%3Cj7P0St%7D9u.LnOv%7BI%7C%40g7.pBYINs%3Ff%7CGZ7jr-tGZhWf%3DK%2FOvy%5Bp%3CSKbs8i%7CEyNzC%60%3C_s8m5LcwEg%3CryObFQxFtEU3Cl%7DQ.I%5Do",
+		"image": "https://kg.diffbot.com/image/api/get?fetch=yes&url=g%3Cj7P0Stn8p.%5DjEp9G.Bd%7BkpWQMQfM%7B-by%3A%7B-Z6%3Aq-kf%7Bi-Eztos%5DtRnh%2F%7BzN_%3Cb4E.A%5Dm",
 		"types": [
 			"Person"
 		],
@@ -350,6 +364,61 @@ Note that certain longer field examples may be truncated for readability.
 	"companiesHouseIds": ""
 }
 ```
+### competitors
+  Current competitors of this organization.
+* **Type:** LinkedEntity
+* **Example:**
+```
+{
+	"competitors": [
+		{
+			"summary": "Organization based in Blue Bell, Pennsylvania, United States",
+			"image": "https://kg.diffbot.com/image/api/get?fetch=yes&url=g%3Cj7P0St0DnBJf.x0KwLZrUn.%5B%3CR0Aa4Hh%3B%5Bv738ZqOr7U%3FGvvw%3Ez%5C5%60%7C%3FY7PaG.2Nm",
+			"types": [
+				"Organization",
+				"Corporation",
+				"Company"
+			],
+			"name": "Unisys Corporation",
+			"diffbotUri": "http://diffbot.com/entity/Eghdylt6mOj2yLNkBS-tJ9A",
+			"targetDiffbotUri": "http://diffbot.com/entity/Eghdylt6mOj2yLNkBS-tJ9A",
+			"targetDiffbotId": "Eghdylt6mOj2yLNkBS-tJ9A",
+			"surfaceForm": "Unisys Corporation",
+			"type": "Organization"
+		},
+		{
+			"summary": "Organization based in Sunnyvale, California, United States",
+			"image": "https://kg.diffbot.com/image/api/get?fetch=yes&url=g%3Cj7P0St0DnBJf.x0KwLZrUn.%5B%3CR0Aa4Hh%3B%5Bv738ZqOr7U%3FjvIT%3EsS%40%7Es%3CY7PaG.2Nm",
+			"types": [
+				"Organization",
+				"Corporation",
+				"Company"
+			],
+			"name": "NetApp, Inc.",
+			"diffbotUri": "http://diffbot.com/entity/EySkhspqnP4-4mE-RI20wig",
+			"targetDiffbotUri": "http://diffbot.com/entity/EySkhspqnP4-4mE-RI20wig",
+			"targetDiffbotId": "EySkhspqnP4-4mE-RI20wig",
+			"surfaceForm": "NetApp, Inc.",
+			"type": "Organization"
+		},
+		{
+			"summary": "German software producer",
+			"image": "https://kg.diffbot.com/image/api/get?fetch=yes&url=g%3Cj7P0St0DnBJf.x0KwLZrUn.%5B%3CR0Aa4Hh%3B%5Bv738ZqOr7U%3FfvEw%3Ex%2FlL5L%7BL%40fG%60%7E.yMT",
+			"types": [
+				"Organization",
+				"Corporation",
+				"Company"
+			],
+			"name": "SAP",
+			"diffbotUri": "http://diffbot.com/entity/E1YW6YHcPMZi7H-uA9fl6hg",
+			"targetDiffbotUri": "http://diffbot.com/entity/E1YW6YHcPMZi7H-uA9fl6hg",
+			"targetDiffbotId": "E1YW6YHcPMZi7H-uA9fl6hg",
+			"surfaceForm": "SAP",
+			"type": "Organization"
+		}
+	]
+}
+```
 ### crunchbaseUri
   Link to the Crunchbase profile of this entity
 * **Type:** URL
@@ -376,33 +445,48 @@ Note that certain longer field examples may be truncated for readability.
 {
 	"customers": [
 		{
-			"recordId": "EPdsrDmLiMQCskvBLp_dloQ@1050",
-			"name": "Baseline Telematics",
-			"websiteUris": [
-				"wikidata.org/entity/Q3632283"
+			"summary": "Systematic internaliser",
+			"image": "https://kg.diffbot.com/image/api/get?fetch=yes&url=g%3Cj7P0St0DnBJf.x0KwLZrUn.%5B%3CR0Aa4Hh%3B%5Bv738ZqOr7U%3FcvBp%3ExQ%3Bal%7D%5C%7COe7e%7E%3Fu.%60%7CK",
+			"types": [
+				"Organization",
+				"Corporation",
+				"Company"
 			],
-			"surfaceForm": "Baseline Telematics",
-			"position": "companyCustomersCompany",
+			"name": "Bank of Nova Scotia",
+			"diffbotUri": "http://diffbot.com/entity/Epqqo5t1JMbON8FF9IGpi-g",
+			"targetDiffbotUri": "http://diffbot.com/entity/Epqqo5t1JMbON8FF9IGpi-g",
+			"targetDiffbotId": "Epqqo5t1JMbON8FF9IGpi-g",
+			"surfaceForm": "Bank of Nova Scotia",
 			"type": "Organization"
 		},
 		{
-			"recordId": "EPdsrDmLiMQCskvBLp_dloQ@629",
-			"name": "United States Tennis Association (USTA)",
-			"websiteUris": [
-				"wikidata.org/entity/Q815369"
+			"summary": "British multinational telecommunications company",
+			"image": "https://kg.diffbot.com/image/api/get?fetch=yes&url=g%3Cj7P0St0DnBJf.x0KwLZrUn.%5B%3CR0Aa4Hh%3B%5Bv738ZqOr7U%3Fav%40o%3E%7B%5D0Ni%3Bh0.jF%60",
+			"types": [
+				"Organization",
+				"Corporation",
+				"Company"
 			],
-			"surfaceForm": "United States Tennis Association (USTA)",
-			"position": "companyCustomersCompany",
+			"name": "Vodafone",
+			"diffbotUri": "http://diffbot.com/entity/EWk9MPRSUNI6yTwVq1ZEncQ",
+			"targetDiffbotUri": "http://diffbot.com/entity/EWk9MPRSUNI6yTwVq1ZEncQ",
+			"targetDiffbotId": "EWk9MPRSUNI6yTwVq1ZEncQ",
+			"surfaceForm": "Vodafone",
 			"type": "Organization"
 		},
 		{
-			"recordId": "EPdsrDmLiMQCskvBLp_dloQ@897",
-			"name": "Korean Air Lines Co. Ltd",
-			"websiteUris": [
-				"wikidata.org/entity/Q188920"
+			"summary": "U.S. discount retailer based in Arkansas",
+			"image": "https://kg.diffbot.com/image/api/get?fetch=yes&url=g%3Cj7P0St0DnBJf.x0KwLZrUn.%5B%3CR0Aa4Hh%3B%5Bv738ZqOr7U%3FDvsO%3E%7CO8Zd%3EnzMi%3Fh.K%7C%3E",
+			"types": [
+				"Organization",
+				"Corporation",
+				"Company"
 			],
-			"surfaceForm": "Korean Air Lines Co. Ltd",
-			"position": "companyCustomersCompany",
+			"name": "Walmart Inc.",
+			"diffbotUri": "http://diffbot.com/entity/ExADb18D6MAmunRrlVELe8A",
+			"targetDiffbotUri": "http://diffbot.com/entity/ExADb18D6MAmunRrlVELe8A",
+			"targetDiffbotId": "ExADb18D6MAmunRrlVELe8A",
+			"surfaceForm": "Walmart Inc.",
 			"type": "Organization"
 		}
 	]
@@ -415,9 +499,37 @@ Note that certain longer field examples may be truncated for readability.
 ```
 {
 	"descriptors": [
-		"computer manufacturing",
-		"data storage systems manufacturing",
-		"computer peripheral equipment manufacturing"
+		"information technology",
+		"computer and office equipment",
+		"control, electromedical, measuring and navigational instruments manufacturing"
+	]
+}
+```
+### diffbotClassification
+  Diffbot Industry Classification.
+* **Type:** ClassificationCode
+* **Example:**
+```
+{
+	"diffbotClassification": [
+		{
+			"level": 3,
+			"isPrimary": true,
+			"name": "Cloud Computing Providers",
+			"diffbotUri": "https://diffbot.com/entity/IC_G015C2pO7i"
+		},
+		{
+			"level": 2,
+			"isPrimary": true,
+			"name": "Computer Hardware Companies",
+			"diffbotUri": "https://diffbot.com/entity/IC_D6llNR8xOo"
+		},
+		{
+			"level": 1,
+			"isPrimary": true,
+			"name": "Software Companies",
+			"diffbotUri": "https://diffbot.com/entity/IC_H04NbzO6L8"
+		}
 	]
 }
 ```
@@ -428,6 +540,61 @@ Note that certain longer field examples may be truncated for readability.
 ```
 {
 	"edrpouNumbers": ""
+}
+```
+### emailAddresses
+  Email addresses of this organization.
+* **Type:** Contact
+* **Example:**
+```
+{
+	"emailAddresses": [
+		{
+			"contactString": "ews@us.ibm.com",
+			"type": "None"
+		},
+		{
+			"contactString": "tfleming@us.ibm.com",
+			"type": "PROFESSIONAL"
+		}
+	]
+}
+```
+### employeeCategories
+  Employee categories including employee count and first hire date
+* **Type:** EmployeeCategory
+* **Example:**
+```
+{
+	"employeeCategories": [
+		{
+			"firstHireDate": {
+				"str": "d0001-XX-XX",
+				"precision": 1,
+				"timestamp": -62135769600000
+			},
+			"category": "Frontend Developer",
+			"nbEmployees": 479
+		},
+		{
+			"firstHireDate": {
+				"str": "d1959-09-XX",
+				"precision": 2,
+				"timestamp": -326160000000
+			},
+			"category": "Agriculture, Farming, Forestry and related",
+			"nbEmployees": 63
+		},
+		{
+			"firstHireDate": {
+				"str": "d1956-06-XX",
+				"precision": 2,
+				"timestamp": -428716800000
+			},
+			"category": "Industrial Production and Distribution (goods and food)",
+			"nbEmployees": 109
+		}
+	]
 }
 ```
 ### facebookUri
@@ -448,7 +615,7 @@ Note that certain longer field examples may be truncated for readability.
 	"founders": [
 		{
 			"summary": "American businessman",
-			"image": "https://kg.diffbot.com/image/api/get?fetch=yes&url=g%3Cj7P0St0DnBJf.x0KwLZrUn.%5B%3CR0Aa4Hh%3B%5Bv738ZqOr7U%3FBvqQ%3EhV%7D_o1mz3%5BFetLz63rMs%3F.%7CS%60",
+			"image": "https://kg.diffbot.com/image/api/get?fetch=yes&url=g%3Cj7P0St%7D9u.LnOv%7BI%7C%40g7.pBYINs%3Ff%7CGZ7jr-tGZhWf%3DK%2FOvy%5Bp%3CSKbs8i%7CEyDp8%3BxO%5CuH89f0Sht%60%7CC%5B",
 			"types": [
 				"Person"
 			],
@@ -461,7 +628,7 @@ Note that certain longer field examples may be truncated for readability.
 		},
 		{
 			"summary": "American businessman; chairman and CEO of IBM",
-			"image": "https://kg.diffbot.com/image/api/get?fetch=yes&url=g%3Cj7P0St0DnBJf.x0KwLZrUn.%5B%3CR0Aa4Hh%3B%5Bv738ZqOr7U%3FhvGS%3EyV%3BZd%3FYe%40Q9m2Gt6%40x.o%3BK",
+			"image": "https://kg.diffbot.com/image/api/get?fetch=yes&url=g%3Cj7P0St%7D9u.LnOv%7BI%7C%40g7.pBYINs%3Ff%7CGZ7jr-tGZhWf%3DK%2FOvy%5Bp%3CSKbs8i%7CEyNzCX%3EXt7l8Tc3j%5D%7Ef%3BMZFQpBl%3FJg_%7D4I.C_o",
 			"types": [
 				"Person"
 			],
@@ -486,6 +653,15 @@ Note that certain longer field examples may be truncated for readability.
 		"precision": 3,
 		"timestamp": -1847577600000
 	}
+}
+```
+### fullName
+  Full name for this entity
+* **Type:** String
+* **Example:**
+```
+{
+	"fullName": "International Business Machines Corporation"
 }
 ```
 ### githubUri
@@ -533,8 +709,10 @@ Note that certain longer field examples may be truncated for readability.
 	"iSicClassification": [
 		{
 			"code": "",
+			"level": 0,
 			"isPrimary": false,
 			"name": "",
+			"diffbotUri": "",
 			"version": ""
 		}
 	]
@@ -546,7 +724,9 @@ Note that certain longer field examples may be truncated for readability.
 * **Example:**
 ```
 {
-	"indianCorporateIdentityNumbers": ""
+	"indianCorporateIdentityNumbers": [
+		"U30007KA1991PLC012619"
+	]
 }
 ```
 ### industries
@@ -556,15 +736,15 @@ Note that certain longer field examples may be truncated for readability.
 ```
 {
 	"industries": [
-		"Manufacturing Companies",
-		"Electronic Products Manufacturers",
-		"Display Technology Companies"
+		"Cloud Computing Providers",
+		"Computer Hardware Companies",
+		"Software Companies"
 	]
 }
 ```
 ### investments
   Investments received by this organization.
-* **Type:** Investment
+* **Type:** InvestmentField
 * **Example:**
 ```
 {
@@ -670,6 +850,15 @@ Note that certain longer field examples may be truncated for readability.
 	"isPublic": false
 }
 ```
+### israeliCompanyNumbers
+  The unique identifier given to Israeli comapnies upon registration.
+* **Type:** String
+* **Example:**
+```
+{
+	"israeliCompanyNumbers": ""
+}
+```
 ### japaneseCorporateNumbers
   The Corporate Numbers are 13-digit identifiers assigned by the National Tax Agency to companies and other organizations registered in Japan.
 * **Type:** String
@@ -688,73 +877,11 @@ Note that certain longer field examples may be truncated for readability.
 	"kvedClassification": [
 		{
 			"code": "",
+			"level": 0,
 			"isPrimary": false,
 			"name": "",
+			"diffbotUri": "",
 			"version": ""
-		}
-	]
-}
-```
-### leadership
-  List of organization C-Level Officers.
-* **Type:** Employee
-* **Example:**
-```
-{
-	"leadership": [
-		{
-			"isCurrent": false,
-			"from": {
-				"str": "",
-				"precision": 0,
-				"timestamp": 0
-			},
-			"categories": [
-				{
-					"summary": "",
-					"image": "",
-					"images": [
-						{
-							"classifications": "",
-							"fingerprint": "",
-							"title": "",
-							"isCached": false,
-							"url": ""
-						}
-					],
-					"types": "",
-					"websiteUris": "",
-					"diffbotUri": "",
-					"name": "",
-					"targetDiffbotUri": "",
-					"surfaceForm": ""
-				}
-			],
-			"to": {
-				"str": "",
-				"precision": 0,
-				"timestamp": 0
-			},
-			"employee": {
-				"summary": "",
-				"image": "",
-				"images": [
-					{
-						"classifications": "",
-						"fingerprint": "",
-						"title": "",
-						"isCached": false,
-						"url": ""
-					}
-				],
-				"types": "",
-				"websiteUris": "",
-				"diffbotUri": "",
-				"name": "",
-				"targetDiffbotUri": "",
-				"surfaceForm": ""
-			},
-			"title": ""
 		}
 	]
 }
@@ -776,8 +903,8 @@ Note that certain longer field examples may be truncated for readability.
 {
 	"location": {
 		"country": {
-			"summary": "Sovereign state in North America",
-			"image": "https://kg.diffbot.com/image/api/get?fetch=yes&url=g%3Cj7P0St0DnBJf.x0KwLZrUn.%5B%3CR0Aa4Hh%3B%5Bv738ZqOr7U%3FfvEQ%3El%601Nw%7BM0Bf7hu7z%3FRe9s4XwGXedrKUAN%28%3D%5ECHnM%60%29.%7BOV",
+			"summary": "Country in North America",
+			"image": "https://kg.diffbot.com/image/api/get?fetch=yes&url=g%3Cj7P0St0DnBJf.x0KwLZrUn.%5B%3CR0Aa4Hh%3B%5Bv738ZqOr7U%3FevDs%3El%601Nw%7BM0Bf7hu7z%3FRe9s4XwGXedrKUAN%28%40aCHnM%60%29.%7BOV",
 			"types": [
 				"Place",
 				"AdministrativeArea",
@@ -787,12 +914,12 @@ Note that certain longer field examples may be truncated for readability.
 			"diffbotUri": "http://diffbot.com/entity/E01d4EK33MmCosgI2KXa4-A",
 			"targetDiffbotUri": "http://diffbot.com/entity/E01d4EK33MmCosgI2KXa4-A",
 			"targetDiffbotId": "E01d4EK33MmCosgI2KXa4-A",
-			"type": "AdministrativeArea"
+			"type": "Place"
 		},
 		"isCurrent": true,
 		"address": "1 New Orchard Road, Armonk, 10504-1722, New York, United States",
 		"city": {
-			"summary": "Hamlet in Westchester County, New York",
+			"summary": "Hamlet in Westchester County, New York, United States",
 			"image": "https://kg.diffbot.com/image/api/get?fetch=yes&url=g%3Cj7P0St0DnBJf.x0KwLZrUn.%5B%3CR0Aa4Hh%3B%5Bv738ZqOr7U%3FdvCo%3E%7CS%3Faf4_%3EU_JXRG%7BEa%2FCS0%5Bq%3Ch4%5Bp%40%5E1%5Ew%3Ek%3FDp%3F_p%3Bv%3DN%7DTp%3BI3Wk3dtMW4PhBc0X%5Dmo0KxFPrQp7T%2FNe%3AYy.gHZ",
 			"types": [
 				"Place",
@@ -802,8 +929,9 @@ Note that certain longer field examples may be truncated for readability.
 			"diffbotUri": "http://diffbot.com/entity/EFYOMni-nNtScxpZwteaMxQ",
 			"targetDiffbotUri": "http://diffbot.com/entity/EFYOMni-nNtScxpZwteaMxQ",
 			"targetDiffbotId": "EFYOMni-nNtScxpZwteaMxQ",
-			"type": "AdministrativeArea"
+			"type": "Place"
 		},
+		"isPrimary": true,
 		"street": "1 New Orchard Road",
 		"latitude": 41.1134033203125,
 		"precision": 0.10000000149011612,
@@ -821,7 +949,7 @@ Note that certain longer field examples may be truncated for readability.
 			"diffbotUri": "http://diffbot.com/entity/E1NxI_KXaMbiP5g2aM9MRdw",
 			"targetDiffbotUri": "http://diffbot.com/entity/E1NxI_KXaMbiP5g2aM9MRdw",
 			"targetDiffbotId": "E1NxI_KXaMbiP5g2aM9MRdw",
-			"type": "AdministrativeArea"
+			"type": "Place"
 		},
 		"longitude": -73.7203598022461
 	}
@@ -836,8 +964,8 @@ Note that certain longer field examples may be truncated for readability.
 	"locations": [
 		{
 			"country": {
-				"summary": "Sovereign state in North America",
-				"image": "https://kg.diffbot.com/image/api/get?fetch=yes&url=g%3Cj7P0St0DnBJf.x0KwLZrUn.%5B%3CR0Aa4Hh%3B%5Bv738ZqOr7U%3FfvEQ%3El%601Nw%7BM0Bf7hu7z%3FRe9s4XwGXedrKUAN%28%3D%5ECHnM%60%29.%7BOV",
+				"summary": "Country in North America",
+				"image": "https://kg.diffbot.com/image/api/get?fetch=yes&url=g%3Cj7P0St0DnBJf.x0KwLZrUn.%5B%3CR0Aa4Hh%3B%5Bv738ZqOr7U%3FevDs%3El%601Nw%7BM0Bf7hu7z%3FRe9s4XwGXedrKUAN%28%40aCHnM%60%29.%7BOV",
 				"types": [
 					"Place",
 					"AdministrativeArea",
@@ -847,12 +975,11 @@ Note that certain longer field examples may be truncated for readability.
 				"diffbotUri": "http://diffbot.com/entity/E01d4EK33MmCosgI2KXa4-A",
 				"targetDiffbotUri": "http://diffbot.com/entity/E01d4EK33MmCosgI2KXa4-A",
 				"targetDiffbotId": "E01d4EK33MmCosgI2KXa4-A",
-				"type": "AdministrativeArea"
+				"type": "Place"
 			},
-			"isCurrent": true,
-			"address": "1 New Orchard Rd, Armonk, New York",
+			"address": "1 New Orchard Road, Armonk, 10504, New York, USA",
 			"city": {
-				"summary": "Hamlet in Westchester County, New York",
+				"summary": "Hamlet in Westchester County, New York, United States",
 				"image": "https://kg.diffbot.com/image/api/get?fetch=yes&url=g%3Cj7P0St0DnBJf.x0KwLZrUn.%5B%3CR0Aa4Hh%3B%5Bv738ZqOr7U%3FdvCo%3E%7CS%3Faf4_%3EU_JXRG%7BEa%2FCS0%5Bq%3Ch4%5Bp%40%5E1%5Ew%3Ek%3FDp%3F_p%3Bv%3DN%7DTp%3BI3Wk3dtMW4PhBc0X%5Dmo0KxFPrQp7T%2FNe%3AYy.gHZ",
 				"types": [
 					"Place",
@@ -862,8 +989,26 @@ Note that certain longer field examples may be truncated for readability.
 				"diffbotUri": "http://diffbot.com/entity/EFYOMni-nNtScxpZwteaMxQ",
 				"targetDiffbotUri": "http://diffbot.com/entity/EFYOMni-nNtScxpZwteaMxQ",
 				"targetDiffbotId": "EFYOMni-nNtScxpZwteaMxQ",
-				"type": "AdministrativeArea"
+				"type": "Place"
 			},
+			"subregion": {
+				"summary": "County in New York, United States. Connector between New York City/Long Island and the rest of New York",
+				"image": "https://kg.diffbot.com/image/api/get?fetch=yes&url=g%3Cj7P0St0DnBJf.x0KwLZrUn.%5B%3CR0Aa4Hh%3B%5Bv738ZqOr7U%3FivHt%3ErO%3CLr2YiFq7R%7EJq6UoKm7MyKm%7B%5Ex6G3by1d2Vp%3FmpmwN%5D%7C_.%40%5C%7B",
+				"types": [
+					"Place",
+					"AdministrativeArea"
+				],
+				"name": "Westchester County",
+				"diffbotUri": "http://diffbot.com/entity/EoKezLIvJP82Xm_cWVQyCQA",
+				"targetDiffbotUri": "http://diffbot.com/entity/EoKezLIvJP82Xm_cWVQyCQA",
+				"targetDiffbotId": "EoKezLIvJP82Xm_cWVQyCQA",
+				"type": "Place"
+			},
+			"latitude": 41.1075439453125,
+			"precision": 0.10000000149011612,
+			"postalCode": "10504-1722",
+			"isCurrent": false,
+			"isPrimary": true,
 			"street": "1 New Orchard Rd",
 			"metroArea": {
 				"summary": "Most populous metropolitan area in the United States",
@@ -876,24 +1021,8 @@ Note that certain longer field examples may be truncated for readability.
 				"diffbotUri": "http://diffbot.com/entity/EAtK9ZhUYMKmI_UzSrYinmw",
 				"targetDiffbotUri": "http://diffbot.com/entity/EAtK9ZhUYMKmI_UzSrYinmw",
 				"targetDiffbotId": "EAtK9ZhUYMKmI_UzSrYinmw",
-				"type": "AdministrativeArea"
+				"type": "Place"
 			},
-			"subregion": {
-				"summary": "County in New York, United States. Connector between New York City/Long Island and the rest of New York",
-				"image": "https://kg.diffbot.com/image/api/get?fetch=yes&url=g%3Cj7P0St0DnBJf.x0KwLZrUn.%5B%3CR0Aa4Hh%3B%5Bv738ZqOr7U%3FivHt%3ErO%3CLr2YiFq7R%7EJq6UoKm7MyKm%7B%5Ex6G3by1d2Vp%3FmpmwN%5D%7C_.%40%5C%7B",
-				"types": [
-					"Place",
-					"AdministrativeArea"
-				],
-				"name": "Westchester County",
-				"diffbotUri": "http://diffbot.com/entity/EoKezLIvJP82Xm_cWVQyCQA",
-				"targetDiffbotUri": "http://diffbot.com/entity/EoKezLIvJP82Xm_cWVQyCQA",
-				"targetDiffbotId": "EoKezLIvJP82Xm_cWVQyCQA",
-				"type": "AdministrativeArea"
-			},
-			"latitude": 41.1075439453125,
-			"precision": 0.10000000149011612,
-			"postalCode": "10504-1722",
 			"region": {
 				"summary": "State of the United States of America",
 				"image": "https://kg.diffbot.com/image/api/get?fetch=yes&url=g%3Cj7P0St0DnBJf.x0KwLZrUn.%5B%3CR0Aa4Hh%3B%5Bv738ZqOr7U%3FevDp%3EsGo0d%3Cc%3FPfxZ%7DGx8Zg.o%3BK",
@@ -906,14 +1035,14 @@ Note that certain longer field examples may be truncated for readability.
 				"diffbotUri": "http://diffbot.com/entity/E1NxI_KXaMbiP5g2aM9MRdw",
 				"targetDiffbotUri": "http://diffbot.com/entity/E1NxI_KXaMbiP5g2aM9MRdw",
 				"targetDiffbotId": "E1NxI_KXaMbiP5g2aM9MRdw",
-				"type": "AdministrativeArea"
+				"type": "Place"
 			},
 			"longitude": -73.72123718261719
 		},
 		{
 			"country": {
-				"summary": "Sovereign state in North America",
-				"image": "https://kg.diffbot.com/image/api/get?fetch=yes&url=g%3Cj7P0St0DnBJf.x0KwLZrUn.%5B%3CR0Aa4Hh%3B%5Bv738ZqOr7U%3FfvEQ%3El%601Nw%7BM0Bf7hu7z%3FRe9s4XwGXedrKUAN%28%3D%5ECHnM%60%29.%7BOV",
+				"summary": "Country in North America",
+				"image": "https://kg.diffbot.com/image/api/get?fetch=yes&url=g%3Cj7P0St0DnBJf.x0KwLZrUn.%5B%3CR0Aa4Hh%3B%5Bv738ZqOr7U%3FevDs%3El%601Nw%7BM0Bf7hu7z%3FRe9s4XwGXedrKUAN%28%40aCHnM%60%29.%7BOV",
 				"types": [
 					"Place",
 					"AdministrativeArea",
@@ -923,88 +1052,121 @@ Note that certain longer field examples may be truncated for readability.
 				"diffbotUri": "http://diffbot.com/entity/E01d4EK33MmCosgI2KXa4-A",
 				"targetDiffbotUri": "http://diffbot.com/entity/E01d4EK33MmCosgI2KXa4-A",
 				"targetDiffbotId": "E01d4EK33MmCosgI2KXa4-A",
-				"type": "AdministrativeArea"
+				"type": "Place"
 			},
-			"isCurrent": false,
-			"address": "Armonk, New York",
+			"address": "316 Bel Air Bel Air Blvd, Mobile, Alabama",
 			"city": {
-				"summary": "Hamlet in Westchester County, New York",
-				"image": "https://kg.diffbot.com/image/api/get?fetch=yes&url=g%3Cj7P0St0DnBJf.x0KwLZrUn.%5B%3CR0Aa4Hh%3B%5Bv738ZqOr7U%3FdvCo%3E%7CS%3Faf4_%3EU_JXRG%7BEa%2FCS0%5Bq%3Ch4%5Bp%40%5E1%5Ew%3Ek%3FDp%3F_p%3Bv%3DN%7DTp%3BI3Wk3dtMW4PhBc0X%5Dmo0KxFPrQp7T%2FNe%3AYy.gHZ",
+				"summary": "County seat of Mobile County, Alabama, United States",
+				"image": "https://kg.diffbot.com/image/api/get?fetch=yes&url=g%3Cj7P0St0DnBJf.x0KwLZrUn.%5B%3CR0Aa4Hh%3B%5Bv738ZqOr7U%3FevDq%3Er%5D%7EVo1Y%5EPoFm87GCNhEr%7CC%5BQ%5C1b1Fb%2Fcj2%5B%7EQ%609P%2FCv%3C%5EzVv%3FG8J_sS5%3ESCPT%3F%608Qc%3BE%7CCrGZqP%7D4L.Zs%7D",
 				"types": [
 					"Place",
-					"AdministrativeArea"
+					"AdministrativeArea",
+					"City"
 				],
-				"name": "Armonk",
-				"diffbotUri": "http://diffbot.com/entity/EFYOMni-nNtScxpZwteaMxQ",
-				"targetDiffbotUri": "http://diffbot.com/entity/EFYOMni-nNtScxpZwteaMxQ",
-				"targetDiffbotId": "EFYOMni-nNtScxpZwteaMxQ",
-				"type": "AdministrativeArea"
+				"name": "Mobile",
+				"diffbotUri": "http://diffbot.com/entity/Euyo26vh8MC-BQ5DdSDNrYw",
+				"targetDiffbotUri": "http://diffbot.com/entity/Euyo26vh8MC-BQ5DdSDNrYw",
+				"targetDiffbotId": "Euyo26vh8MC-BQ5DdSDNrYw",
+				"type": "Place"
 			},
-			"metroArea": {
-				"summary": "Most populous metropolitan area in the United States",
-				"image": "https://kg.diffbot.com/image/api/get?fetch=yes&url=g%3Cj7P0St0DnBJf.x0KwLZrUn.%5B%3CR0Aa4Hh%3B%5Bv738ZqOr7U%3FhvGp%3EsG%7B%3Ah%40l%3AQiDb39t6%7ExIf.T0J",
-				"types": [
-					"Place",
-					"AdministrativeArea"
-				],
-				"name": "New York metropolitan area",
-				"diffbotUri": "http://diffbot.com/entity/EAtK9ZhUYMKmI_UzSrYinmw",
-				"targetDiffbotUri": "http://diffbot.com/entity/EAtK9ZhUYMKmI_UzSrYinmw",
-				"targetDiffbotId": "EAtK9ZhUYMKmI_UzSrYinmw",
-				"type": "AdministrativeArea"
-			},
+			"street": "316 Bel Air Bel Air Blvd",
 			"subregion": {
-				"summary": "County in New York, United States. Connector between New York City/Long Island and the rest of New York",
-				"image": "https://kg.diffbot.com/image/api/get?fetch=yes&url=g%3Cj7P0St0DnBJf.x0KwLZrUn.%5B%3CR0Aa4Hh%3B%5Bv738ZqOr7U%3FivHt%3ErO%3CLr2YiFq7R%7EJq6UoKm7MyKm%7B%5Ex6G3by1d2Vp%3FmpmwN%5D%7C_.%40%5C%7B",
+				"summary": "County in Alabama, United States",
+				"image": "https://kg.diffbot.com/image/api/get?fetch=yes&url=g%3Cj7P0St0DnBJf.x0KwLZrUn.%5B%3CR0Aa4Hh%3B%5Bv738ZqOr7U%3FdvCr%3ErO%3CLr2Y%5CM%5B%3AZ%7C9e%3FVmLq4KzWb0Wpt_0Xq3%5B%60RqHo%3A.%7BOV",
 				"types": [
 					"Place",
-					"AdministrativeArea"
+					"AdministrativeArea",
+					"Subregion"
 				],
-				"name": "Westchester County",
-				"diffbotUri": "http://diffbot.com/entity/EoKezLIvJP82Xm_cWVQyCQA",
-				"targetDiffbotUri": "http://diffbot.com/entity/EoKezLIvJP82Xm_cWVQyCQA",
-				"targetDiffbotId": "EoKezLIvJP82Xm_cWVQyCQA",
-				"type": "AdministrativeArea"
+				"name": "Mobile County",
+				"diffbotUri": "http://diffbot.com/entity/EMW8U0M1WN0qUskYdtgVRfA",
+				"targetDiffbotUri": "http://diffbot.com/entity/EMW8U0M1WN0qUskYdtgVRfA",
+				"targetDiffbotId": "EMW8U0M1WN0qUskYdtgVRfA",
+				"type": "Place"
 			},
-			"latitude": 41.131256103515625,
-			"precision": 3.956873655319214,
-			"postalCode": "10504",
+			"latitude": 30.66517448425293,
+			"precision": 21.592092514038086,
+			"postalCode": "36606",
 			"region": {
 				"summary": "State of the United States of America",
-				"image": "https://kg.diffbot.com/image/api/get?fetch=yes&url=g%3Cj7P0St0DnBJf.x0KwLZrUn.%5B%3CR0Aa4Hh%3B%5Bv738ZqOr7U%3FevDp%3EsGo0d%3Cc%3FPfxZ%7DGx8Zg.o%3BK",
+				"image": "https://kg.diffbot.com/image/api/get?fetch=yes&url=g%3Cj7P0St0DnBJf.x0KwLZrUn.%5B%3CR0Aa4Hh%3B%5Bv738ZqOr7U%3FGvvu%3ExS%7DYb%3B%60zrf9%5BpEg.%60%7CK",
 				"types": [
 					"Place",
 					"AdministrativeArea",
 					"Region"
 				],
-				"name": "New York",
-				"diffbotUri": "http://diffbot.com/entity/E1NxI_KXaMbiP5g2aM9MRdw",
-				"targetDiffbotUri": "http://diffbot.com/entity/E1NxI_KXaMbiP5g2aM9MRdw",
-				"targetDiffbotId": "E1NxI_KXaMbiP5g2aM9MRdw",
-				"type": "AdministrativeArea"
+				"name": "Alabama",
+				"diffbotUri": "http://diffbot.com/entity/EB0V6uu7AMAmX8qSb0A3mpw",
+				"targetDiffbotUri": "http://diffbot.com/entity/EB0V6uu7AMAmX8qSb0A3mpw",
+				"targetDiffbotId": "EB0V6uu7AMAmX8qSb0A3mpw",
+				"type": "Place"
 			},
-			"longitude": -73.71214294433594
+			"longitude": -88.1258773803711
 		},
 		{
 			"country": {
-				"summary": "Sovereign state in North America",
-				"image": "https://kg.diffbot.com/image/api/get?fetch=yes&url=g%3Cj7P0St0DnBJf.x0KwLZrUn.%5B%3CR0Aa4Hh%3B%5Bv738ZqOr7U%3FfvEQ%3El%601Nw%7BM0Bf7hu7z%3FRe9s4XwGXedrKUAN%28%3D%5ECHnM%60%29.%7BOV",
+				"summary": "Country in South Asia",
+				"image": "https://kg.diffbot.com/image/api/get?fetch=yes&url=g%3Cj7P0St0DnBJf.x0KwLZrUn.%5B%3CR0Aa4Hh%3B%5Bv738ZqOr7U%3FDvsq%3En%5C0Vd-zKd17-nnr%40PqVd-CsU%5CzU3Xp%7D%28I3j%3BLo%29.%7BJo",
 				"types": [
 					"Place",
 					"AdministrativeArea",
 					"Country"
 				],
-				"name": "United States of America",
-				"diffbotUri": "http://diffbot.com/entity/E01d4EK33MmCosgI2KXa4-A",
-				"targetDiffbotUri": "http://diffbot.com/entity/E01d4EK33MmCosgI2KXa4-A",
-				"targetDiffbotId": "E01d4EK33MmCosgI2KXa4-A",
-				"type": "AdministrativeArea"
+				"name": "India",
+				"diffbotUri": "http://diffbot.com/entity/EkL_5YoTSMA6dbNRVyE9yCQ",
+				"targetDiffbotUri": "http://diffbot.com/entity/EkL_5YoTSMA6dbNRVyE9yCQ",
+				"targetDiffbotId": "EkL_5YoTSMA6dbNRVyE9yCQ",
+				"type": "Place"
 			},
-			"isCurrent": false,
-			"address": "United States",
-			"latitude": 39.71595764160156,
-			"precision": 3133.158935546875,
-			"longitude": -96.99966430664062
+			"isCurrent": true,
+			"address": "`GOLDEN ENCLAVE,TISL TOWER,AIRPORT ROAD, BANGALORE BANGALORE Karnataka INDIA 560017",
+			"city": {
+				"summary": "City in Karnataka, India",
+				"image": "https://kg.diffbot.com/image/api/get?fetch=yes&url=g%3Cj7P0St0DnBJf.x0KwLZrUn.%5B%3CR0Aa4Hh%3B%5Bv738ZqOr7U%3FivHn%3EgO%3ATd8i%3DFGGg39m%3C.vRl",
+				"types": [
+					"Place",
+					"AdministrativeArea",
+					"City"
+				],
+				"name": "Bangalore",
+				"diffbotUri": "http://diffbot.com/entity/EH8-RoeHXOK-8hk4KLHtdaw",
+				"targetDiffbotUri": "http://diffbot.com/entity/EH8-RoeHXOK-8hk4KLHtdaw",
+				"targetDiffbotId": "EH8-RoeHXOK-8hk4KLHtdaw",
+				"type": "Place"
+			},
+			"isPrimary": true,
+			"street": "Airport Road",
+			"subregion": {
+				"summary": "District of Karnataka, India",
+				"image": "https://kg.diffbot.com/image/api/get?fetch=yes&url=g%3Cj7P0St0DnBJf.x0KwLZrUn.%5B%3CR0Aa4Hh%3B%5Bv738ZqOr7U%3FcvBP%3EpO%3E%5Bd%40%5B6BYjZ%7D%3FgC%5CxIdpVtDgq%5C0%3AQB%5Ew%7Di%7ES.Mqx",
+				"types": [
+					"Place",
+					"AdministrativeArea",
+					"Subregion"
+				],
+				"name": "Bangalore Urban district",
+				"diffbotUri": "http://diffbot.com/entity/EDXHT5WEYMGGWHj6BPfwv4A",
+				"targetDiffbotUri": "http://diffbot.com/entity/EDXHT5WEYMGGWHj6BPfwv4A",
+				"targetDiffbotId": "EDXHT5WEYMGGWHj6BPfwv4A",
+				"type": "Place"
+			},
+			"latitude": 12.965570449829102,
+			"precision": 26.844528198242188,
+			"postalCode": "560017",
+			"region": {
+				"summary": "Indian state",
+				"image": "https://kg.diffbot.com/image/api/get?fetch=yes&url=g%3Cj7P0St0DnBJf.x0KwLZrUn.%5B%3CR0Aa4Hh%3B%5Bv738ZqOr7U%3FBvqO%3ExS%7DYb%3B%60z%7C%5BJgpLgBN.W%7B2",
+				"types": [
+					"Place",
+					"AdministrativeArea"
+				],
+				"name": "Karnataka",
+				"diffbotUri": "http://diffbot.com/entity/EFJnKhpUfNx-F2v4bGRTx3w",
+				"targetDiffbotUri": "http://diffbot.com/entity/EFJnKhpUfNx-F2v4bGRTx3w",
+				"targetDiffbotId": "EFJnKhpUfNx-F2v4bGRTx3w",
+				"type": "Place"
+			},
+			"longitude": 77.60624694824219
 		}
 	]
 }
@@ -1027,8 +1189,10 @@ Note that certain longer field examples may be truncated for readability.
 	"mccClassification": [
 		{
 			"code": "",
+			"level": 0,
 			"isPrimary": false,
 			"name": "",
+			"diffbotUri": "",
 			"version": ""
 		}
 	]
@@ -1052,6 +1216,24 @@ Note that certain longer field examples may be truncated for readability.
 	"mccCodeDescription": ""
 }
 ```
+### monthlyTraffic
+  Monthly website traffic on this organization&#39;s homepage
+* **Type:** Integer
+* **Example:**
+```
+{
+	"monthlyTraffic": 90019938
+}
+```
+### monthlyTrafficGrowth
+  Monthly growth in website traffic on this organization&#39;s homepage
+* **Type:** Float
+* **Example:**
+```
+{
+	"monthlyTrafficGrowth": 0.018442305
+}
+```
 ### motto
   A short sentence or phrase chosen as encapsulating the beliefs or ideals guiding an organization
 * **Type:** String
@@ -1070,8 +1252,10 @@ Note that certain longer field examples may be truncated for readability.
 	"naceClassification": [
 		{
 			"code": "",
+			"level": 0,
 			"isPrimary": false,
 			"name": "",
+			"diffbotUri": "",
 			"version": ""
 		}
 	]
@@ -1086,34 +1270,67 @@ Note that certain longer field examples may be truncated for readability.
 	"nafClassification": [
 		{
 			"code": "",
+			"level": 0,
 			"isPrimary": false,
 			"name": "",
+			"diffbotUri": "",
 			"version": ""
 		}
 	]
 }
 ```
 ### naicsClassification
-  The North American Industry Classification System (NAICS) is the standard used by Federal statistical agencies in classifying business establishments for the purpose of collecting, analyzing, and publishing statistical data related to the U.S. business economy.
+  The North American Industry Classification System (NAICS) is the standard used by Federal statistical agencies in classifying business establishments for the purpose of collecting, analyzing, and publishing statistical data related to the U.S. business economy. This is the 2022 version.
 * **Type:** ClassificationCode
 * **Example:**
 ```
 {
 	"naicsClassification": [
 		{
-			"code": "522220",
-			"isPrimary": false,
-			"name": "Sales Financing"
+			"code": "518210",
+			"level": 4,
+			"isPrimary": true,
+			"name": "Computing Infrastructure Providers, Data Processing, Web Hosting, and Related Services"
 		},
 		{
-			"code": "330000",
-			"isPrimary": false,
-			"name": "Manufacturing"
+			"code": "518200",
+			"level": 3,
+			"isPrimary": true,
+			"name": "Computing Infrastructure Providers, Data Processing, Web Hosting, and Related Services"
 		},
 		{
-			"code": "335000",
-			"isPrimary": false,
-			"name": "Electrical Equipment, Appliance, and Component Manufacturing"
+			"code": "518000",
+			"level": 2,
+			"isPrimary": true,
+			"name": "Computing Infrastructure Providers, Data Processing, Web Hosting, and Related Services"
+		}
+	]
+}
+```
+### naicsClassification2017
+  The North American Industry Classification System (NAICS) is the standard used by Federal statistical agencies in classifying business establishments for the purpose of collecting, analyzing, and publishing statistical data related to the U.S. business economy. This is the 2017 version.
+* **Type:** ClassificationCode
+* **Example:**
+```
+{
+	"naicsClassification2017": [
+		{
+			"code": "518210",
+			"level": 4,
+			"isPrimary": true,
+			"name": "Data Processing, Hosting, and Related Services"
+		},
+		{
+			"code": "518200",
+			"level": 3,
+			"isPrimary": true,
+			"name": "Data Processing, Hosting, and Related Services"
+		},
+		{
+			"code": "518000",
+			"level": 2,
+			"isPrimary": true,
+			"name": "Data Processing, Hosting, and Related Services"
 		}
 	]
 }
@@ -1124,7 +1341,7 @@ Note that certain longer field examples may be truncated for readability.
 * **Example:**
 ```
 {
-	"nbActiveEmployeeEdges": 125909
+	"nbActiveEmployeeEdges": 88462
 }
 ```
 ### nbEmployeeRanges
@@ -1147,7 +1364,7 @@ Note that certain longer field examples may be truncated for readability.
 * **Example:**
 ```
 {
-	"nbEmployees": 345000
+	"nbEmployees": 90000
 }
 ```
 ### nbEmployeesMax
@@ -1156,7 +1373,7 @@ Note that certain longer field examples may be truncated for readability.
 * **Example:**
 ```
 {
-	"nbEmployeesMax": 345000
+	"nbEmployeesMax": 90000
 }
 ```
 ### nbEmployeesMin
@@ -1165,34 +1382,7 @@ Note that certain longer field examples may be truncated for readability.
 * **Example:**
 ```
 {
-	"nbEmployeesMin": 345000
-}
-```
-### nbEmployeesOnLinkedIn
-  Number of employees with LinkedIn profiles as reported by LinkedIn.
-* **Type:** Integer
-* **Example:**
-```
-{
-	"nbEmployeesOnLinkedIn": 0
-}
-```
-### nbEmployeesOnLinkedInOverTime
-  Number of employees with LinkedIn profiles as reported by LinkedIn over time. This includes the latest number reported by LinkedIn.
-* **Type:** ObservationInt
-* **Example:**
-```
-{
-	"nbEmployeesOnLinkedInOverTime": [
-		{
-			"observationDate": {
-				"str": "",
-				"precision": 0,
-				"timestamp": 0
-			},
-			"observationValue": 0
-		}
-	]
+	"nbEmployeesMin": 90000
 }
 ```
 ### nbLocations
@@ -1201,7 +1391,7 @@ Note that certain longer field examples may be truncated for readability.
 * **Example:**
 ```
 {
-	"nbLocations": 7
+	"nbLocations": 53
 }
 ```
 ### nbUniqueInvestors
@@ -1222,6 +1412,15 @@ Note that certain longer field examples may be truncated for readability.
 	"norwegianOrganizationNumbers": ""
 }
 ```
+### npiNumbers
+  The National Provider Identifier (NPI) is a unique identification number for covered health care providers. 
+* **Type:** String
+* **Example:**
+```
+{
+	"npiNumbers": ""
+}
+```
 ### okvedClassification
   Russian Economic Activities Classification System code (OKVED).
 * **Type:** ClassificationCode
@@ -1231,8 +1430,10 @@ Note that certain longer field examples may be truncated for readability.
 	"okvedClassification": [
 		{
 			"code": "",
+			"level": 0,
 			"isPrimary": false,
 			"name": "",
+			"diffbotUri": "",
 			"version": ""
 		}
 	]
@@ -1265,6 +1466,61 @@ Note that certain longer field examples may be truncated for readability.
 	}
 }
 ```
+### partnerships
+  Current partnerships of this organization.
+* **Type:** LinkedEntity
+* **Example:**
+```
+{
+	"partnerships": [
+		{
+			"summary": "Community college in Denver, Colorado",
+			"image": "https://kg.diffbot.com/image/api/get?fetch=yes&url=g%3Cj7P0St%7D9u.LnOv%7BI%7C%40g7.pBYINs%3Ff%7CGZ7jr-tGZhWf%3DK%2FOvy%5Bp%3CSKSh%40%5D3%60bLm%2Fb5Vd%7D%5B.%7EE%2FSn5U9G%5C%3Daj%40.0RiYhv%3Eq%3An9h%3CEoHd%3E3_0N%609e0-A%3EQjAdx-yA-NMwEM8-CI6G%5D%3AW5.%3Cp8",
+			"types": [
+				"Organization",
+				"Corporation",
+				"Company"
+			],
+			"name": "Community College of Denver",
+			"diffbotUri": "http://diffbot.com/entity/E5rCwkfaXOi-XvZMdLA9nBA",
+			"targetDiffbotUri": "http://diffbot.com/entity/E5rCwkfaXOi-XvZMdLA9nBA",
+			"targetDiffbotId": "E5rCwkfaXOi-XvZMdLA9nBA",
+			"surfaceForm": "Community College of Denver",
+			"type": "Organization"
+		},
+		{
+			"summary": "Indian multinational telecommunications company",
+			"image": "https://kg.diffbot.com/image/api/get?fetch=yes&url=g%3Cj7P0St0DnBJf.x0KwLZrUn.%5B%3CR0Aa4Hh%3B%5Bv738ZqOr7U%3FjvIo%3EgV%7D_w5Y%5CJlL%5E%7B7rFTu.xAK",
+			"types": [
+				"Organization",
+				"Corporation",
+				"Company"
+			],
+			"name": "Bharti Airtel",
+			"diffbotUri": "http://diffbot.com/entity/ENUs3Fj_tNTerjAQZVO8vUQ",
+			"targetDiffbotUri": "http://diffbot.com/entity/ENUs3Fj_tNTerjAQZVO8vUQ",
+			"targetDiffbotId": "ENUs3Fj_tNTerjAQZVO8vUQ",
+			"surfaceForm": "Bharti Airtel",
+			"type": "Organization"
+		},
+		{
+			"summary": "Distributed, in-memory database",
+			"image": "https://kg.diffbot.com/image/api/get?fetch=yes&url=g%3Cj7P0St0DnBJf.x0KwLZrUn.%5B%3CR0Aa4Hh%3B%5Bv738ZqOr7U%3FevDo%3Eq%5D3%5Cb9_8TkDXrGrF_eXw%7CR5-%5ByOEWpFq9N.%40Yc",
+			"types": [
+				"Organization",
+				"Corporation",
+				"Company"
+			],
+			"name": "SingleStore",
+			"diffbotUri": "http://diffbot.com/entity/ERHHQPQJjNLKd2hTNUwtsow",
+			"targetDiffbotUri": "http://diffbot.com/entity/ERHHQPQJjNLKd2hTNUwtsow",
+			"targetDiffbotId": "ERHHQPQJjNLKd2hTNUwtsow",
+			"surfaceForm": "SingleStore",
+			"type": "Organization"
+		}
+	]
+}
+```
 ### phoneNumbers
   Phone numbers of this organization.
 * **Type:** PhoneNumber
@@ -1291,23 +1547,33 @@ Note that certain longer field examples may be truncated for readability.
 {
 	"predecessors": [
 		{
-			"summary": "",
-			"image": "",
-			"images": [
-				{
-					"classifications": "",
-					"fingerprint": "",
-					"title": "",
-					"isCached": false,
-					"url": ""
-				}
+			"summary": "American business machines company",
+			"image": "https://kg.diffbot.com/image/api/get?fetch=yes&url=g%3Cj7P0St0DnBJf.x0KwLZrUn.%5B%3CR0Aa4Hh%3B%5Bv738ZqOr7U%3FBvqs%3EhBnLF%3Bg%3BBhQX%5BGmF.vRl",
+			"types": [
+				"Organization",
+				"Corporation",
+				"Company"
 			],
-			"types": "",
-			"websiteUris": "",
-			"diffbotUri": "",
-			"name": "",
-			"targetDiffbotUri": "",
-			"surfaceForm": ""
+			"name": "Computing Tabulating Recording Company",
+			"diffbotUri": "http://diffbot.com/entity/EeCTt6xVqOoqWn5jzd4EwCw",
+			"targetDiffbotUri": "http://diffbot.com/entity/EeCTt6xVqOoqWn5jzd4EwCw",
+			"targetDiffbotId": "EeCTt6xVqOoqWn5jzd4EwCw",
+			"surfaceForm": "Computing Tabulating Recording Company",
+			"type": "Organization"
+		},
+		{
+			"summary": "American manufacturing company",
+			"types": [
+				"Organization",
+				"Corporation",
+				"Company"
+			],
+			"name": "Bundy Manufacturing Company",
+			"diffbotUri": "http://diffbot.com/entity/Ex0oc7IVgNWGUSnSDoTUV-w",
+			"targetDiffbotUri": "http://diffbot.com/entity/Ex0oc7IVgNWGUSnSDoTUV-w",
+			"targetDiffbotId": "Ex0oc7IVgNWGUSnSDoTUV-w",
+			"surfaceForm": "Bundy Manufacturing Company",
+			"type": "Organization"
 		}
 	]
 }
@@ -1387,7 +1653,7 @@ Note that certain longer field examples may be truncated for readability.
 {
 	"revenue": {
 		"currency": "USD",
-		"value": 73620000000
+		"value": 57350000000
 	}
 }
 ```
@@ -1420,49 +1686,49 @@ Note that certain longer field examples may be truncated for readability.
 {
 	"secForms": [
 		{
-			"formType": "8-K/A",
+			"formType": "8-K",
 			"periodOfReport": {
-				"str": "d2019-06-30",
+				"str": "d2022-07-31",
 				"precision": 3,
-				"timestamp": 1561852800000
+				"timestamp": 1659225600000
 			},
 			"filingDate": {
-				"str": "d2019-09-20",
+				"str": "d2022-07-18",
 				"precision": 3,
-				"timestamp": 1568937600000
+				"timestamp": 1658102400000
 			},
-			"documentUrl": "https://www.sec.gov/ix?doc=/Archives/edgar/data/51143/000155837019008675/ibm-20190709x8ka.htm",
-			"filingUrl": "https://www.sec.gov/Archives/edgar/data/51143/000155837019008675/0001558370-19-008675-index.htm"
-		},
-		{
-			"formType": "10-Q",
-			"periodOfReport": {
-				"str": "d2019-06-30",
-				"precision": 3,
-				"timestamp": 1561852800000
-			},
-			"filingDate": {
-				"str": "d2019-07-30",
-				"precision": 3,
-				"timestamp": 1564444800000
-			},
-			"documentUrl": "https://www.sec.gov/ix?doc=/Archives/edgar/data/51143/000155837019006560/ibm-20190630x10q.htm",
-			"filingUrl": "https://www.sec.gov/Archives/edgar/data/51143/000155837019006560/0001558370-19-006560-index.htm"
+			"documentUrl": "https://www.sec.gov/ix?doc=/Archives/edgar/data/51143/000155837022010793/ibm-20220718x8k.htm",
+			"filingUrl": "https://www.sec.gov/Archives/edgar/data/51143/000155837022010793/0001558370-22-010793-index.htm"
 		},
 		{
 			"formType": "8-K",
 			"periodOfReport": {
-				"str": "d2019-07-31",
+				"str": "d2022-07-31",
 				"precision": 3,
-				"timestamp": 1564531200000
+				"timestamp": 1659225600000
 			},
 			"filingDate": {
-				"str": "d2019-08-02",
+				"str": "d2022-07-26",
 				"precision": 3,
-				"timestamp": 1564704000000
+				"timestamp": 1658793600000
 			},
-			"documentUrl": "https://www.sec.gov/ix?doc=/Archives/edgar/data/51143/000155837019006914/ibm-20190802x8k.htm",
-			"filingUrl": "https://www.sec.gov/Archives/edgar/data/51143/000155837019006914/0001558370-19-006914-index.htm"
+			"documentUrl": "https://www.sec.gov/ix?doc=/Archives/edgar/data/51143/000110465922082789/tm2221760d1_8k.htm",
+			"filingUrl": "https://www.sec.gov/Archives/edgar/data/51143/000110465922082789/0001104659-22-082789-index.htm"
+		},
+		{
+			"formType": "10-Q",
+			"periodOfReport": {
+				"str": "d2022-06-30",
+				"precision": 3,
+				"timestamp": 1656547200000
+			},
+			"filingDate": {
+				"str": "d2022-07-25",
+				"precision": 3,
+				"timestamp": 1658707200000
+			},
+			"documentUrl": "https://www.sec.gov/ix?doc=/Archives/edgar/data/51143/000155837022010985/ibm-20220630x10q.htm",
+			"filingUrl": "https://www.sec.gov/Archives/edgar/data/51143/000155837022010985/0001558370-22-010985-index.htm"
 		}
 	]
 }
@@ -1485,18 +1751,21 @@ Note that certain longer field examples may be truncated for readability.
 	"sicClassification": [
 		{
 			"code": "3570",
-			"isPrimary": false,
+			"level": 2,
+			"isPrimary": true,
 			"name": "Computer And Office Equipment"
 		},
 		{
-			"code": "4000",
-			"isPrimary": false,
-			"name": "Railroad Transportation"
+			"code": "3500",
+			"level": 1,
+			"isPrimary": true,
+			"name": "Industrial machinery and equipment"
 		},
 		{
-			"code": "3500",
+			"code": "7300",
+			"level": 1,
 			"isPrimary": false,
-			"name": "Industrial machinery and equipment"
+			"name": "Business Services"
 		}
 	]
 }
@@ -1537,8 +1806,10 @@ Note that certain longer field examples may be truncated for readability.
 	"ssbClassification": [
 		{
 			"code": "",
+			"level": 0,
 			"isPrimary": false,
 			"name": "",
+			"diffbotUri": "",
 			"version": ""
 		}
 	]
@@ -1552,6 +1823,7 @@ Note that certain longer field examples may be truncated for readability.
 {
 	"stock": {
 		"symbol": "IBM",
+		"isCurrent": true,
 		"exchange": "NYSE"
 	}
 }
@@ -1564,45 +1836,45 @@ Note that certain longer field examples may be truncated for readability.
 {
 	"subsidiaries": [
 		{
-			"summary": "Business enterprise",
+			"summary": "Cloud computing provider",
 			"image": "https://kg.diffbot.com/image/api/get?fetch=yes&url=g%3Cj7P0St%7D9u.LnOv%7BI%7C%40g7.pBYINs%3Ff%7CGZ7jr-tGZhWf%3DK%2FOvy%5Bp%3CSKbs8i%7CEyNzBa%3DXu9h%3DKcsg%5CFUA%5Dx3S%3A%2F%7C3h1%601Ba%40%3CTnki1nHH%5EI.3GY",
 			"types": [
 				"Organization",
-				"Corporation"
+				"Corporation",
+				"Company"
 			],
-			"name": "SoftLayer Technologies, Inc.",
+			"name": "Soft Layer Technologies",
 			"diffbotUri": "http://diffbot.com/entity/Eo3z6VKzPNxmoKVCMdwfvmw",
 			"targetDiffbotUri": "http://diffbot.com/entity/Eo3z6VKzPNxmoKVCMdwfvmw",
 			"targetDiffbotId": "Eo3z6VKzPNxmoKVCMdwfvmw",
-			"surfaceForm": "SoftLayer Technologies, Inc.",
-			"type": "Corporation"
+			"surfaceForm": "Soft Layer Technologies",
+			"type": "Organization"
 		},
 		{
-			"summary": "American multinational software company",
-			"image": "https://kg.diffbot.com/image/api/get?fetch=yes&url=g%3Cj7P0St0DnBJf.x0KwLZrUn.%5B%3CR0Aa4Hh%3B%5Bv738ZqOr7U%3FhvGt%3Er%5D0Vi5_%2F%40L%3D%5DnpgKL8d6TC%7ER%601O8%40d6%5EzB%5BcH%60Imr9p%3Ac.Y%7D4",
+			"summary": "Organization based in Germany",
 			"types": [
 				"Organization",
-				"Corporation"
+				"Corporation",
+				"Company"
 			],
-			"name": "RED HAT INC",
-			"diffbotUri": "http://diffbot.com/entity/EIATbb7uwOhSYiGqLBPUD0w",
-			"targetDiffbotUri": "http://diffbot.com/entity/EIATbb7uwOhSYiGqLBPUD0w",
-			"targetDiffbotId": "EIATbb7uwOhSYiGqLBPUD0w",
-			"surfaceForm": "RED HAT INC",
-			"type": "Corporation"
+			"name": "Red Hat",
+			"diffbotUri": "http://diffbot.com/entity/EFUnzGA2lOc6P1ACF3Infdg",
+			"targetDiffbotUri": "http://diffbot.com/entity/EFUnzGA2lOc6P1ACF3Infdg",
+			"targetDiffbotId": "EFUnzGA2lOc6P1ACF3Infdg",
+			"surfaceForm": "Red Hat",
+			"type": "Organization"
 		},
 		{
-			"summary": "Corporation based in Egypt",
+			"summary": "Organization based in الجيزة, Al Jizah Governorate, Egypt and owned by INTERNATIONAL BUSINESS MACHINES",
 			"types": [
-				"Organization",
-				"Corporation"
+				"Organization"
 			],
 			"name": "IBM Egypt Business Support Services",
 			"diffbotUri": "http://diffbot.com/entity/EqxFQye0mN_mBtveIsJwWmg",
 			"targetDiffbotUri": "http://diffbot.com/entity/EqxFQye0mN_mBtveIsJwWmg",
 			"targetDiffbotId": "EqxFQye0mN_mBtveIsJwWmg",
 			"surfaceForm": "IBM Egypt Business Support Services",
-			"type": "Corporation"
+			"type": "Organization"
 		}
 	]
 }
@@ -1644,23 +1916,49 @@ Note that certain longer field examples may be truncated for readability.
 {
 	"suppliers": [
 		{
-			"summary": "",
-			"image": "",
-			"images": [
-				{
-					"classifications": "",
-					"fingerprint": "",
-					"title": "",
-					"isCached": false,
-					"url": ""
-				}
+			"summary": "Company and communications software",
+			"image": "https://kg.diffbot.com/image/api/get?fetch=yes&url=g%3Cj7P0St%7D9u.LnOv%7BI%7C%40g7.pBYINs%3Ff%7CGZ7jr-tGZhWf%3DK%2FOvy%5Bp%3CSKbs8i%7CEyNzCZ%3C%5Eq%3Ee%3BOc2l10iuP%5E3Qw7lQka%3C%5ExF.I%5Do",
+			"types": [
+				"Organization",
+				"Corporation",
+				"Company"
 			],
-			"types": "",
-			"websiteUris": "",
-			"diffbotUri": "",
-			"name": "",
-			"targetDiffbotUri": "",
-			"surfaceForm": ""
+			"name": "Crowdcast",
+			"diffbotUri": "http://diffbot.com/entity/EQY36RhZ_PHGOIzgjag8wuw",
+			"targetDiffbotUri": "http://diffbot.com/entity/EQY36RhZ_PHGOIzgjag8wuw",
+			"targetDiffbotId": "EQY36RhZ_PHGOIzgjag8wuw",
+			"surfaceForm": "Crowdcast",
+			"type": "Organization"
+		},
+		{
+			"summary": "Organization based in Frederick, Maryland, United States",
+			"image": "https://kg.diffbot.com/image/api/get?fetch=yes&url=g%3Cj7P0St%7D9u.LnOv%7BI%7C%40g7.pBYINs%3Ff%7CGZ7jr-tGZhWf%3DK%2FOvy%5Bp%3CSKbs8i%7CEyNzBa%3DXu6f%3AKcGc%2FCrC%5ESUx5P4Ti1_%5CB%3F%3E%3EsALkNozGav.%7DIY",
+			"types": [
+				"Organization",
+				"Corporation",
+				"Company"
+			],
+			"name": "Welocalize",
+			"diffbotUri": "http://diffbot.com/entity/E3GIKIaZyOhmdDfi24xUxww",
+			"targetDiffbotUri": "http://diffbot.com/entity/E3GIKIaZyOhmdDfi24xUxww",
+			"targetDiffbotId": "E3GIKIaZyOhmdDfi24xUxww",
+			"surfaceForm": "Welocalize",
+			"type": "Organization"
+		},
+		{
+			"summary": "Stock exchange located in Santiago, Chile",
+			"image": "https://kg.diffbot.com/image/api/get?fetch=yes&url=g%3Cj7P0Stx9f%3CJ.LjzD%7C.X%7DY%3C7Y%3Djj7Y0Dwi%7BQVFf%3CJ%3AP3Xe8a2UzLm%2F%5Cp%3C%5B9Z-DhvGeYm6C7KdAc8w%7DCXuWo7R0Mc%26P8s%3F%7C%3A%26%7CsIDL%5Dj%7EY9%5E04TX%5CJmuIb5wG%60%2FsZ%3C%60aI%7DMgQgGVNtXIOo",
+			"types": [
+				"Organization",
+				"Corporation",
+				"Company"
+			],
+			"name": "Bolsa de Santiago",
+			"diffbotUri": "http://diffbot.com/entity/EAEn2ThkbOG2GceUXOhMLbQ",
+			"targetDiffbotUri": "http://diffbot.com/entity/EAEn2ThkbOG2GceUXOhMLbQ",
+			"targetDiffbotId": "EAEn2ThkbOG2GceUXOhMLbQ",
+			"surfaceForm": "Bolsa de Santiago",
+			"type": "Organization"
 		}
 	]
 }
@@ -1674,22 +1972,7 @@ Note that certain longer field examples may be truncated for readability.
 	"technographics": [
 		{
 			"technology": {
-				"recordId": "EPdsrDmLiMQCskvBLp_dloQ@2099",
-				"name": "React",
-				"websiteUris": [
-					"reactjs.org"
-				],
-				"surfaceForm": "React",
-				"position": "companyTechnographicsTechnology",
-				"type": "DiffbotEntity"
-			},
-			"categories": [
-				"JavaScript frameworks"
-			]
-		},
-		{
-			"technology": {
-				"recordId": "EPdsrDmLiMQCskvBLp_dloQ@2100",
+				"recordId": "EPdsrDmLiMQCskvBLp_dloQ@2177",
 				"name": "TrustArc",
 				"websiteUris": [
 					"trustarc.com"
@@ -1704,7 +1987,7 @@ Note that certain longer field examples may be truncated for readability.
 		},
 		{
 			"technology": {
-				"recordId": "EPdsrDmLiMQCskvBLp_dloQ@2101",
+				"recordId": "EPdsrDmLiMQCskvBLp_dloQ@2178",
 				"name": "Tealium AudienceStream",
 				"websiteUris": [
 					"tealium.com/products/audiencestream"
@@ -1715,6 +1998,21 @@ Note that certain longer field examples may be truncated for readability.
 			},
 			"categories": [
 				"Segmentation"
+			]
+		},
+		{
+			"technology": {
+				"recordId": "EPdsrDmLiMQCskvBLp_dloQ@2180",
+				"name": "Segment",
+				"websiteUris": [
+					"segment.com"
+				],
+				"surfaceForm": "Segment",
+				"position": "companyTechnographicsTechnology",
+				"type": "DiffbotEntity"
+			},
+			"categories": [
+				"Customer data platform"
 			]
 		}
 	]
@@ -1750,8 +2048,10 @@ Note that certain longer field examples may be truncated for readability.
 	"tsicClassification": [
 		{
 			"code": "",
+			"level": 0,
 			"isPrimary": false,
 			"name": "",
+			"diffbotUri": "",
 			"version": ""
 		}
 	]
@@ -1784,11 +2084,31 @@ Note that certain longer field examples may be truncated for readability.
 	"ukSicClassification": [
 		{
 			"code": "",
+			"level": 0,
 			"isPrimary": false,
 			"name": "",
+			"diffbotUri": "",
 			"version": ""
 		}
 	]
+}
+```
+### ultimateParent
+  The ultimate parent company of this subsidiary.
+* **Type:** LinkedEntity
+* **Example:**
+```
+{
+	"ultimateParent": {
+		"recordId": "EPdsrDmLiMQCskvBLp_dloQ@62",
+		"name": "IBM",
+		"websiteUris": [
+			"wikidata.org/entity/Q37156"
+		],
+		"surfaceForm": "IBM",
+		"position": "companyParentCompany",
+		"type": "Organization"
+	}
 }
 ```
 ### vatIdentificationNumbers
@@ -1797,7 +2117,9 @@ Note that certain longer field examples may be truncated for readability.
 * **Example:**
 ```
 {
-	"vatIdentificationNumbers": ""
+	"vatIdentificationNumbers": [
+		"IN29980271267"
+	]
 }
 ```
 ### wikipediaUri
@@ -1827,28 +2149,18 @@ Note that certain longer field examples may be truncated for readability.
 		{
 			"revenue": {
 				"currency": "USD",
-				"value": 79591000000
+				"value": 57350000000
 			},
 			"isCurrent": false,
-			"year": 2018
+			"year": 2021
 		},
 		{
 			"revenue": {
 				"currency": "USD",
-				"value": 77147000000
+				"value": 79591000000
 			},
 			"isCurrent": false,
-			"year": 2019,
-			"filingDate": {
-				"str": "d2021-02-23",
-				"precision": 3,
-				"timestamp": 1614038400000
-			},
-			"revenueDate": {
-				"str": "d2019-12-31",
-				"precision": 3,
-				"timestamp": 1577750400000
-			}
+			"year": 2018
 		}
 	]
 }

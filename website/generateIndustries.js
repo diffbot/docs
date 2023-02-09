@@ -73,7 +73,7 @@ axios.get('https://kg.diffbot.com/kg/ontology')
 
     // Render Industries Template
     let industriesOutput = render(industriesTemplate, templateModel);
-    console.log(`Rendered Industry Reference! Writing Markdown...`);
+    console.log(`Rendered Industry Reference! Generating Markdown.../docs/kg-industry-list.md`);
     fs.writeFileSync(`../docs/kg-industry-list.md`, industriesOutput);
 
     // Get Employment Categories Template
@@ -81,7 +81,7 @@ axios.get('https://kg.diffbot.com/kg/ontology')
 
     // Render Employment Categories Template
     let employmentCategoriesOutput = render(employmentCategoriesTemplate, templateModel);
-    console.log(`Rendered Employment Categories Reference! Writing Markdown...`);
+    console.log(`Rendered Employment Categories Reference! Generating Markdown.../docs/kg-employment-categories-list.md`);
     fs.writeFileSync(`../docs/kg-employment-categories-list.md`, employmentCategoriesOutput);
 
     // Get Article Categories Template
@@ -89,7 +89,7 @@ axios.get('https://kg.diffbot.com/kg/ontology')
 
     // Render Article Categories Template
     let articleCategoriesOutput = render(articleCategoriesTemplate, templateModel);
-    console.log(`Rendered Article Category Reference! Writing Markdown...`);
+    console.log(`Rendered Article Category Reference! Generating Markdown.../docs/kg-article-categories-list.md`);
     fs.writeFileSync(`../docs/kg-article-categories-list.md`, articleCategoriesOutput);
 
 });

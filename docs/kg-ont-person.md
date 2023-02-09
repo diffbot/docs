@@ -10,7 +10,9 @@ Note that fields are not guaranteed to exist in every entity record.
 
 For convenience, a complete ontology source in JSON format is also [available here](https://kg.diffbot.com/kg/ontology).
 
->New to the Diffbot Knowledge Graph? [Start here](dql-quickstart).
+> 🙋 
+> 
+> New to the Diffbot Knowledge Graph? [Start here](doc:getting-started-with-diffbot-knowledge-graph).
 
 ## Person Fields
 * [age](#age) 
@@ -47,10 +49,10 @@ For convenience, a complete ontology source in JSON format is also [available he
 * [nameDetail](#namedetail) 
 * [nationalities](#nationalities) 
 * [netWorth](#networth) 
+* [npiNumbers](#npinumbers) 
 * [parents](#parents) 
 * [phoneNumbers](#phonenumbers) 
 * [politicalAffiliation](#politicalaffiliation) 
-* [posts](#posts) 
 * [religion](#religion) 
 * [siblings](#siblings) 
 * [skills](#skills) 
@@ -69,7 +71,7 @@ Note that certain longer field examples may be truncated for readability.
 * **Example:**
 ```
 {
-	"age": 75
+	"age": 76
 }
 ```
 ### angellistUri
@@ -89,34 +91,25 @@ Note that certain longer field examples may be truncated for readability.
 {
 	"articles": [
 		{
-			"recordId": "EEIzhzuLVPeKuQ7KjPSa6aQ@289",
-			"name": "Take Command: Leadership Lessons from the Civil War // Doubleday",
+			"name": "From Gutenberg to Google: The History of Our Future // Brookings Institution Press - February 26, 2019",
 			"websiteUris": [
-				"civilwarleadership.com"
+				"brook.gs/2V7nIAH"
 			],
-			"surfaceForm": "Take Command: Leadership Lessons from the Civil War // Doubleday",
-			"position": "personArticles",
-			"type": "Article"
+			"surfaceForm": "From Gutenberg to Google: The History of Our Future // Brookings Institution Press - February 26, 2019"
 		},
 		{
-			"recordId": "EEIzhzuLVPeKuQ7KjPSa6aQ@288",
-			"name": "Mr. Lincoln's T-Mails: The Untold Story of How Abraham Lincoln Used the Telegraph to Win the Civil War // HarperCollins",
+			"name": "Mr. Lincoln's T-Mails: The Untold Story of How Abraham Lincoln Used the Telegraph to Win the Civil War // HarperCollins, 2006",
 			"websiteUris": [
 				"mrlincolnstmails.com"
 			],
-			"surfaceForm": "Mr. Lincoln's T-Mails: The Untold Story of How Abraham Lincoln Used the Telegraph to Win the Civil War // HarperCollins",
-			"position": "personArticles",
-			"type": "Article"
+			"surfaceForm": "Mr. Lincoln's T-Mails: The Untold Story of How Abraham Lincoln Used the Telegraph to Win the Civil War // HarperCollins, 2006"
 		},
 		{
-			"recordId": "EEIzhzuLVPeKuQ7KjPSa6aQ@290",
-			"name": "Mr. Lincoln's T-Mails: The Untold Story of How Abraham Lincoln Used the Telegraph to Win the Civil War // HarperCollins 2006",
+			"name": "Take Command: Leadership Lessons from the Civil War // Doubleday, 2000",
 			"websiteUris": [
-				"linkedin.com/redir/redirect"
+				"civilwarleadership.com"
 			],
-			"surfaceForm": "Mr. Lincoln's T-Mails: The Untold Story of How Abraham Lincoln Used the Telegraph to Win the Civil War // HarperCollins 2006",
-			"position": "personArticles",
-			"type": "Article"
+			"surfaceForm": "Take Command: Leadership Lessons from the Civil War // Doubleday, 2000"
 		}
 	]
 }
@@ -160,8 +153,8 @@ Note that certain longer field examples may be truncated for readability.
 {
 	"birthPlace": {
 		"country": {
-			"summary": "Sovereign state in North America",
-			"image": "https://kg.diffbot.com/image/api/get?fetch=yes&url=g%3Cj7P0St0DnBJf.x0KwLZrUn.%5B%3CR0Aa4Hh%3B%5Bv738ZqOr7U%3FfvEQ%3El%601Nw%7BM0Bf7hu7z%3FRe9s4XwGXedrKUAN%28%3D%5ECHnM%60%29.%7BOV",
+			"summary": "Country in North America",
+			"image": "https://kg.diffbot.com/image/api/get?fetch=yes&url=g%3Cj7P0St0DnBJf.x0KwLZrUn.%5B%3CR0Aa4Hh%3B%5Bv738ZqOr7U%3FevDs%3El%601Nw%7BM0Bf7hu7z%3FRe9s4XwGXedrKUAN%28%40aCHnM%60%29.%7BOV",
 			"types": [
 				"Place",
 				"AdministrativeArea",
@@ -171,7 +164,7 @@ Note that certain longer field examples may be truncated for readability.
 			"diffbotUri": "http://diffbot.com/entity/E01d4EK33MmCosgI2KXa4-A",
 			"targetDiffbotUri": "http://diffbot.com/entity/E01d4EK33MmCosgI2KXa4-A",
 			"targetDiffbotId": "E01d4EK33MmCosgI2KXa4-A",
-			"type": "AdministrativeArea"
+			"type": "Place"
 		},
 		"isCurrent": false,
 		"address": "Redlands, California",
@@ -187,20 +180,21 @@ Note that certain longer field examples may be truncated for readability.
 			"diffbotUri": "http://diffbot.com/entity/EEGqoBftsOZyh3_RKbQE3mw",
 			"targetDiffbotUri": "http://diffbot.com/entity/EEGqoBftsOZyh3_RKbQE3mw",
 			"targetDiffbotId": "EEGqoBftsOZyh3_RKbQE3mw",
-			"type": "AdministrativeArea"
+			"type": "Place"
 		},
 		"subregion": {
 			"summary": "County in California, United States",
 			"image": "https://kg.diffbot.com/image/api/get?fetch=yes&url=g%3Cj7P0St0DnBJf.x0KwLZrUn.%5B%3CR0Aa4Hh%3B%5Bv738ZqOr7U%3FhvGu%3ErO%3CLr2Y%5EBfA_%7EJt%40NeLn2L%7EL%60zdzEW%7DBf%3C%5B_HnH%5C3%3EqG%5EgyvBT8%5E.7hz",
 			"types": [
 				"Place",
-				"AdministrativeArea"
+				"AdministrativeArea",
+				"Subregion"
 			],
 			"name": "San Bernardino County",
 			"diffbotUri": "http://diffbot.com/entity/EApueG2dHP3iRBLbjF2w2gQ",
 			"targetDiffbotUri": "http://diffbot.com/entity/EApueG2dHP3iRBLbjF2w2gQ",
 			"targetDiffbotId": "EApueG2dHP3iRBLbjF2w2gQ",
-			"type": "AdministrativeArea"
+			"type": "Place"
 		},
 		"latitude": 34.04679489135742,
 		"precision": 9.702208518981934,
@@ -208,7 +202,7 @@ Note that certain longer field examples may be truncated for readability.
 		"surfaceForm": "Redlands, California",
 		"region": {
 			"summary": "State of the United States of America",
-			"image": "https://kg.diffbot.com/image/api/get?fetch=yes&url=g%3Cj7P0St0DnBJf.x0KwLZrUn.%5B%3CR0Aa4Hh%3B%5Bv738ZqOr7U%3Fav%40T%3ExS%7DYb%3B%60zt%5BDbuGxEVg.xAK",
+			"image": "https://kg.diffbot.com/image/api/get?fetch=yes&url=g%3Cj7P0St0DnBJf.x0KwLZrUn.%5B%3CR0Aa4Hh%3B%5Bv738ZqOr7U%3FjvIq%3El%5D8Qh%3AA%7CU_jkx%3Cm%3CLHEp0VTHZuXpt3.Yu5",
 			"types": [
 				"Place",
 				"AdministrativeArea",
@@ -218,7 +212,7 @@ Note that certain longer field examples may be truncated for readability.
 			"diffbotUri": "http://diffbot.com/entity/El0_8ehooNxOPT36Y4RdV9w",
 			"targetDiffbotUri": "http://diffbot.com/entity/El0_8ehooNxOPT36Y4RdV9w",
 			"targetDiffbotId": "El0_8ehooNxOPT36Y4RdV9w",
-			"type": "AdministrativeArea"
+			"type": "Place"
 		},
 		"longitude": -117.17427062988281
 	}
@@ -408,6 +402,7 @@ Note that certain longer field examples may be truncated for readability.
 		"surfaceForm": "",
 		"poBox": "",
 		"isCurrent": false,
+		"isPrimary": false,
 		"street": "",
 		"metroArea": {
 			"summary": "",
@@ -482,20 +477,22 @@ Note that certain longer field examples may be truncated for readability.
 				"summary": "Public research university in Columbus, Ohio, United States",
 				"image": "https://kg.diffbot.com/image/api/get?fetch=yes&url=g%3Cj7P0St0DnBJf.x0KwLZrUn.%5B%3CR0Aa4Hh%3B%5Bv738ZqOr7U%3FGvvO%3EtV5%5Cbon%7CU_7N%7DA%7C%3C_yMyDCzRk%7Bj0Ed%2F%5Bd%3Ak4R.Mqx",
 				"types": [
-					"Organization"
+					"Organization",
+					"Corporation",
+					"Company"
 				],
-				"name": "The Ohio State University",
+				"name": "Ohio State University",
 				"diffbotUri": "http://diffbot.com/entity/EXqnLTSovNzi-4KlIxjHhyA",
 				"targetDiffbotUri": "http://diffbot.com/entity/EXqnLTSovNzi-4KlIxjHhyA",
 				"targetDiffbotId": "EXqnLTSovNzi-4KlIxjHhyA",
-				"surfaceForm": "The Ohio State University",
+				"surfaceForm": "Ohio State University",
 				"type": "Organization"
 			},
 			"isCurrent": false,
 			"major": {
-				"recordId": "EEIzhzuLVPeKuQ7KjPSa6aQ@269",
-				"name": "International Trade",
-				"surfaceForm": "International Trade",
+				"recordId": "EEIzhzuLVPeKuQ7KjPSa6aQ@276",
+				"name": "Business, International Trade",
+				"surfaceForm": "Business, International Trade",
 				"position": "personEducationMajor",
 				"type": "EducationMajorEntity"
 			},
@@ -509,6 +506,41 @@ Note that certain longer field examples may be truncated for readability.
 				"targetDiffbotUri": "http://diffbot.com/entity/EtWuqNi7UOGu2JRK_z95kDg",
 				"targetDiffbotId": "EtWuqNi7UOGu2JRK_z95kDg",
 				"surfaceForm": "Bachelor's (4 year program)",
+				"type": "DegreeEntity"
+			},
+			"from": {
+				"str": "d1964-XX-XX",
+				"precision": 1,
+				"timestamp": -189388800000
+			},
+			"to": {
+				"str": "d1968-XX-XX",
+				"precision": 1,
+				"timestamp": -63158400000
+			}
+		},
+		{
+			"institution": {
+				"summary": "Public research university in Columbus, Ohio, United States",
+				"image": "https://kg.diffbot.com/image/api/get?fetch=yes&url=g%3Cj7P0St0DnBJf.x0KwLZrUn.%5B%3CR0Aa4Hh%3B%5Bv738ZqOr7U%3FGvvO%3EtV5%5Cbon%7CU_7N%7DA%7C%3C_yMyDCzRk%7Bj0Ed%2F%5Bd%3Ak4R.Mqx",
+				"types": [
+					"Organization",
+					"Corporation",
+					"Company"
+				],
+				"name": "Ohio State University",
+				"diffbotUri": "http://diffbot.com/entity/EXqnLTSovNzi-4KlIxjHhyA",
+				"targetDiffbotUri": "http://diffbot.com/entity/EXqnLTSovNzi-4KlIxjHhyA",
+				"targetDiffbotId": "EXqnLTSovNzi-4KlIxjHhyA",
+				"surfaceForm": "Ohio State University",
+				"type": "Organization"
+			},
+			"isCurrent": false,
+			"degree": {
+				"recordId": "EEIzhzuLVPeKuQ7KjPSa6aQ@278",
+				"name": "International Trade",
+				"surfaceForm": "International Trade",
+				"position": "personEducationDegree",
 				"type": "DegreeEntity"
 			},
 			"from": {
@@ -549,151 +581,26 @@ Note that certain longer field examples may be truncated for readability.
 		{
 			"isCurrent": true,
 			"employer": {
-				"summary": "Organization based in United States",
+				"summary": "Organization based in New York City, New York, United States",
+				"image": "https://kg.diffbot.com/image/api/get?fetch=yes&url=g%3Cj7P0St%7D9u.LnOv%7BI%7C%40g7.pBYINs%3Ff%7CGZ7jr-tGZhWf%3DK%2FOvy%5Bp%3CSKbs8i%7CEy%3BnqAg%5EOuKy1Lw%5Dn8TH%3Cx",
 				"types": [
 					"Organization",
-					"LocalBusiness"
+					"Corporation",
+					"Company"
 				],
-				"name": "Shiloh Group",
-				"diffbotUri": "http://diffbot.com/entity/EuTIRQ1kUPqGgSxUxjP0ieQ",
-				"targetDiffbotUri": "http://diffbot.com/entity/EuTIRQ1kUPqGgSxUxjP0ieQ",
-				"targetDiffbotId": "EuTIRQ1kUPqGgSxUxjP0ieQ",
-				"surfaceForm": "Shiloh Group",
-				"type": "LocalBusiness"
+				"name": "Alef",
+				"diffbotUri": "http://diffbot.com/entity/EmGLp9QTxPkuGRk7WhNF8ag",
+				"targetDiffbotUri": "http://diffbot.com/entity/EmGLp9QTxPkuGRk7WhNF8ag",
+				"targetDiffbotId": "EmGLp9QTxPkuGRk7WhNF8ag",
+				"surfaceForm": "Alef",
+				"type": "Organization"
 			},
 			"from": {
-				"str": "d2003-07-XX",
-				"precision": 2,
-				"timestamp": 1057017600000
+				"str": "d2022-05-01",
+				"precision": 3,
+				"timestamp": 1651363200000
 			},
 			"categories": [
-				{
-					"types": [
-						"Intangible",
-						"EmploymentCategory"
-					],
-					"name": "Executive",
-					"diffbotUri": "http://diffbot.com/entity/EFHD6pfzYMtqdaaytNomkhA",
-					"targetDiffbotUri": "http://diffbot.com/entity/EFHD6pfzYMtqdaaytNomkhA",
-					"targetDiffbotId": "EFHD6pfzYMtqdaaytNomkhA",
-					"type": "EmploymentCategory"
-				},
-				{
-					"types": [
-						"Intangible",
-						"EmploymentCategory"
-					],
-					"name": "Management",
-					"diffbotUri": "http://diffbot.com/entity/EpXGc9jmNPQW3wt-ny5SqCQ",
-					"targetDiffbotUri": "http://diffbot.com/entity/EpXGc9jmNPQW3wt-ny5SqCQ",
-					"targetDiffbotId": "EpXGc9jmNPQW3wt-ny5SqCQ",
-					"type": "EmploymentCategory"
-				},
-				{
-					"types": [
-						"Intangible",
-						"EmploymentCategory"
-					],
-					"name": "Chief Officer",
-					"diffbotUri": "http://diffbot.com/entity/ETONJ_vUmODK7D7WTWa6OhA",
-					"targetDiffbotUri": "http://diffbot.com/entity/ETONJ_vUmODK7D7WTWa6OhA",
-					"targetDiffbotId": "ETONJ_vUmODK7D7WTWa6OhA",
-					"type": "EmploymentCategory"
-				}
-			],
-			"title": "President/CEO"
-		},
-		{
-			"isCurrent": true,
-			"employer": {
-				"summary": "Financial services company founded in 1999",
-				"image": "https://kg.diffbot.com/image/api/get?fetch=yes&url=g%3Cj7P0St%7D9u.LnOv%7BI%7C%40g7.pBYINs%3Ff%7CGZ7jr-tGZhWf%3DK%2FOvy%5Bp%3CSKbs8i%7CEyNzBa%3DXt%3Ek5KcBD0vSA%5EvRq%3D0%5DUd%60%402r%3Fm%3BQ9H%3DTmJF%5DG.zBX",
-				"types": [
-					"Organization",
-					"Corporation"
-				],
-				"name": "Core Capital Partners",
-				"diffbotUri": "http://diffbot.com/entity/ErLfevHY1MzaATmqeEbm4AQ",
-				"targetDiffbotUri": "http://diffbot.com/entity/ErLfevHY1MzaATmqeEbm4AQ",
-				"targetDiffbotId": "ErLfevHY1MzaATmqeEbm4AQ",
-				"surfaceForm": "Core Capital Partners",
-				"type": "Corporation"
-			},
-			"from": {
-				"str": "d2005-01-XX",
-				"precision": 2,
-				"timestamp": 1104537600000
-			},
-			"categories": [
-				{
-					"types": [
-						"Intangible",
-						"EmploymentCategory"
-					],
-					"name": "Executive",
-					"diffbotUri": "http://diffbot.com/entity/EFHD6pfzYMtqdaaytNomkhA",
-					"targetDiffbotUri": "http://diffbot.com/entity/EFHD6pfzYMtqdaaytNomkhA",
-					"targetDiffbotId": "EFHD6pfzYMtqdaaytNomkhA",
-					"type": "EmploymentCategory"
-				},
-				{
-					"types": [
-						"Intangible",
-						"EmploymentCategory"
-					],
-					"name": "Shareholder",
-					"diffbotUri": "http://diffbot.com/entity/EnjEbsIYNORq7LaLzpGLaeg",
-					"targetDiffbotUri": "http://diffbot.com/entity/EnjEbsIYNORq7LaLzpGLaeg",
-					"targetDiffbotId": "EnjEbsIYNORq7LaLzpGLaeg",
-					"type": "EmploymentCategory"
-				},
-				{
-					"types": [
-						"Intangible",
-						"EmploymentCategory"
-					],
-					"name": "Management",
-					"diffbotUri": "http://diffbot.com/entity/EpXGc9jmNPQW3wt-ny5SqCQ",
-					"targetDiffbotUri": "http://diffbot.com/entity/EpXGc9jmNPQW3wt-ny5SqCQ",
-					"targetDiffbotId": "EpXGc9jmNPQW3wt-ny5SqCQ",
-					"type": "EmploymentCategory"
-				}
-			],
-			"title": "Partner"
-		},
-		{
-			"isCurrent": true,
-			"employer": {
-				"summary": "Boston, Massachusetts–based software company that produces an online video platform",
-				"image": "https://kg.diffbot.com/image/api/get?fetch=yes&url=g%3Cj7P0St%7D9u.LnOv%7BI%7C%40g7.pBYINs%3Ff%7CGZ7jr-tGZhWf%3DK%2FOvy%5Bp%3CSKbs8i%7CEyO2%40%3F0FW9LpRQJSk8%5E5Jh",
-				"types": [
-					"Organization",
-					"Corporation"
-				],
-				"name": "Brightcove, Inc.",
-				"diffbotUri": "http://diffbot.com/entity/ExQ62VDi-OvWQ3qO1NhflJA",
-				"targetDiffbotUri": "http://diffbot.com/entity/ExQ62VDi-OvWQ3qO1NhflJA",
-				"targetDiffbotId": "ExQ62VDi-OvWQ3qO1NhflJA",
-				"surfaceForm": "Brightcove, Inc.",
-				"type": "Corporation"
-			},
-			"from": {
-				"str": "d2018-04-XX",
-				"precision": 2,
-				"timestamp": 1522540800000
-			},
-			"categories": [
-				{
-					"types": [
-						"Intangible",
-						"EmploymentCategory"
-					],
-					"name": "Executive",
-					"diffbotUri": "http://diffbot.com/entity/EFHD6pfzYMtqdaaytNomkhA",
-					"targetDiffbotUri": "http://diffbot.com/entity/EFHD6pfzYMtqdaaytNomkhA",
-					"targetDiffbotId": "EFHD6pfzYMtqdaaytNomkhA",
-					"type": "EmploymentCategory"
-				},
 				{
 					"types": [
 						"Intangible",
@@ -715,9 +622,247 @@ Note that certain longer field examples may be truncated for readability.
 					"targetDiffbotUri": "http://diffbot.com/entity/EpXGc9jmNPQW3wt-ny5SqCQ",
 					"targetDiffbotId": "EpXGc9jmNPQW3wt-ny5SqCQ",
 					"type": "EmploymentCategory"
+				},
+				{
+					"types": [
+						"Intangible",
+						"EmploymentCategory"
+					],
+					"name": "Executive",
+					"diffbotUri": "http://diffbot.com/entity/EFHD6pfzYMtqdaaytNomkhA",
+					"targetDiffbotUri": "http://diffbot.com/entity/EFHD6pfzYMtqdaaytNomkhA",
+					"targetDiffbotId": "EFHD6pfzYMtqdaaytNomkhA",
+					"type": "EmploymentCategory"
 				}
 			],
 			"title": "Board Member"
+		},
+		{
+			"isCurrent": true,
+			"employer": {
+				"summary": "Financial services company based in Jacksonville, Florida, United States",
+				"types": [
+					"Organization",
+					"LocalBusiness"
+				],
+				"name": "Shiloh Group",
+				"diffbotUri": "http://diffbot.com/entity/ELF4ccy36PMug3N0XWxDdrg",
+				"targetDiffbotUri": "http://diffbot.com/entity/ELF4ccy36PMug3N0XWxDdrg",
+				"targetDiffbotId": "ELF4ccy36PMug3N0XWxDdrg",
+				"surfaceForm": "Shiloh Group",
+				"type": "Organization"
+			},
+			"location": {
+				"country": {
+					"summary": "Country in North America",
+					"image": "https://kg.diffbot.com/image/api/get?fetch=yes&url=g%3Cj7P0St0DnBJf.x0KwLZrUn.%5B%3CR0Aa4Hh%3B%5Bv738ZqOr7U%3FevDs%3El%601Nw%7BM0Bf7hu7z%3FRe9s4XwGXedrKUAN%28%40aCHnM%60%29.%7BOV",
+					"types": [
+						"Place",
+						"AdministrativeArea",
+						"Country"
+					],
+					"name": "United States of America",
+					"diffbotUri": "http://diffbot.com/entity/E01d4EK33MmCosgI2KXa4-A",
+					"targetDiffbotUri": "http://diffbot.com/entity/E01d4EK33MmCosgI2KXa4-A",
+					"targetDiffbotId": "E01d4EK33MmCosgI2KXa4-A",
+					"type": "Place"
+				},
+				"isCurrent": true,
+				"address": "Washington D.C. Metro Area",
+				"metroArea": {
+					"summary": "Metropolitan area centered on Washington, D.C.",
+					"image": "https://kg.diffbot.com/image/api/get?fetch=yes&url=g%3Cj7P0St0DnBJf.x0KwLZrUn.%5B%3CR0Aa4Hh%3B%5Bv738ZqOr7U%3FFvup%3EiQNof%3Bo9Uc%3Dl.Bv%3E",
+					"types": [
+						"Place",
+						"AdministrativeArea"
+					],
+					"name": "Washington metropolitan area",
+					"diffbotUri": "http://diffbot.com/entity/EbKIavbI8PhiHKmthsK_vTw",
+					"targetDiffbotUri": "http://diffbot.com/entity/EbKIavbI8PhiHKmthsK_vTw",
+					"targetDiffbotId": "EbKIavbI8PhiHKmthsK_vTw",
+					"type": "Place"
+				},
+				"subregion": {
+					"summary": "Capital city of the United States",
+					"image": "https://kg.diffbot.com/image/api/get?fetch=yes&url=g%3Cj7P0St0DnBJf.x0KwLZrUn.%5B%3CR0Aa4Hh%3B%5Bv738ZqOr7U%3FbvAT%3ExS%7DYb%3B%60zUb%3DXSAyK_oGyzSxB%3C1%5C6DR7P.Ar4",
+					"types": [
+						"Place",
+						"AdministrativeArea",
+						"City"
+					],
+					"name": "Washington, D.C.",
+					"diffbotUri": "http://diffbot.com/entity/Ep2MLLdkjO_C-R6NA7cOlcQ",
+					"targetDiffbotUri": "http://diffbot.com/entity/Ep2MLLdkjO_C-R6NA7cOlcQ",
+					"targetDiffbotId": "Ep2MLLdkjO_C-R6NA7cOlcQ",
+					"type": "Place"
+				},
+				"latitude": 38.82651901245117,
+				"precision": 20,
+				"surfaceForm": "Washington D.C. Metro Area",
+				"region": {
+					"summary": "Capital city of the United States",
+					"image": "https://kg.diffbot.com/image/api/get?fetch=yes&url=g%3Cj7P0St0DnBJf.x0KwLZrUn.%5B%3CR0Aa4Hh%3B%5Bv738ZqOr7U%3FbvAT%3ExS%7DYb%3B%60zUb%3DXSAyK_oGyzSxB%3C1%5C6DR7P.Ar4",
+					"types": [
+						"Place",
+						"AdministrativeArea",
+						"City"
+					],
+					"name": "Washington, D.C.",
+					"diffbotUri": "http://diffbot.com/entity/Ep2MLLdkjO_C-R6NA7cOlcQ",
+					"targetDiffbotUri": "http://diffbot.com/entity/Ep2MLLdkjO_C-R6NA7cOlcQ",
+					"targetDiffbotId": "Ep2MLLdkjO_C-R6NA7cOlcQ",
+					"type": "Place"
+				},
+				"longitude": -77.01712036132812
+			},
+			"from": {
+				"str": "d2017-01-XX",
+				"precision": 2,
+				"timestamp": 1483228800000
+			},
+			"categories": [
+				{
+					"types": [
+						"Intangible",
+						"EmploymentCategory"
+					],
+					"name": "Executive",
+					"diffbotUri": "http://diffbot.com/entity/EFHD6pfzYMtqdaaytNomkhA",
+					"targetDiffbotUri": "http://diffbot.com/entity/EFHD6pfzYMtqdaaytNomkhA",
+					"targetDiffbotId": "EFHD6pfzYMtqdaaytNomkhA",
+					"type": "EmploymentCategory"
+				},
+				{
+					"types": [
+						"Intangible",
+						"EmploymentCategory"
+					],
+					"name": "Management",
+					"diffbotUri": "http://diffbot.com/entity/EpXGc9jmNPQW3wt-ny5SqCQ",
+					"targetDiffbotUri": "http://diffbot.com/entity/EpXGc9jmNPQW3wt-ny5SqCQ",
+					"targetDiffbotId": "EpXGc9jmNPQW3wt-ny5SqCQ",
+					"type": "EmploymentCategory"
+				}
+			],
+			"title": "CEO"
+		},
+		{
+			"isCurrent": true,
+			"employer": {
+				"recordId": "EEIzhzuLVPeKuQ7KjPSa6aQ@215",
+				"name": "Havard Kennedy School",
+				"surfaceForm": "Havard Kennedy School",
+				"position": "personEmploymentEmployer",
+				"type": "Organization"
+			},
+			"location": {
+				"country": {
+					"summary": "Country in North America",
+					"image": "https://kg.diffbot.com/image/api/get?fetch=yes&url=g%3Cj7P0St0DnBJf.x0KwLZrUn.%5B%3CR0Aa4Hh%3B%5Bv738ZqOr7U%3FevDs%3El%601Nw%7BM0Bf7hu7z%3FRe9s4XwGXedrKUAN%28%40aCHnM%60%29.%7BOV",
+					"types": [
+						"Place",
+						"AdministrativeArea",
+						"Country"
+					],
+					"name": "United States of America",
+					"diffbotUri": "http://diffbot.com/entity/E01d4EK33MmCosgI2KXa4-A",
+					"targetDiffbotUri": "http://diffbot.com/entity/E01d4EK33MmCosgI2KXa4-A",
+					"targetDiffbotId": "E01d4EK33MmCosgI2KXa4-A",
+					"type": "Place"
+				},
+				"isCurrent": true,
+				"address": "Cambridge, Massachusetts",
+				"city": {
+					"summary": "City in Middlesex County, Massachusetts, United States of America",
+					"image": "https://kg.diffbot.com/image/api/get?fetch=yes&url=g%3Cj7P0St0DnBJf.x0KwLZrUn.%5B%3CR0Aa4Hh%3B%5Bv738ZqOr7U%3Fav%40s%3EhO9Ou5%5E2FYEZn%40o%3EUrMl3X.Sgy",
+					"types": [
+						"Place",
+						"AdministrativeArea",
+						"City"
+					],
+					"name": "Cambridge",
+					"diffbotUri": "http://diffbot.com/entity/EKtEQ-seQOfuiSDMTnvM9tA",
+					"targetDiffbotUri": "http://diffbot.com/entity/EKtEQ-seQOfuiSDMTnvM9tA",
+					"targetDiffbotId": "EKtEQ-seQOfuiSDMTnvM9tA",
+					"type": "Place"
+				},
+				"metroArea": {
+					"summary": "Metropolitan area in Massachusetts, New Hampshire and Rhode Island, USA",
+					"image": "https://kg.diffbot.com/image/api/get?fetch=yes&url=g%3Cj7P0St0DnBJf.x0KwLZrUn.%5B%3CR0Aa4Hh%3B%5Bv738ZqOr7U%3FEvtp%3El%601Nw1l%7DPmLh%7DZ.G%5Bm",
+					"types": [
+						"Place",
+						"AdministrativeArea"
+					],
+					"name": "Greater Boston",
+					"diffbotUri": "http://diffbot.com/entity/Es5VXYfClMLeSpzD5N0Cx1A",
+					"targetDiffbotUri": "http://diffbot.com/entity/Es5VXYfClMLeSpzD5N0Cx1A",
+					"targetDiffbotId": "Es5VXYfClMLeSpzD5N0Cx1A",
+					"type": "Place"
+				},
+				"subregion": {
+					"summary": "County in Massachusetts, United States",
+					"image": "https://kg.diffbot.com/image/api/get?fetch=yes&url=g%3Cj7P0St0DnBJf.x0KwLZrUn.%5B%3CR0Aa4Hh%3B%5Bv738ZqOr7U%3FcvBQ%3ErO%3CLr2YhBmKZr%40%7BJRzXxzL%7BJa%7EYx%3Fd7%5Dl%7DI6G%60F%604%3F082w%5BuA_.Xq%7B",
+					"types": [
+						"Place",
+						"AdministrativeArea",
+						"Subregion"
+					],
+					"name": "Middlesex County",
+					"diffbotUri": "http://diffbot.com/entity/EfTXOkq9_P2GytZP4wTfK1g",
+					"targetDiffbotUri": "http://diffbot.com/entity/EfTXOkq9_P2GytZP4wTfK1g",
+					"targetDiffbotId": "EfTXOkq9_P2GytZP4wTfK1g",
+					"type": "Place"
+				},
+				"latitude": 42.3803596496582,
+				"precision": 4.150406360626221,
+				"postalCode": "02138",
+				"surfaceForm": "Cambridge, Massachusetts",
+				"region": {
+					"summary": "State of the United States of America",
+					"image": "https://kg.diffbot.com/image/api/get?fetch=yes&url=g%3Cj7P0St0DnBJf.x0KwLZrUn.%5B%3CR0Aa4Hh%3B%5Bv738ZqOr7U%3FivHp%3ExS%7DYb%3B%60z%7E%5BKlp%3BnL%60kXy%3E.5Y%60",
+					"types": [
+						"Place",
+						"AdministrativeArea",
+						"Region"
+					],
+					"name": "Massachusetts",
+					"diffbotUri": "http://diffbot.com/entity/E0VAbhEeRNsSvhHIpmhd3Xw",
+					"targetDiffbotUri": "http://diffbot.com/entity/E0VAbhEeRNsSvhHIpmhd3Xw",
+					"targetDiffbotId": "E0VAbhEeRNsSvhHIpmhd3Xw",
+					"type": "Place"
+				},
+				"longitude": -71.1159896850586
+			},
+			"from": {
+				"str": "d2018-01-XX",
+				"precision": 2,
+				"timestamp": 1514764800000
+			},
+			"categories": [
+				{
+					"types": [
+						"Intangible",
+						"EmploymentCategory"
+					],
+					"name": "Senior",
+					"diffbotUri": "http://diffbot.com/entity/E44tGGbuVPHGMYsYaVkh8kA",
+					"targetDiffbotUri": "http://diffbot.com/entity/E44tGGbuVPHGMYsYaVkh8kA",
+					"targetDiffbotId": "E44tGGbuVPHGMYsYaVkh8kA",
+					"type": "EmploymentCategory"
+				},
+				{
+					"types": [
+						"Intangible",
+						"EmploymentCategory"
+					],
+					"name": "Research and Science",
+					"diffbotUri": "http://diffbot.com/entity/EwfRKUmUuNEm2WaNA9mDKww",
+					"targetDiffbotUri": "http://diffbot.com/entity/EwfRKUmUuNEm2WaNA9mDKww",
+					"targetDiffbotId": "EwfRKUmUuNEm2WaNA9mDKww",
+					"type": "EmploymentCategory"
+				}
+			],
+			"title": "Senior Research Fellow"
 		}
 	]
 }
@@ -840,25 +985,16 @@ Note that certain longer field examples may be truncated for readability.
 {
 	"interests": [
 		{
-			"recordId": "EEIzhzuLVPeKuQ7KjPSa6aQ@329",
 			"name": "planning",
-			"surfaceForm": "planning",
-			"position": "personInterest",
-			"type": "Miscellaneous"
+			"surfaceForm": "planning"
 		},
 		{
-			"recordId": "EEIzhzuLVPeKuQ7KjPSa6aQ@330",
 			"name": "investing",
-			"surfaceForm": "investing",
-			"position": "personInterest",
-			"type": "Miscellaneous"
+			"surfaceForm": "investing"
 		},
 		{
-			"recordId": "EEIzhzuLVPeKuQ7KjPSa6aQ@331",
 			"name": "lobbying",
-			"surfaceForm": "lobbying",
-			"position": "personInterest",
-			"type": "Miscellaneous"
+			"surfaceForm": "lobbying"
 		}
 	]
 }
@@ -889,8 +1025,8 @@ Note that certain longer field examples may be truncated for readability.
 {
 	"location": {
 		"country": {
-			"summary": "Sovereign state in North America",
-			"image": "https://kg.diffbot.com/image/api/get?fetch=yes&url=g%3Cj7P0St0DnBJf.x0KwLZrUn.%5B%3CR0Aa4Hh%3B%5Bv738ZqOr7U%3FfvEQ%3El%601Nw%7BM0Bf7hu7z%3FRe9s4XwGXedrKUAN%28%3D%5ECHnM%60%29.%7BOV",
+			"summary": "Country in North America",
+			"image": "https://kg.diffbot.com/image/api/get?fetch=yes&url=g%3Cj7P0St0DnBJf.x0KwLZrUn.%5B%3CR0Aa4Hh%3B%5Bv738ZqOr7U%3FevDs%3El%601Nw%7BM0Bf7hu7z%3FRe9s4XwGXedrKUAN%28%40aCHnM%60%29.%7BOV",
 			"types": [
 				"Place",
 				"AdministrativeArea",
@@ -900,12 +1036,12 @@ Note that certain longer field examples may be truncated for readability.
 			"diffbotUri": "http://diffbot.com/entity/E01d4EK33MmCosgI2KXa4-A",
 			"targetDiffbotUri": "http://diffbot.com/entity/E01d4EK33MmCosgI2KXa4-A",
 			"targetDiffbotId": "E01d4EK33MmCosgI2KXa4-A",
-			"type": "AdministrativeArea"
+			"type": "Place"
 		},
 		"isCurrent": true,
-		"address": "Washington, D.C.",
+		"address": "Washington, District of Columbia, USA",
 		"city": {
-			"summary": "Capital city of the United States of America",
+			"summary": "Capital city of the United States",
 			"image": "https://kg.diffbot.com/image/api/get?fetch=yes&url=g%3Cj7P0St0DnBJf.x0KwLZrUn.%5B%3CR0Aa4Hh%3B%5Bv738ZqOr7U%3FbvAT%3ExS%7DYb%3B%60zUb%3DXSAyK_oGyzSxB%3C1%5C6DR7P.Ar4",
 			"types": [
 				"Place",
@@ -916,7 +1052,7 @@ Note that certain longer field examples may be truncated for readability.
 			"diffbotUri": "http://diffbot.com/entity/Ep2MLLdkjO_C-R6NA7cOlcQ",
 			"targetDiffbotUri": "http://diffbot.com/entity/Ep2MLLdkjO_C-R6NA7cOlcQ",
 			"targetDiffbotId": "Ep2MLLdkjO_C-R6NA7cOlcQ",
-			"type": "AdministrativeArea"
+			"type": "Place"
 		},
 		"metroArea": {
 			"summary": "Metropolitan area centered on Washington, D.C.",
@@ -929,10 +1065,10 @@ Note that certain longer field examples may be truncated for readability.
 			"diffbotUri": "http://diffbot.com/entity/EbKIavbI8PhiHKmthsK_vTw",
 			"targetDiffbotUri": "http://diffbot.com/entity/EbKIavbI8PhiHKmthsK_vTw",
 			"targetDiffbotId": "EbKIavbI8PhiHKmthsK_vTw",
-			"type": "AdministrativeArea"
+			"type": "Place"
 		},
 		"subregion": {
-			"summary": "Capital city of the United States of America",
+			"summary": "Capital city of the United States",
 			"image": "https://kg.diffbot.com/image/api/get?fetch=yes&url=g%3Cj7P0St0DnBJf.x0KwLZrUn.%5B%3CR0Aa4Hh%3B%5Bv738ZqOr7U%3FbvAT%3ExS%7DYb%3B%60zUb%3DXSAyK_oGyzSxB%3C1%5C6DR7P.Ar4",
 			"types": [
 				"Place",
@@ -943,14 +1079,14 @@ Note that certain longer field examples may be truncated for readability.
 			"diffbotUri": "http://diffbot.com/entity/Ep2MLLdkjO_C-R6NA7cOlcQ",
 			"targetDiffbotUri": "http://diffbot.com/entity/Ep2MLLdkjO_C-R6NA7cOlcQ",
 			"targetDiffbotId": "Ep2MLLdkjO_C-R6NA7cOlcQ",
-			"type": "AdministrativeArea"
+			"type": "Place"
 		},
 		"latitude": 38.82651901245117,
 		"precision": 13.315855979919434,
 		"postalCode": "20032",
 		"surfaceForm": "Washington, District of Columbia, USA",
 		"region": {
-			"summary": "Capital city of the United States of America",
+			"summary": "Capital city of the United States",
 			"image": "https://kg.diffbot.com/image/api/get?fetch=yes&url=g%3Cj7P0St0DnBJf.x0KwLZrUn.%5B%3CR0Aa4Hh%3B%5Bv738ZqOr7U%3FbvAT%3ExS%7DYb%3B%60zUb%3DXSAyK_oGyzSxB%3C1%5C6DR7P.Ar4",
 			"types": [
 				"Place",
@@ -961,7 +1097,7 @@ Note that certain longer field examples may be truncated for readability.
 			"diffbotUri": "http://diffbot.com/entity/Ep2MLLdkjO_C-R6NA7cOlcQ",
 			"targetDiffbotUri": "http://diffbot.com/entity/Ep2MLLdkjO_C-R6NA7cOlcQ",
 			"targetDiffbotId": "Ep2MLLdkjO_C-R6NA7cOlcQ",
-			"type": "AdministrativeArea"
+			"type": "Place"
 		},
 		"longitude": -77.01712036132812
 	}
@@ -976,8 +1112,8 @@ Note that certain longer field examples may be truncated for readability.
 	"locations": [
 		{
 			"country": {
-				"summary": "Sovereign state in North America",
-				"image": "https://kg.diffbot.com/image/api/get?fetch=yes&url=g%3Cj7P0St0DnBJf.x0KwLZrUn.%5B%3CR0Aa4Hh%3B%5Bv738ZqOr7U%3FfvEQ%3El%601Nw%7BM0Bf7hu7z%3FRe9s4XwGXedrKUAN%28%3D%5ECHnM%60%29.%7BOV",
+				"summary": "Country in North America",
+				"image": "https://kg.diffbot.com/image/api/get?fetch=yes&url=g%3Cj7P0St0DnBJf.x0KwLZrUn.%5B%3CR0Aa4Hh%3B%5Bv738ZqOr7U%3FevDs%3El%601Nw%7BM0Bf7hu7z%3FRe9s4XwGXedrKUAN%28%40aCHnM%60%29.%7BOV",
 				"types": [
 					"Place",
 					"AdministrativeArea",
@@ -987,12 +1123,12 @@ Note that certain longer field examples may be truncated for readability.
 				"diffbotUri": "http://diffbot.com/entity/E01d4EK33MmCosgI2KXa4-A",
 				"targetDiffbotUri": "http://diffbot.com/entity/E01d4EK33MmCosgI2KXa4-A",
 				"targetDiffbotId": "E01d4EK33MmCosgI2KXa4-A",
-				"type": "AdministrativeArea"
+				"type": "Place"
 			},
 			"isCurrent": true,
-			"address": "Washington, D.C.",
+			"address": "Washington, District of Columbia, USA",
 			"city": {
-				"summary": "Capital city of the United States of America",
+				"summary": "Capital city of the United States",
 				"image": "https://kg.diffbot.com/image/api/get?fetch=yes&url=g%3Cj7P0St0DnBJf.x0KwLZrUn.%5B%3CR0Aa4Hh%3B%5Bv738ZqOr7U%3FbvAT%3ExS%7DYb%3B%60zUb%3DXSAyK_oGyzSxB%3C1%5C6DR7P.Ar4",
 				"types": [
 					"Place",
@@ -1003,7 +1139,7 @@ Note that certain longer field examples may be truncated for readability.
 				"diffbotUri": "http://diffbot.com/entity/Ep2MLLdkjO_C-R6NA7cOlcQ",
 				"targetDiffbotUri": "http://diffbot.com/entity/Ep2MLLdkjO_C-R6NA7cOlcQ",
 				"targetDiffbotId": "Ep2MLLdkjO_C-R6NA7cOlcQ",
-				"type": "AdministrativeArea"
+				"type": "Place"
 			},
 			"metroArea": {
 				"summary": "Metropolitan area centered on Washington, D.C.",
@@ -1016,10 +1152,10 @@ Note that certain longer field examples may be truncated for readability.
 				"diffbotUri": "http://diffbot.com/entity/EbKIavbI8PhiHKmthsK_vTw",
 				"targetDiffbotUri": "http://diffbot.com/entity/EbKIavbI8PhiHKmthsK_vTw",
 				"targetDiffbotId": "EbKIavbI8PhiHKmthsK_vTw",
-				"type": "AdministrativeArea"
+				"type": "Place"
 			},
 			"subregion": {
-				"summary": "Capital city of the United States of America",
+				"summary": "Capital city of the United States",
 				"image": "https://kg.diffbot.com/image/api/get?fetch=yes&url=g%3Cj7P0St0DnBJf.x0KwLZrUn.%5B%3CR0Aa4Hh%3B%5Bv738ZqOr7U%3FbvAT%3ExS%7DYb%3B%60zUb%3DXSAyK_oGyzSxB%3C1%5C6DR7P.Ar4",
 				"types": [
 					"Place",
@@ -1030,14 +1166,14 @@ Note that certain longer field examples may be truncated for readability.
 				"diffbotUri": "http://diffbot.com/entity/Ep2MLLdkjO_C-R6NA7cOlcQ",
 				"targetDiffbotUri": "http://diffbot.com/entity/Ep2MLLdkjO_C-R6NA7cOlcQ",
 				"targetDiffbotId": "Ep2MLLdkjO_C-R6NA7cOlcQ",
-				"type": "AdministrativeArea"
+				"type": "Place"
 			},
 			"latitude": 38.82651901245117,
 			"precision": 13.315855979919434,
 			"postalCode": "20032",
 			"surfaceForm": "Washington, District of Columbia, USA",
 			"region": {
-				"summary": "Capital city of the United States of America",
+				"summary": "Capital city of the United States",
 				"image": "https://kg.diffbot.com/image/api/get?fetch=yes&url=g%3Cj7P0St0DnBJf.x0KwLZrUn.%5B%3CR0Aa4Hh%3B%5Bv738ZqOr7U%3FbvAT%3ExS%7DYb%3B%60zUb%3DXSAyK_oGyzSxB%3C1%5C6DR7P.Ar4",
 				"types": [
 					"Place",
@@ -1048,14 +1184,14 @@ Note that certain longer field examples may be truncated for readability.
 				"diffbotUri": "http://diffbot.com/entity/Ep2MLLdkjO_C-R6NA7cOlcQ",
 				"targetDiffbotUri": "http://diffbot.com/entity/Ep2MLLdkjO_C-R6NA7cOlcQ",
 				"targetDiffbotId": "Ep2MLLdkjO_C-R6NA7cOlcQ",
-				"type": "AdministrativeArea"
+				"type": "Place"
 			},
 			"longitude": -77.01712036132812
 		},
 		{
 			"country": {
-				"summary": "Sovereign state in North America",
-				"image": "https://kg.diffbot.com/image/api/get?fetch=yes&url=g%3Cj7P0St0DnBJf.x0KwLZrUn.%5B%3CR0Aa4Hh%3B%5Bv738ZqOr7U%3FfvEQ%3El%601Nw%7BM0Bf7hu7z%3FRe9s4XwGXedrKUAN%28%3D%5ECHnM%60%29.%7BOV",
+				"summary": "Country in North America",
+				"image": "https://kg.diffbot.com/image/api/get?fetch=yes&url=g%3Cj7P0St0DnBJf.x0KwLZrUn.%5B%3CR0Aa4Hh%3B%5Bv738ZqOr7U%3FevDs%3El%601Nw%7BM0Bf7hu7z%3FRe9s4XwGXedrKUAN%28%40aCHnM%60%29.%7BOV",
 				"types": [
 					"Place",
 					"AdministrativeArea",
@@ -1065,76 +1201,11 @@ Note that certain longer field examples may be truncated for readability.
 				"diffbotUri": "http://diffbot.com/entity/E01d4EK33MmCosgI2KXa4-A",
 				"targetDiffbotUri": "http://diffbot.com/entity/E01d4EK33MmCosgI2KXa4-A",
 				"targetDiffbotId": "E01d4EK33MmCosgI2KXa4-A",
-				"type": "AdministrativeArea"
+				"type": "Place"
 			},
-			"isCurrent": false,
-			"address": "Redlands, California",
-			"city": {
-				"summary": "City in San Bernardino County, California, United States",
-				"image": "https://kg.diffbot.com/image/api/get?fetch=yes&url=g%3Cj7P0St0DnBJf.x0KwLZrUn.%5B%3CR0Aa4Hh%3B%5Bv738ZqOr7U%3FCvrv%3ExO%3ALE1l9Bl%3Cb%7DGej%5C%7BRyDCUDe%7BV0I%5E7Pdgj0RnJj3%3B%7C%3ESgGu1EiSd2U2Kb%3FchDc3D_NbtOi%7DVnTj%3DL9FE%2F%5B%7DG%5D9%5B%7D7d.ZvE",
-				"types": [
-					"Place",
-					"AdministrativeArea",
-					"City"
-				],
-				"name": "Redlands",
-				"diffbotUri": "http://diffbot.com/entity/EEGqoBftsOZyh3_RKbQE3mw",
-				"targetDiffbotUri": "http://diffbot.com/entity/EEGqoBftsOZyh3_RKbQE3mw",
-				"targetDiffbotId": "EEGqoBftsOZyh3_RKbQE3mw",
-				"type": "AdministrativeArea"
-			},
-			"subregion": {
-				"summary": "County in California, United States",
-				"image": "https://kg.diffbot.com/image/api/get?fetch=yes&url=g%3Cj7P0St0DnBJf.x0KwLZrUn.%5B%3CR0Aa4Hh%3B%5Bv738ZqOr7U%3FhvGu%3ErO%3CLr2Y%5EBfA_%7EJt%40NeLn2L%7EL%60zdzEW%7DBf%3C%5B_HnH%5C3%3EqG%5EgyvBT8%5E.7hz",
-				"types": [
-					"Place",
-					"AdministrativeArea"
-				],
-				"name": "San Bernardino County",
-				"diffbotUri": "http://diffbot.com/entity/EApueG2dHP3iRBLbjF2w2gQ",
-				"targetDiffbotUri": "http://diffbot.com/entity/EApueG2dHP3iRBLbjF2w2gQ",
-				"targetDiffbotId": "EApueG2dHP3iRBLbjF2w2gQ",
-				"type": "AdministrativeArea"
-			},
-			"latitude": 34.04679489135742,
-			"precision": 9.702208518981934,
-			"postalCode": "92374",
-			"surfaceForm": "Redlands, California",
-			"region": {
-				"summary": "State of the United States of America",
-				"image": "https://kg.diffbot.com/image/api/get?fetch=yes&url=g%3Cj7P0St0DnBJf.x0KwLZrUn.%5B%3CR0Aa4Hh%3B%5Bv738ZqOr7U%3Fav%40T%3ExS%7DYb%3B%60zt%5BDbuGxEVg.xAK",
-				"types": [
-					"Place",
-					"AdministrativeArea",
-					"Region"
-				],
-				"name": "California",
-				"diffbotUri": "http://diffbot.com/entity/El0_8ehooNxOPT36Y4RdV9w",
-				"targetDiffbotUri": "http://diffbot.com/entity/El0_8ehooNxOPT36Y4RdV9w",
-				"targetDiffbotId": "El0_8ehooNxOPT36Y4RdV9w",
-				"type": "AdministrativeArea"
-			},
-			"longitude": -117.17427062988281
-		},
-		{
-			"country": {
-				"summary": "Sovereign state in North America",
-				"image": "https://kg.diffbot.com/image/api/get?fetch=yes&url=g%3Cj7P0St0DnBJf.x0KwLZrUn.%5B%3CR0Aa4Hh%3B%5Bv738ZqOr7U%3FfvEQ%3El%601Nw%7BM0Bf7hu7z%3FRe9s4XwGXedrKUAN%28%3D%5ECHnM%60%29.%7BOV",
-				"types": [
-					"Place",
-					"AdministrativeArea",
-					"Country"
-				],
-				"name": "United States of America",
-				"diffbotUri": "http://diffbot.com/entity/E01d4EK33MmCosgI2KXa4-A",
-				"targetDiffbotUri": "http://diffbot.com/entity/E01d4EK33MmCosgI2KXa4-A",
-				"targetDiffbotId": "E01d4EK33MmCosgI2KXa4-A",
-				"type": "AdministrativeArea"
-			},
-			"isCurrent": false,
 			"address": "Cambridge, Massachusetts",
 			"city": {
-				"summary": "City in Middlesex County, Massachusetts, United States",
+				"summary": "City in Middlesex County, Massachusetts, United States of America",
 				"image": "https://kg.diffbot.com/image/api/get?fetch=yes&url=g%3Cj7P0St0DnBJf.x0KwLZrUn.%5B%3CR0Aa4Hh%3B%5Bv738ZqOr7U%3Fav%40s%3EhO9Ou5%5E2FYEZn%40o%3EUrMl3X.Sgy",
 				"types": [
 					"Place",
@@ -1145,13 +1216,14 @@ Note that certain longer field examples may be truncated for readability.
 				"diffbotUri": "http://diffbot.com/entity/EKtEQ-seQOfuiSDMTnvM9tA",
 				"targetDiffbotUri": "http://diffbot.com/entity/EKtEQ-seQOfuiSDMTnvM9tA",
 				"targetDiffbotId": "EKtEQ-seQOfuiSDMTnvM9tA",
-				"type": "AdministrativeArea"
+				"type": "Place"
 			},
 			"metroArea": {
 				"summary": "Metropolitan area in Massachusetts, New Hampshire and Rhode Island, USA",
 				"image": "https://kg.diffbot.com/image/api/get?fetch=yes&url=g%3Cj7P0St0DnBJf.x0KwLZrUn.%5B%3CR0Aa4Hh%3B%5Bv738ZqOr7U%3FEvtp%3El%601Nw1l%7DPmLh%7DZ.G%5Bm",
 				"types": [
-					"Place"
+					"Place",
+					"AdministrativeArea"
 				],
 				"name": "Greater Boston",
 				"diffbotUri": "http://diffbot.com/entity/Es5VXYfClMLeSpzD5N0Cx1A",
@@ -1171,7 +1243,7 @@ Note that certain longer field examples may be truncated for readability.
 				"diffbotUri": "http://diffbot.com/entity/EfTXOkq9_P2GytZP4wTfK1g",
 				"targetDiffbotUri": "http://diffbot.com/entity/EfTXOkq9_P2GytZP4wTfK1g",
 				"targetDiffbotId": "EfTXOkq9_P2GytZP4wTfK1g",
-				"type": "AdministrativeArea"
+				"type": "Place"
 			},
 			"latitude": 42.3803596496582,
 			"precision": 4.150406360626221,
@@ -1189,9 +1261,71 @@ Note that certain longer field examples may be truncated for readability.
 				"diffbotUri": "http://diffbot.com/entity/E0VAbhEeRNsSvhHIpmhd3Xw",
 				"targetDiffbotUri": "http://diffbot.com/entity/E0VAbhEeRNsSvhHIpmhd3Xw",
 				"targetDiffbotId": "E0VAbhEeRNsSvhHIpmhd3Xw",
-				"type": "AdministrativeArea"
+				"type": "Place"
 			},
 			"longitude": -71.1159896850586
+		},
+		{
+			"country": {
+				"summary": "Country in North America",
+				"image": "https://kg.diffbot.com/image/api/get?fetch=yes&url=g%3Cj7P0St0DnBJf.x0KwLZrUn.%5B%3CR0Aa4Hh%3B%5Bv738ZqOr7U%3FevDs%3El%601Nw%7BM0Bf7hu7z%3FRe9s4XwGXedrKUAN%28%40aCHnM%60%29.%7BOV",
+				"types": [
+					"Place",
+					"AdministrativeArea",
+					"Country"
+				],
+				"name": "United States of America",
+				"diffbotUri": "http://diffbot.com/entity/E01d4EK33MmCosgI2KXa4-A",
+				"targetDiffbotUri": "http://diffbot.com/entity/E01d4EK33MmCosgI2KXa4-A",
+				"targetDiffbotId": "E01d4EK33MmCosgI2KXa4-A",
+				"type": "Place"
+			},
+			"address": "Washington D.C. Metro Area",
+			"metroArea": {
+				"summary": "Metropolitan area centered on Washington, D.C.",
+				"image": "https://kg.diffbot.com/image/api/get?fetch=yes&url=g%3Cj7P0St0DnBJf.x0KwLZrUn.%5B%3CR0Aa4Hh%3B%5Bv738ZqOr7U%3FFvup%3EiQNof%3Bo9Uc%3Dl.Bv%3E",
+				"types": [
+					"Place",
+					"AdministrativeArea"
+				],
+				"name": "Washington metropolitan area",
+				"diffbotUri": "http://diffbot.com/entity/EbKIavbI8PhiHKmthsK_vTw",
+				"targetDiffbotUri": "http://diffbot.com/entity/EbKIavbI8PhiHKmthsK_vTw",
+				"targetDiffbotId": "EbKIavbI8PhiHKmthsK_vTw",
+				"type": "Place"
+			},
+			"subregion": {
+				"summary": "Capital city of the United States",
+				"image": "https://kg.diffbot.com/image/api/get?fetch=yes&url=g%3Cj7P0St0DnBJf.x0KwLZrUn.%5B%3CR0Aa4Hh%3B%5Bv738ZqOr7U%3FbvAT%3ExS%7DYb%3B%60zUb%3DXSAyK_oGyzSxB%3C1%5C6DR7P.Ar4",
+				"types": [
+					"Place",
+					"AdministrativeArea",
+					"City"
+				],
+				"name": "Washington, D.C.",
+				"diffbotUri": "http://diffbot.com/entity/Ep2MLLdkjO_C-R6NA7cOlcQ",
+				"targetDiffbotUri": "http://diffbot.com/entity/Ep2MLLdkjO_C-R6NA7cOlcQ",
+				"targetDiffbotId": "Ep2MLLdkjO_C-R6NA7cOlcQ",
+				"type": "Place"
+			},
+			"latitude": 38.82651901245117,
+			"precision": 20,
+			"surfaceForm": "Washington D.C. Metro Area",
+			"region": {
+				"summary": "Capital city of the United States",
+				"image": "https://kg.diffbot.com/image/api/get?fetch=yes&url=g%3Cj7P0St0DnBJf.x0KwLZrUn.%5B%3CR0Aa4Hh%3B%5Bv738ZqOr7U%3FbvAT%3ExS%7DYb%3B%60zUb%3DXSAyK_oGyzSxB%3C1%5C6DR7P.Ar4",
+				"types": [
+					"Place",
+					"AdministrativeArea",
+					"City"
+				],
+				"name": "Washington, D.C.",
+				"diffbotUri": "http://diffbot.com/entity/Ep2MLLdkjO_C-R6NA7cOlcQ",
+				"targetDiffbotUri": "http://diffbot.com/entity/Ep2MLLdkjO_C-R6NA7cOlcQ",
+				"targetDiffbotId": "Ep2MLLdkjO_C-R6NA7cOlcQ",
+				"type": "Place"
+			},
+			"longitude": -77.01712036132812
 		}
 	]
 }
@@ -1216,13 +1350,11 @@ Note that certain longer field examples may be truncated for readability.
 {
 	"nationalities": [
 		{
-			"recordId": "EEIzhzuLVPeKuQ7KjPSa6aQ@336",
 			"name": "United States of America",
 			"websiteUris": [
 				"wikidata.org/entity/Q30"
 			],
-			"position": "nationalities",
-			"type": "AdministrativeArea"
+			"surfaceForm": "United States of America"
 		}
 	]
 }
@@ -1237,6 +1369,15 @@ Note that certain longer field examples may be truncated for readability.
 		"currency": "",
 		"value": ""
 	}
+}
+```
+### npiNumbers
+  The National Provider Identifier (NPI) is a unique identification number for covered health care providers. 
+* **Type:** String
+* **Example:**
+```
+{
+	"npiNumbers": ""
 }
 ```
 ### parents
@@ -1290,43 +1431,11 @@ Note that certain longer field examples may be truncated for readability.
 {
 	"politicalAffiliation": [
 		{
-			"recordId": "EEIzhzuLVPeKuQ7KjPSa6aQ@337",
 			"name": "Democratic Party",
 			"websiteUris": [
 				"wikidata.org/entity/Q29552"
 			],
-			"surfaceForm": "Democratic Party",
-			"position": "politicalAffiliation",
-			"type": "Organization"
-		}
-	]
-}
-```
-### posts
-  Posts written by this person.
-* **Type:** LinkedEntity
-* **Example:**
-```
-{
-	"posts": [
-		{
-			"summary": "",
-			"image": "",
-			"images": [
-				{
-					"classifications": "",
-					"fingerprint": "",
-					"title": "",
-					"isCached": false,
-					"url": ""
-				}
-			],
-			"types": "",
-			"websiteUris": "",
-			"diffbotUri": "",
-			"name": "",
-			"targetDiffbotUri": "",
-			"surfaceForm": ""
+			"surfaceForm": "Democratic Party"
 		}
 	]
 }

@@ -10,7 +10,9 @@ Note that fields are not guaranteed to exist in every entity record.
 
 For convenience, a complete ontology source in JSON format is also [available here](https://kg.diffbot.com/kg/ontology).
 
->New to the Diffbot Knowledge Graph? [Start here](dql-quickstart).
+> 🙋 
+> 
+> New to the Diffbot Knowledge Graph? [Start here](doc:getting-started-with-diffbot-knowledge-graph).
 
 ## Article Fields
 * [author](#author) 
@@ -160,7 +162,6 @@ Note that certain longer field examples may be truncated for readability.
 				"text": ""
 			}
 		],
-		"numParticipants": 0,
 		"tags": [
 			{
 				"score": "",
@@ -171,6 +172,7 @@ Note that certain longer field examples may be truncated for readability.
 				"uri": ""
 			}
 		],
+		"numParticipants": 0,
 		"rssUrl": ""
 	}
 }
@@ -329,26 +331,10 @@ Note that certain longer field examples may be truncated for readability.
 {
 	"tags": [
 		{
-			"score": 0.94,
-			"sentiment": -0.15,
-			"types": [
-				"http://dbpedia.org/ontology/Agent",
-				"http://dbpedia.org/ontology/Organisation",
-				"http://dbpedia.org/ontology/Media",
-				"http://dbpedia.org/ontology/Identifier",
-				"http://dbpedia.org/ontology/Work",
-				"http://dbpedia.org/ontology/Activity",
-				"http://dbpedia.org/ontology/Software"
-			],
-			"count": 12,
-			"label": "Knowledge Graph",
-			"uri": "http://dbpedia.org/page/Knowledge_Graph"
-		},
-		{
 			"score": 0.62,
 			"count": 2,
 			"label": "Artificial intelligence",
-			"uri": "http://dbpedia.org/page/Artificial_intelligence"
+			"uri": "nullE_lYDrjmAMlKKwXaDf958zg"
 		},
 		{
 			"score": 0.58,
@@ -358,7 +344,13 @@ Note that certain longer field examples may be truncated for readability.
 			],
 			"count": 1,
 			"label": "Marissa Mayer",
-			"uri": "http://dbpedia.org/page/Marissa_Mayer"
+			"uri": "nullErn2vT2-KNziNoanJNfo9qg"
+		},
+		{
+			"score": 0.56,
+			"count": 2,
+			"label": "Data",
+			"uri": "nullE0KEs60u2MhKE54Ymo-1Uqg"
 		}
 	]
 }
