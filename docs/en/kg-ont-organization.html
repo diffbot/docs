@@ -58,7 +58,8 @@
 <p>Note that fields are not guaranteed to exist in every entity record.</p>
 <p>For convenience, a complete ontology source in JSON format is also <a href="https://kg.diffbot.com/kg/ontology">available here</a>.</p>
 <blockquote>
-<p>New to the Diffbot Knowledge Graph? <a href="dql-quickstart">Start here</a>.</p>
+<p>🙋</p>
+<p>New to the Diffbot Knowledge Graph? <a href="doc:getting-started-with-diffbot-knowledge-graph">Start here</a>.</p>
 </blockquote>
 <h2><a class="anchor" aria-hidden="true" id="organization-fields"></a><a href="#organization-fields" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Organization Fields</h2>
 <ul>
@@ -83,9 +84,12 @@
 <li><a href="#descriptors">descriptors</a></li>
 <li><a href="#diffbotclassification">diffbotClassification</a></li>
 <li><a href="#edrpounumbers">edrpouNumbers</a></li>
+<li><a href="#emailaddresses">emailAddresses</a></li>
+<li><a href="#employeecategories">employeeCategories</a></li>
 <li><a href="#facebookuri">facebookUri</a></li>
 <li><a href="#founders">founders</a></li>
 <li><a href="#foundingdate">foundingDate</a></li>
+<li><a href="#fullname">fullName</a></li>
 <li><a href="#githuburi">githubUri</a></li>
 <li><a href="#googleplusuri">googlePlusUri</a></li>
 <li><a href="#guinumbers">guiNumbers</a></li>
@@ -103,7 +107,6 @@
 <li><a href="#israelicompanynumbers">israeliCompanyNumbers</a></li>
 <li><a href="#japanesecorporatenumbers">japaneseCorporateNumbers</a></li>
 <li><a href="#kvedclassification">kvedClassification</a></li>
-<li><a href="#leadership">leadership</a></li>
 <li><a href="#linkedinuri">linkedInUri</a></li>
 <li><a href="#location">location</a></li>
 <li><a href="#locations">locations</a></li>
@@ -111,20 +114,22 @@
 <li><a href="#mccclassification">mccClassification</a></li>
 <li><a href="#mcccode">mccCode</a></li>
 <li><a href="#mcccodedescription">mccCodeDescription</a></li>
+<li><a href="#monthlytraffic">monthlyTraffic</a></li>
+<li><a href="#monthlytrafficgrowth">monthlyTrafficGrowth</a></li>
 <li><a href="#motto">motto</a></li>
 <li><a href="#naceclassification">naceClassification</a></li>
 <li><a href="#nafclassification">nafClassification</a></li>
 <li><a href="#naicsclassification">naicsClassification</a></li>
+<li><a href="#naicsclassification2017">naicsClassification2017</a></li>
 <li><a href="#nbactiveemployeeedges">nbActiveEmployeeEdges</a></li>
 <li><a href="#nbemployeeranges">nbEmployeeRanges</a></li>
 <li><a href="#nbemployees">nbEmployees</a></li>
 <li><a href="#nbemployeesmax">nbEmployeesMax</a></li>
 <li><a href="#nbemployeesmin">nbEmployeesMin</a></li>
-<li><a href="#nbemployeesonlinkedin">nbEmployeesOnLinkedIn</a></li>
-<li><a href="#nbemployeesonlinkedinovertime">nbEmployeesOnLinkedInOverTime</a></li>
 <li><a href="#nblocations">nbLocations</a></li>
 <li><a href="#nbuniqueinvestors">nbUniqueInvestors</a></li>
 <li><a href="#norwegianorganizationnumbers">norwegianOrganizationNumbers</a></li>
+<li><a href="#npinumbers">npiNumbers</a></li>
 <li><a href="#okvedclassification">okvedClassification</a></li>
 <li><a href="#parentcompany">parentCompany</a></li>
 <li><a href="#partnerships">partnerships</a></li>
@@ -152,6 +157,7 @@
 <li><a href="#twitteruri">twitterUri</a></li>
 <li><a href="#uennumbers">uenNumbers</a></li>
 <li><a href="#uksicclassification">ukSicClassification</a></li>
+<li><a href="#ultimateparent">ultimateParent</a></li>
 <li><a href="#vatidentificationnumbers">vatIdentificationNumbers</a></li>
 <li><a href="#wikipediauri">wikipediaUri</a></li>
 <li><a href="#yearlyrevenues">yearlyRevenues</a></li>
@@ -215,7 +221,7 @@
 <li><strong>Example:</strong></li>
 </ul>
 <pre><code class="hljs">{
-    <span class="hljs-attr">"angellistUri"</span>: <span class="hljs-string">"angel.co/ibm"</span>
+    <span class="hljs-attr">"angellistUri"</span>: <span class="hljs-string">"angel.co/ibm-india-1"</span>
 }
 </code></pre>
 <h3><a class="anchor" aria-hidden="true" id="anzsicclassification"></a><a href="#anzsicclassification" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>anzSicClassification</h3>
@@ -257,7 +263,7 @@
     <span class="hljs-attr">"boardMembers"</span>: [
         {
             <span class="hljs-attr">"summary"</span>: <span class="hljs-string">"Indian American business executive and CEO of IBM"</span>,
-            <span class="hljs-attr">"image"</span>: <span class="hljs-string">"https://kg.diffbot.com/image/api/get?fetch=yes&amp;url=g%3Cj7P0Stn8p.%5DjEp9G.Bd%7Bko6MMm4L%7E-%60%5B%5C%7E-Z%3D6N-Cg%7BG-dXqps6qPPg%7D2zN_%3Cb4E.A%5Dm"</span>,
+            <span class="hljs-attr">"image"</span>: <span class="hljs-string">"https://kg.diffbot.com/image/api/get?fetch=yes&amp;url=g%3Cj7P0Stn8p.%5DjEp9G.Bd%7BkpWQMQfM%7B-by%3A%7B-Z6%3Aq-kf%7Bi-Eztos%5DtRnh%2F%7BzN_%3Cb4E.A%5Dm"</span>,
             <span class="hljs-attr">"types"</span>: [
                 <span class="hljs-string">"Person"</span>
             ],
@@ -266,18 +272,6 @@
             <span class="hljs-attr">"targetDiffbotUri"</span>: <span class="hljs-string">"http://diffbot.com/entity/E2w9R5RLuMCSUb511otaM-Q"</span>,
             <span class="hljs-attr">"targetDiffbotId"</span>: <span class="hljs-string">"E2w9R5RLuMCSUb511otaM-Q"</span>,
             <span class="hljs-attr">"surfaceForm"</span>: <span class="hljs-string">"Arvind Krishna"</span>,
-            <span class="hljs-attr">"type"</span>: <span class="hljs-string">"Person"</span>
-        },
-        {
-            <span class="hljs-attr">"summary"</span>: <span class="hljs-string">"Vice President at INTERNATIONAL BUSINESS MACHINES CORP"</span>,
-            <span class="hljs-attr">"types"</span>: [
-                <span class="hljs-string">"Person"</span>
-            ],
-            <span class="hljs-attr">"name"</span>: <span class="hljs-string">"Tom Rosamilia"</span>,
-            <span class="hljs-attr">"diffbotUri"</span>: <span class="hljs-string">"http://diffbot.com/entity/Exm1-aqmiPOusoIB7tCG_7w"</span>,
-            <span class="hljs-attr">"targetDiffbotUri"</span>: <span class="hljs-string">"http://diffbot.com/entity/Exm1-aqmiPOusoIB7tCG_7w"</span>,
-            <span class="hljs-attr">"targetDiffbotId"</span>: <span class="hljs-string">"Exm1-aqmiPOusoIB7tCG_7w"</span>,
-            <span class="hljs-attr">"surfaceForm"</span>: <span class="hljs-string">"Tom Rosamilia"</span>,
             <span class="hljs-attr">"type"</span>: <span class="hljs-string">"Person"</span>
         },
         {
@@ -291,6 +285,19 @@
             <span class="hljs-attr">"targetDiffbotUri"</span>: <span class="hljs-string">"http://diffbot.com/entity/ER3tuAKIoMBq05xKDDZr6DQ"</span>,
             <span class="hljs-attr">"targetDiffbotId"</span>: <span class="hljs-string">"ER3tuAKIoMBq05xKDDZr6DQ"</span>,
             <span class="hljs-attr">"surfaceForm"</span>: <span class="hljs-string">"David Farr"</span>,
+            <span class="hljs-attr">"type"</span>: <span class="hljs-string">"Person"</span>
+        },
+        {
+            <span class="hljs-attr">"summary"</span>: <span class="hljs-string">"Chairman at Surgical Care Group"</span>,
+            <span class="hljs-attr">"image"</span>: <span class="hljs-string">"https://kg.diffbot.com/image/api/get?fetch=yes&amp;url=g%3Cj7guSXzAoBWu.x0KwLZrUn.%5B%3CR0Aa4Hwygr9m6W%3Exl5G%60BkxmPASD4r%3Em6Z.Biv"</span>,
+            <span class="hljs-attr">"types"</span>: [
+                <span class="hljs-string">"Person"</span>
+            ],
+            <span class="hljs-attr">"name"</span>: <span class="hljs-string">"Alex Gorsky"</span>,
+            <span class="hljs-attr">"diffbotUri"</span>: <span class="hljs-string">"http://diffbot.com/entity/Ee_LAfNCLMK-VpvaJV4xpAA"</span>,
+            <span class="hljs-attr">"targetDiffbotUri"</span>: <span class="hljs-string">"http://diffbot.com/entity/Ee_LAfNCLMK-VpvaJV4xpAA"</span>,
+            <span class="hljs-attr">"targetDiffbotId"</span>: <span class="hljs-string">"Ee_LAfNCLMK-VpvaJV4xpAA"</span>,
+            <span class="hljs-attr">"surfaceForm"</span>: <span class="hljs-string">"Alex Gorsky"</span>,
             <span class="hljs-attr">"type"</span>: <span class="hljs-string">"Person"</span>
         }
     ]
@@ -353,11 +360,11 @@
                 <span class="hljs-string">"Intangible"</span>,
                 <span class="hljs-string">"IndustryCategory"</span>
             ],
-            <span class="hljs-attr">"name"</span>: <span class="hljs-string">"Display Technology Companies"</span>,
-            <span class="hljs-attr">"diffbotUri"</span>: <span class="hljs-string">"http://diffbot.com/entity/EX8GX-IaIP2Oi0rsYy_Bqfw"</span>,
-            <span class="hljs-attr">"targetDiffbotUri"</span>: <span class="hljs-string">"http://diffbot.com/entity/EX8GX-IaIP2Oi0rsYy_Bqfw"</span>,
-            <span class="hljs-attr">"targetDiffbotId"</span>: <span class="hljs-string">"EX8GX-IaIP2Oi0rsYy_Bqfw"</span>,
-            <span class="hljs-attr">"surfaceForm"</span>: <span class="hljs-string">"Display Technology Companies"</span>,
+            <span class="hljs-attr">"name"</span>: <span class="hljs-string">"Professional Service Companies"</span>,
+            <span class="hljs-attr">"diffbotUri"</span>: <span class="hljs-string">"http://diffbot.com/entity/EwtPyR2IaMIWoUPbM6R7SAw"</span>,
+            <span class="hljs-attr">"targetDiffbotUri"</span>: <span class="hljs-string">"http://diffbot.com/entity/EwtPyR2IaMIWoUPbM6R7SAw"</span>,
+            <span class="hljs-attr">"targetDiffbotId"</span>: <span class="hljs-string">"EwtPyR2IaMIWoUPbM6R7SAw"</span>,
+            <span class="hljs-attr">"surfaceForm"</span>: <span class="hljs-string">"Professional Service Companies"</span>,
             <span class="hljs-attr">"type"</span>: <span class="hljs-string">"IndustryCategory"</span>
         },
         {
@@ -365,11 +372,11 @@
                 <span class="hljs-string">"Intangible"</span>,
                 <span class="hljs-string">"IndustryCategory"</span>
             ],
-            <span class="hljs-attr">"name"</span>: <span class="hljs-string">"Computer Hardware Companies"</span>,
-            <span class="hljs-attr">"diffbotUri"</span>: <span class="hljs-string">"http://diffbot.com/entity/EqFeVtLRWOUqTdzVhcYwBBQ"</span>,
-            <span class="hljs-attr">"targetDiffbotUri"</span>: <span class="hljs-string">"http://diffbot.com/entity/EqFeVtLRWOUqTdzVhcYwBBQ"</span>,
-            <span class="hljs-attr">"targetDiffbotId"</span>: <span class="hljs-string">"EqFeVtLRWOUqTdzVhcYwBBQ"</span>,
-            <span class="hljs-attr">"surfaceForm"</span>: <span class="hljs-string">"Computer Hardware Companies"</span>,
+            <span class="hljs-attr">"name"</span>: <span class="hljs-string">"Display Technology Companies"</span>,
+            <span class="hljs-attr">"diffbotUri"</span>: <span class="hljs-string">"http://diffbot.com/entity/EX8GX-IaIP2Oi0rsYy_Bqfw"</span>,
+            <span class="hljs-attr">"targetDiffbotUri"</span>: <span class="hljs-string">"http://diffbot.com/entity/EX8GX-IaIP2Oi0rsYy_Bqfw"</span>,
+            <span class="hljs-attr">"targetDiffbotId"</span>: <span class="hljs-string">"EX8GX-IaIP2Oi0rsYy_Bqfw"</span>,
+            <span class="hljs-attr">"surfaceForm"</span>: <span class="hljs-string">"Display Technology Companies"</span>,
             <span class="hljs-attr">"type"</span>: <span class="hljs-string">"IndustryCategory"</span>
         }
     ]
@@ -384,7 +391,7 @@
 <pre><code class="hljs">{
     <span class="hljs-attr">"ceo"</span>: {
         <span class="hljs-attr">"summary"</span>: <span class="hljs-string">"Indian American business executive and CEO of IBM"</span>,
-        <span class="hljs-attr">"image"</span>: <span class="hljs-string">"https://kg.diffbot.com/image/api/get?fetch=yes&amp;url=g%3Cj7P0Stn8p.%5DjEp9G.Bd%7Bko6MMm4L%7E-%60%5B%5C%7E-Z%3D6N-Cg%7BG-dXqps6qPPg%7D2zN_%3Cb4E.A%5Dm"</span>,
+        <span class="hljs-attr">"image"</span>: <span class="hljs-string">"https://kg.diffbot.com/image/api/get?fetch=yes&amp;url=g%3Cj7P0Stn8p.%5DjEp9G.Bd%7BkpWQMQfM%7B-by%3A%7B-Z6%3Aq-kf%7Bi-Eztos%5DtRnh%2F%7BzN_%3Cb4E.A%5Dm"</span>,
         <span class="hljs-attr">"types"</span>: [
             <span class="hljs-string">"Person"</span>
         ],
@@ -426,23 +433,49 @@
 <pre><code class="hljs">{
     <span class="hljs-attr">"competitors"</span>: [
         {
-            <span class="hljs-attr">"summary"</span>: <span class="hljs-string">""</span>,
-            <span class="hljs-attr">"image"</span>: <span class="hljs-string">""</span>,
-            <span class="hljs-attr">"images"</span>: [
-                {
-                    <span class="hljs-attr">"classifications"</span>: <span class="hljs-string">""</span>,
-                    <span class="hljs-attr">"fingerprint"</span>: <span class="hljs-string">""</span>,
-                    <span class="hljs-attr">"title"</span>: <span class="hljs-string">""</span>,
-                    <span class="hljs-attr">"isCached"</span>: <span class="hljs-literal">false</span>,
-                    <span class="hljs-attr">"url"</span>: <span class="hljs-string">""</span>
-                }
+            <span class="hljs-attr">"summary"</span>: <span class="hljs-string">"Organization based in Blue Bell, Pennsylvania, United States"</span>,
+            <span class="hljs-attr">"image"</span>: <span class="hljs-string">"https://kg.diffbot.com/image/api/get?fetch=yes&amp;url=g%3Cj7P0St0DnBJf.x0KwLZrUn.%5B%3CR0Aa4Hh%3B%5Bv738ZqOr7U%3FGvvw%3Ez%5C5%60%7C%3FY7PaG.2Nm"</span>,
+            <span class="hljs-attr">"types"</span>: [
+                <span class="hljs-string">"Organization"</span>,
+                <span class="hljs-string">"Corporation"</span>,
+                <span class="hljs-string">"Company"</span>
             ],
-            <span class="hljs-attr">"types"</span>: <span class="hljs-string">""</span>,
-            <span class="hljs-attr">"websiteUris"</span>: <span class="hljs-string">""</span>,
-            <span class="hljs-attr">"diffbotUri"</span>: <span class="hljs-string">""</span>,
-            <span class="hljs-attr">"name"</span>: <span class="hljs-string">""</span>,
-            <span class="hljs-attr">"targetDiffbotUri"</span>: <span class="hljs-string">""</span>,
-            <span class="hljs-attr">"surfaceForm"</span>: <span class="hljs-string">""</span>
+            <span class="hljs-attr">"name"</span>: <span class="hljs-string">"Unisys Corporation"</span>,
+            <span class="hljs-attr">"diffbotUri"</span>: <span class="hljs-string">"http://diffbot.com/entity/Eghdylt6mOj2yLNkBS-tJ9A"</span>,
+            <span class="hljs-attr">"targetDiffbotUri"</span>: <span class="hljs-string">"http://diffbot.com/entity/Eghdylt6mOj2yLNkBS-tJ9A"</span>,
+            <span class="hljs-attr">"targetDiffbotId"</span>: <span class="hljs-string">"Eghdylt6mOj2yLNkBS-tJ9A"</span>,
+            <span class="hljs-attr">"surfaceForm"</span>: <span class="hljs-string">"Unisys Corporation"</span>,
+            <span class="hljs-attr">"type"</span>: <span class="hljs-string">"Organization"</span>
+        },
+        {
+            <span class="hljs-attr">"summary"</span>: <span class="hljs-string">"Organization based in Sunnyvale, California, United States"</span>,
+            <span class="hljs-attr">"image"</span>: <span class="hljs-string">"https://kg.diffbot.com/image/api/get?fetch=yes&amp;url=g%3Cj7P0St0DnBJf.x0KwLZrUn.%5B%3CR0Aa4Hh%3B%5Bv738ZqOr7U%3FjvIT%3EsS%40%7Es%3CY7PaG.2Nm"</span>,
+            <span class="hljs-attr">"types"</span>: [
+                <span class="hljs-string">"Organization"</span>,
+                <span class="hljs-string">"Corporation"</span>,
+                <span class="hljs-string">"Company"</span>
+            ],
+            <span class="hljs-attr">"name"</span>: <span class="hljs-string">"NetApp, Inc."</span>,
+            <span class="hljs-attr">"diffbotUri"</span>: <span class="hljs-string">"http://diffbot.com/entity/EySkhspqnP4-4mE-RI20wig"</span>,
+            <span class="hljs-attr">"targetDiffbotUri"</span>: <span class="hljs-string">"http://diffbot.com/entity/EySkhspqnP4-4mE-RI20wig"</span>,
+            <span class="hljs-attr">"targetDiffbotId"</span>: <span class="hljs-string">"EySkhspqnP4-4mE-RI20wig"</span>,
+            <span class="hljs-attr">"surfaceForm"</span>: <span class="hljs-string">"NetApp, Inc."</span>,
+            <span class="hljs-attr">"type"</span>: <span class="hljs-string">"Organization"</span>
+        },
+        {
+            <span class="hljs-attr">"summary"</span>: <span class="hljs-string">"German software producer"</span>,
+            <span class="hljs-attr">"image"</span>: <span class="hljs-string">"https://kg.diffbot.com/image/api/get?fetch=yes&amp;url=g%3Cj7P0St0DnBJf.x0KwLZrUn.%5B%3CR0Aa4Hh%3B%5Bv738ZqOr7U%3FfvEw%3Ex%2FlL5L%7BL%40fG%60%7E.yMT"</span>,
+            <span class="hljs-attr">"types"</span>: [
+                <span class="hljs-string">"Organization"</span>,
+                <span class="hljs-string">"Corporation"</span>,
+                <span class="hljs-string">"Company"</span>
+            ],
+            <span class="hljs-attr">"name"</span>: <span class="hljs-string">"SAP"</span>,
+            <span class="hljs-attr">"diffbotUri"</span>: <span class="hljs-string">"http://diffbot.com/entity/E1YW6YHcPMZi7H-uA9fl6hg"</span>,
+            <span class="hljs-attr">"targetDiffbotUri"</span>: <span class="hljs-string">"http://diffbot.com/entity/E1YW6YHcPMZi7H-uA9fl6hg"</span>,
+            <span class="hljs-attr">"targetDiffbotId"</span>: <span class="hljs-string">"E1YW6YHcPMZi7H-uA9fl6hg"</span>,
+            <span class="hljs-attr">"surfaceForm"</span>: <span class="hljs-string">"SAP"</span>,
+            <span class="hljs-attr">"type"</span>: <span class="hljs-string">"Organization"</span>
         }
     ]
 }
@@ -474,48 +507,51 @@
 <li><strong>Example:</strong></li>
 </ul>
 <pre><code class="hljs">{
-    <span class="hljs-string">"customers"</span>: [
+    <span class="hljs-attr">"customers"</span>: [
         {
-            <span class="hljs-string">"summary"</span>: <span class="hljs-string">"Major airline of the United States"</span>,
-            <span class="hljs-string">"image"</span>: <span class="hljs-string">"https://kg.diffbot.com/image/api/get?fetch=yes&amp;url=g%3Cj7P0St0DnBJf.x0KwLZrUn.%5B%3CR0Aa4Hh%3B%5Bv738ZqOr7U%3FivHo%3Ef%5B1_l%2F%5B9%40%3BAk%7BAt%3C%60e%5Bt%3DH%2FDk%7DO%28YpOr%29.oCJ"</span>,
-            <span class="hljs-string">"types"</span>: [
+            <span class="hljs-attr">"summary"</span>: <span class="hljs-string">"Systematic internaliser"</span>,
+            <span class="hljs-attr">"image"</span>: <span class="hljs-string">"https://kg.diffbot.com/image/api/get?fetch=yes&amp;url=g%3Cj7P0St0DnBJf.x0KwLZrUn.%5B%3CR0Aa4Hh%3B%5Bv738ZqOr7U%3FcvBp%3ExQ%3Bal%7D%5C%7COe7e%7E%3Fu.%60%7CK"</span>,
+            <span class="hljs-attr">"types"</span>: [
                 <span class="hljs-string">"Organization"</span>,
-                <span class="hljs-string">"Corporation"</span>
+                <span class="hljs-string">"Corporation"</span>,
+                <span class="hljs-string">"Company"</span>
             ],
-            <span class="hljs-string">"name"</span>: <span class="hljs-string">"American Airlines"</span>,
-            <span class="hljs-string">"diffbotUri"</span>: <span class="hljs-string">"http://diffbot.com/entity/ECm88VZ0TMyq8glAXFBMYaA"</span>,
-            <span class="hljs-string">"targetDiffbotUri"</span>: <span class="hljs-string">"http://diffbot.com/entity/ECm88VZ0TMyq8glAXFBMYaA"</span>,
-            <span class="hljs-string">"targetDiffbotId"</span>: <span class="hljs-string">"ECm88VZ0TMyq8glAXFBMYaA"</span>,
-            <span class="hljs-string">"surfaceForm"</span>: <span class="hljs-string">"American Airlines"</span>,
-            <span class="hljs-string">"type"</span>: <span class="hljs-string">"Corporation"</span>
+            <span class="hljs-attr">"name"</span>: <span class="hljs-string">"Bank of Nova Scotia"</span>,
+            <span class="hljs-attr">"diffbotUri"</span>: <span class="hljs-string">"http://diffbot.com/entity/Epqqo5t1JMbON8FF9IGpi-g"</span>,
+            <span class="hljs-attr">"targetDiffbotUri"</span>: <span class="hljs-string">"http://diffbot.com/entity/Epqqo5t1JMbON8FF9IGpi-g"</span>,
+            <span class="hljs-attr">"targetDiffbotId"</span>: <span class="hljs-string">"Epqqo5t1JMbON8FF9IGpi-g"</span>,
+            <span class="hljs-attr">"surfaceForm"</span>: <span class="hljs-string">"Bank of Nova Scotia"</span>,
+            <span class="hljs-attr">"type"</span>: <span class="hljs-string">"Organization"</span>
         },
         {
-            <span class="hljs-string">"summary"</span>: <span class="hljs-string">"Telecommunications company"</span>,
-            <span class="hljs-string">"image"</span>: <span class="hljs-string">"https://kg.diffbot.com/image/api/get?fetch=yes&amp;url=g%3Cj7P0St0DnBJf.x0KwLZrUn.%5B%3CR0Aa4Hh%3B%5Bv738ZqOr7U%3FDvsR%3EgB%7BYr3izczY2.K%7C%3E"</span>,
-            <span class="hljs-string">"types"</span>: [
+            <span class="hljs-attr">"summary"</span>: <span class="hljs-string">"British multinational telecommunications company"</span>,
+            <span class="hljs-attr">"image"</span>: <span class="hljs-string">"https://kg.diffbot.com/image/api/get?fetch=yes&amp;url=g%3Cj7P0St0DnBJf.x0KwLZrUn.%5B%3CR0Aa4Hh%3B%5Bv738ZqOr7U%3Fav%40o%3E%7B%5D0Ni%3Bh0.jF%60"</span>,
+            <span class="hljs-attr">"types"</span>: [
                 <span class="hljs-string">"Organization"</span>,
-                <span class="hljs-string">"Corporation"</span>
+                <span class="hljs-string">"Corporation"</span>,
+                <span class="hljs-string">"Company"</span>
             ],
-            <span class="hljs-string">"name"</span>: <span class="hljs-string">"BT Italia"</span>,
-            <span class="hljs-string">"diffbotUri"</span>: <span class="hljs-string">"http://diffbot.com/entity/EZK7tKHZCNGCUhTjGW7SaKg"</span>,
-            <span class="hljs-string">"targetDiffbotUri"</span>: <span class="hljs-string">"http://diffbot.com/entity/EZK7tKHZCNGCUhTjGW7SaKg"</span>,
-            <span class="hljs-string">"targetDiffbotId"</span>: <span class="hljs-string">"EZK7tKHZCNGCUhTjGW7SaKg"</span>,
-            <span class="hljs-string">"surfaceForm"</span>: <span class="hljs-string">"BT Italia"</span>,
-            <span class="hljs-string">"type"</span>: <span class="hljs-string">"Corporation"</span>
+            <span class="hljs-attr">"name"</span>: <span class="hljs-string">"Vodafone"</span>,
+            <span class="hljs-attr">"diffbotUri"</span>: <span class="hljs-string">"http://diffbot.com/entity/EWk9MPRSUNI6yTwVq1ZEncQ"</span>,
+            <span class="hljs-attr">"targetDiffbotUri"</span>: <span class="hljs-string">"http://diffbot.com/entity/EWk9MPRSUNI6yTwVq1ZEncQ"</span>,
+            <span class="hljs-attr">"targetDiffbotId"</span>: <span class="hljs-string">"EWk9MPRSUNI6yTwVq1ZEncQ"</span>,
+            <span class="hljs-attr">"surfaceForm"</span>: <span class="hljs-string">"Vodafone"</span>,
+            <span class="hljs-attr">"type"</span>: <span class="hljs-string">"Organization"</span>
         },
         {
-            <span class="hljs-string">"summary"</span>: <span class="hljs-string">"American broadband and telecommunications company"</span>,
-            <span class="hljs-string">"image"</span>: <span class="hljs-string">"https://kg.diffbot.com/image/api/get?fetch=yes&amp;url=g%3Cj7P0St0DnBJf.x0KwLZrUn.%5B%3CR0Aa4Hh%3B%5Bv738ZqOr7U%3FivHo%3E%7BS%3EV%7D%3BhzczY%7EnDu%3E%5Ce-%7B0G6Rk.c7%3E"</span>,
-            <span class="hljs-string">"types"</span>: [
+            <span class="hljs-attr">"summary"</span>: <span class="hljs-string">"U.S. discount retailer based in Arkansas"</span>,
+            <span class="hljs-attr">"image"</span>: <span class="hljs-string">"https://kg.diffbot.com/image/api/get?fetch=yes&amp;url=g%3Cj7P0St0DnBJf.x0KwLZrUn.%5B%3CR0Aa4Hh%3B%5Bv738ZqOr7U%3FDvsO%3E%7CO8Zd%3EnzMi%3Fh.K%7C%3E"</span>,
+            <span class="hljs-attr">"types"</span>: [
                 <span class="hljs-string">"Organization"</span>,
-                <span class="hljs-string">"Corporation"</span>
+                <span class="hljs-string">"Corporation"</span>,
+                <span class="hljs-string">"Company"</span>
             ],
-            <span class="hljs-string">"name"</span>: <span class="hljs-string">"Verizon Communications Inc."</span>,
-            <span class="hljs-string">"diffbotUri"</span>: <span class="hljs-string">"http://diffbot.com/entity/E9sI6Usm9OYOlHbBcaCnZGQ"</span>,
-            <span class="hljs-string">"targetDiffbotUri"</span>: <span class="hljs-string">"http://diffbot.com/entity/E9sI6Usm9OYOlHbBcaCnZGQ"</span>,
-            <span class="hljs-string">"targetDiffbotId"</span>: <span class="hljs-string">"E9sI6Usm9OYOlHbBcaCnZGQ"</span>,
-            <span class="hljs-string">"surfaceForm"</span>: <span class="hljs-string">"Verizon Communications Inc."</span>,
-            <span class="hljs-string">"type"</span>: <span class="hljs-string">"Corporation"</span>
+            <span class="hljs-attr">"name"</span>: <span class="hljs-string">"Walmart Inc."</span>,
+            <span class="hljs-attr">"diffbotUri"</span>: <span class="hljs-string">"http://diffbot.com/entity/ExADb18D6MAmunRrlVELe8A"</span>,
+            <span class="hljs-attr">"targetDiffbotUri"</span>: <span class="hljs-string">"http://diffbot.com/entity/ExADb18D6MAmunRrlVELe8A"</span>,
+            <span class="hljs-attr">"targetDiffbotId"</span>: <span class="hljs-string">"ExADb18D6MAmunRrlVELe8A"</span>,
+            <span class="hljs-attr">"surfaceForm"</span>: <span class="hljs-string">"Walmart Inc."</span>,
+            <span class="hljs-attr">"type"</span>: <span class="hljs-string">"Organization"</span>
         }
     ]
 }
@@ -527,9 +563,9 @@
 </ul>
 <pre><code class="hljs">{
     <span class="hljs-attr">"descriptors"</span>: [
+        <span class="hljs-string">"information technology"</span>,
         <span class="hljs-string">"computer and office equipment"</span>,
-        <span class="hljs-string">"data storage systems manufacturing"</span>,
-        <span class="hljs-string">"computer peripheral equipment manufacturing"</span>
+        <span class="hljs-string">"control, electromedical, measuring and navigational instruments manufacturing"</span>
     ]
 }
 </code></pre>
@@ -544,8 +580,8 @@
         {
             <span class="hljs-attr">"level"</span>: <span class="hljs-number">3</span>,
             <span class="hljs-attr">"isPrimary"</span>: <span class="hljs-literal">true</span>,
-            <span class="hljs-attr">"name"</span>: <span class="hljs-string">"Display Technology Companies"</span>,
-            <span class="hljs-attr">"diffbotUri"</span>: <span class="hljs-string">"https://diffbot.com/entity/IC_qvY0Oloiyj"</span>
+            <span class="hljs-attr">"name"</span>: <span class="hljs-string">"Cloud Computing Providers"</span>,
+            <span class="hljs-attr">"diffbotUri"</span>: <span class="hljs-string">"https://diffbot.com/entity/IC_G015C2pO7i"</span>
         },
         {
             <span class="hljs-attr">"level"</span>: <span class="hljs-number">2</span>,
@@ -570,6 +606,63 @@
 </ul>
 <pre><code class="hljs">{
     <span class="hljs-attr">"edrpouNumbers"</span>: <span class="hljs-string">""</span>
+}
+</code></pre>
+<h3><a class="anchor" aria-hidden="true" id="emailaddresses"></a><a href="#emailaddresses" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>emailAddresses</h3>
+<p>Email addresses of this organization.</p>
+<ul>
+<li><strong>Type:</strong> Contact</li>
+<li><strong>Example:</strong></li>
+</ul>
+<pre><code class="hljs">{
+    <span class="hljs-attr">"emailAddresses"</span>: [
+        {
+            <span class="hljs-attr">"contactString"</span>: <span class="hljs-string">"ews@us.ibm.com"</span>,
+            <span class="hljs-attr">"type"</span>: <span class="hljs-string">"None"</span>
+        },
+        {
+            <span class="hljs-attr">"contactString"</span>: <span class="hljs-string">"tfleming@us.ibm.com"</span>,
+            <span class="hljs-attr">"type"</span>: <span class="hljs-string">"PROFESSIONAL"</span>
+        }
+    ]
+}
+</code></pre>
+<h3><a class="anchor" aria-hidden="true" id="employeecategories"></a><a href="#employeecategories" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>employeeCategories</h3>
+<p>Employee categories including employee count and first hire date</p>
+<ul>
+<li><strong>Type:</strong> EmployeeCategory</li>
+<li><strong>Example:</strong></li>
+</ul>
+<pre><code class="hljs">{
+    <span class="hljs-attr">"employeeCategories"</span>: [
+        {
+            <span class="hljs-attr">"firstHireDate"</span>: {
+                <span class="hljs-attr">"str"</span>: <span class="hljs-string">"d0001-XX-XX"</span>,
+                <span class="hljs-attr">"precision"</span>: <span class="hljs-number">1</span>,
+                <span class="hljs-attr">"timestamp"</span>: <span class="hljs-number">-62135769600000</span>
+            },
+            <span class="hljs-attr">"category"</span>: <span class="hljs-string">"Frontend Developer"</span>,
+            <span class="hljs-attr">"nbEmployees"</span>: <span class="hljs-number">479</span>
+        },
+        {
+            <span class="hljs-attr">"firstHireDate"</span>: {
+                <span class="hljs-attr">"str"</span>: <span class="hljs-string">"d1959-09-XX"</span>,
+                <span class="hljs-attr">"precision"</span>: <span class="hljs-number">2</span>,
+                <span class="hljs-attr">"timestamp"</span>: <span class="hljs-number">-326160000000</span>
+            },
+            <span class="hljs-attr">"category"</span>: <span class="hljs-string">"Agriculture, Farming, Forestry and related"</span>,
+            <span class="hljs-attr">"nbEmployees"</span>: <span class="hljs-number">63</span>
+        },
+        {
+            <span class="hljs-attr">"firstHireDate"</span>: {
+                <span class="hljs-attr">"str"</span>: <span class="hljs-string">"d1956-06-XX"</span>,
+                <span class="hljs-attr">"precision"</span>: <span class="hljs-number">2</span>,
+                <span class="hljs-attr">"timestamp"</span>: <span class="hljs-number">-428716800000</span>
+            },
+            <span class="hljs-attr">"category"</span>: <span class="hljs-string">"Industrial Production and Distribution (goods and food)"</span>,
+            <span class="hljs-attr">"nbEmployees"</span>: <span class="hljs-number">109</span>
+        }
+    ]
 }
 </code></pre>
 <h3><a class="anchor" aria-hidden="true" id="facebookuri"></a><a href="#facebookuri" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>facebookUri</h3>
@@ -631,6 +724,16 @@
         <span class="hljs-attr">"precision"</span>: <span class="hljs-number">3</span>,
         <span class="hljs-attr">"timestamp"</span>: <span class="hljs-number">-1847577600000</span>
     }
+}
+</code></pre>
+<h3><a class="anchor" aria-hidden="true" id="fullname"></a><a href="#fullname" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>fullName</h3>
+<p>Full name for this entity</p>
+<ul>
+<li><strong>Type:</strong> String</li>
+<li><strong>Example:</strong></li>
+</ul>
+<pre><code class="hljs">{
+    <span class="hljs-attr">"fullName"</span>: <span class="hljs-string">"International Business Machines Corporation"</span>
 }
 </code></pre>
 <h3><a class="anchor" aria-hidden="true" id="githuburi"></a><a href="#githuburi" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>githubUri</h3>
@@ -699,7 +802,9 @@
 <li><strong>Example:</strong></li>
 </ul>
 <pre><code class="hljs">{
-    <span class="hljs-attr">"indianCorporateIdentityNumbers"</span>: <span class="hljs-string">""</span>
+    <span class="hljs-attr">"indianCorporateIdentityNumbers"</span>: [
+        <span class="hljs-string">"U30007KA1991PLC012619"</span>
+    ]
 }
 </code></pre>
 <h3><a class="anchor" aria-hidden="true" id="industries"></a><a href="#industries" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>industries</h3>
@@ -709,16 +814,16 @@
 </ul>
 <pre><code class="hljs">{
     <span class="hljs-attr">"industries"</span>: [
-        <span class="hljs-string">"Manufacturing Companies"</span>,
-        <span class="hljs-string">"Electronic Products Manufacturers"</span>,
-        <span class="hljs-string">"Display Technology Companies"</span>
+        <span class="hljs-string">"Cloud Computing Providers"</span>,
+        <span class="hljs-string">"Computer Hardware Companies"</span>,
+        <span class="hljs-string">"Software Companies"</span>
     ]
 }
 </code></pre>
 <h3><a class="anchor" aria-hidden="true" id="investments"></a><a href="#investments" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>investments</h3>
 <p>Investments received by this organization.</p>
 <ul>
-<li><strong>Type:</strong> Investment</li>
+<li><strong>Type:</strong> InvestmentField</li>
 <li><strong>Example:</strong></li>
 </ul>
 <pre><code class="hljs">{
@@ -869,71 +974,6 @@
     ]
 }
 </code></pre>
-<h3><a class="anchor" aria-hidden="true" id="leadership"></a><a href="#leadership" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>leadership</h3>
-<p>List of organization C-Level Officers.</p>
-<ul>
-<li><strong>Type:</strong> Employee</li>
-<li><strong>Example:</strong></li>
-</ul>
-<pre><code class="hljs">{
-    <span class="hljs-attr">"leadership"</span>: [
-        {
-            <span class="hljs-attr">"isCurrent"</span>: <span class="hljs-literal">false</span>,
-            <span class="hljs-attr">"from"</span>: {
-                <span class="hljs-attr">"str"</span>: <span class="hljs-string">""</span>,
-                <span class="hljs-attr">"precision"</span>: <span class="hljs-number">0</span>,
-                <span class="hljs-attr">"timestamp"</span>: <span class="hljs-number">0</span>
-            },
-            <span class="hljs-attr">"categories"</span>: [
-                {
-                    <span class="hljs-attr">"summary"</span>: <span class="hljs-string">""</span>,
-                    <span class="hljs-attr">"image"</span>: <span class="hljs-string">""</span>,
-                    <span class="hljs-attr">"images"</span>: [
-                        {
-                            <span class="hljs-attr">"classifications"</span>: <span class="hljs-string">""</span>,
-                            <span class="hljs-attr">"fingerprint"</span>: <span class="hljs-string">""</span>,
-                            <span class="hljs-attr">"title"</span>: <span class="hljs-string">""</span>,
-                            <span class="hljs-attr">"isCached"</span>: <span class="hljs-literal">false</span>,
-                            <span class="hljs-attr">"url"</span>: <span class="hljs-string">""</span>
-                        }
-                    ],
-                    <span class="hljs-attr">"types"</span>: <span class="hljs-string">""</span>,
-                    <span class="hljs-attr">"websiteUris"</span>: <span class="hljs-string">""</span>,
-                    <span class="hljs-attr">"diffbotUri"</span>: <span class="hljs-string">""</span>,
-                    <span class="hljs-attr">"name"</span>: <span class="hljs-string">""</span>,
-                    <span class="hljs-attr">"targetDiffbotUri"</span>: <span class="hljs-string">""</span>,
-                    <span class="hljs-attr">"surfaceForm"</span>: <span class="hljs-string">""</span>
-                }
-            ],
-            <span class="hljs-attr">"to"</span>: {
-                <span class="hljs-attr">"str"</span>: <span class="hljs-string">""</span>,
-                <span class="hljs-attr">"precision"</span>: <span class="hljs-number">0</span>,
-                <span class="hljs-attr">"timestamp"</span>: <span class="hljs-number">0</span>
-            },
-            <span class="hljs-attr">"employee"</span>: {
-                <span class="hljs-attr">"summary"</span>: <span class="hljs-string">""</span>,
-                <span class="hljs-attr">"image"</span>: <span class="hljs-string">""</span>,
-                <span class="hljs-attr">"images"</span>: [
-                    {
-                        <span class="hljs-attr">"classifications"</span>: <span class="hljs-string">""</span>,
-                        <span class="hljs-attr">"fingerprint"</span>: <span class="hljs-string">""</span>,
-                        <span class="hljs-attr">"title"</span>: <span class="hljs-string">""</span>,
-                        <span class="hljs-attr">"isCached"</span>: <span class="hljs-literal">false</span>,
-                        <span class="hljs-attr">"url"</span>: <span class="hljs-string">""</span>
-                    }
-                ],
-                <span class="hljs-attr">"types"</span>: <span class="hljs-string">""</span>,
-                <span class="hljs-attr">"websiteUris"</span>: <span class="hljs-string">""</span>,
-                <span class="hljs-attr">"diffbotUri"</span>: <span class="hljs-string">""</span>,
-                <span class="hljs-attr">"name"</span>: <span class="hljs-string">""</span>,
-                <span class="hljs-attr">"targetDiffbotUri"</span>: <span class="hljs-string">""</span>,
-                <span class="hljs-attr">"surfaceForm"</span>: <span class="hljs-string">""</span>
-            },
-            <span class="hljs-attr">"title"</span>: <span class="hljs-string">""</span>
-        }
-    ]
-}
-</code></pre>
 <h3><a class="anchor" aria-hidden="true" id="linkedinuri"></a><a href="#linkedinuri" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>linkedInUri</h3>
 <p>Link to the LinkedIn profile of this entity</p>
 <ul>
@@ -953,7 +993,7 @@
 <pre><code class="hljs">{
     <span class="hljs-attr">"location"</span>: {
         <span class="hljs-attr">"country"</span>: {
-            <span class="hljs-attr">"summary"</span>: <span class="hljs-string">"Sovereign state in North America"</span>,
+            <span class="hljs-attr">"summary"</span>: <span class="hljs-string">"Country in North America"</span>,
             <span class="hljs-attr">"image"</span>: <span class="hljs-string">"https://kg.diffbot.com/image/api/get?fetch=yes&amp;url=g%3Cj7P0St0DnBJf.x0KwLZrUn.%5B%3CR0Aa4Hh%3B%5Bv738ZqOr7U%3FevDs%3El%601Nw%7BM0Bf7hu7z%3FRe9s4XwGXedrKUAN%28%40aCHnM%60%29.%7BOV"</span>,
             <span class="hljs-attr">"types"</span>: [
                 <span class="hljs-string">"Place"</span>,
@@ -964,12 +1004,12 @@
             <span class="hljs-attr">"diffbotUri"</span>: <span class="hljs-string">"http://diffbot.com/entity/E01d4EK33MmCosgI2KXa4-A"</span>,
             <span class="hljs-attr">"targetDiffbotUri"</span>: <span class="hljs-string">"http://diffbot.com/entity/E01d4EK33MmCosgI2KXa4-A"</span>,
             <span class="hljs-attr">"targetDiffbotId"</span>: <span class="hljs-string">"E01d4EK33MmCosgI2KXa4-A"</span>,
-            <span class="hljs-attr">"type"</span>: <span class="hljs-string">"AdministrativeArea"</span>
+            <span class="hljs-attr">"type"</span>: <span class="hljs-string">"Place"</span>
         },
         <span class="hljs-attr">"isCurrent"</span>: <span class="hljs-literal">true</span>,
         <span class="hljs-attr">"address"</span>: <span class="hljs-string">"1 New Orchard Road, Armonk, 10504-1722, New York, United States"</span>,
         <span class="hljs-attr">"city"</span>: {
-            <span class="hljs-attr">"summary"</span>: <span class="hljs-string">"Hamlet in Westchester County, New York"</span>,
+            <span class="hljs-attr">"summary"</span>: <span class="hljs-string">"Hamlet in Westchester County, New York, United States"</span>,
             <span class="hljs-attr">"image"</span>: <span class="hljs-string">"https://kg.diffbot.com/image/api/get?fetch=yes&amp;url=g%3Cj7P0St0DnBJf.x0KwLZrUn.%5B%3CR0Aa4Hh%3B%5Bv738ZqOr7U%3FdvCo%3E%7CS%3Faf4_%3EU_JXRG%7BEa%2FCS0%5Bq%3Ch4%5Bp%40%5E1%5Ew%3Ek%3FDp%3F_p%3Bv%3DN%7DTp%3BI3Wk3dtMW4PhBc0X%5Dmo0KxFPrQp7T%2FNe%3AYy.gHZ"</span>,
             <span class="hljs-attr">"types"</span>: [
                 <span class="hljs-string">"Place"</span>,
@@ -979,7 +1019,7 @@
             <span class="hljs-attr">"diffbotUri"</span>: <span class="hljs-string">"http://diffbot.com/entity/EFYOMni-nNtScxpZwteaMxQ"</span>,
             <span class="hljs-attr">"targetDiffbotUri"</span>: <span class="hljs-string">"http://diffbot.com/entity/EFYOMni-nNtScxpZwteaMxQ"</span>,
             <span class="hljs-attr">"targetDiffbotId"</span>: <span class="hljs-string">"EFYOMni-nNtScxpZwteaMxQ"</span>,
-            <span class="hljs-attr">"type"</span>: <span class="hljs-string">"AdministrativeArea"</span>
+            <span class="hljs-attr">"type"</span>: <span class="hljs-string">"Place"</span>
         },
         <span class="hljs-attr">"isPrimary"</span>: <span class="hljs-literal">true</span>,
         <span class="hljs-attr">"street"</span>: <span class="hljs-string">"1 New Orchard Road"</span>,
@@ -999,7 +1039,7 @@
             <span class="hljs-attr">"diffbotUri"</span>: <span class="hljs-string">"http://diffbot.com/entity/E1NxI_KXaMbiP5g2aM9MRdw"</span>,
             <span class="hljs-attr">"targetDiffbotUri"</span>: <span class="hljs-string">"http://diffbot.com/entity/E1NxI_KXaMbiP5g2aM9MRdw"</span>,
             <span class="hljs-attr">"targetDiffbotId"</span>: <span class="hljs-string">"E1NxI_KXaMbiP5g2aM9MRdw"</span>,
-            <span class="hljs-attr">"type"</span>: <span class="hljs-string">"AdministrativeArea"</span>
+            <span class="hljs-attr">"type"</span>: <span class="hljs-string">"Place"</span>
         },
         <span class="hljs-attr">"longitude"</span>: <span class="hljs-number">-73.7203598022461</span>
     }
@@ -1015,7 +1055,7 @@
     <span class="hljs-attr">"locations"</span>: [
         {
             <span class="hljs-attr">"country"</span>: {
-                <span class="hljs-attr">"summary"</span>: <span class="hljs-string">"Sovereign state in North America"</span>,
+                <span class="hljs-attr">"summary"</span>: <span class="hljs-string">"Country in North America"</span>,
                 <span class="hljs-attr">"image"</span>: <span class="hljs-string">"https://kg.diffbot.com/image/api/get?fetch=yes&amp;url=g%3Cj7P0St0DnBJf.x0KwLZrUn.%5B%3CR0Aa4Hh%3B%5Bv738ZqOr7U%3FevDs%3El%601Nw%7BM0Bf7hu7z%3FRe9s4XwGXedrKUAN%28%40aCHnM%60%29.%7BOV"</span>,
                 <span class="hljs-attr">"types"</span>: [
                     <span class="hljs-string">"Place"</span>,
@@ -1026,11 +1066,11 @@
                 <span class="hljs-attr">"diffbotUri"</span>: <span class="hljs-string">"http://diffbot.com/entity/E01d4EK33MmCosgI2KXa4-A"</span>,
                 <span class="hljs-attr">"targetDiffbotUri"</span>: <span class="hljs-string">"http://diffbot.com/entity/E01d4EK33MmCosgI2KXa4-A"</span>,
                 <span class="hljs-attr">"targetDiffbotId"</span>: <span class="hljs-string">"E01d4EK33MmCosgI2KXa4-A"</span>,
-                <span class="hljs-attr">"type"</span>: <span class="hljs-string">"AdministrativeArea"</span>
+                <span class="hljs-attr">"type"</span>: <span class="hljs-string">"Place"</span>
             },
-            <span class="hljs-attr">"address"</span>: <span class="hljs-string">"1 New Orchard Rd, Armonk, New York"</span>,
+            <span class="hljs-attr">"address"</span>: <span class="hljs-string">"1 New Orchard Road, Armonk, 10504, New York, USA"</span>,
             <span class="hljs-attr">"city"</span>: {
-                <span class="hljs-attr">"summary"</span>: <span class="hljs-string">"Hamlet in Westchester County, New York"</span>,
+                <span class="hljs-attr">"summary"</span>: <span class="hljs-string">"Hamlet in Westchester County, New York, United States"</span>,
                 <span class="hljs-attr">"image"</span>: <span class="hljs-string">"https://kg.diffbot.com/image/api/get?fetch=yes&amp;url=g%3Cj7P0St0DnBJf.x0KwLZrUn.%5B%3CR0Aa4Hh%3B%5Bv738ZqOr7U%3FdvCo%3E%7CS%3Faf4_%3EU_JXRG%7BEa%2FCS0%5Bq%3Ch4%5Bp%40%5E1%5Ew%3Ek%3FDp%3F_p%3Bv%3DN%7DTp%3BI3Wk3dtMW4PhBc0X%5Dmo0KxFPrQp7T%2FNe%3AYy.gHZ"</span>,
                 <span class="hljs-attr">"types"</span>: [
                     <span class="hljs-string">"Place"</span>,
@@ -1040,7 +1080,7 @@
                 <span class="hljs-attr">"diffbotUri"</span>: <span class="hljs-string">"http://diffbot.com/entity/EFYOMni-nNtScxpZwteaMxQ"</span>,
                 <span class="hljs-attr">"targetDiffbotUri"</span>: <span class="hljs-string">"http://diffbot.com/entity/EFYOMni-nNtScxpZwteaMxQ"</span>,
                 <span class="hljs-attr">"targetDiffbotId"</span>: <span class="hljs-string">"EFYOMni-nNtScxpZwteaMxQ"</span>,
-                <span class="hljs-attr">"type"</span>: <span class="hljs-string">"AdministrativeArea"</span>
+                <span class="hljs-attr">"type"</span>: <span class="hljs-string">"Place"</span>
             },
             <span class="hljs-attr">"subregion"</span>: {
                 <span class="hljs-attr">"summary"</span>: <span class="hljs-string">"County in New York, United States. Connector between New York City/Long Island and the rest of New York"</span>,
@@ -1053,7 +1093,7 @@
                 <span class="hljs-attr">"diffbotUri"</span>: <span class="hljs-string">"http://diffbot.com/entity/EoKezLIvJP82Xm_cWVQyCQA"</span>,
                 <span class="hljs-attr">"targetDiffbotUri"</span>: <span class="hljs-string">"http://diffbot.com/entity/EoKezLIvJP82Xm_cWVQyCQA"</span>,
                 <span class="hljs-attr">"targetDiffbotId"</span>: <span class="hljs-string">"EoKezLIvJP82Xm_cWVQyCQA"</span>,
-                <span class="hljs-attr">"type"</span>: <span class="hljs-string">"AdministrativeArea"</span>
+                <span class="hljs-attr">"type"</span>: <span class="hljs-string">"Place"</span>
             },
             <span class="hljs-attr">"latitude"</span>: <span class="hljs-number">41.1075439453125</span>,
             <span class="hljs-attr">"precision"</span>: <span class="hljs-number">0.10000000149011612</span>,
@@ -1072,7 +1112,7 @@
                 <span class="hljs-attr">"diffbotUri"</span>: <span class="hljs-string">"http://diffbot.com/entity/EAtK9ZhUYMKmI_UzSrYinmw"</span>,
                 <span class="hljs-attr">"targetDiffbotUri"</span>: <span class="hljs-string">"http://diffbot.com/entity/EAtK9ZhUYMKmI_UzSrYinmw"</span>,
                 <span class="hljs-attr">"targetDiffbotId"</span>: <span class="hljs-string">"EAtK9ZhUYMKmI_UzSrYinmw"</span>,
-                <span class="hljs-attr">"type"</span>: <span class="hljs-string">"AdministrativeArea"</span>
+                <span class="hljs-attr">"type"</span>: <span class="hljs-string">"Place"</span>
             },
             <span class="hljs-attr">"region"</span>: {
                 <span class="hljs-attr">"summary"</span>: <span class="hljs-string">"State of the United States of America"</span>,
@@ -1086,13 +1126,13 @@
                 <span class="hljs-attr">"diffbotUri"</span>: <span class="hljs-string">"http://diffbot.com/entity/E1NxI_KXaMbiP5g2aM9MRdw"</span>,
                 <span class="hljs-attr">"targetDiffbotUri"</span>: <span class="hljs-string">"http://diffbot.com/entity/E1NxI_KXaMbiP5g2aM9MRdw"</span>,
                 <span class="hljs-attr">"targetDiffbotId"</span>: <span class="hljs-string">"E1NxI_KXaMbiP5g2aM9MRdw"</span>,
-                <span class="hljs-attr">"type"</span>: <span class="hljs-string">"AdministrativeArea"</span>
+                <span class="hljs-attr">"type"</span>: <span class="hljs-string">"Place"</span>
             },
             <span class="hljs-attr">"longitude"</span>: <span class="hljs-number">-73.72123718261719</span>
         },
         {
             <span class="hljs-attr">"country"</span>: {
-                <span class="hljs-attr">"summary"</span>: <span class="hljs-string">"Sovereign state in North America"</span>,
+                <span class="hljs-attr">"summary"</span>: <span class="hljs-string">"Country in North America"</span>,
                 <span class="hljs-attr">"image"</span>: <span class="hljs-string">"https://kg.diffbot.com/image/api/get?fetch=yes&amp;url=g%3Cj7P0St0DnBJf.x0KwLZrUn.%5B%3CR0Aa4Hh%3B%5Bv738ZqOr7U%3FevDs%3El%601Nw%7BM0Bf7hu7z%3FRe9s4XwGXedrKUAN%28%40aCHnM%60%29.%7BOV"</span>,
                 <span class="hljs-attr">"types"</span>: [
                     <span class="hljs-string">"Place"</span>,
@@ -1103,90 +1143,121 @@
                 <span class="hljs-attr">"diffbotUri"</span>: <span class="hljs-string">"http://diffbot.com/entity/E01d4EK33MmCosgI2KXa4-A"</span>,
                 <span class="hljs-attr">"targetDiffbotUri"</span>: <span class="hljs-string">"http://diffbot.com/entity/E01d4EK33MmCosgI2KXa4-A"</span>,
                 <span class="hljs-attr">"targetDiffbotId"</span>: <span class="hljs-string">"E01d4EK33MmCosgI2KXa4-A"</span>,
-                <span class="hljs-attr">"type"</span>: <span class="hljs-string">"AdministrativeArea"</span>
+                <span class="hljs-attr">"type"</span>: <span class="hljs-string">"Place"</span>
             },
-            <span class="hljs-attr">"isCurrent"</span>: <span class="hljs-literal">false</span>,
-            <span class="hljs-attr">"address"</span>: <span class="hljs-string">"Armonk, New York"</span>,
+            <span class="hljs-attr">"address"</span>: <span class="hljs-string">"316 Bel Air Bel Air Blvd, Mobile, Alabama"</span>,
             <span class="hljs-attr">"city"</span>: {
-                <span class="hljs-attr">"summary"</span>: <span class="hljs-string">"Hamlet in Westchester County, New York"</span>,
-                <span class="hljs-attr">"image"</span>: <span class="hljs-string">"https://kg.diffbot.com/image/api/get?fetch=yes&amp;url=g%3Cj7P0St0DnBJf.x0KwLZrUn.%5B%3CR0Aa4Hh%3B%5Bv738ZqOr7U%3FdvCo%3E%7CS%3Faf4_%3EU_JXRG%7BEa%2FCS0%5Bq%3Ch4%5Bp%40%5E1%5Ew%3Ek%3FDp%3F_p%3Bv%3DN%7DTp%3BI3Wk3dtMW4PhBc0X%5Dmo0KxFPrQp7T%2FNe%3AYy.gHZ"</span>,
+                <span class="hljs-attr">"summary"</span>: <span class="hljs-string">"County seat of Mobile County, Alabama, United States"</span>,
+                <span class="hljs-attr">"image"</span>: <span class="hljs-string">"https://kg.diffbot.com/image/api/get?fetch=yes&amp;url=g%3Cj7P0St0DnBJf.x0KwLZrUn.%5B%3CR0Aa4Hh%3B%5Bv738ZqOr7U%3FevDq%3Er%5D%7EVo1Y%5EPoFm87GCNhEr%7CC%5BQ%5C1b1Fb%2Fcj2%5B%7EQ%609P%2FCv%3C%5EzVv%3FG8J_sS5%3ESCPT%3F%608Qc%3BE%7CCrGZqP%7D4L.Zs%7D"</span>,
                 <span class="hljs-attr">"types"</span>: [
                     <span class="hljs-string">"Place"</span>,
-                    <span class="hljs-string">"AdministrativeArea"</span>
+                    <span class="hljs-string">"AdministrativeArea"</span>,
+                    <span class="hljs-string">"City"</span>
                 ],
-                <span class="hljs-attr">"name"</span>: <span class="hljs-string">"Armonk"</span>,
-                <span class="hljs-attr">"diffbotUri"</span>: <span class="hljs-string">"http://diffbot.com/entity/EFYOMni-nNtScxpZwteaMxQ"</span>,
-                <span class="hljs-attr">"targetDiffbotUri"</span>: <span class="hljs-string">"http://diffbot.com/entity/EFYOMni-nNtScxpZwteaMxQ"</span>,
-                <span class="hljs-attr">"targetDiffbotId"</span>: <span class="hljs-string">"EFYOMni-nNtScxpZwteaMxQ"</span>,
-                <span class="hljs-attr">"type"</span>: <span class="hljs-string">"AdministrativeArea"</span>
+                <span class="hljs-attr">"name"</span>: <span class="hljs-string">"Mobile"</span>,
+                <span class="hljs-attr">"diffbotUri"</span>: <span class="hljs-string">"http://diffbot.com/entity/Euyo26vh8MC-BQ5DdSDNrYw"</span>,
+                <span class="hljs-attr">"targetDiffbotUri"</span>: <span class="hljs-string">"http://diffbot.com/entity/Euyo26vh8MC-BQ5DdSDNrYw"</span>,
+                <span class="hljs-attr">"targetDiffbotId"</span>: <span class="hljs-string">"Euyo26vh8MC-BQ5DdSDNrYw"</span>,
+                <span class="hljs-attr">"type"</span>: <span class="hljs-string">"Place"</span>
             },
-            <span class="hljs-attr">"isPrimary"</span>: <span class="hljs-literal">true</span>,
-            <span class="hljs-attr">"metroArea"</span>: {
-                <span class="hljs-attr">"summary"</span>: <span class="hljs-string">"Most populous metropolitan area in the United States"</span>,
-                <span class="hljs-attr">"image"</span>: <span class="hljs-string">"https://kg.diffbot.com/image/api/get?fetch=yes&amp;url=g%3Cj7P0St0DnBJf.x0KwLZrUn.%5B%3CR0Aa4Hh%3B%5Bv738ZqOr7U%3FhvGp%3EsG%7B%3Ah%40l%3AQiDb39t6%7ExIf.T0J"</span>,
-                <span class="hljs-attr">"types"</span>: [
-                    <span class="hljs-string">"Place"</span>,
-                    <span class="hljs-string">"AdministrativeArea"</span>
-                ],
-                <span class="hljs-attr">"name"</span>: <span class="hljs-string">"New York metropolitan area"</span>,
-                <span class="hljs-attr">"diffbotUri"</span>: <span class="hljs-string">"http://diffbot.com/entity/EAtK9ZhUYMKmI_UzSrYinmw"</span>,
-                <span class="hljs-attr">"targetDiffbotUri"</span>: <span class="hljs-string">"http://diffbot.com/entity/EAtK9ZhUYMKmI_UzSrYinmw"</span>,
-                <span class="hljs-attr">"targetDiffbotId"</span>: <span class="hljs-string">"EAtK9ZhUYMKmI_UzSrYinmw"</span>,
-                <span class="hljs-attr">"type"</span>: <span class="hljs-string">"AdministrativeArea"</span>
-            },
+            <span class="hljs-attr">"street"</span>: <span class="hljs-string">"316 Bel Air Bel Air Blvd"</span>,
             <span class="hljs-attr">"subregion"</span>: {
-                <span class="hljs-attr">"summary"</span>: <span class="hljs-string">"County in New York, United States. Connector between New York City/Long Island and the rest of New York"</span>,
-                <span class="hljs-attr">"image"</span>: <span class="hljs-string">"https://kg.diffbot.com/image/api/get?fetch=yes&amp;url=g%3Cj7P0St0DnBJf.x0KwLZrUn.%5B%3CR0Aa4Hh%3B%5Bv738ZqOr7U%3FivHt%3ErO%3CLr2YiFq7R%7EJq6UoKm7MyKm%7B%5Ex6G3by1d2Vp%3FmpmwN%5D%7C_.%40%5C%7B"</span>,
+                <span class="hljs-attr">"summary"</span>: <span class="hljs-string">"County in Alabama, United States"</span>,
+                <span class="hljs-attr">"image"</span>: <span class="hljs-string">"https://kg.diffbot.com/image/api/get?fetch=yes&amp;url=g%3Cj7P0St0DnBJf.x0KwLZrUn.%5B%3CR0Aa4Hh%3B%5Bv738ZqOr7U%3FdvCr%3ErO%3CLr2Y%5CM%5B%3AZ%7C9e%3FVmLq4KzWb0Wpt_0Xq3%5B%60RqHo%3A.%7BOV"</span>,
                 <span class="hljs-attr">"types"</span>: [
                     <span class="hljs-string">"Place"</span>,
-                    <span class="hljs-string">"AdministrativeArea"</span>
+                    <span class="hljs-string">"AdministrativeArea"</span>,
+                    <span class="hljs-string">"Subregion"</span>
                 ],
-                <span class="hljs-attr">"name"</span>: <span class="hljs-string">"Westchester County"</span>,
-                <span class="hljs-attr">"diffbotUri"</span>: <span class="hljs-string">"http://diffbot.com/entity/EoKezLIvJP82Xm_cWVQyCQA"</span>,
-                <span class="hljs-attr">"targetDiffbotUri"</span>: <span class="hljs-string">"http://diffbot.com/entity/EoKezLIvJP82Xm_cWVQyCQA"</span>,
-                <span class="hljs-attr">"targetDiffbotId"</span>: <span class="hljs-string">"EoKezLIvJP82Xm_cWVQyCQA"</span>,
-                <span class="hljs-attr">"type"</span>: <span class="hljs-string">"AdministrativeArea"</span>
+                <span class="hljs-attr">"name"</span>: <span class="hljs-string">"Mobile County"</span>,
+                <span class="hljs-attr">"diffbotUri"</span>: <span class="hljs-string">"http://diffbot.com/entity/EMW8U0M1WN0qUskYdtgVRfA"</span>,
+                <span class="hljs-attr">"targetDiffbotUri"</span>: <span class="hljs-string">"http://diffbot.com/entity/EMW8U0M1WN0qUskYdtgVRfA"</span>,
+                <span class="hljs-attr">"targetDiffbotId"</span>: <span class="hljs-string">"EMW8U0M1WN0qUskYdtgVRfA"</span>,
+                <span class="hljs-attr">"type"</span>: <span class="hljs-string">"Place"</span>
             },
-            <span class="hljs-attr">"latitude"</span>: <span class="hljs-number">41.131256103515625</span>,
-            <span class="hljs-attr">"precision"</span>: <span class="hljs-number">3.956873655319214</span>,
-            <span class="hljs-attr">"postalCode"</span>: <span class="hljs-string">"10504"</span>,
+            <span class="hljs-attr">"latitude"</span>: <span class="hljs-number">30.66517448425293</span>,
+            <span class="hljs-attr">"precision"</span>: <span class="hljs-number">21.592092514038086</span>,
+            <span class="hljs-attr">"postalCode"</span>: <span class="hljs-string">"36606"</span>,
             <span class="hljs-attr">"region"</span>: {
                 <span class="hljs-attr">"summary"</span>: <span class="hljs-string">"State of the United States of America"</span>,
-                <span class="hljs-attr">"image"</span>: <span class="hljs-string">"https://kg.diffbot.com/image/api/get?fetch=yes&amp;url=g%3Cj7P0St0DnBJf.x0KwLZrUn.%5B%3CR0Aa4Hh%3B%5Bv738ZqOr7U%3FevDp%3EsGo0d%3Cc%3FPfxZ%7DGx8Zg.o%3BK"</span>,
+                <span class="hljs-attr">"image"</span>: <span class="hljs-string">"https://kg.diffbot.com/image/api/get?fetch=yes&amp;url=g%3Cj7P0St0DnBJf.x0KwLZrUn.%5B%3CR0Aa4Hh%3B%5Bv738ZqOr7U%3FGvvu%3ExS%7DYb%3B%60zrf9%5BpEg.%60%7CK"</span>,
                 <span class="hljs-attr">"types"</span>: [
                     <span class="hljs-string">"Place"</span>,
                     <span class="hljs-string">"AdministrativeArea"</span>,
                     <span class="hljs-string">"Region"</span>
                 ],
-                <span class="hljs-attr">"name"</span>: <span class="hljs-string">"New York"</span>,
-                <span class="hljs-attr">"diffbotUri"</span>: <span class="hljs-string">"http://diffbot.com/entity/E1NxI_KXaMbiP5g2aM9MRdw"</span>,
-                <span class="hljs-attr">"targetDiffbotUri"</span>: <span class="hljs-string">"http://diffbot.com/entity/E1NxI_KXaMbiP5g2aM9MRdw"</span>,
-                <span class="hljs-attr">"targetDiffbotId"</span>: <span class="hljs-string">"E1NxI_KXaMbiP5g2aM9MRdw"</span>,
-                <span class="hljs-attr">"type"</span>: <span class="hljs-string">"AdministrativeArea"</span>
+                <span class="hljs-attr">"name"</span>: <span class="hljs-string">"Alabama"</span>,
+                <span class="hljs-attr">"diffbotUri"</span>: <span class="hljs-string">"http://diffbot.com/entity/EB0V6uu7AMAmX8qSb0A3mpw"</span>,
+                <span class="hljs-attr">"targetDiffbotUri"</span>: <span class="hljs-string">"http://diffbot.com/entity/EB0V6uu7AMAmX8qSb0A3mpw"</span>,
+                <span class="hljs-attr">"targetDiffbotId"</span>: <span class="hljs-string">"EB0V6uu7AMAmX8qSb0A3mpw"</span>,
+                <span class="hljs-attr">"type"</span>: <span class="hljs-string">"Place"</span>
             },
-            <span class="hljs-attr">"longitude"</span>: <span class="hljs-number">-73.71214294433594</span>
+            <span class="hljs-attr">"longitude"</span>: <span class="hljs-number">-88.1258773803711</span>
         },
         {
             <span class="hljs-attr">"country"</span>: {
-                <span class="hljs-attr">"summary"</span>: <span class="hljs-string">"Sovereign state in North America"</span>,
-                <span class="hljs-attr">"image"</span>: <span class="hljs-string">"https://kg.diffbot.com/image/api/get?fetch=yes&amp;url=g%3Cj7P0St0DnBJf.x0KwLZrUn.%5B%3CR0Aa4Hh%3B%5Bv738ZqOr7U%3FevDs%3El%601Nw%7BM0Bf7hu7z%3FRe9s4XwGXedrKUAN%28%40aCHnM%60%29.%7BOV"</span>,
+                <span class="hljs-attr">"summary"</span>: <span class="hljs-string">"Country in South Asia"</span>,
+                <span class="hljs-attr">"image"</span>: <span class="hljs-string">"https://kg.diffbot.com/image/api/get?fetch=yes&amp;url=g%3Cj7P0St0DnBJf.x0KwLZrUn.%5B%3CR0Aa4Hh%3B%5Bv738ZqOr7U%3FDvsq%3En%5C0Vd-zKd17-nnr%40PqVd-CsU%5CzU3Xp%7D%28I3j%3BLo%29.%7BJo"</span>,
                 <span class="hljs-attr">"types"</span>: [
                     <span class="hljs-string">"Place"</span>,
                     <span class="hljs-string">"AdministrativeArea"</span>,
                     <span class="hljs-string">"Country"</span>
                 ],
-                <span class="hljs-attr">"name"</span>: <span class="hljs-string">"United States of America"</span>,
-                <span class="hljs-attr">"diffbotUri"</span>: <span class="hljs-string">"http://diffbot.com/entity/E01d4EK33MmCosgI2KXa4-A"</span>,
-                <span class="hljs-attr">"targetDiffbotUri"</span>: <span class="hljs-string">"http://diffbot.com/entity/E01d4EK33MmCosgI2KXa4-A"</span>,
-                <span class="hljs-attr">"targetDiffbotId"</span>: <span class="hljs-string">"E01d4EK33MmCosgI2KXa4-A"</span>,
-                <span class="hljs-attr">"type"</span>: <span class="hljs-string">"AdministrativeArea"</span>
+                <span class="hljs-attr">"name"</span>: <span class="hljs-string">"India"</span>,
+                <span class="hljs-attr">"diffbotUri"</span>: <span class="hljs-string">"http://diffbot.com/entity/EkL_5YoTSMA6dbNRVyE9yCQ"</span>,
+                <span class="hljs-attr">"targetDiffbotUri"</span>: <span class="hljs-string">"http://diffbot.com/entity/EkL_5YoTSMA6dbNRVyE9yCQ"</span>,
+                <span class="hljs-attr">"targetDiffbotId"</span>: <span class="hljs-string">"EkL_5YoTSMA6dbNRVyE9yCQ"</span>,
+                <span class="hljs-attr">"type"</span>: <span class="hljs-string">"Place"</span>
             },
             <span class="hljs-attr">"isCurrent"</span>: <span class="hljs-literal">true</span>,
-            <span class="hljs-attr">"address"</span>: <span class="hljs-string">"United States"</span>,
+            <span class="hljs-attr">"address"</span>: <span class="hljs-string">"`GOLDEN ENCLAVE,TISL TOWER,AIRPORT ROAD, BANGALORE BANGALORE Karnataka INDIA 560017"</span>,
+            <span class="hljs-attr">"city"</span>: {
+                <span class="hljs-attr">"summary"</span>: <span class="hljs-string">"City in Karnataka, India"</span>,
+                <span class="hljs-attr">"image"</span>: <span class="hljs-string">"https://kg.diffbot.com/image/api/get?fetch=yes&amp;url=g%3Cj7P0St0DnBJf.x0KwLZrUn.%5B%3CR0Aa4Hh%3B%5Bv738ZqOr7U%3FivHn%3EgO%3ATd8i%3DFGGg39m%3C.vRl"</span>,
+                <span class="hljs-attr">"types"</span>: [
+                    <span class="hljs-string">"Place"</span>,
+                    <span class="hljs-string">"AdministrativeArea"</span>,
+                    <span class="hljs-string">"City"</span>
+                ],
+                <span class="hljs-attr">"name"</span>: <span class="hljs-string">"Bangalore"</span>,
+                <span class="hljs-attr">"diffbotUri"</span>: <span class="hljs-string">"http://diffbot.com/entity/EH8-RoeHXOK-8hk4KLHtdaw"</span>,
+                <span class="hljs-attr">"targetDiffbotUri"</span>: <span class="hljs-string">"http://diffbot.com/entity/EH8-RoeHXOK-8hk4KLHtdaw"</span>,
+                <span class="hljs-attr">"targetDiffbotId"</span>: <span class="hljs-string">"EH8-RoeHXOK-8hk4KLHtdaw"</span>,
+                <span class="hljs-attr">"type"</span>: <span class="hljs-string">"Place"</span>
+            },
             <span class="hljs-attr">"isPrimary"</span>: <span class="hljs-literal">true</span>,
-            <span class="hljs-attr">"latitude"</span>: <span class="hljs-number">39.71595764160156</span>,
-            <span class="hljs-attr">"precision"</span>: <span class="hljs-number">3133.158935546875</span>,
-            <span class="hljs-attr">"longitude"</span>: <span class="hljs-number">-96.99966430664062</span>
+            <span class="hljs-attr">"street"</span>: <span class="hljs-string">"Airport Road"</span>,
+            <span class="hljs-attr">"subregion"</span>: {
+                <span class="hljs-attr">"summary"</span>: <span class="hljs-string">"District of Karnataka, India"</span>,
+                <span class="hljs-attr">"image"</span>: <span class="hljs-string">"https://kg.diffbot.com/image/api/get?fetch=yes&amp;url=g%3Cj7P0St0DnBJf.x0KwLZrUn.%5B%3CR0Aa4Hh%3B%5Bv738ZqOr7U%3FcvBP%3EpO%3E%5Bd%40%5B6BYjZ%7D%3FgC%5CxIdpVtDgq%5C0%3AQB%5Ew%7Di%7ES.Mqx"</span>,
+                <span class="hljs-attr">"types"</span>: [
+                    <span class="hljs-string">"Place"</span>,
+                    <span class="hljs-string">"AdministrativeArea"</span>,
+                    <span class="hljs-string">"Subregion"</span>
+                ],
+                <span class="hljs-attr">"name"</span>: <span class="hljs-string">"Bangalore Urban district"</span>,
+                <span class="hljs-attr">"diffbotUri"</span>: <span class="hljs-string">"http://diffbot.com/entity/EDXHT5WEYMGGWHj6BPfwv4A"</span>,
+                <span class="hljs-attr">"targetDiffbotUri"</span>: <span class="hljs-string">"http://diffbot.com/entity/EDXHT5WEYMGGWHj6BPfwv4A"</span>,
+                <span class="hljs-attr">"targetDiffbotId"</span>: <span class="hljs-string">"EDXHT5WEYMGGWHj6BPfwv4A"</span>,
+                <span class="hljs-attr">"type"</span>: <span class="hljs-string">"Place"</span>
+            },
+            <span class="hljs-attr">"latitude"</span>: <span class="hljs-number">12.965570449829102</span>,
+            <span class="hljs-attr">"precision"</span>: <span class="hljs-number">26.844528198242188</span>,
+            <span class="hljs-attr">"postalCode"</span>: <span class="hljs-string">"560017"</span>,
+            <span class="hljs-attr">"region"</span>: {
+                <span class="hljs-attr">"summary"</span>: <span class="hljs-string">"Indian state"</span>,
+                <span class="hljs-attr">"image"</span>: <span class="hljs-string">"https://kg.diffbot.com/image/api/get?fetch=yes&amp;url=g%3Cj7P0St0DnBJf.x0KwLZrUn.%5B%3CR0Aa4Hh%3B%5Bv738ZqOr7U%3FBvqO%3ExS%7DYb%3B%60z%7C%5BJgpLgBN.W%7B2"</span>,
+                <span class="hljs-attr">"types"</span>: [
+                    <span class="hljs-string">"Place"</span>,
+                    <span class="hljs-string">"AdministrativeArea"</span>
+                ],
+                <span class="hljs-attr">"name"</span>: <span class="hljs-string">"Karnataka"</span>,
+                <span class="hljs-attr">"diffbotUri"</span>: <span class="hljs-string">"http://diffbot.com/entity/EFJnKhpUfNx-F2v4bGRTx3w"</span>,
+                <span class="hljs-attr">"targetDiffbotUri"</span>: <span class="hljs-string">"http://diffbot.com/entity/EFJnKhpUfNx-F2v4bGRTx3w"</span>,
+                <span class="hljs-attr">"targetDiffbotId"</span>: <span class="hljs-string">"EFJnKhpUfNx-F2v4bGRTx3w"</span>,
+                <span class="hljs-attr">"type"</span>: <span class="hljs-string">"Place"</span>
+            },
+            <span class="hljs-attr">"longitude"</span>: <span class="hljs-number">77.60624694824219</span>
         }
     ]
 }
@@ -1240,6 +1311,26 @@
     <span class="hljs-attr">"mccCodeDescription"</span>: <span class="hljs-string">""</span>
 }
 </code></pre>
+<h3><a class="anchor" aria-hidden="true" id="monthlytraffic"></a><a href="#monthlytraffic" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>monthlyTraffic</h3>
+<p>Monthly website traffic on this organization's homepage</p>
+<ul>
+<li><strong>Type:</strong> Integer</li>
+<li><strong>Example:</strong></li>
+</ul>
+<pre><code class="hljs">{
+    <span class="hljs-attr">"monthlyTraffic"</span>: <span class="hljs-number">90019938</span>
+}
+</code></pre>
+<h3><a class="anchor" aria-hidden="true" id="monthlytrafficgrowth"></a><a href="#monthlytrafficgrowth" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>monthlyTrafficGrowth</h3>
+<p>Monthly growth in website traffic on this organization's homepage</p>
+<ul>
+<li><strong>Type:</strong> Float</li>
+<li><strong>Example:</strong></li>
+</ul>
+<pre><code class="hljs">{
+    <span class="hljs-attr">"monthlyTrafficGrowth"</span>: <span class="hljs-number">0.018442305</span>
+}
+</code></pre>
 <h3><a class="anchor" aria-hidden="true" id="motto"></a><a href="#motto" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>motto</h3>
 <p>A short sentence or phrase chosen as encapsulating the beliefs or ideals guiding an organization</p>
 <ul>
@@ -1247,7 +1338,7 @@
 <li><strong>Example:</strong></li>
 </ul>
 <pre><code class="hljs">{
-    <span class="hljs-attr">"motto"</span>: <span class="hljs-string">"We're using technologies like AI, cloud, blockchain and IoT to help our clients transform their industries."</span>
+    <span class="hljs-attr">"motto"</span>: <span class="hljs-string">""</span>
 }
 </code></pre>
 <h3><a class="anchor" aria-hidden="true" id="naceclassification"></a><a href="#naceclassification" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>naceClassification</h3>
@@ -1289,7 +1380,7 @@
 }
 </code></pre>
 <h3><a class="anchor" aria-hidden="true" id="naicsclassification"></a><a href="#naicsclassification" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>naicsClassification</h3>
-<p>The North American Industry Classification System (NAICS) is the standard used by Federal statistical agencies in classifying business establishments for the purpose of collecting, analyzing, and publishing statistical data related to the U.S. business economy.</p>
+<p>The North American Industry Classification System (NAICS) is the standard used by Federal statistical agencies in classifying business establishments for the purpose of collecting, analyzing, and publishing statistical data related to the U.S. business economy. This is the 2022 version.</p>
 <ul>
 <li><strong>Type:</strong> ClassificationCode</li>
 <li><strong>Example:</strong></li>
@@ -1297,22 +1388,51 @@
 <pre><code class="hljs">{
     <span class="hljs-attr">"naicsClassification"</span>: [
         {
-            <span class="hljs-attr">"code"</span>: <span class="hljs-string">"334419"</span>,
-            <span class="hljs-attr">"level"</span>: <span class="hljs-number">5</span>,
-            <span class="hljs-attr">"isPrimary"</span>: <span class="hljs-literal">true</span>,
-            <span class="hljs-attr">"name"</span>: <span class="hljs-string">"Other Electronic Component Manufacturing"</span>
-        },
-        {
-            <span class="hljs-attr">"code"</span>: <span class="hljs-string">"334410"</span>,
+            <span class="hljs-attr">"code"</span>: <span class="hljs-string">"518210"</span>,
             <span class="hljs-attr">"level"</span>: <span class="hljs-number">4</span>,
             <span class="hljs-attr">"isPrimary"</span>: <span class="hljs-literal">true</span>,
-            <span class="hljs-attr">"name"</span>: <span class="hljs-string">"Semiconductor and Other Electronic Component Manufacturing"</span>
+            <span class="hljs-attr">"name"</span>: <span class="hljs-string">"Computing Infrastructure Providers, Data Processing, Web Hosting, and Related Services"</span>
         },
         {
-            <span class="hljs-attr">"code"</span>: <span class="hljs-string">"334400"</span>,
+            <span class="hljs-attr">"code"</span>: <span class="hljs-string">"518200"</span>,
             <span class="hljs-attr">"level"</span>: <span class="hljs-number">3</span>,
             <span class="hljs-attr">"isPrimary"</span>: <span class="hljs-literal">true</span>,
-            <span class="hljs-attr">"name"</span>: <span class="hljs-string">"Semiconductor and Other Electronic Component Manufacturing"</span>
+            <span class="hljs-attr">"name"</span>: <span class="hljs-string">"Computing Infrastructure Providers, Data Processing, Web Hosting, and Related Services"</span>
+        },
+        {
+            <span class="hljs-attr">"code"</span>: <span class="hljs-string">"518000"</span>,
+            <span class="hljs-attr">"level"</span>: <span class="hljs-number">2</span>,
+            <span class="hljs-attr">"isPrimary"</span>: <span class="hljs-literal">true</span>,
+            <span class="hljs-attr">"name"</span>: <span class="hljs-string">"Computing Infrastructure Providers, Data Processing, Web Hosting, and Related Services"</span>
+        }
+    ]
+}
+</code></pre>
+<h3><a class="anchor" aria-hidden="true" id="naicsclassification2017"></a><a href="#naicsclassification2017" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>naicsClassification2017</h3>
+<p>The North American Industry Classification System (NAICS) is the standard used by Federal statistical agencies in classifying business establishments for the purpose of collecting, analyzing, and publishing statistical data related to the U.S. business economy. This is the 2017 version.</p>
+<ul>
+<li><strong>Type:</strong> ClassificationCode</li>
+<li><strong>Example:</strong></li>
+</ul>
+<pre><code class="hljs">{
+    <span class="hljs-attr">"naicsClassification2017"</span>: [
+        {
+            <span class="hljs-attr">"code"</span>: <span class="hljs-string">"518210"</span>,
+            <span class="hljs-attr">"level"</span>: <span class="hljs-number">4</span>,
+            <span class="hljs-attr">"isPrimary"</span>: <span class="hljs-literal">true</span>,
+            <span class="hljs-attr">"name"</span>: <span class="hljs-string">"Data Processing, Hosting, and Related Services"</span>
+        },
+        {
+            <span class="hljs-attr">"code"</span>: <span class="hljs-string">"518200"</span>,
+            <span class="hljs-attr">"level"</span>: <span class="hljs-number">3</span>,
+            <span class="hljs-attr">"isPrimary"</span>: <span class="hljs-literal">true</span>,
+            <span class="hljs-attr">"name"</span>: <span class="hljs-string">"Data Processing, Hosting, and Related Services"</span>
+        },
+        {
+            <span class="hljs-attr">"code"</span>: <span class="hljs-string">"518000"</span>,
+            <span class="hljs-attr">"level"</span>: <span class="hljs-number">2</span>,
+            <span class="hljs-attr">"isPrimary"</span>: <span class="hljs-literal">true</span>,
+            <span class="hljs-attr">"name"</span>: <span class="hljs-string">"Data Processing, Hosting, and Related Services"</span>
         }
     ]
 }
@@ -1324,7 +1444,7 @@
 <li><strong>Example:</strong></li>
 </ul>
 <pre><code class="hljs">{
-    <span class="hljs-attr">"nbActiveEmployeeEdges"</span>: <span class="hljs-number">148947</span>
+    <span class="hljs-attr">"nbActiveEmployeeEdges"</span>: <span class="hljs-number">88462</span>
 }
 </code></pre>
 <h3><a class="anchor" aria-hidden="true" id="nbemployeeranges"></a><a href="#nbemployeeranges" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>nbEmployeeRanges</h3>
@@ -1349,7 +1469,7 @@
 <li><strong>Example:</strong></li>
 </ul>
 <pre><code class="hljs">{
-    <span class="hljs-attr">"nbEmployees"</span>: <span class="hljs-number">345000</span>
+    <span class="hljs-attr">"nbEmployees"</span>: <span class="hljs-number">90000</span>
 }
 </code></pre>
 <h3><a class="anchor" aria-hidden="true" id="nbemployeesmax"></a><a href="#nbemployeesmax" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>nbEmployeesMax</h3>
@@ -1359,7 +1479,7 @@
 <li><strong>Example:</strong></li>
 </ul>
 <pre><code class="hljs">{
-    <span class="hljs-attr">"nbEmployeesMax"</span>: <span class="hljs-number">345000</span>
+    <span class="hljs-attr">"nbEmployeesMax"</span>: <span class="hljs-number">90000</span>
 }
 </code></pre>
 <h3><a class="anchor" aria-hidden="true" id="nbemployeesmin"></a><a href="#nbemployeesmin" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>nbEmployeesMin</h3>
@@ -1369,36 +1489,7 @@
 <li><strong>Example:</strong></li>
 </ul>
 <pre><code class="hljs">{
-    <span class="hljs-attr">"nbEmployeesMin"</span>: <span class="hljs-number">345000</span>
-}
-</code></pre>
-<h3><a class="anchor" aria-hidden="true" id="nbemployeesonlinkedin"></a><a href="#nbemployeesonlinkedin" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>nbEmployeesOnLinkedIn</h3>
-<p>Number of employees with LinkedIn profiles as reported by LinkedIn.</p>
-<ul>
-<li><strong>Type:</strong> Integer</li>
-<li><strong>Example:</strong></li>
-</ul>
-<pre><code class="hljs">{
-    <span class="hljs-attr">"nbEmployeesOnLinkedIn"</span>: <span class="hljs-number">0</span>
-}
-</code></pre>
-<h3><a class="anchor" aria-hidden="true" id="nbemployeesonlinkedinovertime"></a><a href="#nbemployeesonlinkedinovertime" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>nbEmployeesOnLinkedInOverTime</h3>
-<p>Number of employees with LinkedIn profiles as reported by LinkedIn over time. This includes the latest number reported by LinkedIn.</p>
-<ul>
-<li><strong>Type:</strong> ObservationInt</li>
-<li><strong>Example:</strong></li>
-</ul>
-<pre><code class="hljs">{
-    <span class="hljs-attr">"nbEmployeesOnLinkedInOverTime"</span>: [
-        {
-            <span class="hljs-attr">"observationDate"</span>: {
-                <span class="hljs-attr">"str"</span>: <span class="hljs-string">""</span>,
-                <span class="hljs-attr">"precision"</span>: <span class="hljs-number">0</span>,
-                <span class="hljs-attr">"timestamp"</span>: <span class="hljs-number">0</span>
-            },
-            <span class="hljs-attr">"observationValue"</span>: <span class="hljs-number">0</span>
-        }
-    ]
+    <span class="hljs-attr">"nbEmployeesMin"</span>: <span class="hljs-number">90000</span>
 }
 </code></pre>
 <h3><a class="anchor" aria-hidden="true" id="nblocations"></a><a href="#nblocations" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>nbLocations</h3>
@@ -1408,7 +1499,7 @@
 <li><strong>Example:</strong></li>
 </ul>
 <pre><code class="hljs">{
-    <span class="hljs-attr">"nbLocations"</span>: <span class="hljs-number">47</span>
+    <span class="hljs-attr">"nbLocations"</span>: <span class="hljs-number">53</span>
 }
 </code></pre>
 <h3><a class="anchor" aria-hidden="true" id="nbuniqueinvestors"></a><a href="#nbuniqueinvestors" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>nbUniqueInvestors</h3>
@@ -1429,6 +1520,16 @@
 </ul>
 <pre><code class="hljs">{
     <span class="hljs-attr">"norwegianOrganizationNumbers"</span>: <span class="hljs-string">""</span>
+}
+</code></pre>
+<h3><a class="anchor" aria-hidden="true" id="npinumbers"></a><a href="#npinumbers" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>npiNumbers</h3>
+<p>The National Provider Identifier (NPI) is a unique identification number for covered health care providers.</p>
+<ul>
+<li><strong>Type:</strong> String</li>
+<li><strong>Example:</strong></li>
+</ul>
+<pre><code class="hljs">{
+    <span class="hljs-attr">"npiNumbers"</span>: <span class="hljs-string">""</span>
 }
 </code></pre>
 <h3><a class="anchor" aria-hidden="true" id="okvedclassification"></a><a href="#okvedclassification" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>okvedClassification</h3>
@@ -1485,25 +1586,51 @@
 <li><strong>Example:</strong></li>
 </ul>
 <pre><code class="hljs">{
-    <span class="hljs-attr">"partnerships"</span>: [
+    <span class="hljs-string">"partnerships"</span>: [
         {
-            <span class="hljs-attr">"summary"</span>: <span class="hljs-string">""</span>,
-            <span class="hljs-attr">"image"</span>: <span class="hljs-string">""</span>,
-            <span class="hljs-attr">"images"</span>: [
-                {
-                    <span class="hljs-attr">"classifications"</span>: <span class="hljs-string">""</span>,
-                    <span class="hljs-attr">"fingerprint"</span>: <span class="hljs-string">""</span>,
-                    <span class="hljs-attr">"title"</span>: <span class="hljs-string">""</span>,
-                    <span class="hljs-attr">"isCached"</span>: <span class="hljs-literal">false</span>,
-                    <span class="hljs-attr">"url"</span>: <span class="hljs-string">""</span>
-                }
+            <span class="hljs-string">"summary"</span>: <span class="hljs-string">"Community college in Denver, Colorado"</span>,
+            <span class="hljs-string">"image"</span>: <span class="hljs-string">"https://kg.diffbot.com/image/api/get?fetch=yes&amp;url=g%3Cj7P0St%7D9u.LnOv%7BI%7C%40g7.pBYINs%3Ff%7CGZ7jr-tGZhWf%3DK%2FOvy%5Bp%3CSKSh%40%5D3%60bLm%2Fb5Vd%7D%5B.%7EE%2FSn5U9G%5C%3Daj%40.0RiYhv%3Eq%3An9h%3CEoHd%3E3_0N%609e0-A%3EQjAdx-yA-NMwEM8-CI6G%5D%3AW5.%3Cp8"</span>,
+            <span class="hljs-string">"types"</span>: [
+                <span class="hljs-string">"Organization"</span>,
+                <span class="hljs-string">"Corporation"</span>,
+                <span class="hljs-string">"Company"</span>
             ],
-            <span class="hljs-attr">"types"</span>: <span class="hljs-string">""</span>,
-            <span class="hljs-attr">"websiteUris"</span>: <span class="hljs-string">""</span>,
-            <span class="hljs-attr">"diffbotUri"</span>: <span class="hljs-string">""</span>,
-            <span class="hljs-attr">"name"</span>: <span class="hljs-string">""</span>,
-            <span class="hljs-attr">"targetDiffbotUri"</span>: <span class="hljs-string">""</span>,
-            <span class="hljs-attr">"surfaceForm"</span>: <span class="hljs-string">""</span>
+            <span class="hljs-string">"name"</span>: <span class="hljs-string">"Community College of Denver"</span>,
+            <span class="hljs-string">"diffbotUri"</span>: <span class="hljs-string">"http://diffbot.com/entity/E5rCwkfaXOi-XvZMdLA9nBA"</span>,
+            <span class="hljs-string">"targetDiffbotUri"</span>: <span class="hljs-string">"http://diffbot.com/entity/E5rCwkfaXOi-XvZMdLA9nBA"</span>,
+            <span class="hljs-string">"targetDiffbotId"</span>: <span class="hljs-string">"E5rCwkfaXOi-XvZMdLA9nBA"</span>,
+            <span class="hljs-string">"surfaceForm"</span>: <span class="hljs-string">"Community College of Denver"</span>,
+            <span class="hljs-string">"type"</span>: <span class="hljs-string">"Organization"</span>
+        },
+        {
+            <span class="hljs-string">"summary"</span>: <span class="hljs-string">"Indian multinational telecommunications company"</span>,
+            <span class="hljs-string">"image"</span>: <span class="hljs-string">"https://kg.diffbot.com/image/api/get?fetch=yes&amp;url=g%3Cj7P0St0DnBJf.x0KwLZrUn.%5B%3CR0Aa4Hh%3B%5Bv738ZqOr7U%3FjvIo%3EgV%7D_w5Y%5CJlL%5E%7B7rFTu.xAK"</span>,
+            <span class="hljs-string">"types"</span>: [
+                <span class="hljs-string">"Organization"</span>,
+                <span class="hljs-string">"Corporation"</span>,
+                <span class="hljs-string">"Company"</span>
+            ],
+            <span class="hljs-string">"name"</span>: <span class="hljs-string">"Bharti Airtel"</span>,
+            <span class="hljs-string">"diffbotUri"</span>: <span class="hljs-string">"http://diffbot.com/entity/ENUs3Fj_tNTerjAQZVO8vUQ"</span>,
+            <span class="hljs-string">"targetDiffbotUri"</span>: <span class="hljs-string">"http://diffbot.com/entity/ENUs3Fj_tNTerjAQZVO8vUQ"</span>,
+            <span class="hljs-string">"targetDiffbotId"</span>: <span class="hljs-string">"ENUs3Fj_tNTerjAQZVO8vUQ"</span>,
+            <span class="hljs-string">"surfaceForm"</span>: <span class="hljs-string">"Bharti Airtel"</span>,
+            <span class="hljs-string">"type"</span>: <span class="hljs-string">"Organization"</span>
+        },
+        {
+            <span class="hljs-string">"summary"</span>: <span class="hljs-string">"Distributed, in-memory database"</span>,
+            <span class="hljs-string">"image"</span>: <span class="hljs-string">"https://kg.diffbot.com/image/api/get?fetch=yes&amp;url=g%3Cj7P0St0DnBJf.x0KwLZrUn.%5B%3CR0Aa4Hh%3B%5Bv738ZqOr7U%3FevDo%3Eq%5D3%5Cb9_8TkDXrGrF_eXw%7CR5-%5ByOEWpFq9N.%40Yc"</span>,
+            <span class="hljs-string">"types"</span>: [
+                <span class="hljs-string">"Organization"</span>,
+                <span class="hljs-string">"Corporation"</span>,
+                <span class="hljs-string">"Company"</span>
+            ],
+            <span class="hljs-string">"name"</span>: <span class="hljs-string">"SingleStore"</span>,
+            <span class="hljs-string">"diffbotUri"</span>: <span class="hljs-string">"http://diffbot.com/entity/ERHHQPQJjNLKd2hTNUwtsow"</span>,
+            <span class="hljs-string">"targetDiffbotUri"</span>: <span class="hljs-string">"http://diffbot.com/entity/ERHHQPQJjNLKd2hTNUwtsow"</span>,
+            <span class="hljs-string">"targetDiffbotId"</span>: <span class="hljs-string">"ERHHQPQJjNLKd2hTNUwtsow"</span>,
+            <span class="hljs-string">"surfaceForm"</span>: <span class="hljs-string">"SingleStore"</span>,
+            <span class="hljs-string">"type"</span>: <span class="hljs-string">"Organization"</span>
         }
     ]
 }
@@ -1540,27 +1667,29 @@
             <span class="hljs-attr">"image"</span>: <span class="hljs-string">"https://kg.diffbot.com/image/api/get?fetch=yes&amp;url=g%3Cj7P0St0DnBJf.x0KwLZrUn.%5B%3CR0Aa4Hh%3B%5Bv738ZqOr7U%3FBvqs%3EhBnLF%3Bg%3BBhQX%5BGmF.vRl"</span>,
             <span class="hljs-attr">"types"</span>: [
                 <span class="hljs-string">"Organization"</span>,
-                <span class="hljs-string">"Corporation"</span>
+                <span class="hljs-string">"Corporation"</span>,
+                <span class="hljs-string">"Company"</span>
             ],
-            <span class="hljs-attr">"name"</span>: <span class="hljs-string">"Computing-Tabulating-Recording Company"</span>,
+            <span class="hljs-attr">"name"</span>: <span class="hljs-string">"Computing Tabulating Recording Company"</span>,
             <span class="hljs-attr">"diffbotUri"</span>: <span class="hljs-string">"http://diffbot.com/entity/EeCTt6xVqOoqWn5jzd4EwCw"</span>,
             <span class="hljs-attr">"targetDiffbotUri"</span>: <span class="hljs-string">"http://diffbot.com/entity/EeCTt6xVqOoqWn5jzd4EwCw"</span>,
             <span class="hljs-attr">"targetDiffbotId"</span>: <span class="hljs-string">"EeCTt6xVqOoqWn5jzd4EwCw"</span>,
-            <span class="hljs-attr">"surfaceForm"</span>: <span class="hljs-string">"Computing-Tabulating-Recording Company"</span>,
-            <span class="hljs-attr">"type"</span>: <span class="hljs-string">"Corporation"</span>
+            <span class="hljs-attr">"surfaceForm"</span>: <span class="hljs-string">"Computing Tabulating Recording Company"</span>,
+            <span class="hljs-attr">"type"</span>: <span class="hljs-string">"Organization"</span>
         },
         {
             <span class="hljs-attr">"summary"</span>: <span class="hljs-string">"American manufacturing company"</span>,
             <span class="hljs-attr">"types"</span>: [
                 <span class="hljs-string">"Organization"</span>,
-                <span class="hljs-string">"Corporation"</span>
+                <span class="hljs-string">"Corporation"</span>,
+                <span class="hljs-string">"Company"</span>
             ],
             <span class="hljs-attr">"name"</span>: <span class="hljs-string">"Bundy Manufacturing Company"</span>,
             <span class="hljs-attr">"diffbotUri"</span>: <span class="hljs-string">"http://diffbot.com/entity/Ex0oc7IVgNWGUSnSDoTUV-w"</span>,
             <span class="hljs-attr">"targetDiffbotUri"</span>: <span class="hljs-string">"http://diffbot.com/entity/Ex0oc7IVgNWGUSnSDoTUV-w"</span>,
             <span class="hljs-attr">"targetDiffbotId"</span>: <span class="hljs-string">"Ex0oc7IVgNWGUSnSDoTUV-w"</span>,
             <span class="hljs-attr">"surfaceForm"</span>: <span class="hljs-string">"Bundy Manufacturing Company"</span>,
-            <span class="hljs-attr">"type"</span>: <span class="hljs-string">"Corporation"</span>
+            <span class="hljs-attr">"type"</span>: <span class="hljs-string">"Organization"</span>
         }
     ]
 }
@@ -1678,49 +1807,49 @@
 <pre><code class="hljs">{
     <span class="hljs-attr">"secForms"</span>: [
         {
-            <span class="hljs-attr">"formType"</span>: <span class="hljs-string">"8-K/A"</span>,
+            <span class="hljs-attr">"formType"</span>: <span class="hljs-string">"8-K"</span>,
             <span class="hljs-attr">"periodOfReport"</span>: {
-                <span class="hljs-attr">"str"</span>: <span class="hljs-string">"d2019-06-30"</span>,
+                <span class="hljs-attr">"str"</span>: <span class="hljs-string">"d2022-07-31"</span>,
                 <span class="hljs-attr">"precision"</span>: <span class="hljs-number">3</span>,
-                <span class="hljs-attr">"timestamp"</span>: <span class="hljs-number">1561852800000</span>
+                <span class="hljs-attr">"timestamp"</span>: <span class="hljs-number">1659225600000</span>
             },
             <span class="hljs-attr">"filingDate"</span>: {
-                <span class="hljs-attr">"str"</span>: <span class="hljs-string">"d2019-09-20"</span>,
+                <span class="hljs-attr">"str"</span>: <span class="hljs-string">"d2022-07-18"</span>,
                 <span class="hljs-attr">"precision"</span>: <span class="hljs-number">3</span>,
-                <span class="hljs-attr">"timestamp"</span>: <span class="hljs-number">1568937600000</span>
+                <span class="hljs-attr">"timestamp"</span>: <span class="hljs-number">1658102400000</span>
             },
-            <span class="hljs-attr">"documentUrl"</span>: <span class="hljs-string">"https://www.sec.gov/ix?doc=/Archives/edgar/data/51143/000155837019008675/ibm-20190709x8ka.htm"</span>,
-            <span class="hljs-attr">"filingUrl"</span>: <span class="hljs-string">"https://www.sec.gov/Archives/edgar/data/51143/000155837019008675/0001558370-19-008675-index.htm"</span>
-        },
-        {
-            <span class="hljs-attr">"formType"</span>: <span class="hljs-string">"10-Q"</span>,
-            <span class="hljs-attr">"periodOfReport"</span>: {
-                <span class="hljs-attr">"str"</span>: <span class="hljs-string">"d2019-06-30"</span>,
-                <span class="hljs-attr">"precision"</span>: <span class="hljs-number">3</span>,
-                <span class="hljs-attr">"timestamp"</span>: <span class="hljs-number">1561852800000</span>
-            },
-            <span class="hljs-attr">"filingDate"</span>: {
-                <span class="hljs-attr">"str"</span>: <span class="hljs-string">"d2019-07-30"</span>,
-                <span class="hljs-attr">"precision"</span>: <span class="hljs-number">3</span>,
-                <span class="hljs-attr">"timestamp"</span>: <span class="hljs-number">1564444800000</span>
-            },
-            <span class="hljs-attr">"documentUrl"</span>: <span class="hljs-string">"https://www.sec.gov/ix?doc=/Archives/edgar/data/51143/000155837019006560/ibm-20190630x10q.htm"</span>,
-            <span class="hljs-attr">"filingUrl"</span>: <span class="hljs-string">"https://www.sec.gov/Archives/edgar/data/51143/000155837019006560/0001558370-19-006560-index.htm"</span>
+            <span class="hljs-attr">"documentUrl"</span>: <span class="hljs-string">"https://www.sec.gov/ix?doc=/Archives/edgar/data/51143/000155837022010793/ibm-20220718x8k.htm"</span>,
+            <span class="hljs-attr">"filingUrl"</span>: <span class="hljs-string">"https://www.sec.gov/Archives/edgar/data/51143/000155837022010793/0001558370-22-010793-index.htm"</span>
         },
         {
             <span class="hljs-attr">"formType"</span>: <span class="hljs-string">"8-K"</span>,
             <span class="hljs-attr">"periodOfReport"</span>: {
-                <span class="hljs-attr">"str"</span>: <span class="hljs-string">"d2019-07-31"</span>,
+                <span class="hljs-attr">"str"</span>: <span class="hljs-string">"d2022-07-31"</span>,
                 <span class="hljs-attr">"precision"</span>: <span class="hljs-number">3</span>,
-                <span class="hljs-attr">"timestamp"</span>: <span class="hljs-number">1564531200000</span>
+                <span class="hljs-attr">"timestamp"</span>: <span class="hljs-number">1659225600000</span>
             },
             <span class="hljs-attr">"filingDate"</span>: {
-                <span class="hljs-attr">"str"</span>: <span class="hljs-string">"d2019-08-02"</span>,
+                <span class="hljs-attr">"str"</span>: <span class="hljs-string">"d2022-07-26"</span>,
                 <span class="hljs-attr">"precision"</span>: <span class="hljs-number">3</span>,
-                <span class="hljs-attr">"timestamp"</span>: <span class="hljs-number">1564704000000</span>
+                <span class="hljs-attr">"timestamp"</span>: <span class="hljs-number">1658793600000</span>
             },
-            <span class="hljs-attr">"documentUrl"</span>: <span class="hljs-string">"https://www.sec.gov/ix?doc=/Archives/edgar/data/51143/000155837019006914/ibm-20190802x8k.htm"</span>,
-            <span class="hljs-attr">"filingUrl"</span>: <span class="hljs-string">"https://www.sec.gov/Archives/edgar/data/51143/000155837019006914/0001558370-19-006914-index.htm"</span>
+            <span class="hljs-attr">"documentUrl"</span>: <span class="hljs-string">"https://www.sec.gov/ix?doc=/Archives/edgar/data/51143/000110465922082789/tm2221760d1_8k.htm"</span>,
+            <span class="hljs-attr">"filingUrl"</span>: <span class="hljs-string">"https://www.sec.gov/Archives/edgar/data/51143/000110465922082789/0001104659-22-082789-index.htm"</span>
+        },
+        {
+            <span class="hljs-attr">"formType"</span>: <span class="hljs-string">"10-Q"</span>,
+            <span class="hljs-attr">"periodOfReport"</span>: {
+                <span class="hljs-attr">"str"</span>: <span class="hljs-string">"d2022-06-30"</span>,
+                <span class="hljs-attr">"precision"</span>: <span class="hljs-number">3</span>,
+                <span class="hljs-attr">"timestamp"</span>: <span class="hljs-number">1656547200000</span>
+            },
+            <span class="hljs-attr">"filingDate"</span>: {
+                <span class="hljs-attr">"str"</span>: <span class="hljs-string">"d2022-07-25"</span>,
+                <span class="hljs-attr">"precision"</span>: <span class="hljs-number">3</span>,
+                <span class="hljs-attr">"timestamp"</span>: <span class="hljs-number">1658707200000</span>
+            },
+            <span class="hljs-attr">"documentUrl"</span>: <span class="hljs-string">"https://www.sec.gov/ix?doc=/Archives/edgar/data/51143/000155837022010985/ibm-20220630x10q.htm"</span>,
+            <span class="hljs-attr">"filingUrl"</span>: <span class="hljs-string">"https://www.sec.gov/Archives/edgar/data/51143/000155837022010985/0001558370-22-010985-index.htm"</span>
         }
     ]
 }
@@ -1756,10 +1885,10 @@
             <span class="hljs-attr">"name"</span>: <span class="hljs-string">"Industrial machinery and equipment"</span>
         },
         {
-            <span class="hljs-attr">"code"</span>: <span class="hljs-string">"3679"</span>,
-            <span class="hljs-attr">"level"</span>: <span class="hljs-number">3</span>,
+            <span class="hljs-attr">"code"</span>: <span class="hljs-string">"7300"</span>,
+            <span class="hljs-attr">"level"</span>: <span class="hljs-number">1</span>,
             <span class="hljs-attr">"isPrimary"</span>: <span class="hljs-literal">false</span>,
-            <span class="hljs-attr">"name"</span>: <span class="hljs-string">"Electronic Components, Not Elsewhere Classified"</span>
+            <span class="hljs-attr">"name"</span>: <span class="hljs-string">"Business Services"</span>
         }
     ]
 }
@@ -1822,6 +1951,7 @@
 <pre><code class="hljs">{
     <span class="hljs-attr">"stock"</span>: {
         <span class="hljs-attr">"symbol"</span>: <span class="hljs-string">"IBM"</span>,
+        <span class="hljs-attr">"isCurrent"</span>: <span class="hljs-literal">true</span>,
         <span class="hljs-attr">"exchange"</span>: <span class="hljs-string">"NYSE"</span>
     }
 }
@@ -1839,41 +1969,41 @@
             <span class="hljs-attr">"image"</span>: <span class="hljs-string">"https://kg.diffbot.com/image/api/get?fetch=yes&amp;url=g%3Cj7P0St%7D9u.LnOv%7BI%7C%40g7.pBYINs%3Ff%7CGZ7jr-tGZhWf%3DK%2FOvy%5Bp%3CSKbs8i%7CEyNzBa%3DXu9h%3DKcsg%5CFUA%5Dx3S%3A%2F%7C3h1%601Ba%40%3CTnki1nHH%5EI.3GY"</span>,
             <span class="hljs-attr">"types"</span>: [
                 <span class="hljs-string">"Organization"</span>,
-                <span class="hljs-string">"Corporation"</span>
+                <span class="hljs-string">"Corporation"</span>,
+                <span class="hljs-string">"Company"</span>
             ],
-            <span class="hljs-attr">"name"</span>: <span class="hljs-string">"SoftLayer Technologies, Inc."</span>,
+            <span class="hljs-attr">"name"</span>: <span class="hljs-string">"Soft Layer Technologies"</span>,
             <span class="hljs-attr">"diffbotUri"</span>: <span class="hljs-string">"http://diffbot.com/entity/Eo3z6VKzPNxmoKVCMdwfvmw"</span>,
             <span class="hljs-attr">"targetDiffbotUri"</span>: <span class="hljs-string">"http://diffbot.com/entity/Eo3z6VKzPNxmoKVCMdwfvmw"</span>,
             <span class="hljs-attr">"targetDiffbotId"</span>: <span class="hljs-string">"Eo3z6VKzPNxmoKVCMdwfvmw"</span>,
-            <span class="hljs-attr">"surfaceForm"</span>: <span class="hljs-string">"SoftLayer Technologies, Inc."</span>,
-            <span class="hljs-attr">"type"</span>: <span class="hljs-string">"Corporation"</span>
+            <span class="hljs-attr">"surfaceForm"</span>: <span class="hljs-string">"Soft Layer Technologies"</span>,
+            <span class="hljs-attr">"type"</span>: <span class="hljs-string">"Organization"</span>
         },
         {
-            <span class="hljs-attr">"summary"</span>: <span class="hljs-string">"American multinational software company"</span>,
-            <span class="hljs-attr">"image"</span>: <span class="hljs-string">"https://kg.diffbot.com/image/api/get?fetch=yes&amp;url=g%3Cj7P0St0DnBJf.x0KwLZrUn.%5B%3CR0Aa4Hh%3B%5Bv738ZqOr7U%3FEvtv%3EwS0LK%7DnzMi%3Fh.K%7C%3E"</span>,
+            <span class="hljs-attr">"summary"</span>: <span class="hljs-string">"Organization based in Germany"</span>,
             <span class="hljs-attr">"types"</span>: [
                 <span class="hljs-string">"Organization"</span>,
-                <span class="hljs-string">"Corporation"</span>
+                <span class="hljs-string">"Corporation"</span>,
+                <span class="hljs-string">"Company"</span>
             ],
-            <span class="hljs-attr">"name"</span>: <span class="hljs-string">"Red Hat, Inc."</span>,
-            <span class="hljs-attr">"diffbotUri"</span>: <span class="hljs-string">"http://diffbot.com/entity/EIATbb7uwOhSYiGqLBPUD0w"</span>,
-            <span class="hljs-attr">"targetDiffbotUri"</span>: <span class="hljs-string">"http://diffbot.com/entity/EIATbb7uwOhSYiGqLBPUD0w"</span>,
-            <span class="hljs-attr">"targetDiffbotId"</span>: <span class="hljs-string">"EIATbb7uwOhSYiGqLBPUD0w"</span>,
-            <span class="hljs-attr">"surfaceForm"</span>: <span class="hljs-string">"Red Hat, Inc."</span>,
-            <span class="hljs-attr">"type"</span>: <span class="hljs-string">"Corporation"</span>
+            <span class="hljs-attr">"name"</span>: <span class="hljs-string">"Red Hat"</span>,
+            <span class="hljs-attr">"diffbotUri"</span>: <span class="hljs-string">"http://diffbot.com/entity/EFUnzGA2lOc6P1ACF3Infdg"</span>,
+            <span class="hljs-attr">"targetDiffbotUri"</span>: <span class="hljs-string">"http://diffbot.com/entity/EFUnzGA2lOc6P1ACF3Infdg"</span>,
+            <span class="hljs-attr">"targetDiffbotId"</span>: <span class="hljs-string">"EFUnzGA2lOc6P1ACF3Infdg"</span>,
+            <span class="hljs-attr">"surfaceForm"</span>: <span class="hljs-string">"Red Hat"</span>,
+            <span class="hljs-attr">"type"</span>: <span class="hljs-string">"Organization"</span>
         },
         {
-            <span class="hljs-attr">"summary"</span>: <span class="hljs-string">"Organization based in Egypt"</span>,
+            <span class="hljs-attr">"summary"</span>: <span class="hljs-string">"Organization based in الجيزة, Al Jizah Governorate, Egypt and owned by INTERNATIONAL BUSINESS MACHINES"</span>,
             <span class="hljs-attr">"types"</span>: [
-                <span class="hljs-string">"Organization"</span>,
-                <span class="hljs-string">"Corporation"</span>
+                <span class="hljs-string">"Organization"</span>
             ],
             <span class="hljs-attr">"name"</span>: <span class="hljs-string">"IBM Egypt Business Support Services"</span>,
             <span class="hljs-attr">"diffbotUri"</span>: <span class="hljs-string">"http://diffbot.com/entity/EqxFQye0mN_mBtveIsJwWmg"</span>,
             <span class="hljs-attr">"targetDiffbotUri"</span>: <span class="hljs-string">"http://diffbot.com/entity/EqxFQye0mN_mBtveIsJwWmg"</span>,
             <span class="hljs-attr">"targetDiffbotId"</span>: <span class="hljs-string">"EqxFQye0mN_mBtveIsJwWmg"</span>,
             <span class="hljs-attr">"surfaceForm"</span>: <span class="hljs-string">"IBM Egypt Business Support Services"</span>,
-            <span class="hljs-attr">"type"</span>: <span class="hljs-string">"Corporation"</span>
+            <span class="hljs-attr">"type"</span>: <span class="hljs-string">"Organization"</span>
         }
     ]
 }
@@ -1915,25 +2045,51 @@
 <li><strong>Example:</strong></li>
 </ul>
 <pre><code class="hljs">{
-    <span class="hljs-attr">"suppliers"</span>: [
+    <span class="hljs-string">"suppliers"</span>: [
         {
-            <span class="hljs-attr">"summary"</span>: <span class="hljs-string">""</span>,
-            <span class="hljs-attr">"image"</span>: <span class="hljs-string">""</span>,
-            <span class="hljs-attr">"images"</span>: [
-                {
-                    <span class="hljs-attr">"classifications"</span>: <span class="hljs-string">""</span>,
-                    <span class="hljs-attr">"fingerprint"</span>: <span class="hljs-string">""</span>,
-                    <span class="hljs-attr">"title"</span>: <span class="hljs-string">""</span>,
-                    <span class="hljs-attr">"isCached"</span>: <span class="hljs-literal">false</span>,
-                    <span class="hljs-attr">"url"</span>: <span class="hljs-string">""</span>
-                }
+            <span class="hljs-string">"summary"</span>: <span class="hljs-string">"Company and communications software"</span>,
+            <span class="hljs-string">"image"</span>: <span class="hljs-string">"https://kg.diffbot.com/image/api/get?fetch=yes&amp;url=g%3Cj7P0St%7D9u.LnOv%7BI%7C%40g7.pBYINs%3Ff%7CGZ7jr-tGZhWf%3DK%2FOvy%5Bp%3CSKbs8i%7CEyNzCZ%3C%5Eq%3Ee%3BOc2l10iuP%5E3Qw7lQka%3C%5ExF.I%5Do"</span>,
+            <span class="hljs-string">"types"</span>: [
+                <span class="hljs-string">"Organization"</span>,
+                <span class="hljs-string">"Corporation"</span>,
+                <span class="hljs-string">"Company"</span>
             ],
-            <span class="hljs-attr">"types"</span>: <span class="hljs-string">""</span>,
-            <span class="hljs-attr">"websiteUris"</span>: <span class="hljs-string">""</span>,
-            <span class="hljs-attr">"diffbotUri"</span>: <span class="hljs-string">""</span>,
-            <span class="hljs-attr">"name"</span>: <span class="hljs-string">""</span>,
-            <span class="hljs-attr">"targetDiffbotUri"</span>: <span class="hljs-string">""</span>,
-            <span class="hljs-attr">"surfaceForm"</span>: <span class="hljs-string">""</span>
+            <span class="hljs-string">"name"</span>: <span class="hljs-string">"Crowdcast"</span>,
+            <span class="hljs-string">"diffbotUri"</span>: <span class="hljs-string">"http://diffbot.com/entity/EQY36RhZ_PHGOIzgjag8wuw"</span>,
+            <span class="hljs-string">"targetDiffbotUri"</span>: <span class="hljs-string">"http://diffbot.com/entity/EQY36RhZ_PHGOIzgjag8wuw"</span>,
+            <span class="hljs-string">"targetDiffbotId"</span>: <span class="hljs-string">"EQY36RhZ_PHGOIzgjag8wuw"</span>,
+            <span class="hljs-string">"surfaceForm"</span>: <span class="hljs-string">"Crowdcast"</span>,
+            <span class="hljs-string">"type"</span>: <span class="hljs-string">"Organization"</span>
+        },
+        {
+            <span class="hljs-string">"summary"</span>: <span class="hljs-string">"Organization based in Frederick, Maryland, United States"</span>,
+            <span class="hljs-string">"image"</span>: <span class="hljs-string">"https://kg.diffbot.com/image/api/get?fetch=yes&amp;url=g%3Cj7P0St%7D9u.LnOv%7BI%7C%40g7.pBYINs%3Ff%7CGZ7jr-tGZhWf%3DK%2FOvy%5Bp%3CSKbs8i%7CEyNzBa%3DXu6f%3AKcGc%2FCrC%5ESUx5P4Ti1_%5CB%3F%3E%3EsALkNozGav.%7DIY"</span>,
+            <span class="hljs-string">"types"</span>: [
+                <span class="hljs-string">"Organization"</span>,
+                <span class="hljs-string">"Corporation"</span>,
+                <span class="hljs-string">"Company"</span>
+            ],
+            <span class="hljs-string">"name"</span>: <span class="hljs-string">"Welocalize"</span>,
+            <span class="hljs-string">"diffbotUri"</span>: <span class="hljs-string">"http://diffbot.com/entity/E3GIKIaZyOhmdDfi24xUxww"</span>,
+            <span class="hljs-string">"targetDiffbotUri"</span>: <span class="hljs-string">"http://diffbot.com/entity/E3GIKIaZyOhmdDfi24xUxww"</span>,
+            <span class="hljs-string">"targetDiffbotId"</span>: <span class="hljs-string">"E3GIKIaZyOhmdDfi24xUxww"</span>,
+            <span class="hljs-string">"surfaceForm"</span>: <span class="hljs-string">"Welocalize"</span>,
+            <span class="hljs-string">"type"</span>: <span class="hljs-string">"Organization"</span>
+        },
+        {
+            <span class="hljs-string">"summary"</span>: <span class="hljs-string">"Stock exchange located in Santiago, Chile"</span>,
+            <span class="hljs-string">"image"</span>: <span class="hljs-string">"https://kg.diffbot.com/image/api/get?fetch=yes&amp;url=g%3Cj7P0Stx9f%3CJ.LjzD%7C.X%7DY%3C7Y%3Djj7Y0Dwi%7BQVFf%3CJ%3AP3Xe8a2UzLm%2F%5Cp%3C%5B9Z-DhvGeYm6C7KdAc8w%7DCXuWo7R0Mc%26P8s%3F%7C%3A%26%7CsIDL%5Dj%7EY9%5E04TX%5CJmuIb5wG%60%2FsZ%3C%60aI%7DMgQgGVNtXIOo"</span>,
+            <span class="hljs-string">"types"</span>: [
+                <span class="hljs-string">"Organization"</span>,
+                <span class="hljs-string">"Corporation"</span>,
+                <span class="hljs-string">"Company"</span>
+            ],
+            <span class="hljs-string">"name"</span>: <span class="hljs-string">"Bolsa de Santiago"</span>,
+            <span class="hljs-string">"diffbotUri"</span>: <span class="hljs-string">"http://diffbot.com/entity/EAEn2ThkbOG2GceUXOhMLbQ"</span>,
+            <span class="hljs-string">"targetDiffbotUri"</span>: <span class="hljs-string">"http://diffbot.com/entity/EAEn2ThkbOG2GceUXOhMLbQ"</span>,
+            <span class="hljs-string">"targetDiffbotId"</span>: <span class="hljs-string">"EAEn2ThkbOG2GceUXOhMLbQ"</span>,
+            <span class="hljs-string">"surfaceForm"</span>: <span class="hljs-string">"Bolsa de Santiago"</span>,
+            <span class="hljs-string">"type"</span>: <span class="hljs-string">"Organization"</span>
         }
     ]
 }
@@ -1947,22 +2103,7 @@
     <span class="hljs-attr">"technographics"</span>: [
         {
             <span class="hljs-attr">"technology"</span>: {
-                <span class="hljs-attr">"recordId"</span>: <span class="hljs-string">"EPdsrDmLiMQCskvBLp_dloQ@2275"</span>,
-                <span class="hljs-attr">"name"</span>: <span class="hljs-string">"React"</span>,
-                <span class="hljs-attr">"websiteUris"</span>: [
-                    <span class="hljs-string">"reactjs.org"</span>
-                ],
-                <span class="hljs-attr">"surfaceForm"</span>: <span class="hljs-string">"React"</span>,
-                <span class="hljs-attr">"position"</span>: <span class="hljs-string">"companyTechnographicsTechnology"</span>,
-                <span class="hljs-attr">"type"</span>: <span class="hljs-string">"DiffbotEntity"</span>
-            },
-            <span class="hljs-attr">"categories"</span>: [
-                <span class="hljs-string">"JavaScript frameworks"</span>
-            ]
-        },
-        {
-            <span class="hljs-attr">"technology"</span>: {
-                <span class="hljs-attr">"recordId"</span>: <span class="hljs-string">"EPdsrDmLiMQCskvBLp_dloQ@2276"</span>,
+                <span class="hljs-attr">"recordId"</span>: <span class="hljs-string">"EPdsrDmLiMQCskvBLp_dloQ@2177"</span>,
                 <span class="hljs-attr">"name"</span>: <span class="hljs-string">"TrustArc"</span>,
                 <span class="hljs-attr">"websiteUris"</span>: [
                     <span class="hljs-string">"trustarc.com"</span>
@@ -1977,7 +2118,7 @@
         },
         {
             <span class="hljs-attr">"technology"</span>: {
-                <span class="hljs-attr">"recordId"</span>: <span class="hljs-string">"EPdsrDmLiMQCskvBLp_dloQ@2277"</span>,
+                <span class="hljs-attr">"recordId"</span>: <span class="hljs-string">"EPdsrDmLiMQCskvBLp_dloQ@2178"</span>,
                 <span class="hljs-attr">"name"</span>: <span class="hljs-string">"Tealium AudienceStream"</span>,
                 <span class="hljs-attr">"websiteUris"</span>: [
                     <span class="hljs-string">"tealium.com/products/audiencestream"</span>
@@ -1988,6 +2129,21 @@
             },
             <span class="hljs-attr">"categories"</span>: [
                 <span class="hljs-string">"Segmentation"</span>
+            ]
+        },
+        {
+            <span class="hljs-attr">"technology"</span>: {
+                <span class="hljs-attr">"recordId"</span>: <span class="hljs-string">"EPdsrDmLiMQCskvBLp_dloQ@2180"</span>,
+                <span class="hljs-attr">"name"</span>: <span class="hljs-string">"Segment"</span>,
+                <span class="hljs-attr">"websiteUris"</span>: [
+                    <span class="hljs-string">"segment.com"</span>
+                ],
+                <span class="hljs-attr">"surfaceForm"</span>: <span class="hljs-string">"Segment"</span>,
+                <span class="hljs-attr">"position"</span>: <span class="hljs-string">"companyTechnographicsTechnology"</span>,
+                <span class="hljs-attr">"type"</span>: <span class="hljs-string">"DiffbotEntity"</span>
+            },
+            <span class="hljs-attr">"categories"</span>: [
+                <span class="hljs-string">"Customer data platform"</span>
             ]
         }
     ]
@@ -2074,6 +2230,25 @@
     ]
 }
 </code></pre>
+<h3><a class="anchor" aria-hidden="true" id="ultimateparent"></a><a href="#ultimateparent" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>ultimateParent</h3>
+<p>The ultimate parent company of this subsidiary.</p>
+<ul>
+<li><strong>Type:</strong> LinkedEntity</li>
+<li><strong>Example:</strong></li>
+</ul>
+<pre><code class="hljs">{
+    <span class="hljs-attr">"ultimateParent"</span>: {
+        <span class="hljs-attr">"recordId"</span>: <span class="hljs-string">"EPdsrDmLiMQCskvBLp_dloQ@62"</span>,
+        <span class="hljs-attr">"name"</span>: <span class="hljs-string">"IBM"</span>,
+        <span class="hljs-attr">"websiteUris"</span>: [
+            <span class="hljs-string">"wikidata.org/entity/Q37156"</span>
+        ],
+        <span class="hljs-attr">"surfaceForm"</span>: <span class="hljs-string">"IBM"</span>,
+        <span class="hljs-attr">"position"</span>: <span class="hljs-string">"companyParentCompany"</span>,
+        <span class="hljs-attr">"type"</span>: <span class="hljs-string">"Organization"</span>
+    }
+}
+</code></pre>
 <h3><a class="anchor" aria-hidden="true" id="vatidentificationnumbers"></a><a href="#vatidentificationnumbers" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>vatIdentificationNumbers</h3>
 <p>VAT identification number, an identifier used in many countries, including the countries of the European Union, for value added tax purposes</p>
 <ul>
@@ -2081,7 +2256,9 @@
 <li><strong>Example:</strong></li>
 </ul>
 <pre><code class="hljs">{
-    <span class="hljs-attr">"vatIdentificationNumbers"</span>: <span class="hljs-string">""</span>
+    <span class="hljs-attr">"vatIdentificationNumbers"</span>: [
+        <span class="hljs-string">"IN29980271267"</span>
+    ]
 }
 </code></pre>
 <h3><a class="anchor" aria-hidden="true" id="wikipediauri"></a><a href="#wikipediauri" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>wikipediaUri</h3>
@@ -2108,17 +2285,15 @@
                 <span class="hljs-attr">"value"</span>: <span class="hljs-number">73620000000</span>
             },
             <span class="hljs-attr">"isCurrent"</span>: <span class="hljs-literal">false</span>,
-            <span class="hljs-attr">"year"</span>: <span class="hljs-number">2020</span>,
-            <span class="hljs-attr">"filingDate"</span>: {
-                <span class="hljs-attr">"str"</span>: <span class="hljs-string">"d2022-02-22"</span>,
-                <span class="hljs-attr">"precision"</span>: <span class="hljs-number">3</span>,
-                <span class="hljs-attr">"timestamp"</span>: <span class="hljs-number">1645488000000</span>
+            <span class="hljs-attr">"year"</span>: <span class="hljs-number">2020</span>
+        },
+        {
+            <span class="hljs-attr">"revenue"</span>: {
+                <span class="hljs-attr">"currency"</span>: <span class="hljs-string">"USD"</span>,
+                <span class="hljs-attr">"value"</span>: <span class="hljs-number">57350000000</span>
             },
-            <span class="hljs-attr">"revenueDate"</span>: {
-                <span class="hljs-attr">"str"</span>: <span class="hljs-string">"d2020-12-31"</span>,
-                <span class="hljs-attr">"precision"</span>: <span class="hljs-number">3</span>,
-                <span class="hljs-attr">"timestamp"</span>: <span class="hljs-number">1609372800000</span>
-            }
+            <span class="hljs-attr">"isCurrent"</span>: <span class="hljs-literal">false</span>,
+            <span class="hljs-attr">"year"</span>: <span class="hljs-number">2021</span>
         },
         {
             <span class="hljs-attr">"revenue"</span>: {
@@ -2127,29 +2302,11 @@
             },
             <span class="hljs-attr">"isCurrent"</span>: <span class="hljs-literal">false</span>,
             <span class="hljs-attr">"year"</span>: <span class="hljs-number">2018</span>
-        },
-        {
-            <span class="hljs-attr">"revenue"</span>: {
-                <span class="hljs-attr">"currency"</span>: <span class="hljs-string">"USD"</span>,
-                <span class="hljs-attr">"value"</span>: <span class="hljs-number">77147000000</span>
-            },
-            <span class="hljs-attr">"isCurrent"</span>: <span class="hljs-literal">false</span>,
-            <span class="hljs-attr">"year"</span>: <span class="hljs-number">2019</span>,
-            <span class="hljs-attr">"filingDate"</span>: {
-                <span class="hljs-attr">"str"</span>: <span class="hljs-string">"d2022-02-22"</span>,
-                <span class="hljs-attr">"precision"</span>: <span class="hljs-number">3</span>,
-                <span class="hljs-attr">"timestamp"</span>: <span class="hljs-number">1645488000000</span>
-            },
-            <span class="hljs-attr">"revenueDate"</span>: {
-                <span class="hljs-attr">"str"</span>: <span class="hljs-string">"d2019-12-31"</span>,
-                <span class="hljs-attr">"precision"</span>: <span class="hljs-number">3</span>,
-                <span class="hljs-attr">"timestamp"</span>: <span class="hljs-number">1577750400000</span>
-            }
         }
     ]
 }
 </code></pre>
-</span></div></article></div><div class="docLastUpdate"><em>Last updated by jeromechoo</em></div><div class="docs-prevnext"><a class="docs-prev button" href="/docs/en/kg-ont-article"><span class="arrow-prev">← </span><span>Article</span></a><a class="docs-next button" href="/docs/en/kg-ont-person"><span>Person</span><span class="arrow-next"> →</span></a></div></div></div><nav class="onPageNav"><ul class="toc-headings"><li><a href="#organization-fields">Organization Fields</a></li><li><a href="#organization-field-details">Organization Field Details</a><ul class="toc-headings"><li><a href="#abnnumbers">abnNumbers</a></li><li><a href="#acnnumbers">acnNumbers</a></li><li><a href="#acquiredby">acquiredBy</a></li><li><a href="#angellisturi">angellistUri</a></li><li><a href="#anzsicclassification">anzSicClassification</a></li><li><a href="#bloguri">blogUri</a></li><li><a href="#boardmembers">boardMembers</a></li><li><a href="#brands">brands</a></li><li><a href="#canadianbusinessnumbers">canadianBusinessNumbers</a></li><li><a href="#capitalization">capitalization</a></li><li><a href="#categories">categories</a></li><li><a href="#ceo">ceo</a></li><li><a href="#chinesesocialcreditcodes">chineseSocialCreditCodes</a></li><li><a href="#companieshouseids">companiesHouseIds</a></li><li><a href="#competitors">competitors</a></li><li><a href="#crunchbaseuri">crunchbaseUri</a></li><li><a href="#cuitnumbers">cuitNumbers</a></li><li><a href="#customers">customers</a></li><li><a href="#descriptors">descriptors</a></li><li><a href="#diffbotclassification">diffbotClassification</a></li><li><a href="#edrpounumbers">edrpouNumbers</a></li><li><a href="#facebookuri">facebookUri</a></li><li><a href="#founders">founders</a></li><li><a href="#foundingdate">foundingDate</a></li><li><a href="#githuburi">githubUri</a></li><li><a href="#googleplusuri">googlePlusUri</a></li><li><a href="#guinumbers">guiNumbers</a></li><li><a href="#homepageuri">homepageUri</a></li><li><a href="#isicclassification">iSicClassification</a></li><li><a href="#indiancorporateidentitynumbers">indianCorporateIdentityNumbers</a></li><li><a href="#industries">industries</a></li><li><a href="#investments">investments</a></li><li><a href="#ipo">ipo</a></li><li><a href="#irsemployeridentificationnumbers">irsEmployerIdentificationNumbers</a></li><li><a href="#isacquired">isAcquired</a></li><li><a href="#isdissolved">isDissolved</a></li><li><a href="#isnonprofit">isNonProfit</a></li><li><a href="#ispublic">isPublic</a></li><li><a href="#israelicompanynumbers">israeliCompanyNumbers</a></li><li><a href="#japanesecorporatenumbers">japaneseCorporateNumbers</a></li><li><a href="#kvedclassification">kvedClassification</a></li><li><a href="#leadership">leadership</a></li><li><a href="#linkedinuri">linkedInUri</a></li><li><a href="#location">location</a></li><li><a href="#locations">locations</a></li><li><a href="#logo">logo</a></li><li><a href="#mccclassification">mccClassification</a></li><li><a href="#mcccode">mccCode</a></li><li><a href="#mcccodedescription">mccCodeDescription</a></li><li><a href="#motto">motto</a></li><li><a href="#naceclassification">naceClassification</a></li><li><a href="#nafclassification">nafClassification</a></li><li><a href="#naicsclassification">naicsClassification</a></li><li><a href="#nbactiveemployeeedges">nbActiveEmployeeEdges</a></li><li><a href="#nbemployeeranges">nbEmployeeRanges</a></li><li><a href="#nbemployees">nbEmployees</a></li><li><a href="#nbemployeesmax">nbEmployeesMax</a></li><li><a href="#nbemployeesmin">nbEmployeesMin</a></li><li><a href="#nbemployeesonlinkedin">nbEmployeesOnLinkedIn</a></li><li><a href="#nbemployeesonlinkedinovertime">nbEmployeesOnLinkedInOverTime</a></li><li><a href="#nblocations">nbLocations</a></li><li><a href="#nbuniqueinvestors">nbUniqueInvestors</a></li><li><a href="#norwegianorganizationnumbers">norwegianOrganizationNumbers</a></li><li><a href="#okvedclassification">okvedClassification</a></li><li><a href="#parentcompany">parentCompany</a></li><li><a href="#partnerships">partnerships</a></li><li><a href="#phonenumbers">phoneNumbers</a></li><li><a href="#predecessors">predecessors</a></li><li><a href="#quarterlyrevenues">quarterlyRevenues</a></li><li><a href="#revenue">revenue</a></li><li><a href="#russiantaxpayeridentificationnumbers">russianTaxpayerIdentificationNumbers</a></li><li><a href="#seccentralindexkeys">secCentralIndexKeys</a></li><li><a href="#secforms">secForms</a></li><li><a href="#sepaids">sepaIds</a></li><li><a href="#sicclassification">sicClassification</a></li><li><a href="#siccode">sicCode</a></li><li><a href="#siccodedescription">sicCodeDescription</a></li><li><a href="#sirencodes">sirenCodes</a></li><li><a href="#ssbclassification">ssbClassification</a></li><li><a href="#stock">stock</a></li><li><a href="#subsidiaries">subsidiaries</a></li><li><a href="#successors">successors</a></li><li><a href="#suppliers">suppliers</a></li><li><a href="#technographics">technographics</a></li><li><a href="#thaitaxpayerids">thaiTaxpayerIds</a></li><li><a href="#totalinvestment">totalInvestment</a></li><li><a href="#tsicclassification">tsicClassification</a></li><li><a href="#twitteruri">twitterUri</a></li><li><a href="#uennumbers">uenNumbers</a></li><li><a href="#uksicclassification">ukSicClassification</a></li><li><a href="#vatidentificationnumbers">vatIdentificationNumbers</a></li><li><a href="#wikipediauri">wikipediaUri</a></li><li><a href="#yearlyrevenues">yearlyRevenues</a></li></ul></li></ul></nav></div><footer class="nav-footer" id="footer"><section class="sitemap"><a href="/" class="nav-home"><img src="/img/diffbot_white.svg" alt="Docs Suite" width="66" height="58"/></a><div><h5>Docs</h5><a href="/docs/en/api-basics-index">Extraction</a><a href="/docs/en/cb-basics-index">Crawling</a><a href="/docs/en/kg-index">Knowledge Graph</a><a href="/docs/en/explain-gdpr">Diffbot and GDPR</a></div><div><h5>Community</h5><a href="https://stackoverflow.com/questions/tagged/diffbot" target="_blank" rel="noreferrer noopener">Stack Overflow</a><a href="https://twitter.com/diffbot" target="_blank" rel="noreferrer noopener">Twitter</a></div><div><h5>More</h5><a href="/blog">Blog</a><a href="/help">Help</a><a href="https://github.com/diffbot">GitHub</a></div></section><a href="https://diffbot.com/" target="_blank" rel="noreferrer noopener" class="fbOpenSource"><img src="/img/diffbot_white.svg" alt="Diffbot.com" width="170" height="45"/></a><section class="copyright">Copyright © 2022 Diffbot.com</section></footer></div><script type="text/javascript" src="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.js"></script><script>
+</span></div></article></div><div class="docLastUpdate"><em>Last updated by jeromechoo</em></div><div class="docs-prevnext"><a class="docs-prev button" href="/docs/en/kg-ont-article"><span class="arrow-prev">← </span><span>Article</span></a><a class="docs-next button" href="/docs/en/kg-ont-person"><span>Person</span><span class="arrow-next"> →</span></a></div></div></div><nav class="onPageNav"><ul class="toc-headings"><li><a href="#organization-fields">Organization Fields</a></li><li><a href="#organization-field-details">Organization Field Details</a><ul class="toc-headings"><li><a href="#abnnumbers">abnNumbers</a></li><li><a href="#acnnumbers">acnNumbers</a></li><li><a href="#acquiredby">acquiredBy</a></li><li><a href="#angellisturi">angellistUri</a></li><li><a href="#anzsicclassification">anzSicClassification</a></li><li><a href="#bloguri">blogUri</a></li><li><a href="#boardmembers">boardMembers</a></li><li><a href="#brands">brands</a></li><li><a href="#canadianbusinessnumbers">canadianBusinessNumbers</a></li><li><a href="#capitalization">capitalization</a></li><li><a href="#categories">categories</a></li><li><a href="#ceo">ceo</a></li><li><a href="#chinesesocialcreditcodes">chineseSocialCreditCodes</a></li><li><a href="#companieshouseids">companiesHouseIds</a></li><li><a href="#competitors">competitors</a></li><li><a href="#crunchbaseuri">crunchbaseUri</a></li><li><a href="#cuitnumbers">cuitNumbers</a></li><li><a href="#customers">customers</a></li><li><a href="#descriptors">descriptors</a></li><li><a href="#diffbotclassification">diffbotClassification</a></li><li><a href="#edrpounumbers">edrpouNumbers</a></li><li><a href="#emailaddresses">emailAddresses</a></li><li><a href="#employeecategories">employeeCategories</a></li><li><a href="#facebookuri">facebookUri</a></li><li><a href="#founders">founders</a></li><li><a href="#foundingdate">foundingDate</a></li><li><a href="#fullname">fullName</a></li><li><a href="#githuburi">githubUri</a></li><li><a href="#googleplusuri">googlePlusUri</a></li><li><a href="#guinumbers">guiNumbers</a></li><li><a href="#homepageuri">homepageUri</a></li><li><a href="#isicclassification">iSicClassification</a></li><li><a href="#indiancorporateidentitynumbers">indianCorporateIdentityNumbers</a></li><li><a href="#industries">industries</a></li><li><a href="#investments">investments</a></li><li><a href="#ipo">ipo</a></li><li><a href="#irsemployeridentificationnumbers">irsEmployerIdentificationNumbers</a></li><li><a href="#isacquired">isAcquired</a></li><li><a href="#isdissolved">isDissolved</a></li><li><a href="#isnonprofit">isNonProfit</a></li><li><a href="#ispublic">isPublic</a></li><li><a href="#israelicompanynumbers">israeliCompanyNumbers</a></li><li><a href="#japanesecorporatenumbers">japaneseCorporateNumbers</a></li><li><a href="#kvedclassification">kvedClassification</a></li><li><a href="#linkedinuri">linkedInUri</a></li><li><a href="#location">location</a></li><li><a href="#locations">locations</a></li><li><a href="#logo">logo</a></li><li><a href="#mccclassification">mccClassification</a></li><li><a href="#mcccode">mccCode</a></li><li><a href="#mcccodedescription">mccCodeDescription</a></li><li><a href="#monthlytraffic">monthlyTraffic</a></li><li><a href="#monthlytrafficgrowth">monthlyTrafficGrowth</a></li><li><a href="#motto">motto</a></li><li><a href="#naceclassification">naceClassification</a></li><li><a href="#nafclassification">nafClassification</a></li><li><a href="#naicsclassification">naicsClassification</a></li><li><a href="#naicsclassification2017">naicsClassification2017</a></li><li><a href="#nbactiveemployeeedges">nbActiveEmployeeEdges</a></li><li><a href="#nbemployeeranges">nbEmployeeRanges</a></li><li><a href="#nbemployees">nbEmployees</a></li><li><a href="#nbemployeesmax">nbEmployeesMax</a></li><li><a href="#nbemployeesmin">nbEmployeesMin</a></li><li><a href="#nblocations">nbLocations</a></li><li><a href="#nbuniqueinvestors">nbUniqueInvestors</a></li><li><a href="#norwegianorganizationnumbers">norwegianOrganizationNumbers</a></li><li><a href="#npinumbers">npiNumbers</a></li><li><a href="#okvedclassification">okvedClassification</a></li><li><a href="#parentcompany">parentCompany</a></li><li><a href="#partnerships">partnerships</a></li><li><a href="#phonenumbers">phoneNumbers</a></li><li><a href="#predecessors">predecessors</a></li><li><a href="#quarterlyrevenues">quarterlyRevenues</a></li><li><a href="#revenue">revenue</a></li><li><a href="#russiantaxpayeridentificationnumbers">russianTaxpayerIdentificationNumbers</a></li><li><a href="#seccentralindexkeys">secCentralIndexKeys</a></li><li><a href="#secforms">secForms</a></li><li><a href="#sepaids">sepaIds</a></li><li><a href="#sicclassification">sicClassification</a></li><li><a href="#siccode">sicCode</a></li><li><a href="#siccodedescription">sicCodeDescription</a></li><li><a href="#sirencodes">sirenCodes</a></li><li><a href="#ssbclassification">ssbClassification</a></li><li><a href="#stock">stock</a></li><li><a href="#subsidiaries">subsidiaries</a></li><li><a href="#successors">successors</a></li><li><a href="#suppliers">suppliers</a></li><li><a href="#technographics">technographics</a></li><li><a href="#thaitaxpayerids">thaiTaxpayerIds</a></li><li><a href="#totalinvestment">totalInvestment</a></li><li><a href="#tsicclassification">tsicClassification</a></li><li><a href="#twitteruri">twitterUri</a></li><li><a href="#uennumbers">uenNumbers</a></li><li><a href="#uksicclassification">ukSicClassification</a></li><li><a href="#ultimateparent">ultimateParent</a></li><li><a href="#vatidentificationnumbers">vatIdentificationNumbers</a></li><li><a href="#wikipediauri">wikipediaUri</a></li><li><a href="#yearlyrevenues">yearlyRevenues</a></li></ul></li></ul></nav></div><footer class="nav-footer" id="footer"><section class="sitemap"><a href="/" class="nav-home"><img src="/img/diffbot_white.svg" alt="Docs Suite" width="66" height="58"/></a><div><h5>Docs</h5><a href="/docs/en/api-basics-index">Extraction</a><a href="/docs/en/cb-basics-index">Crawling</a><a href="/docs/en/kg-index">Knowledge Graph</a><a href="/docs/en/explain-gdpr">Diffbot and GDPR</a></div><div><h5>Community</h5><a href="https://stackoverflow.com/questions/tagged/diffbot" target="_blank" rel="noreferrer noopener">Stack Overflow</a><a href="https://twitter.com/diffbot" target="_blank" rel="noreferrer noopener">Twitter</a></div><div><h5>More</h5><a href="/blog">Blog</a><a href="/help">Help</a><a href="https://github.com/diffbot">GitHub</a></div></section><a href="https://diffbot.com/" target="_blank" rel="noreferrer noopener" class="fbOpenSource"><img src="/img/diffbot_white.svg" alt="Diffbot.com" width="170" height="45"/></a><section class="copyright">Copyright © 2023 Diffbot.com</section></footer></div><script type="text/javascript" src="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.js"></script><script>
                 document.addEventListener('keyup', function(e) {
                   if (e.target !== document.body) {
                     return;

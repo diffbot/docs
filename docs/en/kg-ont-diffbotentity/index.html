@@ -58,7 +58,8 @@
 <p>See the left navigation panel for fields and attributes of specific entities.</p>
 <p>For convenience, a complete ontology source in JSON format is also <a href="https://kg.diffbot.com/kg/ontology">available here</a>.</p>
 <blockquote>
-<p>New to the Diffbot Knowledge Graph? <a href="dql-quickstart">Start here</a>.</p>
+<p>🙋</p>
+<p>New to the Diffbot Knowledge Graph? <a href="doc:getting-started-with-diffbot-knowledge-graph">Start here</a>.</p>
 </blockquote>
 <h2><a class="anchor" aria-hidden="true" id="all-fields"></a><a href="#all-fields" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>All Fields</h2>
 <ul>
@@ -67,7 +68,6 @@
 <li><a href="#alloriginhashes">allOriginHashes</a></li>
 <li><a href="#alluridetails">allUriDetails</a></li>
 <li><a href="#alluris">allUris</a></li>
-<li><a href="#clusterwithorigin">clusterWithOrigin</a></li>
 <li><a href="#crawltimestamp">crawlTimestamp</a></li>
 <li><a href="#description">description</a></li>
 <li><a href="#diffboturi">diffbotUri</a></li>
@@ -78,7 +78,6 @@
 <li><a href="#name">name</a></li>
 <li><a href="#nbincomingedges">nbIncomingEdges</a></li>
 <li><a href="#nborigins">nbOrigins</a></li>
-<li><a href="#nestedrecords">nestedRecords</a></li>
 <li><a href="#noncanonicalfacts">nonCanonicalFacts</a></li>
 <li><a href="#origindetails">originDetails</a></li>
 <li><a href="#origins">origins</a></li>
@@ -86,6 +85,12 @@
 <li><a href="#summary">summary</a></li>
 <li><a href="#type">type</a></li>
 <li><a href="#types">types</a></li>
+<li><a href="#wikipediapageviews">wikipediaPageviews</a></li>
+<li><a href="#wikipediapageviewsgrowth">wikipediaPageviewsGrowth</a></li>
+<li><a href="#wikipediapageviewslastquarter">wikipediaPageviewsLastQuarter</a></li>
+<li><a href="#wikipediapageviewslastquartergrowth">wikipediaPageviewsLastQuarterGrowth</a></li>
+<li><a href="#wikipediapageviewslastyear">wikipediaPageviewsLastYear</a></li>
+<li><a href="#wikipediapageviewslastyeargrowth">wikipediaPageviewsLastYearGrowth</a></li>
 </ul>
 <h2><a class="anchor" aria-hidden="true" id="all-field-details"></a><a href="#all-field-details" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>All Field Details</h2>
 <p>Note that certain longer field examples may be truncated for readability.</p>
@@ -128,6 +133,7 @@
 <pre><code class="hljs">{
     <span class="hljs-attr">"allUriDetails"</span>: [
         {
+            <span class="hljs-attr">"domainMonthlyTrafficGrowth"</span>: <span class="hljs-string">""</span>,
             <span class="hljs-attr">"domainMonthlyTraffic"</span>: <span class="hljs-number">0</span>,
             <span class="hljs-attr">"nbFollowing"</span>: <span class="hljs-number">0</span>,
             <span class="hljs-attr">"uriType"</span>: <span class="hljs-string">""</span>,
@@ -149,15 +155,6 @@
 </ul>
 <pre><code class="hljs">{
     <span class="hljs-attr">"allUris"</span>: []
-}
-</code></pre>
-<h3><a class="anchor" aria-hidden="true" id="clusterwithorigin"></a><a href="#clusterwithorigin" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>clusterWithOrigin</h3>
-<ul>
-<li><strong>Type:</strong> String</li>
-<li><strong>Example:</strong></li>
-</ul>
-<pre><code class="hljs">{
-    <span class="hljs-attr">"clusterWithOrigin"</span>: <span class="hljs-string">""</span>
 }
 </code></pre>
 <h3><a class="anchor" aria-hidden="true" id="crawltimestamp"></a><a href="#crawltimestamp" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>crawlTimestamp</h3>
@@ -268,15 +265,6 @@
     <span class="hljs-attr">"nbOrigins"</span>: <span class="hljs-number">0</span>
 }
 </code></pre>
-<h3><a class="anchor" aria-hidden="true" id="nestedrecords"></a><a href="#nestedrecords" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>nestedRecords</h3>
-<ul>
-<li><strong>Type:</strong> DiffbotEntity</li>
-<li><strong>Example:</strong></li>
-</ul>
-<pre><code class="hljs">{
-    <span class="hljs-attr">"nestedRecords"</span>: {}
-}
-</code></pre>
 <h3><a class="anchor" aria-hidden="true" id="noncanonicalfacts"></a><a href="#noncanonicalfacts" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>nonCanonicalFacts</h3>
 <p>Enumerates all the non-canonical fields (i.e., those not defined in the ontology) that have a value for this entity. For instance, if 'numberOfChildren' is listed in 'nonCanonicalFacts' then the entity JSON will have the key 'numberOfChildren' with an associated value. This field is only provided when the parameter nonCanonicalFacts=1 is set. See: <a href="https://docs.diffbot.com/kgapi">https://docs.diffbot.com/kgapi</a></p>
 <ul>
@@ -301,8 +289,7 @@
                 <span class="hljs-attr">"precision"</span>: <span class="hljs-number">0</span>,
                 <span class="hljs-attr">"timestamp"</span>: <span class="hljs-number">0</span>
             },
-            <span class="hljs-attr">"origin"</span>: <span class="hljs-string">""</span>,
-            <span class="hljs-attr">"isUsedAsIdBefore"</span>: <span class="hljs-literal">false</span>
+            <span class="hljs-attr">"origin"</span>: <span class="hljs-string">""</span>
         }
     ]
 }
@@ -338,7 +325,7 @@
 }
 </code></pre>
 <h3><a class="anchor" aria-hidden="true" id="type"></a><a href="#type" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>type</h3>
-<p>The main type of a Diffbot entity. Examples of type include Person, Organization, Article, Product.</p>
+<p>The top-level type of a Diffbot entity. Examples of type include Person, Organization, Article, Product.</p>
 <ul>
 <li><strong>Type:</strong> Type</li>
 <li><strong>Example:</strong></li>
@@ -357,7 +344,67 @@
     <span class="hljs-attr">"types"</span>: <span class="hljs-string">""</span>
 }
 </code></pre>
-</span></div></article></div><div class="docLastUpdate"><em>Last updated by jeromechoo</em></div><div class="docs-prevnext"><a class="docs-next button" href="/docs/en/kg-ont-article"><span>Article</span><span class="arrow-next"> →</span></a></div></div></div><nav class="onPageNav"><ul class="toc-headings"><li><a href="#all-fields">All Fields</a></li><li><a href="#all-field-details">All Field Details</a><ul class="toc-headings"><li><a href="#alldescriptions">allDescriptions</a></li><li><a href="#allnames">allNames</a></li><li><a href="#alloriginhashes">allOriginHashes</a></li><li><a href="#alluridetails">allUriDetails</a></li><li><a href="#alluris">allUris</a></li><li><a href="#clusterwithorigin">clusterWithOrigin</a></li><li><a href="#crawltimestamp">crawlTimestamp</a></li><li><a href="#description">description</a></li><li><a href="#diffboturi">diffbotUri</a></li><li><a href="#id">id</a></li><li><a href="#image">image</a></li><li><a href="#images">images</a></li><li><a href="#importance">importance</a></li><li><a href="#name">name</a></li><li><a href="#nbincomingedges">nbIncomingEdges</a></li><li><a href="#nborigins">nbOrigins</a></li><li><a href="#nestedrecords">nestedRecords</a></li><li><a href="#noncanonicalfacts">nonCanonicalFacts</a></li><li><a href="#origindetails">originDetails</a></li><li><a href="#origins">origins</a></li><li><a href="#profilechangeprobability">profileChangeProbability</a></li><li><a href="#summary">summary</a></li><li><a href="#type">type</a></li><li><a href="#types">types</a></li></ul></li></ul></nav></div><footer class="nav-footer" id="footer"><section class="sitemap"><a href="/" class="nav-home"><img src="/img/diffbot_white.svg" alt="Docs Suite" width="66" height="58"/></a><div><h5>Docs</h5><a href="/docs/en/api-basics-index">Extraction</a><a href="/docs/en/cb-basics-index">Crawling</a><a href="/docs/en/kg-index">Knowledge Graph</a><a href="/docs/en/explain-gdpr">Diffbot and GDPR</a></div><div><h5>Community</h5><a href="https://stackoverflow.com/questions/tagged/diffbot" target="_blank" rel="noreferrer noopener">Stack Overflow</a><a href="https://twitter.com/diffbot" target="_blank" rel="noreferrer noopener">Twitter</a></div><div><h5>More</h5><a href="/blog">Blog</a><a href="/help">Help</a><a href="https://github.com/diffbot">GitHub</a></div></section><a href="https://diffbot.com/" target="_blank" rel="noreferrer noopener" class="fbOpenSource"><img src="/img/diffbot_white.svg" alt="Diffbot.com" width="170" height="45"/></a><section class="copyright">Copyright © 2022 Diffbot.com</section></footer></div><script type="text/javascript" src="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.js"></script><script>
+<h3><a class="anchor" aria-hidden="true" id="wikipediapageviews"></a><a href="#wikipediapageviews" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>wikipediaPageviews</h3>
+<p>The number of views of its Wikipedia page of the last month if it exists.</p>
+<ul>
+<li><strong>Type:</strong> Integer</li>
+<li><strong>Example:</strong></li>
+</ul>
+<pre><code class="hljs">{
+    <span class="hljs-attr">"wikipediaPageviews"</span>: <span class="hljs-number">0</span>
+}
+</code></pre>
+<h3><a class="anchor" aria-hidden="true" id="wikipediapageviewsgrowth"></a><a href="#wikipediapageviewsgrowth" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>wikipediaPageviewsGrowth</h3>
+<p>The month over month growth of wikipediaPageviews, where we count the increment of the number of page views of the second to last (full) month, compared with that of the last (full) month. if today was Aug 16th, 2022, the last complete month is July. So it refers to the increment from June to July, i.e., ( f(July) - f(June) ) ÷ f(June) x 100%. The f(.) only counts the first 28 days of a month, to avoid fluctuations between 31-days months like Jan and 28(29)-days months like Feb.</p>
+<ul>
+<li><strong>Type:</strong> Float</li>
+<li><strong>Example:</strong></li>
+</ul>
+<pre><code class="hljs">{
+    <span class="hljs-attr">"wikipediaPageviewsGrowth"</span>: <span class="hljs-string">""</span>
+}
+</code></pre>
+<h3><a class="anchor" aria-hidden="true" id="wikipediapageviewslastquarter"></a><a href="#wikipediapageviewslastquarter" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>wikipediaPageviewsLastQuarter</h3>
+<p>The number of views of its Wikipedia page of the last quarter if it exists.</p>
+<ul>
+<li><strong>Type:</strong> Integer</li>
+<li><strong>Example:</strong></li>
+</ul>
+<pre><code class="hljs">{
+    <span class="hljs-attr">"wikipediaPageviewsLastQuarter"</span>: <span class="hljs-number">0</span>
+}
+</code></pre>
+<h3><a class="anchor" aria-hidden="true" id="wikipediapageviewslastquartergrowth"></a><a href="#wikipediapageviewslastquartergrowth" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>wikipediaPageviewsLastQuarterGrowth</h3>
+<p>The quarter over quarter growth of wikipediaPageviews, where we count the increment of the number of page views of the second to last (full) quarter, compared with that of the last (full) quarter. If today was Aug 16th, 2022, the last complete quarter is Q2 (April, May, June). So it refers to the increment from Q1 to Q2, i.e., ( f(Q2) - f(Q1) ) ÷ f(Q1) x 100%.</p>
+<ul>
+<li><strong>Type:</strong> Float</li>
+<li><strong>Example:</strong></li>
+</ul>
+<pre><code class="hljs">{
+    <span class="hljs-attr">"wikipediaPageviewsLastQuarterGrowth"</span>: <span class="hljs-string">""</span>
+}
+</code></pre>
+<h3><a class="anchor" aria-hidden="true" id="wikipediapageviewslastyear"></a><a href="#wikipediapageviewslastyear" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>wikipediaPageviewsLastYear</h3>
+<p>The number of views of its Wikipedia page of the last year if it exists.</p>
+<ul>
+<li><strong>Type:</strong> Integer</li>
+<li><strong>Example:</strong></li>
+</ul>
+<pre><code class="hljs">{
+    <span class="hljs-attr">"wikipediaPageviewsLastYear"</span>: <span class="hljs-number">0</span>
+}
+</code></pre>
+<h3><a class="anchor" aria-hidden="true" id="wikipediapageviewslastyeargrowth"></a><a href="#wikipediapageviewslastyeargrowth" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>wikipediaPageviewsLastYearGrowth</h3>
+<p>The year over year growth of wikipediaPageviews, where we count the monthly-rolling increment of the year before last than the last year. It today was Aug 16th, 2022, it is computed by comparing the numbers from Aug 2021 to July 2022 and from Aug 2020 to July 2021, i.e., ( f(Aug 2021 to July 2022) - f(Aug 2020 to July 2021) ) ÷ f(Aug 2020 to July 2021) x 100%.</p>
+<ul>
+<li><strong>Type:</strong> Float</li>
+<li><strong>Example:</strong></li>
+</ul>
+<pre><code class="hljs">{
+    <span class="hljs-attr">"wikipediaPageviewsLastYearGrowth"</span>: <span class="hljs-string">""</span>
+}
+</code></pre>
+</span></div></article></div><div class="docLastUpdate"><em>Last updated by jeromechoo</em></div><div class="docs-prevnext"><a class="docs-next button" href="/docs/en/kg-ont-article"><span>Article</span><span class="arrow-next"> →</span></a></div></div></div><nav class="onPageNav"><ul class="toc-headings"><li><a href="#all-fields">All Fields</a></li><li><a href="#all-field-details">All Field Details</a><ul class="toc-headings"><li><a href="#alldescriptions">allDescriptions</a></li><li><a href="#allnames">allNames</a></li><li><a href="#alloriginhashes">allOriginHashes</a></li><li><a href="#alluridetails">allUriDetails</a></li><li><a href="#alluris">allUris</a></li><li><a href="#crawltimestamp">crawlTimestamp</a></li><li><a href="#description">description</a></li><li><a href="#diffboturi">diffbotUri</a></li><li><a href="#id">id</a></li><li><a href="#image">image</a></li><li><a href="#images">images</a></li><li><a href="#importance">importance</a></li><li><a href="#name">name</a></li><li><a href="#nbincomingedges">nbIncomingEdges</a></li><li><a href="#nborigins">nbOrigins</a></li><li><a href="#noncanonicalfacts">nonCanonicalFacts</a></li><li><a href="#origindetails">originDetails</a></li><li><a href="#origins">origins</a></li><li><a href="#profilechangeprobability">profileChangeProbability</a></li><li><a href="#summary">summary</a></li><li><a href="#type">type</a></li><li><a href="#types">types</a></li><li><a href="#wikipediapageviews">wikipediaPageviews</a></li><li><a href="#wikipediapageviewsgrowth">wikipediaPageviewsGrowth</a></li><li><a href="#wikipediapageviewslastquarter">wikipediaPageviewsLastQuarter</a></li><li><a href="#wikipediapageviewslastquartergrowth">wikipediaPageviewsLastQuarterGrowth</a></li><li><a href="#wikipediapageviewslastyear">wikipediaPageviewsLastYear</a></li><li><a href="#wikipediapageviewslastyeargrowth">wikipediaPageviewsLastYearGrowth</a></li></ul></li></ul></nav></div><footer class="nav-footer" id="footer"><section class="sitemap"><a href="/" class="nav-home"><img src="/img/diffbot_white.svg" alt="Docs Suite" width="66" height="58"/></a><div><h5>Docs</h5><a href="/docs/en/api-basics-index">Extraction</a><a href="/docs/en/cb-basics-index">Crawling</a><a href="/docs/en/kg-index">Knowledge Graph</a><a href="/docs/en/explain-gdpr">Diffbot and GDPR</a></div><div><h5>Community</h5><a href="https://stackoverflow.com/questions/tagged/diffbot" target="_blank" rel="noreferrer noopener">Stack Overflow</a><a href="https://twitter.com/diffbot" target="_blank" rel="noreferrer noopener">Twitter</a></div><div><h5>More</h5><a href="/blog">Blog</a><a href="/help">Help</a><a href="https://github.com/diffbot">GitHub</a></div></section><a href="https://diffbot.com/" target="_blank" rel="noreferrer noopener" class="fbOpenSource"><img src="/img/diffbot_white.svg" alt="Diffbot.com" width="170" height="45"/></a><section class="copyright">Copyright © 2023 Diffbot.com</section></footer></div><script type="text/javascript" src="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.js"></script><script>
                 document.addEventListener('keyup', function(e) {
                   if (e.target !== document.body) {
                     return;
