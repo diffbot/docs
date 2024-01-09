@@ -61,10 +61,20 @@ axios.get('https://kg.diffbot.com/kg/ontology')
         articleCategoriesArray.push(articleCategories[industry]);
     }
 
+    // Template Model for Technology Categories
+    var technologyCategories = response['data']['taxonomies']['TechnologyCategory']['categories'];
+    technologyCategories = ensureChildrenProperty(technologyCategories);
+    // -- Convert to Array for mustache template iteration
+    let technologyCategoriesArray = [];
+    for (let cat in technologyCategories) {
+        technologyCategoriesArray.push(technologyCategories[cat]);
+    }
+
     var templateModel = {
         industries: industriesArray,
         employmentCategories: employmentCategoriesByType,
-        articleCategories: articleCategoriesArray
+        articleCategories: articleCategoriesArray,
+        technologyCategories: technologyCategoriesArray
     };
 
 
@@ -91,5 +101,13 @@ axios.get('https://kg.diffbot.com/kg/ontology')
     let articleCategoriesOutput = render(articleCategoriesTemplate, templateModel);
     console.log(`Rendered Article Category Reference! Generating Markdown.../docs/kg-article-categories-list.md`);
     fs.writeFileSync(`../docs/kg-article-categories-list.md`, articleCategoriesOutput);
+
+    // Get Techbology Categories Template
+    let technologyCategoriesTemplate = fs.readFileSync("./static/md/kg-technology-categories.md").toString();
+
+    // Render Technology Categories Template
+    let technologyCategoriesOutput = render(technologyCategoriesTemplate, templateModel);
+    console.log(`Rendered Technology Category Reference! Generating Markdown.../docs/kg-technology-categories-list.md`);
+    fs.writeFileSync(`../docs/kg-technology-categories-list.md`, technologyCategoriesOutput);
 
 });

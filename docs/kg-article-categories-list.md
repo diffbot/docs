@@ -226,6 +226,7 @@ The category list below outlines all possible categories that may be returned by
 |          |  Hinduism                 |  |  |
 |          |  Islam                 |  |  |
 |          |  Judaism                 |  |  |
+|          |  Sikhism                 |  |  |
 |          |  Spirituality                 |  |  |
 |  Science         |                   |   |  |
 |          |  Biological Sciences                 |  |  |
@@ -342,6 +343,7 @@ The category list below outlines all possible categories that may be returned by
 |          |                  | Products and Services Announcements  |  |
 |          |                  | Real Estate Transactions  |  |
 |          |                  | Regulatory Approvals  |  |
+|          |                  |   | Investigational New Drug Application |
 |          |                  | Sales  |  |
 |          |                  | Small and Medium-sized Business  |  |
 |          |                  | Startups  |  |
@@ -357,7 +359,7 @@ The category list below outlines all possible categories that may be returned by
 |          |                  | Financial Crisis  |  |
 |          |                  | Financial Reform  |  |
 |          |                  | Financial Regulation  |  |
-|          |                  | Gasoline Prices, Gas Prices  |  |
+|          |                  | Gasoline Prices  |  |
 |          |                  | Housing Market  |  |
 |          |                  | Interest Rates  |  |
 |          |                  | Job Market  |  |
@@ -436,6 +438,7 @@ The category list below outlines all possible categories that may be returned by
 |          |                  |   | Web Hosting |
 |          |                  | Laptops  |  |
 |          |                  | Programming Languages  |  |
+|          |                  | Technical Documentation  |  |
 |          |  Consumer Electronics                 |  |  |
 |          |                  | Cameras and Camcorders  |  |
 |          |                  | Home Entertainment Systems  |  |

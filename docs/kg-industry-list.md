@@ -122,6 +122,7 @@ type:Organization industries:"Medical Associations"
 |                     | Performing Arts Companies         |                   | 711100 | 7922 |
 |                     |                    | Dance Groups        | 711120 | 7922 |
 |                     |                    | Musical Groups        | 711130 | 7929 |
+|                     | Recreational Camps         |                   | 721214 | 7032 |
 |                     | Sports Clubs         |                   | 711211 | 7941 |
 | Environmental Organizations          |                    |                   | 813312 | 8399 |
 |                     | Climate Change Organizations         |                   | 813312 | 8399 |
@@ -162,7 +163,7 @@ type:Organization industries:"Medical Associations"
 |                     |                    | Wineries        | 312130 | 2084 |
 |                     | Food Companies         |                   | 311000 | 2000 |
 |                     |                    | Cocoa Companies        | 311351 | 2066 |
-|                     |                    | Diary Companies        | 112120 | 5143 |
+|                     |                    | Dairy Companies        | 112120 | 5143 |
 | Hospitality Companies          |                    |                   | 720000 |  |
 |                     | Adult Entertainment Clubs         |                   | 722410 | 5813 |
 |                     | Bars         |                   | 722410 | 5813 |
@@ -291,6 +292,8 @@ type:Organization industries:"Medical Associations"
 |                     | Police Departments         |                   | 922120 | 9221 |
 |                     | Political Parties         |                   | 813940 | 8651 |
 | Religious Organizations          |                    |                   | 813110 | 8661 |
+|                     | Places Of Worship         |                   | 813110 | 8661 |
+|                     | Religious Administrative Units         |                   | 813110 | 8661 |
 | Retailers          |                    |                   | 440000 | 5900 |
 |                     | Auction Houses         |                   | 459999 | 7389 |
 |                     | Automotive Part Retailers         |                   | 441330 | 3714 |
@@ -302,7 +305,7 @@ type:Organization industries:"Medical Associations"
 |                     | Clothing Retailers         |                   | 458000 | 5600 |
 |                     |                    | Children Clothing Retailers        | 458110 | 5640 |
 |                     |                    | Eyewear Retailers        | 456130 | 5995 |
-|                     |                    | Footwear Retailers        | 458210 | 3850 |
+|                     |                    | Footwear Retailers        | 458210 | 5661 |
 |                     |                    | Lingerie Retailers        | 458110 | 5630 |
 |                     |                    | Sporting Goods Retailers        | 459110 | 5940 |
 |                     | Consumer Electronics Retailers         |                   | 449210 | 5940 |
