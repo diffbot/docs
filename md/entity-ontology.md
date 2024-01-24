@@ -1,4 +1,6 @@
 ---
+warning: DO NOT EDIT THIS DOC DIRECTLY (SEE ORIGIN)
+origin: https://kg.diffbot.com/kg/ontology
 id: {{ id }}
 title: {{ title }}
 generatedBy: generateOntology.js
