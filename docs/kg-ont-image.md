@@ -1,4 +1,6 @@
 ---
+warning: DO NOT EDIT THIS DOC DIRECTLY (SEE ORIGIN)
+origin: https://kg.diffbot.com/kg/ontology
 id: kg-ont-image
 title: Image
 generatedBy: generateOntology.js
@@ -17,14 +19,21 @@ For convenience, a complete ontology source in JSON format is also [available he
 ## Image Fields
 * [anchorUrl](#anchorurl) 
 * [breadcrumb](#breadcrumb) 
+* [crawlTimestamp](#crawltimestamp) 
+* [diffbotUri](#diffboturi) 
 * [displayHeight](#displayheight) 
 * [displayWidth](#displaywidth) 
+* [id](#id) 
 * [language](#language) 
 * [links](#links) 
 * [naturalHeight](#naturalheight) 
 * [naturalWidth](#naturalwidth) 
+* [pageUrl](#pageurl) 
+* [resolvedPageUrl](#resolvedpageurl) 
 * [tags](#tags) 
 * [title](#title) 
+* [type](#type) 
+* [types](#types) 
 * [url](#url) 
 * [xpath](#xpath) 
 
@@ -54,6 +63,24 @@ Note that certain longer field examples may be truncated for readability.
 	]
 }
 ```
+### crawlTimestamp
+  Last time a site was crawled&#x2F;indexed
+* **Type:** Integer
+* **Example:**
+```
+{
+	"crawlTimestamp": 1700198633
+}
+```
+### diffbotUri
+  diffbotUri is a combination of an entityID and a corresponding web address or uniform resource identifier (URI), which is defined by appending the entityID to the URL https:&#x2F;&#x2F;www.diffbot.com&#x2F;entity&#x2F;. For example, Diffbot&#39;s entityID is CWSwJ_SWQPfqO3HQsxY4lGg and its DiffbotUri is https:&#x2F;&#x2F;www.diffbot.com&#x2F;entity&#x2F;CWSwJ_SWQPfqO3HQsxY4lGg
+* **Type:** String
+* **Example:**
+```
+{
+	"diffbotUri": "http://diffbot.com/entity/IMG62073555748"
+}
+```
 ### displayHeight
   Height of image as presented in the browser (and as sized via browser&#x2F;CSS, if resized)
 * **Type:** Integer
@@ -70,6 +97,15 @@ Note that certain longer field examples may be truncated for readability.
 ```
 {
 	"displayWidth": 0
+}
+```
+### id
+  Each entity in the Diffbot KnowledgeGraph (DKG) is identified by a unique identifier, an alphanumeric string like CWSwJ_SWQPfqO3HQsxY4lGg that uniquely identifies that entity. The id is directly derived from the most authoritative origin from the origins array.
+* **Type:** String
+* **Example:**
+```
+{
+	"id": "IMG62073555748"
 }
 ```
 ### language
@@ -96,7 +132,7 @@ Note that certain longer field examples may be truncated for readability.
 * **Example:**
 ```
 {
-	"naturalHeight": 1056
+	"naturalHeight": 3417
 }
 ```
 ### naturalWidth
@@ -105,7 +141,25 @@ Note that certain longer field examples may be truncated for readability.
 * **Example:**
 ```
 {
-	"naturalWidth": 1176
+	"naturalWidth": 3418
+}
+```
+### pageUrl
+  URL of submitted page &#x2F; page from which the entity is extracted
+* **Type:** String
+* **Example:**
+```
+{
+	"pageUrl": ""
+}
+```
+### resolvedPageUrl
+  Returned if the pageUrl redirects to another URL
+* **Type:** String
+* **Example:**
+```
+{
+	"resolvedPageUrl": ""
 }
 ```
 ### tags
@@ -132,7 +186,27 @@ Note that certain longer field examples may be truncated for readability.
 * **Example:**
 ```
 {
-	"title": "A visualization of the Knowledge Graph"
+	"title": "Mike Tung of Diffbot"
+}
+```
+### type
+  The top-level type of a Diffbot entity. Examples of type include Person, Organization, Article, Product.
+* **Type:** Type
+* **Example:**
+```
+{
+	"type": "Image"
+}
+```
+### types
+  There are tags.types which can only refer to dbpedia rdf types, while there are also the general DiffbotEntity types which is just an array of all the types an object belongs to. For instance a LocalBusiness would have &#x60;types:[&quot;Organization&quot;,&quot;LocalBusiness&quot;]&#x60; Finally, there are types that indicate a belonging to a subgroup such as business vs personal email address.
+* **Type:** String
+* **Example:**
+```
+{
+	"types": [
+		"Image"
+	]
 }
 ```
 ### url
@@ -141,7 +215,7 @@ Note that certain longer field examples may be truncated for readability.
 * **Example:**
 ```
 {
-	"url": "https://cdn-images-1.medium.com/max/1600/1*sYLBdAl7pP2krTspeWZosA.png"
+	"url": "https://imageio.forbes.com/specials-images/imageserve/5cd587b85ea6490008c81044/Mike-Tung-of-Diffbot/0x0.jpg?format=jpg&crop=3418,3417,x470,y0,safe&height=3417&width=3418"
 }
 ```
 ### xpath

@@ -1,4 +1,6 @@
 ---
+warning: DO NOT EDIT THIS DOC DIRECTLY (SEE ORIGIN)
+origin: https://kg.diffbot.com/kg/ontology
 id: kg-ont-diffbotentity
 title: All
 generatedBy: generateOntology.js
@@ -22,6 +24,7 @@ For convenience, a complete ontology source in JSON format is also [available he
 * [allUris](#alluris) 
 * [crawlTimestamp](#crawltimestamp) 
 * [description](#description) 
+* [descriptors](#descriptors) 
 * [diffbotUri](#diffboturi) 
 * [id](#id) 
 * [image](#image) 
@@ -33,7 +36,6 @@ For convenience, a complete ontology source in JSON format is also [available he
 * [nonCanonicalFacts](#noncanonicalfacts) 
 * [originDetails](#origindetails) 
 * [origins](#origins) 
-* [profileChangeProbability](#profilechangeprobability) 
 * [summary](#summary) 
 * [type](#type) 
 * [types](#types) 
@@ -84,6 +86,7 @@ Note that certain longer field examples may be truncated for readability.
 		{
 			"domainMonthlyTrafficGrowth": "",
 			"domainMonthlyTraffic": 0,
+			"redirectsTo": "",
 			"nbFollowing": 0,
 			"uriType": "",
 			"verified": false,
@@ -121,6 +124,15 @@ Note that certain longer field examples may be truncated for readability.
 ```
 {
 	"description": ""
+}
+```
+### descriptors
+  A list of free-form keywords describing this entity
+* **Type:** String
+* **Example:**
+```
+{
+	"descriptors": ""
 }
 ```
 ### diffbotUri
@@ -195,7 +207,7 @@ Note that certain longer field examples may be truncated for readability.
 }
 ```
 ### nbOrigins
-  Total number of origins in the field &#39;origins&#39;.
+  Total number of origins in the field &#39;origins&#39;. This field is only available in extended JSON mode.
 * **Type:** Integer
 * **Example:**
 ```
@@ -213,7 +225,7 @@ Note that certain longer field examples may be truncated for readability.
 }
 ```
 ### originDetails
-  Additional information about origins listed in &#39;origins&#39;, including the latest time it was crawled.
+  Additional information about origins listed in &#39;origins&#39;, including the latest time it was crawled. This field is only available in extended JSON mode.
 * **Type:** OriginDetail
 * **Example:**
 ```
@@ -231,21 +243,12 @@ Note that certain longer field examples may be truncated for readability.
 }
 ```
 ### origins
-  An origin is a web address where Diffbot found one or more facts about an entity.
+  An origin is a web address where Diffbot found one or more facts about an entity. This field is only available in extended JSON mode.
 * **Type:** String
 * **Example:**
 ```
 {
 	"origins": ""
-}
-```
-### profileChangeProbability
-  For Diffbot&#39;s internal use only.
-* **Type:** Float
-* **Example:**
-```
-{
-	"profileChangeProbability": ""
 }
 ```
 ### summary

@@ -1,4 +1,6 @@
 ---
+warning: DO NOT EDIT THIS DOC DIRECTLY (SEE ORIGIN)
+origin: https://kg.diffbot.com/kg/ontology
 id: kg-ont-discussion
 title: Discussion
 generatedBy: generateOntology.js
@@ -15,21 +17,55 @@ For convenience, a complete ontology source in JSON format is also [available he
 > New to the Diffbot Knowledge Graph? [Start here](doc:getting-started-with-diffbot-knowledge-graph).
 
 ## Discussion Fields
+* [crawlTimestamp](#crawltimestamp) 
+* [diffbotUri](#diffboturi) 
+* [id](#id) 
 * [language](#language) 
 * [nextPage](#nextpage) 
 * [nextPages](#nextpages) 
 * [numPages](#numpages) 
 * [numParticipants](#numparticipants) 
 * [numPosts](#numposts) 
+* [pageUrl](#pageurl) 
 * [posts](#posts) 
 * [provider](#provider) 
+* [resolvedPageUrl](#resolvedpageurl) 
 * [rssUrl](#rssurl) 
 * [tags](#tags) 
 * [title](#title) 
+* [type](#type) 
+* [types](#types) 
 
 ## Discussion Field Details
 Note that certain longer field examples may be truncated for readability.
 
+### crawlTimestamp
+  Last time a site was crawled&#x2F;indexed
+* **Type:** Integer
+* **Example:**
+```
+{
+	"crawlTimestamp": 0
+}
+```
+### diffbotUri
+  diffbotUri is a combination of an entityID and a corresponding web address or uniform resource identifier (URI), which is defined by appending the entityID to the URL https:&#x2F;&#x2F;www.diffbot.com&#x2F;entity&#x2F;. For example, Diffbot&#39;s entityID is CWSwJ_SWQPfqO3HQsxY4lGg and its DiffbotUri is https:&#x2F;&#x2F;www.diffbot.com&#x2F;entity&#x2F;CWSwJ_SWQPfqO3HQsxY4lGg
+* **Type:** String
+* **Example:**
+```
+{
+	"diffbotUri": ""
+}
+```
+### id
+  Each entity in the Diffbot KnowledgeGraph (DKG) is identified by a unique identifier, an alphanumeric string like CWSwJ_SWQPfqO3HQsxY4lGg that uniquely identifies that entity. The id is directly derived from the most authoritative origin from the origins array.
+* **Type:** String
+* **Example:**
+```
+{
+	"id": ""
+}
+```
 ### language
   Refers to the language which a Discussion is written
 * **Type:** String
@@ -82,6 +118,15 @@ Note that certain longer field examples may be truncated for readability.
 ```
 {
 	"numPosts": 0
+}
+```
+### pageUrl
+  URL of submitted page &#x2F; page from which the entity is extracted
+* **Type:** String
+* **Example:**
+```
+{
+	"pageUrl": ""
 }
 ```
 ### posts
@@ -147,6 +192,15 @@ Note that certain longer field examples may be truncated for readability.
 	"provider": ""
 }
 ```
+### resolvedPageUrl
+  Returned if the pageUrl redirects to another URL
+* **Type:** String
+* **Example:**
+```
+{
+	"resolvedPageUrl": ""
+}
+```
 ### rssUrl
   
 * **Type:** String
@@ -181,5 +235,23 @@ Note that certain longer field examples may be truncated for readability.
 ```
 {
 	"title": ""
+}
+```
+### type
+  The top-level type of a Diffbot entity. Examples of type include Person, Organization, Article, Product.
+* **Type:** Type
+* **Example:**
+```
+{
+	"type": ""
+}
+```
+### types
+  There are tags.types which can only refer to dbpedia rdf types, while there are also the general DiffbotEntity types which is just an array of all the types an object belongs to. For instance a LocalBusiness would have &#x60;types:[&quot;Organization&quot;,&quot;LocalBusiness&quot;]&#x60; Finally, there are types that indicate a belonging to a subgroup such as business vs personal email address.
+* **Type:** String
+* **Example:**
+```
+{
+	"types": ""
 }
 ```

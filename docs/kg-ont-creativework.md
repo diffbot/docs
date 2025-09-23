@@ -1,4 +1,6 @@
 ---
+warning: DO NOT EDIT THIS DOC DIRECTLY (SEE ORIGIN)
+origin: https://kg.diffbot.com/kg/ontology
 id: kg-ont-creativework
 title: CreativeWork
 generatedBy: generateOntology.js
@@ -43,11 +45,8 @@ Note that certain longer field examples may be truncated for readability.
 				}
 			],
 			"types": "",
-			"websiteUris": "",
 			"diffbotUri": "",
-			"name": "",
-			"targetDiffbotUri": "",
-			"surfaceForm": ""
+			"name": ""
 		}
 	]
 }
@@ -58,7 +57,7 @@ Note that certain longer field examples may be truncated for readability.
 * **Example:**
 ```
 {
-	"imdbUri": "imdb.com/title/tt0364151"
+	"imdbUri": "imdb.com/title/tt1052005"
 }
 ```
 ### musicbrainzUri
@@ -89,11 +88,8 @@ Note that certain longer field examples may be truncated for readability.
 			}
 		],
 		"types": "",
-		"websiteUris": "",
 		"diffbotUri": "",
-		"name": "",
-		"targetDiffbotUri": "",
-		"surfaceForm": ""
+		"name": ""
 	}
 }
 ```
